@@ -1,0 +1,6 @@
+    private static boolean isAwaitingPropertyName(NodeImpl n) {
+        return n != null && n.getName() == null && (n.isInIterable() || n.getContainerClass() != null);
+    }
+
+            if (isAwaitingPropertyName(leaf)) {
+        addNode(new NodeImpl.PropertyNodeImpl(name));

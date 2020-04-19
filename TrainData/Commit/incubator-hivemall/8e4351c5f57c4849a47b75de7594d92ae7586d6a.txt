@@ -1,0 +1,12 @@
+import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspectorUtils.ObjectInspectorCopyOption;
+    private static final String LIST_TYPE_NAME = "array";
+                    throw new UDFArgumentTypeException(0,
+                        "Argument "  i  " of function CONCAT_ARRAY must be "  LIST_TYPE_NAME
+                                 "<"  Category.PRIMITIVE  ">, but "  arguments[0].getTypeName()
+                                 " was found.");
+        ObjectInspector returnElemOI = ObjectInspectorUtils.getStandardObjectInspector(firstElemOI,
+            ObjectInspectorCopyOption.WRITABLE);
+    public List<Object> evaluate(DeferredObject[] arguments) throws HiveException {
+                Object obj = ObjectInspectorUtils.copyToStandardObject(rawObj, elemOI,
+                    ObjectInspectorCopyOption.WRITABLE);
+        return "array_concat("  Arrays.toString(children)  ")";

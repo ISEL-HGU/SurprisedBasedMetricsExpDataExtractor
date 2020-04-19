@@ -1,0 +1,1 @@
+        opts.addOption("rule", "split_rule", true, "Split algorithm [default: GINI, ENTROPY, CLASSIFICATION_ERROR]");

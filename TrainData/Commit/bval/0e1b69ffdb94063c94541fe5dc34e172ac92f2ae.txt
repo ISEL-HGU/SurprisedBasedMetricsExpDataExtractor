@@ -1,0 +1,1 @@
+            if (leafNode.getName() == null && !(leafNode.getKind() == ElementKind.BEAN || leafNode.isInIterable())) {

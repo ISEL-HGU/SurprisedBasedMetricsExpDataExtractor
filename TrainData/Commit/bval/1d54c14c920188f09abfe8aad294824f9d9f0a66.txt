@@ -1,0 +1,15 @@
+import javax.validation.ValidatorFactory;
+import org.apache.bval.jsr.ApacheValidatorFactory;
+import org.apache.bval.util.Validate;
+public class ValidationMappingParser implements MetadataSource.FactoryDependent {
+    private ApacheValidatorFactory validatorFactory;
+
+    @Override
+    public void setFactory(ValidatorFactory validatorFactory) {
+        this.validatorFactory = Validate.notNull(validatorFactory).unwrap(ApacheValidatorFactory.class);
+    }
+
+        Validate.validState(validatorFactory != null, "validatorFactory unknown");
+
+            final Map<Class<?>, MetadataBuilder.ForBean<?>> builders =
+                new XmlBuilder(validatorFactory, mapping).forBeans();

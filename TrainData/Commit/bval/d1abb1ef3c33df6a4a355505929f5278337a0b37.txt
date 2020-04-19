@@ -1,0 +1,4 @@
+        if (!message.contains("{")) {
+            return resolveEscapeSequences(message);
+        }
+

@@ -1,0 +1,4 @@
+            @SuppressWarnings("unlikely-arg-type")
+                // suppress hierarchical ctors:
+                return hierarchyType.equals(meta.getHost()) ? delegate.getConstructors(hierarchyType)
+                    : Collections.emptyMap();

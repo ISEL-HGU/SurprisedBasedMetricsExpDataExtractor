@@ -1,0 +1,8 @@
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+    private final ConcurrentMap<Class<?>, Composition> compositions;
+    private final ConcurrentMap<Class<?>, Method[]> constraintAttributes;
+        compositions = new ConcurrentHashMap<>();
+        constraintAttributes = new ConcurrentHashMap<>();
+        return new AnnotationProxyBuilder<>(type, constraintAttributes);
+        return new AnnotationProxyBuilder<>(instance, constraintAttributes);

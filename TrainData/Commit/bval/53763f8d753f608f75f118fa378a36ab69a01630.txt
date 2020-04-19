@@ -1,0 +1,8 @@
+import org.apache.bval.util.Lazy;
+    private final Lazy<String> toString =
+        new Lazy<>(() -> String.format("%s: %s", ConstraintD.class.getSimpleName(), getAnnotation()));
+    @Override
+    public String toString() {
+        return toString.get();
+    }
+

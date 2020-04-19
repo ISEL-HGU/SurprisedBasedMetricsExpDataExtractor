@@ -1,0 +1,13 @@
+import java.lang.reflect.InvocationTargetException;
+    /**
+     * Extract cause from {@link InvocationTargetException}s.
+     * @param t to unwrap
+     * @return first of t, cause hierarchy not instanceof {@link InvocationTargetException}
+     */
+    public static Throwable causeOf(Throwable t) {
+        while (t instanceof InvocationTargetException) {
+            t = t.getCause();
+        }
+        return t;
+    }
+

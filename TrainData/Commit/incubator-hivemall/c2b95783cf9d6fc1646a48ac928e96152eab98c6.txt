@@ -1,0 +1,5 @@
+    private static final double LOG2 = Math.log(2);
+    public static double log2(final double n) {
+        return Math.log(n) / LOG2;
+    }
+

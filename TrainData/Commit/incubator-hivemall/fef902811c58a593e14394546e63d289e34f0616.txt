@@ -1,0 +1,3 @@
+                score.set(e.getKey().floatValue());
+                for (String v : e.getValue()) {
+                    word.set(v);

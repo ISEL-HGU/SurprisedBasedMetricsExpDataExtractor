@@ -1,0 +1,5 @@
+        @Override
+        public float regularize(final float weight, final float gradient) {
+            return gradient;
+        }
+

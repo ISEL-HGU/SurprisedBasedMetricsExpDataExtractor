@@ -1,0 +1,42 @@
+import java.util.function.Predicate;
+import javax.validation.ConstraintDeclarationException;
+import javax.validation.ConstraintTarget;
+import org.apache.bval.jsr.ConstraintAnnotationAttributes.Worker;
+        static <A extends Annotation> Optional<ConstraintAnnotationAttributes.Worker<A>> validWorker(
+            ConstraintAnnotationAttributes attr, Class<A> type) {
+            return Optional.of(type).map(attr::analyze).filter(Worker::isValid);
+        }
+
+            final Optional<ConstraintTarget> constraintTarget =
+                validWorker(ConstraintAnnotationAttributes.VALIDATION_APPLIES_TO, source.annotationType())
+                    .map(w -> w.read(source));
+
+                if (constraintTarget.isPresent()
+                    && validWorker(ConstraintAnnotationAttributes.VALIDATION_APPLIES_TO, c.annotationType())
+                        .isPresent()) {
+                    proxyBuilder.setValidationAppliesTo(constraintTarget.get());
+                }
+        final Annotation[] declaredAnnotations = e.getDeclaredAnnotations();
+
+        // collect constraint explicitly nested into repeatable containers:
+        final Map<Class<? extends Annotation>, Annotation[]> repeated = new HashMap<>();
+
+        for (Annotation a : declaredAnnotations) {
+            final Class<? extends Annotation> annotationType = a.annotationType();
+            final Worker<? extends Annotation> w = ConstraintAnnotationAttributes.VALUE.analyze(annotationType);
+            if (w.isValid()
+                && ((Class<?>) w.getSpecificType()).getComponentType().isAnnotationPresent(Constraint.class)) {
+                repeated.put(annotationType, w.read(a));
+        }
+        final Set<Annotation> constraints = Stream.of(declaredAnnotations)
+            .filter((Predicate<Annotation>) a -> a.annotationType().isAnnotationPresent(Constraint.class))
+            .collect(Collectors.toSet());
+
+        Exceptions.raiseIf(
+            constraints.stream().map(Annotation::annotationType).filter(t -> t.isAnnotationPresent(Repeatable.class))
+                .map(rct -> rct.getAnnotation(Repeatable.class).value()).anyMatch(repeated::containsKey),
+            ConstraintDeclarationException::new,
+            "Simultaneous declaration of repeatable constraint and associated container on %s", e);
+
+        return Stream.concat(constraints.stream(), repeated.values().stream().flatMap(Stream::of))
+            .toArray(Annotation[]::new);

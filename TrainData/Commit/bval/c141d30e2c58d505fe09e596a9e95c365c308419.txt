@@ -1,0 +1,3 @@
+                final MetadataBuilder.ForContainer<Parameter> parameterBuilder =
+                    builders.size() > i ? builders.get(i) : EmptyBuilder.instance().forContainer();
+                return new ParameterD<>(param, i, new MetadataReader.ForContainer<>(param, parameterBuilder), parent);

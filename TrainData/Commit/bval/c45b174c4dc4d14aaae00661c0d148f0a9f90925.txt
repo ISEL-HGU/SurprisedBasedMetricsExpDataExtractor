@@ -1,0 +1,8 @@
+            return getTarget().getName();
+            final boolean mustUnset = Reflection.setAccessible(getTarget(), true);
+                return getTarget().get(parent);
+                    Reflection.setAccessible(getTarget(), false);
+            return Methods.propertyName(getTarget());
+            final boolean mustUnset = Reflection.setAccessible(getTarget(), true);
+                return getTarget().invoke(parent);
+                    Reflection.setAccessible(getTarget(), false);

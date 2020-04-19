@@ -1,0 +1,4 @@
+    private final Set<ContainerElementTypeDescriptor> containerElementTypes;
+        containerElementTypes = reader.getContainerElementTypes(this).stream().filter(DescriptorManager::isConstrained)
+                .collect(ToUnmodifiable.set());
+        return containerElementTypes;

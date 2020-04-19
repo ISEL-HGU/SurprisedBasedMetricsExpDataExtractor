@@ -1,0 +1,6 @@
+    public synchronized Lazy<T> reset(T value) {
+        this.value = value;
+        this.init = null;
+        return this;
+    }
+

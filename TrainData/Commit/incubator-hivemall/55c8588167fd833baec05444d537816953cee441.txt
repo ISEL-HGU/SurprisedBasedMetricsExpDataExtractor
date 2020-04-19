@@ -1,0 +1,54 @@
+import java.nio.charset.StandardCharsets;
+import org.apache.hadoop.hive.serde2.lazy.ByteArrayRef;
+import org.apache.hadoop.hive.serde2.lazy.LazyLong;
+import org.apache.hadoop.hive.serde2.lazy.objectinspector.primitive.LazyPrimitiveObjectInspectorFactory;
+import org.apache.hadoop.hive.serde2.lazy.objectinspector.primitive.LazyStringObjectInspector;
+    @Nonnull
+    @Nonnull
+    @Nonnull
+    @Nonnull
+    @Nonnull
+    @Nonnull
+    @Nonnull
+    @Nonnull
+    @Nonnull
+    @Nonnull
+
+    @Nonnull
+    public static LazyString lazyString(@Nonnull final String str) {
+        return lazyString(str, (byte) '\\');
+    }
+
+    @Nonnull
+    public static LazyString lazyString(@Nonnull final String str, final byte escapeChar) {
+        LazyStringObjectInspector oi = LazyPrimitiveObjectInspectorFactory.getLazyStringObjectInspector(
+            false, escapeChar);
+        return lazyString(str, oi);
+    }
+
+    @Nonnull
+    public static LazyString lazyString(@Nonnull final String str,
+            @Nonnull final LazyStringObjectInspector oi) {
+        LazyString lazy = new LazyString(oi);
+        ByteArrayRef ref = new ByteArrayRef();
+        byte[] data = str.getBytes(StandardCharsets.UTF_8);
+        ref.setData(data);
+        lazy.init(ref, 0, data.length);
+        return lazy;
+    }
+
+    @Nonnull
+    public static LazyInteger lazyInteger(@Nonnull final int v) {
+        LazyInteger lazy = new LazyInteger(
+            LazyPrimitiveObjectInspectorFactory.LAZY_INT_OBJECT_INSPECTOR);
+        lazy.getWritableObject().set(v);
+        return lazy;
+    }
+
+    @Nonnull
+    public static LazyLong lazyLong(@Nonnull final long v) {
+        LazyLong lazy = new LazyLong(LazyPrimitiveObjectInspectorFactory.LAZY_LONG_OBJECT_INSPECTOR);
+        lazy.getWritableObject().set(v);
+        return lazy;
+    }
+

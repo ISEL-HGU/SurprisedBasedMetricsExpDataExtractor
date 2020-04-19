@@ -1,0 +1,70 @@
+import javax.annotation.Nullable;
+     * The index value when an element is not found in a list or array: <code>-1</code>. This value is returned by methods in this class and can also
+     * be used in comparisons with values returned by various method from {@link java.util.List}.
+    @Nonnull
+    public static double[] set(@Nonnull double[] src, final int index, final double value) {
+    @Nonnull
+    public static <T> T[] set(@Nonnull T[] src, final int index, final T value) {
+    @Nonnull
+    public static float[] toArray(@Nonnull final List<Float> lst) {
+    @Nonnull
+    public static Integer[] toObject(@Nonnull final int[] array) {
+    @Nonnull
+    public static List<Integer> toList(@Nonnull final int[] array) {
+    @Nonnull
+    public static Long[] toObject(@Nonnull final long[] array) {
+    @Nonnull
+    public static List<Long> toList(@Nonnull final long[] array) {
+    @Nonnull
+    public static Float[] toObject(@Nonnull final float[] array) {
+    @Nonnull
+    public static List<Float> toList(@Nonnull final float[] array) {
+    @Nonnull
+    public static Double[] toObject(@Nonnull final double[] array) {
+    @Nonnull
+    public static List<Double> toList(@Nonnull final double[] array) {
+    public static <T> void shuffle(@Nonnull final T[] array) {
+    public static <T> void shuffle(@Nonnull final T[] array, final Random rnd) {
+    public static <T> void shuffle(@Nonnull final T[] array, final int size) {
+    @Nullable
+    public static Object[] subarray(@Nullable final Object[] array, int startIndexInclusive,
+            int endIndexExclusive) {
+    public static void fill(@Nonnull final float[] a, @Nonnull final Random rand) {
+    public static int indexOf(@Nonnull final int[] array, final int valueToFind,
+            final int startIndex, final int endIndex) {
+    @Nonnull
+    public static byte[] copyOf(@Nonnull final byte[] original, final int newLength) {
+    public static int[] copyOf(@Nonnull final int[] src) {
+    public static void copy(@Nonnull final int[] src, @Nonnull final int[] dest) {
+    @Nonnull
+    public static int[] append(@Nonnull int[] array, final int currentSize, final int element) {
+    @Nonnull
+    public static double[] append(@Nonnull double[] array, final int currentSize,
+            final double element) {
+        if (currentSize  1 > array.length) {
+            double[] newArray = new double[currentSize * 2];
+            System.arraycopy(array, 0, newArray, 0, currentSize);
+            array = newArray;
+        }
+        array[currentSize] = element;
+        return array;
+    }
+
+    @Nonnull
+    public static int[] insert(@Nonnull final int[] array, final int currentSize, final int index,
+            final int element) {
+    @Nonnull
+    public static double[] insert(@Nonnull final double[] array, final int currentSize,
+            final int index, final double element) {
+        if (currentSize  1 <= array.length) {
+            System.arraycopy(array, index, array, index  1, currentSize - index);
+            array[index] = element;
+            return array;
+        }
+        double[] newArray = new double[currentSize * 2];
+        System.arraycopy(array, 0, newArray, 0, index);
+        newArray[index] = element;
+        System.arraycopy(array, index, newArray, index  1, array.length - index);
+        return newArray;
+    }
+

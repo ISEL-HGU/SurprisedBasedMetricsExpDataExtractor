@@ -1,0 +1,2 @@
+    private static String getPrefix(@Nonnull String fileName) {
+            "%s-%s", getPrefix(libName), uuid));

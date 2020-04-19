@@ -1,0 +1,10 @@
+
+
+        if (value == null) {
+            return true;
+        }
+        final double d = value.doubleValue();
+        if (Double.isNaN(d)) {
+            return false;
+        }
+        return comparisonTest.test(Double.compare(d, 0.0));

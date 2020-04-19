@@ -1,0 +1,10 @@
+        final boolean constrained = !knownUnconstrainedTypes.contains(beanClass);
+        final MetadataBuilder.ForBean<T> builder = constrained ? builder(beanClass) : EmptyBuilder.instance().forBean();
+        if (constrained) {
+            // if not previously known to be unconstrained, check:
+            if (beanD.isBeanConstrained() || !(beanD.getConstrainedConstructors().isEmpty()
+                    && beanD.getConstrainedMethods(MethodType.GETTER, MethodType.NON_GETTER).isEmpty())) {
+                @SuppressWarnings("unchecked")
+                final BeanD<T> result =
+                return result;
+            }

@@ -1,0 +1,1 @@
+            final Worker<C> w = (Worker<C>) WORKER_CACHE.computeIfAbsent((Class<?>) clazz, Worker::new);

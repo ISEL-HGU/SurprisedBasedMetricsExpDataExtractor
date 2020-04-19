@@ -1,0 +1,12 @@
+        this.importanceElemOI =
+                HiveUtils.asDoubleCompatibleOI(importanceListOI.getListElementObjectInspector());
+        final List<DoubleWritable> result = new ArrayList<>(_k);
+        for (int i = 0; i < _k; i) {
+            result.add(new DoubleWritable());
+        this._result = result;
+        return ObjectInspectorFactory.getStandardListObjectInspector(
+            PrimitiveObjectInspectorFactory.writableDoubleObjectInspector);
+        final double[] importanceList =
+                HiveUtils.asDoubleArray(dObj[1].get(), importanceListOI, importanceElemOI);
+            final List<Map.Entry<Integer, Double>> list =
+                    new ArrayList<Map.Entry<Integer, Double>>();

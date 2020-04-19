@@ -1,0 +1,1 @@
+        value = "_FUNC_(dense features in array<double>) - Returns a feature vector with feature indices")

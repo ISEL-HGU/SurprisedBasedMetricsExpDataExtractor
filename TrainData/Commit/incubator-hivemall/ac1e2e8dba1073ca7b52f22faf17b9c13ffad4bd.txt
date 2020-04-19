@@ -1,0 +1,4 @@
+            return new ReverseOrderedMapEvaluator();
+            return new NaturalOrderedMapEvaluator();
+    public static class NaturalOrderedMapEvaluator extends UDAFToMapEvaluator {
+    public static class ReverseOrderedMapEvaluator extends UDAFToMapEvaluator {

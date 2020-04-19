@@ -1,0 +1,4 @@
+        final Object value = values.get(method.getName());
+        if (value != null) {
+            return value;
+        if (method.getName().equals("equals")) { // this is an annotation, no need to be more fancy (and slower)

@@ -1,0 +1,4 @@
+        value = "_FUNC_(array<double|string> features, int label [, const string options, const array<double> classWeights])"
+                 "- Returns a relation consists of "
+                 "<string model_id, double model_weight, string model, array<double> var_importance, int oob_errors, int oob_tests>")
+        opts.addOption("subsample", true, "Sampling rate in range (0.0,1.0]. [default: 1.0]");

@@ -1,0 +1,8 @@
+        makeAccessible(valueMethod);
+        return valueMethod.invoke(annotation);
+     * Set the accessibility of {@code o} to true.
+    public static void makeAccessible(final AccessibleObject o) {
+        if (o == null || o.isAccessible()) {
+        	return;
+            return;
+        o.setAccessible(true);

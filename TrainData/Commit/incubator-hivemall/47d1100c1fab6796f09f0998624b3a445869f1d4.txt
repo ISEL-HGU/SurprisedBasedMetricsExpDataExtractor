@@ -1,0 +1,17 @@
+import com.google.common.base.Preconditions;
+
+        Preconditions.checkArgument(args.length >= 1);
+        Object arg0 = args[0];
+        if (arg0 == null) {
+            return;
+        }
+
+        final int length = wordCountsOI.getListLength(arg0);
+            Object o = wordCountsOI.getListElement(arg0, i);
+        if (model.getDocCount() == 0L) {
+            this.model = null;
+            throw new HiveException("No training exmples to learn. Please revise input data.");
+        }
+            if (topicWords == null) {
+                continue;
+            }

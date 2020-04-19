@@ -1,0 +1,41 @@
+// @formatter:off
+        value = "_FUNC_(array<number> X, array<number> Y)"
+                 " - Returns dot(X.T, Y) as array<array<double>>, shape = (X.#cols, Y.#cols)",
+        extended = "WITH input as (\n"  
+                "  select array(1.0, 2.0, 3.0, 4.0) as x, array(1, 2) as y\n"  
+                "  UNION ALL\n"  
+                "  select array(2.0, 3.0, 4.0, 5.0) as x, array(1, 2) as y\n"  
+                ")\n"  
+                "select\n"  
+                "  transpose_and_dot(x, y) as xy,\n"  
+                "  transpose_and_dot(y, x) as yx\n"  
+                "from \n"  
+                "  input;\n\n"  
+                "> [[\"3.0\",\"6.0\"],[\"5.0\",\"10.0\"],[\"7.0\",\"14.0\"],[\"9.0\",\"18.0\"]]"  
+                "   [[\"3.0\",\"5.0\",\"7.0\",\"9.0\"],[\"6.0\",\"10.0\",\"14.0\",\"18.0\"]]\n")
+// @formatter:on
+        private ListObjectInspector xRowOI;
+        private PrimitiveObjectInspector xElemOI;
+        private ListObjectInspector yRowOI;
+        private PrimitiveObjectInspector yElemOI;
+        private DoubleObjectInspector aggMatrixElemOI;
+        private double[] xRow;
+        private double[] yRow;
+                this.xRowOI = HiveUtils.asListOI(OIs[0]);
+                this.xElemOI = HiveUtils.asDoubleCompatibleOI(
+                    xRowOI.getListElementObjectInspector());
+                this.yRowOI = HiveUtils.asListOI(OIs[1]);
+                this.yElemOI = HiveUtils.asDoubleCompatibleOI(
+                    yRowOI.getListElementObjectInspector());
+                this.aggMatrixElemOI =
+            if (xRow == null) {
+                xRow = new double[xRowOI.getListLength(matrix0RowObj)];
+            if (yRow == null) {
+                yRow = new double[yRowOI.getListLength(matrix1RowObj)];
+            HiveUtils.toDoubleArray(matrix0RowObj, xRowOI, xElemOI, xRow, false);
+            HiveUtils.toDoubleArray(matrix1RowObj, yRowOI, yElemOI, yRow, false);
+                myAgg.init(xRow.length, yRow.length);
+            for (int i = 0; i < xRow.length; i) {
+                for (int j = 0; j < yRow.length; j) {
+                    myAgg.aggMatrix[i][j] = xRow[i] * yRow[j];
+                HiveUtils.toDoubleArray(matrix.get(i), aggMatrixRowOI, aggMatrixElemOI, row, false);

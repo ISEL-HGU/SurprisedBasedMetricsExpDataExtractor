@@ -1,0 +1,18 @@
+import hivemall.annotations.Cite;
+
+        funcsHeaders.put("# Term Vector Model", Collections.singletonList("hivemall.ftvec.text"));
+            Cite cite = annotatedClass.getAnnotation(Cite.class);
+            if (cite != null) {
+                sb.append("Reference: ");
+                String desc = cite.description();
+                String url = cite.url();
+                if (url == null) {
+                    sb.append(desc);
+                } else {
+                    sb.append("<a href=\"").append(url).append("\" target=\"_blank\">");
+                    sb.append(desc);
+                    sb.append("</a>");
+                }
+                sb.append("<br/>");
+            }
+

@@ -1,0 +1,23 @@
+import hivemall.UDTFWithOptions;
+import hivemall.annotations.VisibleForTesting;
+import hivemall.common.ConversionState;
+import hivemall.fm.FMStringFeatureMapModel.Entry;
+import hivemall.optimizer.EtaEstimator;
+import hivemall.optimizer.LossFunctions;
+import hivemall.optimizer.LossFunctions.LossFunction;
+import hivemall.optimizer.LossFunctions.LossType;
+import hivemall.utils.collections.IMapIterator;
+import hivemall.utils.hadoop.HiveUtils;
+import hivemall.utils.io.FileUtils;
+import hivemall.utils.io.NioStatefullSegment;
+import hivemall.utils.lang.NumberUtils;
+import hivemall.utils.lang.SizeOf;
+import hivemall.utils.math.MathUtils;
+
+    @VisibleForTesting
+    void finalizeTraining() throws HiveException {
+        if (_iterations > 1) {
+            runTrainingIteration(_iterations);
+        }
+    }
+

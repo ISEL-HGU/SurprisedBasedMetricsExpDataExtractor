@@ -1,0 +1,1 @@
+        return value == null ? !(type instanceof Class<?>) || type == void.class || !((Class<?>) type).isPrimitive()
