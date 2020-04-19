@@ -37,6 +37,7 @@ import weka.core.converters.ArffSaver;
 import weka.core.converters.CSVLoader;
 import weka.filters.Filter;
 import weka.filters.unsupervised.instance.NonSparseToSparse;
+import edu.handong.csee.isel.data.Input;
 
 public class CommitCollector {
 //	private String inputPath;
@@ -50,13 +51,19 @@ public class CommitCollector {
 	private Repository repo;
 	ArrayList<RevCommit> commits = new ArrayList<RevCommit>();
 	List<String> bugCommit = null;
+	private String dataMode;
+	private String trainingDataPath;
+	private String LM_trainingDataPath;
+	public static ArrayList<String> AllCommitsAddedLines = new ArrayList<>(); // for making LM training dataset
 
 	private HashMap<String,DeveloperExperienceInfo> developerExperience = new HashMap<String,DeveloperExperienceInfo>();
 	public HashMap<String,SourceFileInfo> sourceFileInfo = new HashMap<String,SourceFileInfo>();//source file information
 	public static HashMap<String,MetaDataInfo> metaDatas = new HashMap<String,MetaDataInfo>();//////이놈!!!
 
-	public CommitCollector(Git git, String resultDirectory, List<String> buggyCommit, String projectName) { // String strStartDate,String strEndDate,boolean test
+	public CommitCollector(Git git, String resultDirectory, List<String> buggyCommit, String projectName, String start_date, String end_date, String data_mode, String training_data_path) { // String strStartDate,String strEndDate,boolean test
 		this.outputPath = resultDirectory;
+		this.dataMode = data_mode;
+		this.trainingDataPath = training_data_path;
 
 //		if(strStartDate == null) {
 //			this.startDate = "0000-00-00 00:00:00";
@@ -73,8 +80,10 @@ public class CommitCollector {
 //		this.test = test;
 		
 ///////no option 
-		this.startDate = "0000-00-00 00:00:00";
-		this.endDate = "9999-99-99 99:99:99";
+		// this.startDate = "0000-00-00 00:00:00";
+		// this.endDate = "9999-99-99 99:99:99";
+		this.startDate = start_date;
+		this.endDate = end_date;
 		this.test = false;
 ///////no option 
 		
@@ -82,6 +91,7 @@ public class CommitCollector {
 		this.git = git;
 		this.csvOutputPath = outputPath + File.separator + projectName + ".csv";
 		this.arffOutputPath = outputPath + File.separator + projectName + ".arff";
+		this.LM_trainingDataPath = training_data_path + File.separator + projectName + "_AllCommitsAddedLines.txt";
 	}
 
 	public void countCommitMetrics() {
@@ -101,7 +111,6 @@ public class CommitCollector {
 			}
 			//arryaList index 0 = 가장 최근 커밋 
 			//arrayList index commits.size() =  첫번째 커밋
-
 			for (int commitIndex = commits.size()-1; commitIndex > -1; commitIndex--) {// 커밋 하나씩 읽음 
 				RevCommit commit = commits.get(commitIndex);
 
@@ -153,7 +162,7 @@ public class CommitCollector {
 						formatter.format(entry);
 
 						String diffContent = byteStream.toString(); // 한 소스파일의 diff를 diffContent에 저장
-						metricParser.parsePatchContents(metaDataInfo, commitHash, diffContent);
+						metricParser.parsePatchContents(metaDataInfo, commitHash, diffContent, dataMode, trainingDataPath); // Here
 						metricParser.parseSourceInfo(metaDataInfo, sourceFileInfo, sourcePath, authorId, isBugCommit, commitTime, commitHash, commitUnitInfo, fileSource);
 						metricParser.parseCommitUnitInfo(commitUnitInfo, sourcePath, key);
 
@@ -176,11 +185,31 @@ public class CommitCollector {
 
 			}
 			byteStream.close();
+			
+			// file write 
+			if(dataMode.equals("1")){
+				// save AllCommitsAddedLines to txt file 
+				saveLMTrainingData();
+			}
+		
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
+	}
+
+	public void saveLMTrainingData() {
+		BufferedWriter writer;
+		try {
+			writer = new BufferedWriter(new FileWriter(LM_trainingDataPath));
+			for(String line: AllCommitsAddedLines) {
+				writer.write(line + System.lineSeparator());
+			}
+			writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void saveResultToCsvFile() {

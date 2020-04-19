@@ -38,6 +38,12 @@ public class CLIConverter implements InputConverter {
 		Input input = new Input();
 		int max;
 		int min;
+
+		input.start_date = cmd.getOptionValue("s");
+		input.end_date = cmd.getOptionValue("e");
+		input.data_mode = cmd.getOptionValue("d");
+		input.training_data_path = cmd.getOptionValue("p");
+
 		if (cmd.hasOption("x") || cmd.hasOption("m")) {
 			max = Integer.parseInt(cmd.getOptionValue("x"));
 			min = Integer.parseInt(cmd.getOptionValue("m"));
@@ -151,6 +157,18 @@ public class CLIConverter implements InputConverter {
 		options.addOption(Option.builder("c").longOpt("BugIntroducingChange csv file path").desc("Path of csv file")
 				.hasArg().argName("BIC csv file path").build());
 
+		options.addOption(Option.builder("s").longOpt("startDate").desc("start date")
+				.hasArg().argName("Start date").build());
+		
+		options.addOption(Option.builder("e").longOpt("endDate").desc("end date")
+				.hasArg().argName("End date").build());
+		
+		options.addOption(Option.builder("d").longOpt("datamode").desc("data mode 1: language model training dataset 2: defect prediction train and test dataset")
+				.hasArg().argName("data mode").build());
+		
+		options.addOption(Option.builder("p").longOpt("pathOfTrainingSet").desc("training data path")
+				.hasArg().argName("training data path").build());
+		
 		options.addOption(Option.builder("h").longOpt("help").desc("Help").build());
 
 		return options;

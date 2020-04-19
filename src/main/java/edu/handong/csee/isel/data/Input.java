@@ -27,6 +27,15 @@ public class Input {
 	
 	public String gitDirectory;
 
+	public String start_date;
+
+	public String end_date;
+
+	public String data_mode;
+
+	public String training_data_path;
+
+
 	public static enum ReferenceType {
 		JIRA, GITHUB, KEYWORD, BICCSV
 	}
