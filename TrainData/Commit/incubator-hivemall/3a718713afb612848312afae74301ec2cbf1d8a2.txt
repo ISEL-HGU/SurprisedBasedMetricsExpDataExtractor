@@ -1,7 +1,0 @@
-import hivemall.utils.lang.Preconditions;
-
-@Description(name = "xgboost_multiclass_predict",
-                 "- Returns a prediction result as (string rowid, string label, float probability)")
-            String rowId = testData.get(i).getRowId();
-                forwardObj[1] = String.valueOf(j);
-                forwardObj[2] = Float.valueOf(prob);

@@ -1,4 +1,0 @@
-    public static boolean isFinite(final double value) {
-        return Double.NEGATIVE_INFINITY < value && value < Double.POSITIVE_INFINITY;
-    }
-

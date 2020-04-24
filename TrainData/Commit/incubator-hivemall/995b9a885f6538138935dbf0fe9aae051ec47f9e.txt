@@ -1,1 +1,0 @@
-    public static final double LOG2 = Math.log(2);

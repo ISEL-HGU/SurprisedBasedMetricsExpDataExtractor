@@ -1,3 +1,0 @@
-        // floating point multiplication is faster than division
-        final double multiplier = 1.d / sum;
-            arr[i] *= multiplier;

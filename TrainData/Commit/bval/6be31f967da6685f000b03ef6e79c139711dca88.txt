@@ -1,5 +1,0 @@
-import java.util.Set;
-
-    public Set<Class<?>> getCustomizedTypes() {
-        return beanBuilders.keySet();
-    }

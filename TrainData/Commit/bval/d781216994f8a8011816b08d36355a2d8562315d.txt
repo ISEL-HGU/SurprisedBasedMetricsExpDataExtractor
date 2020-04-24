@@ -1,3 +1,0 @@
-/**
- * {@link ValueExtractor} collection of some level of a bean validation hierarchy.
- */

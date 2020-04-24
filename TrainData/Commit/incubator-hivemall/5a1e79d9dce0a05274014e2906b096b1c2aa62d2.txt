@@ -1,2 +1,0 @@
-        if (!HiveUtils.isPrimitiveTypeInfo(arg1type.getListElementTypeInfo()) 
-            && !HiveUtils.isStructTypeInfo(arg1type.getListElementTypeInfo())) {

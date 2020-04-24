@@ -1,8 +1,0 @@
-import org.apache.bval.jsr.ApacheFactoryContext;
-import org.apache.bval.jsr.ApacheMessageContext;
-public class ConstraintValidatorContextImpl<T> implements ConstraintValidatorContext, ApacheMessageContext {
-
-    @Override
-    public String getConfigurationProperty(String propertyKey) {
-        return frame.context.getValidatorContext().getFactory().getProperties().get(propertyKey);
-    }

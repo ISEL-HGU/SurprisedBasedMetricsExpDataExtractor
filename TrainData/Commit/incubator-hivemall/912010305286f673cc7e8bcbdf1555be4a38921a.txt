@@ -1,9 +1,0 @@
-        if (model == null) {
-            logger.warn(
-                "Model is not initialized bacause no training exmples to learn. Better to revise input data.");
-            return;
-        } else if (model.getDocCount() == 0L) {
-            logger.warn(
-                "model.getDocCount() is zero because no training exmples to learn. Better to revise input data.");
-            return;
-

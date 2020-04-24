@@ -1,2 +1,0 @@
-                final PathImpl p = context.getPath();
-                final PathImpl pathToTraversableObject = context.getPath();

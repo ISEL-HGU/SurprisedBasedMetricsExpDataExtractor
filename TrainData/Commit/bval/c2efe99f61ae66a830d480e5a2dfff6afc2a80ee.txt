@@ -1,1 +1,0 @@
-            .map(c -> new ConstraintD<>(c, scope, meta, validatorFactory)).collect(ToUnmodifiable.set());

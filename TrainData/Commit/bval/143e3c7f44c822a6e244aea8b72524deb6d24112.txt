@@ -1,5 +1,0 @@
-import java.util.Optional;
-            Optional.of(mapping).map(this::toMappingProvider).ifPresent(addValidatorMappingProvider);
-        if (mapping.getConstraintDefinition().isEmpty()) {
-            return null;
-        }

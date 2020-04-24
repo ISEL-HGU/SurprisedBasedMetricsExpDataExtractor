@@ -1,2 +1,0 @@
-    protected void recordAccess(int idx) {}
-    protected void recordRemoval(int idx) {}

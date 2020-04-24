@@ -1,5 +1,0 @@
-            Optional.of(ctor).map(ConstructorType::getReturnValue).ifPresent(rv -> {
-                final ForConstructor<?> metaCtor = new Meta.ForConstructor<>(dc);
-                constraints(metaCtor, rv.getConstraint());
-                containerElements(metaCtor, rv.getContainerElementType());
-            });

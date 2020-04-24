@@ -1,1 +1,0 @@
-            assert (parameters.length >=1 && parameters.length <= 3) : parameters.length;

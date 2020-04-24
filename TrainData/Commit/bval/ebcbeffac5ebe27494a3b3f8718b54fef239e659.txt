@@ -1,2 +1,0 @@
-        if (Boolean.TYPE.equals(m.getReturnType()) && m.getName().length() > 2 && m.getName().startsWith("is")) {
-        return !Void.TYPE.equals(m.getReturnType()) && m.getName().length() > 3 && m.getName().startsWith("get");

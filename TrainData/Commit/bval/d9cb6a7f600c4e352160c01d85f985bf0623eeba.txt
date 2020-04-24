@@ -1,7 +1,0 @@
-        return Collectors.collectingAndThen(Collectors.toCollection(set),
-            t -> t.isEmpty() ? Collections.emptySet() : Collections.unmodifiableSet(t));
-        return set(LinkedHashSet::new);
-        return Collectors.collectingAndThen(Collectors.toList(),
-            t -> t.isEmpty() ? Collections.emptyList() : Collections.unmodifiableList(t));
-        return Collectors.collectingAndThen(Collectors.toMap(keyMapper, valueMapper),
-            t -> t.isEmpty() ? Collections.emptyMap() : Collections.unmodifiableMap(t));

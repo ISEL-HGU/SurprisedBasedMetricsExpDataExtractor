@@ -1,4 +1,0 @@
-import java.util.Comparator;
-import org.apache.bval.util.Comparators;
-    public static final Comparator<Path> PATH_COMPARATOR = Comparators.comparingIterables(NodeImpl.NODE_COMPARATOR);
-

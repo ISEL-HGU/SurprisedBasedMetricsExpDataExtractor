@@ -1,1 +1,0 @@
-            this.upperBounds = ObjectUtils.isEmptyArray(upperBounds) ? EMPTY_UPPER_BOUNDS : upperBounds;

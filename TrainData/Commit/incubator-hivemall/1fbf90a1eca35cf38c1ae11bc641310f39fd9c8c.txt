@@ -1,7 +1,0 @@
-    public static double doubleValue(final Double v, final double defaultValue) {
-        if (v == null) {
-            return defaultValue;
-        }
-        return v.doubleValue();
-    }
-

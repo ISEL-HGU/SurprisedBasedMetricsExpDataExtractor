@@ -1,3 +1,0 @@
-import org.apache.hadoop.hive.ql.metadata.HiveException;
-    public List<Text> evaluate(final List<Text> ftvecs) throws HiveException {
-                throw new HiveException("Invalid feature value representation: "  s);

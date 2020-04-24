@@ -1,2 +1,0 @@
-                    Exceptions.raise(ConstraintDeclarationException::new, "No %s found for %s",
-                        ValueExtractor.class.getSimpleName(), containerClass);

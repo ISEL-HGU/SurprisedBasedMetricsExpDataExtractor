@@ -1,1 +1,0 @@
-    private volatile IntSupplier init;

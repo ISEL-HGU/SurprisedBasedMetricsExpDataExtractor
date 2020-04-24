@@ -1,2 +1,0 @@
-    // get rid of proxies which probably contains wrong annotation metamodel - note: it is "slow", cache the result!
-    public static Class<?> classFor(final Class<?> clazz) { // TODO: do we want a SPI with impl for guice, owb, openejb, ...?

@@ -1,1 +1,0 @@
-        float d = PrimitiveObjectInspectorUtils.getFloat(arguments[0].get(), distanceOI);

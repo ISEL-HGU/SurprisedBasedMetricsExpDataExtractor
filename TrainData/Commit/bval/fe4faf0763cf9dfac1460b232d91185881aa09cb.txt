@@ -1,8 +1,0 @@
-import static java.util.Comparator.comparing;
-import static java.util.Comparator.naturalOrder;
-import static java.util.Comparator.nullsFirst;
-
-    public static final Comparator<ContainerElementKey> COMPARATOR =
-        nullsFirst(comparing(ContainerElementKey::containerClassName)
-            .thenComparing(ContainerElementKey::getTypeArgumentIndex, nullsFirst(naturalOrder())));
-        return COMPARATOR.compare(this, o);

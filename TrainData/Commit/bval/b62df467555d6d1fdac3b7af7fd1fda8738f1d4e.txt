@@ -1,2 +1,0 @@
-                    groups.assertDefaultGroupSequenceIsExpandable(
-                        groupSequence.stream().map(Group::new).collect(Collectors.toList()));
