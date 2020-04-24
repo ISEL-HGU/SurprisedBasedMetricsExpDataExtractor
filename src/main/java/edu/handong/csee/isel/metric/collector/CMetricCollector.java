@@ -25,7 +25,8 @@ public class CMetricCollector implements MetricCollector {
 		this.input = input;
 		git = Git.open(Main.getGitDirectory(input));
 		repo = git.getRepository();
-		referencePath = input.outPath + File.separator + input.projectName +"-reference";
+		// referencePath = input.outPath + File.separator + input.projectName +"-reference";
+		referencePath = input.outPath;
 	}
 
 	@Override
