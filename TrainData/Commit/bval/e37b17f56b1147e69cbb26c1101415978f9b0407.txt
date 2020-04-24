@@ -1,0 +1,9 @@
+        final Map<Class<?>, Meta<?>> cascadedReturnValues =
+            delegates.stream().filter(ContainerDelegate::isCascade).map(HierarchyDelegate::getHierarchyElement)
+                .collect(Collectors.toMap(Meta::getDeclaringClass, Function.identity()));
+        final boolean anyRelated = cascadedReturnValues.keySet().stream().anyMatch(t -> cascadedReturnValues.keySet()
+            .stream().filter(Predicate.isEqual(t).negate()).anyMatch(t2 -> related(t, t2)));
+
+        Exceptions.raiseIf(anyRelated, ConstraintDeclarationException::new,
+            "Multiple method return values marked @%s in hierarchy %s", Valid.class.getSimpleName(),
+            cascadedReturnValues.values());

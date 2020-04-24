@@ -1,0 +1,63 @@
+        void process(Class<?> group, Consumer<ConstraintViolation<T>> sink) {
+            each(expand(group), this::validateDescriptorConstraints, sink);
+            recurse(group, sink);
+        void recurse(Class<?> group, Consumer<ConstraintViolation<T>> sink) {
+            throw new UnsupportedOperationException();
+        }
+            constraintsFor(descriptor, group)
+        Stream<Class<?>> expand(Class<?> group) {
+        void process(Class<?> group, Consumer<ConstraintViolation<T>> sink) {
+            Validate.notNull(sink, "sink");
+            final Lazy<Set<Frame<?>>> propertyFrames = new Lazy<>(this::propertyFrames);
+            each(expand(group), (t, u) -> {
+                validateDescriptorConstraints(t, u);
+                propertyFrames.get().forEach(p -> p.validateDescriptorConstraints(t, u));
+            }, sink);
+            propertyFrames.get().forEach(p -> p.recurse(group, sink));
+        private Set<Frame<?>> propertyFrames() {
+            return reachableProperties.flatMap(d -> d.read(realContext).filter(context -> !context.isRecursive())
+                .map(child -> propertyFrame(d, child))).collect(Collectors.toSet());
+        
+        @Override
+        void validateDescriptorConstraints(Class<?> group, Consumer<ConstraintViolation<T>> sink) {
+            super.validateDescriptorConstraints(group, sink);
+            if (context.getValue() != null) {
+                descriptor.getConstrainedContainerElementTypes().stream()
+                    .flatMap(d -> ComposedD.unwrap(d, ContainerElementTypeD.class)).forEach(d -> {
+                        if (constraintsFor(d, group).findFirst().isPresent()
+                            || !d.getConstrainedContainerElementTypes().isEmpty()) {
+                            final ValueExtractor<?> declaredTypeValueExtractor =
+                                context.getValidatorContext().getValueExtractors().find(d.getKey());
+                            ExtractValues.extract(context, d.getKey(), declaredTypeValueExtractor).stream()
+                                .filter(e -> !e.isRecursive())
+                                .map(e -> new ContainerElementConstraintsFrame(this, d, e))
+                                .forEach(f -> f.validateDescriptorConstraints(group, sink));
+                        }
+                    });
+            }
+        }
+            convertedGroups.getGroups().stream().map(Group::getGroup).forEach(g -> cascade(g, sink));
+                final boolean proceed = each(seq.stream().map(Group::getGroup), this::cascade, sink);
+        private void cascade(Class<?> group, Consumer<ConstraintViolation<T>> sink) {
+            if (context.getValue() != null) {
+                descriptor.getConstrainedContainerElementTypes().stream()
+                    .filter(d -> d.isCascaded() || !d.getConstrainedContainerElementTypes().isEmpty())
+                    .flatMap(d -> ComposedD.unwrap(d, ContainerElementTypeD.class)).forEach(d -> {
+                        final ValueExtractor<?> runtimeTypeValueExtractor =
+                            context.getValidatorContext().getValueExtractors().find(context.runtimeKey(d.getKey()));
+                        ExtractValues.extract(context, d.getKey(), runtimeTypeValueExtractor).stream()
+                            .filter(e -> !e.isRecursive()).map(e -> new ContainerElementCascadeFrame(this, d, e))
+                            .forEach(f -> f.recurse(group, sink));
+                    });
+            }
+    private static Stream<ConstraintD<?>> constraintsFor(ElementD<?, ?> descriptor, Class<?> group) {
+        return descriptor.getConstraintDescriptors().stream().<ConstraintD<?>> map(ConstraintD.class::cast)
+            .filter(c -> {
+                final Set<Class<?>> constraintGroups = c.getGroups();
+                return constraintGroups.contains(group)
+                    || constraintGroups.contains(Default.class) && c.getDeclaringClass().isAssignableFrom(group);
+            });
+    }
+
+    protected boolean each(Stream<Class<?>> groupSequence,
+        BiConsumer<Class<?>, Consumer<ConstraintViolation<T>>> closure, Consumer<ConstraintViolation<T>> sink) {

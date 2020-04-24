@@ -1,0 +1,3 @@
+        if (!HiveUtils.isPrimitiveTypeInfo(arg1type.getListElementTypeInfo())) {
+                    "The first argument `array rankItems` is invalid form: "  typeInfo[0]);
+                    "The second argument `array correctItems` is invalid form: "  typeInfo[1]);

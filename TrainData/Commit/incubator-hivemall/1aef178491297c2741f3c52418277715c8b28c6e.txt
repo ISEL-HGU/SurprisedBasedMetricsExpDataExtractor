@@ -1,0 +1,5 @@
+            this.inputBuf = buf = ByteBuffer.allocateDirect(2 * 1024 * 1024); // 2 MB
+        if (requiredBytes > buf.remaining()) {
+            throw new HiveException("Buffer size (2MB) for writing training example is not enough: "
+                     NumberUtils.prettySize(requiredBytes));
+        }

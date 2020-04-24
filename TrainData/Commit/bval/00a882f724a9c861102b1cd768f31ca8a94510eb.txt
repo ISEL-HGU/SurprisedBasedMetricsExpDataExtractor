@@ -1,0 +1,9 @@
+import java.lang.annotation.Annotation;
+import javax.validation.constraints.NegativeOrZero;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
+public abstract class NumberSignValidator<A extends Annotation> implements ConstraintValidator<A, Number> {
+    public static class ForPositive extends NumberSignValidator<Positive> {
+        public static class OrZero extends NumberSignValidator<PositiveOrZero> {
+    public static class ForNegative extends NumberSignValidator<Negative> {
+        public static class OrZero extends NumberSignValidator<NegativeOrZero> {

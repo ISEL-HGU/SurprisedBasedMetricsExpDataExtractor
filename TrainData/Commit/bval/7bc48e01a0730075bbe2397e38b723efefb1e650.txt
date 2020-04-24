@@ -1,0 +1,2 @@
+     * Package-private method intended for unit tests.
+    void assertDefaultGroupSequenceIsExpandable(List<Group> defaultGroups) {

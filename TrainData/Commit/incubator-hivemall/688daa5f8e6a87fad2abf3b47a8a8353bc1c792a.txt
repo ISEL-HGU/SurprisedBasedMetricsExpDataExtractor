@@ -1,0 +1,12 @@
+    public static boolean isConstInt(@Nonnull final ObjectInspector oi) {
+        return ObjectInspectorUtils.isConstantObjectInspector(oi) && isIntOI(oi);
+    }
+
+    public static boolean isConstInteger(@Nonnull final ObjectInspector oi) {
+        return ObjectInspectorUtils.isConstantObjectInspector(oi) && isIntegerOI(oi);
+    }
+
+    public static boolean isConstBoolean(@Nonnull final ObjectInspector oi) {
+        return ObjectInspectorUtils.isConstantObjectInspector(oi) && isBooleanOI(oi);
+    }
+

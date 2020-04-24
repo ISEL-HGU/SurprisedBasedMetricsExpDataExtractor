@@ -1,0 +1,7 @@
+     * <a href="https://en.wikipedia.org/wiki/Logit">Logit</a> is the inverse of {@link #sigmoid(double)} function.
+     * Returns the inverse erf. This code is based on erfInv() in org.apache.commons.math3.special.Erf.
+     * This implementation is described in the paper: <a href="http://people.maths.ox.ac.uk/gilesm/files/gems_erfinv.pdf">Approximating the erfinv
+     * function</a> by Mike Giles, Oxford-Man Institute of Quantitative Finance, which was published in GPU Computing Gems, volume 2, 2010. The source
+     * code is available <a href="http://gpucomputing.net/?q=node/1828">here</a>.
+    public static int sign(final float v) {
+        return v < 0.f ? -1 : 1;

@@ -1,0 +1,3 @@
+public class ValidationMappingParser implements MetadataSource {
+    public void initialize(ApacheValidatorFactory validatorFactory) {
+        this.validatorFactory = Validate.notNull(validatorFactory);

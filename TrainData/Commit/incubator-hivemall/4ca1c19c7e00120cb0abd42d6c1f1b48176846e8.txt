@@ -1,0 +1,5 @@
+            final float newWeight = update(auxWeight, gradient);
+            if (newWeight == 0.f) {
+                auxWeights.remove(feature);
+            }
+            return newWeight;

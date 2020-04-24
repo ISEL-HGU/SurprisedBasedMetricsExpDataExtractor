@@ -1,0 +1,20 @@
+    private final List<NodeImpl> nodeList;
+        if (propertyPath == null || propertyPath.isEmpty()) {
+    private static NodeImpl newNode(final Node cast) {
+        nodeList = new ArrayList<NodeImpl>();
+    private PathImpl(Iterable<Node> path) {
+        this();
+        for (final Node node : path) {
+            nodeList.add(newNode(node));
+        NodeImpl impl = node instanceof NodeImpl ? (NodeImpl) node : newNode(node);
+            nodeList.set(0, impl);
+            nodeList.add(impl);
+    public NodeImpl removeLeafNode() {
+        if (isRootPath() || nodeList.isEmpty()) {
+        if (nodeList.isEmpty()) {
+        @SuppressWarnings({ "unchecked", "rawtypes" })
+        final Iterator<Path.Node> result = ((List) nodeList).iterator();
+        return result;
+        if (o == null || !getClass().equals(o.getClass())) {
+        return nodeList == path.nodeList || nodeList != null && nodeList.equals(path.nodeList);
+        return nodeList == null ? 0 : nodeList.hashCode();

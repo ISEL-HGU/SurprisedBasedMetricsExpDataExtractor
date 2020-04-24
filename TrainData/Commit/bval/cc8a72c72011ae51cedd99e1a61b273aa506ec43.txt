@@ -1,0 +1,5 @@
+import java.lang.annotation.ElementType;
+                    // ignore group conversions without cascade on property getters:
+                    if (meta.getElementType() == ElementType.METHOD && Methods.isGetter((Method) meta.getHost())) {
+                        return Collections.emptySet();
+                    }

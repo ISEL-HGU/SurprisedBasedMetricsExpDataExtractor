@@ -1,0 +1,27 @@
+import java.util.Collections;
+
+            final Map<Meta<?>, Set<ValidationElement>> detectedValidationElements =
+                detectValidationElements(delegates, detectGroupConversion());
+
+            // pre-check return value overridden hierarchy:
+            Stream.of(StrengtheningIssue.values())
+                .filter((Predicate<? super StrengtheningIssue>) si -> !(si == StrengtheningIssue.overriddenHierarchy
+                    && detectedValidationElements.values().stream().filter(s -> !s.isEmpty()).count() < 2))
+                .forEach(si -> si.check(detectedValidationElements));
+
+        final Map<Meta<?>, Set<ValidationElement>> detectedValidationElements = 
+                detectValidationElements(delegates, detectors);
+
+        if (detectedValidationElements.isEmpty()) {
+            return;
+        }
+        for (StrengtheningIssue s : StrengtheningIssue.values()) {
+            s.check(detectedValidationElements);
+        }
+    }
+
+    @SafeVarargs
+    private static <D extends ElementDelegate<?, ?>> Map<Meta<?>, Set<ValidationElement>> detectValidationElements(
+        List<? extends D> delegates, Function<? super D, ValidationElement>... detectors) {
+            return Collections.emptyMap();
+        return detectedValidationElements;

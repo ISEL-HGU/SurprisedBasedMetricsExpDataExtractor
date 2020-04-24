@@ -1,0 +1,12 @@
+    public static boolean isGetter(String methodName) {
+        Validate.notNull(methodName);
+        final int len = methodName.length();
+        return len > 2 && methodName.startsWith("is") || len > 3 && methodName.startsWith("get");
+    }
+
+        return propertyName(getter.getName());
+    }
+
+    public static String propertyName(String methodName) {
+        Validate.isTrue(isGetter(methodName), "%s does not represent a property getter");
+        final String suffix = methodName.startsWith("is") ? methodName.substring(2) : methodName.substring(3);

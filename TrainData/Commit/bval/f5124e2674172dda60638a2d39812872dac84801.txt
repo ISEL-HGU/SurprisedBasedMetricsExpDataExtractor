@@ -1,0 +1,1 @@
+        .add(XmlBuilder.Version.v10.getId(), "http://jboss.org/xml/ns/javax/validation/configuration",

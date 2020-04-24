@@ -1,0 +1,47 @@
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import javax.validation.BootstrapConfiguration;
+        return file == null ? DEFAULT_VALIDATION_XML_FILE : file;
+    public static BootstrapConfiguration processValidationConfig(final String file,
+        final ConfigurationImpl targetConfig) {
+        final ValidationConfigType xmlConfig = parseXmlConfig(file);
+        if (xmlConfig == null) {
+            return null;
+        final boolean executableValidationEnabled;
+        final Set<ExecutableType> defaultValidatedExecutableTypes;
+        if (xmlConfig.getExecutableValidation() == null) {
+            defaultValidatedExecutableTypes = BootstrapConfigurationImpl.DEFAULT_DEFAULT_VALIDATED_EXECUTABLE_TYPES;
+            executableValidationEnabled = true;
+            final Optional<ExecutableValidationType> executableValidation =
+                Optional.of(xmlConfig).map(ValidationConfigType::getExecutableValidation);
+            executableValidationEnabled = executableValidation.map(ExecutableValidationType::getEnabled)
+                .filter(Predicate.isEqual(Boolean.TRUE)).isPresent();
+            defaultValidatedExecutableTypes = executableValidation.filter(x -> executableValidationEnabled)
+                .map(ExecutableValidationType::getDefaultValidatedExecutableTypes)
+                .map(DefaultValidatedExecutableTypesType::getExecutableType).map(EnumSet::copyOf)
+                .orElse(EnumSet.noneOf(ExecutableType.class));
+        return new BootstrapConfigurationImpl(xmlConfig.getDefaultProvider(), xmlConfig.getConstraintValidatorFactory(),
+            xmlConfig.getMessageInterpolator(), xmlConfig.getTraversableResolver(),
+            xmlConfig.getParameterNameProvider(), new HashSet<>(xmlConfig.getConstraintMapping()),
+            executableValidationEnabled, defaultValidatedExecutableTypes, toMap(xmlConfig.getProperty()),
+            xmlConfig.getClockProvider(), new HashSet<>(xmlConfig.getValueExtractor()));
+        return property == null || property.isEmpty() ? Collections.emptyMap()
+            : property.stream().collect(Collectors.toMap(PropertyType::getName, PropertyType::getValue));
+            throw Exceptions.create(ValidationException::new, e, "Unable to parse %s", validationXmlFile);
+    public static InputStream open(String mappingFileName) {
+        if (mappingFileName.charAt(0) == '/') {
+            // Classloader needs a path without a starting /
+            mappingFileName = mappingFileName.substring(1);
+        }
+        try {
+            final InputStream in = getInputStream(mappingFileName);
+            Exceptions.raiseIf(in == null, ValidationException::new,
+                    "Unable to open input stream for mapping file %s", mappingFileName);
+            return(in);
+        } catch (IOException e) {
+            throw Exceptions.create(ValidationException::new, e, "Unable to open input stream for mapping file %s",
+                mappingFileName);
+        }
+    }
+
+    static InputStream getInputStream(final String path) throws IOException {

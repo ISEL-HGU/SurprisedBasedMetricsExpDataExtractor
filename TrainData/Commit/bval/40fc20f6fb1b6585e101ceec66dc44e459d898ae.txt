@@ -1,0 +1,2 @@
+public class PatternValidator implements ConstraintValidator<Pattern, CharSequence> {
+    public boolean isValid(CharSequence value, ConstraintValidatorContext context) {

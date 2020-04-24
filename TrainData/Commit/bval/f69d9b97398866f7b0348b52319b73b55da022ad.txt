@@ -1,0 +1,3 @@
+import java.util.LinkedHashMap;
+            assignableKeys.stream().filter(allValueExtractors::containsKey).collect(
+                Collectors.toMap(Function.identity(), allValueExtractors::get, (quid, quo) -> quo, LinkedHashMap::new));

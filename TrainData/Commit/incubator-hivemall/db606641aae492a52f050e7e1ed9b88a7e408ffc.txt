@@ -1,0 +1,17 @@
+    @Nonnull
+    private final ObjectInspector oi;
+    @Nonnull
+    private final JsonFactory factory;
+    @Nonnull
+    public HiveJsonStructReader(@Nonnull TypeInfo t) {
+        this.oi = TypeInfoUtils.getStandardWritableObjectInspectorFromTypeInfo(t);
+        this.factory = new JsonFactory();
+    public Object parseStruct(@Nonnull String text)
+            throws JsonParseException, IOException, SerDeException {
+    public Object parseStruct(@Nonnull InputStream is)
+    private Object parseInternal(@Nonnull JsonParser parser) throws SerDeException {
+            default:
+                throw new IOException(
+                    "Could not convert from string to "  typeInfo.getPrimitiveCategory());
+        this.ignoreUnknownFields = b;
+        this.writeablePrimitives = b;

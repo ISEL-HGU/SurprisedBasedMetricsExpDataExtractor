@@ -1,0 +1,4 @@
+ b/core/src/main/java/hivemall/utils/io/NioStatefulSegment.java
+public final class NioStatefulSegment extends NioSegment {
+    public NioStatefulSegment(File file) {
+    public NioStatefulSegment(File file, boolean readOnly) {

@@ -1,0 +1,3 @@
+        if (featureStr.indexOf(':') >= 0) {
+            throw new UDFArgumentException("feature name SHOULD NOT contain colon: "  featureStr);
+        }

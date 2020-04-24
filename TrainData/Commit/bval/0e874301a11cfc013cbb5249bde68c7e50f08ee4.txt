@@ -1,0 +1,2 @@
+import org.apache.bval.jsr.metadata.Meta;
+    public static Annotation[] getDeclaredConstraints(Meta<?> meta) {

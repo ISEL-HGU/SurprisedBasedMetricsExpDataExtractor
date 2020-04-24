@@ -1,0 +1,19 @@
+ b/core/src/main/java/hivemall/tools/map/MapGetUDF.java
+import hivemall.utils.lang.StringUtils;
+
+@Description(name = "map_get",
+        value = "_FUNC_(MAP<K> a, K n) - Returns the value corresponding to the key in the map",
+        extended = "WITH tmp as (\n" 
+                "  SELECT \"one\" as key\n" 
+                "  UNION ALL\n" 
+                "  SELECT \"two\" as key\n" 
+                ")\n" 
+                "SELECT map_get(map(\"one\",1,\"two\",2),key)\n" 
+                "> 1\n" 
+                "> 2")
+public final class MapGetUDF extends GenericUDF {
+            throw new UDFArgumentLengthException("map_get accepts exactly 2 arguments.");
+            throw new UDFArgumentTypeException(0,
+                "\"map\" is expected for the first argument, but \""  arguments[0].getTypeName()
+                         "\" is found");
+        return "map_get("  StringUtils.join(children, ',')  ')';

@@ -1,0 +1,21 @@
+import javax.validation.executable.ValidateOnExecution;
+        constraints, cascades, groupConversions, validateOnExecution;
+    static void validateContainerHierarchy(Collection<? extends ContainerDelegate<?>> delegates, ElementKind elementKind) {
+            elementKind = getContainer(delegates.iterator().next().getHierarchyElement());
+                detectValidationElements(delegates, ElementDelegate::getHierarchyElement, detectGroupConversion());
+    static void validateCrossParameterHierarchy(Collection<? extends ElementDelegate<?, ?>> delegates) {
+    static void validateValidateOnExecution(Collection<? extends HierarchyDelegate<?, ?>> delegates) {
+        noStrengtheningOfPreconditions(delegates, detectValidateOnExecution());
+    }
+
+    private static void noRedeclarationOfReturnValueCascading(Collection<? extends ContainerDelegate<?>> delegates) {
+    private static <D extends HierarchyDelegate<?, ?>> void noStrengtheningOfPreconditions(Collection<? extends D> delegates,
+                detectValidationElements(delegates, HierarchyDelegate::getHierarchyElement, detectors);
+    private static <T> Map<Meta<?>, Set<ValidationElement>> detectValidationElements(Collection<? extends T> delegates,
+        Function<? super T, Meta<?>> toMeta, Function<? super T, ValidationElement>... detectors) {
+            detectedValidationElements.put(toMeta.apply(d),
+    private static Function<HierarchyDelegate<?, ?>, ValidationElement> detectValidateOnExecution() {
+        return d -> d.getHierarchyElement().getHost().isAnnotationPresent(ValidateOnExecution.class)
+            ? ValidationElement.validateOnExecution : null;
+    }
+

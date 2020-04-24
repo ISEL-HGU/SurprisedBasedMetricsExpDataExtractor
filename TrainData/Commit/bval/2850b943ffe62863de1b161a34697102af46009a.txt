@@ -1,0 +1,3 @@
+            final ClassType classType = descriptor.getClassType();
+            return classType == null ? EmptyBuilder.instance().forBean().getClass(meta)
+                : new XmlBuilder.ForClass(classType);

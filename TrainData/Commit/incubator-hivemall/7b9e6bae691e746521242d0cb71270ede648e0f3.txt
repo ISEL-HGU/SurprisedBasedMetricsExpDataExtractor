@@ -1,0 +1,45 @@
+import hivemall.utils.collections.Fastutil;
+@Description(name = "train_slim",
+        this.knnItemsValueKeyOI =
+                HiveUtils.asIntCompatibleOI(knnItemsValueOI.getMapKeyObjectInspector());
+        this.knnItemsValueValueOI =
+                HiveUtils.asDoubleCompatibleOI(knnItemsValueOI.getMapValueObjectInspector());
+                throw new UDFArgumentException(
+                    "Argument `int iters` must be greater than 0: "  numIterations);
+            this._ri =
+                    int2floatMap(itemI, riOI.getMap(args[1]), riKeyOI, riValueOI, _dataMatrix, _ri);
+        Int2FloatMap rj =
+                int2floatMap(itemJ, rjOI.getMap(args[4]), rjKeyOI, rjValueOI, _dataMatrix);
+                    throw new UDFArgumentException(
+                        "Cannot write a temporary file: "  file.getAbsolutePath());
+        for (Int2ObjectMap.Entry<Int2FloatMap> e1 : Fastutil.fastIterable(knnItems)) {
+            for (Int2FloatMap.Entry e2 : Fastutil.fastIterable(ru)) {
+        for (Int2FloatMap.Entry e : Fastutil.fastIterable(rj)) {
+            double rui = ri.get(user); // ri.getOrDefault(user, 0.f);
+        for (Int2FloatMap.Entry e : Fastutil.fastIterable(kNNu)) {
+    private static double getUpdateTerm(final double gradSum, final double rateSum, final double l1,
+            final double l2) {
+        final Counters.Counter iterCounter = (reporter == null) ? null
+                : reporter.getCounter("hivemall.recommend.slim$Counter", "iteration");
+                logger.info("Performed "  _cvState.getCurrentIteration()  " iterations of "
+                         NumberUtils.formatNumber(
+                            _observedTrainingExamples * _cvState.getCurrentIteration())
+                         " training updates in total) ");
+                    throw new HiveException(
+                        "Failed to flush a file: "  dst.getFile().getAbsolutePath(), e);
+                    logger.info(
+                        "Wrote KNN entries of axis items to a temporary file for iterative training: "
+                                 tmpFile.getAbsolutePath()  " ("
+                                 FileUtils.prettyFileSize(tmpFile)  ")");
+                            throw new HiveException(
+                                "Failed to read a file: "  dst.getFile().getAbsolutePath(), e);
+                logger.info("Performed "  _cvState.getCurrentIteration()  " iterations of "
+                         NumberUtils.formatNumber(
+                            _observedTrainingExamples * _cvState.getCurrentIteration())
+                         " training updates in total) ");
+                throw new HiveException(
+                    "Failed to close a file: "  dst.getFile().getAbsolutePath(), e);
+            @Nonnull final PrimitiveObjectInspector valueOI,
+            @Nullable final FloatMatrix dataMatrix) {
+            @Nonnull final PrimitiveObjectInspector valueOI, @Nullable final FloatMatrix dataMatrix,
+            @Nullable Int2FloatMap dst) {

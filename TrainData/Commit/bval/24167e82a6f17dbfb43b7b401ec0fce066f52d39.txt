@@ -1,0 +1,50 @@
+import java.util.Arrays;
+import java.util.Collections;
+import org.apache.bval.util.Lazy;
+
+        @Override
+        public Meta<?> getParent() {
+            return null;
+        }
+        private final Lazy<Meta<Class<?>>> parent = new Lazy<>(() -> new Meta.ForClass(getDeclaringClass()));
+
+        @Override
+        public Meta<Class<?>> getParent() {
+            return parent.get();
+        }
+    public static class ForCrossParameter<E extends Executable> extends Meta<E> {
+
+        private final Meta<E> parent;
+            this.parent = parent;
+
+        @Override
+        public Meta<E> getParent() {
+            return parent;
+        }
+
+        @Override
+        public Class<?> getDeclaringClass() {
+            return getHost().getDeclaringClass();
+        }
+
+        @Override
+        public AnnotatedType getAnnotatedType() {
+            return getHost().getAnnotatedReturnType();
+        }
+        private final Lazy<Meta<? extends Executable>> parent = new Lazy<>(this::computeParent);
+            return Arrays.asList(ValidationTarget.values());
+
+        @Override
+        public Meta<? extends Executable> getParent() {
+            return parent.get();
+        }
+
+        private Meta<? extends Executable> computeParent() {
+            final Executable exe = getHost().getDeclaringExecutable();
+            return exe instanceof Method ? new Meta.ForMethod((Method) exe)
+                : new Meta.ForConstructor((Constructor<?>) exe);
+        }
+        @Override
+    
+    public abstract Meta<?> getParent();
+        return Collections.singleton(getValidationTarget());

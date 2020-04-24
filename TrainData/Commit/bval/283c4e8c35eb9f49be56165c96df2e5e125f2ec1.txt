@@ -1,0 +1,17 @@
+     * @return {@code this}, fluently
+    public PathImpl addNode(Node node) {
+        return this;
+     * @return {@code this}, fluently
+    public PathImpl addProperty(String name) {
+                return this;
+        return addNode(new NodeImpl.PropertyNodeImpl(name));
+    }
+
+    public PathImpl addBean() {
+        final NodeImpl.BeanNodeImpl node;
+        if (!nodeList.isEmpty() && isAwaitingPropertyName(getLeafNode())) {
+            node = new NodeImpl.BeanNodeImpl(removeLeafNode());
+        } else {
+            node = new NodeImpl.BeanNodeImpl();
+        }
+        return addNode(node);

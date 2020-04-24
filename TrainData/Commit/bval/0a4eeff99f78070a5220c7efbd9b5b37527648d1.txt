@@ -1,0 +1,11 @@
+            return Boolean.TRUE.equals(lazy(isCascade, "isCascade"));
+            final CrossParameterType cp = lazy(getCrossParameter, "getCrossParameter");
+            if (cp == null) {
+                return EmptyBuilder.instance().<E> forExecutable().getCrossParameter(meta);
+            }
+            return new XmlBuilder.ForCrossParameter<>(cp);
+            final ReturnValueType rv = lazy(getReturnValue, "getReturnValue");
+            if (rv == null) {
+                return EmptyBuilder.instance().<E> forExecutable().getReturnValue(meta);
+            }
+            return new XmlBuilder.ForReturnValue<>(rv);

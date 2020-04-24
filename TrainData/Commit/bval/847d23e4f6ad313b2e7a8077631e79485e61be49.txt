@@ -1,0 +1,13 @@
+        if (message.contains("${")) {
+                final BValELContext context = new BValELContext();
+                final VariableMapper variables = context.getVariableMapper();
+                annotationParameters.forEach(
+                    (k, v) -> variables.setVariable(k, expressionFactory.createValueExpression(v, Object.class)));
+
+                variables.setVariable("validatedValue",
+                    expressionFactory.createValueExpression(validatedValue, Object.class));
+
+                // Java Bean Validation does not support EL expressions that look like JSP "deferred" expressions
+                return expressionFactory.createValueExpression(context,
+                    EvaluationType.DEFERRED.regex.matcher(message).replaceAll("\\$0"), String.class).getValue(context)
+                    .toString();

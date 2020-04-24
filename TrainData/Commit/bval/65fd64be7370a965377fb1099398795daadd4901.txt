@@ -1,0 +1,7 @@
+import java.util.Collections;
+    /** The list of single groups. */
+    private final List<Group> groups = new ArrayList<>();
+
+        return Collections.unmodifiableList(groups);
+        return Collections.unmodifiableList(sequences);
+            sequences.add(Collections.unmodifiableList(groups));

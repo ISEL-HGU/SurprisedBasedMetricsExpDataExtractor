@@ -1,0 +1,55 @@
+import hivemall.utils.lang.Primitives;
+import javax.annotation.Nonnull;
+
+import org.apache.hadoop.hive.ql.exec.UDFArgumentTypeException;
+import org.apache.hadoop.hive.ql.util.JavaDataModel;
+import org.apache.hadoop.hive.serde2.io.DoubleWritable;
+import org.apache.hadoop.hive.serde2.objectinspector.ListObjectInspector;
+import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
+import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspectorFactory;
+import org.apache.hadoop.hive.serde2.objectinspector.StructField;
+import org.apache.hadoop.hive.serde2.objectinspector.StructObjectInspector;
+import org.apache.hadoop.hive.serde2.objectinspector.primitive.BooleanObjectInspector;
+import org.apache.hadoop.hive.serde2.objectinspector.primitive.IntObjectInspector;
+import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
+import org.apache.hadoop.hive.serde2.typeinfo.TypeInfo;
+import org.apache.hadoop.io.LongWritable;
+        value = "_FUNC_(array|int|boolean actual, array|int| boolean predicted [, const string options])"
+                 " - Return a F-measure (f1score is the special with beta=1.0)")
+
+        @Nonnull
+            List<String> fieldNames = new ArrayList<>();
+            List<ObjectInspector> fieldOIs = new ArrayList<>();
+            myAggr.setOptions(beta, average);
+                if ("binary".equals(average)) {
+                    final int actualLabel = asIntLabel(parameters[0], (IntObjectInspector) actualOI);
+                    if (actualLabel == 0 && "binary".equals(average)) {
+                    final int predictedLabel = asIntLabel(parameters[1],
+                        (IntObjectInspector) predictedOI);
+                    if (predictedLabel == 0 && "binary".equals(average)) {
+        private static int asIntLabel(@Nonnull final Object o,
+                @Nonnull final BooleanObjectInspector booleanOI) {
+        private static int asIntLabel(@Nonnull final Object o,
+                @Nonnull final IntObjectInspector intOI) throws UDFArgumentException {
+            final int value = intOI.get(o);
+            switch (value) {
+                case 1:
+                    return 1;
+                case 0:
+                case -1:
+                    return 0;
+                default:
+                    throw new UDFArgumentException("Int label must be 1, 0 or -1: "  value);
+        void merge(final long o_tp, final long o_actual, final long o_predicted, final double beta,
+                final String average) {
+            final double squareBeta = beta * beta;
+            final double divisor;
+            final double numerator;
+            if ("micro".equals(average)) {
+        private static double denom(final long tp, final long totalActual,
+                final long totalPredicted, double squareBeta) {
+        private static double precision(final long tp, final long totalPredicted) {
+            return (totalPredicted == 0L) ? 0.d : tp / (double) totalPredicted;
+        private static double recall(final long tp, final long totalActual) {
+            return (totalActual == 0L) ? 0.d : tp / (double) totalActual;
+        void iterate(@Nonnull final List<?> actual, @Nonnull final List<?> predicted) {

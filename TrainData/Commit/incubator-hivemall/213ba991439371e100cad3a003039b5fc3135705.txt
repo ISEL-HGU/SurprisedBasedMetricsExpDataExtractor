@@ -1,0 +1,58 @@
+import static hivemall.docs.utils.MarkdownUtils.asCodeBlock;
+import static hivemall.docs.utils.MarkdownUtils.asInlineCode;
+import static hivemall.docs.utils.MarkdownUtils.asListElement;
+import static hivemall.docs.utils.MarkdownUtils.indent;
+import static org.apache.commons.lang.StringEscapeUtils.escapeHtml;
+
+import java.util.LinkedHashMap;
+import javax.annotation.Nonnull;
+
+import org.apache.hadoop.hive.ql.exec.Description;
+import org.apache.maven.execution.MavenSession;
+import org.apache.maven.plugin.AbstractMojo;
+import org.apache.maven.plugin.MojoExecutionException;
+import org.apache.maven.plugins.annotations.Mojo;
+import org.apache.maven.plugins.annotations.Parameter;
+import org.reflections.Reflections;
+                value = asInlineCode(description.name()  matcher.group(1))
+            sb.append(asListElement(value));
+            if (extended.isEmpty()) {
+            } else {
+                if (extended.toLowerCase().contains("select")) { // extended description contains SQL statements
+                    sb.append(indent(asCodeBlock(extended, "sql")));
+                } else {
+                    sb.append(indent(asCodeBlock(extended)));
+                }
+        try (PrintWriter writer = new PrintWriter(outputFile)) {
+            // license header
+            writer.println("<!--");
+            try {
+                File licenseFile = new File(basedir, "resources/license-header.txt");
+                FileReader fileReader = new FileReader(licenseFile);
+
+                try (BufferedReader bufferedReader = new BufferedReader(fileReader)) {
+                    String line;
+                    while ((line = bufferedReader.readLine()) != null) {
+                        writer.println(indent(line));
+                    }
+                }
+            } catch (IOException e) {
+                throw new MojoExecutionException("Failed to read license file");
+            }
+            writer.println("-->\n");
+
+            writer.println(preface);
+
+            writer.println("\n<!-- toc -->\n");
+
+            for (Map.Entry<String, List<String>> e : headers.entrySet()) {
+                writer.println(e.getKey()  "\n");
+                List<String> packageNames = e.getValue();
+                for (String packageName : packageNames) {
+                    for (String desc : packages.get(packageName)) {
+                        writer.println(desc);
+                    }
+                }
+            }
+
+            writer.flush();
