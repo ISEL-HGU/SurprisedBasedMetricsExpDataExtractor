@@ -1,0 +1,13 @@
+    
+    private final String encoding;
+        this.encoding = this.tikaConfiguration.getTikaParseOutputEncoding();
+                exchange.getIn().setHeader(metaname, metadata.get(metaname));
+            result = getTransformerHandler(outputStream, "xml", true);
+            result = new BodyContentHandler(new OutputStreamWriter(outputStream, this.encoding));
+            result = new BoilerpipeContentHandler(new OutputStreamWriter(outputStream, this.encoding));
+            result = new ExpandedTitleContentHandler(getTransformerHandler(outputStream, "html", true));
+    private TransformerHandler getTransformerHandler(OutputStream output, String method,
+            boolean prettyPrint) throws TransformerConfigurationException, UnsupportedEncodingException {
+        if (this.encoding != null) {
+            handler.getTransformer().setOutputProperty(OutputKeys.ENCODING, this.encoding);
+        handler.setResult(new StreamResult(new OutputStreamWriter(output, this.encoding)));

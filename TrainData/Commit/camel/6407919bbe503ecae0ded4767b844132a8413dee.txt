@@ -1,0 +1,1 @@
+                        || "camel-box".equals(dir.getName())

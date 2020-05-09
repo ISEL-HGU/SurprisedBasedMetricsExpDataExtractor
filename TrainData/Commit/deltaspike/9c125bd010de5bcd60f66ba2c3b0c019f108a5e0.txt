@@ -1,0 +1,4 @@
+ b/deltaspike/core/impl/src/main/java/org/apache/deltaspike/core/impl/config/ConfigSnapshotImpl.java
+import org.apache.deltaspike.core.api.config.ConfigSnapshot;
+public class ConfigSnapshotImpl implements ConfigSnapshot
+    public ConfigSnapshotImpl(Map<ConfigResolver.TypedResolver<?>, Object> configValues)

@@ -1,0 +1,4 @@
+    public int getModifierCount() {
+        return modifierNodeList.size();
+    }
+

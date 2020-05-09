@@ -1,0 +1,8 @@
+import java.nio.channels.Channel;
+import org.xnio.ChannelExceptionHandler;
+            final ChannelListener<StreamSinkChannel> safeClose = IoUtils::safeClose;
+            final ChannelExceptionHandler<Channel> closingChannelExceptionHandler = ChannelListeners
+                .closingChannelExceptionHandler();
+            final ChannelListener<StreamSinkChannel> flushingChannelListener = ChannelListeners
+                .flushingChannelListener(safeClose, closingChannelExceptionHandler);
+            channel.getWriteSetter().set(flushingChannelListener);

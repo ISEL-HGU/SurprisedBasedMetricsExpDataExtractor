@@ -1,0 +1,10 @@
+
+
+                        || (!isNonRealMethod(match)
+                            && match.getDeclaringClass().isInterface()
+                            && !method.getDeclaringClass().isInterface()
+                            && !method.isStatic())) {
+                        || (!isNonRealMethod(match)
+                            && match.getDeclaringClass().isInterface()
+                            && !method.getDeclaringClass().isInterface()
+                            && !method.isStatic())) {

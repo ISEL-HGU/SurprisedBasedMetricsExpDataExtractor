@@ -1,0 +1,2 @@
+        String scheme = overrideComponentName != null ? overrideComponentName : model.getScheme();
+        bogus.getField().getJavaDoc().setText("Whether to enable auto configuration of the "  scheme  " component. This is enabled by default.");

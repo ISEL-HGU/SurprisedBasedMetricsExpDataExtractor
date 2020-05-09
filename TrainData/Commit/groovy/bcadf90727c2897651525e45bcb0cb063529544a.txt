@@ -1,0 +1,19 @@
+import java.io.IOException;
+
+    private ModuleNode moduleNode;
+
+        if (null != this.moduleNode) {
+            return this.moduleNode;
+        }
+
+        try {
+            if (null == sourceUnit.getSource().getReader()) {
+                return moduleNode;
+            }
+        } catch (IOException e) {
+            return moduleNode;
+        }
+
+        this.moduleNode = builder.buildAST();
+
+        return this.moduleNode;

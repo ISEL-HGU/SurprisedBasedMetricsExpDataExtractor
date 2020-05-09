@@ -1,0 +1,2 @@
+        // lets use the new fast type converter registry
+        FastTypeConverterRegistry answer = new FastTypeConverterRegistry();

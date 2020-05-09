@@ -1,0 +1,8 @@
+            float delta = computeDelta(weight, gradient);
+            float newWeight = oldWeight - _eta.eta(_numStep) * _reg.regularize(oldWeight, delta);
+            float old_scaled_gg = weight.getSumOfSquaredGradients();
+            float new_scaled_gg = old_scaled_gg  gradient * (gradient / scale);
+            weight.setSumOfSquaredGradients(new_scaled_gg);
+            return (float) (gradient / Math.sqrt(eps  ((double) old_scaled_gg) * scale));
+                (old_sum_squared_delta_x  eps) / ((double) new_scaled_sum_sqgrad * scale  eps))
+                    * gradient;

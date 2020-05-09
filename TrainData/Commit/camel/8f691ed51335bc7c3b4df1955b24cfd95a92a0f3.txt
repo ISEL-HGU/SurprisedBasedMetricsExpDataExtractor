@@ -1,0 +1,5 @@
+ *
+         * Client ID of the calendar application
+         * Client secret of the calendar application
+         * Specifies the level of permissions you want a calendar application to
+         * https://developers.google.com/calendar/auth for more info.

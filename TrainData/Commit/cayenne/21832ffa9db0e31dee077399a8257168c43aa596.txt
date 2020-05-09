@@ -1,0 +1,19 @@
+import org.apache.cayenne.map.*;
+            if (pkEntity == null || fkEntity == null) {
+
+
+            addJoin(forwardRelationship, pkName, fkName);
+            addJoin(reverseRelationship, fkName, pkName);
+
+
+    private void addJoin(DbRelationship relationship, String sourceName, String targetName){
+
+        for (DbJoin join : relationship.getJoins()) {
+            if (join.getSourceName().equals(sourceName) && join.getTargetName().equals(targetName)) {
+                return;
+            }
+        }
+
+        relationship.addJoin(new DbJoin(relationship, sourceName, targetName));
+    }
+}

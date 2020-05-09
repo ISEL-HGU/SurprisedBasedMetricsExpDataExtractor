@@ -1,0 +1,3 @@
+        message.setHeader(S3Constants.EXPIRATION_TIME, objectMetadata.getExpirationTime());
+        message.setHeader(S3Constants.REPLICATION_STATUS, objectMetadata.getReplicationStatus());
+        message.setHeader(S3Constants.STORAGE_CLASS, objectMetadata.getStorageClass());

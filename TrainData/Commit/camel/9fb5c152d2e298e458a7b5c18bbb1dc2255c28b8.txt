@@ -1,0 +1,5 @@
+
+        final Map<String, String> source = (Map<String, String>) field.get(reading);
+        final Map<String, String> copyMap = new LinkedHashMap<>();
+        final Map<String, Object> readingParameters = (Map<String, Object>) field.get(reading);
+        readingParameters.putAll((Map<String, Object>) field.get(readingUpdate));

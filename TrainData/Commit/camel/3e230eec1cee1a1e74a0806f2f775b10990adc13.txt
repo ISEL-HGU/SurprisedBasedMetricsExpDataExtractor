@@ -1,0 +1,5 @@
+            // we only want to accept true or false as accepted values
+            String str = (String) value;
+            if ("true".equalsIgnoreCase(str) || "false".equalsIgnoreCase(str)) {
+                return Boolean.valueOf(str);
+            }

@@ -1,0 +1,7 @@
+    public BlacklistServiceCallServiceFilterConfiguration blacklistFilter() {
+        BlacklistServiceCallServiceFilterConfiguration conf = new BlacklistServiceCallServiceFilterConfiguration();
+        setServiceFilterConfiguration(conf);
+
+        return conf;
+    }
+

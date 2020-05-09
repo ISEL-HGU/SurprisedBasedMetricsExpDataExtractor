@@ -1,0 +1,3 @@
+ b/platforms/spring-boot/components-starter/camel-netty-starter/src/main/java/org/apache/camel/component/netty4/springboot/NettyComponentConfiguration.java
+@ConfigurationProperties(prefix = "camel.component.netty")
+     * Whether to enable auto configuration of the netty component. This is

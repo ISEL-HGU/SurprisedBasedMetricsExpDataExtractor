@@ -1,0 +1,9 @@
+import java.util.stream.Collectors;
+     * Allowed values of the parameter when its an enum type
+     */
+    public RestOperationParamDefinition allowableValues(String allowableValues) {
+        setAllowableValues(Arrays.asList(allowableValues.split(",")));
+        return this;
+    }
+
+    /**

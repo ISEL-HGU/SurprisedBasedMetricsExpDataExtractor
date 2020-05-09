@@ -1,0 +1,2 @@
+            // must be in upper case
+            m = m.toUpperCase();

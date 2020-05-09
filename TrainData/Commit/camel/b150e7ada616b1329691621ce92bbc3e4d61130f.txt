@@ -1,0 +1,4 @@
+import org.jgroups.JChannel;
+    private JChannel channel;
+    public JChannel getChannel() {
+    public void setChannel(JChannel channel) {

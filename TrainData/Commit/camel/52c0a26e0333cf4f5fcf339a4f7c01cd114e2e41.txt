@@ -1,0 +1,76 @@
+import static org.apache.camel.maven.packaging.JSonSchemaHelper.getPropertyDefaultValue;
+import static org.apache.camel.maven.packaging.JSonSchemaHelper.getPropertyJavaType;
+import static org.apache.camel.maven.packaging.JSonSchemaHelper.getPropertyType;
+    /**
+     * The output directory for generated component schema file
+     *
+     * @parameter default-value="${project.build.directory}/classes"
+     */
+    protected File classesDir;
+                // try to see if the source is actually reusing a shared Camel configuration that that has @UriParam options
+                // if so we can fetch the default value from the json file as it holds the correct value vs the annotation
+                // as the annotation can refer to a constant field which we wont have accessible at this point
+                if (sourceProp.hasAnnotation(UriParam.class) || sourceProp.hasAnnotation(UriPath.class)) {
+                    String defaultValue = null;
+                    String javaType = null;
+                    String type = null;
+                    String fileName = model.getJavaType();
+                    fileName = fileName.substring(0, fileName.lastIndexOf("."));
+                    fileName = fileName.replace('.', '/');
+                    File jsonFile = new File(classesDir, fileName  "/"  model.getScheme()  ".json");
+                    if (jsonFile.isFile() && jsonFile.exists()) {
+                        try {
+                            String json = FileUtils.readFileToString(jsonFile);
+                            List<Map<String, String>> rows = JSonSchemaHelper.parseJsonSchema("properties", json, true);
+                            // grab name from annotation
+                            String optionName;
+                            if (sourceProp.hasAnnotation(UriParam.class)) {
+                                optionName = sourceProp.getAnnotation(UriParam.class).getStringValue("name");
+                            } else {
+                                optionName = sourceProp.getAnnotation(UriPath.class).getStringValue("name");
+                            }
+                            if (optionName == null) {
+                                optionName = sourceProp.hasField() ? sourceProp.getField().getName() : null;
+                            }
+
+                            if (optionName != null) {
+                                javaType = getPropertyJavaType(rows, optionName);
+                                type = getPropertyType(rows, optionName);
+                                defaultValue = getPropertyDefaultValue(rows, optionName);
+                            }
+                        } catch (IOException e) {
+                            // ignore
+                        }
+                    }
+
+                    if (!Strings.isBlank(defaultValue)) {
+
+                        // roaster can create the wrong type for some options so use the correct type we found in the json schema
+                        String wrapperType = getSimpleJavaType(javaType);
+                        if (wrapperType.startsWith("java.lang.")) {
+                            // skip java.lang. as prefix for wrapper type
+                            wrapperType = wrapperType.substring(10);
+                            prop.setType(wrapperType);
+                        }
+
+                        if ("long".equals(javaType) || "java.lang.Long".equals(javaType)) {
+                            // the value should be a Long number
+                            String value = defaultValue  "L";
+                            prop.getField().setLiteralInitializer(value);
+                        } else if ("integer".equals(type) || "boolean".equals(type)) {
+                            prop.getField().setLiteralInitializer(defaultValue);
+                        } else if ("string".equals(type)) {
+                            prop.getField().setStringInitializer(defaultValue);
+                        } else if (anEnum) {
+                            String enumShortName = optionClass.getSimpleName();
+                            prop.getField().setLiteralInitializer(enumShortName  "."  defaultValue);
+                            javaClass.addImport(model.getJavaType());
+                        }
+                } else if ("long".equals(option.getJavaType()) || "java.lang.Long".equals(option.getJavaType())) {
+                    // the value should be a Long number
+                    String value = option.getDefaultValue()  "L";
+                    prop.getField().setLiteralInitializer(value);
+                } else if ("long".equals(option.getJavaType()) || "java.lang.Long".equals(option.getJavaType())) {
+                    // the value should be a Long number
+                    String value = option.getDefaultValue()  "L";
+                    prop.getField().setLiteralInitializer(value);

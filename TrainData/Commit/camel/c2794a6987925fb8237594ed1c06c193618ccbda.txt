@@ -1,0 +1,3 @@
+                        // the scheduler can be quartz or spring based, so add reference to camel component
+                        if ("quartz".equals(name)) {
+                            components.add("quartz");

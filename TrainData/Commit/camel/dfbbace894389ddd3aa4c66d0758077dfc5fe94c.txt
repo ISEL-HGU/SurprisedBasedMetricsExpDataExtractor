@@ -1,0 +1,1 @@
+                // no need to download transitive dependencies as we only need to check the component itself

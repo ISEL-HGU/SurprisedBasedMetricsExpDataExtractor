@@ -1,0 +1,3 @@
+        if (exchange.getIn().getBody() instanceof Iterable) {
+            Iterable c = exchange.getIn().getBody(Iterable.class);
+                String object = (String) iterator.next();

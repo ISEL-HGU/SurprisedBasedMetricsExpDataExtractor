@@ -1,0 +1,1 @@
+        count = prepareLanguage(getLog(), project, projectHelper, buildDir, languageOutDir, schemaOutDir, buildContext);

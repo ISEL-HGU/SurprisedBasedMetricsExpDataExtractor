@@ -1,0 +1,14 @@
+                if (!currentClass.hasPossibleMethod(mce.getMethodAsString(), args)
+                        && !currentClass.hasPossibleStaticMethod(mce.getMethodAsString(), args)) {
+
+                    Expression ret = findStaticMethodImportFromModule(method, args);
+                    if (method instanceof ConstantExpression && !inLeftExpression) {
+                        // could be a closure field
+                        String methodName = (String) ((ConstantExpression) method).getValue();
+                        ret = findStaticFieldOrPropAccessorImportFromModule(methodName);
+                        if (ret != null) {
+                            ret = new MethodCallExpression(ret, "call", args);
+                            setSourcePosition(ret, mce);
+                            return ret;
+                        }
+                    }

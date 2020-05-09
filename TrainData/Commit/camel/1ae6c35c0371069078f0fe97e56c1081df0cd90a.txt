@@ -1,0 +1,3 @@
+import org.apache.camel.support.DefaultAsyncProducer;
+import org.apache.camel.util.ObjectHelper;
+public class ThriftProducer extends DefaultAsyncProducer implements AsyncProducer {

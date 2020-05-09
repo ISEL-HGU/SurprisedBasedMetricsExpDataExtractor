@@ -1,0 +1,37 @@
+import java.util.Map.Entry;
+            final Map<String, Usage> usages = parser.readValueAs(TypeReferences.USAGES_TYPE);
+    private final Map<String, Usage> usages;
+    public Limits(final Map<?, Usage> usages) {
+        if (usages == null) {
+            this.usages = new HashMap<>();
+        } else {
+            this.usages = usages.entrySet().stream().collect(Collectors.toMap(e -> String.valueOf(e.getKey()), Entry::getValue));
+        }
+    public Usage forOperation(final String name) {
+        return usages.getOrDefault(name, UNDEFINED);
+    }
+
+        return forOperation(Operation.ConcurrentAsyncGetReportInstances.name());
+        return forOperation(Operation.ConcurrentSyncReportRuns.name());
+        return forOperation(Operation.DailyApiRequests.name());
+        return forOperation(Operation.DailyAsyncApexExecutions.name());
+        return forOperation(Operation.DailyBulkApiRequests.name());
+        return forOperation(Operation.DailyDurableGenericStreamingApiEvents.name());
+        return forOperation(Operation.DailyDurableStreamingApiEvents.name());
+        return forOperation(Operation.DailyGenericStreamingApiEvents.name());
+        return forOperation(Operation.DailyStreamingApiEvents.name());
+        return forOperation(Operation.DailyWorkflowEmails.name());
+        return forOperation(Operation.DataStorageMB.name());
+        return forOperation(Operation.DurableStreamingApiConcurrentClients.name());
+        return forOperation(Operation.FileStorageMB.name());
+        return forOperation(Operation.HourlyAsyncReportRuns.name());
+        return forOperation(Operation.HourlyDashboardRefreshes.name());
+        return forOperation(Operation.HourlyDashboardResults.name());
+        return forOperation(Operation.HourlyDashboardStatuses.name());
+        return forOperation(Operation.HourlyODataCallout.name());
+        return forOperation(Operation.HourlySyncReportRuns.name());
+        return forOperation(Operation.HourlyTimeBasedWorkflow.name());
+        return forOperation(Operation.MassEmail.name());
+        return forOperation(Operation.PermissionSets.name());
+        return forOperation(Operation.SingleEmail.name());
+        return forOperation(Operation.StreamingApiConcurrentClients.name());

@@ -1,0 +1,16 @@
+import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
+import org.eclipse.paho.client.mqttv3.MqttException;
+        getEndpoint().getClient().subscribe(topic, getEndpoint().getQos());
+        getEndpoint().getClient().setCallback(new MqttCallbackExtended() {
+
+            @Override
+            public void connectComplete(boolean reconnect, String serverURI) {
+                if (reconnect) {
+                    try {
+                        getEndpoint().getClient().subscribe(topic, getEndpoint().getQos());
+                    } catch (MqttException e) {
+                        LOG.error("MQTT resubscribe failed "  e.getMessage(), e);
+                    }
+                }
+            }
+

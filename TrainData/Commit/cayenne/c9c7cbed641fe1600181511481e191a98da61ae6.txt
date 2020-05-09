@@ -1,0 +1,25 @@
+import org.apache.cayenne.query.CapsStrategy;
+import org.apache.cayenne.unit.UnitDbAdapter;
+	protected UnitDbAdapter unitDbAdapter;
+
+	@Inject
+	public void selectObjects() throws Exception {
+		createFourArtists();
+
+		String templateString = "SELECT * FROM ARTIST";
+		SQLTemplate sqlTemplate = new SQLTemplate(Artist.class, templateString);
+
+		if(unitDbAdapter.isLowerCaseNames()) {
+			sqlTemplate.setColumnNamesCapitalization(CapsStrategy.UPPER);
+		}
+
+		@SuppressWarnings("unchecked")
+		List<Artist> artists = (List<Artist>)objectContext.performQuery(sqlTemplate);
+
+		assertEquals(4, artists.size());
+		for(Artist artist : artists){
+			assertTrue(artist.getArtistName().startsWith("artist"));
+		}
+	}
+
+	@Test

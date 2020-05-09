@@ -1,0 +1,3 @@
+    User findUser(Integer id);
+    Collection<User> findUsers();
+    void updateUser(User user);

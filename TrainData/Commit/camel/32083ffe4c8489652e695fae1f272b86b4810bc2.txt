@@ -1,0 +1,2 @@
+            doDeleteJob(exchange, operation);
+        Job job = null;

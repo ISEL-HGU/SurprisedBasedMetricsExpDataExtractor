@@ -1,0 +1,4 @@
+import static org.apache.camel.component.spring.ws.SpringWebserviceHelper.toResult;
+public class SpringWebserviceProducer extends DefaultProducer {
+                toResult(sourcePayload, requestMessage.getPayloadResult());
+                toResult(soapHeaderSource, header.getResult());

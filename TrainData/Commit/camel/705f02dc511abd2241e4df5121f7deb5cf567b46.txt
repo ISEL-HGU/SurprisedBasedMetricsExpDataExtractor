@@ -1,0 +1,22 @@
+import org.apache.camel.StreamCache;
+import org.apache.camel.converter.stream.OutputStreamBuilder;
+            OutputStreamBuilder osb = OutputStreamBuilder.withExchange(exchange);
+                try {
+                    osb.write(buffer);
+                    callback.succeeded();
+                } catch (IOException e) {
+                    callback.failed(e);
+                }
+                    try {
+                        Object content = osb.build();
+                        if (content instanceof byte[]) {
+                            onResponseComplete(result, (byte[]) content);
+                        } else {
+                            StreamCache cos = (StreamCache) content;
+                            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                            cos.writeTo(baos);
+                            onResponseComplete(result, baos.toByteArray());
+                        }
+                    } catch (IOException e) {
+                        doTaskCompleted(e);
+                    }

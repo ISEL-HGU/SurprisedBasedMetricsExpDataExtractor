@@ -1,0 +1,8 @@
+import org.apache.camel.component.sjms.jms.DestinationNameParser;
+                boolean isReplyToTopic = false;
+                    isReplyToTopic = isTopic();
+                    replyToDestination = getEndpoint().getDestinationCreationStrategy().createTemporaryDestination(session, isReplyToTopic);
+                    DestinationNameParser parser = new DestinationNameParser();
+                    isReplyToTopic = parser.isNamedReplyToTopic(getNamedReplyTo(), isTopic());
+                    replyToDestination = getEndpoint().getDestinationCreationStrategy().createDestination(session, getNamedReplyTo(), isReplyToTopic);
+                MessageConsumer messageConsumer = getEndpoint().getJmsObjectFactory().createMessageConsumer(session, replyToDestination, null, isReplyToTopic, null, true, false, false);

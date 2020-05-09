@@ -1,0 +1,5 @@
+import org.apache.camel.component.zookeeper.ZooKeeperCuratorConfiguration;
+    private final ZooKeeperCuratorConfiguration configuration;
+    public ZooKeeperClusterView(CamelClusterService cluster, ZooKeeperCuratorConfiguration configuration, CuratorFramework client, String namespace) {
+        this.configuration = configuration;
+            leaderSelector = new LeaderSelector(client, configuration.getBasePath(), new CamelLeaderElectionListener());

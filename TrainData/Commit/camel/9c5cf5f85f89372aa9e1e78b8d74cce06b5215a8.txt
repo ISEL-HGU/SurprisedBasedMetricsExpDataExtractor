@@ -1,0 +1,3 @@
+                    String scheme = tree.get("scheme").textValue();
+                    LOG.debug("Adding connector: {} with scheme: {}", name, scheme);
+                        name, scheme, description, csb.toString(), json[0], json[1]);

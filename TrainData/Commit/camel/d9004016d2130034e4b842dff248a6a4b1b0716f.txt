@@ -1,0 +1,9 @@
+import java.util.HashMap;
+        Map<String, Object> answer = createProperties(properties);
+        // TODO: likely not needed, we can use a HashMap
+        return new ConcurrentHashMap<>();
+    }
+
+    protected Map<String, Object> createProperties(Map<String, Object> properties) {
+        // TODO: likely not needed, we can use a HashMap
+        return new ConcurrentHashMap<>(properties);

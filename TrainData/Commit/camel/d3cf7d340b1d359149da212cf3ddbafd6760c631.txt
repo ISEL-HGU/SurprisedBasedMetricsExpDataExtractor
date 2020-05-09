@@ -1,0 +1,15 @@
+import com.microsoft.azure.storage.queue.CloudQueue;
+
+
+
+
+
+
+
+     * The queue resource name
+     * The queue service client
+     * Queue service operation hint to the producer
+     * Message Time To Live in seconds
+     * Message Visibility Delay in seconds
+     * Set a prefix which can be used for listing the queues
+}

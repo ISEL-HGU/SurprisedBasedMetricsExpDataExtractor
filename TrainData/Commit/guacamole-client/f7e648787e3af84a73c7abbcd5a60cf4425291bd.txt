@@ -1,0 +1,4 @@
+        getModel().setFullName(TextField.parse(attributes.get(User.Attribute.FULL_NAME)));
+        getModel().setEmailAddress(TextField.parse(attributes.get(User.Attribute.EMAIL_ADDRESS)));
+        getModel().setOrganization(TextField.parse(attributes.get(User.Attribute.ORGANIZATION)));
+        getModel().setOrganizationalRole(TextField.parse(attributes.get(User.Attribute.ORGANIZATIONAL_ROLE)));

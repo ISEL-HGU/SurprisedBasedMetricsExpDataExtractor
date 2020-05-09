@@ -1,0 +1,1 @@
+    scan.setBatch((int)query.getLimit());

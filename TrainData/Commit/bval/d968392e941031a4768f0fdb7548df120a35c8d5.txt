@@ -1,0 +1,7 @@
+import java.util.Optional;
+import javax.validation.ConstraintDefinitionException;
+import org.apache.bval.util.Exceptions;
+            
+
+            Exceptions.raiseIf(supportedTargets.isEmpty(), ConstraintDefinitionException::new,
+                "Illegally specified 0-length %s value on %s", SupportedValidationTarget.class.getSimpleName(), type);

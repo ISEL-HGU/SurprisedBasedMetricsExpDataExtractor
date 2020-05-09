@@ -1,0 +1,10 @@
+import static org.apache.groovy.ast.tools.ClassNodeUtils.addGeneratedMethod;
+@GroovyASTTransformation(phase = CompilePhase.CANONICALIZATION)
+        addGeneratedMethod(declaringClass, setter);
+        addGeneratedMethod(declaringClass,
+        addGeneratedMethod(declaringClass,
+        addGeneratedMethod(declaringClass,
+        addGeneratedMethod(declaringClass,
+        addGeneratedMethod(declaringClass,
+        addGeneratedMethod(declaringClass,
+        addGeneratedMethod(declaringClass,

@@ -1,0 +1,29 @@
+    private static final String MD5 = "MD5";
+     * @throws NoSuchAlgorithmException if MD5 algorithm not found
+        return digest(self, MD5);
+     * @throws NoSuchAlgorithmException if MD5 algorithm not found
+        return digest(self, MD5);
+    }
+
+    /**
+     * digest the CharSequence instance
+     * @param algorithm the name of the algorithm requested, e.g. MD5, SHA-1, SHA-256, etc.
+     * @return digested value
+     * @throws NoSuchAlgorithmException if the algorithm not found
+     * @since 2.5.0
+     */
+    public static String digest(CharSequence self, String algorithm) throws NoSuchAlgorithmException {
+        final String text = self.toString();
+
+        return digest(text.getBytes(StandardCharsets.UTF_8), algorithm);
+    }
+
+    /**
+     * digest the byte array
+     * @param algorithm the name of the algorithm requested, e.g. MD5, SHA-1, SHA-256, etc.
+     * @return digested value
+     * @throws NoSuchAlgorithmException if the algorithm not found
+     * @since 2.5.0
+     */
+    public static String digest(byte[] self, String algorithm) throws NoSuchAlgorithmException {
+        MessageDigest md5 = MessageDigest.getInstance(algorithm);

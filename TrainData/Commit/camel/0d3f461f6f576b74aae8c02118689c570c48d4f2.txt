@@ -1,0 +1,44 @@
+
+import org.apache.camel.Expression;
+import org.apache.camel.Service;
+import org.apache.camel.builder.ExpressionBuilder;
+public class CacheBasedXPathReplacer extends CacheValidate implements Processor, Service {
+
+
+    private String cacheName;
+    private Expression key;
+    private String xpath;
+        this(cacheName, ExpressionBuilder.constantExpression(key), xpath);
+    }
+
+    public CacheBasedXPathReplacer(String cacheName, Expression key, String xpath) {
+        String cacheKey = key.evaluate(exchange, String.class);
+        if (isValid(cacheManager, cacheName, cacheKey)) {
+            Ehcache cache = cacheManager.getCache(cacheName);
+                        new Object[]{xpath, cacheKey, cacheName});
+            exchange.getIn().setHeader(CacheConstants.CACHE_KEY, cacheKey);
+            Document document;
+                .convertTo(InputStream.class, cache.get(cacheKey).getObjectValue());
+                DOMSource source = xmlConverter.toDOMSource(document);
+                DOMResult result = new DOMResult();
+
+                // DOMSource can be converted to byte[] by camel type converter mechanism
+                DOMSource dom = new DOMSource(result.getNode());
+                exchange.getIn().setBody(dom, byte[].class);
+    public Expression getKey() {
+        this.key = ExpressionBuilder.constantExpression(key);
+    }
+
+    public void setKey(Expression key) {
+    @Override
+    public void start() throws Exception {
+        // Cache the buffer to the specified Cache against the specified key
+        if (cacheManager == null) {
+            cacheManager = new DefaultCacheManagerFactory().getInstance();
+        }
+    }
+
+    @Override
+    public void stop() throws Exception {
+        // noop
+    }

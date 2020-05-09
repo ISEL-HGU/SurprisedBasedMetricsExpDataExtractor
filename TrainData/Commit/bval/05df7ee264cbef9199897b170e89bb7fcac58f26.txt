@@ -1,0 +1,80 @@
+import java.time.Clock;
+import java.util.Collections;
+import javax.validation.ClockProvider;
+import javax.validation.valueextraction.ValueExtractor;
+    protected Class<? extends MessageInterpolator> messageInterpolatorClass;
+    protected Class<? extends ConstraintValidatorFactory> constraintValidatorFactoryClass;
+    protected Class<? extends TraversableResolver> traversableResolverClass;
+    protected Class<? extends ParameterNameProvider> parameterNameProviderClass;
+    private Collection<BValExtension.Releasable<?>> releasables = new CopyOnWriteArrayList<>();
+    protected ClockProvider defaultClockProvider = Clock::systemDefaultZone;
+    protected volatile ClockProvider clockProvider = defaultClockProvider;
+    protected Class<? extends ClockProvider> clockProviderClass;
+
+    protected Set<ValueExtractor<?>> valueExtractors = new HashSet<>();
+    private Set<InputStream> mappingStreams = new HashSet<>();
+    private Map<String, String> properties = new HashMap<>();
+        initializePropertyDefaults();
+        if (resolver != null) {
+            this.traversableResolverClass = null;
+            this.traversableResolver = resolver;
+            this.prepared = false;
+        if (resolver != null) {
+            this.messageInterpolatorClass = null;
+            this.messageInterpolator = resolver;
+            this.prepared = false;
+        if (constraintFactory != null) {
+            this.constraintValidatorFactoryClass = null;
+            this.constraintValidatorFactory = constraintFactory;
+            this.prepared = false;
+        if (parameterNameProvider != null) {
+            this.parameterNameProviderClass = null;
+            this.parameterNameProvider = parameterNameProvider;
+        if (stream != null) {
+            mappingStreams.add(IOs.convertToMarkableInputStream(stream));
+        return () -> {
+            for (final BValExtension.Releasable<?> releasable : releasables) {
+                releasable.release();
+            releasables.clear();
+        } catch (Exception | NoClassDefFoundError e) {
+
+    @Override
+    public ApacheValidatorConfiguration clockProvider(ClockProvider clockProvider) {
+        this.clockProvider = clockProvider;
+        return this;
+    }
+
+    @Override
+    public ApacheValidatorConfiguration addValueExtractor(ValueExtractor<?> extractor) {
+        valueExtractors.add(extractor);
+        return this;
+    }
+
+    @Override
+    public ClockProvider getDefaultClockProvider() {
+        return defaultClockProvider;
+    }
+
+    @Override
+    public Set<ValueExtractor<?>> getValueExtractors() {
+        return Collections.unmodifiableSet(valueExtractors);
+    }
+
+    @Override
+    public ClockProvider getClockProvider() {
+        if (beforeCdi) {
+            return defaultClockProvider;
+        }
+        if (clockProvider == defaultClockProvider && clockProviderClass != null) {
+            synchronized (this) {
+                if (clockProvider == defaultClockProvider && clockProviderClass != null) {
+                    clockProvider = newInstance(clockProviderClass);
+                }
+            }
+        }
+        return clockProvider;
+    }
+
+    protected void initializePropertyDefaults() {
+        properties.put(Properties.CONSTRAINTS_CACHE_SIZE, Integer.toString(50));
+    }

@@ -1,0 +1,2 @@
+            File original = Checks.checkAbsolute(origin.getLocation(), artifact
+            return Checks.checkAbsolute(origin.getLocation(), artifact  " origin location");

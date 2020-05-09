@@ -1,0 +1,2 @@
+        method.getJavaDoc().setText((StringHelper.isEmpty(model.getDescription()) ? "" : model.getDescription()  " ")  "\nMaven coordinates: "
+                                     project.getGroupId()  ":"  project.getArtifactId());

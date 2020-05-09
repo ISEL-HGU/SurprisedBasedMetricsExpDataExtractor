@@ -1,0 +1,4 @@
+        connectionSearchFilter.append(escapingService.escapeLDAPSearchFilter(
+                confService.getMemberAttribute()));
+                         escapingService.escapeLDAPSearchFilter(
+                                confService.getMemberAttribute()) 

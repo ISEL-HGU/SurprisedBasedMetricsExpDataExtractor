@@ -1,0 +1,154 @@
+import java.util.Optional;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Supplier;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestAttribute;
+import org.springframework.web.bind.annotation.ResponseStatus;
+    // ********************************************
+    // Endpoints
+    // ********************************************
+
+    @GetMapping(
+        value = "/{id}/info",
+        produces = {
+            ActuatorMediaTypes.APPLICATION_ACTUATOR_V1_JSON_VALUE,
+            MediaType.APPLICATION_JSON_VALUE
+        }
+    )
+    public Object info(
+            @PathVariable String id) {
+
+        return doIfEnabled(() -> {
+            Object result = delegate.getRouteDetailsInfo(id);
+            if (result == null) {
+                throw new NoSuchRouteException("No such route "  id);
+            }
+
+            return result;
+        });
+    }
+
+    @ResponseBody
+    @PostMapping(
+        value = "/{id}/stop",
+        produces = {
+            ActuatorMediaTypes.APPLICATION_ACTUATOR_V1_JSON_VALUE,
+            MediaType.APPLICATION_JSON_VALUE
+        }
+    )
+    public Object stop(
+            @PathVariable String id,
+            @RequestAttribute(required = false) Long timeout,
+            @RequestAttribute(required = false) Boolean abortAfterTimeout) {
+
+        return doIfEnabled(() -> {
+            try {
+                delegate.stopRoute(
+                    id,
+                    Optional.ofNullable(timeout),
+                    Optional.of(TimeUnit.SECONDS),
+                    Optional.ofNullable(abortAfterTimeout)
+                );
+            } catch (Exception e) {
+                throw new GenericException("Error stopping route "  id, e);
+            }
+
+            return ResponseEntity.ok().build();
+        });
+    }
+
+    @ResponseBody
+    @PostMapping(
+        value = "/{id}/start",
+        produces = {
+            ActuatorMediaTypes.APPLICATION_ACTUATOR_V1_JSON_VALUE,
+            MediaType.APPLICATION_JSON_VALUE
+        }
+    )
+    public Object start(
+            @PathVariable String id) {
+
+        return doIfEnabled(() -> {
+            try {
+                delegate.startRoute(id);
+            } catch (Exception e) {
+                throw new GenericException("Error starting route "  id, e);
+            }
+
+            return ResponseEntity.ok().build();
+        });
+    }
+
+    @ResponseBody
+    @PostMapping(
+        value = "/{id}/suspend",
+        produces = {
+            ActuatorMediaTypes.APPLICATION_ACTUATOR_V1_JSON_VALUE,
+            MediaType.APPLICATION_JSON_VALUE
+        }
+    )
+    public Object suspend(
+            @PathVariable String id,
+            @RequestAttribute(required = false) Long timeout) {
+
+        return doIfEnabled(() -> {
+            try {
+                delegate.suspendRoute(
+                    id,
+                    Optional.ofNullable(timeout),
+                    Optional.of(TimeUnit.SECONDS)
+                );
+            } catch (Exception e) {
+                throw new GenericException("Error suspending route "  id, e);
+            }
+
+            return ResponseEntity.ok().build();
+        });
+    }
+
+    @ResponseBody
+    @PostMapping(
+        value = "/{id}/resume",
+        produces = {
+            ActuatorMediaTypes.APPLICATION_ACTUATOR_V1_JSON_VALUE,
+            MediaType.APPLICATION_JSON_VALUE
+        }
+    )
+    public Object resume(
+            @PathVariable String id) {
+
+        return doIfEnabled(() -> {
+            try {
+                delegate.resumeRoute(id);
+            } catch (Exception e) {
+                throw new GenericException("Error resuming route "  id, e);
+            }
+
+            return ResponseEntity.ok().build();
+        });
+    }
+
+    // ********************************************
+    // Helpers
+    // ********************************************
+
+    private Object doIfEnabled(Supplier<Object> supplier) {
+        return supplier.get();
+    }
+    @SuppressWarnings("serial")
+    @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
+    public static class GenericException extends RuntimeException {
+        public GenericException(String message, Throwable cause) {
+            super(message, cause);
+
+        }
+    }
+
+    @SuppressWarnings("serial")
+    @ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "No such route")
+    public static class NoSuchRouteException extends RuntimeException {
+        public NoSuchRouteException(String message) {
+            super(message);
+        }

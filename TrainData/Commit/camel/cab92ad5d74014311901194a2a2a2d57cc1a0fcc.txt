@@ -1,0 +1,4 @@
+import com.univocity.parsers.fixed.FixedWidthFields;
+    private FixedWidthFields createFixedWidthFieldLengths() {
+            return new FixedWidthFields(fieldLengths);
+        return new FixedWidthFields(fields);

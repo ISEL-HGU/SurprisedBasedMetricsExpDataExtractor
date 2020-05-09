@@ -1,0 +1,3 @@
+            Map<String, Object> options = configuration.getJointCompilationOptions();
+        String encoding = configuration.getSourceEncoding();
+        File targetDir = configuration.getTargetDirectory();

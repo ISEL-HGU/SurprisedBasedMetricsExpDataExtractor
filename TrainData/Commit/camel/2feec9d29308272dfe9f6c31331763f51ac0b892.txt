@@ -1,0 +1,6 @@
+                DBFactory factory = (DBFactory) clz.newInstance();
+                if (LOG.isDebugEnabled()) {
+                    LOG.debug("Using {} implementation of org.iq80.leveldb.DBFactory", factory.getClass().getName());
+                }
+                return factory;
+            } catch (Exception ignored) {

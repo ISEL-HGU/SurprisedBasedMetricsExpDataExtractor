@@ -1,0 +1,31 @@
+import java.util.Date;
+     * The date and time that this user was last logged in, or null if this user
+     * has never logged in or this information is unavailable.
+     */
+    private Date lastActive;
+
+    /**
+        this.lastActive = user.getLastActive();
+    /**
+     * Returns the date and time that this user was last logged in, or null if
+     * this user has never logged in or this information is unavailable.
+     *
+     * @return
+     *     The date and time that this user was last logged in, or null if this
+     *     user has never logged in or this information is unavailable.
+     */
+    public Date getLastActive() {
+        return lastActive;
+    }
+
+    /**
+     * Sets the date and time that this user was last logged in.
+     *
+     * @param lastActive
+     *     The date and time that this user was last logged in, or null if this
+     *     user has never logged in or this information is unavailable.
+     */
+    public void setLastActive(Date lastActive) {
+        this.lastActive = lastActive;
+    }
+

@@ -1,0 +1,9 @@
+     * If true, will fire a notification when the string attribute differs from the string to compare (string monitor or consumer).
+     * By default the consumer will notify match if observed attribute and string to compare has been configured.
+    @UriParam(label = "consumer,string")
+     * If true, will fire a notification when the string attribute matches the string to compare (string monitor or consumer).
+     * By default the consumer will notify match if observed attribute and string to compare has been configured.
+    @UriParam(label = "consumer,string")
+     * Value for attribute to compare (string monitor or consumer).
+     * By default the consumer will notify match if observed attribute and string to compare has been configured.
+    @UriParam(label = "consumer,string")

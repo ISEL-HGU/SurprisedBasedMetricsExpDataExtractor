@@ -1,0 +1,9 @@
+            
+        case RETAIN_ALL:
+            this.retainAll(exchange);
+            break;
+    
+    private void retainAll(Exchange exchange) {
+        Collection body = exchange.getIn().getBody(Collection.class);
+        this.queue.retainAll(body);
+    }

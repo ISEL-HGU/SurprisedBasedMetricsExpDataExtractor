@@ -1,0 +1,4 @@
+    @UriParam(label = "producer", enums = "useConstant,useExchangeId,usePropertyValue")
+    @UriParam(label = "producer", defaultValue = "useExchangeId", enums = "useExchangeId,useContentBasedDeduplication")
+     * Only for FIFO queues. Strategy for setting the messageGroupId on the message.
+     * Only for FIFO queues. Strategy for setting the messageDeduplicationId on the message.

@@ -1,0 +1,5 @@
+        // because we are only looking for camel annotations then skip all stuff from JDKs
+        if (c.getName().startsWith("java")) {
+            return;
+        }
+            // ignore no method with signature of m declared on c

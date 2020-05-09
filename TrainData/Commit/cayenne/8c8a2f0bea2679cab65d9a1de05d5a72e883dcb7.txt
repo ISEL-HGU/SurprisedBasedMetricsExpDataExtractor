@@ -1,0 +1,4 @@
+
+    public boolean supportsSerializableTransactionIsolation() {
+        return false;
+    }

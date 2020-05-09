@@ -1,0 +1,17 @@
+ b/guacamole-ext/src/main/java/org/apache/guacamole/token/TokenName.java
+package org.apache.guacamole.token;
+public abstract class TokenName {
+     * Pattern which matches logical groupings of words within an
+    private static final Pattern ATTRIBUTE_NAME_GROUPING = Pattern.compile(
+    protected TokenName() {}
+     * the value of the given attribute. The name of the attribute will
+     * automatically be transformed from "CamelCase", "headlessCamelCase",
+     *     The name of the attribute to use to generate the token name.
+     * 
+     * @param prefix
+     *     The prefix to prepend to the generated token name.
+     *     value of the attribute having the given name.
+    public static String fromAttribute(final String name, final String prefix) {
+        Matcher groupMatcher = ATTRIBUTE_NAME_GROUPING.matcher(name);
+            return prefix  name.toUpperCase();
+        StringBuilder builder = new StringBuilder(prefix);

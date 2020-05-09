@@ -1,0 +1,3 @@
+import org.apache.flink.api.common.typeinfo.TypeInfo;
+import org.apache.gora.flink.GoraPersistentTypeFactory;
+@TypeInfo(GoraPersistentTypeFactory.class)

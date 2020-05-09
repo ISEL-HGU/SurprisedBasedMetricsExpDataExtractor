@@ -1,0 +1,8 @@
+                loader = Thread.currentThread().getContextClassLoader();
+                if (loader == null) {
+                    loader = ValidationParser.class.getClassLoader();
+                }
+            loader = Thread.currentThread().getContextClassLoader();
+            if (loader == null) {
+                loader = ApacheValidatorFactory.class.getClassLoader();
+            }

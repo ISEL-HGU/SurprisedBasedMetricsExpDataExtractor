@@ -1,0 +1,2 @@
+ b/components/camel-cdi/src/main/java/org/apache/camel/cdi/transaction/TransactionalJtaTransactionPolicy.java
+package org.apache.camel.cdi.transaction;

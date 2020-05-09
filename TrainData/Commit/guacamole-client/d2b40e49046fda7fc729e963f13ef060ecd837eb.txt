@@ -1,0 +1,1 @@
+                // If we're an admin, or the connection is ours, then we can DELETE

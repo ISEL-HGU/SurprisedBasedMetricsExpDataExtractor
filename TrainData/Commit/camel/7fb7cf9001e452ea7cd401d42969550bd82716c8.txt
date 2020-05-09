@@ -1,0 +1,3 @@
+        // ensure this zipkin tracer gets initialized when Camel starts
+        init(camelContext);
+     * Registers this {@link ZipkinTracer} on the {@link CamelContext} if not already registered.

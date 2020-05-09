@@ -1,0 +1,6 @@
+        if (ObjectHelper.isNotEmpty(exchange.getIn().getHeader(IAMConstants.ACCESS_KEY_ID))) {
+            String accessKeyId = exchange.getIn().getHeader(IAMConstants.ACCESS_KEY_ID, String.class);
+            request.withAccessKeyId(accessKeyId);
+        } else {
+            throw new IllegalArgumentException("Key Id must be specified");
+        }

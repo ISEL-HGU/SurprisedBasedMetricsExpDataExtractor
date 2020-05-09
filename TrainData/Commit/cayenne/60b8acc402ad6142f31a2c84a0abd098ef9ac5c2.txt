@@ -1,0 +1,13 @@
+    public static final String SINGLE_CLASS_TEMPLATE = TEMPLATES_DIR_NAME  "client-singleclass.vm";
+    public static final String DMAP_SINGLE_CLASS_TEMPLATE = TEMPLATES_DIR_NAME  "client-datamap-singleclass.vm";
+
+                return SUBCLASS_TEMPLATE;
+                return SUPERCLASS_TEMPLATE;
+            case ENTITY_SINGLE_CLASS:
+                return SINGLE_CLASS_TEMPLATE;
+
+            case EMBEDDABLE_SINGLE_CLASS:
+                return EMBEDDABLE_SINGLE_CLASS_TEMPLATE;
+            case DATAMAP_SINGLE_CLASS:
+                return DMAP_SINGLE_CLASS_TEMPLATE;
+

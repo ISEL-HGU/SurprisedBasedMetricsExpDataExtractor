@@ -1,0 +1,14 @@
+     * Unbounded as per rule #17. No need to refill.
+    private static final long UNBOUNDED_REQUESTS = Long.MAX_VALUE;
+            if (requested < UNBOUNDED_REQUESTS) {
+                // When there are UNBOUNDED_REQUESTS, they remain constant
+                requested--;
+            }
+                long max = (consMax != null && consMax > 0) ? consMax.longValue() : UNBOUNDED_REQUESTS;
+                if (requested < UNBOUNDED_REQUESTS) {
+                    long newRequest = max - requested - inflightCount;
+                    if (newRequest > 0) {
+                        toBeRequested = newRequest;
+                        requested = toBeRequested;
+                        subs = this.subscription;
+                    }

@@ -1,0 +1,2 @@
+        List<RestConsumerContextPathMatcher.ConsumerPath> paths = new ArrayList<>();
+            paths.add(new HttpRestConsumerPath(entry.getValue()));

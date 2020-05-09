@@ -1,0 +1,5 @@
+        if (watch != null) {
+            // emit event that the exchange was sent to the endpoint
+            long timeTaken = watch.taken();
+            EventHelper.notifyExchangeSent(resourceExchange.getContext(), resourceExchange, destination, timeTaken);
+        }

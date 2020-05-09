@@ -1,0 +1,3 @@
+                log.trace("Using SoTimeout={}", ftpEndpoint.getSoTimeout());
+                    log.trace("Attempting to login user: {} using password: ******** and account: {}", new Object[]{username, account});
+                    log.trace("Attempting to login user: {} using password: ********", username);

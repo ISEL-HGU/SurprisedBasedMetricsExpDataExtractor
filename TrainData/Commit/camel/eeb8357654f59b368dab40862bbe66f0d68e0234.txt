@@ -1,0 +1,3 @@
+import org.springframework.boot.actuate.autoconfigure.endpoint.condition.ConditionalOnEnabledEndpoint;
+
+    @ConditionalOnEnabledEndpoint

@@ -1,0 +1,13 @@
+    
+    @JsonProperty("reply_markup")
+    private ReplyKeyboardMarkup replyKeyboardMarkup;
+    public ReplyKeyboardMarkup getReplyKeyboardMarkup() {
+        return replyKeyboardMarkup;
+    }
+
+    public void setReplyKeyboardMarkup(ReplyKeyboardMarkup replyKeyboardMarkup) {
+        this.replyKeyboardMarkup = replyKeyboardMarkup;
+    }
+
+        sb.append(", disableWebPagePreview=").append(disableWebPagePreview).append('\'');
+        sb.append(", replyKeyboardMarkup=").append(replyKeyboardMarkup);

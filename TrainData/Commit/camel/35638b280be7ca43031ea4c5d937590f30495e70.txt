@@ -1,0 +1,37 @@
+import java.io.UnsupportedEncodingException;
+import java.net.URISyntaxException;
+import java.util.LinkedHashMap;
+        String query = createQueryParameters(getEndpoint().getQueryParameters(), inMessage);
+    static String createQueryParameters(String query, Message inMessage) throws URISyntaxException, UnsupportedEncodingException {
+        if (query != null) {
+            final Map<String, Object> givenParams = URISupport.parseQuery(query);
+            final Map<String, Object> params = new LinkedHashMap<>(givenParams.size());
+            for (Map.Entry<String, Object> entry : givenParams.entrySet()) {
+                Object v = entry.getValue();
+                if (v != null) {
+                    String a = v.toString();
+                    // decode the key as { may be decoded to %NN
+                    a = URLDecoder.decode(a, "UTF-8");
+                    if (a.startsWith("{") && a.endsWith("}")) {
+                        String key = a.substring(1, a.length() - 1);
+                        boolean optional = false;
+                        if (key.endsWith("?")) {
+                            key = key.substring(0, key.length() - 1);
+                            optional = true;
+                        }
+                        String value = inMessage.getHeader(key, String.class);
+                        if (value != null) {
+                            params.put(key, value);
+                        } else if (!optional) {
+                            // value is null and parameter is not optional
+                            params.put(entry.getKey(), entry.getValue());
+                        }
+                    } else {
+                        params.put(entry.getKey(), entry.getValue());
+                    }
+                }
+            }
+            query = URISupport.createQueryString(params);
+        }
+        return query;
+    }

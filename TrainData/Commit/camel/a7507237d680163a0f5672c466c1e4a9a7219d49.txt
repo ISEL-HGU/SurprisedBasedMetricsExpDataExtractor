@@ -1,0 +1,6 @@
+            setMaxMessageSize(Integer.parseInt((String) settings.get("maxMessageSize")));
+            setMaxForwards(Integer.parseInt((String) settings.get("maxForwards")));
+            setReceiveTimeoutMillis(Long.parseLong((String) settings.get("receiveTimeoutMillis")));
+            setMsgExpiration(Integer.parseInt((String) settings.get("msgExpiration")));
+                setFromPort(Integer.parseInt((String) settings.get("fromPort")));
+                    setToPort(Integer.parseInt((String) settings.get("toPort")));

@@ -1,0 +1,7 @@
+            // allow friendly setting of field via a setter unless final
+            if (!fieldNode.isFinal()) {
+                String setterName = "set"  MetaClassHelper.capitalize(variableName);
+                cNode.addMethod(setterName, ACC_PUBLIC | ACC_SYNTHETIC, ClassHelper.VOID_TYPE, params(param(ve.getType(), variableName)), ClassNode.EMPTY_ARRAY, block(
+                        stmt(assignX(propX(varX("this"), variableName), varX(variableName)))
+                ));
+            }

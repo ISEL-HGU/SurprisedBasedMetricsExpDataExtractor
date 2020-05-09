@@ -1,0 +1,10 @@
+                Map<String, Object> defaultOptions = model.getDefaultComponentOptions();
+                    for (Map.Entry<String, Object> entry : defaultOptions.entrySet()) {
+                        Object value = entry.getValue();
+                            value = getCamelContext().resolvePropertyPlaceholders(value.toString());
+                    Map<String, Object> connectorOptions = model.getConnectorOptions();
+                        if (!endpointOptions.contains(entry.getKey()) && !connectorOptions.containsKey(entry.getKey())) {
+        Map<String, Object> defaultOptions = model.getDefaultEndpointOptions();
+                    String text = value.toString();
+                    doAddOption(options, key, text);
+    private boolean isValidConnectionOption(String key, Object value) {

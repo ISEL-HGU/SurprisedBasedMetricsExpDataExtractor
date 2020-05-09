@@ -1,0 +1,14 @@
+     * If set then Jackson will use the Timezone when marshalling/unmarshalling.
+     * This option will have no effect on the others Json DataFormat like gson
+     * fastjson and xstream.
+     */
+    private String timezone;
+    /**
+    public String getTimezone() {
+        return timezone;
+    }
+
+    public void setTimezone(String timezone) {
+        this.timezone = timezone;
+    }
+

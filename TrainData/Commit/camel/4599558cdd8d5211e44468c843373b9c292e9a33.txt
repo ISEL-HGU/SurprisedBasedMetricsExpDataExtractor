@@ -1,0 +1,3 @@
+ *
+ * @deprecated use Hystrix EIP instead which is the popular Netflix implementation of circuit breaker
+@Deprecated

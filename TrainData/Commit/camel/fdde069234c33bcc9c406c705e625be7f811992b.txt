@@ -1,0 +1,3 @@
+        // ensure this opentracing tracer gets initialized when Camel starts
+        init(camelContext);
+     * Registers this {@link OpenTracingTracer} on the {@link CamelContext} if not already registered.

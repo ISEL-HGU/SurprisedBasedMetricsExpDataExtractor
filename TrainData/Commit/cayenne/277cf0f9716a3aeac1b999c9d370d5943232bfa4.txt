@@ -1,0 +1,26 @@
+import java.util.function.BiFunction;
+    public void update(ReverseEngineering reverseEngineering,
+                       BiFunction<FilterContainer, DbImportTreeNode, Void> processor) {
+                    schemas.forEach(schema -> packNextFilter(schema, currentRoot, processor));
+                    packNextFilter(catalog, root, processor);
+            reverseEngineering.getSchemas().forEach(schema -> packNextFilter(schema, root, processor));
+    private void packNextFilter(FilterContainer filterContainer, DbImportTreeNode root,
+                                BiFunction<FilterContainer, DbImportTreeNode, Void> processor) {
+        container.setLoaded(true);
+        processor.apply(filterContainer, container);
+    void packColumns(IncludeTable includeTable, DbImportTreeNode tableNode) {
+    DbImportTreeNode findNodeInParent(DbImportTreeNode parent, Object object) {
+    public  <T extends PatternParam> void printParams(Collection<T> collection, DbImportTreeNode parent) {
+
+                if (isTransferable && schema.getIncludeTables().isEmpty() && schema.getExcludeTables().isEmpty()) {
+                    printParams(Collections.singletonList(new IncludeTable("Loading...")), node);
+                }
+
+
+                if (isTransferable && catalog.getSchemas().isEmpty() &&
+                        catalog.getIncludeTables().isEmpty() && catalog.getExcludeTables().isEmpty()) {
+                    printParams(Collections.singletonList(new IncludeTable("Loading...")), node);
+                }
+
+                if ((node.isIncludeTable() || node.isSchema() || node.isCatalog()) && !node.isLoaded()) {
+                    //reload tables and columns action.

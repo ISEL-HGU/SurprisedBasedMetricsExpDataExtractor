@@ -1,0 +1,39 @@
+import java.util.concurrent.locks.StampedLock;
+    private final StampedLock sl = new StampedLock();
+        long stamp = sl.readLock();
+            long ws = sl.tryConvertToWriteLock(stamp);
+            if (0L == ws) { // Failed to convert read lock to write lock
+                sl.unlockRead(stamp);
+                stamp = sl.writeLock();
+
+                // try to find the cached value again
+                value = commonCache.get(key);
+                if (null != convertValue(value)) {
+                    return value;
+                }
+            } else {
+                stamp = ws;
+            value = compute(key, valueProvider, shouldCache);
+            sl.unlock(stamp);
+    private V compute(K key, ValueProvider<? super K, ? extends V> valueProvider, boolean shouldCache) {
+        V value = null == valueProvider ? null : valueProvider.provide(key);
+        if (shouldCache && null != convertValue(value)) {
+            commonCache.put(key, value);
+        }
+        return value;
+    }
+
+        long stamp = sl.writeLock();
+            sl.unlockWrite(stamp);
+        long stamp = sl.tryOptimisticRead();
+        R result = action.doWith(commonCache);
+
+        if (!sl.validate(stamp)) {
+            stamp = sl.readLock();
+            try {
+                result = action.doWith(commonCache);
+            } finally {
+                sl.unlockRead(stamp);
+            }
+
+        return result;

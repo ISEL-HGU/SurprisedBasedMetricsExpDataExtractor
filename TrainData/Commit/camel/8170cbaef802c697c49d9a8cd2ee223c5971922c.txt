@@ -1,0 +1,28 @@
+import org.ehcache.config.Configuration;
+     * The cache manager configuration
+     */
+    @NestedConfigurationProperty
+    private Configuration cacheManagerConfiguration;
+    /**
+    public Configuration getCacheManagerConfiguration() {
+        return cacheManagerConfiguration;
+    }
+
+    public void setCacheManagerConfiguration(
+            Configuration cacheManagerConfiguration) {
+        this.cacheManagerConfiguration = cacheManagerConfiguration;
+    }
+
+        /**
+         * The cache manager configuration
+         */
+        private Configuration cacheManagerConfiguration;
+        public Configuration getCacheManagerConfiguration() {
+            return cacheManagerConfiguration;
+        }
+
+        public void setCacheManagerConfiguration(
+                Configuration cacheManagerConfiguration) {
+            this.cacheManagerConfiguration = cacheManagerConfiguration;
+        }
+

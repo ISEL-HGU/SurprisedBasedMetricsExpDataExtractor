@@ -1,0 +1,2 @@
+    @UriPath
+     * Port number for the IRC chat server. If no port is configured then a default port of either 6667, 6668 or 6669 is used.

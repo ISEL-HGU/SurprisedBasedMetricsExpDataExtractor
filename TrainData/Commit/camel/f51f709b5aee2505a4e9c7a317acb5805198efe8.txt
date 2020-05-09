@@ -1,0 +1,59 @@
+    public ServiceCallDefinition dnsServiceDiscovery(String domain) {
+        DnsServiceCallServiceDiscoveryConfiguration conf = new DnsServiceCallServiceDiscoveryConfiguration(this);
+        conf.setDomain(domain);
+
+        setServiceDiscoveryConfiguration(conf);
+
+        return this;
+    }
+
+    public ServiceCallDefinition dnsServiceDiscovery(String domain, String protocol) {
+        DnsServiceCallServiceDiscoveryConfiguration conf = new DnsServiceCallServiceDiscoveryConfiguration(this);
+        conf.setDomain(domain);
+        conf.setProto(protocol);
+
+        setServiceDiscoveryConfiguration(conf);
+
+        return this;
+    }
+
+    public KubernetesServiceCallServiceDiscoveryConfiguration kubernetesClientServiceDiscovery() {
+        KubernetesServiceCallServiceDiscoveryConfiguration conf = new KubernetesServiceCallServiceDiscoveryConfiguration(this);
+        conf.setLookup("client");
+
+        setServiceDiscoveryConfiguration(conf);
+
+        return conf;
+    }
+
+    public ServiceCallDefinition kubernetesEnvServiceDiscovery() {
+        KubernetesServiceCallServiceDiscoveryConfiguration conf = new KubernetesServiceCallServiceDiscoveryConfiguration(this);
+        conf.setLookup("environment");
+
+        setServiceDiscoveryConfiguration(conf);
+
+        return this;
+    }
+
+    public ServiceCallDefinition kubernetesDnsServiceDiscovery(String namespace, String domain) {
+        KubernetesServiceCallServiceDiscoveryConfiguration conf = new KubernetesServiceCallServiceDiscoveryConfiguration(this);
+        conf.setLookup("dns");
+        conf.setNamespace(namespace);
+        conf.setDnsDomain(domain);
+
+        setServiceDiscoveryConfiguration(conf);
+
+        return this;
+    }
+
+    public ServiceCallDefinition ribbonLoadBalancer() {
+        return this;
+    }
+
+    public ServiceCallDefinition ribbonLoadBalancer(String clientName) {
+        RibbonServiceCallLoadBalancerConfiguration conf = new RibbonServiceCallLoadBalancerConfiguration(this);
+        conf.setClientName(clientName);
+
+        setLoadBalancerConfiguration(conf);
+
+        return this;

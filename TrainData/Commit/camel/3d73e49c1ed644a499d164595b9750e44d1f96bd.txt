@@ -1,0 +1,2 @@
+        return !operationsWithHandlerAnnotation.isEmpty();
+            methodName = StringHelper.before(methodName, "(");

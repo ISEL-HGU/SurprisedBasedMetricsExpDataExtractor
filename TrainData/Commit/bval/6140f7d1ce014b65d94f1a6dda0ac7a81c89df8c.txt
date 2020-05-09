@@ -1,0 +1,2 @@
+                new Meta.ForConstructor<>(Validate.notNull(ctor, IllegalArgumentException::new, "ctor")),
+                Validate.notNull(returnValue, IllegalArgumentException::new, "constructor cannot return null"), groups);

@@ -1,0 +1,66 @@
+import com.google.common.io.BaseEncoding;
+import java.security.InvalidKeyException;
+import org.apache.guacamole.totp.TOTPGenerator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+     * Logger for this class.
+     */
+    private final Logger logger = LoggerFactory.getLogger(UserVerificationService.class);
+
+    /**
+     * BaseEncoding instance which decoded/encodes base32.
+     */
+    private static final BaseEncoding BASE32 = BaseEncoding.base32();
+
+    /**
+     * Retrieves the base32-encoded TOTP key associated with user having the
+     * given UserContext. If no TOTP key is associated with the user, null is
+     * returned.
+     *
+     * @param context
+     *     The UserContext of the user whose TOTP key should be retrieved.
+     *
+     * @return
+     *     The base32-encoded TOTP key associated with user having the given
+     *     UserContext, or null if no TOTP key is associated with the user.
+     */
+    public String getKey(UserContext context){
+
+        // FIXME: Hard-coded key
+        return "JBSWY3DPEHPK3PXP";
+
+    }
+
+    /**
+        // Ignore anonymous users
+        String username = authenticatedUser.getIdentifier();
+        if (username.equals(AuthenticatedUser.ANONYMOUS_IDENTIFIER))
+            return;
+
+        // Ignore users which do not have an associated key
+        String encodedKey = getKey(context);
+        if (encodedKey == null)
+            return;
+
+        String code = request.getParameter(TOTP_PARAMETER_NAME);
+        if (code == null)
+        try {
+
+            // Verify provided TOTP against value produced by generator
+            byte[] key = BASE32.decode(encodedKey);
+            TOTPGenerator totp = new TOTPGenerator(key, TOTPGenerator.Mode.SHA1, 6);
+            if (code.equals(totp.generate()))
+                return;
+
+        }
+        catch (InvalidKeyException e) {
+            logger.warn("User \"{}\" is associated with an invalid TOTP key.", username);
+            logger.debug("TOTP key is not valid.", e);
+        }
+        catch (IllegalArgumentException e) {
+            logger.warn("TOTP key of user \"{}\" is not valid base32.", username);
+            logger.debug("TOTP key is not valid base32.", e);
+        }
+
+        // Provided code is not valid
+        throw new GuacamoleClientException("LOGIN.INFO_TOTP_VERIFICATION_FAILED");

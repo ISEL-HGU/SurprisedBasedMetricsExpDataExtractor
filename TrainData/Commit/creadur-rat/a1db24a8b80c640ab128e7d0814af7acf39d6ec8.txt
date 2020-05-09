@@ -1,0 +1,14 @@
+import org.apache.commons.cli.*;
+import java.io.*;
+    private static final String EXCLUDE_CLI = "e";
+    private static final String HELP = "h";
+        DefaultParser parser = new DefaultParser();
+        if (cl.hasOption(HELP)) {
+        Option help = new Option(HELP, "help", false,
+        final Option exclude = Option.builder(EXCLUDE_CLI)
+                .argName("expression")
+                .longOpt("exclude")
+                .desc("Excludes files matching wildcard <expression>. " 
+                .build();
+        StringBuilder footer = new StringBuilder();
+        footer.append("\nNOTE:\n");

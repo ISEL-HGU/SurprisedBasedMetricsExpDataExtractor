@@ -1,0 +1,18 @@
+import org.codehaus.groovy.transform.stc.AbstractExtensionMethodCache;
+import java.util.Set;
+import java.util.function.Function;
+import java.util.function.Predicate;
+class MacroMethodsCache extends AbstractExtensionMethodCache {
+    public static final MacroMethodsCache INSTANCE = new MacroMethodsCache();
+
+    private MacroMethodsCache() {}
+
+    @Override
+    protected void addAdditionalClassesToScan(Set<Class> instanceExtClasses, Set<Class> staticExtClasses) {}
+
+    @Override
+    protected Predicate<MethodNode> getMethodFilter() {
+        return m -> m.getAnnotations(MACRO_ANNOTATION_CLASS_NODE).isEmpty();
+    @Override
+    protected Function<MethodNode, String> getMethodMapper() {
+        return m -> m.getName();

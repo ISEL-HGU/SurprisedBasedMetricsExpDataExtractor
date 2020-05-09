@@ -1,0 +1,52 @@
+    private WeakReference<?> target;
+    private Method method;
+    private Class<?>[] parameterTypes;
+    public Invocation(Object target, String methodName, Class parameterType) throws NoSuchMethodException {
+        this(target, methodName, new Class[] {parameterType});
+     * @throws NoSuchMethodException if <code>methodName</code> could not be found in the target
+    public Invocation(Object target, String methodName, Class[] parameterTypes) throws NoSuchMethodException {
+                        throw new IllegalArgumentException("parameter type["  i  "] must not be null");
+            } else {
+        method = lookupMethodInHierarchy(target.getClass(), methodName, parameterTypes);
+        if (method == null) {
+            throw new NoSuchMethodException("No such method: "  target.getClass().getName()  "."  methodName);
+        }
+        if (!Util.isAccessible(method)) {
+            method.setAccessible(true);
+        this.parameterTypes = parameterTypes;
+        this.target = new WeakReference<>(target);
+    Method lookupMethodInHierarchy(Class<?> objectClass, String methodName, Class[] parameterTypes)
+            throws SecurityException, NoSuchMethodException {
+        } catch (NoSuchMethodException e) {
+        return this.fire(new Object[] {argument});
+        if (parameterTypes == null) {
+        } else if (arguments == null) {
+        } else if (parameterTypes.length != arguments.length) {
+                             parameterTypes.length
+        Object currentTarget = target.get();
+            method.invoke(currentTarget, arguments);
+        } catch (InvocationTargetException ite) {
+            } else {
+        } catch (Exception ex) {
+        if (obj == null || !obj.getClass().equals(this.getClass())) {
+
+        Invocation otherInvocation = (Invocation) obj;
+        if (!method.equals(otherInvocation.getMethod())) {
+            return false;
+
+        Object otherTarget = otherInvocation.getTarget();
+        Object target = this.getTarget();
+
+        if (target == otherTarget) {
+            return true;
+        }
+
+        if (target == null) {
+            return false;
+        }
+
+        return target.equals(otherTarget);
+        return method.hashCode();
+        return method;
+        return target.get();
+        return parameterTypes;

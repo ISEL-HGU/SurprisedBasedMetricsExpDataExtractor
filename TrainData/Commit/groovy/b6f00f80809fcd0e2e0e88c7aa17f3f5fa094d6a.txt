@@ -1,0 +1,2 @@
+            superList = getAllProperties(names, cNode.getSuperClass(), includeSuperProperties, includeSuperFields, allProperties, true, true);
+        List<PropertyNode> list = getAllProperties(names, cNode, true, includeFields, allProperties, false, true);

@@ -1,0 +1,12 @@
+     * Notifies bound listeners that a new tunnel has been connected.
+     * Listeners may veto a connected tunnel by throwing any GuacamoleException.
+    private void fireTunnelConnectEvent(UserContext userContext,
+        listenerService.handleEvent(new TunnelConnectEvent(userContext, credentials, tunnel));
+     * Notifies bound listeners that a tunnel is to be closed.
+     * Listeners are allowed to veto a request to close a tunnel by throwing any
+     * GuacamoleException.
+     *     If thrown by a listener.
+    private void fireTunnelClosedEvent(UserContext userContext,
+        listenerService.handleEvent(new TunnelCloseEvent(userContext, credentials, tunnel));
+                fireTunnelClosedEvent(context,
+            fireTunnelConnectEvent(userContext,

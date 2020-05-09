@@ -1,0 +1,33 @@
+import java.util.concurrent.ScheduledExecutorService;
+                Integer readLockIdempotentReleaseDelay = (Integer) params.get("readLockIdempotentReleaseDelay");
+                if (readLockIdempotentReleaseDelay != null) {
+                    readLockStrategy.setReadLockIdempotentReleaseDelay(readLockIdempotentReleaseDelay);
+                }
+                Boolean readLockIdempotentReleaseAsync = (Boolean) params.get("readLockIdempotentReleaseAsync");
+                if (readLockIdempotentReleaseAsync != null) {
+                    readLockStrategy.setReadLockIdempotentReleaseAsync(readLockIdempotentReleaseAsync);
+                }
+                Integer readLockIdempotentReleaseAsyncPoolSize = (Integer) params.get("readLockIdempotentReleaseAsyncPoolSize");
+                if (readLockIdempotentReleaseAsyncPoolSize != null) {
+                    readLockStrategy.setReadLockIdempotentReleaseAsyncPoolSize(readLockIdempotentReleaseAsyncPoolSize);
+                }
+                ScheduledExecutorService readLockIdempotentReleaseExecutorService = (ScheduledExecutorService) params.get("readLockIdempotentReleaseExecutorService");
+                if (readLockIdempotentReleaseExecutorService != null) {
+                    readLockStrategy.setReadLockIdempotentReleaseExecutorService(readLockIdempotentReleaseExecutorService);
+                }
+                Integer readLockIdempotentReleaseDelay = (Integer) params.get("readLockIdempotentReleaseDelay");
+                if (readLockIdempotentReleaseDelay != null) {
+                    readLockStrategy.setReadLockIdempotentReleaseDelay(readLockIdempotentReleaseDelay);
+                }
+                Boolean readLockIdempotentReleaseAsync = (Boolean) params.get("readLockIdempotentReleaseAsync");
+                if (readLockIdempotentReleaseAsync != null) {
+                    readLockStrategy.setReadLockIdempotentReleaseAsync(readLockIdempotentReleaseAsync);
+                }
+                Integer readLockIdempotentReleaseAsyncPoolSize = (Integer) params.get("readLockIdempotentReleaseAsyncPoolSize");
+                if (readLockIdempotentReleaseAsyncPoolSize != null) {
+                    readLockStrategy.setReadLockIdempotentReleaseAsyncPoolSize(readLockIdempotentReleaseAsyncPoolSize);
+                }
+                ScheduledExecutorService readLockIdempotentReleaseExecutorService = (ScheduledExecutorService) params.get("readLockIdempotentReleaseExecutorService");
+                if (readLockIdempotentReleaseExecutorService != null) {
+                    readLockStrategy.setReadLockIdempotentReleaseExecutorService(readLockIdempotentReleaseExecutorService);
+                }

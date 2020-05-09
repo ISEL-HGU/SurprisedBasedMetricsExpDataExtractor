@@ -1,0 +1,20 @@
+    @UriParam(label = "sign", javaType = "java.lang.String", description = "Signer information: reference to bean(s) which implements org.apache.camel.component.crypto.cms.api.SignerInfo. Multiple values can be separated by comma")
+    private List<SignerInfo> signer = new ArrayList<>();
+    public void setSigner(List<SignerInfo> signer) {
+        this.signer = signer;
+    public void setSigner(String signer) {
+        String[] values = signer.split(",");
+        for (String s : values) {
+            if (s.startsWith("#")) {
+                s = s.substring(1);
+            }
+            if (getContext() != null) {
+                SignerInfo obj = getContext().getRegistry().lookupByNameAndType(s, SignerInfo.class);
+                if (obj != null) {
+                    addSigner(obj);
+    }
+    public void addSigner(SignerInfo info) {
+        if (this.signer == null) {
+            this.signer = new ArrayList<>();
+        }
+        this.signer.add(info);

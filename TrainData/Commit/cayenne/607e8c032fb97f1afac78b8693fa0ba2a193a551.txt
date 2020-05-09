@@ -1,0 +1,9 @@
+	public static final String SKIP_SCHEMA_KEY = "cayenneTestSkipSchemaCreation";
+			if ("true".equalsIgnoreCase(System.getProperty(SKIP_SCHEMA_KEY))) {
+				logger.info("skipping schema generation... ");
+			} else {
+				dropSchema();
+				dropPKSupport();
+				createSchema();
+				createPKSupport();
+			}

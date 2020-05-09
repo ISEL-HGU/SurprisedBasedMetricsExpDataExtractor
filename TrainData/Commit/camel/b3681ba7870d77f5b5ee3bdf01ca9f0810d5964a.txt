@@ -1,0 +1,21 @@
+import java.util.concurrent.Callable;
+    public static <R> R callWithReadLock(StampedLock lock, Callable<R> task) throws Exception {
+        long stamp = lock.readLock();
+
+        try {
+            return task.call();
+        } finally {
+            lock.unlockRead(stamp);
+        }
+    }
+
+    public static <R> R  callWithWriteLock(StampedLock lock, Callable<R> task) throws Exception {
+        long stamp = lock.writeLock();
+
+        try {
+            return task.call();
+        } finally {
+            lock.unlockWrite(stamp);
+        }
+    }
+

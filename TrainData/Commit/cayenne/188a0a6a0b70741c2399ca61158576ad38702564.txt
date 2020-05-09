@@ -1,0 +1,11 @@
+        assertEquals("artist1", paintings.get(0).getToArtist().getArtistName());
+        assertEquals("artist1", paintings.get(1).getToArtist().getArtistName());
+                .orderBy(Artist.PAINTING_ARRAY.alias("p1").dot(Painting.TO_GALLERY).dot(Gallery.GALLERY_NAME).asc());
+        assertEquals(6, artists.size());
+        assertEquals("tate modern", artists.get(0).getPaintingArray().get(0).getToGallery().getGalleryName());
+        assertEquals("test gallery", artists.get(artists.size() - 1).getPaintingArray().get(0).getToGallery().getGalleryName());
+        Expression e1 = ExpressionFactory.exp("paintingArray#p1.toGallery#p2.galleryName");
+                .orderBy(PropertyFactory.createBase(e1, String.class).asc());
+        assertEquals(6, artists.size());
+        assertEquals("tate modern", artists.get(0).getPaintingArray().get(0).getToGallery().getGalleryName());
+        assertEquals("test gallery", artists.get(artists.size() - 1).getPaintingArray().get(0).getToGallery().getGalleryName());

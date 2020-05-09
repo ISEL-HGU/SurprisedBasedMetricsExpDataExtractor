@@ -1,0 +1,32 @@
+import java.util.Collections;
+import java.util.List;
+    private List<Token> latestTokenList = Collections.emptyList();
+
+        CommonTokenStream tokenStream = new CommonTokenStream(lexer);
+            tokenStream.fill();
+        List<Token> tokenList = tokenStream.getTokens();
+
+        boolean toCompareTokens = true;
+        int latestTokenListSize = latestTokenList.size();
+
+        for (int i = 0, n = tokenList.size(); i < n; i) {
+            Token token = tokenList.get(i);
+
+            // rendering is very time consuming! try to avoid rendering
+            if (toCompareTokens) {
+                if (i < latestTokenListSize) {
+                    Token latestToken = latestTokenList.get(i);
+
+                    if (token.getStartIndex() == latestToken.getStartIndex()
+                            && token.getStopIndex() == latestToken.getStopIndex()
+                            && token.getType() == latestToken.getType()) {
+
+                        continue;
+                    }
+                }
+
+                toCompareTokens = false;
+            }
+
+
+        this.latestTokenList = tokenList;

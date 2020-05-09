@@ -1,0 +1,2 @@
+import org.apache.camel.impl.engine.ReactiveExecutorResolver;
+        return new ReactiveExecutorResolver().resolve(this);

@@ -1,0 +1,13 @@
+import org.codehaus.groovy.ast.expr.BinaryExpression;
+import org.codehaus.groovy.ast.expr.Expression;
+            statements.add(returnS(compareExpr(varX(THIS_HASH), varX(OTHER_HASH), reversed)));
+                statements.add(assignS(varX(VALUE), compareExpr(propX(varX("this"), propName), propX(varX(OTHER), propName), reversed)));
+                returnS(compareExpr(propX(varX(ARG0), propName), propX(varX(ARG1), propName), reversed))
+    /**
+     * Helper method used to build a binary expression that compares two values
+     * with the option to handle reverse order.
+     */
+    private static BinaryExpression compareExpr(Expression lhv, Expression rhv, boolean reversed) {
+        return (reversed) ? cmpX(rhv, lhv) : cmpX(lhv, rhv);
+    }
+

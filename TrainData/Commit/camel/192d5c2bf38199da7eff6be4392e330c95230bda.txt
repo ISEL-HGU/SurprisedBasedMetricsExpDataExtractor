@@ -1,0 +1,3 @@
+    private List<PhoneNumber> phoneNumbers;
+    public List<PhoneNumber> getPhoneNumbers() {
+    public void setPhoneNumbers(List<PhoneNumber> phoneNumbers) {

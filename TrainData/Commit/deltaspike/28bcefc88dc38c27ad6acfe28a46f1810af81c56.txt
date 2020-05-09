@@ -1,0 +1,3 @@
+import org.apache.deltaspike.jpa.api.entitymanager.EntityManagerConfig;
+    @Transactional
+    @EntityManagerConfig(qualifier = First.class)

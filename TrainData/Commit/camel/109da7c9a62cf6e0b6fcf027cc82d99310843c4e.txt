@@ -1,0 +1,2 @@
+        } else if ("camel-servicenow".equals(artifactId)) {
+            return "camel-servicenow/camel-servicenow-component/src/main/docs";

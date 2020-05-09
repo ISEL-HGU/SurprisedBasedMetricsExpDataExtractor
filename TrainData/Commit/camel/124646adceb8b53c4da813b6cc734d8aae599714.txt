@@ -1,0 +1,6 @@
+     * Reads the request body from the given http servlet request.
+     * @throws IOException is thrown if error reading request body
+        // TODO should readRequestBodyFromInputStream() be invoked instead?
+     * Reads the request body from the given input stream.
+     * @return the request body, can be <tt>null</tt> if no body
+     * @throws IOException is thrown if error reading request body

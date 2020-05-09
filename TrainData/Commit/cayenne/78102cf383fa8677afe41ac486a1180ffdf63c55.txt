@@ -1,0 +1,2 @@
+        CryptoModuleExtender builder = CryptoModule
+        return builder.module();

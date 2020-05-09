@@ -1,0 +1,10 @@
+import com.netflix.hystrix.HystrixCircuitBreaker;
+    @ManagedAttribute
+    public boolean isCircuitBreakerOpen() {
+        HystrixCircuitBreaker cb = HystrixCircuitBreaker.Factory.getInstance(commandKey);
+        if (cb != null) {
+            return cb.isOpen();
+        }
+        return false;
+    }
+

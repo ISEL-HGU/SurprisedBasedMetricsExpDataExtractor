@@ -1,0 +1,1 @@
+            getAsyncProcessor().process(exchange, doneSync -> log.trace("Processing exchange [{}] done.", exchange));

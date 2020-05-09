@@ -1,0 +1,13 @@
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+//CHECKSTYLE:OFF
+/**
+ * A sample Spring Boot application that starts the Atomix boostsrap node.
+ */
+@SpringBootApplication
+public class ClusterBootstrap {
+    /**
+     * A main method to start this application.
+     */
+        SpringApplication.run(ClusterBootstrap.class, args);
+//CHECKSTYLE:ON

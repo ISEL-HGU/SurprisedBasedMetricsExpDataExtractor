@@ -1,0 +1,3 @@
+import java.math.BigDecimal;
+        return new BigDecimal(bytecodeVersion).compareTo(new BigDecimal(JDK5)) >= 0;
+        return new BigDecimal(bytecodeVersion).compareTo(new BigDecimal(JDK7)) >= 0;

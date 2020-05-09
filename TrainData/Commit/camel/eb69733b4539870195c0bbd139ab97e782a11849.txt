@@ -1,0 +1,2 @@
+import org.apache.camel.util.StringHelper;
+        StringHelper.notEmpty(directory, "directory");

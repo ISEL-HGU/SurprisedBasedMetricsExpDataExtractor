@@ -1,0 +1,31 @@
+     * [monitor types only] The attribute to observe for the monitor bean.
+     * [monitor types only] The frequency to poll the bean to check the monitor.
+     * [monitor types only] The type of monitor to create. One of string, gauge, counter.
+     * [counter monitor only] Initial threshold for the monitor. The value must exceed this before notifications are fired.
+     * [counter monitor only] The amount to increment the threshold after it's been exceeded.
+     * [counter monitor only] The value at which the counter is reset to zero
+     * [counter  gauge monitor only] If true, then the value reported in the notification is the difference from the threshold as opposed to the value itself.
+     * [gauge monitor only] If true, the gauge will fire a notification when the high threshold is exceeded
+     * [gauge monitor only] If true, the gauge will fire a notification when the low threshold is exceeded
+     * [gauge monitor only] Value for the gauge's high threshold
+     * [gauge monitor only] Value for the gauge's low threshold
+     * [string monitor only] If true, the string monitor will fire a notification when the string attribute differs from the string to compare.
+     * [string monitor only] If true, the string monitor will fire a notification when the string attribute matches the string to compare.
+     * [string monitor only] Value for the string monitor's string to compare.
+     * Format for the message body. Either "xml" or "raw". If xml, the notification is serialized to xml. If raw, then the raw java object is set as the body.
+     * Credentials for making a remote connection
+     * Credentials for making a remote connection
+     * The domain for the mbean you're connecting to
+     * The name key for the mbean you're connecting to. This value is mutually exclusive with the object properties that get passed.
+     * Reference to a bean that implements the NotificationFilter.
+     * Value to handback to the listener when a notification is received. This value will be put in the message header with the key "jmx.handback"
+     * If true the consumer will throw an exception if unable to establish the JMX connection upon startup.  If false, the consumer will attempt
+     * to establish the JMX connection every 'x' seconds until the connection is made -- where 'x' is the configured  reconnectionDelay
+     * If true the consumer will attempt to reconnect to the JMX server when any connection failure occurs.  The consumer will attempt
+     * to re-establish the JMX connection every 'x' seconds until the connection is made-- where 'x' is the configured  reconnectionDelay
+    /**
+     * The number of seconds to wait before attempting to retry establishment of the initial connection or attempt to reconnect a lost connection
+     */
+     * Properties for the object name. These values will be used if the objectName param is not set
+    @UriParam(label = "advanced")
+     * Cached object name that was built from the objectName param or the hashtable

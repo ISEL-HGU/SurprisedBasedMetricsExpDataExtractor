@@ -1,0 +1,1 @@
+    private static final int DB_ATTRIBUTE_PATH_COLUMN = ObjAttributeTableModel.DB_ATTRIBUTE;

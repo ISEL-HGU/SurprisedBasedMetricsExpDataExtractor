@@ -1,0 +1,5 @@
+        // use resolver to find the headers map factory to be used, if we are using the default
+        if (headersMapFactory instanceof DefaultHeadersMapFactory) {
+            headersMapFactory = new HeadersMapFactoryResolver().resolve(this);
+        }
+        if (!headersMapFactory.isCaseInsensitive()) {

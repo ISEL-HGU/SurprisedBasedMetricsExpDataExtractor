@@ -1,0 +1,6 @@
+            Boolean removeQuotes = factory.getRemoveQuotes();
+                            .forEachOrdered(consumeFile(factory, models, separator, removeQuotes, quote, count));
+                                         String separator, Boolean removeQuotes, String quote, AtomicInteger count) {
+                if (removeQuotes) {
+                    result = unquoteTokens(result, separators, quote);
+                }

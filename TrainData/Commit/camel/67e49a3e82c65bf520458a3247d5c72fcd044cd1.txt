@@ -1,0 +1,4 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+    private static final Logger LOG = LoggerFactory.getLogger(SharedSingletonObjectPool.class);
+                LOG.info("Recreating new connection as current connection is invalid: {}", t);

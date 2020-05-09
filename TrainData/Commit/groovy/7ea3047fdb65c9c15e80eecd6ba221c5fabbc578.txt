@@ -1,0 +1,6 @@
+    private static final Class[] EMPTY_CLASS_ARRAY = new Class[0];
+    private static final Class[] EMPTY_INTERFACE_ARRAY = EMPTY_CLASS_ARRAY;
+        if (clazz != null && Modifier.isFinal(clazz.getModifiers())) {
+            throw new GroovyCastException("Cannot coerce a map to class "  clazz.getName()  " because it is a final class");
+        Class[] intfs = interfaces != null ? interfaces.toArray(EMPTY_CLASS_ARRAY) : EMPTY_INTERFACE_ARRAY;
+                if (thisClass == null) return 0;

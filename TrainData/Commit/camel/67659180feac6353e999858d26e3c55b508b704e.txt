@@ -1,0 +1,12 @@
+import org.apache.camel.model.GlobalOptionsDefinition;
+    @XmlElement(name = "globalOptions")
+    private GlobalOptionsDefinition globalOptions;
+
+    public GlobalOptionsDefinition getGlobalOptions() {
+        return globalOptions;
+    }
+
+    public void setGlobalOptions(GlobalOptionsDefinition globalOptions) {
+        this.globalOptions = globalOptions;
+    }
+

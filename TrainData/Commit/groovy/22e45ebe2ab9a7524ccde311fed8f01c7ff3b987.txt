@@ -1,0 +1,3 @@
+import java.util.Map;
+     * @return returns the content of the cleared map
+    Map<K, V> clear();

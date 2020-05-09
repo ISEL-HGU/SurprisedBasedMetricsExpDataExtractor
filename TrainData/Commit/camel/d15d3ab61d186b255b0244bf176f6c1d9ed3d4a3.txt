@@ -1,0 +1,8 @@
+import java.util.List;
+        ListUsersResult res = new ListUsersResult();
+        List<User> list = new ArrayList<>();
+        User user = new User();
+        user.setUserName("test");
+        list.add(user);
+        res.setUsers(list);
+        return res;

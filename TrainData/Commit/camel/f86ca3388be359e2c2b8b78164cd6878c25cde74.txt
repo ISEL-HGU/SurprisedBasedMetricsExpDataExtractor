@@ -1,0 +1,2 @@
+     * method for.
+        if (expectedMinimumCount == -1 && expectedCount <= 0) {

@@ -1,0 +1,6 @@
+    private static final String[] EMPTY_STRING_ARRAY = new String[0];
+        return run(scriptFile, (String[]) list.toArray(EMPTY_STRING_ARRAY));
+        return run(scriptText, fileName, (String[]) list.toArray(EMPTY_STRING_ARRAY));
+        return run(source, ((String[]) args.toArray(EMPTY_STRING_ARRAY)));
+        return run(new GroovyCodeSource(source), ((String[]) args.toArray(EMPTY_STRING_ARRAY)));
+        return run(in, fileName, (String[]) list.toArray(EMPTY_STRING_ARRAY));

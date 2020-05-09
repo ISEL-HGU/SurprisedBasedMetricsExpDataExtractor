@@ -1,0 +1,4 @@
+                Contact contact = new Contact(name, screenName);
+                exchange.getIn().setBody(contact);
+            .to("salesforce:upsertSObject?sObjectIdName=TwitterScreenName__c")
+            .log("SObject ID: ${body?.id}");

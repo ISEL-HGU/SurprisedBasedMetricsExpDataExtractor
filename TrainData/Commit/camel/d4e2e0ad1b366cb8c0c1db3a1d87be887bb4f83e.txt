@@ -1,0 +1,1 @@
+        fromF("twitter://search?delay=%s&keywords=%s", delay, searchTerm)

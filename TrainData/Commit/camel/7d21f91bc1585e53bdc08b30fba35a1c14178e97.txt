@@ -1,0 +1,33 @@
+import java.nio.charset.Charset;
+                    if (pom.exists()) {
+                        String existing = FileUtils.readFileToString(pom, Charset.defaultCharset());
+                        ExampleModel model = new ExampleModel();
+                        model.setFileName(file.getName());
+                        String name = StringHelper.between(existing, "<name>", "</name>");
+                        String title = StringHelper.between(existing, "<title>", "</title>");
+                        String description = StringHelper.between(existing, "<description>", "</description>");
+                        String category = StringHelper.between(existing, "<category>", "</category>");
+                        if (title != null) {
+                            model.setTitle(title);
+                        } else {
+                            // fallback and use file name as title
+                            model.setTitle(asTitle(file.getName()));
+                        }
+                        if (description != null) {
+                            model.setDescription(description);
+                        }
+                        if (category != null) {
+                            model.setCategory(category);
+                        }
+                        if (name != null && name.contains("(deprecated)")) {
+                            model.setDeprecated("true");
+                        } else {
+                            model.setDeprecated("false");
+                        }
+                        // readme files is either readme.md or readme.adoc
+                        String[] readmes = new File(file, ".").list((folder, fileName) -> fileName.toLowerCase().startsWith("readme"));
+                        if (readmes != null && readmes.length == 1) {
+                            model.setReadmeFileName(readmes[0]);
+                        }
+                        models.add(model);
+                    }

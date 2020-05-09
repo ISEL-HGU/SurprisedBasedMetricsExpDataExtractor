@@ -1,0 +1,4 @@
+import java.sql.Date;
+		tArtistCt.insert(1, "Test", new Date(System.currentTimeMillis()));
+		tArtistCt.insert(2, "Test1", new Date(System.currentTimeMillis()));
+		tArtistCt.insert(1, "Test", new Date(System.currentTimeMillis()));

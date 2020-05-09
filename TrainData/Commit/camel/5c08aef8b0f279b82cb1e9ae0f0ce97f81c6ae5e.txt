@@ -1,0 +1,15 @@
+import org.apache.ivy.util.url.URLHandlerRegistry;
+    private final PatchedHttpClientHandler httpClient = new PatchedHttpClientHandler();
+     * Sets the timeout in millis (http.socket.timeout) when downloading via http/https protocols.
+     * <p/>
+     * The default value is 10000
+     */
+    public void setHttpClientTimeout(int timeout) {
+        httpClient.setTimeout(timeout);
+    }
+
+    /**
+            URLHandlerRegistry.setDefault(httpClient);
+
+            URLHandlerRegistry.setDefault(httpClient);
+

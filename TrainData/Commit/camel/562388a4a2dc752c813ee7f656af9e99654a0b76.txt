@@ -1,0 +1,2 @@
+import com.amazonaws.regions.Regions;
+            AWSLambda client = AWSLambdaClientBuilder.standard().withCredentials(credentialsProvider).withRegion(Regions.valueOf(configuration.getRegion())).build();

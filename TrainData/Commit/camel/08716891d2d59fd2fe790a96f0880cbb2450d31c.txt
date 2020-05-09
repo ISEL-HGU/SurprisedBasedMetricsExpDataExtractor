@@ -1,0 +1,1 @@
+        s3Object.getObjectMetadata().setUserMetadata(putObjectRequest.getMetadata().getUserMetadata());

@@ -1,0 +1,11 @@
+import java.nio.file.Path;
+public class PackageOtherMojo extends AbstractGeneratorMojo {
+            String schema = createJsonSchema(otherModel);
+
+            Path out = schemaOutDir.toPath()
+                    .resolve(name  ".json");
+            updateResource(buildContext, out, schema);
+        Path outFile = camelMetaDir.toPath().resolve("other.properties");
+        String properties = createProperties(project, "name", name);
+        updateResource(buildContext, outFile, properties);
+        log.info("Generated "  outFile  " containing 1 Camel other: "  name);

@@ -1,0 +1,13 @@
+import java.security.NoSuchAlgorithmException;
+import java.time.Duration;
+import io.nats.client.Connection.Status;
+import io.nats.client.Nats;
+import io.nats.client.Options;
+import io.nats.client.Options.Builder;
+        if (connection != null && !connection.getStatus().equals(Status.CLOSED)) {
+                connection.flush(Duration.ofMillis(getEndpoint().getNatsConfiguration().getFlushTimeout()));
+    private Connection getConnection() throws InterruptedException, IllegalArgumentException, GeneralSecurityException, IOException {
+        Builder builder = getEndpoint().getNatsConfiguration().createOptions();
+            builder.sslContext(sslCtx);
+        Options options = builder.build();
+        connection = Nats.connect(options);

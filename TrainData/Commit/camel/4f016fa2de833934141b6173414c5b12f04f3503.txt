@@ -1,0 +1,2 @@
+                ret = dbCol.find();
+                ret = dbCol.find().projection(fieldFilter);

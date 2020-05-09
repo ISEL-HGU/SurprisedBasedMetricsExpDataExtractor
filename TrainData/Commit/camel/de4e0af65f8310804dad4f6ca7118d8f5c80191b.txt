@@ -1,0 +1,48 @@
+import static org.apache.camel.TimeoutMap.Listener.Type.Evict;
+import static org.apache.camel.TimeoutMap.Listener.Type.Put;
+import static org.apache.camel.TimeoutMap.Listener.Type.Remove;
+
+    private final List<Listener<K,V>> listeners = new ArrayList<>(2);
+
+
+            return unwrap(result);
+            emitEvent(Put, key, value);
+        TimeoutMapEntry<K, V> result = null;
+            result = map.putIfAbsent(key, entry);
+            return unwrap(result);
+            if (result != entry) {
+                emitEvent(Put, key, value); // conditional on map being changed
+            }
+        V value = null;
+            value = unwrap(map.remove(key));
+            return value;
+            if ( value!= null ) {
+                emitEvent(Remove, key, value); // conditional on map being changed
+            }
+    protected void purge() {
+        List<TimeoutMapEntry<K, V>> expired = new ArrayList<>(map.size());
+                // and must remove from list after we have fired the notifications
+                for (TimeoutMapEntry<K, V> entry : expired) {
+                    map.remove(entry.getKey());
+            for (TimeoutMapEntry<K, V> entry : expired) {
+                emitEvent(Evict, entry.getKey(), entry.getValue());
+            }
+    private static <K,V> V unwrap( TimeoutMapEntry<K, V> entry ) {
+        return entry == null ? null : entry.getValue();
+    }
+
+    @Override
+    public void addListener(Listener<K, V> listener) {
+        this.listeners.add(listener);
+    }
+
+    private void emitEvent(Listener.Type type, K key, V value) {
+        for (Listener<K, V> listener : listeners) {
+            try {
+                listener.timeoutMapEvent(type, key, value);
+            } catch (Throwable t) {
+                // Ignore
+            }
+        }
+    }
+

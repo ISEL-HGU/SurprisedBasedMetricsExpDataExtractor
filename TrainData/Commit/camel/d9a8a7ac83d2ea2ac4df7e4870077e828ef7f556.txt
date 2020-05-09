@@ -1,0 +1,24 @@
+import org.apache.camel.model.language.ConstantExpression;
+import org.apache.camel.model.language.ExchangePropertyExpression;
+import org.apache.camel.model.language.GroovyExpression;
+import org.apache.camel.model.language.HeaderExpression;
+import org.apache.camel.model.language.JavaScriptExpression;
+import org.apache.camel.model.language.MvelExpression;
+import org.apache.camel.model.language.OgnlExpression;
+import org.apache.camel.model.language.RefExpression;
+import org.apache.camel.model.language.SpELExpression;
+import org.apache.camel.model.language.TerserExpression;
+        if (value instanceof String) {
+            return expression(new ConstantExpression((String) value));
+        } else {
+            return expression(ExpressionBuilder.constantExpression(value));
+        }
+        return expression(new HeaderExpression(name));
+        return expression(new ExchangePropertyExpression(name));
+        return expression(new GroovyExpression(text));
+        return expression(new JavaScriptExpression(text));
+        return expression(new OgnlExpression(text));
+        return expression(new MvelExpression(text));
+        return expression(new RefExpression(ref));
+        return expression(new SpELExpression(text));
+        return expression(new TerserExpression(text));

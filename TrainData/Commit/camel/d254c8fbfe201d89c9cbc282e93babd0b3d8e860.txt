@@ -1,0 +1,4 @@
+     * Media Type for Application PKCS7 Signature
+     */
+    public static final String APPLICATION_PKCS7_MIME = "application/pkcs7-mime; name=smime.p7m; smime-type=enveloped-data; name=smime.p7m";
+    /**

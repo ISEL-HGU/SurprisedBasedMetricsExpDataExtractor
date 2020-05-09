@@ -1,0 +1,16 @@
+ 
+     * 
+     * @param inOrOut
+     *            {@link Message}
+     * @param soapMessage
+     *            {@link SoapMessage}
+        if (soapMessage.getSoapHeader() != null && getEndpoint().getConfiguration().isAllowResponseHeaderOverride()) {
+            populateMessageHeaderFromResponse(inOrOut, soapMessage.getSoapHeader());
+        }
+        if (soapMessage.getAttachments() != null && getEndpoint().getConfiguration().isAllowResponseAttachmentOverride()) {
+            populateMessageAttachmentsFromResponse(inOrOut, soapMessage.getAttachments());
+        }
+        while (attachments.hasNext()) {
+            Attachment attachment = attachments.next();
+            inOrOut.getAttachments().put(attachment.getContentId(), attachment.getDataHandler());
+        }

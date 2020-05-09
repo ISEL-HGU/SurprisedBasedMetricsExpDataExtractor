@@ -1,0 +1,12 @@
+import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.services.ec2.AmazonEC2;
+import com.amazonaws.services.ec2.AmazonEC2ClientBuilder;
+        ec2Client = configuration.getAmazonEc2Client() != null ? configuration.getAmazonEc2Client() : (AmazonEC2Client) createEc2Client();
+    AmazonEC2 createEc2Client() {
+        AmazonEC2 client = null;
+            AWSCredentialsProvider credentialsProvider = new AWSStaticCredentialsProvider(credentials);
+                client = AmazonEC2ClientBuilder.standard().withClientConfiguration(clientConfiguration).withCredentials(credentialsProvider).build();
+                client = AmazonEC2ClientBuilder.standard().withCredentials(credentialsProvider).build();
+                client = AmazonEC2ClientBuilder.standard().build();
+                client = AmazonEC2ClientBuilder.standard().withClientConfiguration(clientConfiguration).build();

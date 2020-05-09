@@ -1,0 +1,12 @@
+
+    private long lastReloadedAt = -1;
+
+            now = System.nanoTime();
+                // now check if anything in the underlying Config got changed
+                long lastCfgChange = config.getLastChanged();
+                if (lastCfgChange < lastReloadedAt)
+                {
+                    return lastValue;
+                }
+            reloadAfter = now  TimeUnit.MILLISECONDS.toNanos(cacheTimeMs);
+            lastReloadedAt = now;

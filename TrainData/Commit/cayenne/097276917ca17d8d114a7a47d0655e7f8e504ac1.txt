@@ -1,0 +1,11 @@
+import org.apache.cayenne.crypto.transformer.value.LocalDateConverter;
+import org.apache.cayenne.crypto.transformer.value.LocalDateTimeConverter;
+import org.apache.cayenne.crypto.transformer.value.LocalTimeConverter;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
+        mapBuilder.put(LocalDate.class.getName(), LocalDateConverter.INSTANCE);
+        mapBuilder.put(LocalTime.class.getName(), LocalTimeConverter.INSTANCE);
+        mapBuilder.put(LocalDateTime.class.getName(), LocalDateTimeConverter.INSTANCE);
+

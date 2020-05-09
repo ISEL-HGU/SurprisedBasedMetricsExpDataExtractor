@@ -1,0 +1,3 @@
+    private String channelId;
+    public SlackConsumer(SlackEndpoint endpoint, Processor processor) throws IOException, ParseException {
+        this.channelId = getChannelId(slackEndpoint.getChannel());

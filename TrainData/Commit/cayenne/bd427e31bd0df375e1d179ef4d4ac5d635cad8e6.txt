@@ -1,0 +1,2 @@
+     * Use {@link #contributeROPBridgeProperties(Binder)} to
+     * contribute properties.

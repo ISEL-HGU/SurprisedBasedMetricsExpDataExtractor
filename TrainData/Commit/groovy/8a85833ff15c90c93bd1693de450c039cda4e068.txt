@@ -1,0 +1,29 @@
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+    private final ReentrantReadWriteLock rwl = new ReentrantReadWriteLock();
+    private final ReentrantReadWriteLock.ReadLock readLock = rwl.readLock();
+    private final ReentrantReadWriteLock.WriteLock writeLock = rwl.writeLock();
+        readLock.lock();
+        try {
+            value = commonCache.get(key);
+            readLock.unlock();
+        writeLock.lock();
+        try {
+            // try to find the cached value again
+            value = commonCache.get(key);
+            if (null != convertValue(value)) {
+                return value;
+            }
+            value = null == valueProvider ? null : valueProvider.provide(key);
+            if (shouldCache && null != convertValue(value)) {
+                commonCache.put(key, value);
+            }
+        } finally {
+            writeLock.unlock();
+
+        writeLock.lock();
+            writeLock.unlock();
+        readLock.lock();
+        try {
+            return action.doWith(commonCache);
+        } finally {
+            readLock.unlock();

@@ -1,0 +1,2 @@
+            value = null == valueProvider ? null : valueProvider.provide(key);
+            if (shouldCache && null != value) {

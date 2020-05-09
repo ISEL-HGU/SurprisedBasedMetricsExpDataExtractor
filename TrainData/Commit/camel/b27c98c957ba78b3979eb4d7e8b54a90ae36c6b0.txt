@@ -1,0 +1,14 @@
+
+        boolean allowEmptyStream = factory.isAllowEmptyStream();
+        if (inputStream == null || inputStream.available() == 0) {
+            isStreamEmpty = true;
+        }
+        if (isStreamEmpty && allowEmptyStream) {
+            canReturnEmptyListOfModels = true;
+        }
+        ObjectHelper.notNull(factory, "not instantiated");
+            if (checkEmptyStream(factory, inputStream)) {
+                return models;
+            }
+            if (scanner != null) {
+            if (in != null) {

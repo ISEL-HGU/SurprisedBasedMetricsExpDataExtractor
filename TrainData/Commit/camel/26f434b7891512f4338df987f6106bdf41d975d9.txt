@@ -1,0 +1,4 @@
+public final class PredicateBuilder {
+
+    private PredicateBuilder() {
+    }

@@ -1,0 +1,3 @@
+import com.amazonaws.regions.Regions;
+        if (ObjectHelper.isNotEmpty(configuration.getRegion())) {
+            clientBuilder = clientBuilder.withRegion(Regions.valueOf(configuration.getRegion()));

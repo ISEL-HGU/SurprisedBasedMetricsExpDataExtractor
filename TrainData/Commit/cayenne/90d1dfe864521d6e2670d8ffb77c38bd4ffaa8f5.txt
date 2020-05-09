@@ -1,0 +1,4 @@
+public class DbImportTabController extends GeneratorsTabController<ReverseEngineering> {
+        super(projectController, ReverseEngineering.class, false);
+            DataMapDisplayEvent event = new DataMapDisplayEvent(getView(), dataMap, dataMap.getDataChannelDescriptor());
+            getProjectController().fireDataMapDisplayEvent(event);

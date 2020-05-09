@@ -1,0 +1,1 @@
+            tag = channel.basicConsume(getReplyTo(), true, this);

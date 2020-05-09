@@ -1,0 +1,1 @@
+            } else if (afterLoginRedirectedResponse.statusCode() == SC_OK) {

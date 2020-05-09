@@ -1,0 +1,7 @@
+import java.util.concurrent.atomic.AtomicInteger;
+    private AtomicInteger connectionId;
+        this.connectionId = new AtomicInteger();
+    private int getNextConnectionID() {
+        return connectionId.getAndIncrement();
+        String connectionId = Integer.toString(getNextConnectionID());
+        String connectionId = Integer.toString(getNextConnectionID());

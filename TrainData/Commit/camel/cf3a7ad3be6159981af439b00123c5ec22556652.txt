@@ -1,0 +1,6 @@
+            // check first if it is a standard documentation file, we expect at least five lines
+            if (lines.length < 5) {
+                return false;
+            }
+
+            // check the first four lines (ignoring the first line)

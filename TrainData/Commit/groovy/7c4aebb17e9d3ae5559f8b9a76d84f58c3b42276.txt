@@ -1,0 +1,8 @@
+        StringBuilder buffer = new StringBuilder(100);
+        buffer.append("(");
+        for (Parameter parameter : parameters) {
+            buffer.append(getTypeDescription(parameter.getType()));
+        StringBuilder buffer = new StringBuilder(100);
+        buffer.append("(");
+        for (Class paramType : paramTypes) {
+            buffer.append(getTypeDescription(paramType));

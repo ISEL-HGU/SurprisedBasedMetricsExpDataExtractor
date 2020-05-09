@@ -1,0 +1,20 @@
+    private String kerberosPrincipalToLocalRules; 
+    @UriParam(label = "common,security", secret = true)
+    //sasl.jaas.config
+    private String saslJaasConfig;   
+        addPropertyIfNotNull(props, SaslConfigs.SASL_JAAS_CONFIG, getSaslJaasConfig());
+        addPropertyIfNotNull(props, SaslConfigs.SASL_JAAS_CONFIG, getSaslJaasConfig());
+    
+    public String getSaslJaasConfig() {
+        return saslJaasConfig;
+    }
+
+    /**
+     * Expose the kafka sasl.jaas.config parameter
+     * 
+     * Example:
+     * org.apache.kafka.common.security.plain.PlainLoginModule required username=\"USERNAME\" password=\"PASSWORD\";
+     */
+    public void setSaslJaasConfig(String saslMechanism) {
+        this.saslJaasConfig = saslMechanism;
+    }

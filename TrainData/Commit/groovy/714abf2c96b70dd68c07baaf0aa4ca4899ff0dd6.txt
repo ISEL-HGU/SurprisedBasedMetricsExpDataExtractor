@@ -1,0 +1,8 @@
+        modifiers = fixInterfaceModifiers(classNode, modifiers);
+
+        modifiers = fixInnerClassModifiers(classNode, modifiers);
+        return modifiers;
+    }
+
+    private static int fixInterfaceModifiers(ClassNode classNode, int modifiers) {
+        modifiers = fixInterfaceModifiers(classNode, modifiers);

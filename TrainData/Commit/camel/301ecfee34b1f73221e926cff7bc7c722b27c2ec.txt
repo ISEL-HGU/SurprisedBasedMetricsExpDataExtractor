@@ -1,0 +1,1 @@
+     * Gets whether endpoint runtime statistics is enabled

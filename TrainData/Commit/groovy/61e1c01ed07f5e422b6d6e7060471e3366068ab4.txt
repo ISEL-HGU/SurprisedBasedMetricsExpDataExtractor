@@ -1,0 +1,8 @@
+        return StringGroovyMethods.toInteger((CharSequence)text());
+        return StringGroovyMethods.toLong((CharSequence)text());
+        return StringGroovyMethods.toFloat((CharSequence)text());
+        return StringGroovyMethods.toDouble((CharSequence)text());
+        return StringGroovyMethods.toBigDecimal((CharSequence)text());
+        return StringGroovyMethods.toBigInteger((CharSequence)text());
+        return ResourceGroovyMethods.toURL((CharSequence)text());
+        return ResourceGroovyMethods.toURI((CharSequence)text());

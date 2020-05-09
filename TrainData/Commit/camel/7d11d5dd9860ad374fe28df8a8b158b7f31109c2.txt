@@ -1,0 +1,14 @@
+            setPropertiesOnTarget(camelContext, camelContext, properties, mainConfigurationProperties.isAutoConfigurationFailFast(), true);
+            setPropertiesOnTarget(camelContext, hystrix, hystrixProperties, mainConfigurationProperties.isAutoConfigurationFailFast(), true);
+            setPropertiesOnTarget(camelContext, rest, restProperties, mainConfigurationProperties.isAutoConfigurationFailFast(), true);
+            setPropertiesOnTarget(camelContext, obj, values, mainConfigurationProperties.isAutoConfigurationFailFast(), true);
+
+        // special for fail-fast as we need to know this early before we set all the other options
+        Object failFast = properties.remove("autoconfigurationfailfast");
+        if (failFast != null) {
+            PropertyBindingSupport.bindMandatoryProperty(camelContext, config, "autoConfigurationFailFast", failFast, true);
+        }
+
+            setPropertiesOnTarget(camelContext, config, properties, mainConfigurationProperties.isAutoConfigurationFailFast(), true);
+            setPropertiesOnTarget(camelContext, obj, values, mainConfigurationProperties.isAutoConfigurationFailFast(), true);
+        // TODO: Log which options was not set

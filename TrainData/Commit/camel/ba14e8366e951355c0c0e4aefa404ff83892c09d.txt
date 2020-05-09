@@ -1,0 +1,1 @@
+            LOG.debug("Disposing EntityManager {} on {} due to coming transaction rollback", entityManager, this);

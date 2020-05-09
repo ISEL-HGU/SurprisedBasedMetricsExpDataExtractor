@@ -1,0 +1,3 @@
+ * This component uses plain JMS 2.x API where as the jms component uses Spring JMS.
+    @UriParam(label = "consumer")
+    @UriParam(label = "consumer")

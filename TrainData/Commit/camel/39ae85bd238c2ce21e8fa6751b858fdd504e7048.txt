@@ -1,0 +1,1 @@
+        final PathVisitor<MethodSpec> restDslStatement = new PathVisitor<>(emitter, destinationGenerator());

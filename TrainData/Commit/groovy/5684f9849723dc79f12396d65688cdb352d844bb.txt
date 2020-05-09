@@ -1,0 +1,13 @@
+public class GenerateStubsTask extends CompileTaskSupport {
+        for (String srcPath : src.list()) {
+            File srcDir = getProject().resolveFile(srcPath);
+            if (!srcDir.exists()) {
+                throw new BuildException("Source directory does not exist: "  srcDir, getLocation());
+            DirectoryScanner scanner = getDirectoryScanner(srcDir);
+            log.debug("Including files from: "  srcDir);
+            for (String includeName : scanner.getIncludedFiles()) {
+                log.debug("    "  includeName);
+
+                File file = new File(srcDir, includeName);
+                if (!includeName.endsWith(".java")) {
+        } else {

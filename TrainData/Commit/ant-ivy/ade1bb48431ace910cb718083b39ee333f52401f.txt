@@ -1,0 +1,43 @@
+        // defaultConf of imported configurations, if any
+        private String defaultConf = null;
+
+                if (options.isMerge()) {
+                    ModuleDescriptor mergedDescriptor = options.getMergedDescriptor();
+                    for (ExtendsDescriptor inheritedDescriptor : mergedDescriptor.getInheritedDescriptors()) {
+                        ModuleDescriptor rprid = inheritedDescriptor.getParentMd();
+                        if (rprid instanceof DefaultModuleDescriptor) {
+                            DefaultModuleDescriptor defaultModuleDescriptor = (DefaultModuleDescriptor) rprid;
+                            if (defaultModuleDescriptor.getDefaultConf() != null) {
+                                defaultConf = defaultModuleDescriptor.getDefaultConf();
+                            }
+                            if (defaultModuleDescriptor.getDefaultConfMapping() != null) {
+                                defaultConfMapping = defaultModuleDescriptor.getDefaultConfMapping();
+                            }
+                            if (defaultModuleDescriptor.isMappingOverride()) {
+                                confMappingOverride = Boolean.TRUE;
+                            }
+                        }
+                    }
+                }
+            } else if ("dependencies".equals(qName) || "configurations".equals(qName)) {
+                startElementWithConfAttributes(qName, attributes);
+        private void startElementWithConfAttributes(String qName, Attributes attributes) {
+            write("<"  qName);
+            // add default conf if needed
+            if (defaultConf != null && attributes.getValue("defaultconf") == null
+                    && !confs.contains(defaultConf)) {
+                write(" defaultconf=\""  defaultConf  "\"");
+            }
+                                attributes.getValue("defaultconf"));
+                                defaultConf = defaultconf;
+                            }
+                            String defaultMapping = substitute(settings,
+                                attributes.getValue("defaultconfmapping"));
+                            if (defaultMapping != null) {
+                                defaultConfMapping = defaultMapping;
+                String newMapping = (defaultConfMapping == null) ? "" :
+                        removeConfigurationsFromMapping(defaultConfMapping, confs);
+                out.print(String.format("<%s%s%s%s>", itemName,
+                        (defaultConf != null && !confs.contains(defaultConf)) ? " defaultconf=\""  defaultConf  "\"" : "",
+                        (newMapping.length() > 0) ? " defaultconfmapping=\""  newMapping  "\"" : "",
+                        (confMappingOverride != null) ? " confmappingoverride=\""  confMappingOverride  "\"" : ""));

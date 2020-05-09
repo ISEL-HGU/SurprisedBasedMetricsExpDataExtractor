@@ -1,0 +1,7 @@
+import org.apache.camel.util.ObjectHelper;
+                if (!ObjectHelper.isEmpty(cxfExchange) && !ObjectHelper.isEmpty(cxfExchange.getOutMessage())) {
+                    cxfExchange.getOutMessage().putIfAbsent(org.apache.cxf.message.Message.PROTOCOL_HEADERS, 
+                }
+                if (!ObjectHelper.isEmpty(cxfExchange) && !ObjectHelper.isEmpty(cxfExchange.getOutMessage())) {
+                    cxfExchange.getOutMessage().putIfAbsent(org.apache.cxf.message.Message.PROTOCOL_HEADERS, 
+                }

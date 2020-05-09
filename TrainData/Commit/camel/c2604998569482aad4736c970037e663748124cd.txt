@@ -1,0 +1,2 @@
+import io.vertx.core.Handler;
+                vertxFactory.clusteredVertx(vertxOptions, new Handler<AsyncResult<Vertx>>() {

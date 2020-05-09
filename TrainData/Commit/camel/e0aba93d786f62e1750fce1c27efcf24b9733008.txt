@@ -1,0 +1,14 @@
+     * Returns the {@link JSonSchemaResolver} used by this catalog.
+     *
+     * @return the resolver
+     */
+    JSonSchemaResolver getJSonSchemaResolver();
+
+    /**
+     * To use a custom {@link JSonSchemaResolver} with this catalog.
+     *
+     * @param resolver  the custom resolver
+     */
+    void setJSonSchemaResolver(JSonSchemaResolver resolver);
+
+    /**

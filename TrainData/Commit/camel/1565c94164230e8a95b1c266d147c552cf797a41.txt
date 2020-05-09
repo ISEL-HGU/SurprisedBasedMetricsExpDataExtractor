@@ -1,0 +1,59 @@
+         * Sets the transform direction.
+         * 
+         * The option is a:
+         * <code>org.apache.camel.component.xj.TransformDirection</code> type.
+         * 
+         * Required: true
+         * Group: producer
+         */
+        default XJEndpointBuilder transformDirection(
+                TransformDirection transformDirection) {
+            setProperty("transformDirection", transformDirection);
+            return this;
+        }
+        /**
+         * Sets the transform direction.
+         * 
+         * The option will be converted to a
+         * <code>org.apache.camel.component.xj.TransformDirection</code> type.
+         * 
+         * Required: true
+         * Group: producer
+         */
+        default XJEndpointBuilder transformDirection(String transformDirection) {
+            setProperty("transformDirection", transformDirection);
+            return this;
+        }
+        /**
+         * Whether to allow using StAX as the javax.xml.transform.Source.
+         * 
+         * The option is a: <code>boolean</code> type.
+         * 
+         * Group: producer
+         */
+        default XJEndpointBuilder allowStAX(boolean allowStAX) {
+            setProperty("allowStAX", allowStAX);
+            return this;
+        }
+        /**
+         * Whether to allow using StAX as the javax.xml.transform.Source.
+         * 
+         * The option will be converted to a <code>boolean</code> type.
+         * 
+         * Group: producer
+         */
+        default XJEndpointBuilder allowStAX(String allowStAX) {
+            setProperty("allowStAX", allowStAX);
+            return this;
+        }
+        /**
+     * Proxy enum for
+     * <code>org.apache.camel.component.xj.TransformDirection</code> enum.
+     */
+    enum TransformDirection {
+        XML2JSON,
+        JSON2XML;
+    }
+
+    /**
+     * Available as of version: 3.0

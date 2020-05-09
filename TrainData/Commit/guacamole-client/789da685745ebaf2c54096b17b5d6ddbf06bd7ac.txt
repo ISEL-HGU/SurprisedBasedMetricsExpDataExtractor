@@ -1,0 +1,3 @@
+     * The hostname or IP address of the RADIUS server to connect to when authenticating users.
+    public static final StringGuacamoleProperty RADIUS_HOSTNAME = new StringGuacamoleProperty() {
+        public String getName() { return "radius-hostname"; }

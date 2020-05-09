@@ -1,0 +1,5 @@
+        if (indices instanceof IntRange) {
+            int size = (int) size(self);
+            RangeInfo info = subListBorders(size, (Range) indices);
+            indices = new IntRange(((IntRange)indices).getInclusive(), info.from, info.to - 1);
+        }

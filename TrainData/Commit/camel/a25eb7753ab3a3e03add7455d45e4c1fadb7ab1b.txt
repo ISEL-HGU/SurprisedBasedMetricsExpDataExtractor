@@ -1,0 +1,8 @@
+
+        LOGGER.info("Total managed routes: {} of which {} successfully started and {} re-starting",
+            routes.size(),
+            routes.stream().filter(r -> r.getStatus() == ServiceStatus.Started).count(),
+            routeManager.routes.size()
+        );
+                    LOGGER.info("Context is already started: attempt to start route {}", route.getId());
+                    LOGGER.info("Context is not yet started: defer route {} start", holder.getId());

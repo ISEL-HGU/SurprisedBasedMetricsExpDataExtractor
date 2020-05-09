@@ -1,0 +1,6 @@
+        String docComment;
+        if ("mdcLoggingKeysPattern".equals(fieldName)) {
+            docComment = findJavaDoc(elementUtils, fieldElement, "MDCLoggingKeysPattern", name, classElement, true);
+        } else {
+            docComment = findJavaDoc(elementUtils, fieldElement, fieldName, name, classElement, true);
+        }

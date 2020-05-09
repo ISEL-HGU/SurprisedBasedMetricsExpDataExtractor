@@ -1,0 +1,11 @@
+import static org.apache.groovy.ast.tools.VisibilityUtils.getVisibility;
+            if (!checkPropertyList(cNode, includes, "includes", anno, MY_TYPE_NAME, includeFields, includeSuperProperties, allProperties, includeSuperFields, false))
+                return;
+            if (!checkPropertyList(cNode, excludes, "excludes", anno, MY_TYPE_NAME, includeFields, includeSuperProperties, allProperties, includeSuperFields, false))
+                return;
+        int modifiers = getVisibility(anno, cNode, ConstructorNode.class, ACC_PUBLIC);
+        cNode.addConstructor(new ConstructorNode(modifiers, params.toArray(new Parameter[params.size()]), ClassNode.EMPTY_ARRAY, body));
+                addSpecialMapConstructors(modifiers, cNode, message, false);
+    public static void addSpecialMapConstructors(int modifiers, ClassNode cNode, String message, boolean addNoArg) {
+        ConstructorNode init = new ConstructorNode(modifiers, parameters, ClassNode.EMPTY_ARRAY, code);
+            init = new ConstructorNode(modifiers, Parameter.EMPTY_ARRAY, ClassNode.EMPTY_ARRAY, code);

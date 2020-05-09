@@ -1,0 +1,3 @@
+import java.util.LinkedList;
+    private List<Object> requestList = new LinkedList<>();
+        exchange = endpoint.createExchange();

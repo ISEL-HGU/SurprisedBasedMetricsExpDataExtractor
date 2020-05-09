@@ -1,0 +1,3 @@
+import org.apache.deltaspike.core.util.StreamUtil;
+        repositoryMethodMetadata.setStreamAsReturnType(
+                StreamUtil.isStreamReturned(method));

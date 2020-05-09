@@ -1,0 +1,4 @@
+    public StringMultiSelectPicklistSerializer() {
+        super(Object.class);
+    }
+

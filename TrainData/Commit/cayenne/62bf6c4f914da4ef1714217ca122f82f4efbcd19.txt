@@ -1,0 +1,32 @@
+import javax.swing.event.AncestorEvent;
+import javax.swing.event.AncestorListener;
+
+        treePanel.addAncestorListener(new AncestorListener() {
+            @Override
+            public void ancestorAdded(AncestorEvent evPent) {
+                DataMap map = projectController.getCurrentDataMap();
+                treePanel.getReverseEngineeringTree().stopEditing();
+                if (map != null) {
+                    treeToolbar.unlockButtons();
+                    ReverseEngineering reverseEngineering = DbImportView.this.projectController.getApplication().
+                            getMetaData().get(map, ReverseEngineering.class);
+                    if (reverseEngineering == null) {
+                        reverseEngineering = new ReverseEngineering();
+                        DbImportView.this.projectController.getApplication().getMetaData().add(map, reverseEngineering);
+                    }
+                    configPanel.fillCheckboxes(reverseEngineering);
+                    configPanel.initializeTextFields(reverseEngineering);
+                    treePanel.updateTree();
+                    DbImportTreeNode root = draggableTreePanel.getSourceTree().getRootNode();
+                    root.removeAllChildren();
+                    draggableTreePanel.updateTree(projectController.getCurrentDataMap());
+                    draggableTreePanel.getMoveButton().setEnabled(false);
+                    draggableTreePanel.getMoveInvertButton().setEnabled(false);
+            }
+
+            @Override
+            public void ancestorRemoved(AncestorEvent event) {
+            }
+
+            @Override
+            public void ancestorMoved(AncestorEvent event) {

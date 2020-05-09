@@ -1,0 +1,2 @@
+import static org.apache.groovy.ast.tools.ClassNodeUtils.getField;
+                    setSourcePosition(result, ve);

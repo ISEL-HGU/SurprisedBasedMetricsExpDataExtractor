@@ -1,0 +1,57 @@
+     * Whether auto-configuration of components/dataformats/languages is enabled or not.
+     * The auto-configuration also works for any options on components
+        final Map<String, String> autoConfiguredProperties = new LinkedHashMap<>();
+
+        // need to eager allow to auto-configure properties component
+            autoConfigurationFailFast(camelContext, autoConfiguredProperties);
+            autoConfigurationPropertiesComponent(camelContext, autoConfiguredProperties);
+            autoConfigurationMainConfiguration(camelContext, mainConfigurationProperties, autoConfiguredProperties);
+        doConfigureCamelContextFromMainConfiguration(camelContext, mainConfigurationProperties, autoConfiguredProperties);
+            autowireConfigurationFromRegistry(camelContext, mainConfigurationProperties.isAutowireComponentPropertiesDeep());
+            autoConfigurationFromProperties(camelContext, autoConfiguredProperties);
+        }
+
+        // log summary of configurations
+        if (!autoConfiguredProperties.isEmpty()) {
+            LOG.info("Auto-configuration summary:");
+            autoConfiguredProperties.forEach((k, v) -> LOG.info("\t{}={}", k, v));
+    protected void autoConfigurationFailFast(CamelContext camelContext, Map<String, String> autoConfiguredProperties) throws Exception {
+                autoConfiguredProperties.put("camel.main.auto-configuration-environment-variables-enabled", envEnabled.toString());
+                autoConfiguredProperties.put("camel.main.auto-configuration-fail-fast", failFast.toString());
+    protected void doConfigureCamelContextFromMainConfiguration(CamelContext camelContext, MainConfigurationProperties config,
+                                                                Map<String, String> autoConfiguredProperties) throws Exception {
+            LOG.debug("Auto-configuring CamelContext from loaded properties: {}", contextProperties.size());
+                    mainConfigurationProperties.isAutoConfigurationFailFast(), true, autoConfiguredProperties);
+            LOG.debug("Auto-configuring Hystrix EIP from loaded properties: {}", hystrixProperties.size());
+                    mainConfigurationProperties.isAutoConfigurationFailFast(), true, autoConfiguredProperties);
+            LOG.debug("Auto-configuring Rest DSL from loaded properties: {}", restProperties.size());
+                    mainConfigurationProperties.isAutoConfigurationFailFast(), true, autoConfiguredProperties);
+                LOG.warn("Property not auto-configured: camel.context.{}={} on bean: {}", k, v, camelContext);
+                LOG.warn("Property not auto-configured: camel.hystrix.{}={} on bean: {}", k, v, hystrix);
+                LOG.warn("Property not auto-configured: camel.rest.{}={} on bean: {}", k, v, rest);
+    protected void autoConfigurationPropertiesComponent(CamelContext camelContext, Map<String, String> autoConfiguredProperties) throws Exception {
+            LOG.debug("Auto-configuring properties component from loaded properties: {}", properties.size());
+            setPropertiesOnTarget(camelContext, camelContext.getPropertiesComponent(), properties, null,
+                    "camel.component.properties.", mainConfigurationProperties.isAutoConfigurationFailFast(),
+                    true, autoConfiguredProperties);
+                LOG.warn("Property not auto-configured: camel.component.properties.{}={} on object: {}", k, v, camelContext.getPropertiesComponent());
+    protected void autoConfigurationMainConfiguration(CamelContext camelContext, MainConfigurationProperties config, Map<String, String> autoConfiguredProperties) throws Exception {
+            LOG.debug("Auto-configuring main from loaded properties: {}", properties.size());
+                    mainConfigurationProperties.isAutoConfigurationFailFast(), true, autoConfiguredProperties);
+                LOG.warn("Property not auto-configured: camel.main.{}={} on bean: {}", k, v, config);
+    protected void autoConfigurationFromProperties(CamelContext camelContext, Map<String, String> autoConfiguredProperties) throws Exception {
+                    LOG.info("Autowired enabled from classpath: META-INF/services/org/apache/camel/autowire.properties with {} properties", prop.size());
+            LOG.debug("Auto-configuring {} components/dataformat/languages from loaded properties: {}", properties.size(), total);
+                    mainConfigurationProperties.isAutoConfigurationFailFast(), true, autoConfiguredProperties);
+                    LOG.warn("Property ({}={}) not auto-configured with name: {} on bean: {} with value: {}", pok.getKey(), stringValue, k, pok.getInstance(), stringValue);
+    protected void autowireConfigurationFromRegistry(CamelContext camelContext, boolean deepNesting) throws Exception {
+                    LOG.info("Autowired property: {} on component: {} as exactly one instance of type: {} found in the registry",
+                                                 String optionKey, String optionPrefix, boolean failIfNotSet, boolean ignoreCase,
+                                                 Map<String, String> autoConfiguredProperties) throws Exception {
+                key = optionPrefix  optionKey;
+            } else if (optionPrefix != null) {
+                key = optionPrefix  name;
+            LOG.debug("Configuring property: {}={} on bean: {}", key, stringValue, target);
+                    LOG.debug("Configured property: {}={} on bean: {}", key, stringValue, target);
+                    autoConfiguredProperties.put(key, stringValue);
+                    LOG.debug("Error configuring property ("  key  ") with name: "  name  ") on bean: "  target

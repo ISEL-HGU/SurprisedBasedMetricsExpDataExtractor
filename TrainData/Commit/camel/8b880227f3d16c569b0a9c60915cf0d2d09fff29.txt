@@ -1,0 +1,2 @@
+@UriEndpoint(firstVersion = "2.19.0",
+             scheme = "azure-blob",

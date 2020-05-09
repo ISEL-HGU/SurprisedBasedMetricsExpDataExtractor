@@ -1,0 +1,2 @@
+ * A simple Camel gRPC route example using Spring-boot
+        from("timer://foo?period=10000&repeatCount=5").process(new Processor() {

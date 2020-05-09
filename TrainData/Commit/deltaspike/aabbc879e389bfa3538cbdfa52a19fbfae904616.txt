@@ -1,0 +1,15 @@
+import org.apache.deltaspike.core.api.config.ConfigSnapshot;
+    public T getValue(ConfigSnapshot snapshot)
+    {
+        ConfigSnapshotImpl snapshotImpl = (ConfigSnapshotImpl) snapshot;
+
+        if (!snapshotImpl.getConfigValues().containsKey(this))
+        {
+            throw new IllegalArgumentException("The TypedResolver for key "  getKey() 
+                " does not belong the given ConfigSnapshot!");
+        }
+
+        return (T) snapshotImpl.getConfigValues().get(this);
+    }
+
+    @Override

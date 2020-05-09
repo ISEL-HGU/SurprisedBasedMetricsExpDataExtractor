@@ -1,0 +1,4 @@
+import org.junit.Test;
+    @Test
+                from("timer://kickoff_1?period=250").to("mock:result");
+                from("timer://kickoff_2?period=250&delay=10").to("mock:result");

@@ -1,0 +1,13 @@
+import org.apache.camel.maven.packaging.model.SpringBootModel;
+                        String changed = templateAutoConfigurationOptions(models, componentName);
+                        boolean updated = updateAutoConfigureOptions(docFile, changed);
+                            String changed = templateAutoConfigurationOptions(models, componentName);
+                            boolean updated = updateAutoConfigureOptions(docFile, changed);
+    private String templateAutoConfigurationOptions(List<SpringBootAutoConfigureOptionModel> options, String componentName) throws MojoExecutionException {
+        SpringBootModel model = new SpringBootModel();
+        model.setGroupId(project.getGroupId());
+        model.setArtifactId("camel-"  componentName  "-starter");
+        model.setVersion(project.getVersion());
+        model.setOptions(options);
+
+            String out = (String) TemplateRuntime.eval(template, model);

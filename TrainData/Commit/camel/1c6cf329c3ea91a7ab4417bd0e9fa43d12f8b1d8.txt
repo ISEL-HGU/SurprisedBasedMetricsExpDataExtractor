@@ -1,0 +1,16 @@
+import org.apache.camel.ComponentVerifier;
+import org.apache.camel.VerifiableComponent;
+import org.apache.camel.impl.DefaultComponent;
+@Metadata(label = "verifiers", enums = "parameters,connectivity")
+public class UndertowComponent extends DefaultComponent implements RestConsumerFactory, RestApiConsumerFactory, RestProducerFactory, VerifiableComponent {
+    }
+
+    public UndertowComponent(CamelContext context) {
+        super(context);
+    /**
+     *
+     */
+    public ComponentVerifier getVerifier() {
+        return new UndertowComponentVerifier(this);
+    }
+

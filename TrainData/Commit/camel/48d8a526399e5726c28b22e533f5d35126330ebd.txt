@@ -1,0 +1,3 @@
+                    String newLine = "= "  title;
+                    String level = line.startsWith("") ? "===" : "==";
+            boolean title = lines[1].startsWith("#") || lines[1].startsWith("=");

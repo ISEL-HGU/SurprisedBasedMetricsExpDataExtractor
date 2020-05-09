@@ -1,0 +1,4 @@
+        Set<Method> overrides = new HashSet<Method>();
+                        overrides.add(target);
+            methods.removeAll(overrides);
+            overrides.clear();

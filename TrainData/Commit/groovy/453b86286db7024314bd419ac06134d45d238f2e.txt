@@ -1,0 +1,78 @@
+    private static final DateTimeFormatter ZONE_SHORT_FORMATTER = DateTimeFormatter.ofPattern("z");
+
+     * @throws GroovyRuntimeException if {@code to} is a different type than this
+     * as soon as the current value of the iteration is later than the second Temporal argument. The closure will
+     * not be called with any value later than the {@code to} value.
+     * @throws GroovyRuntimeException if {@code to} is a different type than this
+        TemporalAmount amount = rightShift(from, to);
+        if (amount instanceof Period) {
+            return isNonnegative((Period) amount);
+        } else if (amount instanceof Duration) {
+            return isNonnegative((Duration) amount);
+        } else {
+            throw new GroovyRuntimeException("Temporal implementations of "
+                     from.getClass().getCanonicalName()  " are not supported by upto().");
+     * @throws GroovyRuntimeException if {@code to} is a different type than this
+     * as soon as the current value of the iteration is earlier than the second Temporal argument. The closure will
+     * not be called with any value earlier than the {@code to} value.
+     * @throws GroovyRuntimeException if {@code to} is a different type than this
+        TemporalAmount amount = rightShift(from, to);
+        if (amount instanceof Period) {
+            return isNonpositive((Period) amount);
+        } else if (amount instanceof Duration) {
+            return isNonpositive((Duration) amount);
+        } else {
+            throw new GroovyRuntimeException("Temporal implementations of "
+                     from.getClass().getCanonicalName()  " are not supported by downto().");
+     * Returns a {@link java.time.Duration} or {@link java.time.Period} between this (inclusive) and the {@code other}
+     * {@link java.time.temporal.Temporal} (exclusive).
+     * <p>
+     * A Period will be returned for types {@link java.time.Year}, {@link java.time.YearMonth}, and
+     * {@link java.time.chrono.ChronoLocalDate}; otherwise, a Duration will be returned.
+     * <p>
+     * Note: if the Temporal is a ChronoLocalDate but not a {@link java.time.LocalDate}, a general
+     * {@link java.time.chrono.ChronoPeriod} will be returned as per the return type of the method
+     * {@link java.time.chrono.ChronoLocalDate#until(ChronoLocalDate)} .
+     * @param other another Temporal of the same type
+     * @return an TemporalAmount between the two Temporals
+    public static TemporalAmount rightShift(final Temporal self, Temporal other) {
+        if (!self.getClass().equals(other.getClass())) {
+            throw new GroovyRuntimeException("Temporal arguments must be of the same type.");
+        }
+        switch ((ChronoUnit) defaultUnitFor(self)) {
+            case YEARS:
+                return DefaultGroovyStaticMethods.between(null, (Year) self, (Year) other);
+            case MONTHS:
+                return DefaultGroovyStaticMethods.between(null, (YearMonth) self, (YearMonth) other);
+            case DAYS:
+                return ChronoPeriod.between((ChronoLocalDate) self, (ChronoLocalDate) other);
+            default:
+                return Duration.between(self, other);
+        }
+     * Formats this date with the {@link java.time.format.DateTimeFormatter#ISO_LOCAL_DATE} formatter.
+        return self.format(DateTimeFormatter.ISO_LOCAL_DATE);
+     * Formats this date/time with the {@link java.time.format.DateTimeFormatter#ISO_LOCAL_DATE_TIME} formatter.
+        return self.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
+     * Formats this date/time with the {@link java.time.format.DateTimeFormatter#ISO_LOCAL_DATE} formatter.
+        return self.format(DateTimeFormatter.ISO_LOCAL_DATE);
+     * Formats this date/time with the {@link java.time.format.DateTimeFormatter#ISO_LOCAL_TIME} formatter.
+        return self.format(DateTimeFormatter.ISO_LOCAL_TIME);
+     * Formats this time with the {@link java.time.format.DateTimeFormatter#ISO_LOCAL_TIME} formatter.
+        return self.format(DateTimeFormatter.ISO_LOCAL_TIME);
+     * Formats this date/time with the {@link java.time.format.DateTimeFormatter#ISO_OFFSET_DATE_TIME} formatter.
+        return self.format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
+     * Formats this date/time with the {@link java.time.format.DateTimeFormatter#ISO_OFFSET_DATE} formatter.
+        return self.format(DateTimeFormatter.ISO_OFFSET_DATE);
+     * Formats this date/time with the {@link java.time.format.DateTimeFormatter#ISO_OFFSET_TIME} formatter.
+        return self.format(DateTimeFormatter.ISO_OFFSET_TIME);
+     * Formats this time with the {@link java.time.format.DateTimeFormatter#ISO_OFFSET_TIME} formatter.
+        return self.format(DateTimeFormatter.ISO_OFFSET_TIME);
+     * Formats this date/time with the {@link java.time.format.DateTimeFormatter#ISO_LOCAL_DATE_TIME} formatter
+     * and appends the zone's short name, e.g. {@code 2018-03-10T14:34:55.144EST}.
+        return self.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)  self.format(ZONE_SHORT_FORMATTER);
+     * Formats this date/time with the {@link java.time.format.DateTimeFormatter#ISO_LOCAL_DATE} formatter
+     * and appends the zone's short name, e.g. {@code 2018-03-10EST}.
+        return self.format(DateTimeFormatter.ISO_LOCAL_DATE)  self.format(ZONE_SHORT_FORMATTER);
+     * Formats this date/time with the {@link java.time.format.DateTimeFormatter#ISO_LOCAL_TIME} formatter
+     * and appends the zone's short name, e.g. {@code 14:34:55.144EST}.
+        return self.format(DateTimeFormatter.ISO_LOCAL_TIME)  self.format(ZONE_SHORT_FORMATTER);

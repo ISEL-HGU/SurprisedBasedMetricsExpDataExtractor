@@ -1,0 +1,31 @@
+    @Metadata(defaultValue = "true", description = "Sets whether errors should be logged when a new exception occurred during handling a previous exception")
+    private String logNewException;
+    @XmlAttribute
+    @Metadata(defaultValue = "false", description = "Sets whether exhausted message body/headers should be logged with message history included")
+    private String logExhaustedMessageBody;
+    @XmlAttribute
+        if (logNewException != null) {
+            answer.setLogNewException(CamelContextHelper.parseBoolean(context, logNewException));
+        }
+        if (logExhaustedMessageBody != null) {
+            answer.setLogExhaustedMessageBody(CamelContextHelper.parseBoolean(context, logExhaustedMessageBody));
+        }
+    public String getLogNewException() {
+        return logNewException;
+    }
+
+    public void setLogNewException(String logNewException) {
+        this.logNewException = logNewException;
+    }
+
+    public String getLogExhaustedMessageBody() {
+        return logExhaustedMessageBody;
+    }
+
+    public void setLogExhaustedMessageBody(String logExhaustedMessageBody) {
+        this.logExhaustedMessageBody = logExhaustedMessageBody;
+    }
+
+    /**
+     * Disables redelivery (same as setting maximum redeliveries to 0)
+     */

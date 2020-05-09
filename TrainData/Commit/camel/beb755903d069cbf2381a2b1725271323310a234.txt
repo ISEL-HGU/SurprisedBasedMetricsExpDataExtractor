@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.stream.Collectors;
+            List<HttpConsumer> candidates = new ArrayList<>();
+                    candidates.add(consumer);
+                }
+            }
+
+            if (candidates.size() == 1) {
+                answer = candidates.get(0);
+            } else {
+                // extra filter by restrict
+                candidates = candidates.stream().filter(c -> matchRestMethod(request.getMethod(), c.getEndpoint().getHttpMethodRestrict())).collect(Collectors.toList());
+                if (candidates.size() == 1) {
+                    answer = candidates.get(0);
+    private static boolean matchRestMethod(String method, String restrict) {
+        return restrict == null || restrict.toLowerCase(Locale.ENGLISH).contains(method.toLowerCase(Locale.ENGLISH));
+    }
+
+

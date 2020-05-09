@@ -1,0 +1,3 @@
+        Exchange exchange = template.request("netty4-http:http://localhost:{{port}}/mypath", new Processor() {
+        Exchange exchange = template.request("netty4-http:http://localhost:{{port}}", new Processor() {
+        Exchange exchange = template.request("netty4-http:http://localhost:{{port}}/", new Processor() {

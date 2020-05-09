@@ -1,0 +1,1 @@
+ * Validates the payload of a message using NetworkNT JSON Schema library.

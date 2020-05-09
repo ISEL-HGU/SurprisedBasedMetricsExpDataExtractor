@@ -1,0 +1,1 @@
+        setInitialDelay(HdfsConsumer.DEFAULT_CONSUMER_INITIAL_DELAY);

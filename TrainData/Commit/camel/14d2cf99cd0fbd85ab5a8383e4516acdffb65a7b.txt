@@ -1,0 +1,5 @@
+            log.trace("Entering readFrom for {} ...", socket);
+                        log.warn("readFrom {} exiting with partial payload {}", socket, Hl7Util.convertToPrintFriendlyString(buffer, 0, size() - 1));
+            log.trace("Entering writeTo for {} ...", socket);
+                log.warn("Ignoring call to writeTo(byte[] payload) for {} - MLLP payload is null or empty", socket);
+                throw new MllpSocketException("END_OF_STREAM returned from SocketInputStream.read(byte[], off, len)");

@@ -1,0 +1,37 @@
+	public static String replaceHexEscapes(String text) {
+		Pattern p = Pattern.compile("(\\\\*)\\\\u([0-9abcdefABCDEF]{4})");
+		return StringGroovyMethods.replaceAll((CharSequence) text, p, new Closure<Void>(null, null) {
+			Object doCall(String _0, String _1, String _2) {
+				return _1  new String(Character.toChars(Integer.parseInt(_2, 16)));
+			}
+		});
+	}
+		Pattern p = Pattern.compile("(\\\\*)\\\\([0-3]?[0-7]?[0-7])");
+		return StringGroovyMethods.replaceAll((CharSequence) text, p, new Closure<Void>(null, null) {
+			Object doCall(String _0, String _1, String _2) {
+				return _1  new String(Character.toChars(Integer.parseInt(_2, 8)));
+			}
+		});
+	}
+	private static final Map<Character, Character> STANDARD_ESCAPES = Maps.of(
+		Pattern p = Pattern.compile("(\\\\*)\\\\([btnfr\"'])");
+		String result = StringGroovyMethods.replaceAll((CharSequence) text, p, new Closure<Void>(null, null) {
+			Object doCall(String _0, String _1, String _2) {
+				if (isLengthOdd(_1)) {
+					return _0;
+				}
+				Character character = STANDARD_ESCAPES.get(_2.charAt(0));
+				return _1  (character != null ? character : _2);
+			}
+		});
+		return result.replace("\\\\", "\\");
+	}
+				text = text.replace("\\/", "/");
+				text = text.replace("$$", "$");
+				text = text.replace("$/", "/");
+		text = text.replace("\\$", "$");
+
+		return StringUtils.replaceStandardEscapes(replaceHexEscapes(replaceOctalEscapes(text)));
+	}
+		return text.replace("\r\n", "\n");
+	}

@@ -1,0 +1,2 @@
+ b/src/test/org/codehaus/groovy/runtime/methoddispatching/vm8/FooTwo.java
+package org.codehaus.groovy.runtime.methoddispatching.vm8;

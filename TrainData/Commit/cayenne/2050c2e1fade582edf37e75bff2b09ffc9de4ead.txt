@@ -1,0 +1,5 @@
+import org.apache.cayenne.exp.property.BaseProperty;
+			for(BaseProperty<?> property : query.getColumns()) {
+		for(BaseProperty<?> column : query.getColumns()) {
+	private EntityResult buildEntityIdResultForColumn(BaseProperty<?> column, EntityResolver resolver) {
+	private EntityResult buildEntityResultForColumn(SelectQuery<?> query, BaseProperty<?> column, EntityResolver resolver) {

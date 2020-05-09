@@ -1,0 +1,20 @@
+                try {
+                    return traversableResolver.isReachable(context.getValue(), p.removeLeafNode(), getRootBeanClass(),
+                        p, d.getElementType());
+                } catch (ValidationException ve) {
+                    throw ve;
+                } catch (Exception e) {
+                    throw new ValidationException(e);
+                }
+                final Object traversableObject =
+                    Optional.ofNullable(context.getParent()).map(GraphContext::getValue).orElse(null);
+
+                try {
+                    if (!traversableResolver.isCascadable(traversableObject, traversableProperty, getRootBeanClass(),
+                        pathToTraversableObject, ((PropertyD<?>) descriptor).getElementType())) {
+                        return;
+                    }
+                } catch (ValidationException ve) {
+                    throw ve;
+                } catch (Exception e) {
+                    throw new ValidationException(e);

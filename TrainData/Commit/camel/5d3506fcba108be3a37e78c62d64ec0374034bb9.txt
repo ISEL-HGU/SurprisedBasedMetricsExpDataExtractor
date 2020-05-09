@@ -1,0 +1,3 @@
+import org.apache.camel.support.jndi.JndiBeanRepository;
+    private JndiBeanRepository registry;
+    public EjbRegistryBean(JndiBeanRepository registry, CamelContext context, String name) {

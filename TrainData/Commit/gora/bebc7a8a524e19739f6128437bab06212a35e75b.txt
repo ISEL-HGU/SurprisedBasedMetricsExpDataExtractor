@@ -1,0 +1,10 @@
+    // Delete the record, if the record exists and a field has been removed
+    for (int i = 0; i < fields.size(); i) {
+      if (persistent.isDirty(i)) {
+        Object persistentValue = persistent.get(i);
+        if (persistentValue == null && aerospikeClient.exists(null, recordKey)) {
+          this.delete(key);
+        }
+      }
+
+    persistent.setDirty(fieldMap.get(fieldName).pos());

@@ -1,0 +1,17 @@
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+	protected Predicate<String> prototypeChecker;
+		prototypeChecker = entityName -> {
+            if (entityName == null) {
+                return false;
+            }
+            return entityName.startsWith("EO") && entityName.endsWith("Prototypes");
+        };
+		List<String> modelNames = new ArrayList<>(helper.modelNamesAsList());
+		modelNames = modelNames.stream().filter(prototypeChecker.negate()).collect(Collectors.toList());
+		modelNames.forEach( name -> {
+		});
+		modelNames.sort(new InheritanceComparator(dataMap));
+		Iterator<String> it = modelNames.iterator();
+			String name = it.next();
+		return prototypeChecker.test(entityName);

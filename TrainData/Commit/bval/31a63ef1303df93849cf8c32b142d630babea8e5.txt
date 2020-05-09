@@ -1,0 +1,8 @@
+                try {
+                    constraintValidator.initialize(constraint.getAnnotation());
+                    valid = constraintValidator.isValid(context.getValue(), constraintValidatorContext);
+                } catch (ValidationException e) {
+                    throw e;
+                } catch (Exception e) {
+                    throw new ValidationException(e);
+                }

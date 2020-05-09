@@ -1,0 +1,11 @@
+        if (protocol == null || protocol.isEmpty())
+        if (host == null || host.isEmpty())
+        if (query != null && !query.isEmpty())
+        if (userInfo != null && !userInfo.isEmpty()) {
+        if (username != null && !username.isEmpty())
+        if (password != null && !password.isEmpty())
+                String[] paramArray = parameter.split("=", 2);
+        if (protocol != null && !protocol.isEmpty())
+        if (user != null && !user.isEmpty())
+        if (host != null && !host.isEmpty())
+        if (port != null && !port.isEmpty())

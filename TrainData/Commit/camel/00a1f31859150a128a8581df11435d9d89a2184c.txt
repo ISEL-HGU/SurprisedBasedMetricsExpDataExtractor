@@ -1,0 +1,14 @@
+import org.apache.camel.Producer;
+        // create producer and turn it into async
+        Producer producer = createProducer();
+        AsyncProducer target;
+        if (producer instanceof AsyncProducer) {
+            target = (AsyncProducer) producer;
+        } else {
+            target = AsyncProcessorConverterHelper.convert(producer);
+        }
+        if (isLazyStartProducer()) {
+            // wrap in lazy start
+            target = new LazyStartProducer(target);
+        }
+        return target;

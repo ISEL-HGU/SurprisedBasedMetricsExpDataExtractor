@@ -1,0 +1,2 @@
+	@UriParam(label = "client", secret = true)
+	@UriParam(label = "client", secret = true)

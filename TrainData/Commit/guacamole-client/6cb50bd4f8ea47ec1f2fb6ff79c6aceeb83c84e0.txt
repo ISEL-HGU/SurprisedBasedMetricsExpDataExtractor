@@ -1,0 +1,3 @@
+                    .entity(new APIError((GuacamoleException) t))
+                .entity(new APIError(
+                        new GuacamoleException("Unexpected internal error", t)))

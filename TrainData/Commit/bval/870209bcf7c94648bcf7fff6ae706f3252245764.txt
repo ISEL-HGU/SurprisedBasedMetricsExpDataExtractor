@@ -1,0 +1,21 @@
+import java.util.Collections;
+import java.util.HashMap;
+import org.apache.bval.util.CollectionSet;
+    
+    private final Set<ConstructorDescriptor> constrainedConstructors;
+    private final Map<Set<MethodType>, Set<MethodDescriptor>> methodCache = new HashMap<>();
+        properties =
+            propertiesMap.values().stream().filter(DescriptorManager::isConstrained).collect(ToUnmodifiable.set());
+        
+        constrainedConstructors =
+            constructors.isEmpty() ? Collections.emptySet() : new CollectionSet<>(constructors.values());
+        return methodCache.computeIfAbsent(EnumSet.of(methodType, methodTypes), k -> {
+            if (methods.isEmpty() || k.isEmpty()) {
+                return Collections.emptySet();
+            }
+            if (k.size() == MethodType.values().length) {
+                return new CollectionSet<>(methods.values());
+            }
+            return methods.values().stream().filter(m -> k.contains(m.getMethodType())).collect(ToUnmodifiable.set());
+        });
+        return constrainedConstructors;

@@ -1,0 +1,6 @@
+                                boolean oneOfType, Set<String> oneOffTypes, boolean asPredicate, String optionalPrefix, String prefix, boolean multiValue) {
+        if (asPredicate) {
+            sb.append(", \"asPredicate\": ");
+            sb.append(Strings.doubleQuote("true"));
+        }
+

@@ -1,0 +1,4 @@
+import twitter4j.Paging;
+        Paging paging = getLastIdPaging();
+        log.trace("doPoll.getUserTimeline(user={}, sinceId={})", user, paging.getSinceId());
+        return getTwitter().getUserTimeline(user, paging);

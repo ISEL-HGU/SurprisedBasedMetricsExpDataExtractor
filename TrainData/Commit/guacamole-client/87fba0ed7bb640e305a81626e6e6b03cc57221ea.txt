@@ -1,0 +1,10 @@
+import org.apache.guacamole.environment.Environment;
+import org.apache.guacamole.GuacamoleException;
+     * The Guacamole server environment.
+     */
+    @Inject
+    private Environment environment;
+
+    /**
+     *
+            File keyFile = new File(environment.getGuacamoleHome(), confService.getClearpassKey().toString());

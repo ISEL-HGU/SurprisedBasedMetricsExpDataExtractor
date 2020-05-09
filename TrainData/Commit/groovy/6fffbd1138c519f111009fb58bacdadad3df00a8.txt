@@ -1,0 +1,4 @@
+import static org.codehaus.groovy.ast.tools.GeneralUtils.localVarX;
+            BinaryExpression newExpr = binX(leftExpression, expr.getOperation(), rightExpression);
+            MethodCallExpression vcall = callX(localVarX("_hash_", containerType), "getAt", varX("_index_", indexType));
+            vcall.setImplicitThis(false); // GROOVY-8943

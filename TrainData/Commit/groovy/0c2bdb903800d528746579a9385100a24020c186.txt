@@ -1,0 +1,31 @@
+import java.util.Optional;
+        Map<String, ClassNode> genericsSpec = GenericsUtils.createGenericsSpec(trait, GenericsUtils.createGenericsSpec(cNode));
+            int nParams = helperMethodParams.length;
+            if (nParams > 0 && !methodNode.isAbstract() && ((methodNode.getModifiers() & Opcodes.ACC_STATIC) != 0)
+                    && (!name.contains("$") || (methodNode.getModifiers() & Opcodes.ACC_SYNTHETIC) == 0)) {
+                Parameter[] origParams = new Parameter[nParams - 1];
+                Parameter[] params = new Parameter[nParams - 1];
+                Map<String, ClassNode> methodGenericsSpec = Optional.ofNullable(originalMethod)
+                    .map(m -> GenericsUtils.addMethodGenerics(m, genericsSpec)).orElse(genericsSpec);
+                for (int i = 1; i < nParams; i = 1) {
+                    List<AnnotationNode> copied = new LinkedList<>();
+                    List<AnnotationNode> notCopied = new LinkedList<>();
+                    origParams[i - 1] = parameter;
+                    argList.addExpression(new VariableExpression(newParam));
+            List<MethodNode> declaredMethods = new LinkedList<>();
+                        if (helperField == null) {
+                        if (helperField == null) {
+                            helperField = fieldHelperClassNode.getField(Traits.STATIC_FIELD_PREFIXTraits.PUBLIC_FIELD_PREFIX  fieldName);
+                            if (helperField == null) {
+                                helperField = fieldHelperClassNode.getField(Traits.STATIC_FIELD_PREFIXTraits.PRIVATE_FIELD_PREFIX  fieldName);
+                            List<AnnotationNode> copied = new LinkedList<>();
+                            List<AnnotationNode> notCopied = new LinkedList<>();
+        genericsSpec = GenericsUtils.addMethodGenerics(helperMethod, genericsSpec);
+        if (helperMethod.isPrivate() && !isHelperForStaticMethod) {
+            // GROOVY-7213: do not create forwarder for private methods
+        int modifiers = helperMethod.getModifiers();
+            modifiers ^= Opcodes.ACC_STATIC;
+                modifiers,
+        List<AnnotationNode> copied = new LinkedList<>();
+                Map<String, ClassNode> methodSpec = GenericsUtils.addMethodGenerics(helperMethod, Collections.emptyMap());
+        forwarder.addAnnotation(bridgeAnnotation);

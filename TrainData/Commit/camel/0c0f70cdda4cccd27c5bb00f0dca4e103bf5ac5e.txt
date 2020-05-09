@@ -1,0 +1,8 @@
+        String content = buildResponse(request);
+        if (content != null) {
+            response.setEntity(new StringEntity(content, "ASCII"));
+
+    protected String buildResponse(HttpRequest request) {
+        return responseContent;
+    }
+

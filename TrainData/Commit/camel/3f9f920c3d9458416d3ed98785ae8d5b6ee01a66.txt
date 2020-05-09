@@ -1,0 +1,10 @@
+import javax.xml.transform.sax.SAXSource;
+            } else if (document instanceof SAXSource) {
+                SAXSource source = (SAXSource) document;
+                // since its a SAXSource it me not return an NodeList
+                Object result = xpathExpression.evaluate(source.getInputSource(), XPathConstants.NODESET);
+                if (result instanceof NodeList) {
+                    answer = (NodeList) result;
+                } else {
+                    answer = null;
+                }

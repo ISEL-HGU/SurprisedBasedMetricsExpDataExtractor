@@ -1,0 +1,6 @@
+        if (asBoolean(ctx.block())) {
+            return configureAST(this.visitBlock(ctx.block()), ctx);
+        }
+
+        if (asBoolean(ctx.statement())) {
+            throw createParsingFailedException("Statements should be wrapped in a block, e.g. () -> { some statements here }", ctx);

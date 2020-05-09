@@ -1,0 +1,3 @@
+import org.springframework.boot.context.properties.ConfigurationProperties;
+@ConfigurationProperties(prefix = "endpoints."  CamelRoutesEndpoint.ENDPOINT_ID)
+    public static final String ENDPOINT_ID = "camelroutes";

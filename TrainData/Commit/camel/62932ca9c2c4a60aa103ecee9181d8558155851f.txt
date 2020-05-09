@@ -1,0 +1,15 @@
+    @UriParam(label = "common", defaultValue = "2000")
+    private int connectionTimeout = 2000;
+    
+     * Timeout for connection attempts. (in milliseconds)
+     */
+    public int getConnectionTimeout() {
+		return connectionTimeout;
+	}
+
+	public void setConnectionTimeout(int connectionTimeout) {
+		this.connectionTimeout = connectionTimeout;
+	}
+
+	/**
+        builder.connectionTimeout(Duration.ofMillis(getConnectionTimeout()));

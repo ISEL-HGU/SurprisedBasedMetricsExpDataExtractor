@@ -1,0 +1,49 @@
+import java.lang.reflect.InvocationTargetException;
+                        || newPlaceholderClass(clazz) != null)) {
+     * Obtains a {@link Class} instance for "org.apache.aries.blueprint.ext.AbstractPropertyPlaceholderExt"
+     * @param clazz
+     * @return
+     */
+    private Class<?> newPlaceholderClass(Class<?> clazz) {
+        Class<?> c = clazz;
+        while (c != null) {
+            if ("org.apache.aries.blueprint.ext.AbstractPropertyPlaceholderExt".equals(c.getName())) {
+                return c;
+            }
+            c = c.getSuperclass();
+        }
+        return null;
+    }
+
+    /**
+        if (component != null) {
+            Class<?> clazz = newPlaceholderClass(component.getClass());
+            if (clazz != null) {
+                log.debug("Adding Blueprint PropertyPlaceholder: {}", id);
+                if (method == null) {
+                    try {
+                        method = clazz.getDeclaredMethod("retrieveValue", String.class);
+                        method.setAccessible(true);
+                    } catch (NoSuchMethodException e) {
+                        throw new IllegalStateException("Cannot add blueprint property placeholder: "  id
+                                 " as the method retrieveValue is not accessible", e);
+                    }
+                placeholders.add(new PropertyPlaceholderWrapper(component, method));
+            placeholders.add(new PropertyPlaceholderWrapper(placeholder, oldMethod));
+                    Map map = placeholder.getDefaultProperties();
+                    isDefault = map != null && map.containsKey(key);
+    private class PropertyPlaceholderWrapper {
+        private Object delegate;
+        private Method method;
+        public PropertyPlaceholderWrapper(Object delegate, Method method) {
+            this.method = method;
+        public Map getDefaultProperties() {
+            if (delegate instanceof PropertyPlaceholder) {
+                return ((PropertyPlaceholder) delegate).getDefaultProperties();
+            }
+            try {
+                Method getDefaultProperties = delegate.getClass().getMethod("getDefaultProperties");
+                return getDefaultProperties == null ? null : (Map) getDefaultProperties.invoke(delegate);
+            } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+                return null;
+            }

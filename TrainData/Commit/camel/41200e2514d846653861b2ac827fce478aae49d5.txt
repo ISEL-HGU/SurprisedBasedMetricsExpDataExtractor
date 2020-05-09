@@ -1,0 +1,11 @@
+import static org.apache.camel.maven.packaging.PackageOtherMojo.prepareOthers;
+ *     <li>others</li>
+     * The output directory for generated others file
+     *
+     * @parameter default-value="${project.build.directory}/generated/camel/others"
+     */
+    protected File otherOutDir;
+
+    /**
+     * The output directory for generated schema file
+        prepareOthers(getLog(), project, projectHelper, otherOutDir, buildContext);

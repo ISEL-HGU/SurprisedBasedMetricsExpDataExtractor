@@ -1,0 +1,2 @@
+                    if (camelContext.getComponent(component, false) == null) {
+                        // component not already in camel-context so resolve an OSGi reference to it

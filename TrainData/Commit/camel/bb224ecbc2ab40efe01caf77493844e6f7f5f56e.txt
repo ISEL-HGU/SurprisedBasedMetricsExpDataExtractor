@@ -1,0 +1,11 @@
+        final String prefix = propertyPrefix != null ? propertyPrefix : "";
+        final String classKey = propertyPrefix  key;
+        return addToClassMap(classKey, () -> {
+                    String className = properties.getProperty(prefix  "class");
+                        throw new IOException("Expected property is missing: "  prefix  "class");
+                    return entry.bundle.loadClass(className);
+                throw new NoFactoryAvailableException(classKey);
+            }
+        });
+            if (url != null && checkCompatibility(bundle, clazz)) {
+    private boolean checkCompatibility(Bundle bundle, Class<?> clazz) {

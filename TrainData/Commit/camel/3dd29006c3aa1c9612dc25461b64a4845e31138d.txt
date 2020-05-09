@@ -1,0 +1,11 @@
+import java.util.HashMap;
+import java.util.Map;
+import javax.annotation.Generated;
+@Generated("org.apache.camel.maven.connector.SpringBootAutoConfigurationMojo")
+public class TwitterMentionConnectorConfiguration
+        extends
+            TwitterMentionConnectorConfigurationCommon {
+     * Define additional configuration definitions
+    private Map<String, TwitterMentionConnectorConfigurationCommon> configurations = new HashMap<>();
+    public Map<String, TwitterMentionConnectorConfigurationCommon> getConfigurations() {
+        return configurations;

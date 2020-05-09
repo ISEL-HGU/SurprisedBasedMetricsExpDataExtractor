@@ -1,0 +1,6 @@
+import io.swagger.jackson.mixin.ResponseSchemaMixin;
+import io.swagger.models.Response;
+                mapper.addMixIn(Response.class, ResponseSchemaMixin.class);
+                
+                mapper.addMixIn(Response.class, ResponseSchemaMixin.class);
+                

@@ -1,0 +1,108 @@
+ *  - To-Many relationships comparisons
+ *  - Null comparisons
+ *  - Null in AND and OR expressions
+        tPaintings.insert(12, "painting12", 1, 1, null);
+    public void testCollectionWithNull() {
+        Expression exp = Artist.PAINTING_ARRAY.dot(Painting.ESTIMATED_PRICE)
+                .lt(new BigDecimal(200));
+
+        compareSqlAndEval(exp, 1);
+    }
+
+    @Test
+    public void testGreaterWithNull() throws Exception {
+        tPaintings.deleteAll();
+        Expression expression = Artist.DATE_OF_BIRTH
+                .gt(new java.sql.Date(System.currentTimeMillis()));
+
+        compareSqlAndEval(expression1, 0);
+    }
+
+    @Test
+    public void testGreaterEqualWithNull() throws Exception {
+        tPaintings.deleteAll();
+        tArtist.deleteAll();
+        tArtist.insert(7, "artist7", null);
+
+        Expression expression = Artist.DATE_OF_BIRTH
+                .gte(new java.sql.Date(System.currentTimeMillis()));
+
+        compareSqlAndEval(expression, 0);
+
+        Expression expression1 = expression.notExp();
+        compareSqlAndEval(expression1, 0);
+    }
+
+    @Test
+    public void testLessWithNull() throws Exception {
+        tPaintings.deleteAll();
+        tArtist.deleteAll();
+        tArtist.insert(7, "artist7", null);
+
+        Expression expression = Artist.DATE_OF_BIRTH
+                .lt(new java.sql.Date(System.currentTimeMillis()));
+
+        compareSqlAndEval(expression, 0);
+
+        Expression expression1 = expression.notExp();
+        compareSqlAndEval(expression1, 0);
+    }
+
+    @Test
+    public void testLessEqualWithNull() throws Exception {
+        tPaintings.deleteAll();
+        tArtist.deleteAll();
+        tArtist.insert(7, "artist7", null);
+
+        Expression expression = Artist.DATE_OF_BIRTH
+                .lte(new java.sql.Date(System.currentTimeMillis()));
+
+        compareSqlAndEval(expression, 0);
+
+        Expression expression1 = expression.notExp();
+        compareSqlAndEval(expression1, 0);
+    }
+
+    @Test
+    public void testAndWithNull() throws Exception {
+        tPaintings.deleteAll();
+        tArtist.deleteAll();
+        tArtist.insert(7, "artist7", null);
+        tArtist.insert(8, "artist8", null);
+        tArtist.insert(9, "artist9", null);
+
+        Expression nullExp = Artist.DATE_OF_BIRTH.lt(new java.sql.Date(System.currentTimeMillis()));
+        Expression and = ExpressionFactory.and(nullExp, Artist.ARTIST_NAME.eq("artist7"));
+
+        compareSqlAndEval(and, 0);
+        compareSqlAndEval(and.notExp(), 2);
+    }
+
+    @Test
+    public void testAndWithNull2() throws Exception {
+        tPaintings.deleteAll();
+        tArtist.deleteAll();
+        tArtist.insert(7, "artist7", null);
+        tArtist.insert(8, "artist8", null);
+        tArtist.insert(9, "artist9", null);
+
+        Expression nullExp = Artist.DATE_OF_BIRTH.lt(new java.sql.Date(System.currentTimeMillis()));
+        Expression and = ExpressionFactory.and(nullExp, Artist.ARTIST_NAME.eq("artist10"));
+
+        compareSqlAndEval(and, 0);
+        compareSqlAndEval(and.notExp(), 3);
+    }
+
+    @Test
+    public void testOrWithNull() throws Exception {
+        tPaintings.deleteAll();
+        tArtist.deleteAll();
+        tArtist.insert(7, "artist7", null);
+        tArtist.insert(8, "artist8", null);
+        tArtist.insert(9, "artist9", null);
+
+        Expression nullExp = Artist.DATE_OF_BIRTH.lt(new java.sql.Date(System.currentTimeMillis()));
+        Expression and = ExpressionFactory.or(nullExp, Artist.ARTIST_NAME.eq("artist7"));
+
+        compareSqlAndEval(and, 1);
+        compareSqlAndEval(and.notExp(), 0);

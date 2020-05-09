@@ -1,0 +1,2 @@
+        consumerClass = RabbitMQConsumer.class, label = "messaging")
+   

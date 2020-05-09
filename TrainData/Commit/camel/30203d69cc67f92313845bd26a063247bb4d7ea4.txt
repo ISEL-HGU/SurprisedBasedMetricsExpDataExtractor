@@ -1,0 +1,14 @@
+import org.apache.camel.util.ObjectHelper;
+        SearchRequest searchRequest = new SearchRequest();
+
+        // Only setup the indexName and indexType if the message header has the setting
+        String indexName = exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_NAME, String.class);
+        String indexType = exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_TYPE, String.class);
+        if (ObjectHelper.isNotEmpty(indexName)) {
+            searchRequest.indices(indexName);
+        }
+        if (ObjectHelper.isNotEmpty(indexType)) {
+            searchRequest.types(indexType);
+        }
+                LOG.error("Cannot build the QueryText from the map.", e);
+            LOG.info("Cannot convert queryObject into SearchRequest object");

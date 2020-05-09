@@ -1,0 +1,8 @@
+import java.util.concurrent.RejectedExecutionException;
+ * Default implementation of {@link ProducerCache}.
+        if (camelContext.isStopped()) {
+            exchange.setException(new RejectedExecutionException("CamelContext is stopped"));
+            return exchange;
+        }
+
+    @Deprecated

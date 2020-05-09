@@ -1,0 +1,3 @@
+        LdapNetworkConnection ldapConnection = createLDAPConnection();
+        try {
+            ldapConnection.close();

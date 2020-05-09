@@ -1,0 +1,4 @@
+            final Optional<ValueExtractor<?>> found = assignableKeys.stream().filter(allValueExtractors::containsKey)
+                .<ValueExtractor<?>> map(allValueExtractors::get).findFirst();
+            if (found.isPresent()) {
+                return found.get();

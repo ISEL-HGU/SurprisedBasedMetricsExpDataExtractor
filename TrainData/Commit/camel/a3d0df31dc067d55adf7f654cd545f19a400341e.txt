@@ -1,0 +1,6 @@
+import org.apache.camel.CamelContext;
+    private CamelContext camelContext;
+
+    public TimedLeaderNotifier(CamelContext camelContext, KubernetesClusterEventHandler handler) {
+        this.camelContext = Objects.requireNonNull(camelContext, "Camel context must be present");
+            this.executor = camelContext.getExecutorServiceManager().newSingleThreadScheduledExecutor(this, "CamelKubernetesLeaderNotifier");

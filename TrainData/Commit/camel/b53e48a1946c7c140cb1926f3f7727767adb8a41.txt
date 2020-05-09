@@ -1,0 +1,2 @@
+        default:
+            throw new IllegalArgumentException("Unknown authentication type: "  type);

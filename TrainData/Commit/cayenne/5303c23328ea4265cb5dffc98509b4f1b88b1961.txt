@@ -1,0 +1,10 @@
+
+    @Override
+    public boolean supportsEscapeInLike() {
+        return false;
+    }
+
+    @Override
+    public boolean supportsExpressionInHaving() {
+        return false;
+    }

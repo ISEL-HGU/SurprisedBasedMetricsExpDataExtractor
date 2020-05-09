@@ -1,0 +1,2 @@
+import org.apache.camel.impl.engine.AbstractCamelContext;
+        AbstractCamelContext mcc = camelContext.adapt(AbstractCamelContext.class);

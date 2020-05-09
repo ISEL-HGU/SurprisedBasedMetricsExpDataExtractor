@@ -1,0 +1,16 @@
+import static org.codehaus.groovy.ast.tools.ClosureUtils.getParametersSafe;
+                boolean isMethodRefRHS = rightExpression instanceof MethodReferenceExpression && ClassHelper.isFunctionalInterface(lType);
+                if (isMethodRefRHS) {
+                if (isMethodRefRHS) {
+                Parameter[] closureParameters = getParametersSafe(closureExpression);
+        for (Parameter parameter : getParametersSafe(expression)) {
+            typeCheckingContext.controlStructureVariables.remove(parameter);
+        if (closureExpression.isParameterSpecified()) {
+            Parameter[] closureParams = closureExpression.getParameters();
+            Parameter[] methodParams = sam.getParameters();
+            for (int i = 0; i < closureParams.length; i) {
+                ClassNode fromClosure = closureParams[i].getType();
+                ClassNode fromMethod = methodParams[i].getType();
+                extractGenericsConnections(connections, fromClosure, fromMethod);
+            }
+        return applyGenericsContext(connections, samUsage.redirect());

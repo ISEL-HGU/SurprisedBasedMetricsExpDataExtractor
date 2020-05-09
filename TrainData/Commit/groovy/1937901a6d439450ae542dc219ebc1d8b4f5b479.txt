@@ -1,0 +1,21 @@
+import org.codehaus.groovy.classgen.asm.util.TypeUtil;
+            boxPrimitiveType(mv, idx, arg);
+            boxPrimitiveType(mv, idx, arg);
+    private void boxPrimitiveType(MethodVisitor mv, int idx, Type arg) {
+        if (isPrimitive(arg)) {
+            mv.visitIntInsn(getLoadInsn(arg), idx);
+            String wrappedType = getWrappedClassDescriptor(arg);
+            mv.visitMethodInsn(INVOKESTATIC, wrappedType, "valueOf", "("  arg.getDescriptor()  ")L"  wrappedType  ";", false);
+        } else {
+            mv.visitVarInsn(ALOAD, idx); // load argument i
+        }
+    }
+
+    private static int getLoadInsn(Type type) {
+        return TypeUtil.getLoadInsnByType(type);
+    private static int getReturnInsn(Type type) {
+        return TypeUtil.getReturnInsnByType(type);
+    private static boolean isPrimitive(Type type) {
+        return TypeUtil.isPrimitiveType(type);
+        return TypeUtil.getWrappedClassDescriptor(type);
+        private static final long serialVersionUID = 1313135457715304501L;

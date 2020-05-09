@@ -1,0 +1,4 @@
+        // close streams
+        IOHelper.close(putObjectRequest.getInputStream());
+        IOHelper.close(is);
+

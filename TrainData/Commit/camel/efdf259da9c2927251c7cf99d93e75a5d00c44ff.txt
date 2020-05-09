@@ -1,0 +1,13 @@
+        /**
+         * The fully qualified class name of the DockerCmdExecFactory
+         * implementation to use
+         */
+        private String cmdExecFactory = "com.github.dockerjava.jaxrs.JerseyDockerCmdExecFactory";
+
+        public String getCmdExecFactory() {
+            return cmdExecFactory;
+        }
+
+        public void setCmdExecFactory(String cmdExecFactory) {
+            this.cmdExecFactory = cmdExecFactory;
+        }

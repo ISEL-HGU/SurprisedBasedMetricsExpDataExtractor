@@ -1,0 +1,29 @@
+import org.apache.cayenne.testdo.testmap.Gallery;
+import java.math.BigInteger;
+import static org.junit.Assert.assertNull;
+
+	@Test
+	public void testSQLTemplateSelectNullObjects() throws Exception {
+		tPainting.insert(1, null, "p1", BigInteger.valueOf(10L));
+
+
+		String sql = "SELECT p.GALLERY_ID FROM PAINTING p";
+		SQLTemplate q1 = new SQLTemplate(Gallery.class, sql);
+		q1.setColumnNamesCapitalization(CapsStrategy.UPPER);
+		List<Gallery> galleries = context.performQuery(q1);
+
+		assertEquals(1, galleries.size());
+		assertNull(galleries.get(0));
+	}
+
+	@Test(expected = CayenneRuntimeException.class)
+	public void testSQLTemplateSelectInvalid() throws Exception {
+		tPainting.insert(1, null, "p1", BigInteger.valueOf(10L));
+
+		String sql = "SELECT p.PAINTING_TITLE FROM PAINTING p";
+		SQLTemplate q1 = new SQLTemplate(Gallery.class, sql);
+		q1.setColumnNamesCapitalization(CapsStrategy.UPPER);
+
+		// this should fail as result can't be converted to Gallery class
+		context.performQuery(q1);
+	}

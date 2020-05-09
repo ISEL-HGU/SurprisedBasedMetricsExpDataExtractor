@@ -1,0 +1,8 @@
+            this.visitResources(ctx.resources()).forEach(tryCatchStatement::addResource);
+        statementList.forEach(e -> {
+        ctx.classBodyDeclaration().forEach(e -> {
+        anonymousInnerClassList.forEach(e -> e.setEnclosingMethod(methodNode));
+            declarationExpressionList.forEach(e -> {
+        declarationExpressionList.forEach(e -> {
+            this.declarationStatements.forEach(e -> {
+                    declarationListStatementLabels.forEach(e::addStatementLabel);

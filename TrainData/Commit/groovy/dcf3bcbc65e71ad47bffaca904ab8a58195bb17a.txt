@@ -1,0 +1,14 @@
+        } else {
+            if (parametersWithExactType.length > 0 && isTypeReferingInstanceMethod(typeOrTargetRef, methodRefMethod)) {
+                Parameter firstParameter = parametersWithExactType[0];
+                Class<?> typeOrTargetClass = typeOrTargetRef.getType().getTypeClass();
+                Class<?> firstParameterClass = firstParameter.getType().getTypeClass();
+                if (!typeOrTargetClass.isAssignableFrom(firstParameterClass)) {
+                    throw new RuntimeParserException("Invalid receiver type: "  firstParameterClass  " is not compatible with "  typeOrTargetClass, typeOrTargetRef);
+                }
+            }
+            if (isTypeReferingInstanceMethod(typeOrTargetRef, mn)) {
+    private static boolean isTypeReferingInstanceMethod(Expression typeOrTargetRef, MethodNode mn) {  // class::instanceMethod
+        return !mn.isStatic() && isClassExpr(typeOrTargetRef);
+    }
+

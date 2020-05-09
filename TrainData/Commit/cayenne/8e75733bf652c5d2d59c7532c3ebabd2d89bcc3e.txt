@@ -1,0 +1,17 @@
+        CREATE_PROPERTY_NAMES,
+        CREATE_PK_PROPERTIES
+    private static final String CREATE_PK_PROPERTIES = "createPKProperties";
+    public Boolean getCreatePKProperties() {
+        return (Boolean) getProperty(Property.CREATE_PK_PROPERTIES);
+    }
+
+    public void setCreatePKProperties(Boolean createPKProperties) {
+        updatePreferences(Property.CREATE_PK_PROPERTIES, createPKProperties);
+    }
+
+                case CREATE_PK_PROPERTIES:
+                    obj = entry.getValue().getBooleanProperty(CREATE_PK_PROPERTIES);
+                    break;
+                case CREATE_PK_PROPERTIES:
+                    entry.getValue().setBooleanProperty(CREATE_PK_PROPERTIES, (Boolean) value);
+                    break;

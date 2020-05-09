@@ -1,0 +1,2 @@
+ * method or "Python-style" by just omitting the 'new' keyword.
+    Class<?>[] value() default {};

@@ -1,0 +1,2 @@
+                channel.ls(directory);
+        } catch (IOException | SftpException e) {

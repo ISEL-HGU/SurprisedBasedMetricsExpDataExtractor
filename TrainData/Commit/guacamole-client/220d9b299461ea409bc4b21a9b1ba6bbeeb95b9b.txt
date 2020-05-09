@@ -1,0 +1,1 @@
+        if (targetEntity.isUser(user.getUser().getIdentifier()))

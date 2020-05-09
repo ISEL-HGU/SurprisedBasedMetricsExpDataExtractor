@@ -1,0 +1,4 @@
+         * To use a cron scheduler from either camel-spring or camel-quartz
+         * To use a cron scheduler from either camel-spring or camel-quartz
+         * any of the Quartz, Spring based scheduler.
+         * any of the Quartz, Spring based scheduler.

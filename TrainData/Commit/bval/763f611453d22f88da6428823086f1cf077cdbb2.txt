@@ -1,0 +1,24 @@
+    /**
+     * Collector to unmodifiable {@link Set} with custom backing implementation.
+     * 
+     * @param set
+     *            {@link Supplier}
+     * @return {@link Collector}
+     */
+    /**
+     * Collector to unmodifiable {@link Set} (maintains insertion order).
+     * 
+     * @return {@link Collector}
+     */
+    /**
+     * Collector to unmodifiable {@link List}.
+     * 
+     * @return {@link Collector}
+     */
+    /**
+     * Collector to unmodifiable {@link Map}.
+     * 
+     * @param keyMapper
+     * @param valueMapper
+     * @return {@link Collector}
+     */

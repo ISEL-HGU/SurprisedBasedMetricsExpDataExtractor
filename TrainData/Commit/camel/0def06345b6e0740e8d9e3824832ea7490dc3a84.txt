@@ -1,0 +1,6 @@
+
+
+import org.apache.camel.component.grpc.GrpcConsumerStrategy;
+            if (consumer.getConfiguration().getConsumerStrategy() == GrpcConsumerStrategy.AGGREGATION) {
+            } else if (consumer.getConfiguration().getConsumerStrategy() == GrpcConsumerStrategy.PROPAGATION) {
+                throw new IllegalArgumentException("gRPC processing strategy not implemented "  consumer.getConfiguration().getConsumerStrategy());

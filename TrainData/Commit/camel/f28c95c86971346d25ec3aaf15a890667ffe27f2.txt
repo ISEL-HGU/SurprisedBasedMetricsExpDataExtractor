@@ -1,0 +1,8 @@
+
+        Trigger existingTrigger = null;
+        TriggerKey triggerKey = null;
+        if (triggerId != null && triggerGroup != null) {
+            triggerKey = new TriggerKey(triggerId, triggerGroup);
+            existingTrigger = quartzScheduler.getTrigger(triggerKey);
+        }
+            throw new IllegalArgumentException("Trigger key "  trigger.getKey()  " is already used by route: "  routeIdFromTrigger  ". Cannot re-use it for another route: "  routeId);

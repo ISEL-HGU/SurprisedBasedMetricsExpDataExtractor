@@ -1,0 +1,2 @@
+        SchedulerControl schedulerControl = BeanProvider.getContextualReference(SchedulerControl.class, true);
+        this.isActivated &= schedulerControl == null || schedulerControl.isSchedulerEnabled();

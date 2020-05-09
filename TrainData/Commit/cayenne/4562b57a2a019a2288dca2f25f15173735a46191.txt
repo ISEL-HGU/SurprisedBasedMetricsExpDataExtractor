@@ -1,0 +1,6 @@
+ *     <li>{@link org.apache.cayenne.exp.property.EmbeddableProperty} for embeddable objects
+ *     <br>
+ *     <li>{@link org.apache.cayenne.exp.property.NumericIdProperty} for numeric PK properties
+ *     <br>
+ *     <li>{@link org.apache.cayenne.exp.property.BaseIdProperty} for non-numeric PK properties
+ *     <br>

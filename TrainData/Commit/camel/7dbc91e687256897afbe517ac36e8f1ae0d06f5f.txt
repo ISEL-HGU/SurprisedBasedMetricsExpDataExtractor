@@ -1,0 +1,13 @@
+import java.util.function.BiFunction;
+        /**
+         * Set a specific remappingFunction to use in a compute operation
+         */
+        private BiFunction remappingFunction;
+
+        public BiFunction getRemappingFunction() {
+            return remappingFunction;
+        }
+
+        public void setRemappingFunction(BiFunction remappingFunction) {
+            this.remappingFunction = remappingFunction;
+        }

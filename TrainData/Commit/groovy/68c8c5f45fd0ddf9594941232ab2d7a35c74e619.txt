@@ -1,0 +1,23 @@
+import static org.apache.groovy.parser.antlr4.GroovyLangParser.*;
+    private class ModifierManager {
+            this.checkDuplicatedModifiers(modifierNodeList);
+        public void checkDuplicatedModifiers(List<ModifierNode> modifierNodeList) {
+            Map<ModifierNode, Integer> modifierNodeCounter = new HashMap<>(modifierNodeList.size());
+
+            for (ModifierNode modifierNode : modifierNodeList) {
+               Integer cnt = modifierNodeCounter.get(modifierNode);
+
+               if (null == cnt) {
+                   modifierNodeCounter.put(modifierNode, 1);
+               } else if (1 == cnt && !modifierNode.isRepeatable()) {
+                   throw createParsingFailedException(modifierNode.getText()  " can not be duplicated", modifierNode);
+               }
+            }
+        }
+
+        private boolean repeatable;
+            this.repeatable = ANNOTATION_TYPE == type; // Only annotations are repeatable
+        public boolean isRepeatable() {
+            return repeatable;
+        }
+

@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+    /**
+     * Sets the server list;
+     */
+    public void addServer(String server) {
+        if (this.servers == null) {
+            this.servers = new ArrayList<>();
+        }
+
+        this.servers.add(server);
+    }
+
+    /**
+     * Add a server to the list of servers
+     */
+    public StaticServiceCallServiceDiscoveryConfiguration server(String server) {
+        addServer(server);
+        return this;
+    }

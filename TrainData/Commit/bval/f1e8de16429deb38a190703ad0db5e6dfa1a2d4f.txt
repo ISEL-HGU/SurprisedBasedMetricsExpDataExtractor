@@ -1,0 +1,2 @@
+        return new NodeImpl.PropertyNodeImpl(cast);
+                nodeList.add(new NodeImpl.BeanNodeImpl());

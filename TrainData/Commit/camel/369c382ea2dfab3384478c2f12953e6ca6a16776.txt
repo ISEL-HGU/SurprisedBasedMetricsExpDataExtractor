@@ -1,0 +1,4 @@
+                ServiceHelper.startService(this.delegate);
+
+            // init before loading core converters
+            answer.init();

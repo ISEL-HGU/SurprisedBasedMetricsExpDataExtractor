@@ -1,0 +1,3 @@
+    public SybaseSniffer(@Inject AdhocObjectFactory objectFactory) {
+            return url != null && url.toLowerCase().startsWith("jdbc:jtds:sybase:")
+            return dbName != null && dbName.toUpperCase().contains("ADAPTIVE SERVER")

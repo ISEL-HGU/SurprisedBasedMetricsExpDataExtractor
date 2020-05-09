@@ -1,0 +1,25 @@
+import org.codehaus.groovy.vmplugin.VMPluginFactory;
+        mv.visitMethodInsn(invokeMethodCode, type, cachedMethod.getName(), descriptor, useInterface);
+    private static void classHeader(ClassWriter cw, String internalName, String superName) {
+        if (VMPluginFactory.getPlugin().getVersion()>=8) {
+            cw.visit(Opcodes.V1_8, Opcodes.ACC_PUBLIC | Opcodes.ACC_SYNTHETIC, internalName, null, superName, null);
+        } else {
+            cw.visit(Opcodes.V1_4, Opcodes.ACC_PUBLIC | Opcodes.ACC_SYNTHETIC, internalName, null, superName, null);
+        }
+    }
+
+        classHeader(cw, internalName, "org/codehaus/groovy/runtime/callsite/PogoMetaMethodSite");
+
+        classHeader(cw, internalName, "org/codehaus/groovy/runtime/callsite/PojoMetaMethodSite");
+        classHeader(cw, internalName, "org/codehaus/groovy/runtime/callsite/StaticMetaMethodSite");
+    private static ClassWriter makeClassWriter() {
+        if (VMPluginFactory.getPlugin().getVersion()>=8) {
+            return new ClassWriter(ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
+        } else {
+            return new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        }
+    }
+
+        ClassWriter cw = makeClassWriter();
+        ClassWriter cw = makeClassWriter();
+        ClassWriter cw = makeClassWriter();

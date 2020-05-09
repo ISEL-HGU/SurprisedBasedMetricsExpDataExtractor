@@ -1,0 +1,9 @@
+
+        if (lastArg &&
+                type.isArray() && type.getComponentType().isGenericsPlaceHolder() &&
+                !wrappedArgument.isArray() && wrappedArgument.isGenericsPlaceHolder()) {
+            // GROOVY-8090 handle generics varargs, e.g. `U x = ...; Arrays.asList(x)`
+            // we should connect the type of vararg(e.g. T is the type of T...) to the argument type
+
+            type = type.getComponentType();
+        }

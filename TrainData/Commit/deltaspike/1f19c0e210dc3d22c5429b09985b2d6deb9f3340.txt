@@ -1,0 +1,8 @@
+            String beanClassName = at.getJavaClass().getName();
+                    if (!ClassUtils.isProxyableClass(at.getJavaClass()))
+                    {
+                        logger.info("Skipping unproxyable class "  beanClassName 
+                                " even if matches rule="  rule.getRule());
+                        return;
+                    }
+

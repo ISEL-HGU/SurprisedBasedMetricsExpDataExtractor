@@ -1,0 +1,4 @@
+import org.apache.camel.api.management.mbean.ManagedRouteMBean;
+
+                // the route must be part of the camel context
+                String camelId = (String) mBeanServer.getAttribute(routeMBean, "CamelId");

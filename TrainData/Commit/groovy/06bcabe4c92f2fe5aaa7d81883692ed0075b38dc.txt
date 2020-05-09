@@ -1,0 +1,6 @@
+        cNode.addObjectInitializerStatements(new ExpressionStatement(
+                new MethodCallExpression(
+                        new ClassExpression(helperClassNode),
+                        Traits.INIT_METHOD,
+                        new ArgumentListExpression(new VariableExpression("this")))
+        ));

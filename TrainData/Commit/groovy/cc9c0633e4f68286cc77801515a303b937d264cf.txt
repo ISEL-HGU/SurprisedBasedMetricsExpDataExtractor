@@ -1,0 +1,5 @@
+            throw createException("failed to invoke constructor: ", constr, argumentArray, e, false);
+            throw createException("could not access constructor: ", constr, argumentArray, e, false);
+                throw createException("failed to invoke constructor: ", constr, argumentArray, e, true);
+    private static GroovyRuntimeException createException(String init, Constructor constructor, Object[] argumentArray, Throwable e, boolean setReason) {
+        return new GroovyRuntimeException(

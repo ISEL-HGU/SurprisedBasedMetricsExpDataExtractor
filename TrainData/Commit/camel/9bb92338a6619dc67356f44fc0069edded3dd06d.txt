@@ -1,0 +1,7 @@
+import java.nio.ByteBuffer;
+    @Converter
+    public static ByteBuffer convertToByteBuffer(StreamCache cache, Exchange exchange) throws IOException {
+        byte[] array = convertToByteArray(cache, exchange);
+        return ByteBuffer.wrap(array);
+    }
+

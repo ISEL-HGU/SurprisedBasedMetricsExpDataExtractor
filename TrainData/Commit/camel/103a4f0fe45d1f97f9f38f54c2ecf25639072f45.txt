@@ -1,0 +1,2 @@
+ b/components/camel-spring-boot/src/test/java/org/apache/camel/spring/boot/actuate/health/MyCamelRoute.java
+package org.apache.camel.spring.boot.actuate.health;

@@ -1,0 +1,11 @@
+ * {@link #remove(String)} method will update the local cache and broadcast the change in state on a Kafka topic to
+ * other instances. The cache is back-filled from the topic by a Kafka consumer.
+ * The topic used must be unique per logical repository (i.e. two routes de-duplicate using different repositories,
+ * and different topics).
+ *
+ * This class makes no assumptions about the number of partitions (it is designed to consume from all at the
+ * same time), or replication factor of the topic.
+ *
+ * Each repository instance that uses the topic (e.g. typically on different machines running in parallel) controls its own
+ * consumer group, so in a cluster of 10 camel processes using the same topic each will control its own offset.
+ * latest state. The cache will not be considered warmed up until one poll of {@link #pollDurationMs} in length

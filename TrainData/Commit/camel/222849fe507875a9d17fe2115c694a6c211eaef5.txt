@@ -1,0 +1,17 @@
+                // lets use Camel's injector so the class has some support for dependency injection
+                Object builder = camelContext.getInjector().newInstance(routeClazz);
+                if (builder instanceof RouteBuilder) {
+                    getRouteBuilders().add((RouteBuilder) builder);
+                } else {
+                    LOG.warn("Class {} is not a RouteBuilder class", routeClazz);
+                }
+    public void addRouteBuilder(Class routeBuilder) {
+        String existing = routeBuilderClasses;
+        if (existing != null) {
+            existing = existing  ","  routeBuilder.getName();
+        } else {
+            existing = routeBuilder.getName();
+        }
+        setRouteBuilderClasses(existing);
+    }
+

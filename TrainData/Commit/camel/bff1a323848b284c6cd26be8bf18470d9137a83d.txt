@@ -1,0 +1,2 @@
+        int port = u.getPort();
+        String hostHeader = u.getHost()  (port == 80 || port == -1 ? "" : ":"  u.getPort());

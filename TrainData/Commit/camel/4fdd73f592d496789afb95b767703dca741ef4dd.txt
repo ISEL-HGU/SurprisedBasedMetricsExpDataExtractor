@@ -1,0 +1,5 @@
+    public long getDiscarded() {
+        return processor.getStatistics().getDiscarded();
+    }
+
+    @Override

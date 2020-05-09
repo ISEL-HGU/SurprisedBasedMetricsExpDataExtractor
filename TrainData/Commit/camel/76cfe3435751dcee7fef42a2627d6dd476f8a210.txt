@@ -1,0 +1,47 @@
+     * The timeout in milliseconds used when requesting a connection from the
+     * connection manager. A timeout value of zero is interpreted as an infinite
+     * timeout. A timeout value of zero is interpreted as an infinite timeout. A
+     * negative value is interpreted as undefined (system default). Default:
+     * code -1
+     */
+    private Integer connectionRequestTimeout = -1;
+    /**
+     * Determines the timeout in milliseconds until a connection is established.
+     * A timeout value of zero is interpreted as an infinite timeout. A timeout
+     * value of zero is interpreted as an infinite timeout. A negative value is
+     * interpreted as undefined (system default). Default: code -1
+     */
+    private Integer connectTimeout = -1;
+    /**
+     * Defines the socket timeout (SO_TIMEOUT) in milliseconds, which is the
+     * timeout for waiting for data or, put differently, a maximum period
+     * inactivity between two consecutive data packets). A timeout value of zero
+     * is interpreted as an infinite timeout. A negative value is interpreted as
+     * undefined (system default). Default: code -1
+     */
+    private Integer socketTimeout = -1;
+    /**
+    public Integer getConnectionRequestTimeout() {
+        return connectionRequestTimeout;
+    }
+
+    public void setConnectionRequestTimeout(Integer connectionRequestTimeout) {
+        this.connectionRequestTimeout = connectionRequestTimeout;
+    }
+
+    public Integer getConnectTimeout() {
+        return connectTimeout;
+    }
+
+    public void setConnectTimeout(Integer connectTimeout) {
+        this.connectTimeout = connectTimeout;
+    }
+
+    public Integer getSocketTimeout() {
+        return socketTimeout;
+    }
+
+    public void setSocketTimeout(Integer socketTimeout) {
+        this.socketTimeout = socketTimeout;
+    }
+

@@ -1,0 +1,18 @@
+    @UriParam
+    private boolean noEcho;
+    
+    /**
+     * Turn off echo. If supported by the gnatsd version you are connecting 
+     * to this flag will prevent the server from echoing messages back 
+     * to the connection if it has subscriptions on the subject being published to.
+     */
+    public boolean getNoEcho() {
+        return noEcho;
+    }
+
+    public void setNoEcho(boolean noEcho) {
+        this.noEcho = noEcho;
+    }
+        if (getNoEcho()) {
+            builder.noEcho();
+        }

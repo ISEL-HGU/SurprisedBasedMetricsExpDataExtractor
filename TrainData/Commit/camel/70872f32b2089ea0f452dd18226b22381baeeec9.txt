@@ -1,0 +1,19 @@
+        server = createServer();
+    }
+
+    protected Server createServer() throws Exception {
+        ServerFactoryBean svrBean = cxfEndpoint.createServerFactoryBean();
+        svrBean.setInvoker(new CxfConsumerInvoker(cxfEndpoint));
+        Server server = svrBean.create();
+        // Apply the server configurer if it is possible
+        if (ObjectHelper.isNotEmpty(cxfEndpoint.getPublishedEndpointUrl())) {
+            server.getEndpoint().getEndpointInfo().setProperty("publishedEndpointUrl", cxfEndpoint.getPublishedEndpointUrl());
+        return server;
+        if (server == null) {
+            server = createServer();
+        }
+        if (server != null) {
+            server.stop();
+            server.destroy();
+            server = null;
+        }

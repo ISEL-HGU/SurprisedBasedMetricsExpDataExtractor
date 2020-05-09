@@ -1,0 +1,1 @@
+                distributionRatioList.add(Integer.parseInt(ratio.trim()));

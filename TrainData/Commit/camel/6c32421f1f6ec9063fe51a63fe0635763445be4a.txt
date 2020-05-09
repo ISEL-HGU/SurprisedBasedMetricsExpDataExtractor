@@ -1,0 +1,9 @@
+import org.apache.camel.support.DefaultConsumer;
+    private volatile Processor onExchangeProcessor;
+        this.onExchangeProcessor = processor;
+
+        Consumer answer = new DefaultConsumer(this, processor);
+        // now fire the consumer
+        if (onExchangeProcessor != null) {
+            onExchangeProcessor.process(exchange);
+        }

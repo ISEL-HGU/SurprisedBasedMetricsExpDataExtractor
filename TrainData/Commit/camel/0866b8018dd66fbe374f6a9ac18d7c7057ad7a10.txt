@@ -1,0 +1,11 @@
+    @UriParam(optionalPrefix = "consumer.", enums = "none,spring,quartz",
+            defaultValue = "none", label = "consumer,scheduler", description = "To use a cron scheduler from either camel-spring or camel-quartz component")
+            description = "To configure additional properties when using a custom scheduler or any of the Quartz, Spring based scheduler.")
+                // special for scheduler if its "spring" or "quartz"
+            } else if ("quartz".equals(schedulerName)) {
+                // special for scheduler if its "spring" or "quartz"
+     * there is a Quartz, and Spring based which supports CRON expressions.
+     * and scheduledExecutorService may not be in use. Use the text quartz to refer to use the Quartz scheduler;
+     * by its id in the Registry. See Quartz page for an example.
+     * either <tt>spring</tt>, or <tt>quartz</tt>. Using <tt>none</tt> refers to no scheduler to be used.
+     * To configure additional properties when using a custom scheduler or any of the Quartz, Spring based scheduler.

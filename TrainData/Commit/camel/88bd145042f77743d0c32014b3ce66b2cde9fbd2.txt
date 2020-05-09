@@ -1,0 +1,6 @@
+import io.ipfs.multihash.Multihash;
+import io.nessus.ipfs.client.IPFSClient;
+
+    static long defaultTimeout = 10000L;
+            return future.get(defaultTimeout, TimeUnit.MILLISECONDS);
+            return future.get(defaultTimeout, TimeUnit.MILLISECONDS);

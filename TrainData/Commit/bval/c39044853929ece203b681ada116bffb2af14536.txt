@@ -1,0 +1,6 @@
+    private final boolean parametersAreConstrained;
+    private final boolean returnValueIsConstrained;
+        parametersAreConstrained = parameters.stream().anyMatch(DescriptorManager::isConstrained) || crossParameter.hasConstraints();
+        returnValueIsConstrained = DescriptorManager.isConstrained(returnValue);
+        return parametersAreConstrained;
+        return returnValueIsConstrained;

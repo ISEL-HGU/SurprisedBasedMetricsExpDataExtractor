@@ -1,0 +1,5 @@
+import java.util.Map;
+     * here. If not provided, a default configuration is used.
+    private Map<String, String> configurations;
+    public Map<String, String> getConfigurations() {
+    public void setConfigurations(Map<String, String> configurations) {

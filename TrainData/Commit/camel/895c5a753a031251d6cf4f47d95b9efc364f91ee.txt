@@ -1,0 +1,2 @@
+     * <p/>
+     * The schema name must be lowercase, it may contain dashes as well. For example: robot-framework.

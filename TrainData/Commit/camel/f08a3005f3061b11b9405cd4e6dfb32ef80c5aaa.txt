@@ -1,0 +1,4 @@
+    private static final ServiceHealth DEFAULT_SERVICE_HEALTH = new DefaultServiceHealth();
+
+        this(name, host, port, null, DEFAULT_SERVICE_HEALTH);
+        this(name, host, port, meta, DEFAULT_SERVICE_HEALTH);

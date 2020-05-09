@@ -1,0 +1,38 @@
+import org.apache.camel.support.jsse.ClientAuthentication;
+    
+    private String clientAuthentication;
+    
+    /**
+     * Gets the configuration options for server-side client-authentication requirements. The value is
+     * either null or one of NONE, WANT, REQUIRE.
+     */
+    public String getClientAuthentication() {
+        return clientAuthentication;
+    }
+
+    /**
+     * Sets the configuration options for server-side client-authentication requirements.
+     * The value must be one of NONE, WANT, REQUIRE.
+     * 
+     * @param value the desired configuration options or {@code null} to use the defaults
+     */
+    public void setClientAuthentication(String clientAuthentication) {
+        this.clientAuthentication = clientAuthentication;
+    }
+    
+    public boolean isClientAuthenticationRequired() {
+        return clientAuthentication != null 
+            && ClientAuthentication.valueOf(clientAuthentication) == ClientAuthentication.REQUIRE;
+    }
+    
+    public boolean isClientAuthenticationWanted() {
+        return clientAuthentication != null 
+            && ClientAuthentication.valueOf(clientAuthentication) == ClientAuthentication.WANT;
+    }
+    
+
+    /*
+    public DTLSConnector createDTLSConnector() {
+        
+    }
+    */

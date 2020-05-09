@@ -1,0 +1,5 @@
+                    final boolean contentTypeHeader = this.contentTypeHeader == null || this.contentTypeHeader;
+                    try {
+                        setProperty(routeContext.getCamelContext(), dataFormat, "contentTypeHeader", contentTypeHeader);
+                    } catch (Exception e) {
+                        // ignore as this option is optional and not all data formats support this

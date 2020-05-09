@@ -1,0 +1,4 @@
+import org.apache.camel.util.LRUCacheFactory;
+    private LRUCache<Class<?>, MBeanAttributesAndOperations> cache;
+    @SuppressWarnings("unchecked")
+        cache = LRUCacheFactory.newLRUWeakCache(1000);

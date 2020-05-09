@@ -1,0 +1,2 @@
+ b/components/camel-websocket-jsr356/src/main/java/org/apache/camel/websocket/jsr356/ServletIntegration.java
+package org.apache.camel.websocket.jsr356;

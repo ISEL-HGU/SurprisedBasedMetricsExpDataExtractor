@@ -1,0 +1,6 @@
+        if (value < min) {
+            return 0.f;
+        }
+        if (value > max) {
+            return 1.f;
+        }

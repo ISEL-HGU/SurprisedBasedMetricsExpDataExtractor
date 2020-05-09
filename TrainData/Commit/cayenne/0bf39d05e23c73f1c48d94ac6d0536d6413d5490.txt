@@ -1,0 +1,6 @@
+import javax.swing.JOptionPane;
+            JOptionPane.showMessageDialog(
+                    Application.getFrame(),
+                    ex.getMessage(),
+                    "Error loading schemas dialog",
+                    JOptionPane.ERROR_MESSAGE);

@@ -1,0 +1,2 @@
+     * earliest : automatically reset the offset to the earliest offset
+     * latest : automatically reset the offset to the latest offset

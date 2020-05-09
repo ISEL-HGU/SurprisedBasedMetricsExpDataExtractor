@@ -1,0 +1,10 @@
+import java.util.Set;
+    private Tracer tracer;
+            Set<Tracer> tracers = camelContext.getRegistry().findByType(Tracer.class);
+            if (tracers.size() == 1) {
+                tracer = tracers.iterator().next();
+            }
+        }
+
+        if (tracer == null) {
+            // fallback to the global tracer if no tracers are configured

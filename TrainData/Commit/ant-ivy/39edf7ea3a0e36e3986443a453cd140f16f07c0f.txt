@@ -1,0 +1,4 @@
+            final StringBuilder sb = new StringBuilder();
+            for (int component : components) {
+                if (sb.length() > 0) {
+                sb.append(component);

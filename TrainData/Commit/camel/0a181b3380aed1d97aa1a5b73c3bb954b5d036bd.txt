@@ -1,0 +1,28 @@
+import org.apache.camel.spi.ClassResolver;
+import org.apache.camel.spi.Debugger;
+import org.apache.camel.spi.FactoryFinderResolver;
+import org.apache.camel.spi.MessageHistoryFactory;
+import org.apache.camel.spi.ModelJAXBContextFactory;
+import org.apache.camel.spi.NodeIdFactory;
+import org.apache.camel.spi.ProcessorFactory;
+import org.apache.camel.spi.ReactiveExecutor;
+import org.apache.camel.spi.ThreadPoolFactory;
+        registerPropertyForBeanType(registry, ModelJAXBContextFactory.class, camelContext.adapt(ExtendedCamelContext.class)::setModelJAXBContextFactory);
+        registerPropertyForBeanType(registry, ClassResolver.class, camelContext::setClassResolver);
+        registerPropertyForBeanType(registry, FactoryFinderResolver.class, camelContext.adapt(ExtendedCamelContext.class)::setFactoryFinderResolver);
+        registerPropertyForBeanType(registry, RouteController.class, camelContext::setRouteController);
+        registerPropertyForBeanType(registry, UuidGenerator.class, camelContext::setUuidGenerator);
+        registerPropertyForBeanType(registry, ExecutorServiceManager.class, camelContext::setExecutorServiceManager);
+        registerPropertyForBeanType(registry, ThreadPoolFactory.class, camelContext.getExecutorServiceManager()::setThreadPoolFactory);
+        registerPropertyForBeanType(registry, ProcessorFactory.class, camelContext.adapt(ExtendedCamelContext.class)::setProcessorFactory);
+        registerPropertyForBeanType(registry, Debugger.class, camelContext::setDebugger);
+        registerPropertyForBeanType(registry, NodeIdFactory.class, camelContext.adapt(ExtendedCamelContext.class)::setNodeIdFactory);
+        registerPropertyForBeanType(registry, MessageHistoryFactory.class, camelContext::setMessageHistoryFactory);
+        registerPropertyForBeanType(registry, ReactiveExecutor.class, camelContext::setReactiveExecutor);
+        registerPropertyForBeanType(registry, ShutdownStrategy.class, camelContext::setShutdownStrategy);
+        registerPropertiesForBeanTypes(registry, EndpointStrategy.class, camelContext.adapt(ExtendedCamelContext.class)::registerEndpointCallback);
+        registerPropertiesForBeanTypes(registry, CamelClusterService.class, addServiceToContext(camelContext));
+        registerPropertiesForBeanTypes(registry, RoutePolicyFactory.class, camelContext::addRoutePolicyFactory);
+        // SSL context parameters
+
+        // health check

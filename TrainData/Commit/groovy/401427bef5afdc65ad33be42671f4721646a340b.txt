@@ -1,0 +1,22 @@
+        if (null == call) return;
+        if (null == receiver) return;
+        if (null == argumentList) return;
+
+        if (null == argumentExpressionList) return;
+
+        boolean noMethodReferenceParams = argumentExpressionList.stream().noneMatch(e -> e instanceof MethodReferenceExpression);
+        if (noMethodReferenceParams) {
+            return;
+        }
+
+        MethodNode selectedMethod = call.getNodeMetaData(StaticTypesMarker.DIRECT_METHOD_CALL_TARGET);
+        if (null == selectedMethod) return;
+        Parameter[] parameters = selectedMethod.getParameters();
+            LambdaExpression constructedLambdaExpression = constructLambdaExpressionForMethodReference(paramType);
+            newArgumentExpressionList.add(constructedLambdaExpression);
+    private LambdaExpression constructLambdaExpressionForMethodReference(ClassNode paramType) {
+        Parameter[] newParameters = createParametersForConstructedLambdaExpression(paramType);
+        return new LambdaExpression(newParameters, block());
+    }
+
+    private Parameter[] createParametersForConstructedLambdaExpression(ClassNode functionalInterfaceType) {

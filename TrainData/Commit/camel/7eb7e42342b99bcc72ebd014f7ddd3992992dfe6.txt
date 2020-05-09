@@ -1,0 +1,15 @@
+                        String type = param.getDataType() != null ? param.getDataType() : verb.getType();
+                        if (type != null) {
+                            if (type.endsWith("[]")) {
+                                type = type.substring(0, type.length() - 2);
+                                Property prop = modelTypeAsProperty(type, swagger);
+                                String ref = modelTypeAsRef(type, swagger);
+                                } else {
+                                    Property prop = modelTypeAsProperty(type, swagger);
+                                    if (prop != null) {
+                                        ModelImpl model = new ModelImpl();
+                                        model.setFormat(prop.getFormat());
+                                        model.setType(prop.getType());
+                                        bp.setSchema(model);
+                                    }
+            } else if ("string".equalsIgnoreCase(typeName) || "java.lang.String".equals(typeName)) {

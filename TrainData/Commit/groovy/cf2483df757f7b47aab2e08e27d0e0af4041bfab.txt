@@ -1,0 +1,18 @@
+        methodCallExpression.putNodeMetaData(IS_COMMAND_EXPRESSION, true);
+
+        validateExpressionListElement(ctx, expression);
+
+    private void validateExpressionListElement(ExpressionListElementContext ctx, Expression expression) {
+        if (!(expression instanceof MethodCallExpression && isTrue(expression, IS_COMMAND_EXPRESSION))) {
+            return;
+        }
+
+        // statements like `foo(String a)` is invalid
+        MethodCallExpression methodCallExpression = (MethodCallExpression) expression;
+        String methodName = methodCallExpression.getMethodAsString();
+        if (Character.isUpperCase(methodName.codePointAt(0)) || PRIMITIVE_TYPE_SET.contains(methodName)) {
+            throw createParsingFailedException("Invalid method declaration", ctx);
+        }
+    }
+
+    private static final String IS_COMMAND_EXPRESSION = "_IS_COMMAND_EXPRESSION";

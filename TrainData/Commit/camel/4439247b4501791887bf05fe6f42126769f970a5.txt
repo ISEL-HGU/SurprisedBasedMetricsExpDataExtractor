@@ -1,0 +1,36 @@
+import java.util.List;
+
+import org.snmp4j.util.DefaultPDUFactory;
+import org.snmp4j.util.TreeEvent;
+import org.snmp4j.util.TreeUtils;
+        if (!endpoint.isTreeList()) {
+            // prepare the request items
+            for (OID oid : this.endpoint.getOids()) {
+                this.pdu.add(new VariableBinding(oid));
+            }
+        } else {
+            TreeUtils treeUtils = new TreeUtils(snmp, new DefaultPDUFactory());
+            for (OID oid : this.endpoint.getOids()) {
+                List events = treeUtils.getSubtree(target, new OID(oid));
+                for (Object eventObj : events) {
+                    TreeEvent event = (TreeEvent) eventObj;
+                    if (event == null) {
+                        LOG.warn("Event is null");
+                        continue;
+                    }
+                    if (event.isError()) {
+                        LOG.error("Error in event: {}", event.getErrorMessage());
+                        continue;
+                    }
+                    VariableBinding[] varBindings = event.getVariableBindings();
+                    if (varBindings == null || varBindings.length == 0) {
+                        continue;
+                    }
+                    for (VariableBinding varBinding : varBindings) {
+                        if (varBinding == null) {
+                            continue;
+                        }
+                        this.pdu.add(varBinding);
+                    }
+                }
+            }

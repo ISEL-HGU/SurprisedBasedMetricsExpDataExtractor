@@ -1,0 +1,5 @@
+                    boolean special = "camel-core-osgi".equals(dir.getName())
+                        || "camel-jetty-common".equals(dir.getName());
+                    boolean special2 = "camel-linkedin".equals(dir.getName())
+                        || "camel-salesforce".equals(dir.getName());
+                    if (special || special2) {

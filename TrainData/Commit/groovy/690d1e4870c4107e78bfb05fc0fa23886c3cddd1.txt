@@ -1,0 +1,7 @@
+        for (Map.Entry<Integer, List<AnnotationNode>> entry : replacements.entrySet()) {
+            Integer replacementIndex = entry.getKey();
+            List<AnnotationNode> annotationNodeList = entry.getValue();
+            mergeCollectedAnnotations(modes.get(replacementIndex), existing, annotationNodeList);
+            existing.put(replacementIndex, annotationNodeList);
+            for (Map.Entry<Integer, List<AnnotationNode>> entry : existingMap.entrySet()) {
+                for (AnnotationNode existing : entry.getValue()) {

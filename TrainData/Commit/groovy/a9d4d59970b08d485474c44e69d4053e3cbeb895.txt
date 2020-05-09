@@ -1,0 +1,2 @@
+ b/subprojects/groovy-swing/src/test/groovy/groovy/swing/StrangeEventListener.java
+package groovy.swing;

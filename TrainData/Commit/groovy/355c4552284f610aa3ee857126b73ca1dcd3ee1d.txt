@@ -1,0 +1,8 @@
+        validatePhase(phase);
+        validatePhase(phase);
+    private static void validatePhase(int phase) {
+    }
+
+    public void addFirstPhaseOperation(PrimaryClassNodeOperation op, int phase) {
+        validatePhase(phase);
+        validatePhase(phase);

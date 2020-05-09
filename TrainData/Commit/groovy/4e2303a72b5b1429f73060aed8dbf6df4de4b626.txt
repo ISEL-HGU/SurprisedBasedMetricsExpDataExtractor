@@ -1,0 +1,11 @@
+        StringBuilder sb = new StringBuilder();
+        for (String next : classpath.list()) {
+            if (sb.length() > 0) {
+                sb.append(File.pathSeparatorChar);
+            }
+            if (next.startsWith(baseDir)) {
+                sb.append(".").append(next.substring(baseDir.length()));
+            } else {
+                sb.append(next);
+            }
+        return sb.toString();

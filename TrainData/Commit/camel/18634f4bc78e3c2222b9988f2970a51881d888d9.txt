@@ -1,0 +1,5 @@
+ b/components/camel-aws/src/main/java/org/apache/camel/component/aws/s3/client/impl/S3ClientStandardImpl.java
+import org.apache.camel.component.aws.s3.client.S3Client;
+public class S3ClientStandardImpl implements S3Client {
+    private static final Logger LOG = LoggerFactory.getLogger(S3ClientStandardImpl.class);
+    public S3ClientStandardImpl(S3Configuration configuration, int maxConnections) {

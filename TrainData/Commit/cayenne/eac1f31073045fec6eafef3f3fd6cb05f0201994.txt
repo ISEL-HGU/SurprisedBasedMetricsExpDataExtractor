@@ -1,0 +1,22 @@
+import org.apache.cayenne.exp.ExpressionFactory;
+import org.apache.cayenne.exp.Property;
+import org.apache.cayenne.query.ObjectSelect;
+        SelectQuery<UuidTestEntity> q = new SelectQuery<>(UuidTestEntity.class);
+
+    @Test
+    public void testUUIDColumnSelect() throws Exception {
+        UuidTestEntity test = context.newObject(UuidTestEntity.class);
+        UUID id = UUID.randomUUID();
+        test.setUuid(id);
+        context.commitChanges();
+
+        UUID readValue = ObjectSelect.query(UuidTestEntity.class)
+                .column(UuidTestEntity.UUID).selectOne(context);
+
+        assertEquals(id, readValue);
+
+        UUID readValue2 = ObjectSelect.query(UuidTestEntity.class)
+                .column(Property.create(ExpressionFactory.dbPathExp("UUID"), UUID.class)).selectOne(context);
+
+        assertEquals(id, readValue2);
+    }

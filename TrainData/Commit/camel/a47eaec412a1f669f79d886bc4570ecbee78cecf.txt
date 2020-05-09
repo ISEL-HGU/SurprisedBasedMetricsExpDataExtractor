@@ -1,0 +1,12 @@
+ b/examples/camel-example-telegram/src/main/java/org/apache/camel/example/telegram/usage/LiveLocationUsage.java
+import org.apache.camel.component.telegram.model.StopMessageLiveLocationMessage;
+public class LiveLocationUsage implements TelegramMethodUsage {
+        long messageId = firstLocationMessage.getMessage().getMessageId();
+
+        for (int i = 0; i < 3; i) {
+            liveLocationMessage.setMessageId(messageId);
+
+        StopMessageLiveLocationMessage stopLiveLocationMessage = new StopMessageLiveLocationMessage();
+        stopLiveLocationMessage.setMessageId(messageId);
+        MessageResult stopMessage = template.requestBody("direct:start", stopLiveLocationMessage, MessageResult.class);
+        System.out.println(stopMessage);

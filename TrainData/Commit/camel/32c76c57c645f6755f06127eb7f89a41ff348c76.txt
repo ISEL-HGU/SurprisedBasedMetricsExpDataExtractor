@@ -1,0 +1,7 @@
+     * It's used to construct uniVocity {@link com.univocity.parsers.fixed.FixedWidthFields} instance.
+     * It's used to construct uniVocity {@link com.univocity.parsers.fixed.FixedWidthFields} instance.
+        return new FixedWidthWriterSettings(createFixedWidthFields());
+        return new FixedWidthParserSettings(createFixedWidthFields());
+     * Creates the {@link com.univocity.parsers.fixed.FixedWidthFields} instance based on the headers and field
+     * @return new {@code FixedWidthFields} based on the header and field lengths.
+    private FixedWidthFields createFixedWidthFields() {

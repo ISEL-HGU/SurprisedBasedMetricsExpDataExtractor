@@ -1,0 +1,25 @@
+import java.io.IOException;
+import java.util.List;
+
+        return ",";
+
+    @Override
+    public void appendAsString(Appendable out) throws IOException {
+        out.append(getFunctionName());
+        if(parent == null) {
+            // else call to super method will append parenthesis
+            out.append("(");
+        }
+        super.appendAsString(out);
+        if(parent == null) {
+            out.append(")");
+        }
+    }
+
+    @Override
+    public void appendAsEJBQL(List<Object> parameterAccumulator, Appendable out, String rootId) throws IOException {
+        out.append(getFunctionName());
+        out.append("(");
+        super.appendChildrenAsEJBQL(parameterAccumulator, out, rootId);
+        out.append(")");
+    }

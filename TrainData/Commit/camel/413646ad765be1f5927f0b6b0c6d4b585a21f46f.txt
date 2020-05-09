@@ -1,0 +1,4 @@
+     * @param start whether it should start immediately
+    public StopWatch(boolean start) {
+        if (start) {
+            this.start = System.currentTimeMillis();

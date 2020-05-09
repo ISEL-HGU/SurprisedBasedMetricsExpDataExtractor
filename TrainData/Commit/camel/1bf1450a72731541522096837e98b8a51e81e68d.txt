@@ -1,0 +1,3 @@
+ b/components/camel-zookeeper/src/test/java/org/apache/camel/component/zookeeper/ha/ZooKeeperClusteredRoutePolicyFactoryMain.java
+public final class ZooKeeperClusteredRoutePolicyFactoryMain {
+    private ZooKeeperClusteredRoutePolicyFactoryMain() {

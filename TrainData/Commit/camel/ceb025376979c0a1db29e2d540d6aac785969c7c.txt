@@ -1,0 +1,105 @@
+import java.util.Objects;
+            autoConfigurationFailFast(camelContext);
+    protected void autoConfigurationFailFast(CamelContext camelContext) throws Exception {
+        // load properties
+        Properties prop = camelContext.getPropertiesComponent().loadProperties();
+        LOG.debug("Properties from Camel properties component:");
+        for (String key : prop.stringPropertyNames()) {
+            LOG.debug("    {}={}", key, prop.getProperty(key));
+        }
+
+        // load properties from ENV (override existing)
+        Properties propENV = loadEnvironmentVariablesAsProperties(new String[]{"camel.main."});
+        if (!propENV.isEmpty()) {
+            prop.putAll(propENV);
+            LOG.debug("Properties from OS environment variables:");
+            for (String key : propENV.stringPropertyNames()) {
+                LOG.debug("    {}={}", key, propENV.getProperty(key));
+            }
+        }
+
+        // special for fail-fast as we need to know this early before we set all the other options
+        Object failFast = propENV.remove("camel.main.autoconfigurationfailfast");
+        if (failFast != null) {
+            PropertyBindingSupport.bindMandatoryProperty(camelContext, mainConfigurationProperties, "autoConfigurationFailFast", failFast, true);
+        }
+    }
+
+
+        // TODO: Log which options was not set
+        Map<String, Object> properties = new LinkedHashMap<>();
+                properties.put(optionKey(option), value);
+            LOG.info("Auto configuring properties component from loaded properties: {}", properties.size());
+            setPropertiesOnTarget(camelContext, camelContext.getPropertiesComponent(), properties, mainConfigurationProperties.isAutoConfigurationFailFast(), true);
+        // log which options was not set
+        if (!properties.isEmpty()) {
+            properties.forEach((k, v) -> {
+                LOG.warn("Property not auto configured: camel.component.properties.{}={} on object: {}", k, v, camelContext.getPropertiesComponent());
+            });
+
+        // log which options was not set
+        if (!properties.isEmpty()) {
+            properties.forEach((k, v) -> {
+                LOG.warn("Property not auto configured: camel.main.{}={} on object: {}", k, v, config);
+            });
+        }
+        Map<PropertyOptionKey, Map<String, Object>> properties = new LinkedHashMap<>();
+                PropertyOptionKey pok = new PropertyOptionKey(key, component);
+                Map<String, Object> values = properties.getOrDefault(pok, new LinkedHashMap<>());
+                properties.put(pok, values);
+                PropertyOptionKey pok = new PropertyOptionKey(key, dataformat);
+                Map<String, Object> values = properties.getOrDefault(pok, new LinkedHashMap<>());
+                properties.put(pok, values);
+                PropertyOptionKey pok = new PropertyOptionKey(key, language);
+                Map<String, Object> values = properties.getOrDefault(pok, new LinkedHashMap<>());
+                properties.put(pok, values);
+        // TODO: Better error if setting some property fails
+        for (PropertyOptionKey pok : properties.keySet()) {
+            Map<String, Object> values = properties.get(pok);
+            setPropertiesOnTarget(camelContext, pok.getInstance(), values, mainConfigurationProperties.isAutoConfigurationFailFast(), true);
+        // log which options was not set
+        if (!properties.isEmpty()) {
+            for (PropertyOptionKey pok : properties.keySet()) {
+                Map<String, Object> values = properties.get(pok);
+                values.forEach((k, v) -> {
+                    LOG.warn("Property not auto configured: {}={} on object: {}", pok.getKey(), v, pok.getInstance());
+                });
+            }
+        }
+    private static class PropertyOptionKey {
+
+        private final String key;
+        private final Object instance;
+
+        private PropertyOptionKey(String key, Object instance) {
+            this.key = key;
+            this.instance = instance;
+        }
+
+        public String getKey() {
+            return key;
+        }
+
+        public Object getInstance() {
+            return instance;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
+            PropertyOptionKey that = (PropertyOptionKey) o;
+            return key.equals(that.key) &&
+                    instance.equals(that.instance);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(key, instance);
+        }
+    }
+

@@ -1,0 +1,4 @@
+import org.elasticsearch.action.DocWriteRequest;
+        if (!(objBody instanceof DocWriteRequest[])) {
+            throw new InvalidPayloadRuntimeException(newExchange, DocWriteRequest[].class);
+        DocWriteRequest[] newBody = (DocWriteRequest[]) objBody;

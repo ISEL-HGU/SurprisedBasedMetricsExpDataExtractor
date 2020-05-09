@@ -1,0 +1,7 @@
+
+            // we are completed so do that work outside the lock
+            if (aggregated != null) {
+                for (Exchange agg : aggregated) {
+                    onSubmitCompletion(key, agg);
+                }
+            }

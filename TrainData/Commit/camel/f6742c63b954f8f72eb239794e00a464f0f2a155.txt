@@ -1,0 +1,6 @@
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfigureBefore;
+@AutoConfigureBefore(CamelAutoConfiguration.class)
+    @Autowired
+    private HealthCheckRoutesConfiguration configuration;
+    public HealthCheckRepository routesHealthCheckRepository() {

@@ -1,0 +1,24 @@
+import static org.codehaus.groovy.syntax.Types.COMPARE_NOT_IN;
+import static org.codehaus.groovy.syntax.Types.COMPARE_NOT_INSTANCEOF;
+import static org.codehaus.groovy.syntax.Types.ELVIS_EQUAL;
+            int op = expression.getOperation().getType();
+            ClassNode resultType = (op==KEYWORD_IN || op==COMPARE_NOT_IN)
+            if (op==KEYWORD_IN || op==COMPARE_NOT_IN) {
+            } else if (op == KEYWORD_INSTANCEOF || op == COMPARE_NOT_INSTANCEOF) {
+            ErrorCollector collector = (ErrorCollector) node.getNodeMetaData(ERROR_COLLECTOR);
+            if (collector != null) {
+                typeCheckingContext.getErrorCollector().addCollectorContents(collector);
+            } else {
+                startMethodInference(node, typeCheckingContext.getErrorCollector());
+            }
+            node.removeNodeMetaData(ERROR_COLLECTOR);
+        Parameter[] params = selectedMethod!=null?selectedMethod.getParameters(): Parameter.EMPTY_ARRAY;
+        // to the target method with the closure argument and we have the
+        // SAM method that will be called inside the normal target method.
+        // time the SAM class is used in the target method parameter,
+        // and finally we apply the generics information to the parameters and
+            owners.add(0, Receiver.<String>make(clazzGT.getType()));
+        } else if ((expressionType.getModifiers()& Opcodes.ACC_FINAL)==0 && targetType.isInterface()) {
+        if (op == ASSIGN || op == ASSIGNMENT_OPERATOR || op == ELVIS_EQUAL) {
+        // if the sam type or closure type do not provide generics information,
+        // next we get the block parameter types and set the generics

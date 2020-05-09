@@ -1,0 +1,4 @@
+ * <b>Important: </b> This SPI is not intended to be used by Camel end users.
+ * <p/>
+    // TODO: Camel 3.0 make this an internal API
+

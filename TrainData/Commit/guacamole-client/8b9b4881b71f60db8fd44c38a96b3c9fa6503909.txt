@@ -1,0 +1,9 @@
+     *     The GuacamoleSocket to use to create the tunnel associated with this
+     *     connection record.
+     *
+     * @param connectionID
+     *     The connection ID assigned to this connection by guacd.
+     *
+    public GuacamoleTunnel assignGuacamoleTunnel(final GuacamoleSocket socket,
+            String connectionID) {
+            this.connectionID = connectionID;

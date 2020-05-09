@@ -1,0 +1,6 @@
+import org.apache.camel.component.jbpm.JBPMConstants;
+                @WidParameter(name = JBPMConstants.CAMEL_ENDPOINT_ID_WI_PARAM)
+                @WidResult(name = JBPMConstants.RESPONSE_WI_PARAM),
+                @WidResult(name = JBPMConstants.MESSAGE_WI_PARAM) },
+        result.put(JBPMConstants.RESPONSE_WI_PARAM, response);
+        result.put(JBPMConstants.MESSAGE_WI_PARAM, outMessage);

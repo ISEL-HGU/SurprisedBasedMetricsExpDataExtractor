@@ -1,0 +1,2 @@
+import org.apache.deltaspike.core.util.ProxyUtils;
+            LOG.info("Scheduler has been disabled by "  ProxyUtils.getUnproxiedClass(schedulerControl.getClass()));

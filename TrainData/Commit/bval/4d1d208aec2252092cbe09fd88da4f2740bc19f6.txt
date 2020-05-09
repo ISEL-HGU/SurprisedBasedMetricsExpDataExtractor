@@ -1,0 +1,3 @@
+        if (Boolean.TYPE.equals(m.getReturnType()) && isGetter(m.getName())) {
+        return !Void.TYPE.equals(m.getReturnType()) && isGetter(m.getName());
+        Validate.isTrue(isGetter(methodName), "%s does not represent a property getter", methodName);

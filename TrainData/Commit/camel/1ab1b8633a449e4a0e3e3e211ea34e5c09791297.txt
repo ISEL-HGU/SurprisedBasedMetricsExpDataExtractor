@@ -1,0 +1,3 @@
+            for (ConnectionFactory cf : connectionFactories) {
+                result.addConnectionFactory(cf);
+            }

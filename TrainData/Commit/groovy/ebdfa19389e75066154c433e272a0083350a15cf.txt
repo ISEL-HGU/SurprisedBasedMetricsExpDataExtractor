@@ -1,0 +1,6 @@
+        String typeName = type.getName();
+
+        if (genericParameterNames.get(typeName) != null) {
+            GenericsType gt = genericParameterNames.get(typeName);
+            type.setGenericsTypes(new GenericsType[]{ gt });
+        if (currentClass.getNameWithoutPackage().equals(typeName)) {

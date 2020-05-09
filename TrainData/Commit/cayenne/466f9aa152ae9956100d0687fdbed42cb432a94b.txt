@@ -1,0 +1,5 @@
+import java.sql.DatabaseMetaData;
+import java.sql.SQLException;
+
+ * @deprecated since 4.2
+@Deprecated

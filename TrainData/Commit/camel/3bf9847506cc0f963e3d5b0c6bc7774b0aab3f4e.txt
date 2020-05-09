@@ -1,0 +1,2 @@
+     *                       Important note : if the deadletter route throws an exception, it will be send again to DLQ
+     *                       until it succeed !

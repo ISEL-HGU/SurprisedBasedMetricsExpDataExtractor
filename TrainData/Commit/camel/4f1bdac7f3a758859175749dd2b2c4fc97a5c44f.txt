@@ -1,0 +1,16 @@
+        final List<SpringBootData> componentData = new ArrayList<>();
+        ComponentCallback callback = (componentName, name, type, javaType, description, defaultValue) -> {
+            // we want to use dash in the name
+            String dash = camelCaseToDash(name);
+            String key = "camel.component."  componentName  "."  dash;
+            componentData.add(new SpringBootData(key, springBootJavaType(javaType), description, defaultValue));
+        };
+        // perform the work with this callback
+        doExecute(callback);
+            // load camel-main metadata
+            String mainJson = loadCamelMainConfigurationMetadata();
+            if (mainJson == null) {
+                getLog().warn("Cannot load camel-main-configuration-metadata.json from within the camel-main JAR from the classpath."
+                         " Not possible to build spring boot configuration file for this project");
+                return;
+            }

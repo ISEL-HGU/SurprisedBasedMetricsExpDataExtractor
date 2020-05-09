@@ -1,0 +1,6 @@
+        // message history
+        // log mask
+        docComment = findJavaDoc(elementUtils, null, "logMask", null, classElement, true);
+        ep = new EipOption("logMask", "Log Mask", "attribute", "java.lang.String", false, "false", docComment, false, false, null, false, null, false);
+        eipOptions.add(ep);
+

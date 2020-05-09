@@ -1,0 +1,8 @@
+/**
+ * A utility class to parse out a URI into the settings necessary
+ * to create and establish a Guacamole connection.
+ */
+     * The default protocol to parse to if one is provided in
+     * the incoming URI..
+        int port = qcUri.getPort();
+        qcConfig.setParameter("port", Integer.toString(port));

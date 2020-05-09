@@ -1,0 +1,3 @@
+ * IEC 60870 component used for telecontrol (supervisory control and data
+ * acquisition) such as controlling electric power transmission grids and other
+ * geographically widespread control systems.

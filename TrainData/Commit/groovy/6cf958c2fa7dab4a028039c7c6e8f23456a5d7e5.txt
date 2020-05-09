@@ -1,0 +1,1 @@
+        addStaticTypeError("Cannot find matching method "  receiver.getText()  "#"  toMethodParametersString(name, args)  ". Please check if the declared type is correct and if the method exists.", call);

@@ -1,0 +1,10 @@
+ * Verify correct usage of generics.
+ * This includes:
+ * <ul>
+ * <li>class header (class and superclass declaration)</li>
+ * <li>arity of type parameters for fields, parameters, local variables</li>
+ * <li>invalid diamond &;t;&gt; usage</li>
+ * </ul>
+            // check nested type parameters
+            checkGenericsUsage(nType, nType.redirect());
+            // check bounds

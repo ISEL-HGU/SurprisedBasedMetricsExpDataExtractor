@@ -1,0 +1,1 @@
+            "Multiple method return values marked @%s in hierarchy %s", Valid.class.getSimpleName(), markedForCascade);

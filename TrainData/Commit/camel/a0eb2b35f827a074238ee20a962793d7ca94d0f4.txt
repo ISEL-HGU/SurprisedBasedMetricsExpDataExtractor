@@ -1,0 +1,13 @@
+     * Sets if the jgroups lock cluster service should be enabled or not, default is false.
+     */
+    private boolean enabled;
+
+    /**
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+

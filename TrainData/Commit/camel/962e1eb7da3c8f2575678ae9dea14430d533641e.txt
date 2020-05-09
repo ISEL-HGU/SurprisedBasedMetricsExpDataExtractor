@@ -1,0 +1,3 @@
+ *   <li>{@link #queryForInt(Object key) queryForInt(T key)}</li>
+ *   <li>{@link #insert(Object key) insert(T key)}</li>
+ *   <li>{@link #delete(Object key) delete(T key)}</li>

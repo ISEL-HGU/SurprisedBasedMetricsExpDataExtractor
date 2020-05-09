@@ -1,0 +1,4 @@
+        if (redirectGenericsTypes == null ||
+                (node.isGenericsPlaceHolder() && redirectGenericsTypes.length != parameterized.length) /* GROOVY-8609 */ ) {
+            redirectGenericsTypes = parameterized;
+        }

@@ -1,0 +1,3 @@
+import org.apache.camel.support.ResourceHelper;
+                if (path.matches("^[a-zA-Z]:(//).*$")) {
+                } else if (path.matches("^[a-zA-Z]:(\\\\).*$")) {

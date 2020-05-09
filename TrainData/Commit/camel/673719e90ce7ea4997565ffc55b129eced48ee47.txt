@@ -1,0 +1,1 @@
+                                throw new IllegalArgumentException("Cannot find getter method: "  part  " on bean: "  newClass  " when binding property: "  ognlPath);

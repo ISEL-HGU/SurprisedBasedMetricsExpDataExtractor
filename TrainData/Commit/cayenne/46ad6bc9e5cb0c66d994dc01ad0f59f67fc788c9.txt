@@ -1,0 +1,16 @@
+import java.util.List;
+
+import org.apache.cayenne.query.ObjectSelect;
+import org.apache.cayenne.testdo.enum_test.EnumEntity3;
+
+    @Test
+    public void testEnumMappedToChar() {
+        EnumEntity3 enumEntity3 = context.newObject(EnumEntity3.class);
+        enumEntity3.setEnumAttribute(Enum1.two);
+        context.commitChanges();
+
+        List<EnumEntity3> enumEntity3s = ObjectSelect.query(EnumEntity3.class)
+                .select(context);
+        assertEquals(1, enumEntity3s.size());
+        assertEquals(Enum1.two, enumEntity3s.get(0).getEnumAttribute());
+    }

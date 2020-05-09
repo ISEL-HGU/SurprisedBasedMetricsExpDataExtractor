@@ -1,0 +1,7 @@
+
+                        if (!isGenericsPlaceHolderOrArrayOf(originType)) { // the original type is not generics placeholder, use original type directly. See GROOVY-8439
+                            inferredType = originType;
+                        } else {
+                            addError("Expected parameter of type " inferredType.toString(false)" but got "originType.toString(false), closureParam.getType());
+                        }
+

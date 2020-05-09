@@ -1,0 +1,59 @@
+import org.apache.kudu.client.Update;
+          }else{
+            row.setNull(mappedColumn.getName());
+    try {
+      long count = 0;
+      Column pkc = kuduMapping.getPrimaryKey().get(0);
+      ColumnSchema column = table.getSchema().getColumn(pkc.getName());
+      KuduScanner.KuduScannerBuilder scannerBuilder = client.newScannerBuilder(table);
+      if (query.getLimit() != -1) {
+        scannerBuilder.limit(query.getLimit());
+      }
+      List<String> dbFields = new ArrayList<>();
+      dbFields.add(pkc.getName());
+      scannerBuilder.setProjectedColumnNames(dbFields);
+      List<KuduPredicate> rangePredicates = KuduClientUtils.createRangePredicate(column, query.getStartKey(), query.getEndKey());
+      for (KuduPredicate predicate : rangePredicates) {
+        scannerBuilder.addPredicate(predicate);
+      }
+      scannerBuilder.addPredicate(KuduPredicate.newIsNotNullPredicate(column));
+      KuduScanner build = scannerBuilder.build();
+      while (build.hasMoreRows()) {
+        RowResultIterator nextRows = build.nextRows();
+        for (RowResult it : nextRows) {
+          count;
+          K key = (K) KuduClientUtils.getObjectRow(it, pkc);
+          if (query.getFields() != null && query.getFields().length < kuduMapping.getFields().size()) {
+            Update updateOp = table.newUpdate();
+            PartialRow row = updateOp.getRow();
+            String[] avFields = getFieldsToQuery(query.getFields());
+            KuduClientUtils.addObjectRow(row, pkc, key);
+            for (String af : avFields) {
+              row.setNull(kuduMapping.getFields().get(af).getName());
+            }
+            session.apply(updateOp);
+          } else {
+            delete(key);
+          }
+        }
+      }
+      build.close();
+      return count;
+    } catch (Exception e) {
+      throw new GoraException(e);
+    }
+    if (kuduMapping.getRangePartitions().isEmpty()) {
+      PartitionQueryImpl<K, T> partitionQuery = new PartitionQueryImpl<>(
+          query);
+      partitionQuery.setConf(getConf());
+      partitions.add(partitionQuery);
+    } else {
+      for (Pair<String, String> rang : kuduMapping.getRangePartitions()) {
+        PartitionQueryImpl<K, T> partitionQuery = new PartitionQueryImpl<>(
+            query, rang.getKey().isEmpty() ? null : (K) rang.getKey(),
+            rang.getValue().isEmpty() ? null : (K) rang.getValue());
+        partitionQuery.setConf(getConf());
+        partitions.add(partitionQuery);
+
+      }
+    }

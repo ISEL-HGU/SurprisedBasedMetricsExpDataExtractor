@@ -1,0 +1,18 @@
+import java.util.Iterator;
+import java.util.Optional;
+    private static String nextAnonymousClassName(ClassNode outerClass) {
+        int anonymousClassCount = 0;
+        for (Iterator<InnerClassNode> it = outerClass.getInnerClasses(); it.hasNext();) {
+            InnerClassNode innerClass = it.next();
+            if (innerClass.isAnonymous()) {
+                anonymousClassCount = 1;
+            }
+        }
+
+        return outerClass.getName()  "$"  (anonymousClassCount  1);
+        ClassNode superClass = Objects.requireNonNull(ctx.getNodeMetaData(ANONYMOUS_INNER_CLASS_SUPER_CLASS), "superClass should not be null");
+        ClassNode outerClass = Optional.ofNullable(classNodeStack.peek()).orElse(moduleNode.getScriptClassDummy());
+        String innerClassName = nextAnonymousClassName(outerClass);
+            anonymousInnerClass = new EnumConstantClassNode(outerClass, innerClassName, superClass.getModifiers() | Opcodes.ACC_FINAL, superClass.getPlainNodeReference());
+            anonymousInnerClass = new InnerClassNode(outerClass, innerClassName, Opcodes.ACC_PUBLIC, superClass);
+        anonymousInnerClass.putNodeMetaData(CLASS_NAME, innerClassName);

@@ -1,0 +1,4 @@
+            Enumeration<URL> globalServices = loader.getResources("META-INF/groovy/org.codehaus.groovy.source.Extensions");
+            if (!globalServices.hasMoreElements()) {
+                globalServices = loader.getResources("META-INF/services/org.codehaus.groovy.source.Extensions");
+            }

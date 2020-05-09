@@ -1,0 +1,3 @@
+     * @param length length of substring
+     * @param length length of substring
+     * @param length length of substring must evaluate to int

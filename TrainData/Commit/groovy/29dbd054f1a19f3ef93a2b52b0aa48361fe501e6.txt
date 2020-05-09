@@ -1,0 +1,6 @@
+import org.codehaus.groovy.ast.expr.MethodCallExpression;
+        MethodCallExpression var = callX(varX(map), "get", nameArg);
+        var.setImplicitThis(false);
+        MethodCallExpression containsKey = callX(varX(map), "containsKey", nameArg);
+        containsKey.setImplicitThis(false);
+        return ifS(containsKey, useSetters ?

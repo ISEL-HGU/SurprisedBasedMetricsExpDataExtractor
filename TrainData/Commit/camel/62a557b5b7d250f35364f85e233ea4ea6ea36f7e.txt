@@ -1,0 +1,15 @@
+     * To use kerberos authentication, set the value of the
+     * 'java.security.krb5.conf' environment variable to an existing file. If
+     * the environment variable is already set, warn if different than the
+     * specified parameter
+     */
+    private String kerberosConfigFile;
+    /**
+    public String getKerberosConfigFile() {
+        return kerberosConfigFile;
+    }
+
+    public void setKerberosConfigFile(String kerberosConfigFile) {
+        this.kerberosConfigFile = kerberosConfigFile;
+    }
+

@@ -1,0 +1,5 @@
+import java.util.Arrays;
+import org.apache.cayenne.project.ProjectModule;
+        // compatibility module overrides XML loaders defined in ServerModule and
+        // upgrade services from ProjectModule
+        return Arrays.asList(ServerModule.class, ProjectModule.class);

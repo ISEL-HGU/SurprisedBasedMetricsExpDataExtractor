@@ -1,0 +1,3 @@
+                List<T> singleElementList = new ArrayList<T>();
+                singleElementList.add(elementType.cast(bean));
+                return singleElementList;

@@ -1,0 +1,2 @@
+     * List of property names (and field names if includeFields is true) to exclude from the equals and hashCode calculations.
+     * List of property names (and field names if includeFields is true) to include within the equals and hashCode calculations.

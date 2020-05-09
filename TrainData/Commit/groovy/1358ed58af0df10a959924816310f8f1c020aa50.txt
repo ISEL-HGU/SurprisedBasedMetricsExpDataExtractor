@@ -1,0 +1,13 @@
+                // GROOVY-5985
+                if (!isStatic && this.isMap) {
+                    ((Map) object).put(name, newValue);
+                    return;
+                }
+        // turn setProperty on a Map to put on the Map itself
+        //----------------------------------------------------------------------
+        if (method == null && !isStatic && this.isMap) {
+            ((Map) object).put(name, newValue);
+            return;
+        }
+
+        //----------------------------------------------------------------------

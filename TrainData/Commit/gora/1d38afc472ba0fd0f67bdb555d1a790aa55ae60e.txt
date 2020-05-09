@@ -1,0 +1,7 @@
+import org.apache.accumulo.core.client.mock.impl.MockTabletLocator;
+import org.apache.accumulo.core.conf.AccumuloConfiguration;
+import org.apache.accumulo.core.data.impl.KeyExtent;
+import org.apache.accumulo.core.client.impl.ClientContext;
+import org.apache.accumulo.core.client.impl.Credentials;
+        tl = TabletLocator.getLocator(new ClientContext(conn.getInstance(), credentials, AccumuloConfiguration.getTableConfiguration(conn, Tables.getTableId(conn.getInstance(), mapping.tableName))), new Text(Tables.getTableId(conn.getInstance(), mapping.tableName)));
+      while (tl.binRanges(new ClientContext(conn.getInstance(), credentials, AccumuloConfiguration.getTableConfiguration(conn, Tables.getTableId(conn.getInstance(), mapping.tableName))), Collections.singletonList(createRange(query)), binnedRanges).size() > 0) {

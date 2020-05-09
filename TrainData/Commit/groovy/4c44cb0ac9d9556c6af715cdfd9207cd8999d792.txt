@@ -1,0 +1,4 @@
+    private static final CommonCache<ClassLoader, Map<String, List<MethodNode>>> CACHE = new CommonCache<ClassLoader, Map<String, List<MethodNode>>>(new WeakHashMap<ClassLoader, Map<String, List<MethodNode>>>());
+        return CACHE.getAndPut(classLoader, new EvictableCache.ValueProvider<ClassLoader, Map<String, List<MethodNode>>>() {
+            public Map<String, List<MethodNode>> provide(ClassLoader key) {
+                return getMacroMethodsFromClassLoader(key);

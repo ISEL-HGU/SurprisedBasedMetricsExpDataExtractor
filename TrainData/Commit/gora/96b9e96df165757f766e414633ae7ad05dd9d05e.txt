@@ -1,0 +1,1 @@
+   * @param properties gora.properties properties related to datastore client.

@@ -1,0 +1,1 @@
+        // camel-netty parses the uri a bit differently than camel-http-common base class

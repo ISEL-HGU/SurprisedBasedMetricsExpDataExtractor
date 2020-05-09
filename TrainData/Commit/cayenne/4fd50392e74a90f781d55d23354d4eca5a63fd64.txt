@@ -1,0 +1,5 @@
+		// since named parameters are specified, resetting positional parameters
+		this.replacementQuery = null;
+
+		// since named parameters are specified, resetting positional parameters
+		this.params = null;

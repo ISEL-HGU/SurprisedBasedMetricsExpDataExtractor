@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+import org.apache.cayenne.map.Relationship;
+                        if(objAttribute.isFlattened()) {
+                            objAttribute.getDbPathIterator().forEachRemaining(entry -> {
+                                if(entry instanceof DbRelationship) {
+                                    if(entry.equals(relationship)) {
+                                        attributes.add(objAttribute);
+                                    }
+                            });

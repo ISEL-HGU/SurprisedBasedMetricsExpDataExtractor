@@ -1,0 +1,19 @@
+import java.util.Map;
+import com.bazaarvoice.jolt.*;
+import org.apache.camel.util.ExchangeHelper;
+    private JoltTransform transform;
+
+    private synchronized JoltTransform getTransform() throws Exception {
+    public void setTransform(JoltTransform transform) {
+
+
+        Object output;
+
+        @SuppressWarnings("unchecked")
+        Map<String, Object> inputContextMap = exchange.getIn().getHeader(JoltConstants.JOLT_CONTEXT, Map.class);
+        if (inputContextMap != null) {
+            output = ((ContextualTransform)getTransform()).transform(input, inputContextMap);
+        } else {
+            output = ((Transform)getTransform()).transform(input);
+        }
+

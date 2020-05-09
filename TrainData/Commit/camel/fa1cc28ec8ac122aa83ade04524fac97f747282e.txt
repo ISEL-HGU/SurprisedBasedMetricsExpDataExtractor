@@ -1,0 +1,14 @@
+         * URL of the Kafka schema registry to use. The format is
+         * host1:port1,host2:port2. This option is known as schema.registry.url
+         * in the Kafka documentation.
+         */
+        private String schemaRegistryURL;
+        /**
+        public String getSchemaRegistryURL() {
+            return schemaRegistryURL;
+        }
+
+        public void setSchemaRegistryURL(String schemaRegistryURL) {
+            this.schemaRegistryURL = schemaRegistryURL;
+        }
+

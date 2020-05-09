@@ -1,0 +1,2 @@
+import org.apache.cayenne.CayenneRuntimeException;
+    protected BatchTranslator createTranslator() throws CayenneRuntimeException {

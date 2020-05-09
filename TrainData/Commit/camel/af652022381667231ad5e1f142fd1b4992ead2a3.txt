@@ -1,0 +1,12 @@
+    public boolean isTranslateContextPath() {
+        return translateContextPath;
+    }
+
+    /**
+     * Sets whether the context path of the request should be translated (true) or used as-is (false)
+     * Optional, Defaults to true
+     */
+    public void setTranslateContextPath(boolean translateContextPath) {
+        this.translateContextPath = translateContextPath;
+    }
+

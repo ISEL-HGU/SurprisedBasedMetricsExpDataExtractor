@@ -1,0 +1,3 @@
+import org.apache.camel.Exchange;
+ * @deprecated use {@link Exchange#MESSAGE_HISTORY} instead.
+@Deprecated

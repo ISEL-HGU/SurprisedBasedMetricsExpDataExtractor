@@ -1,0 +1,23 @@
+import java.util.HashSet;
+        Set<String> components = new HashSet<>();
+                        components.add(file.getName());
+    private static void enrichComponentJsonFiles(Log log, MavenProject project, File buildDir, Set<String> components) throws MojoExecutionException {
+            // clip the .json suffix
+            String name = file.getName().substring(0, file.getName().length() - 5);
+            if (components.contains(name)) {
+                log.debug("Enriching component: "  name);
+                try {
+                    String text = loadText(new FileInputStream(file));
+                    text = text.replace("@@@DESCRIPTION@@@", project.getDescription());
+                    text = text.replace("@@@GROUPID@@@", project.getGroupId());
+                    text = text.replace("@@@ARTIFACTID@@@", project.getArtifactId());
+                    text = text.replace("@@@VERSIONID@@@", project.getVersion());
+                    // special for deprecated where you can quickly specify that in the pom.xml name
+                    boolean deprecated = project.getName().contains("(deprecated)");
+                    if (deprecated) {
+                        // must start with 4 leading spaces as we want to replace the marker in the top of the file
+                        text = text.replaceFirst(" {4}\"deprecated\": false,", "    \"deprecated\": true,");
+                    }
+                    writeText(file, text);
+                } catch (IOException e) {
+                    throw new MojoExecutionException("Failed to update file "  file  ". Reason: "  e, e);

@@ -1,0 +1,15 @@
+            MongoCursor<Document> iterator = dbCol.find(gt(tailTracking.getIncreasingFieldName(), lastVal))
+                    .iterator();
+            answer = iterator;
+            log.debug("Regenerating cursor with lastVal: {}, waiting {} ms first", tailTracking.lastVal, cursorRegenerationDelay);
+            // this is happening when the consumer is stopped or the mongo interrupted (ie, junit ending test)
+            // as we cannot resume, we shutdown the thread gracefully
+            log.info("Cursor was closed, likely the consumer was stopped and closed the cursor on purpose.", e);
+            if (cursor != null) {
+                cursor.close();
+            keepRunning = false;
+        } finally {
+            // the loop finished, persist the lastValue just in case we are shutting down
+            // TODO: perhaps add a functionality to persist every N records
+            tailTracking.persistToStore();
+}

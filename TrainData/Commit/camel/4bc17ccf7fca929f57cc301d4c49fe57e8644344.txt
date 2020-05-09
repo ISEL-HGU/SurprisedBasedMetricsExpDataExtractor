@@ -1,0 +1,11 @@
+import com.amazonaws.client.builder.AwsClientBuilder.EndpointConfiguration;
+        AmazonDynamoDBClientBuilder clientBuilder = null;
+                clientBuilder = AmazonDynamoDBClientBuilder.standard().withClientConfiguration(clientConfiguration).withCredentials(credentialsProvider);
+                clientBuilder = AmazonDynamoDBClientBuilder.standard().withCredentials(credentialsProvider);
+                clientBuilder = AmazonDynamoDBClientBuilder.standard();
+                clientBuilder = AmazonDynamoDBClientBuilder.standard().withClientConfiguration(clientConfiguration);
+        if (ObjectHelper.isNotEmpty(configuration.getAmazonDdbEndpoint()) && ObjectHelper.isNotEmpty(configuration.getRegion())) {
+            EndpointConfiguration endpointConfiguration = new EndpointConfiguration(configuration.getAmazonDdbEndpoint(), configuration.getRegion());
+            clientBuilder = clientBuilder.withEndpointConfiguration(endpointConfiguration);
+        }
+        client = clientBuilder.build();

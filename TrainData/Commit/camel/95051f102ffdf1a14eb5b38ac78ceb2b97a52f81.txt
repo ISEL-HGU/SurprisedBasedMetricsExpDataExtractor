@@ -1,0 +1,5 @@
+    private static final AtomicBoolean init = new AtomicBoolean();
+        if (init.compareAndSet(false, true)) {
+            // only need to init Caffeine once in the JVM/classloader
+            Runnable task = () -> {
+            Thread thread = new Thread(task, threadName);

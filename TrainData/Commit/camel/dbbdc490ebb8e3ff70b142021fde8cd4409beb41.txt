@@ -1,0 +1,13 @@
+        /**
+         * This option enables transparent MIME decoding and unfolding for mail
+         * headers.
+         */
+        private Boolean mimeDecodeHeaders = false;
+
+        public Boolean getMimeDecodeHeaders() {
+            return mimeDecodeHeaders;
+        }
+
+        public void setMimeDecodeHeaders(Boolean mimeDecodeHeaders) {
+            this.mimeDecodeHeaders = mimeDecodeHeaders;
+        }

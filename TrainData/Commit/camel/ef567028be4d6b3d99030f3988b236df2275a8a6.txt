@@ -1,0 +1,2 @@
+ b/components/camel-google-mail/src/main/java/org/apache/camel/component/google/mail/stream/GoogleMailStreamEndpoint.java
+package org.apache.camel.component.google.mail.stream;

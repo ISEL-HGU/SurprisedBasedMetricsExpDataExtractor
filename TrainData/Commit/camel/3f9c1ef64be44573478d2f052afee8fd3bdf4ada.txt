@@ -1,0 +1,2 @@
+	private final static String[] DNS_TYPES = {"CNAME", "A"}; 
+				Attributes attributes = initialDirContext.getAttributes("dns:/"  inetAddress.getHostName(), DNS_TYPES);

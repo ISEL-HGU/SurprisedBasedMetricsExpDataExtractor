@@ -1,0 +1,1 @@
+                setForeground(isSelected ? new Color(0xEEEEEE) : Color.GRAY);

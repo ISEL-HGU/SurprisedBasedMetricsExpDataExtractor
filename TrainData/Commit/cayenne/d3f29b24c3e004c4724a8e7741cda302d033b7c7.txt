@@ -1,0 +1,33 @@
+		this( objectClass, propertyName, propertyType, defaultBooleanGetterName( propertyName ), defaultGetterName( propertyName ), defaultSetterName( propertyName ) );
+	}
+
+	protected BeanAccessor(Class<?> objectClass, String propertyName, Class<?> propertyType, String booleanGetterName, String getterName, String setterName ) {
+		
+		if (booleanGetterName == null) {
+			throw new IllegalArgumentException("Null booleanGetterName");
+		}
+		
+		if (getterName ==  null) {
+			throw new IllegalArgumentException("Null getterName");
+		}
+		
+		if (setterName == null) {
+			throw new IllegalArgumentException("Null setterName");
+		}
+			if (method.getName().equals(booleanGetterName) && returnType.equals(Boolean.TYPE) && method.getParameterTypes().length == 0) {
+			if (method.getName().equals(getterName) && method.getParameterTypes().length == 0) {
+	
+	private static String defaultSetterName( String propertyName ) {
+		final String capitalized = Character.toUpperCase(propertyName.charAt(0))  propertyName.substring(1);
+		return "set"  capitalized;
+	}
+
+	private static String defaultGetterName( String propertyName ) {
+		final String capitalized = Character.toUpperCase(propertyName.charAt(0))  propertyName.substring(1);
+		return "get"  capitalized;
+	}
+
+	private static String defaultBooleanGetterName( String propertyName ) {
+		final String capitalized = Character.toUpperCase(propertyName.charAt(0))  propertyName.substring(1);
+		return "is"  capitalized;
+	}

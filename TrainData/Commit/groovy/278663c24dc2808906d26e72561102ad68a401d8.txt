@@ -1,0 +1,52 @@
+import org.codehaus.groovy.ast.InnerClassNode;
+import org.codehaus.groovy.ast.MethodNode;
+import static org.codehaus.groovy.transform.trait.TraitComposer.COMPILESTATIC_CLASSNODE;
+            for (ListIterator<AnnotationNode> it = cn.getAnnotations().listIterator(); it.hasNext(); ) {
+            boolean legacySerialization = false;
+            final Expression member = collector.getMember("serializeClass");
+            if (member instanceof ClassExpression) {
+                ClassExpression ce = (ClassExpression) member;
+                legacySerialization = ce.getType().getName().equals(cn.getName());
+            }
+            ClassNode helper = cn;
+            if (legacySerialization) {
+                // force final class, remove interface, annotation, enum and abstract modifiers
+                helper.setModifiers((ACC_FINAL  helper.getModifiers()) & ~(ACC_ENUM | ACC_INTERFACE | ACC_ANNOTATION | ACC_ABSTRACT));
+                // force Object super class
+                helper.setSuperClass(ClassHelper.OBJECT_TYPE);
+                // force no interfaces implemented
+                helper.setInterfaces(ClassNode.EMPTY_ARRAY);
+            } else {
+                helper = new InnerClassNode(cn.getPlainNodeReference(), cn.getName()  "$CollectorHelper",
+                        ACC_PUBLIC | ACC_STATIC | ACC_FINAL, ClassHelper.OBJECT_TYPE.getPlainNodeReference());
+                cn.getModule().addClass(helper);
+                helper.addAnnotation(new AnnotationNode(COMPILESTATIC_CLASSNODE));
+                MethodNode serializeClass = collector.getClassNode().getMethod("serializeClass", Parameter.EMPTY_ARRAY);
+                collector.setMember("serializeClass", new ClassExpression(helper.getPlainNodeReference()));
+            }
+            List<AnnotationNode> meta = getMeta(cn);
+            helper.addMethod("value", ACC_PUBLIC  ACC_STATIC,
+                    ClassHelper.OBJECT_TYPE.makeArray().makeArray(),
+                    Parameter.EMPTY_ARRAY, ClassNode.EMPTY_ARRAY, code);
+            for (ListIterator<AnnotationNode> it = cn.getAnnotations().listIterator(); it.hasNext(); ) {
+                if (an == collector || "java.lang.annotation".equals(an.getClassNode().getPackageName())) {
+            if (type.getName().equals(AnnotationCollector.class.getName()) || "java.lang.annotation".equals(type.getPackageName())) continue;
+        alias = getSerializeClass(alias);
+
+    // 2.5.3 and above gets from annotation attribute otherwise self
+    private static ClassNode getSerializeClass(ClassNode alias) {
+        List<AnnotationNode> annotations = alias.getAnnotations(ClassHelper.make(AnnotationCollector.class));
+        if (!annotations.isEmpty()) {
+            AnnotationNode annotationNode = annotations.get(0);
+            Expression member = annotationNode.getMember("serializeClass");
+            if (member instanceof ClassExpression) {
+                ClassExpression ce = (ClassExpression) member;
+                if (!ce.getType().getName().equals(AnnotationCollector.class.getName())) {
+                    alias = ce.getType();
+                }
+            }
+        }
+        return alias;
+    }
+
+

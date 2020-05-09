@@ -1,0 +1,7 @@
+    private final ConcurrentMap<K, V> map;
+        map = new ConcurrentLinkedHashMap.Builder<K, V>()
+        return map.put(key, value);
+        return map.get(key);
+        return map.computeIfAbsent(key, k -> valueProvider.provide(k));
+        synchronized (map) {
+            final Iterator<Map.Entry<K, V>> iterator = map.entrySet().iterator();

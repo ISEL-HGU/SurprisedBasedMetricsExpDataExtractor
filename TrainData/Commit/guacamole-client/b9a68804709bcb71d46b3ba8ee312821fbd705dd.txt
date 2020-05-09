@@ -1,0 +1,3 @@
+                    logger.warn("Expected state parameter was not present in challenge/response.");
+                logger.warn("Illegal hexadecimal value while parsing RADIUS state string.", e.getMessage());
+                logger.debug("Encountered exception while attepmting to perse the hexidecimanl state value.", e);

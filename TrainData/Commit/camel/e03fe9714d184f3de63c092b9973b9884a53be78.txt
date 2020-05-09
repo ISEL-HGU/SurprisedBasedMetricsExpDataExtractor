@@ -1,0 +1,10 @@
+import java.io.Closeable;
+import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
+public class MavenVersionManager implements VersionManager, Closeable {
+
+    @Override
+    public void close() throws IOException {
+        // the http client uses this MultiThreadedHttpConnectionManager for handling http connections
+        // and we should ensure its shutdown to not leak connections/threads
+        MultiThreadedHttpConnectionManager.shutdownAll();
+    }

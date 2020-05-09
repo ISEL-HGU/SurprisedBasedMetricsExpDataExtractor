@@ -1,0 +1,7 @@
+        // redelivery state
+                    target = data.failureProcessor != null ? data.failureProcessor : deadLetter;
+                boolean isDeadLetterChannel = isDeadLetterChannel() && (target == null || target == deadLetter);
+                target = data.failureProcessor != null ? data.failureProcessor : deadLetter;
+            boolean isDeadLetterChannel = isDeadLetterChannel() && target == deadLetter;
+            final boolean deadLetterChannel = processor == deadLetter;
+                boolean handled = newException == null || deadLetterHandleNewException;

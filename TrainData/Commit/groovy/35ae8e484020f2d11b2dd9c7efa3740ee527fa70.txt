@@ -1,0 +1,18 @@
+        } else if (asBoolean(ctx.conditionalStatement())) {
+            expression =
+                    configureAST(
+                        createCallMethodCallExpression(
+                            configureAST(
+                                    new ClosureExpression(
+                                        Parameter.EMPTY_ARRAY,
+                                        configureAST(
+                                            this.createBlockStatement(this.visitConditionalStatement(ctx.conditionalStatement())),
+                                            ctx
+                                        )
+                                    ),
+                                    ctx
+                            ),
+                            new ArgumentListExpression()
+                        ),
+                        ctx
+                    );

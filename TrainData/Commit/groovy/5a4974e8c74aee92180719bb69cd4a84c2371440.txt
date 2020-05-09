@@ -1,0 +1,6 @@
+    public ParserVersion getParserVersion() {
+        if (this.antlr2Parser) {
+            return ParserVersion.V_2;
+        }
+
+        return ParserVersion.V_4;

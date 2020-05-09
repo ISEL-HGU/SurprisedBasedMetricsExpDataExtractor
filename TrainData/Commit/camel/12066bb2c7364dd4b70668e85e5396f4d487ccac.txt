@@ -1,0 +1,37 @@
+        // find the endpoint options
+        List options = (List) dto.get("componentOptions");
+        Map values = (Map) dto.get("componentValues");
+        Map overrides = (Map) dto.get("componentOverrides");
+
+        boolean first = true;
+
+            if (options == null || !options.contains(key)) {
+                continue;
+            }
+
+            // do we have a new default value for this row?
+            if (values != null && values.containsKey(key)) {
+                String newDefaultValue = (String) values.get(key);
+                if (newDefaultValue != null) {
+                    row.put("defaultValue", newDefaultValue);
+                }
+            }
+
+            // is there any overrides for this row?
+            if (overrides != null && overrides.containsKey(key)) {
+                Map over = (Map) overrides.get(key);
+                if (over != null) {
+                    row.putAll(over);
+                }
+            }
+
+            // we should build the json as one-line which is how Camel does it today
+            // which makes its internal json parser support loading our generated schema file
+            if (!first) {
+                sb.append(",\n");
+            }
+
+            first = false;
+        }
+        if (!first) {
+            sb.append("\n");

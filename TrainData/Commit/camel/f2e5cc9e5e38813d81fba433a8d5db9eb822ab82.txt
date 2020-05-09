@@ -1,0 +1,2 @@
+    @Metadata(label = "consumer", defaultValue = ""  SedaConstants.CONCURRENT_CONSUMERS)
+    @Metadata(label = "advanced", defaultValue = ""  SedaConstants.QUEUE_SIZE)

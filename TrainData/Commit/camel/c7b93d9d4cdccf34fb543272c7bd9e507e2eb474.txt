@@ -1,0 +1,8 @@
+        String originalCharsetName = null;
+            originalCharsetName = exchange.getProperty(Exchange.CHARSET_NAME, String.class);
+        // remove or restore charset when we are done as we should not propagate that,
+            if (originalCharsetName != null && !originalCharsetName.isEmpty()) {
+                exchange.setProperty(Exchange.CHARSET_NAME, originalCharsetName);
+            } else {
+                exchange.removeProperty(Exchange.CHARSET_NAME);
+            }

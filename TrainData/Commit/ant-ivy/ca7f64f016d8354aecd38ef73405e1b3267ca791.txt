@@ -1,0 +1,1 @@
+        Message.info(String.format("%nrepository loaded: %d modules; %d revisions; %s%ss",

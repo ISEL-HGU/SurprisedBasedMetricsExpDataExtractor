@@ -1,0 +1,8 @@
+import org.apache.cayenne.CayenneRuntimeException;
+import java.net.URISyntaxException;
+            Path resourcePath;
+            try {
+                resourcePath = Paths.get(url.toURI());
+            } catch (URISyntaxException e) {
+                throw new CayenneRuntimeException("Unable to resolve output path", e);
+            }

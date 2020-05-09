@@ -1,0 +1,12 @@
+    /**
+     * Gets the extension of the given type.
+     *
+     * @param type  the type of the extension
+     * @return the extension, or <tt>null</tt> if no extension has been installed.
+     */
+    /**
+     * Allows to install custom extensions to the Camel context.
+     *
+     * @param type   the type of the extension
+     * @param module the instance of the extension
+     */

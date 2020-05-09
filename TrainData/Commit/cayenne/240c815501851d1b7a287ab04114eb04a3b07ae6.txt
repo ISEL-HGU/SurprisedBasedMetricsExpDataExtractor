@@ -1,0 +1,5 @@
+import java.io.InputStream;
+    	InputStream stream = Thread.currentThread().getContextClassLoader().getResourceAsStream(name);
+        return stream != null ? new InputStreamReader(stream) : null;
+    	InputStream stream = getClass().getClassLoader().getResourceAsStream(name);
+        return stream != null ? new InputStreamReader(stream) : null;

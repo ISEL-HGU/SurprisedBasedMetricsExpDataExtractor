@@ -1,0 +1,10 @@
+import java.util.Collections;
+import java.util.concurrent.locks.ReentrantLock;
+  private List<ODocument> docBatch = Collections.synchronizedList(new ArrayList<>());
+  private ReentrantLock flushLock = new ReentrantLock();
+      if (LOG.isDebugEnabled()) {
+        LOG.info("Ignored putting persistent bean {} in the store as it is neither "
+                 "new, neither dirty.", new Object[]{val});
+      }
+      flushLock.lock();
+      flushLock.unlock();

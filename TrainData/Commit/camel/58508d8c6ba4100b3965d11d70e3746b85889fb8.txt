@@ -1,0 +1,17 @@
+import org.apache.camel.CamelContext;
+    private CamelContext camelContext;
+    public CamelContext getCamelContext() {
+        return camelContext;
+    }
+
+    @Override
+    public void setCamelContext(CamelContext camelContext) {
+        this.camelContext = camelContext;
+    }
+
+    @Override
+    @ManagedAttribute(description = "Whether message history is enabled")
+    public boolean isEnabled() {
+        return camelContext != null ? camelContext.isMessageHistory() : false;
+    }
+

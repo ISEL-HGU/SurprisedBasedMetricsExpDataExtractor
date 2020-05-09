@@ -1,0 +1,5 @@
+import java.nio.charset.Charset;
+            // also look in camel-jaxp
+            target = new File(coreDir, "../camel-jaxp/src/main/docs");
+            findAsciiDocFilesRecursive(target, adocFiles, new CamelAsciiDocFileFilter());
+                    List<String> lines = FileUtils.readLines(toHtml, Charset.defaultCharset());

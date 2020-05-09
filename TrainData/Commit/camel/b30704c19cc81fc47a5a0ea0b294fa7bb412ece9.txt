@@ -1,0 +1,9 @@
+
+    public String getClearString() {
+        return clearString;
+    }
+
+    public void setClearString(String clearString) {
+        this.clearString = clearString;
+    }
+}

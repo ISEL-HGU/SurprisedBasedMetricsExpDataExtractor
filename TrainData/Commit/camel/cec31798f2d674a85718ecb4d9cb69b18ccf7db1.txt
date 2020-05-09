@@ -1,0 +1,6 @@
+import org.apache.maven.plugins.annotations.LifecyclePhase;
+@Mojo(name = "prepare-spring-boot-auto-configuration", threadSafe = true, requiresDependencyResolution = ResolutionScope.COMPILE_PLUS_RUNTIME, defaultPhase = LifecyclePhase.PROCESS_CLASSES)
+        Set<String> componentNames = new TreeSet<>();
+        findComponentNames(buildDir, componentNames);
+    private void findComponentNames(File dir, Set<String> componentNames) {
+        File f = new File(dir, "classes/META-INF/services/org/apache/camel/component");

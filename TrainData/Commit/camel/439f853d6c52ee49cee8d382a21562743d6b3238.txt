@@ -1,0 +1,21 @@
+
+                File targetFile = file;
+
+                // if its a lock file then check if we accept its target file to know if we should delete the orphan lock file
+                if (file.getName().endsWith(FileComponent.DEFAULT_LOCK_FILE_POSTFIX)) {
+                    String target = file.getName().substring(0, file.getName().length() - FileComponent.DEFAULT_LOCK_FILE_POSTFIX.length());
+                    if (file.getParent() != null) {
+                        targetFile = new File(file.getParent(), target);
+                    } else {
+                        targetFile = new File(target);
+                    }
+                }
+
+                boolean accept = acceptFile(targetFile, endpointPath, filter, antFilter, excludePattern, includePattern);
+                if (!accept) {
+            // a custom filter can also filter directories
+        // the following filters only works on files so allow any directory from this point
+        if (file.isDirectory()) {
+            return true;
+        }
+

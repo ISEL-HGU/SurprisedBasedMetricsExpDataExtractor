@@ -1,0 +1,7 @@
+    private boolean allowEmptyDirectory;
+        this.allowEmptyDirectory = false;
+                if (allowEmptyDirectory) {
+                    return entry;
+        return allowEmptyDirectory;
+    public void setAllowEmptyDirectory(boolean allowEmptyDirectory) {
+        this.allowEmptyDirectory = allowEmptyDirectory;

@@ -1,0 +1,23 @@
+import java.net.MalformedURLException;
+import java.net.URL;
+            repository.put(DefaultArtifact.cloneWithAnotherTypeAndExt(artifact, algorithm,
+                    artifact.getExt()  "."  algorithm), csFile,
+                    chopQuery(dest, algorithm), overwrite);
+            repository.put(DefaultArtifact.cloneWithAnotherTypeAndExt(artifact, gen.getExtension(),
+                    chopQuery(dest, gen.getExtension()), overwrite);
+    private String chopQuery(String dest, String algorithm) {
+        if (!dest.contains("?")) {
+            return dest  "."  algorithm;
+        }
+        try {
+            URL url = new URL(dest);
+            String query = url.getQuery();
+            if (query == null ) {
+                query = "";
+            }
+            return dest.replace("?"  query, "")  "."  algorithm;
+        } catch (MalformedURLException e) {
+           throw new IllegalArgumentException(e);
+        }
+    }
+

@@ -1,0 +1,1 @@
+                            if (1 == visitingReturnStatementCnt) { // the method call is within return statement, we can try to infer type further

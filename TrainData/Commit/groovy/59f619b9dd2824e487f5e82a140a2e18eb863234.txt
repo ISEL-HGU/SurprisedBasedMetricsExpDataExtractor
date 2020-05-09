@@ -1,0 +1,17 @@
+        // try optimistic read first, which is non-blocking
+        long optimisticReadStamp = sl.tryOptimisticRead();
+        value = commonCache.get(key);
+        if (sl.validate(optimisticReadStamp)) {
+        }
+        long stamp = sl.readLock();
+        try {
+            // if stale, read again
+            if (!sl.validate(optimisticReadStamp)) {
+                value = commonCache.get(key);
+                if (null != convertValue(value)) {
+                    return value;
+                }
+            }
+
+            long ws = sl.tryConvertToWriteLock(stamp); // the new local variable `ws` is necessary here!
+                // try to read again

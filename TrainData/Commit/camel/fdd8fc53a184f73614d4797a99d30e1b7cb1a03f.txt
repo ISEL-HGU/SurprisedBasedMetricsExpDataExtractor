@@ -1,0 +1,12 @@
+ b/platforms/spring-boot/components-starter/camel-mina-starter/src/main/java/org/apache/camel/component/mina/springboot/MinaComponentConfiguration.java
+package org.apache.camel.component.mina.springboot;
+import org.apache.camel.component.mina.MinaTextLineDelimiter;
+public class MinaComponentConfiguration
+    private MinaConfigurationNestedConfiguration configuration;
+    public MinaConfigurationNestedConfiguration getConfiguration() {
+            MinaConfigurationNestedConfiguration configuration) {
+    public static class MinaConfigurationNestedConfiguration {
+        public static final Class CAMEL_NESTED_CLASS = org.apache.camel.component.mina.MinaConfiguration.class;
+        private MinaTextLineDelimiter textlineDelimiter;
+        public MinaTextLineDelimiter getTextlineDelimiter() {
+        public void setTextlineDelimiter(MinaTextLineDelimiter textlineDelimiter) {

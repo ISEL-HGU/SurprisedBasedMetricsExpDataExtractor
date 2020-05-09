@@ -1,0 +1,58 @@
+import org.bouncycastle.cms.CMSCompressedData;
+import org.bouncycastle.cms.CMSException;
+import org.bouncycastle.operator.InputExpanderProvider;
+    public static MimeEntity parseCompressedEntity(byte[] compressedData, InputExpanderProvider expanderProvider)
+            throws HttpException {
+
+        byte[] uncompressedContent = uncompressData(compressedData, expanderProvider);
+
+        return parseEntity(uncompressedContent);
+    }
+
+    public static MimeEntity parseEnvelopedEntity(byte[] envelopedContent, PrivateKey privateKey) throws HttpException {
+
+        byte[] decryptedContent = decryptData(envelopedContent, privateKey);
+
+        return parseEntity(decryptedContent);
+    }
+
+    public static MimeEntity parseEntity(byte[] content) throws HttpException {
+            InputStream is = new ByteArrayInputStream(content);
+            ContentType entityContentType = null;
+            String entityContentTransferEncoding = null;
+                    entityContentType = ContentType.parse(header.getValue());
+                    entityContentTransferEncoding = header.getValue();
+            if (entityContentType == null) {
+            MimeEntity entity = parseEntityBody(inbuffer, null, entityContentType, entityContentTransferEncoding, headers);
+            throw new HttpException("Failed to parse entity", e);
+    public static byte[] uncompressData(byte[] compressedData, InputExpanderProvider expanderProvider)
+            throws HttpException {
+        try {
+            CMSCompressedData cmsCompressedData = new CMSCompressedData(compressedData);
+            return cmsCompressedData.getContent(expanderProvider);
+        } catch (CMSException e) {
+            throw new HttpException("Failed to decompress data", e);
+        }
+    }
+    public static byte[] decryptData(byte[] encryptedData, PrivateKey privateKey) throws HttpException {
+        try {
+            // Create enveloped data from encrypted data
+            CMSEnvelopedData cmsEnvelopedData = new CMSEnvelopedData(encryptedData);
+            
+            // Extract recipient information form enveloped data.
+            RecipientInformationStore recipientsInformationStore = cmsEnvelopedData.getRecipientInfos();
+            Collection<RecipientInformation> recipients = recipientsInformationStore.getRecipients();
+            Iterator<RecipientInformation> it = recipients.iterator();
+            
+            // Decrypt if enveloped data contains recipient information
+            if (it.hasNext()) {
+                // Create recipient from private key.
+                Recipient recipient = new JceKeyTransEnvelopedRecipient(privateKey);
+
+                // Extract decrypted data from recipient information
+                RecipientInformation recipientInfo = it.next();
+                return recipientInfo.getContent(recipient);
+            }
+        } catch (CMSException e) {
+            throw new HttpException("Failed to decrypt data", e);
+        throw new HttpException("Failed to decrypt data: bno recipeint information");

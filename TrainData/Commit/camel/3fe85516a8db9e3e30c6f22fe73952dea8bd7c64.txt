@@ -1,0 +1,7 @@
+public class DefaultTimeoutMap<K, V> extends ServiceSupport implements TimeoutMap<K, V> {
+
+    private void purgeTask() {
+        // only purgeTask if allowed
+            log.trace("Purge task not allowed to purgeTask");
+            // must catch and log exception otherwise the executor will now schedule next purgeTask
+        future = executor.scheduleWithFixedDelay(this::purgeTask, 0, purgePollTime, TimeUnit.MILLISECONDS);

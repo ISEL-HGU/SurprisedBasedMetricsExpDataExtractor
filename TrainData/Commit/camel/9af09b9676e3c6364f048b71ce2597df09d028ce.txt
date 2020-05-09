@@ -1,0 +1,42 @@
+import org.apache.camel.RuntimeCamelException;
+ *     <li>property placeholders - Keys and values using Camels property placeholder will be resolved</li>
+    /**
+     * Binds the properties to the target object.
+     *
+     * @param camelContext  the camel context
+     * @param target        the target object
+     * @param properties    the properties
+     * @return              true if one or more properties was bound, false otherwise
+     */
+        boolean answer = false;
+            answer |= bindProperty(camelContext, target, entry.getKey(), entry.getValue());
+    /**
+     * Binds the property to the target object.
+     *
+     * @param camelContext  the camel context
+     * @param target        the target object
+     * @param name          name of property
+     * @param value         value of property
+     * @return              true if property was bound, false otherwise
+     */
+        if (target != null && name != null) {
+            return setProperty(camelContext, target, name, value);
+        } else {
+            return false;
+        }
+    private static boolean setProperty(CamelContext context, Object target, String name, Object value) {
+        String refName = null;
+
+        // resolve property placeholders
+        name = context.resolvePropertyPlaceholders(name);
+        if (value instanceof String) {
+            // resolve property placeholders
+            value = context.resolvePropertyPlaceholders(value.toString());
+        }
+        if (name.indexOf('.') > 0) {
+                    Set<Method> newSetters = findSetterMethods(newClass, part, true);
+        try {
+            return IntrospectionSupport.setProperty(context, context.getTypeConverter(), target, name, value, refName, true);
+        } catch (Exception e) {
+            throw RuntimeCamelException.wrapRuntimeException(e);
+        }

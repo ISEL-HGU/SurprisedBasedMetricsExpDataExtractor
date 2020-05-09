@@ -1,0 +1,12 @@
+        // add bogus field for enabled so spring boot tooling can get the javadoc as description in its metadata
+        PropertySource<JavaClassSource> bogus = javaClass.addProperty("java.lang.Boolean", "enabled");
+        bogus.getField().getJavaDoc().setText("Whether to enable auto configuration of the "  model.getName()  " data format. This is enabled by default.");
+        bogus.removeAccessor();
+        bogus.removeMutator();
+
+        // add bogus field for enabled so spring boot tooling can get the javadoc as description in its metadata
+        PropertySource<JavaClassSource> bogus = javaClass.addProperty("java.lang.Boolean", "enabled");
+        bogus.getField().getJavaDoc().setText("Whether to enable auto configuration of the "  model.getName()  " language. This is enabled by default.");
+        bogus.removeAccessor();
+        bogus.removeMutator();
+

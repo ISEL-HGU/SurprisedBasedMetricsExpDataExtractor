@@ -1,0 +1,44 @@
+                    String.format("write(byte[%d], offset[%d], writeCount[%d]) - offset is less than zero",
+                        sourceBytes.length, offset, writeCount));
+                    String.format("write(byte[%d], offset[%d], writeCount[%d]) - offset is greater than write count",
+                        sourceBytes.length, offset, writeCount));
+                    String.format("write(byte[%d], offset[%d], writeCount[%d]) - write count is less than zero",
+                        sourceBytes.length, offset, writeCount));
+                    String.format("write(byte[%d], offset[%d], writeCount[%d]) - write count is greater than length of the source byte[]",
+                        sourceBytes.length, offset, writeCount));
+                    String.format("write(byte[%d], offset[%d], writeCount[%d]) - offset plus write count <%d> is greater than length of the source byte[]",
+                        sourceBytes.length, offset, writeCount, offset  writeCount));
+                openMllpEnvelope();
+                closeMllpEnvelope();
+            openMllpEnvelope();
+            closeMllpEnvelope();
+            log.trace("readFrom({}, {}, {}) - entering", socket, receiveTimeout, readTimeout);
+                final String exceptionMessage = String.format("readFrom(%s, %d, %d) - IOException encountered", socket, receiveTimeout, readTimeout);
+                        log.warn("readFrom({}, {}, {}) - exiting with partial payload {}", socket, receiveTimeout, readTimeout, Hl7Util.convertToPrintFriendlyString(buffer, 0, size() - 1));
+            log.warn("readFrom({}, {}, {}) - no data read because Socket is invalid", socket, receiveTimeout, readTimeout);
+        log.trace("readFrom({}, {}, {}) - exiting", socket, receiveTimeout, readTimeout);
+            log.trace("writeTo({}) - entering", socket);
+                    final String exceptionMessage = String.format("writeTo({}) - IOException encountered", socket);
+                log.warn("writeTo({}) - no data written because buffer is empty", socket);
+            log.warn("writeTo({}) - no data written because Socket is invalid", socket);
+        log.trace("writeTo({}) - exiting", socket);
+                log.warn("toString(charsetName[{}]) - unsupported character set name - using the MLLP default character set {}", charsetName, MllpComponent.getDefaultCharset());
+                log.warn("toString(charsetName[{}]) - ignoring exception encountered determining character set - using the MLLP default character set {}",
+                log.warn("toHl7String(charsetName[{}]) - unsupported character set name - using the MLLP default character set {}", charsetName, MllpComponent.getDefaultCharset());
+                log.warn("toHl7String(charsetName[{}]) - ignoring exception encountered determining character set for name - using the MLLP default character set {}",
+        log.trace("readSocketInputStream(socketInputStream, {}) - entering with initial buffer size = {}", socket, size());
+                final String exceptionMessage = String.format("readSocketInputStream(socketInputStream, %s) - END_OF_STREAM returned from SocketInputStream.read(byte[%d], %d, %d)",
+                    socket, buffer.length, availableByteCount, buffer.length - availableByteCount);
+                throw new MllpSocketException(exceptionMessage);
+                    log.trace("readSocketInputStream(socketInputStream, {}) - read {} bytes for a total of {} bytes", socket, readCount, availableByteCount);
+                    log.warn("readSocketInputStream(socketInputStream, {}) - ignoring {} bytes received before START_OF_BLOCK", socket, size(), toPrintFriendlyStringAndReset());
+            final String exceptionMessage = String.format("readSocketInputStream(socketInputStream, %s) - IOException thrown from SocketInputStream.read(byte[%d], %d, %d) from %s",
+                socket, buffer.length, availableByteCount, buffer.length - availableByteCount, socket);
+            throw new MllpSocketException(exceptionMessage, ioEx);
+            log.trace("readSocketInputStream(socketInputStream, {}) - exiting with buffer size = {}", socket, size());
+                    log.trace("doSocketClose(socket[{}], logMessage[{}], reset[{}] - ignoring exception raised by Socket.shutdownInput()", socket, logMessage, reset, ignoredEx);
+                    log.trace("doSocketClose(socket[{}], logMessage[{}], reset[{}] - ignoring exception raised by Socket.shutdownOutput()", socket, logMessage, reset, ignoredEx);
+                final boolean on = true;
+                final int linger = 0;
+                    log.trace("doSocketClose(socket[{}], logMessage[{}], reset[{}] - ignoring exception raised by Socket.setSoLinger({}, {})", socket, logMessage, reset, on, linger, ignoredEx);
+                log.trace("doSocketClose(socket[{}], logMessage[{}], reset[{}] - ignoring exception raised by Socket.close()", socket, logMessage, reset, ignoredEx);

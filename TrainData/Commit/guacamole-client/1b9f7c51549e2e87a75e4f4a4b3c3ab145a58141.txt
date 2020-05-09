@@ -1,0 +1,8 @@
+        if(request.getHeader("X-Guacamole-Client-Hostname") != null && !request.getHeader("X-Guacamole-Client-Hostname").isEmpty()) {
+        } else if(request.getHeader("X-Forwarded-For") != null && !request.getHeader("X-Forwarded-For").isEmpty()) {
+        } else if(request.getRemoteHost() != null && !request.getRemoteHost().isEmpty()) {
+            this.remoteHost = null;
+        if(request.getHeader("X-Guacamole-Client-IP") != null && !request.getHeader("X-Guacamole-Client-IP").isEmpty()) {
+        } else if(request.getHeader("X-Forwarded-For") != null && !request.getHeader("X-Forwarded-For").isEmpty()) {
+        } else if(request.getRemoteHost() != null && !request.getRemoteAddr().isEmpty()) {
+            this.remoteAddr = null;

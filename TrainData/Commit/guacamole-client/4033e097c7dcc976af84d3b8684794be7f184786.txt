@@ -1,0 +1,1 @@
+                return (connsA * weightB) - (connsB * weightA);

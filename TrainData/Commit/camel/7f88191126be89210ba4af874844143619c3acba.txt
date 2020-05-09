@@ -1,0 +1,1 @@
+    @EndpointInject("mock:result")

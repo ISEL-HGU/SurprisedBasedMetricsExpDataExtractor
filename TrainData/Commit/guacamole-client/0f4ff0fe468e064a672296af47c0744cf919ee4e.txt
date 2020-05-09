@@ -1,0 +1,6 @@
+    // Version 1.0.0 and older.
+    VERSION_1_0_0(1, 0, 0),
+    // Version 1.1.0
+    VERSION_1_1_0(1, 1, 0);
+     * major version, minor version, and patch version.
+    GuacamoleProtocolVersion(int major, int minor, int patch) {

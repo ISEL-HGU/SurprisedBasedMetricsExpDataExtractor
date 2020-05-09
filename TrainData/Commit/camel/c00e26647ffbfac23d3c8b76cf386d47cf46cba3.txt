@@ -1,0 +1,4 @@
+                    bindToRegistry(field, bind.value(), bean, beanName);
+            bindToRegistry(clazz, ann.value(), bean, beanName);
+                    bindToRegistry(clazz, ann.value(), null, null);
+            bindToRegistry(method, bind.value(), bean, beanName);

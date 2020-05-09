@@ -1,0 +1,4 @@
+                // set empty response body as http error code indicate the problem
+                exchange.getMessage().setBody(null);
+                // set empty response body as http error code indicate the problem
+                exchange.getMessage().setBody(null);

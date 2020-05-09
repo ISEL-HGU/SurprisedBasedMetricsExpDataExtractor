@@ -1,0 +1,23 @@
+import org.eclipse.jgit.api.MergeCommand.FastForwardMode;
+import org.eclipse.jgit.api.MergeResult;
+            
+        case GitOperation.MERGE_OPERATION:
+            doMerge(exchange, operation);
+            break;
+    
+    protected void doMerge(Exchange exchange, String operation) throws Exception {
+        MergeResult result = null;
+        ObjectId mergeBase;
+        try {
+            if (ObjectHelper.isEmpty(endpoint.getBranchName())) {
+                throw new IllegalArgumentException("Branch name must be specified to execute "  operation);
+            }
+            mergeBase = git.getRepository().resolve(endpoint.getBranchName());
+            git.checkout().setName("master").call();
+            result = git.merge().include(mergeBase).setFastForward(FastForwardMode.FF).setCommit(true).call();
+        } catch (Exception e) {
+            LOG.error("There was an error in Git "  operation  " operation");
+            throw e;
+        }
+        updateExchange(exchange, result);
+    }

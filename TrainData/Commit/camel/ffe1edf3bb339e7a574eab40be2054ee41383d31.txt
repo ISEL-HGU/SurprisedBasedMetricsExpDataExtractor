@@ -1,0 +1,40 @@
+import org.apache.camel.component.caffeine.EvictionType;
+import org.apache.camel.component.caffeine.load.CaffeineLoadCacheComponent;
+        /**
+         * Set the eviction Type for this cache
+         */
+        private EvictionType evictionType = EvictionType.size_based;
+        /**
+         * Set the expire After Access Time in case of time based Eviction (in
+         * seconds)
+         */
+        private Integer expireAfterAccessTime = 300;
+        /**
+         * Set the expire After Access Write in case of time based Eviction (in
+         * seconds)
+         */
+        private Integer expireAfterWriteTime = 300;
+
+        public EvictionType getEvictionType() {
+            return evictionType;
+        }
+
+        public void setEvictionType(EvictionType evictionType) {
+            this.evictionType = evictionType;
+        }
+
+        public Integer getExpireAfterAccessTime() {
+            return expireAfterAccessTime;
+        }
+
+        public void setExpireAfterAccessTime(Integer expireAfterAccessTime) {
+            this.expireAfterAccessTime = expireAfterAccessTime;
+        }
+
+        public Integer getExpireAfterWriteTime() {
+            return expireAfterWriteTime;
+        }
+
+        public void setExpireAfterWriteTime(Integer expireAfterWriteTime) {
+            this.expireAfterWriteTime = expireAfterWriteTime;
+        }

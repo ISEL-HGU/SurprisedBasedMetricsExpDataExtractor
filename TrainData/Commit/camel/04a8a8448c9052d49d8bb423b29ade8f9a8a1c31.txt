@@ -1,0 +1,8 @@
+            
+        case TAKE:
+            this.take(exchange);
+            break;
+    
+    private void take(Exchange exchange) throws InterruptedException {
+        exchange.getOut().setBody(this.queue.take());
+    }

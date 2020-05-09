@@ -1,0 +1,11 @@
+        clearCache();
+    }
+
+    /**
+     * Clears the introspection cache.
+     */
+    public static void clearCache() {
+    public static long getCacheCounter() {
+        return CACHE.size();
+    }
+

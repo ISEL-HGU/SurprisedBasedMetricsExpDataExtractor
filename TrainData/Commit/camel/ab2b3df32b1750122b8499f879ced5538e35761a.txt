@@ -1,0 +1,10 @@
+import org.apache.camel.AsyncProcessor;
+
+    private volatile AsyncProcessor processor;
+
+        this.processor = quartzConsumer.getAsyncProcessor();
+        this.processor = null;
+    }
+
+    AsyncProcessor getProcessor() {
+        return this.processor;

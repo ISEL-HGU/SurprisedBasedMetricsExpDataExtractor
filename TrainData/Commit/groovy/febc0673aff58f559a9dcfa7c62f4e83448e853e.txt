@@ -1,0 +1,2 @@
+    INFERRED_FUNCTIONAL_INTERFACE_TYPE, // used to store the function interface type information on an expression
+    CONSTRUCTED_LAMBDA_EXPRESSION // used to store the constructed lambda expression for method reference and constructor reference

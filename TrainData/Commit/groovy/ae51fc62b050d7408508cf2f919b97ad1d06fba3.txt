@@ -1,0 +1,17 @@
+import groovy.transform.KnownImmutable;
+    private static final ClassNode IMMUTABLE_CLASS_TYPE = makeWithoutCaching(KnownImmutable.class, false);
+            boolean makeImmutable = memberHasValue(anno, "makeImmutable", true);
+
+            // TODO remove duplication between various paths below
+            List<PropertyNode> list = ImmutableASTTransformation.getProperties(cNode, includeSuperProperties, allProperties);
+            boolean specialHashMapCase = ImmutableASTTransformation.isSpecialHashMapCase(list);
+            if (makeImmutable) {
+                if (!specialHashMapCase) {
+                    ImmutableASTTransformation.createConstructorOrdered(cNode, list);
+                }
+            } else {
+                createConstructor(this, cNode, includeFields, includeProperties, includeSuperFields, includeSuperProperties,
+                        callSuper, force, excludes, includes, useSetters, defaults, allNames, allProperties, sourceUnit,
+                        (ClosureExpression) pre, (ClosureExpression) post);
+            }
+

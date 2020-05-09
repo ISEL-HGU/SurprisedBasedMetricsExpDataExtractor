@@ -1,0 +1,9 @@
+import java.util.Objects;
+    private Map<CacheEntry, CacheEntry> cache = new HashMap<>();
+        return needsCaching(traversableResolver) ? new CachingTraversableResolver(traversableResolver)
+            : traversableResolver;
+            if (o == null || !getClass().equals(o.getClass())) {
+            return elementType == that.elementType && Objects.equals(path, that.path) && Objects.equals(type, that.type)
+                && Objects.equals(object, that.object) && Objects.equals(node, that.node);
+            return Objects.hash(object, node, type, path, elementType);
+}

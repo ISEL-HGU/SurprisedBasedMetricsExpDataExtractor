@@ -1,0 +1,1 @@
+                        if (BundleInfo.PACKAGE_TYPE.equals(type)) {

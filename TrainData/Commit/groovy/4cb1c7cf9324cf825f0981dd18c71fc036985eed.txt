@@ -1,0 +1,21 @@
+        MetaMethod method = getMetaMethod(sender, object, methodName, isCallToSuper, arguments);
+                    if (method == null && owner != closure) {
+                        MetaClass ownerMetaClass = lookupObjectMetaClass(owner);
+                        method = ownerMetaClass.pickMethod(methodName, argClasses);
+                        if (method != null) return ownerMetaClass.invokeMethod(owner, methodName, originalArguments);
+                    }
+    private MetaMethod getMetaMethod(Class sender, Object object, String methodName, boolean isCallToSuper, Object... arguments) {
+        MetaMethod method = null;
+        if (CLOSURE_CALL_METHOD.equals(methodName) && object instanceof GeneratedClosure) {
+            method = getMethodWithCaching(sender, "doCall", arguments, isCallToSuper);
+        }
+        if (method==null) {
+            method = getMethodWithCaching(sender, methodName, arguments, isCallToSuper);
+        }
+        MetaClassHelper.unwrap(arguments);
+
+        if (method == null)
+            method = tryListParamMetaMethod(sender, methodName, isCallToSuper, arguments);
+        return method;
+    }
+

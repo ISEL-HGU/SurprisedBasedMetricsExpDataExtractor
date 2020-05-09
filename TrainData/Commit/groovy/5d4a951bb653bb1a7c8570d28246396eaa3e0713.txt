@@ -1,0 +1,8 @@
+            ClassNode componentType;
+            if (Character_TYPE.equals(ClassHelper.getWrapper(forLoopVariableType)) && STRING_TYPE.equals(collectionType)) {
+                // we allow auto-coercion here
+                componentType = forLoopVariableType;
+            } else {
+                componentType = inferLoopElementType(collectionType);
+            }
+                componentType = ClassHelper.STRING_TYPE;

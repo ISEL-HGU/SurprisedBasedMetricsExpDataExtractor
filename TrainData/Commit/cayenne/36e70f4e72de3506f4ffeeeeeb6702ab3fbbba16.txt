@@ -1,0 +1,12 @@
+ b/cayenne-server/src/test/java/org/apache/cayenne/tx/UserTransactionIT.java
+package org.apache.cayenne.tx;
+import javax.sql.DataSource;
+import java.sql.SQLException;
+import java.util.Map;
+        assertEquals(1, t.getConnections().size());
+        @Override
+        public Connection getOrCreateConnection(String connectionName, DataSource dataSource) throws SQLException {
+            return delegate.getOrCreateConnection(connectionName, dataSource);
+        @Override
+        public Map<String, Connection> getConnections() {
+            return delegate.getConnections();

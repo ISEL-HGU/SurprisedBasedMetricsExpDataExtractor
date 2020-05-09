@@ -1,0 +1,5 @@
+        if (numberOfArguments >= 255) {
+            throw new IllegalArgumentException(String.format(
+                      "The max number of arguments is 255, actual got %s",
+                      numberOfArguments);
+        }

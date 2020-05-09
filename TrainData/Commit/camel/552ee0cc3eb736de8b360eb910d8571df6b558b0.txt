@@ -1,0 +1,2 @@
+import org.apache.camel.reifier.errorhandler.ErrorHandlerReifier;
+        AsyncProcessor errorHandler = (AsyncProcessor) ErrorHandlerReifier.reifier(builder).createErrorHandler(routeContext, routingSlip.newRoutingSlipProcessorForErrorHandler());

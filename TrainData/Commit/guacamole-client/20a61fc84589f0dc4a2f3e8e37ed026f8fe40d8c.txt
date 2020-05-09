@@ -1,0 +1,2 @@
+        this.remoteHost = request.getRemoteHost();
+        this.remoteAddr = request.getRemoteAddr();

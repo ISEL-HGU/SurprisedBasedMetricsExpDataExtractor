@@ -1,0 +1,13 @@
+    public Statement visitConditionalStmtAlt(ConditionalStmtAltContext ctx) {
+        return configureAST(this.visitConditionalStatement(ctx.conditionalStatement()), ctx);
+    }
+
+    @Override
+    public Statement visitConditionalStatement(ConditionalStatementContext ctx) {
+        if (asBoolean(ctx.ifElseStatement())) {
+            return configureAST(this.visitIfElseStatement(ctx.ifElseStatement()), ctx);
+        } else if (asBoolean(ctx.switchStatement())) {
+            return configureAST(this.visitSwitchStatement(ctx.switchStatement()), ctx);
+        }
+
+        throw createParsingFailedException("Unsupported conditional statement", ctx);

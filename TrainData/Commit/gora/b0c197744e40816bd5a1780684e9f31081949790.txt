@@ -1,0 +1,35 @@
+
+
+
+  @Override public void initialize(Class<K> keyClass, Class<T> persistentClass,
+          Properties properties) {
+      AerospikeMappingBuilder aerospikeMappingBuilder = new AerospikeMappingBuilder();
+      aerospikeMappingBuilder
+              .readMappingFile(getConf().get(PARSE_MAPPING_FILE_KEY, DEFAULT_MAPPING_FILE),
+                      keyClass, persistentClass);
+      aerospikeParameters = new AerospikeParameters(aerospikeMappingBuilder.getAerospikeMapping(),
+              properties);
+      aerospikeClient = new AerospikeClient(aerospikeParameters.getHost(),
+              aerospikeParameters.getPort());
+  @Override public String getSchemaName() {
+  @Override public void createSchema() {
+  @Override public void deleteSchema() {
+  @Override public boolean schemaExists() {
+  @Override public T get(K key, String[] fields) {
+  @Override public void put(K key, T value) {
+    Key recordKey = new Key(aerospikeParameters.getAerospikeMapping().getNamespace(),
+            aerospikeParameters.getAerospikeMapping().getSet(), Value.get(key));
+      aerospikeClient
+              .put(aerospikeParameters.getAerospikeMapping().getWritePolicy(), recordKey, bin);
+  @Override public boolean delete(K key) {
+  @Override public long deleteByQuery(Query<K, T> query) {
+  @Override public Result<K, T> execute(Query<K, T> query) {
+  @Override public Query<K, T> newQuery() {
+  @Override public List<PartitionQuery<K, T>> getPartitions(Query<K, T> query) throws IOException {
+  @Override public void close() {
+   * @param value   value of the bin
+   * @param field   field corresponding to bin
+  private Bin getBin(String binName, Object value, Field field) {
+
+    if (field.schema().getType().equals(Schema.Type.UNION)) {
+      for (Schema schema : field.schema().getTypes()) {

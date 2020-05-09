@@ -1,0 +1,10 @@
+    // resulting qualifier for this query ('where' qualifier and qualifiers from entities)
+    private Node qualifierNode;
+    void setQualifierNode(Node qualifierNode) {
+        this.qualifierNode = qualifierNode;
+    }
+
+    Node getQualifierNode() {
+        return qualifierNode;
+    }
+

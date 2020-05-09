@@ -1,0 +1,2 @@
+    @UriParam(label = "security", secret = true)
+    @UriParam(label = "security", secret = true)

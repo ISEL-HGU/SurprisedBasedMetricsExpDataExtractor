@@ -1,0 +1,23 @@
+
+        interface Code extends Serializable {
+
+            /**
+             * Bean style accessor to name.
+             * This is required for framework like Jackson using bean convention for object serialization.
+             *
+             * @return code name
+             */
+            default String getName() {
+                return name();
+            }
+        interface Attribute extends Serializable {
+
+            /**
+             * Bean style accessor to name;
+             * This is required for framework like Jackson using bean convention for object serialization.
+             *
+             * @return attribute name
+             */
+            default String getName() {
+                return name();
+            }

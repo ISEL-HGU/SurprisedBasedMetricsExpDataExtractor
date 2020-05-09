@@ -1,0 +1,5 @@
+     * Tests whether the value is <b>not</b> <tt>null</tt>, an empty string or an empty collection.
+    @SuppressWarnings("unchecked")
+        } else if (value instanceof Collection) {
+            return !((Collection<?>)value).isEmpty();
+     * Tests whether the value is <b>not</b> <tt>null</tt>, an empty string or an empty collection.

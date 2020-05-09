@@ -1,0 +1,6 @@
+ b/core/camel-support/src/main/java/org/apache/camel/support/SimpleRegistry.java
+package org.apache.camel.support;
+ * <p/>
+ * Favour using {@link DefaultRegistry} instead of this.
+ *
+ * @see DefaultRegistry

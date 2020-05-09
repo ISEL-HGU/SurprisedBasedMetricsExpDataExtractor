@@ -1,0 +1,5 @@
+            pos = mi.getName().getStartPosition()  mi.getName().getLength();
+            line = findLineNumber(fullyQualifiedFileName, pos);
+            if (line > -1) {
+                newNode.setLineNumberEnd(""  line);
+            }

@@ -1,0 +1,167 @@
+import org.apache.ivy.core.IvyPatternHelper;
+import org.apache.ivy.plugins.matcher.MapMatcher;
+import org.apache.ivy.plugins.matcher.PatternMatcher;
+    public static final class BuildListModule {
+
+        private String organisation;
+
+        private String module;
+
+        private String revision;
+
+        private String branch;
+
+        private File file;
+
+        public String getOrganisation() {
+            return organisation;
+        }
+
+        public void setOrganisation(String organisation) {
+            this.organisation = organisation;
+        }
+
+        public String getModule() {
+            return module;
+        }
+
+        public void setModule(String module) {
+            this.module = module;
+        }
+
+        public String getRevision() {
+            return revision;
+        }
+
+        public void setRevision(String revision) {
+            this.revision = revision;
+        }
+
+        public String getBranch() {
+            return branch;
+        }
+
+        public void setBranch(String branch) {
+            this.branch = branch;
+        }
+
+        public File getFile() {
+            return file;
+        }
+
+        public void setFile(File file) {
+            this.file = file;
+        }
+
+    }
+
+    private List<BuildListModule> roots = new ArrayList<>();
+
+    private List<BuildListModule> leafs = new ArrayList<>();
+
+    public BuildListModule createRoot() {
+        BuildListModule root = new BuildListModule();
+        roots.add(root);
+        return root;
+    }
+
+    public BuildListModule createLeaf() {
+        BuildListModule leaf = new BuildListModule();
+        leafs.add(leaf);
+        return leaf;
+    }
+
+        Set<MapMatcher> rootModules = convert(roots, root, settings);
+        Set<MapMatcher> leafModules = convert(leafs, leaf, settings);
+        Set<MapMatcher> restartFromModules = convert(Collections.<BuildListModule>emptyList(), restartFrom, settings);
+        List<ModuleDescriptor> leafModuleDescriptors =
+                findModuleDescriptors(mds, leafModules, "leaf");
+        List<ModuleDescriptor> rootModuleDescriptors =
+                findModuleDescriptors(mds, rootModules, "root");
+        List<ModuleDescriptor> restartFromModuleDescriptors =
+                findModuleDescriptors(mds, restartFromModules, "restartFrom");
+            Message.info("Filtering modules based on roots ["  extractModuleNames(rootModules)  "]");
+            Message.info("Filtering modules based on leafs ["  extractModuleNames(leafModules)  "]");
+            // Only accept one (first) module
+    private Set<MapMatcher> convert(List<BuildListModule> modulesList, String modulesString, IvySettings settings) {
+        Set<MapMatcher> result = new LinkedHashSet<>();
+
+        for (BuildListModule module : modulesList) {
+            File ivyFile = module.getFile();
+            if (ivyFile == null) {
+                String org = module.getOrganisation();
+                String name = module.getModule();
+                String rev = module.getRevision();
+                String branch = module.getBranch();
+
+                Map<String, String> attributes = new HashMap<>();
+                attributes.put(IvyPatternHelper.ORGANISATION_KEY, org == null ? PatternMatcher.ANY_EXPRESSION : org);
+                attributes.put(IvyPatternHelper.MODULE_KEY, name == null ? PatternMatcher.ANY_EXPRESSION : name);
+                attributes.put(IvyPatternHelper.MODULE_KEY, rev == null ? PatternMatcher.ANY_EXPRESSION : rev);
+                attributes.put(IvyPatternHelper.MODULE_KEY, branch == null ? PatternMatcher.ANY_EXPRESSION : branch);
+
+                result.add(new MapMatcher(attributes, settings.getMatcher(PatternMatcher.EXACT)));
+            } else {
+                try {
+                    ModuleDescriptor md = ModuleDescriptorParserRegistry.getInstance()
+                            .parseDescriptor(settings, ivyFile.toURI().toURL(),
+                                    doValidate(settings));
+
+                    Map<String, String> attributes = new HashMap<>();
+                    attributes.putAll(md.getModuleRevisionId().getAttributes());
+                    attributes.put("resource", md.getResource().getName());
+
+                    result.add(new MapMatcher(attributes, settings.getMatcher(PatternMatcher.EXACT)));
+                } catch (Exception e) {
+                    throw new BuildException(e);
+                }
+            }
+        }
+
+        if (!"*".equals(modulesString)) {
+            StringTokenizer st = new StringTokenizer(modulesString, getDelimiter());
+            while (st.hasMoreTokens()) {
+                Map<String, String> attributes = new HashMap<>();
+                attributes.put(IvyPatternHelper.MODULE_KEY, st.nextToken());
+
+                result.add(new MapMatcher(attributes, settings.getMatcher(PatternMatcher.EXACT)));
+            }
+        }
+
+        return result;
+    }
+
+    private List<ModuleDescriptor> findModuleDescriptors(
+            Collection<ModuleDescriptor> mds, Set<MapMatcher> matchers, String kind) {
+        Set<MapMatcher> missingMatchers = new HashSet<>(matchers);
+            Map<String, String> attributes = new HashMap<>();
+            attributes.putAll(md.getAttributes());
+            attributes.put("resource", md.getResource().getName());
+
+            for (MapMatcher matcher : matchers) {
+                if (matcher.matches(attributes)) {
+                    missingMatchers.remove(matcher);
+                    result.add(md);
+                }
+        if (!missingMatchers.isEmpty()) {
+                     extractModuleNames(missingMatchers)  " in build fileset");
+    private String extractModuleNames(Set<MapMatcher> matchers) {
+        StringBuilder result = new StringBuilder();
+
+        String sep = "";
+        for (MapMatcher matcher : matchers) {
+            result.append(sep);
+
+            Map<String, String> attributes = matcher.getAttributes();
+            String organisation = attributes.get(IvyPatternHelper.ORGANISATION_KEY);
+            if (organisation != null && !PatternMatcher.ANY_EXPRESSION.equals(organisation)) {
+                result.append(organisation);
+                result.append('#');
+            }
+            result.append(attributes.get(IvyPatternHelper.MODULE_KEY));
+            sep = ", ";
+        }
+
+        return result.toString();
+    }
+

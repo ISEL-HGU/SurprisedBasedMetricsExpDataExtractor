@@ -1,0 +1,19 @@
+    // As per the JMS specs, header names must be valid Java identifier part
+    // characters.
+    // This means that any header names that contain illegal characters (- for
+    // example) should be handled correctly
+    // Opentracing java-jms does it as follows.
+    static final String JMS_DASH = "_$dash$_";
+    private final Map<String, Object> map;
+    private final boolean jmsEncoding;
+        // Assume any header property that begins with 'Camel' is for internal
+        // use
+
+     * Encode all dashes because JMS specification doesn't allow them in
+     * property name
+        if (key == null || key.isEmpty() || !jmsEncoding) {
+            return key;
+        }
+        return key.replace("-", JMS_DASH);
+    }
+}

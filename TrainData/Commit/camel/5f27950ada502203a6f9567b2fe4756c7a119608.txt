@@ -1,0 +1,14 @@
+
+                            List<String> causeExceptionsMessages = getCauseExceptionsMessages(exception);
+                            assertThat(causeExceptionsMessages, anyOf(hasItems(messages)));
+    private List<String> getCauseExceptionsMessages(Throwable exception) {
+        List<String> exceptionsMessages = new ArrayList<>();
+        Throwable cause = exception;
+        while (cause.getCause() != null && cause.getCause() != cause) {
+            cause = cause.getCause();
+            exceptionsMessages.add(cause.getMessage());
+        }
+        exceptionsMessages.addAll(log.getMessages());
+        return exceptionsMessages;
+    }
+

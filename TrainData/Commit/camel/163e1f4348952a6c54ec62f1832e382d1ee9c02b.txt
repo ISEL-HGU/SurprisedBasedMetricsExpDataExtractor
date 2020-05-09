@@ -1,0 +1,3 @@
+                if (LOG.isDebugEnabled()) {
+                    LOG.debug("Queuing reactive work: {}", runnable);
+                }

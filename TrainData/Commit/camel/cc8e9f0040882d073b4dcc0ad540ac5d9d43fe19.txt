@@ -1,0 +1,5 @@
+                if (!target.exists()) {
+                    CamelLogger.log(LOG, readLockLoggingLevel, "Cannot acquire read lock as file no longer exists. Will skip the file: "  file);
+                    return false;
+                }
+

@@ -1,0 +1,2 @@
+     * The port on the server to connect to when performing RADIUS accounting.
+     * The shared secret to use when connecting to the RADIUS server.

@@ -1,0 +1,27 @@
+        Object[] values = getValues();
+        return new GStringImpl(appendValues(values, that.getValues()), appendStrings(getStrings(), that.getStrings(), values.length));
+    }
+    private String[] appendStrings(String[] strings, String[] thatStrings, int valuesLength) {
+        int stringsLength = strings.length;
+        boolean isStringsLonger = stringsLength > valuesLength;
+        int lastIndexOfStrings = stringsLength - 1;
+        int thatStringsLength = isStringsLonger ? thatStrings.length - 1 : thatStrings.length;
+
+        String[] newStrings = new String[stringsLength  thatStringsLength];
+        System.arraycopy(strings, 0, newStrings, 0, stringsLength);
+
+        if (isStringsLonger) {
+            System.arraycopy(thatStrings, 1, newStrings, stringsLength, thatStringsLength);
+            newStrings[lastIndexOfStrings] = strings[lastIndexOfStrings]  thatStrings[0];
+        } else {
+            System.arraycopy(thatStrings, 0, newStrings, stringsLength, thatStringsLength);
+        return newStrings;
+    }
+    private Object[] appendValues(Object[] values, Object[] thatValues) {
+        int valuesLength = values.length;
+        int thatValuesLength = thatValues.length;
+        Object[] newValues = new Object[valuesLength  thatValuesLength];
+        System.arraycopy(values, 0, newValues, 0, valuesLength);
+        System.arraycopy(thatValues, 0, newValues, valuesLength, thatValuesLength);
+
+        return newValues;

@@ -1,0 +1,7 @@
+import java.util.Collections;
+        Group group = new Group();
+        group.setGroupId("TestGroup");
+        group.setGroupName("Test");
+        ListGroupsResult res = new ListGroupsResult();
+        res.setGroups(Collections.singleton(group));
+        return res;

@@ -1,0 +1,36 @@
+    private boolean escapeBackslash;
+        this(verbose, false);
+    }
+
+    public SimpleTemplateEngine(boolean verbose, boolean escapeBackslash) {
+        this.escapeBackslash = escapeBackslash;
+        SimpleTemplate template = new SimpleTemplate(escapeBackslash);
+        private boolean escapeBackslash;
+
+        public SimpleTemplate() {
+            this(false);
+        }
+
+        public SimpleTemplate(boolean escapeBackslash) {
+            this.escapeBackslash = escapeBackslash;
+        }
+
+
+                /*
+                 *  GROOVY-4585
+                 *  Handle backslash characters.
+                 */
+                if (escapeBackslash) {
+                    if (c == '\\') {
+                        reader.mark(1);
+                        c = reader.read();
+                        if (c != '$') {
+                            sw.write("\\\\");
+                            reader.reset();
+                        } else {
+                            sw.write("\\$");
+                        }
+
+                        continue;
+                    }
+                }

@@ -1,0 +1,1 @@
+ * A registry of MetaClass instances which caches introspection and

@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+import org.apache.commons.net.ftp.FTPFile;
+        List<SftpRemoteFile> files = null;
+        if (isUseList()) {
+            if (isStepwise()) {
+                files = operations.listFiles();
+            } else {
+                files = operations.listFiles(dir);
+            }
+            // we cannot use the LIST command(s) so we can only poll a named file
+            // so created a pseudo file with that name
+            fileExpressionResult = evaluateFileExpression();
+            if (fileExpressionResult != null) {
+                SftpRemoteFile file = new SftpRemoteFileSingle(fileExpressionResult);
+                files = new ArrayList<SftpRemoteFile>(1);
+                files.add(file);
+            }
+

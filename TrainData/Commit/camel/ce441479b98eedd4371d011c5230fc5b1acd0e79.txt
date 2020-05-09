@@ -1,0 +1,47 @@
+import java.util.LinkedHashMap;
+    // transient state of endpoint, headers and body which needs to be thread local scoped to be thread-safe
+    private final ThreadLocal<Endpoint> endpoint = new ThreadLocal<>();
+    private final ThreadLocal<Supplier<Exchange>> exchangeSupplier = new ThreadLocal<>();
+    private final ThreadLocal<Supplier<Processor>> processorSupplier = new ThreadLocal<>();
+    private final ThreadLocal<Consumer<ProducerTemplate>> templateCustomizer = new ThreadLocal<>();
+    private Endpoint defaultEndpoint;
+        return defaultEndpoint;
+        this.defaultEndpoint = defaultEndpoint;
+            map = new LinkedHashMap<>();
+        this.templateCustomizer.set(templateCustomizer);
+        this.exchangeSupplier.set(exchangeSupplier);
+        this.processorSupplier.set(processorSupplier);
+        this.endpoint.set(endpoint);
+        if (exchangeSupplier.get() != null) {
+        final Processor processorSupplier = this.processorSupplier.get() != null ? this.processorSupplier.get().get() : defaultProcessor();
+            result = (T)template().request(target, processorSupplier);
+            Exchange exchange = template().request(target, processorSupplier);
+                processorSupplier,
+        Exchange exchange = exchangeSupplier.get() != null ? exchangeSupplier.get().get() : null;
+        if (exchange != null) {
+            return template().send(target, exchange);
+        } else {
+            Processor processor = processorSupplier.get() != null ? processorSupplier.get().get() : defaultProcessor();
+            return template().send(target, processor);
+        }
+        Exchange exchange = exchangeSupplier.get() != null ? exchangeSupplier.get().get() : null;
+        if (exchange != null) {
+            return template().asyncSend(target, exchange);
+        } else {
+            Processor processor = processorSupplier.get() != null ? processorSupplier.get().get() : defaultAsyncProcessor();
+            return template().asyncSend(target, processor);
+        }
+            if (defaultEndpoint != null) {
+                template.setDefaultEndpoint(defaultEndpoint);
+            }
+            if (templateCustomizer.get() != null) {
+                templateCustomizer.get().accept(template);
+            }
+        if (endpoint.get() != null) {
+        if (defaultEndpoint != null) {
+            return defaultEndpoint;
+        this.endpoint.remove();
+        this.exchangeSupplier.remove();
+        this.processorSupplier.remove();
+        this.templateCustomizer.remove();
+

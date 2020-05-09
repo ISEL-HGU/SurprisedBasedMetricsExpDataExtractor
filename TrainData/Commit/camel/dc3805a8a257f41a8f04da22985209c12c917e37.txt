@@ -1,0 +1,28 @@
+import org.apache.camel.impl.DurationRoutePolicyFactory;
+    protected int durationMaxMessages;
+        addOption(new ParameterOption("dm", "durationMaxMessages",
+                "Sets the maximum messages duration that the application will process before terminating.",
+                "durationMaxMessages") {
+            protected void doProcess(String arg, String parameter, LinkedList<String> remainingArgs) {
+                setDurationMaxMessages(Integer.parseInt(parameter));
+            }
+        });
+    public int getDurationMaxMessages() {
+        return durationMaxMessages;
+    }
+
+    /**
+     * Sets the duration to run the application to process at most max messages until it
+     * should be terminated. Defaults to -1. Any value <= 0 will run forever.
+     */
+    public void setDurationMaxMessages(int durationMaxMessages) {
+        this.durationMaxMessages = durationMaxMessages;
+    }
+
+        if (durationMaxMessages > 0) {
+            DurationRoutePolicyFactory factory = new DurationRoutePolicyFactory();
+            factory.setMaxMessages(durationMaxMessages);
+            LOG.debug("Adding DurationRoutePolicyFactory with maxMessages: {}", durationMaxMessages);
+            camelContext.addRoutePolicyFactory(factory);
+        }
+

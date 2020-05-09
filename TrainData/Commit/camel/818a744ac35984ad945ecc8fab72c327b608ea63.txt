@@ -1,0 +1,29 @@
+ * Prepares the apache-camel/pom.xml and common-bin to keep the Camel artifacts up-to-date.
+     * The apache-camel/descriptors/common-bin.xml
+     */
+    @Parameter(defaultValue = "${project.build.directory}/../../../apache-camel/src/main/descriptors/common-bin.xml")
+    protected File commonBinXml;
+
+    /**
+        updatePomAndCommonBin(componentsDir, "camel components");
+        updatePomAndCommonBin(startersDir, "camel starters");
+    protected void updatePomAndCommonBin(File dir, String token) throws MojoExecutionException, MojoFailureException {
+        // update pom.xml
+        boolean updated = updateXmlFile(releasePom, token, changed, "    ");
+
+        // update common-bin.xml
+        sb = new StringBuilder();
+        for (String aid : artifactIds) {
+            sb.append("        <include>org.apache.camel:"  aid  "</include>\n");
+        }
+        changed = sb.toString();
+        updated = updateXmlFile(commonBinXml, token, changed, "        ");
+
+        if (updated) {
+            getLog().info("Updated apache-camel/src/main/descriptors/common-bin.xml file");
+        } else {
+            getLog().debug("No changes to apache-camel/src/main/descriptors/common-bin.xml file");
+        }
+        getLog().info("apache-camel/src/main/descriptors/common-bin.xml contains "  artifactIds.size()  " "  token  " dependencies");
+    private boolean updateXmlFile(File file, String token, String changed, String spaces) throws MojoExecutionException {
+                    text = before  start  "\n"  spaces  changed  "\n"  spaces  end  after;

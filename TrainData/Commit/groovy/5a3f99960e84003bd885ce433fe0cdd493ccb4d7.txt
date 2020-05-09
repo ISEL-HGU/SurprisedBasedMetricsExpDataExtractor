@@ -1,0 +1,3 @@
+ b/subprojects/groovy-json/src/main/java/org/apache/groovy/json/internal/ValueMapImpl.java
+package org.apache.groovy.json.internal;
+import static org.apache.groovy.json.internal.Exceptions.die;

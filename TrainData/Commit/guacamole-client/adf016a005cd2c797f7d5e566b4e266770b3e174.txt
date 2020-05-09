@@ -1,0 +1,3 @@
+    private Timestamp lastActive;
+    public Timestamp getLastActive() {
+    public void setLastActive(Timestamp lastActive) {

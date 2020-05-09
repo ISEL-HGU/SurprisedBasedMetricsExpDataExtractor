@@ -1,0 +1,12 @@
+    class Attributes {
+        @JsonProperty("type")
+        public String getType() {
+            return "With_External_Id__c";
+        }
+    }
+
+    @JsonProperty("attributes")
+    public Attributes getAttributes() {
+        return new Attributes();
+    }
+

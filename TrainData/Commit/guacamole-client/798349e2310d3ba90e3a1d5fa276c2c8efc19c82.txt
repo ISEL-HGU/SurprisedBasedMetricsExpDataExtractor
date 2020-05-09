@@ -1,0 +1,23 @@
+import java.util.Map;
+                // Remove only if key is actually present
+                if (!ArbitraryAttributeMap.this.containsKey(model.getName()))
+                    return false;
+
+                // The attribute should be removed only if the value matches
+                String currentValue = ArbitraryAttributeMap.this.get(model.getName());
+                if (currentValue == null) {
+                    if (model.getValue() != null)
+                        return false;
+                }
+                else if (!currentValue.equals(model.getValue()))
+                    return false;
+
+                ArbitraryAttributeMap.this.remove(model.getName());
+                return true;
+                final Iterator<Map.Entry<String, String>> iterator = entrySet().iterator();
+                        Map.Entry<String, String> entry = iterator.next();
+                    @Override
+                    public void remove() {
+                        iterator.remove();
+                    }
+

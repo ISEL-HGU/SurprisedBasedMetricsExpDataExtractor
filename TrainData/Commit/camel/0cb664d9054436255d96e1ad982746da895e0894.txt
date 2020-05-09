@@ -1,0 +1,5 @@
+import io.fabric8.kubernetes.client.dsl.MixedOperation;
+import io.fabric8.kubernetes.client.dsl.NonNamespaceOperation;
+import io.fabric8.kubernetes.client.dsl.Resource;
+            NonNamespaceOperation<Service, ServiceList, DoneableService, Resource<Service, DoneableService>> services; 
+            MixedOperation<Service, ServiceList, DoneableService, Resource<Service, DoneableService>> services; 

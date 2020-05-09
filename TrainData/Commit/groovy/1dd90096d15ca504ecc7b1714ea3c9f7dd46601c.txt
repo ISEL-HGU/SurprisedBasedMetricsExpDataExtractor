@@ -1,0 +1,6 @@
+
+        // Check for a single minus now, rather than finding out later during lazy parsing.
+        if (this.endIndex - this.startIndex == 1 && this.buffer[this.startIndex] == '-') {
+            die("A single minus is not a valid number");
+        }
+

@@ -1,0 +1,6 @@
+import java.util.Optional;
+            final String routeId = verb.getRouteId();
+            final String operationId = Optional.ofNullable(rest.getId()).orElse(routeId);
+            op.operationId(operationId);
+
+            op.getVendorExtensions().put("x-routeId", routeId);

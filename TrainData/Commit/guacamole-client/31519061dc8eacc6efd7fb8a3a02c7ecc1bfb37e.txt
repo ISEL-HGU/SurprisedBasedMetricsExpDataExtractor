@@ -1,0 +1,16 @@
+import org.apache.guacamole.form.BooleanField;
+     * The name of the attribute which controls whether the connection should
+     * be used as a spare only (all other non-spare connections within the same
+     * balancing group should be preferred).
+     */
+    public static final String FAILOVER_ONLY_NAME = "failover-only";
+
+    /**
+        new NumericField(CONNECTION_WEIGHT),
+        new BooleanField(FAILOVER_ONLY_NAME, "true")
+        // Set whether connection is failover-only
+        attributes.put(FAILOVER_ONLY_NAME, getModel().isFailoverOnly() ? "true" : null);
+
+        // Translate failover-only attribute
+        getModel().setFailoverOnly("true".equals(attributes.get(FAILOVER_ONLY_NAME)));
+

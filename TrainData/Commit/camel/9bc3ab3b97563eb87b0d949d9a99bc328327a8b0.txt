@@ -1,0 +1,42 @@
+        // the body is not a prepared list of map that bindy expects so help a
+        // bit here and create one for us
+                models.add((Map<String, Object>)model);
+
+     * check emptyStream and if CVSRecord is allow to process emptyStreams avoid
+     * IllegalArgumentException and return empty list when unmarshalling
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                if (removeQuotes) {
+
+
+
+
+
+
+     * Unquote the tokens, by removing leading and trailing quote chars, as will
+     * handling fixing broken tokens which may have been split by a separator
+     * inside a quote.
+        // if the separator char is also inside a quoted token, therefore we
+        // need
+        // parsing assumes matching close and end quotes
+                // token is just a quote
+                    // if token is a quote then it can only close processing if
+                    // it has begun
+                    // quote"not empty"
+            // "not empty"quote
+            // optimize to only substring once
+                    // case where no quotes

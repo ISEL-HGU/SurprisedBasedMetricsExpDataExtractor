@@ -1,0 +1,6 @@
+import static org.codehaus.groovy.syntax.Types.COMPARE_IDENTICAL;
+import static org.codehaus.groovy.syntax.Types.COMPARE_NOT_IDENTICAL;
+        int op = expression.getOperation().getType();
+        if (op == COMPARE_IDENTICAL || op == COMPARE_NOT_IDENTICAL) {
+            return; // we'll report those as errors later
+        }

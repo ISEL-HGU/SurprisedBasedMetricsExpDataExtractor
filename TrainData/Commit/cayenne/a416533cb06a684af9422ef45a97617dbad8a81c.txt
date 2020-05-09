@@ -1,0 +1,4 @@
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+
+ * @deprecated since 4.0, use {@link org.apache.cayenne.commitlog.CommitLogFilter}.

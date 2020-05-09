@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+import javax.ws.rs.GET;
+import org.apache.guacamole.net.auth.ActivityRecord;
+import org.apache.guacamole.rest.history.APIActivityRecord;
+    /**
+     * Retrieves the login (session) history of a single user.
+     *
+     * @return
+     *     A list of activity records, describing the start and end times of
+     *     this user's sessions.
+     *
+     * @throws GuacamoleException
+     *     If an error occurs while retrieving the user history.
+     */
+    @GET
+    @Path("history")
+    public List<APIActivityRecord> getUserHistory()
+            throws GuacamoleException {
+
+        // Retrieve the requested user's history
+        List<APIActivityRecord> apiRecords = new ArrayList<APIActivityRecord>();
+        for (ActivityRecord record : user.getHistory())
+            apiRecords.add(new APIActivityRecord(record));
+
+        // Return the converted history
+        return apiRecords;
+
+    }
+

@@ -1,0 +1,3 @@
+    protected DefaultConnectorComponent(String componentName, Class<?> componentClass) {
+        this.model = new ConnectorModel(componentName, componentClass);
+        this.catalog.addComponent(componentName, componentClass.getName());

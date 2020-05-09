@@ -1,0 +1,2 @@
+    public Integer getConnectionTimeoutMillis() {
+    public void setConnectionTimeoutMillis(Integer connectionTimeout) {

@@ -1,0 +1,9 @@
+            case "class":
+                s = "clas";
+                break;
+            case "package":
+                s = "packag";
+                break;
+            case "rest":
+                s = "restEndpoint";
+                break;

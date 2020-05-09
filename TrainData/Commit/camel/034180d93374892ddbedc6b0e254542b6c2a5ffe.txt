@@ -1,0 +1,40 @@
+import com.amazonaws.Protocol;
+import com.amazonaws.client.builder.AwsClientBuilder;
+    /*
+     If using a different AWS host, do not assume specific parts of the AWS host
+     and, instead, just return whatever is provided as the host.
+     */
+    private String getFullyQualifiedAWSHost() {
+        String host = configuration.getAmazonAWSHost();
+        host = FileUtil.stripTrailingSeparator(host);
+
+        if (host.equals("amazonaws.com")) {
+            return "sqs."  Regions.valueOf(configuration.getRegion()).getName()  "."  host;
+        }
+
+        return host;
+    }
+
+                String protocol = configuration.getProtocol();
+
+                queueUrl = protocol  "://"  getFullyQualifiedAWSHost()  "/"  configuration.getQueueOwnerAWSAccountId()  "/"
+
+        final String protocol = configuration.getProtocol(); 
+
+        if (protocol.equals("http")) {
+            log.trace("Configuring AWS-SQS for HTTP protocol");
+            if (isClientConfigFound) {
+                clientConfiguration = clientConfiguration.withProtocol(Protocol.HTTP);
+            } else {
+                clientConfiguration = new ClientConfiguration().withProtocol(Protocol.HTTP);
+                isClientConfigFound = true;
+            }
+        }
+
+
+        final String host = getFullyQualifiedAWSHost();
+        final String region = Regions.valueOf(configuration.getRegion()).getName();
+
+        log.debug("Creating endpoint for host {} on region {}", host, region);
+        clientBuilder.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(host, region));
+

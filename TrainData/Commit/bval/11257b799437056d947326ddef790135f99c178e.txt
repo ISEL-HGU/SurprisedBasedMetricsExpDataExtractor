@@ -1,0 +1,4 @@
+        return addPropertyNode(name);
+        propertyPath.addNode(node);
+        return new NodeBuilderCustomizableContextImpl(parent, messageTemplate, propertyPath, name);
+        propertyPath.addNode(node);

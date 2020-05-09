@@ -1,0 +1,29 @@
+import io.undertow.server.handlers.accesslog.AccessLogReceiver;
+
+    private AccessLogReceiver accessLogReceiver;
+    @UriParam(label = "advanced")
+    @UriParam(label = "consumer", defaultValue = "false")
+    private Boolean accessLog = Boolean.FALSE;
+    public Boolean getAccessLog() {
+        return accessLog;
+    }
+
+    /**
+     * Whether or not the consumer should write access log
+     */
+    public void setAccessLog(Boolean accessLog) {
+        this.accessLog = accessLog;
+    }
+
+    public AccessLogReceiver getAccessLogReceiver() {
+        return accessLogReceiver;
+    }
+
+    /**
+     * Which Undertow AccessLogReciever should be used
+     * Will use JBossLoggingAccessLogReceiver if not specifid
+     */
+    public void setAccessLogReceiver(AccessLogReceiver accessLogReceiver) {
+        this.accessLogReceiver = accessLogReceiver;
+    }
+

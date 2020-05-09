@@ -1,0 +1,6 @@
+    @Override
+            for (Object e : entrySet()) {
+                Map.Entry entry = (Map.Entry) e;
+                Object key = entry.getKey();
+                if (!DefaultTypeTransformation.compareEqual(entry.getValue(), that.get(key))) {
+    @Override

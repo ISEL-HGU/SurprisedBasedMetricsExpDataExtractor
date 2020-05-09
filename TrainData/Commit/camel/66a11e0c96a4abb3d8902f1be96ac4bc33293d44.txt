@@ -1,0 +1,5 @@
+    @Override
+        if (connection != null && connected) {
+            final Promise<Void> promise = new Promise<>();
+                            connected = false;
+

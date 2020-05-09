@@ -1,0 +1,5 @@
+import java.util.concurrent.ConcurrentHashMap;
+    protected static Map<String, AtomicInteger> nodeCounters = new ConcurrentHashMap<>();
+    protected static AtomicInteger getNodeCounter(String key) {
+        return nodeCounters.computeIfAbsent(key, k -> new AtomicInteger(0));
+    protected static void resetAllCounters() {

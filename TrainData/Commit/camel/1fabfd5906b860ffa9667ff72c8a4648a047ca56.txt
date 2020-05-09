@@ -1,0 +1,3 @@
+        // this starts a new chat or retrieves the pre-existing one in a threadsafe manner
+                    throw new RuntimeException("Could not establish connection to XMPP server: "  endpoint.getConnectionDescription(), e);
+                    LOG.warn("Could not connect to XMPP server: {} Producer will attempt lazy connection when needed.", e.getMessage());

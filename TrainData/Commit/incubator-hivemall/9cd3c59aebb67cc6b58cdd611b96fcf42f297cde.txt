@@ -1,0 +1,7 @@
+    public static int getInt(@Nullable Object o, @Nonnull PrimitiveObjectInspector oi) {
+        if (o == null) {
+            return 0;
+        }
+        return PrimitiveObjectInspectorUtils.getInt(o, oi);
+    }
+

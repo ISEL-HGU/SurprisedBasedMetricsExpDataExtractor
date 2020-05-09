@@ -1,0 +1,5 @@
+        
+        // include any query parameters if needed
+        if (endpoint.getQueryParameters() != null) {
+            uri = URISupport.appendParametersToURI(uri, endpoint.getQueryParameters());
+        }

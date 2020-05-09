@@ -1,0 +1,20 @@
+import org.apache.zookeeper.server.NIOServerCnxnFactory;
+import org.junit.rules.ExternalResource;
+import static org.apache.camel.component.kafka.embedded.TestUtils.*;
+
+public class EmbeddedZookeeper extends ExternalResource {
+    private ServerCnxnFactory cnxnFactory;
+    private ZooKeeperServer zooKeeperServer;
+    @Override
+    public void before() throws IOException {
+        this.snapshotDir = constructTempDir(perTest("zk-snapshot"));
+        this.logDir = constructTempDir(perTest("zk-log"));
+            zooKeeperServer = new ZooKeeperServer(snapshotDir, logDir, tickTime);
+            cnxnFactory = new NIOServerCnxnFactory();
+            cnxnFactory.configure(new InetSocketAddress("localhost", port), 1024);
+            cnxnFactory.startup(zooKeeperServer);
+    @Override
+    public void after() {
+        cnxnFactory.shutdown();
+        zooKeeperServer.shutdown();
+

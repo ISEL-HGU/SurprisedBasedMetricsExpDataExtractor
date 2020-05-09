@@ -1,0 +1,44 @@
+import javax.crypto.SecretKey;
+        SecretKey dataEncryptionKey = generateDataEncryptionKey();
+
+
+        // Clean the secret key from memory
+        try {
+            dataEncryptionKey.destroy();
+        } catch (javax.security.auth.DestroyFailedException ex) {
+            LOG.debug("Error destroying key: {}", ex.getMessage());
+        }
+        SecretKey keyEncryptionKey;
+        SecretKey dataEncryptionKey;
+
+        // Clean the secret keys from memory
+        try {
+            dataEncryptionKey.destroy();
+        } catch (javax.security.auth.DestroyFailedException ex) {
+            LOG.debug("Error destroying key: {}", ex.getMessage());
+        }
+        
+        try {
+            keyEncryptionKey.destroy();
+        } catch (javax.security.auth.DestroyFailedException ex) {
+            LOG.debug("Error destroying key: {}", ex.getMessage());
+        }
+    private PrivateKey getPrivateKey(KeyStore keystore, String alias, String password) throws Exception {
+            return (PrivateKey)key;
+        SecretKey keyEncryptionKey;
+
+        // Clean the secret key from memory
+        try {
+            keyEncryptionKey.destroy();
+        } catch (javax.security.auth.DestroyFailedException ex) {
+            LOG.debug("Error destroying key: {}", ex.getMessage());
+        }
+
+        PrivateKey keyEncryptionKey = getPrivateKey(this.keyStore, this.recipientKeyAlias,
+        try {
+            keyEncryptionKey.destroy();
+        } catch (javax.security.auth.DestroyFailedException ex) {
+            LOG.debug("Error destroying key: {}", ex.getMessage());
+    private SecretKey generateKeyEncryptionKey(String algorithm) throws
+        SecretKey secretKey;
+    private SecretKey generateDataEncryptionKey() throws Exception {

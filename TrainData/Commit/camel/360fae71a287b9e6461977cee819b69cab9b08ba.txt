@@ -1,0 +1,6 @@
+import com.sun.corba.se.pept.broker.Broker;
+        DescribeBrokerResult result = new DescribeBrokerResult();
+        result.setBrokerId("1");
+        result.setBrokerName("Test");
+        result.setBrokerState(BrokerState.RUNNING.toString());
+        return result;

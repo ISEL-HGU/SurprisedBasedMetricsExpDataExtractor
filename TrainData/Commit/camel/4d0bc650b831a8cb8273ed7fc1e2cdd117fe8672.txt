@@ -1,0 +1,36 @@
+     * Define if Whitelist feature is enabled or not
+     */
+    private Boolean whitelistEnabled = false;
+    /**
+     * Define the allowed objects to be unmarshalled
+     */
+    private String allowedUnmarshallObjects;
+    /**
+     * Define the denied objects to be unmarshalled
+     */
+    private String deniedUnmarshallObjects;
+    /**
+    public Boolean getWhitelistEnabled() {
+        return whitelistEnabled;
+    }
+
+    public void setWhitelistEnabled(Boolean whitelistEnabled) {
+        this.whitelistEnabled = whitelistEnabled;
+    }
+
+    public String getAllowedUnmarshallObjects() {
+        return allowedUnmarshallObjects;
+    }
+
+    public void setAllowedUnmarshallObjects(String allowedUnmarshallObjects) {
+        this.allowedUnmarshallObjects = allowedUnmarshallObjects;
+    }
+
+    public String getDeniedUnmarshallObjects() {
+        return deniedUnmarshallObjects;
+    }
+
+    public void setDeniedUnmarshallObjects(String deniedUnmarshallObjects) {
+        this.deniedUnmarshallObjects = deniedUnmarshallObjects;
+    }
+

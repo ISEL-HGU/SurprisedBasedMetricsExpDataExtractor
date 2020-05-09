@@ -1,0 +1,1 @@
+        return binder.bindMap(String.class, XMPP_BRIDGE_PROPERTIES_MAP);

@@ -1,0 +1,22 @@
+import org.apache.camel.spi.Metadata;
+import static org.apache.camel.maven.packaging.JSonSchemaHelper.getPropertyDescriptionValue;
+                // skip these types
+                if (propType.isType("CamelContext")) {
+                    continue;
+                }
+
+                // find description for the nested type on its field/setter javadoc or via Camel annotations
+                if (Strings.isBlank(description) && sourceProp.hasAnnotation(UriPath.class)) {
+                    description = sourceProp.getAnnotation(UriPath.class).getLiteralValue("description");
+                }
+                if (Strings.isBlank(description) && sourceProp.hasAnnotation(UriParam.class)) {
+                    description = sourceProp.getAnnotation(UriParam.class).getLiteralValue("description");
+                }
+                if (Strings.isBlank(description) && sourceProp.hasAnnotation(Metadata.class)) {
+                    description = sourceProp.getAnnotation(Metadata.class).getLiteralValue("description");
+                }
+                                // favour description from the model
+                                description = getPropertyDescriptionValue(rows, optionName);
+                                if (description != null) {
+                                    prop.getField().getJavaDoc().setFullText(description);
+                                }

@@ -1,0 +1,19 @@
+import java.io.InputStream;
+import java.io.OutputStream;
+        ByteArrayOutputStream bytesOut = new ByteArrayOutputStream();
+        marshallExchange(camelContext, exchange, allowSerializedHeaders, bytesOut);
+        return bytesOut.toByteArray();
+    }
+
+    public void marshallExchange(CamelContext camelContext, Exchange exchange, boolean allowSerializedHeaders, OutputStream outputStream) throws IOException {
+        encode(pe, outputStream);
+        return unmarshallExchange(camelContext, new ByteArrayInputStream(buffer));
+    }
+
+    public Exchange unmarshallExchange(CamelContext camelContext, InputStream inputStream) throws IOException, ClassNotFoundException {
+        DefaultExchangeHolder pe = decode(camelContext, inputStream);
+    private void encode(Object object, OutputStream bytesOut) throws IOException {
+        try (ObjectOutputStream objectOut = new ObjectOutputStream(bytesOut)) {
+            objectOut.writeObject(object);
+        }
+    private DefaultExchangeHolder decode(CamelContext camelContext, InputStream bytesIn) throws IOException, ClassNotFoundException {

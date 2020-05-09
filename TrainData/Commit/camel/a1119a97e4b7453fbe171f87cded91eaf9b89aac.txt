@@ -1,0 +1,37 @@
+import java.util.function.Function;
+     * Adds a processor which sets the body on the IN message
+     *
+     * @param supplier   the supplier that provides a value to the IN message body
+     * @return the builder
+     */
+    public <Result> Type setBody(Supplier<Result> supplier) {
+        SetBodyDefinition answer = new SetBodyDefinition(new ExpressionAdapter() {
+            @Override
+            public Result evaluate(Exchange exchange) {
+                return supplier.get();
+            }
+        });
+        addOutput(answer);
+        return (Type) this;
+    }
+
+    /**
+     * <a href="http://camel.apache.org/message-translator.html">Message Translator EIP:</a>
+     * Adds a processor which sets the body on the IN message
+     *
+     * @param function   the function that provides a value to the IN message body
+     * @return the builder
+     */
+    public <Result> Type setBody(Function<Exchange, Result> function) {
+        SetBodyDefinition answer = new SetBodyDefinition(new ExpressionAdapter() {
+            @Override
+            public Result evaluate(Exchange exchange) {
+                return function.apply(exchange);
+            }
+        });
+        addOutput(answer);
+        return (Type) this;
+    }
+
+    /**
+     * <a href="http://camel.apache.org/message-translator.html">Message Translator EIP:</a>

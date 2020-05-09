@@ -1,0 +1,9 @@
+                } catch (Exception ex) {
+                    throw ex;
+                    } catch (Exception ex) {
+                        throw ex;
+        } catch (Exception ex) {
+            throw  ex;
+        //needs access in MessageObserver/Interceptor to close the UnitOfWork
+        cxfExchange.put(org.apache.camel.Exchange.class, camelExchange);
+

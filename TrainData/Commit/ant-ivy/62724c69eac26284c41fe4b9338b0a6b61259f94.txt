@@ -1,0 +1,13 @@
+                        fetchDependencies(root, conf, new HashSet<String>(), false);
+    private void fetchDependencies(VisitNode node, String conf, Set<String> fetchedSet, boolean shouldBePublic) {
+                    doFetchDependencies(node, rconf, fetchedSet);
+                    doFetchDependencies(node, rconf, fetchedSet);
+                        fetchDependencies(node.gotoNode(selected), conf, fetchedSet, true);
+    private void doFetchDependencies(VisitNode node, String conf, Set<String> fetchedSet) {
+            fetchDependencies(node, extendedConf, fetchedSet, false);
+        if (!isDependenciesFetched(node.getNode(), conf, fetchedSet) && node.isTransitive()) {
+                    fetchDependencies(dep, rconf, fetchedSet, true);
+                        fetchDependencies(dep, fconf, fetchedSet, false);
+            markDependenciesFetched(node.getNode(), conf, fetchedSet);
+    private boolean isDependenciesFetched(IvyNode node, String conf, Set<String> fetchedSet) {
+    private void markDependenciesFetched(IvyNode node, String conf, Set<String> fetchedSet) {

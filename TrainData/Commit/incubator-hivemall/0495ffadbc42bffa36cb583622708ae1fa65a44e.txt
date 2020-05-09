@@ -1,0 +1,8 @@
+public class PLSAUDTF extends ProbabilisticTopicModelBaseUDTF {
+        super();
+
+        Options opts = super.getOptions();
+        CommandLine cl = super.processOptions(argOIs);
+        if (cl != null) {
+    protected AbstractProbabilisticTopicModel createModel() {
+        return new IncrementalPLSAModel(topics, alpha, delta);

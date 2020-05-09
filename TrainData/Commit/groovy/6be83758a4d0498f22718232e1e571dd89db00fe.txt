@@ -1,0 +1,2 @@
+ b/subprojects/groovy-jmx/src/test/java/groovy/jmx/DummyMBean.java
+package groovy.jmx;

@@ -1,0 +1,8 @@
+            colLast  = info.getColumnLast();
+        int cur = 0;
+        while (child != null && cur <= position) {
+            if (cur == position) {
+                return (GroovySourceAST) child;
+            }
+            cur;
+        return null;

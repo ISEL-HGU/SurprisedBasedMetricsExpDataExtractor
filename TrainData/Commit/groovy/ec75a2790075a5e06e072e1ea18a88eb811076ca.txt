@@ -1,0 +1,1 @@
+        } else if (asBoolean(ctx.namedPropertyArgs())) { // this is a special way to new instance, e.g. Person[name: 'Daniel.Sun', location: 'Shanghai']

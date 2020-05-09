@@ -1,0 +1,3 @@
+        if (validName && parameterCount == 1) {
+            // a setXXX can also be a builder pattern so check for its return type is itself
+            return type.equals(Void.TYPE) || allowBuilderPattern && method.getDeclaringClass().isAssignableFrom(type);

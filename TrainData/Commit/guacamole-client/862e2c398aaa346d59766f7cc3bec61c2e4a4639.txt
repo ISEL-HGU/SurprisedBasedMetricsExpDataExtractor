@@ -1,0 +1,17 @@
+     * Returns whether this user account has been disabled. The credentials of
+     * disabled user accounts are treated as invalid, effectively disabling
+     * that user's access to data for which they would otherwise have
+     * permission.
+     *     true if this user account is disabled, false otherwise.
+     * Sets whether this user account has been disabled. The credentials of
+     * disabled user accounts are treated as invalid, effectively disabling
+     * that user's access to data for which they would otherwise have
+     * permission.
+     *     true if this user account should be disabled, false otherwise.
+     * Returns whether this user's password has expired. If a user's password
+     * is expired, it must be immediately changed upon login. A user account
+     * with an expired password cannot be used until the password has been
+     * changed.
+     *     true if this user's password has expired, false otherwise.
+     * Sets whether this user's password is expired. If a user's password is
+     *     true if this user's password has expired, false otherwise.

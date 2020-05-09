@@ -1,0 +1,3 @@
+    private boolean useMDCLogging;
+    public boolean isUseMDCLogging() {
+    public void setUseMDCLogging(boolean useMDCLogging) {

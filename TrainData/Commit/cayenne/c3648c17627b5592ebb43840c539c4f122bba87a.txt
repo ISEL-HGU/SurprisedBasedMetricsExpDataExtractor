@@ -1,0 +1,3 @@
+import org.apache.cayenne.modeler.generic.GenericMain;
+			GenericMain.main(new String[] { f.getAbsolutePath() });
+			GenericMain.main(new String[] {});

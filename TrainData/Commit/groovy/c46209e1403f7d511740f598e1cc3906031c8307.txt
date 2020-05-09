@@ -1,0 +1,2 @@
+        MacroClassTransformer(SourceUnit sourceUnit) {
+        MacroClassTransformingCodeVisitor(ClassCodeExpressionTransformer transformer, SourceUnit sourceUnit) {

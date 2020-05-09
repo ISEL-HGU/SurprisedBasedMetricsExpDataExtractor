@@ -1,0 +1,114 @@
+        packageNode.addAnnotations(this.visitAnnotationsOpt(ctx.annotationsOpt()));
+        enumConstant.addAnnotations(this.visitAnnotationsOpt(ctx.annotationsOpt()));
+        if (asBoolean(ctx.LBRACK()) || asBoolean(ctx.dims())) { // create array
+            ArrayExpression arrayExpression;
+            List<List<AnnotationNode>> allDimList;
+
+                ClassNode elementType = classNode;
+                allDimList = this.visitDims(ctx.dims());
+
+                for (int i = 0, n = allDimList.size() - 1; i < n; i) {
+                    elementType = elementType.makeArray();
+                arrayExpression =
+                            elementType,
+                            this.visitArrayInitializer(ctx.arrayInitializer()));
+
+                List<List<AnnotationNode>> emptyDimList = this.visitDimsOpt(ctx.dimsOpt());
+
+                if (asBoolean(emptyDimList)) {
+                    empties = new Expression[emptyDimList.size()];
+                arrayExpression =
+                                ).collect(Collectors.toList()));
+
+
+                List<List<AnnotationNode>> exprDimList = ctx.annotationsOpt().stream().map(this::visitAnnotationsOpt).collect(Collectors.toList());
+                allDimList = new ArrayList<>(exprDimList);
+                Collections.reverse(emptyDimList);
+                allDimList.addAll(emptyDimList);
+                Collections.reverse(allDimList);
+
+            arrayExpression.setType(createArrayType(classNode, allDimList));
+
+            return this.configureAST(arrayExpression, ctx);
+    private ClassNode createArrayType(ClassNode classNode, List<List<AnnotationNode>> dimList) {
+        ClassNode arrayType = classNode;
+        for (int i = 0, n = dimList.size(); i < n; i) {
+            arrayType = arrayType.makeArray();
+            arrayType.addAnnotations(dimList.get(i));
+        }
+        return arrayType;
+    }
+
+        ClassNode classNode = null;
+
+            classNode = this.visitQualifiedClassName(ctx.qualifiedClassName());
+            classNode = this.configureAST(classNode, ctx);
+        } else if (asBoolean(ctx.primitiveType())) {
+            classNode = this.configureAST(
+        if (!asBoolean(classNode)) {
+            throw createParsingFailedException("Unsupported created name: "  ctx.getText(), ctx);
+        }
+
+        classNode.addAnnotations(this.visitAnnotationsOpt(ctx.annotationsOpt()));
+
+        return classNode;
+        if (asBoolean(ctx.thisFormalParameter())) {
+            parameterList.add(this.visitThisFormalParameter(ctx.thisFormalParameter()));
+        }
+
+    public Parameter visitThisFormalParameter(ThisFormalParameterContext ctx) {
+        return this.configureAST(new Parameter(this.visitType(ctx.type()), THIS_STR), ctx);
+    }
+
+    @Override
+    @Override
+    public List<List<AnnotationNode>> visitDims(DimsContext ctx) {
+        List<List<AnnotationNode>> dimList =
+                ctx.annotationsOpt().stream()
+                        .map(this::visitAnnotationsOpt)
+                        .collect(Collectors.toList());
+
+        Collections.reverse(dimList);
+
+        return dimList;
+    }
+
+    @Override
+    public List<List<AnnotationNode>> visitDimsOpt(DimsOptContext ctx) {
+        if (!asBoolean(ctx.dims())) {
+            return Collections.emptyList();
+        }
+
+        return this.visitDims(ctx.dims());
+    }
+        } else if (asBoolean(ctx.primitiveType())) {
+        classNode.addAnnotations(this.visitAnnotationsOpt(ctx.annotationsOpt()));
+
+        List<List<AnnotationNode>> dimList = this.visitDimsOpt(ctx.dimsOpt());
+        if (asBoolean(dimList)) {
+            // clear array's generics type info. Groovy's bug? array's generics type will be ignored. e.g. List<String>[]... p
+            classNode.setGenericsTypes(null);
+            classNode.setUsingGenerics(false);
+
+            classNode = this.createArrayType(classNode, dimList);
+        }
+
+            baseType.addAnnotations(this.visitAnnotationsOpt(ctx.annotationsOpt()));
+
+    public ClassNode visitAnnotatedQualifiedClassName(AnnotatedQualifiedClassNameContext ctx) {
+        ClassNode classNode = this.visitQualifiedClassName(ctx.qualifiedClassName());
+
+        this.visitAnnotationsOpt(ctx.annotationsOpt()).forEach(classNode::addAnnotation);
+
+        return classNode;
+    }
+
+    @Override
+        return ctx.annotatedQualifiedClassName().stream()
+                .map(this::visitAnnotatedQualifiedClassName)
+                                        new Parameter(
+                                                classNode,
+                                                this.visitVariableDeclaratorId(variableDeclaratorIdContext).getName()
+                                        ),
+                                        ctx
+                                )

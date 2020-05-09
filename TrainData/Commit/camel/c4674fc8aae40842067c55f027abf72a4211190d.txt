@@ -1,0 +1,4 @@
+import org.apache.camel.BindToRegistry;
+	@BindToRegistry("noResultQueryBuilder")
+    @BindToRegistry("withResultQueryBuilder")
+    @BindToRegistry("myCustomContainer")

@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+                // each range part can itself be a range, which is valid in maven
+                final Collection<Range> ranges = new ArrayList<>();
+                for (int i = 0; i < versionParts.length; i = (i  2 < versionParts.length) ? i  2 : i  1) {
+                    final String partOne = versionParts[i];
+                    final String partTwo;
+                    if (i  1 < versionParts.length) {
+                        partTwo = versionParts[i  1];
+                    } else {
+                        partTwo = "";
+                    }
+                    final Range rangePart = parse(partOne  ","  partTwo);
+                    if (rangePart == null) {
+                        continue;
+                    }
+                    ranges.add(rangePart);
+
+                }
+                return (ranges == null || ranges.isEmpty()) ? null : new MultiSetRange(ranges);
+    private static final class MultiSetRange implements Range {

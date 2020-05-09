@@ -1,0 +1,4 @@
+        if (object != null)
+            return decorate(object);
+        return null;
+

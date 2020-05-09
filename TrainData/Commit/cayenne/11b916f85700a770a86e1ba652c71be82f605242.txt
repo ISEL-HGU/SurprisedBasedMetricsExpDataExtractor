@@ -1,0 +1,4 @@
+import org.apache.cayenne.project.ProjectModule;
+import org.apache.cayenne.project.extension.info.InfoExtension;
+
+        ProjectModule.contributeExtensions(binder).add(InfoExtension.class);

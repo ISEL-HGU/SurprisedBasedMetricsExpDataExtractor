@@ -1,0 +1,15 @@
+            if (offset >= to) {
+                die();
+            }
+        if (offset >= to) {
+            die();
+        }
+        if (offset >= to) {
+            die();
+        }
+        if (offset >= to) {
+            die();
+        }
+        if (index >= max) {
+            die();
+        }

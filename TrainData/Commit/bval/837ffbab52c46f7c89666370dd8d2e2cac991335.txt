@@ -1,0 +1,2 @@
+        customValidatorMappingProviders.add(validatorMappingProvider);
+        this.validatorMappingProvider.reset(this::createValidatorMappingProvider);

@@ -1,0 +1,7 @@
+import org.apache.camel.WrappedFile;
+        if (type == Payload.class && WrappedFile.class.isAssignableFrom(sourceType)) {
+            // attempt to convert to JClouds Payload from a file
+            WrappedFile wf = (WrappedFile) value;
+            if (wf.getFile() != null) {
+                TypeConverter converter = registry.lookup(Payload.class, wf.getFile().getClass());
+                    return (T) converter.tryConvertTo(Payload.class, wf.getFile());

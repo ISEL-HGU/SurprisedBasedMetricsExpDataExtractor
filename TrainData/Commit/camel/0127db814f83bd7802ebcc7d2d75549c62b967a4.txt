@@ -1,0 +1,2 @@
+            // we need to retain it so that the request can be released and we can keep the content
+            answer.setBody(request.content().retain());

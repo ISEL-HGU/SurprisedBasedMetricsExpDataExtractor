@@ -1,0 +1,10 @@
+    private Map<String, String> attributes;
+     * Initializes this AuthenticatedUser using the given credentials and
+     * arbitrary attributes.
+     *
+     * @param attributes
+     *     The map of arbitrary attribute name/value pairs to associate with
+     *     this AuthenticatedUser.
+    public void init(Credentials credentials, Map<String, String> attributes) {
+        this.attributes = attributes;
+        // All attributes are read-only

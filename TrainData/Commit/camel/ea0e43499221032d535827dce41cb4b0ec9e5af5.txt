@@ -1,0 +1,9 @@
+                setProperty(exchange.getContext(), language, "bean", bean);
+                setProperty(exchange.getContext(), language, "method", expression);
+                    setProperty(exchange.getContext(), language, "headerName", headerName);
+                    setProperty(exchange.getContext(), language, "mode", mode);
+                    setProperty(exchange.getContext(), language, "group", group);
+                    setProperty(exchange.getContext(), language, "namespaces", namespaces);
+                setProperty(exchange.getContext(), language, "path", path);
+    protected static void setProperty(CamelContext camelContext, Object bean, String name, Object value) {
+            IntrospectionSupport.setProperty(camelContext, bean, name, value);

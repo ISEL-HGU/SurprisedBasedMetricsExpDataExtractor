@@ -1,0 +1,2 @@
+        // error handler could be the sub element of camelContext or defined outside camelContext
+                builder.addPropertyValue("defaultHystrixConfiguration", factoryBean.getDefaultHystrixConfiguration());

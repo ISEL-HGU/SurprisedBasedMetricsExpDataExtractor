@@ -1,0 +1,4 @@
+    /** Cache values for read-only access */
+    private static final CALL_TYPES[] CALL_TYPES_VALUES = CALL_TYPES.values();
+
+        CALL_TYPES callType = CALL_TYPES_VALUES[callID];

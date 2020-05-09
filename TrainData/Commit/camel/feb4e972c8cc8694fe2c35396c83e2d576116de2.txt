@@ -1,0 +1,2 @@
+    public static final String[] DEFAULT_REST_CONSUMER_COMPONENTS = new String[]{"coap", "netty-http", "jetty", "restlet", "servlet", "spark-java", "undertow"};
+    public static final String[] DEFAULT_REST_PRODUCER_COMPONENTS = new String[]{"http", "netty-http", "restlet", "undertow"};

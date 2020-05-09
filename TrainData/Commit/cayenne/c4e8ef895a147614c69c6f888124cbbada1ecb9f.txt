@@ -1,0 +1,4 @@
+ * multiple result sets per call), returning values via OUT parameters.
+ * <h3>Execution with DataContext</h3>
+ * <h4>Reading OUT parameters</h4>
+    // TODO: ColumnDescriptor is not XMLSerializable so we can't store it in a DataMap

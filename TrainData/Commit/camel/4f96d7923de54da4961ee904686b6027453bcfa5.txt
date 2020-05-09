@@ -1,0 +1,22 @@
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+
+
+        // set the PreferredAuthentications
+
+
+        boolean first = true;
+            if (first) {
+                first = false;
+            } else {
+                sb.append('/');
+            }
+            sb.append(dir);
+
+
+
+
+
+

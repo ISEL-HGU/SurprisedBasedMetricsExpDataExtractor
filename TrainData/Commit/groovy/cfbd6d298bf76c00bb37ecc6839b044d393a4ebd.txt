@@ -1,0 +1,7 @@
+        for (Object e : namespaceMethodMap.entrySet()) {
+            Map.Entry entry = (Map.Entry) e;
+            final Object key = entry.getKey();
+            final List value = (List) entry.getValue();
+            final Closure dg = ((Closure) value.get(1)).asWritable();
+
+            this.namespaceMethodMap.put(key, new Object[] { value.get(0), dg, fettleMethodMap(dg, (Map) value.get(2)) });

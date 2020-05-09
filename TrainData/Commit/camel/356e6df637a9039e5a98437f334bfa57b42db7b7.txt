@@ -1,0 +1,3 @@
+ b/components/camel-olingo2/camel-olingo2-api/src/main/java/org/apache/camel/component/olingo2/api/impl/Olingo2Helper.java
+public final class Olingo2Helper {
+    private Olingo2Helper() {

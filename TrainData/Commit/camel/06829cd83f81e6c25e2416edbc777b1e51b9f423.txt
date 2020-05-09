@@ -1,0 +1,1 @@
+        setProperties(endpoint, parameters);

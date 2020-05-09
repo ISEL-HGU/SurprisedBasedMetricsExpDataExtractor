@@ -1,0 +1,24 @@
+import org.apache.cayenne.configuration.server.PkGeneratorFactoryProvider;
+import org.apache.cayenne.dba.JdbcAdapter;
+import org.apache.cayenne.dba.PkGenerator;
+import java.sql.DatabaseMetaData;
+import java.sql.SQLException;
+import java.util.Objects;
+
+ *
+    protected PkGeneratorFactoryProvider pkGeneratorProvider;
+
+    public HSQLDBSniffer(@Inject AdhocObjectFactory objectFactory,
+                         @Inject PkGeneratorFactoryProvider pkGeneratorProvider) {
+        this.pkGeneratorProvider = Objects.requireNonNull(pkGeneratorProvider, "Null pkGeneratorProvider");
+        JdbcAdapter adapter = supportsSchema
+                ? objectFactory.newInstance(DbAdapter.class, HSQLDBAdapter.class.getName())
+                : objectFactory.newInstance(DbAdapter.class, HSQLDBNoSchemaAdapter.class.getName());
+
+        PkGenerator pkGenerator = pkGeneratorProvider.get(adapter);
+
+        if (pkGenerator != null) {
+            adapter.setPkGenerator(pkGenerator);
+        }
+
+        return adapter;

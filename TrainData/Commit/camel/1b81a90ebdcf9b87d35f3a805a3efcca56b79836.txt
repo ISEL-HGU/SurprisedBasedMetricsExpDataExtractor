@@ -1,0 +1,2 @@
+ *
+        PropertyBindingSupport.build().withRemoveParameters(false).bind(camelContext, newlyCreated, componentProperties);

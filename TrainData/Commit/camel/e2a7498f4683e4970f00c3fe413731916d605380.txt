@@ -1,0 +1,12 @@
+        File f = new File(project.getBasedir(), "target/classes");
+        File comp = new File(f, "META-INF/services/org/apache/camel/component");
+        if (comp.exists() && comp.isDirectory()) {
+            return;
+        }
+        File df = new File(f, "META-INF/services/org/apache/camel/dataformat");
+        if (df.exists() && df.isDirectory()) {
+            return;
+        }
+        File lan = new File(f, "META-INF/services/org/apache/camel/language");
+        if (lan.exists() && lan.isDirectory()) {
+            return;

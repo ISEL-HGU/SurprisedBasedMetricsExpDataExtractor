@@ -1,0 +1,15 @@
+import java.util.NoSuchElementException;
+import java.util.Objects;
+import javax.annotation.CheckForNull;
+    @Nonnull
+    public LongArrayList(@CheckForNull long[] initValues) {
+        this.data = Objects.requireNonNull(initValues);
+    private void expand(final int minimumCapacity) {
+        while (data.length < minimumCapacity) {
+            int oldLen = data.length;
+            int newLen = (int) Math.max(minimumCapacity, Math.min(oldLen * 2L, Integer.MAX_VALUE));
+            long[] newArray = new long[newLen];
+            System.arraycopy(data, 0, newArray, 0, oldLen);
+        if (used == 0) {
+            throw new NoSuchElementException("No elements to remove");
+        }

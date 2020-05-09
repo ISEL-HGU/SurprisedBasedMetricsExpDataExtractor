@@ -1,0 +1,3 @@
+        for (Map.Entry<String, String> range : kuduMapping.getRangePartitions()) {
+          } else {
+      for (Map.Entry<String, String> rang : kuduMapping.getRangePartitions()) {

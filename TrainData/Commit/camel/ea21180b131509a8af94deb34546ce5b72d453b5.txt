@@ -1,0 +1,24 @@
+     * The hostname of the running rabbitmq instance or cluster.
+     */
+    private String hostname;
+    /**
+     * Port number for the host with the running rabbitmq instance or cluster.
+     */
+    private Integer portNumber = 5672;
+    /**
+    public String getHostname() {
+        return hostname;
+    }
+
+    public void setHostname(String hostname) {
+        this.hostname = hostname;
+    }
+
+    public Integer getPortNumber() {
+        return portNumber;
+    }
+
+    public void setPortNumber(Integer portNumber) {
+        this.portNumber = portNumber;
+    }
+

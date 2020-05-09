@@ -1,0 +1,6 @@
+     * Name of the Camel component that will perform the requests. The component
+     * Can be overridden in endpoint configuration.
+     * Swagger specification. Can be overridden in endpoint configuration
+     * RestConfiguration. Can be overridden in endpoint configuration.
+     * Swagger specification. Can be overridden in endpoint configuration.
+     * https://api.example.com:8080). Can be overridden in endpoint

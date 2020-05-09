@@ -1,0 +1,5 @@
+     * @see MessageDigest#getInstance(java.lang.String)
+     * @see MessageDigest#getInstance(java.lang.String)
+        MessageDigest md = MessageDigest.getInstance(algorithm);
+        md.update(ByteBuffer.wrap(self));
+        return String.format("%032x", new BigInteger(1, md.digest()));

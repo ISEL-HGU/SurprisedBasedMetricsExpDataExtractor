@@ -1,0 +1,16 @@
+        final T context = getContext();
+
+            ctx.setStreamCaching(CamelContextHelper.parseBoolean(context, getStreamCache()));
+            ctx.setTracing(CamelContextHelper.parseBoolean(context, getTrace()));
+            ctx.setMessageHistory(CamelContextHelper.parseBoolean(context, getMessageHistory()));
+            ctx.setLogMask(CamelContextHelper.parseBoolean(context, getLogMask()));
+            ctx.setLogExhaustedMessageBody(CamelContextHelper.parseBoolean(context, getLogExhaustedMessageBody()));
+            ctx.setDelayer(CamelContextHelper.parseLong(context, getDelayer()));
+            ctx.setHandleFault(CamelContextHelper.parseBoolean(context, getHandleFault()));
+            ctx.setAutoStartup(CamelContextHelper.parseBoolean(context, getAutoStartup()));
+            ctx.setUseMDCLogging(CamelContextHelper.parseBoolean(context, getUseMDCLogging()));
+            ctx.setUseBreadcrumb(CamelContextHelper.parseBoolean(context, getUseBreadcrumb()));
+            ctx.setAllowUseOriginalMessage(CamelContextHelper.parseBoolean(context, getAllowUseOriginalMessage()));
+            ctx.getRuntimeEndpointRegistry().setEnabled(CamelContextHelper.parseBoolean(context, getRuntimeEndpointRegistryEnabled()));
+            ctx.getManagementNameStrategy().setNamePattern(CamelContextHelper.parseText(context, getManagementNamePattern()));
+            ctx.getExecutorServiceManager().setThreadNamePattern(CamelContextHelper.parseText(context, getThreadNamePattern()));

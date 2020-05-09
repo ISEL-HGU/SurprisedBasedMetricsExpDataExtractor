@@ -1,0 +1,6 @@
+            DataFormat dataFormat = camelContext.getRegistry().lookupByNameAndType(ref, DataFormat.class);
+            if (dataFormat != null) {
+                return dataFormat;
+            }
+
+                dataFormat = camelContext.resolveDataFormat(ref);

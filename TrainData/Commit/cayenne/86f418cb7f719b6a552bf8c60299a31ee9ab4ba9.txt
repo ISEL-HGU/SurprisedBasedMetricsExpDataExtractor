@@ -1,0 +1,16 @@
+        int scale = expressions.length < 3 ? -1 : (int) expressions[2].evaluateAsLong(context);
+        if (value instanceof Collection) {
+            Iterator<?> it = ((Collection) value).iterator();
+            while (it.hasNext()) {
+                bindValue(context, it.next(), jdbcTypeName, scale);
+                if (it.hasNext()) {
+                    context.getBuilder().append(',');
+                }
+            }
+        } else {
+            bindValue(context, value, jdbcTypeName, scale);
+        }
+    }
+
+    protected void bindValue(Context context, Object value, String jdbcTypeName, int scale) {
+        processBinding(context, new ParameterBinding(value, jdbcType, scale));

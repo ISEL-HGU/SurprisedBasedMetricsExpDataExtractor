@@ -1,0 +1,6 @@
+import org.apache.cayenne.configuration.Constants;
+import org.apache.cayenne.configuration.DefaultRuntimeProperties;
+    private static final Map<String, String> TEST_DEFAULTS = new HashMap<>();
+        TEST_DEFAULTS.put(Constants.SNAPSHOT_CACHE_SIZE_PROPERTY, Integer.toString(10));
+        super("mock DataRowStore", new DefaultRuntimeProperties(TEST_DEFAULTS), new MockEventManager());
+    public void putSnapshot(ObjectId id, Map<String, ?> snapshot) {

@@ -1,0 +1,1 @@
+                nextLocation = AUTHORIZATION_URL_PREFIX  e.getResponse().getResponseHeaderValue(HttpHeaders.LOCATION);

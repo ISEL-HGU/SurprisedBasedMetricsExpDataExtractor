@@ -1,0 +1,5 @@
+     * @param scheme              the connector scheme
+    protected void addConnector(NexusArtifactDto dto, String name, String scheme, String description, String labels,
+        camelConnectorCatalog.addConnector(groupId, artifactId, version, name, scheme, description, labels, connectorJson, connectorSchemaJson);
+                String scheme = tree.get("scheme").textValue();
+                addConnector(dto, name, scheme, description, csb.toString(), json[0], json[1]);

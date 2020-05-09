@@ -1,0 +1,6 @@
+     * Also sets the remoteAddress and remoteHostname objects, checking the
+     * request for X-Forwarded-For or falling back to provided remote address.
+     * 
+                this.remoteAddress = matcher.group(1);
+            this.remoteAddress = request.getRemoteAddr();
+        this.remoteHostname = request.getRemoteHost();

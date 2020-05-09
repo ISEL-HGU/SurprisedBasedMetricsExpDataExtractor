@@ -1,0 +1,11 @@
+    private RadiusClient createRadiusConnection() {
+            return new RadiusClient(InetAddress.getByName(confService.getRadiusServer()),
+        return null;
+
+    private RadiusAuthenticator setupRadiusAuthenticator(RadiusClient radiusClient)
+            throws GuacamoleException {
+        RadiusClient radiusClient = createRadiusConnection();
+        RadiusAuthenticator radAuth = setupRadiusAuthenticator(radiusClient);
+        finally {
+            radiusClient.close();
+        }

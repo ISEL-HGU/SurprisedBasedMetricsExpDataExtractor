@@ -1,0 +1,9 @@
+import org.apache.camel.model.TransactedDefinition;
+            // special for transacted, which we need to unwrap
+            if (output instanceof TransactedDefinition) {
+                outputs.addAll(output.getOutputs());
+            } else {
+                boolean invalid = outputs.isEmpty() && output.isAbstract();
+                if (!invalid) {
+                    outputs.add(output);
+                }

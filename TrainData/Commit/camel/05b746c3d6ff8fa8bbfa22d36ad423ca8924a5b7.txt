@@ -1,0 +1,1 @@
+@UriEndpoint(firstVersion = "2.20.0", scheme = "bigquery", title = "BigQuery", syntax = "bigquery:projectId:datasetId:tableName", label = "messaging", producerOnly = true)

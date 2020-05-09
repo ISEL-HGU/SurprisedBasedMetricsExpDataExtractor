@@ -1,0 +1,6 @@
+            w.write("    private static final Map<String, TriConsumer<CamelContext, Object, Object>> WRITES;\n");
+            w.write("    static {\n");
+            w.write("        Map<String, TriConsumer<CamelContext, Object, Object>> map = new HashMap<>("  size  ");\n");
+                w.write("        map.put(\""  option.getName()  "\", (camelContext, endpoint, value) -> "  setterLambda  ");\n");
+            w.write("        WRITES = map;\n");
+            w.write("        return WRITES;\n");

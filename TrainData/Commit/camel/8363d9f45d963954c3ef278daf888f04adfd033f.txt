@@ -1,0 +1,8 @@
+import org.apache.camel.spi.TypeConverterRegistry;
+        // set the package scan resolver as soon as possible
+        TypeConverterRegistry tcr = getBeanForType(TypeConverterRegistry.class);
+        if (tcr != null) {
+            LOG.info("Using custom TypeConverterRegistry: {}", tcr);
+            getContext().setTypeConverterRegistry(tcr);
+        }
+

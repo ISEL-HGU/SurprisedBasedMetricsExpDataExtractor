@@ -1,0 +1,1 @@
+        final SObjectField sObjectField1 = createField("ComplexCalculatedFormula", "A complex calculated formula", "string", "xsd:string", 1300, false, true, false, false, true, false, false);

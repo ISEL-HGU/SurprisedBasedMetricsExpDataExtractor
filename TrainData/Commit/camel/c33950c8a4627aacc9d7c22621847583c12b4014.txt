@@ -1,0 +1,2 @@
+         * The protocol to use which is either http, https or proxy - a consumer
+         * only option.

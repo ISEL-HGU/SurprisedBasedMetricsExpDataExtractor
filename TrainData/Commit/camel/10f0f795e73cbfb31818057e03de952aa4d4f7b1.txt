@@ -1,0 +1,1 @@
+            request.getRequestHeaders().put(Headers.HOST, String.format("%s:%s", uri.getHost(), uri.getPort()));

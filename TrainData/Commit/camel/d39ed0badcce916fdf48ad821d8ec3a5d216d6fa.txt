@@ -1,0 +1,17 @@
+@UriEndpoint(firstVersion = "2.22.0", scheme = "web3j", title = "Web3j client for Ethereum blockchain", syntax = "web3j:host:port", consumerClass = Web3jConsumer.class, label = "blockchain, ethereum")
+
+    @UriPath @Metadata(required = "true")
+    private String nodeAddress;
+
+        this.nodeAddress = remaining;
+    public String getNodeAddress() {
+        return nodeAddress;
+    }
+
+    /**
+     * Sets the node address used to communicate
+     */
+    public void setNodeAddress(String nodeAddress) {
+        this.nodeAddress = nodeAddress;
+    }
+

@@ -1,0 +1,45 @@
+        if (!(vexp.getAccessedVariable() instanceof DynamicVariable)) {
+            VariableExpression variable = null;
+            if (vexp.getAccessedVariable() instanceof Parameter) {
+                variable = new ParameterVariableExpression((Parameter) vexp.getAccessedVariable());
+            } else if (vexp.getAccessedVariable() instanceof VariableExpression) {
+                variable = (VariableExpression) vexp.getAccessedVariable();
+            }
+            if (variable != null) {
+                ClassNode inferredType = getInferredTypeFromTempInfo(variable, variable.getNodeMetaData(StaticTypesMarker.INFERRED_TYPE));
+                if (inferredType != null && !inferredType.getName().equals("java.lang.Object")) {
+                    if (typeCheckingContext.getEnclosingBinaryExpression() != null) {
+                        // TODO narrow this down to assignment
+                        if (typeCheckingContext.getEnclosingBinaryExpression().getRightExpression() == vexp) {
+                            vexp.putNodeMetaData(StaticTypesMarker.INFERRED_TYPE, inferredType);
+                        }
+                    } else {
+                        // stash away type info that will be lost later to handle case
+                        // where this expression has return added later - piggy back on existing key
+                        vexp.putNodeMetaData(StaticTypesMarker.INFERRED_RETURN_TYPE, inferredType);
+                    }
+                }
+            }
+            return;
+        }
+        if ((expression instanceof VariableExpression) && hasInferredReturnType(expression)) {
+            type = expression.getNodeMetaData(StaticTypesMarker.INFERRED_RETURN_TYPE);
+        }
+            Object key = objectExpression instanceof ParameterVariableExpression
+                    ? ((ParameterVariableExpression) objectExpression).parameter
+                    : extractTemporaryTypeInfoKey(objectExpression);
+        ClassNode typeOfFalse = getType(falseExpression);
+        ClassNode typeOfTrue = getType(trueExpression);
+        if (hasInferredReturnType(falseExpression)) {
+            typeOfFalse = falseExpression.getNodeMetaData(StaticTypesMarker.INFERRED_RETURN_TYPE);
+        }
+        if (hasInferredReturnType(trueExpression)) {
+            typeOfTrue = trueExpression.getNodeMetaData(StaticTypesMarker.INFERRED_RETURN_TYPE);
+        }
+                resultType = wrapTypeIfNecessary(typeOfFalse);
+                resultType = wrapTypeIfNecessary(typeOfTrue);
+    private boolean hasInferredReturnType(Expression expression) {
+        ClassNode type = expression.getNodeMetaData(StaticTypesMarker.INFERRED_RETURN_TYPE);
+        return type != null && !type.getName().equals("java.lang.Object");
+    }
+

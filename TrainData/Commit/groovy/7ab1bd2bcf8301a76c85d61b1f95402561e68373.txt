@@ -1,0 +1,2 @@
+import org.codehaus.groovy.runtime.memoize.UnlimitedConcurrentCache;
+    protected final EvictableCache<String, Class> classCache = new UnlimitedConcurrentCache<String, Class>();

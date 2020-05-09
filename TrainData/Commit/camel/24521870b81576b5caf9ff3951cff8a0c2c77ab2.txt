@@ -1,0 +1,10 @@
+    /**
+     * An endpoint should favour to be singleton by default, only in some rare special cases
+     * can an endpoint be non-singleton. This implementation is singleton and this method returns true.
+     */
+    @Override
+    public boolean isSingleton() {
+        return true;
+    }
+
+    @Override

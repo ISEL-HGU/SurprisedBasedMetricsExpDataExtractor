@@ -1,0 +1,2 @@
+ b/core/camel-util/src/main/java/org/apache/camel/util/OrderedProperties.java
+package org.apache.camel.util;

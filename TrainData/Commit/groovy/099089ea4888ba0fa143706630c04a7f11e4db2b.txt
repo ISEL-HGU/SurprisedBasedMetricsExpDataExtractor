@@ -1,0 +1,7 @@
+    }
+    public boolean isEscapeBackslash() {
+        return escapeBackslash;
+    }
+
+    public void setEscapeBackslash(boolean escapeBackslash) {
+        this.escapeBackslash = escapeBackslash;

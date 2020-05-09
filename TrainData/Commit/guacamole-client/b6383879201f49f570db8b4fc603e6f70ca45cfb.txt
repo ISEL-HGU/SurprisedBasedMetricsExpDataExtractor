@@ -1,0 +1,27 @@
+    private GuacamoleConfiguration fullConfig;
+        super.setName(name);
+        super.setIdentifier(identifier);
+        super.setConfiguration(config);
+        this.fullConfig = config;
+    /**
+     * Returns the GuacamoleConfiguration describing how to connect to this
+     * connection. Unlike the GuacamoleConfiguration returned by
+     * {@link #getConfiguration()}, which may omit or tokenize information,
+     * the GuacamoleConfiguration returned by this function contains the full
+     * configuration to be used to establish the connection.
+     *
+     * @return
+     *     The full GuacamoleConfiguration describing how to connect to this
+     *     connection, without any information omitted or tokenized.
+     */
+    protected GuacamoleConfiguration getFullConfiguration() {
+        return fullConfig;
+    }
+
+    @Override
+    public void setConfiguration(GuacamoleConfiguration config) {
+        super.setConfiguration(config);
+        this.fullConfig = config;
+    }
+
+        GuacamoleConfiguration filteredConfig = new GuacamoleConfiguration(getFullConfiguration());

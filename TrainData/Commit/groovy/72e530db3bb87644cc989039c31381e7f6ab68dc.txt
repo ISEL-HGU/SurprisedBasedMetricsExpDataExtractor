@@ -1,0 +1,1 @@
+    public static <S,T> List<T> collect(Iterator<S> self, @ClosureParams(FirstParam.FirstGenericType.class) Closure<T> transform) {

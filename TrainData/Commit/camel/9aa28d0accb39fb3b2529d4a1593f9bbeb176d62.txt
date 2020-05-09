@@ -1,0 +1,50 @@
+import com.amazonaws.regions.Regions;
+ * The aws-s3 component is used for storing and retrieving objecct from Amazon
+ * S3 Storage Service.
+@UriEndpoint(firstVersion = "2.8.0", scheme = "aws-s3", title = "AWS S3 Storage Service", syntax = "aws-s3:bucketNameOrArn", consumerClass = S3Consumer.class, label = "cloud,file")
+        s3Client = configuration.getAmazonS3Client() != null ? configuration.getAmazonS3Client() : createS3Client();
+         * If includeBody != true, it is safe to close the object here. If
+         * includeBody == true, the caller is responsible for closing the stream
+         * and object once the body has been fully consumed. As of 2.17, the
+         * consumer does not close the stream or object on commit.
+     * Provide the possibility to override this method for an mock
+     * implementation
+
+        AmazonS3ClientBuilder clientBuilder = null;
+        AmazonS3EncryptionClientBuilder encClientBuilder = null;
+                clientBuilder = AmazonS3ClientBuilder.standard().withClientConfiguration(clientConfiguration).withCredentials(credentialsProvider);
+                encClientBuilder = AmazonS3EncryptionClientBuilder.standard().withClientConfiguration(clientConfiguration).withCredentials(credentialsProvider)
+                    .withEncryptionMaterials(encryptionMaterialsProvider);
+                clientBuilder = AmazonS3ClientBuilder.standard().withCredentials(credentialsProvider);
+            }
+            if (!configuration.isUseEncryption()) {
+                if (ObjectHelper.isNotEmpty(configuration.getRegion())) {
+                    clientBuilder = clientBuilder.withRegion(Regions.valueOf(configuration.getRegion()));
+                }
+                clientBuilder = clientBuilder.withPathStyleAccessEnabled(configuration.isPathStyleAccess());
+                client = clientBuilder.build();
+            } else {
+                if (ObjectHelper.isNotEmpty(configuration.getRegion())) {
+                    encClientBuilder = encClientBuilder.withRegion(Regions.valueOf(configuration.getRegion()));
+                }
+                encClientBuilder = encClientBuilder.withPathStyleAccessEnabled(configuration.isPathStyleAccess());
+                client = encClientBuilder.build();
+                clientBuilder = AmazonS3ClientBuilder.standard();
+                encClientBuilder = AmazonS3EncryptionClientBuilder.standard().withClientConfiguration(clientConfiguration).withEncryptionMaterials(encryptionMaterialsProvider);
+                clientBuilder = AmazonS3ClientBuilder.standard().withClientConfiguration(clientConfiguration);
+            }
+            if (!configuration.isUseEncryption()) {
+                if (ObjectHelper.isNotEmpty(configuration.getRegion())) {
+                    clientBuilder = clientBuilder.withRegion(Regions.valueOf(configuration.getRegion()));
+                }
+                clientBuilder = clientBuilder.withPathStyleAccessEnabled(configuration.isPathStyleAccess());
+                client = clientBuilder.build();
+            } else {
+                if (ObjectHelper.isNotEmpty(configuration.getRegion())) {
+                    encClientBuilder = encClientBuilder.withRegion(Regions.valueOf(configuration.getRegion()));
+                }
+                encClientBuilder = encClientBuilder.withPathStyleAccessEnabled(configuration.isPathStyleAccess());
+                client = encClientBuilder.build();
+     * Is default unlimited, but use 0 or negative number to disable it as
+     * unlimited.
+

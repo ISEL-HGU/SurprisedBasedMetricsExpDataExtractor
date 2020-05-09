@@ -1,0 +1,2 @@
+        marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
+        outputProperties.put(OutputKeys.ENCODING, "UTF-8");

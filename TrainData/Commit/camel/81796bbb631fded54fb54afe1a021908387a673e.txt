@@ -1,0 +1,11 @@
+         * The prefix which is used in the
+        private String prefix;
+        private String delimiter;
+        public String getDelimiter() {
+            return delimiter;
+        }
+
+        public void setDelimiter(String delimiter) {
+            this.delimiter = delimiter;
+        }
+

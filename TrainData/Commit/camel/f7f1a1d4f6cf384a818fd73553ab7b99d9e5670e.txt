@@ -1,0 +1,18 @@
+        // we only want to warn for duplicates if its a clean build
+        boolean warnDups = modelsOutDir.list() == null || modelsOutDir.list().length == 0;
+            if (warnDups && to.exists()) {
+        // we only want to warn for duplicates if its a clean build
+        boolean warnDups = componentsOutDir.list() == null || componentsOutDir.list().length == 0;
+            if (warnDups && to.exists()) {
+        // we only want to warn for duplicates if its a clean build
+        boolean warnDups = dataFormatsOutDir.list() == null || dataFormatsOutDir.list().length == 0;
+            if (warnDups && to.exists()) {
+        // we only want to warn for duplicates if its a clean build
+        boolean warnDups = languagesOutDir.list() == null || languagesOutDir.list().length == 0;
+            if (warnDups && to.exists()) {
+        // we only want to warn for duplicates if its a clean build
+        boolean warnDups = othersOutDir.list() == null || othersOutDir.list().length == 0;
+            if (warnDups && to.exists()) {
+        // we only want to warn for duplicates if its a clean build
+        boolean warnDups = documentsOutDir.list() == null || documentsOutDir.list().length == 0;
+            if (warnDups && to.exists()) {

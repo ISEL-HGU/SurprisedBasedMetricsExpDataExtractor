@@ -1,0 +1,3 @@
+        public MetadataBuilder.ForContainer<E> getReturnValue(Meta<E> meta) {
+            return CompositeBuilder.this.forContainer(
+                ElementKind.RETURN_VALUE);

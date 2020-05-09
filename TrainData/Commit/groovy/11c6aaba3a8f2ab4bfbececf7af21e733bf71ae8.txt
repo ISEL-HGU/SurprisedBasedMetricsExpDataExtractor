@@ -1,0 +1,17 @@
+            Parameter[] parameters = abstractMethodParameters;
+            if (!mn.isStatic() && isClassExpr(typeOrTargetRef)) { // class::instanceMethod
+                    continue;
+                Parameter firstParameter = abstractMethodParameters[0];
+                Class<?> typeOrTargetClass = typeOrTargetRef.getType().getTypeClass();
+                Class<?> firstParameterClass = firstParameter.getType().getTypeClass();
+                if (!typeOrTargetClass.isAssignableFrom(firstParameterClass)) {
+                    continue;
+                parameters =
+                        new ArrayList<>(Arrays.asList(abstractMethodParameters))
+                                .subList(1, abstractMethodParameters.length)
+                                .toArray(Parameter.EMPTY_ARRAY);
+
+            }
+
+            if (ParameterUtils.parametersCompatible(parameters, mn.getParameters())) {
+                candidates.add(mn);

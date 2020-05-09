@@ -1,0 +1,2 @@
+                    Processor currentOutput = ((RedeliveryErrorHandler) errorHandler).getOutput();
+                    instrumentationProcessor.setProcessor(currentOutput);

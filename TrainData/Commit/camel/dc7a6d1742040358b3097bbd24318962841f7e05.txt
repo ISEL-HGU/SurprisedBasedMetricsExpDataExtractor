@@ -1,0 +1,2 @@
+import java.util.LinkedHashSet;
+        this.options = new LinkedHashSet<>(options);

@@ -1,0 +1,17 @@
+        // If major is not the same, compare first
+        if (major != otherVersion.getMajor())
+            return major > otherVersion.getMajor();
+        // Major is the same, but minor is not, so compare minor versions
+        if (minor != otherVersion.getMinor())
+            return minor > otherVersion.getMinor();
+        // Major and minor are identical, so compare and return patch
+        return patch >= otherVersion.getPatch();
+     *     The enum value that matches the specified version, VERSION_1_0_0
+     *     if no match is found, or null if no comparison version is provided.
+        try {
+            return valueOf(version);
+        }
+        // If nothing matches, then return the most compatible version.
+        catch (IllegalArgumentException e) {
+            return GuacamoleProtocolVersion.VERSION_1_0_0;
+        }

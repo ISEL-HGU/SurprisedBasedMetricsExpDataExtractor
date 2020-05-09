@@ -1,0 +1,2 @@
+                    .setBody("doSetProperty(\""  option.getName()  "\", "  option.getName()  ");\n"  "return this;\n");
+                        .setBody("doSetProperty(\""  option.getName()  "\", "  option.getName()  ");\n"  "return this;\n");

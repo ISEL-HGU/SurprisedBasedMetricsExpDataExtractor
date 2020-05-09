@@ -1,0 +1,2 @@
+import java.util.Collections;
+            String out = (String) TemplateRuntime.eval(template, model, Collections.singletonMap("util", MvelHelper.INSTANCE));

@@ -1,0 +1,3 @@
+        if (expectedMinimumCount == -1) {
+            expectedMinimumMessageCount(1);
+            Class<?> clazz = Object.class;

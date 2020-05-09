@@ -1,0 +1,1 @@
+            passwordPolicyService.recordPassword(object);

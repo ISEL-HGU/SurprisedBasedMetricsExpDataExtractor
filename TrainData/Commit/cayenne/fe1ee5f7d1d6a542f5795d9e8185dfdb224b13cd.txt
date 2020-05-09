@@ -1,0 +1,10 @@
+public class RemoveRelationshipUndoableEdit extends BaseRemovePropertyUndoableEdit {
+        } else {
+        RemoveRelationshipAction action = actionManager.getAction(RemoveRelationshipAction.class);
+            focusObjEntity();
+        } else {
+            focusDBEntity();
+        CreateRelationshipAction action = actionManager.getAction(CreateRelationshipAction.class);
+            focusObjEntity();
+        } else {
+            focusDBEntity();

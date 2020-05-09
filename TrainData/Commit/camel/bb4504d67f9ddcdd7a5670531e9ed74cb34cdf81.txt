@@ -1,0 +1,12 @@
+        boolean isPresent = true;
+            client.files().getMetadata(dropboxPath);
+            isPresent = false;
+            return putFile(localPath, mode, dropboxPath, isPresent);
+            return putBody(exchange, mode, dropboxPath, isPresent);
+    private DropboxFileUploadResult putFile(String localPath, DropboxUploadMode mode, String dropboxPath, boolean isPresent) throws DropboxException {
+            if (isPresent && !DropboxUploadMode.force.equals(mode)) {
+                throw new DropboxException(dropboxPath  " exists on dropbox. Use force upload mode to override");
+            if (!isPresent) {
+            if (isPresent && !DropboxUploadMode.force.equals(mode)) {
+    private DropboxFileUploadResult putBody(Exchange exchange, DropboxUploadMode mode, String dropboxPath, boolean isPresent) throws DropboxException {
+        if (!isPresent) {

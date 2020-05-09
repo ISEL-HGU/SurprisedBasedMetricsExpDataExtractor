@@ -1,0 +1,42 @@
+ *     <li>reference by bean id - Values can refer to other beans in the registry by prefixing with with # or #bean: eg #myBean or #bean:myBean</li>
+        // must set reference parameters first before the other bindings
+        setReferenceProperties(camelContext, target, properties);
+
+                refName = "#"  ((String) value).substring(6);
+    private static void setReferenceProperties(CamelContext context, Object target, Map<String, Object> parameters) {
+        Iterator<Map.Entry<String, Object>> it = parameters.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry<String, Object> entry = it.next();
+            String name = entry.getKey();
+
+            // we only support basic keys
+            if (name.contains(".") || name.contains("[") || name.contains("]")) {
+                continue;
+            }
+
+            Object v = entry.getValue();
+            String value = v != null ? v.toString() : null;
+            if (isReferenceParameter(value)) {
+                try {
+                    boolean hit = IntrospectionSupport.setProperty(context, context.getTypeConverter(), target, name, null, value, true);
+                    if (hit) {
+                        // must remove as its a valid option and we could configure it
+                        it.remove();
+                    }
+                } catch (Exception e) {
+                    throw new PropertyBindingException(target, e);
+                }
+            }
+        }
+    }
+
+    /**
+     * Is the given parameter a reference parameter (starting with a # char)
+     *
+     * @param parameter the parameter
+     * @return <tt>true</tt> if its a reference parameter
+     */
+    private static boolean isReferenceParameter(String parameter) {
+        return parameter != null && parameter.trim().startsWith("#");
+    }
+

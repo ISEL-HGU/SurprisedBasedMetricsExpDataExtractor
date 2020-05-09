@@ -1,0 +1,5 @@
+        Object[] originalArguments = arguments.clone();
+                MetaMethod addListenerMethod = listeners.get(name);
+            MetaMethod addListenerMethod = listeners.get(name);
+            method = listeners.get(name);
+            getOrPut(key).value = value;

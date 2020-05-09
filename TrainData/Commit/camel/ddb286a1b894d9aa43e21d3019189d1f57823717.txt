@@ -1,0 +1,2 @@
+    public T zipDeflater() {
+    public T zipDeflater(int compressionLevel) {

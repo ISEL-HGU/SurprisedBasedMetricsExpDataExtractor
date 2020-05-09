@@ -1,0 +1,55 @@
+        private boolean allowPrivateSetter = true;
+         * Whether properties should be filtered by prefix.         *
+         * Note that the prefix is removed from the key before the property is bound.
+         */
+        public Builder withAllowPrivateSetter(boolean allowPrivateSetter) {
+            this.allowPrivateSetter = allowPrivateSetter;
+            return this;
+        }
+
+        /**
+            return bindProperties(camelContext, target, properties, optionPrefix, nesting, deepNesting, fluentBuilder, allowPrivateSetter, reference, placeholder);
+                    Method method = findBestSetterMethod(target.getClass(), key, true, true);
+                    Method method = findBestSetterMethod(target.getClass(), key, true, true);
+        return bindProperties(camelContext, target, properties, optionPrefix, true, true, true, true, true, true);
+     * @param camelContext        the camel context
+     * @param target              the target object
+     * @param properties          the properties where the bound properties will be removed from
+     * @param nesting             whether nesting is in use
+     * @param deepNesting         whether deep nesting is in use, where Camel will attempt to walk as deep as possible by creating new objects in the OGNL graph if
+     *                            a property has a setter and the object can be created from a default no-arg constructor.
+     * @param fluentBuilder       whether fluent builder is allowed as a valid getter/setter
+     * @param allowPrivateSetter  whether autowiring components allows to use private setter method when setting the value
+     * @param reference           whether reference parameter (syntax starts with #) is in use
+     * @param placeholder         whether to use Camels property placeholder to resolve placeholders on keys and values
+     * @return                    true if one or more properties was bound
+                                         boolean nesting, boolean deepNesting, boolean fluentBuilder, boolean allowPrivateSetter,
+                                         boolean reference, boolean placeholder) {
+        return bindProperties(camelContext, target, properties, null, nesting, deepNesting, fluentBuilder, allowPrivateSetter, reference, placeholder);
+     * @param camelContext        the camel context
+     * @param target              the target object
+     * @param properties          the properties where the bound properties will be removed from
+     * @param optionPrefix        the prefix used to filter properties
+     * @param nesting             whether nesting is in use
+     * @param deepNesting         whether deep nesting is in use, where Camel will attempt to walk as deep as possible by creating new objects in the OGNL graph if
+     *                            a property has a setter and the object can be created from a default no-arg constructor.
+     * @param fluentBuilder       whether fluent builder is allowed as a valid getter/setter
+     * @param allowPrivateSetter  whether autowiring components allows to use private setter method when setting the value
+     * @param reference           whether reference parameter (syntax starts with #) is in use
+     * @param placeholder         whether to use Camels property placeholder to resolve placeholders on keys and values
+     * @return                    true if one or more properties was bound
+                                         boolean nesting, boolean deepNesting, boolean fluentBuilder, boolean allowPrivateSetter,
+                                         boolean reference, boolean placeholder) {
+            if (bindProperty(camelContext, target, key, value, nesting, deepNesting, fluentBuilder, allowPrivateSetter, reference, placeholder)) {
+                return setProperty(camelContext, target, name, value, false, true, true, true, true, true, true);
+                                        boolean nesting, boolean deepNesting, boolean fluentBuilder, boolean allowPrivateSetter, boolean reference, boolean placeholder) {
+                return setProperty(camelContext, target, name, value, false, nesting, deepNesting, fluentBuilder, allowPrivateSetter, reference, placeholder);
+                boolean bound = setProperty(camelContext, target, name, value, true, true, true, true, true, true, true);
+                                       boolean nesting, boolean deepNesting, boolean fluentBuilder, boolean allowPrivateSetter,
+                                       boolean reference, boolean placeholder) throws Exception {
+                        Method method = findBestSetterMethod(newClass, part, fluentBuilder, allowPrivateSetter);
+                Method method = findBestSetterMethod(target.getClass(), name, fluentBuilder, allowPrivateSetter);
+        boolean hit = IntrospectionSupport.setProperty(context, context.getTypeConverter(), target, name, value, refName, fluentBuilder, allowPrivateSetter);
+    private static Method findBestSetterMethod(Class clazz, String name, boolean fluentBuilder, boolean allowPrivateSetter) {
+        Set<Method> candidates = findSetterMethods(clazz, name, fluentBuilder, allowPrivateSetter);
+            candidates = findSetterMethods(clazz, name, fluentBuilder, allowPrivateSetter);

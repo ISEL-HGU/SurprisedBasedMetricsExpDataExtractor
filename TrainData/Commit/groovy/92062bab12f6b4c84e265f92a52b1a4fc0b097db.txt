@@ -1,0 +1,11 @@
+            return callThisX(getterName(annotatedNode, pNode));
+    private static String getterName(ClassNode annotatedNode, PropertyNode pNode) {
+        String getterName = "get"  MetaClassHelper.capitalize(pNode.getName());
+        boolean existingExplicitGetter = annotatedNode.getMethod(getterName, Parameter.EMPTY_ARRAY) != null;
+        if (ClassHelper.boolean_TYPE.equals(pNode.getOriginType()) && !existingExplicitGetter) {
+            getterName = "is"  MetaClassHelper.capitalize(pNode.getName());
+        }
+        return getterName;
+    }
+
+            return callX(receiver, getterName(annotatedNode, pNode));

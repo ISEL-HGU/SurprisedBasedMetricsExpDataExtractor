@@ -1,0 +1,11 @@
+import org.apache.thrift.server.TThreadPoolServer;
+
+public class ThriftThreadPoolServer extends TThreadPoolServer {
+    public static class Args extends TThreadPoolServer.Args {
+        
+    @Override
+        if (!preServe()) {
+            execute();
+            context.getExecutorServiceManager().shutdownGraceful(getExecutorService());
+    @Override
+        super.stop();

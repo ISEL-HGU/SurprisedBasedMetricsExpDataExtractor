@@ -1,0 +1,3 @@
+         * managed by some other resource, such as a JavaEE container. When
+         * using a custom mail session, then the hostname and port from the mail
+         * session will be used (if configured on the session).

@@ -1,0 +1,13 @@
+import org.apache.camel.builder.ProcessClause;
+     * TODO: document
+     * Note: this is experimental and subject to changes in future releases.
+     *
+     * @return the builder
+     */
+    public ProcessClause<RecipientListDefinition<Type>> onPrepare() {
+        ProcessClause<RecipientListDefinition<Type>> clause = new ProcessClause<>(this);
+        setOnPrepare(clause);
+        return clause;
+    }
+
+    /**

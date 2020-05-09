@@ -1,0 +1,2 @@
+                if (ParameterUtils.parametersCompatible(abstractMethodParameters, mn.getParameters())) {
+                if (ParameterUtils.parametersCompatible(parameters, mn.getParameters())) {

@@ -1,0 +1,6 @@
+import java.util.Date;
+    @Override
+    public Date getLastActive() {
+        return null;
+    }
+

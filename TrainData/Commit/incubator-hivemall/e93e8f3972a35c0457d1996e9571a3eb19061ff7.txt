@@ -1,0 +1,3 @@
+    public void update(@Nonnegative float multiplier) {}
+        public void update(@Nonnegative float multiplier) {
+            float newEta = eta * multiplier;

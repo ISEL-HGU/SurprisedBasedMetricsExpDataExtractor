@@ -1,0 +1,10 @@
+        setConfiguration(configuration != null ? configuration : CompilerConfiguration.DEFAULT);
+        configure(getConfiguration());
+        setConfiguration(configuration);
+    /**
+     * Get the CompilerConfiguration for this ProcessingUnit.
+     */
+    /**
+     * Sets the CompilerConfiguration for this ProcessingUnit.
+     */
+    public final void setConfiguration(CompilerConfiguration configuration) {

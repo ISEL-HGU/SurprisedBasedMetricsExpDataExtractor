@@ -1,0 +1,16 @@
+import org.apache.camel.ExtendedStartupListener;
+public class QuartzComponent extends DefaultComponent implements ExtendedStartupListener {
+        if (alreadyStarted) {
+            // a route may have been added or starter after CamelContext is started so ensure we startup the scheduler
+            doStartScheduler();
+        }
+    }
+
+    @Override
+    public void onCamelContextFullyStarted(CamelContext context, boolean alreadyStarted) throws Exception {
+        doStartScheduler();
+    }
+
+    protected void doStartScheduler() throws Exception {
+            // in case custom scheduler was injected (i.e. created elsewhere), we may need to add
+

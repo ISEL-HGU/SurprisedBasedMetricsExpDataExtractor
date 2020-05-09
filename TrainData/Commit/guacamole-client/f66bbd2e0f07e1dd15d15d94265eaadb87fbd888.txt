@@ -1,0 +1,6 @@
+     * Returns the weight of the connection, or a default
+     * of 1 if the weight is undefined.
+        Integer connectionWeight = getModel().getConnectionWeight();
+        if(connectionWeight == null)
+            return 1;
+        return connectionWeight;

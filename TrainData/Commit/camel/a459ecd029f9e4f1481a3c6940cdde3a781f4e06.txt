@@ -1,0 +1,44 @@
+import java.util.Iterator;
+import io.swagger.models.SecurityRequirement;
+import org.apache.camel.model.rest.SecurityDefinition;
+        if (sd != null) {
+            for (RestSecurityDefinition def : sd.getSecurityDefinitions()) {
+                if (def instanceof RestSecurityBasicAuth) {
+                    BasicAuthDefinition auth = new BasicAuthDefinition();
+                    auth.setDescription(def.getDescription());
+                    swagger.addSecurityDefinition(def.getKey(), auth);
+                } else if (def instanceof RestSecurityApiKey) {
+                    RestSecurityApiKey rs = (RestSecurityApiKey) def;
+                    ApiKeyAuthDefinition auth = new ApiKeyAuthDefinition();
+                    auth.setDescription(rs.getDescription());
+                    auth.setName(rs.getName());
+                    if (rs.getInHeader() != null && rs.getInHeader()) {
+                        auth.setIn(In.HEADER);
+                    } else {
+                        auth.setIn(In.QUERY);
+                    }
+                    swagger.addSecurityDefinition(def.getKey(), auth);
+                } else if (def instanceof RestSecurityOAuth2) {
+                    RestSecurityOAuth2 rs = (RestSecurityOAuth2) def;
+                    OAuth2Definition auth = new OAuth2Definition();
+                    auth.setDescription(rs.getDescription());
+                    auth.setFlow(rs.getFlow());
+                    auth.setAuthorizationUrl(rs.getAuthorizationUrl());
+                    auth.setTokenUrl(rs.getTokenUrl());
+                    for (RestPropertyDefinition scope : rs.getScopes()) {
+                        auth.addScope(scope.getKey(), scope.getValue());
+                    }
+                    swagger.addSecurityDefinition(def.getKey(), auth);
+            // security
+            for (SecurityDefinition sd : verb.getSecurity()) {
+                List<String> scopes = new ArrayList<>();
+                if (sd.getScopes() != null) {
+                    Iterator<Object> it = ObjectHelper.createIterator(sd.getScopes());
+                    while (it.hasNext()) {
+                        String scope = it.next().toString();
+                        scopes.add(scope);
+                    }
+                }
+                op.addSecurity(sd.getKey(), scopes);
+            }
+

@@ -1,0 +1,16 @@
+
+                FieldNode fieldNode = (FieldNode) variable;
+
+                checkOrMarkPrivateAccess(vexp, fieldNode, isLHSOfEnclosingAssignment(vexp));
+                ClassNode parameterizedType = GenericsUtils.findParameterizedType(fieldNode.getDeclaringClass(), typeCheckingContext.getEnclosingClassNode());
+
+                if (null != parameterizedType) {
+                    ClassNode originalType = fieldNode.getOriginType();
+                    GenericsType gt = GenericsUtils.extractPlaceholders(parameterizedType).get(originalType.getUnresolvedName());
+
+                    if (null != gt) {
+                        return gt.getType().redirect();
+                    }
+                }
+
+                return getType(fieldNode);

@@ -1,0 +1,4 @@
+                String host = configuration.getAmazonAWSHost();
+                host = FileUtil.stripTrailingSeparator(host);
+                queueUrl = "https://sqs."  configuration.getRegion()  host  "/"
+                }

@@ -1,0 +1,16 @@
+import org.apache.camel.spi.UriParam;
+    private boolean deleteJob = true;
+    public boolean isDeleteJob() {
+        return deleteJob;
+    }
+
+    public void setDeleteJob(boolean deleteJob) {
+        this.deleteJob = deleteJob;
+    }
+
+        if (trigger != null && deleteJob) {
+            boolean isClustered = quartzScheduler.getMetaData().isJobStoreClustered();
+            if (!quartzScheduler.isShutdown() && !isClustered) {
+                log.info("Deleting job {}", trigger.getKey());
+                quartzScheduler.unscheduleJob(trigger.getKey());
+            }

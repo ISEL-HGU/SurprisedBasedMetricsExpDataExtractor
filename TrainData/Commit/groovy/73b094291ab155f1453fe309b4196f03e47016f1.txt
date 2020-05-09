@@ -1,0 +1,21 @@
+    private GroovydocHolder holder;
+    public static final Groovydoc EMPTY_GROOVYDOC = new Groovydoc("") {
+        @Override
+        public List<GroovydocTag> getTagList() {
+            return Collections.emptyList();
+        }
+    };
+
+    private Groovydoc(String content) {
+        this.content = content;
+    }
+        this(content);
+        this(content);
+     * Tests if groovydoc is present
+     * @return {@code true} if groovydoc is present
+     */
+    public boolean isPresent() {
+        return EMPTY_GROOVYDOC != this;
+    }
+
+    /**

@@ -1,0 +1,12 @@
+import java.util.stream.Stream;
+            if (instanceOf(obj, "java.xml.transform.Source")) {
+    private static boolean instanceOf(Object obj, String interfaceName) {
+        return interfaces(obj.getClass()).anyMatch(cl -> cl.getName().equals(interfaceName));
+    }
+
+    private static Stream<Class<?>> interfaces(Class<?> clazz) {
+        return clazz == null ? Stream.empty() : Stream.concat(
+                Stream.concat(Stream.of(clazz), interfaces(clazz.getSuperclass())),
+                Stream.of(clazz.getInterfaces()).flatMap(MessageHelper::interfaces));
+    }
+

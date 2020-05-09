@@ -1,0 +1,3 @@
+      //check for null is necessary. 
+      User user = (fields == null || fields.size() == 0 ) ? dataStore.get(key) : dataStore.get(key, fields.toArray(new String[fields.size()]));
+      //dataStore.flush();

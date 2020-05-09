@@ -1,0 +1,1 @@
+                from("file:///tmp/camel?DELETE=true")

@@ -1,0 +1,3 @@
+
+        from("direct:start")
+                .toF("telegram:bots/?authorizationToken=%s&chatId=%s", Application.AUTHORIZATION_TOKEN, Application.CHAT_ID);

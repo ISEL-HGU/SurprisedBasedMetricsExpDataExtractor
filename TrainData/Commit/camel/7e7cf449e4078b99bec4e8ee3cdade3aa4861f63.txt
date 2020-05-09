@@ -1,0 +1,2 @@
+    @UriParam(enums = "AtMostOnce,AtLeastOnce,ExactlyOnce", defaultValue = "AtMostOnce")
+    @UriParam(enums = "AtMostOnce,AtLeastOnce,ExactlyOnce", defaultValue = "AtLeastOnce")

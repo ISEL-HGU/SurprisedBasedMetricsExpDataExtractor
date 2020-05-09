@@ -1,0 +1,3 @@
+import org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration;
+@ConditionalOnBean({ EmbeddedCacheManager.class, CamelAutoConfiguration.class })
+@AutoConfigureAfter({ CamelAutoConfiguration.class, CacheAutoConfiguration.class })

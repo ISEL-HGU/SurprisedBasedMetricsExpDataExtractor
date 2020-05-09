@@ -1,0 +1,5 @@
+    /**
+     * Default path
+     */
+    public static final String PATH = "/camel/routes";
+        this.setPath(PATH);

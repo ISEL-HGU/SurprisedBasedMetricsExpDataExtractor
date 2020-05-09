@@ -1,0 +1,3 @@
+     * Which TDS-compatible JDBC driver should be used for the connection.
+    public static final SQLServerDriverProperty
+            SQLSERVER_DRIVER = new SQLServerDriverProperty() {

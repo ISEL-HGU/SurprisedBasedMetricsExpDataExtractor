@@ -1,0 +1,39 @@
+    private final ConcurrentMap<ComputedMessageKey, String> interpolatedMessages = new ConcurrentHashMap<>();
+        String resolvedMessage = getSharedInterpolatedMessage(message, locale);
+        final Map<String, Object> annotationParameters = context.getConstraintDescriptor().getAttributes();
+    private String getSharedInterpolatedMessage(final String message, final Locale locale) {
+        final ComputedMessageKey key = new ComputedMessageKey(locale, message);
+        String value = interpolatedMessages.get(key);
+        if (value == null) {
+            final ResourceBundle userResourceBundle = findUserResourceBundle(locale);
+            final ResourceBundle defaultResourceBundle = findDefaultResourceBundle(locale);
+
+            String userBundleResolvedMessage;
+            String resolvedMessage = message;
+            boolean evaluatedDefaultBundleOnce = false;
+            do {
+                // search the user bundle recursive (step1)
+                userBundleResolvedMessage = doReplaceVariables(resolvedMessage, userResourceBundle, locale, true);
+
+                // exit condition - we have at least tried to validate against the default bundle and there were no
+                // further replacements
+                if (evaluatedDefaultBundleOnce && !hasReplacementTakenPlace(userBundleResolvedMessage, resolvedMessage)) {
+                    break;
+                }
+                // search the default bundle non recursive (step2)
+                resolvedMessage = doReplaceVariables(userBundleResolvedMessage, defaultResourceBundle, locale, false);
+                evaluatedDefaultBundleOnce = true;
+            } while (true);
+            value = resolvedMessage;
+            interpolatedMessages.putIfAbsent(key, value);
+        }
+        return value;
+    }
+
+        interpolatedMessages.clear();
+            return of(recurse ? doReplaceVariables(string, bundle, locale, recurse) : string);
+    private static class ComputedMessageKey {
+        private ComputedMessageKey(final Locale locale, final String key) {
+            this.hash = Objects.hash(locale, key);
+            final ComputedMessageKey that = ComputedMessageKey.class.cast(o);
+            return locale.equals(that.locale) && key.equals(that.key);

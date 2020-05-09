@@ -1,0 +1,10 @@
+class DefaultMapBuilder<T> extends DICollectionBuilder<Map<String, T>, T> implements MapBuilder<T> {
+        super(bindingKey, injector);
+        findOrCreateMapProvider();
+    public MapBuilder<T> put(String key, Class<? extends T> interfaceType) throws DIRuntimeException {
+        Provider<? extends T> provider = createTypeProvider(interfaceType);
+        findOrCreateMapProvider().put(key, provider);
+        findOrCreateMapProvider().put(key, createInstanceProvider(value));
+        MapProvider<T> provider = findOrCreateMapProvider();
+            provider.put(entry.getKey(), createInstanceProvider(entry.getValue()));
+    private MapProvider<T> findOrCreateMapProvider() {

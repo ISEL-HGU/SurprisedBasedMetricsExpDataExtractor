@@ -1,0 +1,7 @@
+import org.apache.cayenne.modeler.action.DbEntityCounterpartAction;
+            focusObjEntity(objEntity);
+    private void focusObjEntity(ObjEntity objEntity){
+        actionManager.getAction(DbEntityCounterpartAction.class)
+                .viewCounterpartEntity(objEntity);
+    }
+

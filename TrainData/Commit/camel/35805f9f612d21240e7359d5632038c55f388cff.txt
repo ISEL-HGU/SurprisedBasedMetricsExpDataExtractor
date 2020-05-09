@@ -1,0 +1,44 @@
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.function.Supplier;
+import org.apache.camel.api.management.ManagedAttribute;
+import org.apache.camel.api.management.ManagedResource;
+@ManagedResource(description = "Managed ReactiveExecutor")
+    private final ThreadLocal<Worker> workers = ThreadLocal.withInitial(new Supplier<Worker>() {
+        @Override
+        public Worker get() {
+            createdWorkers.incrementAndGet();
+            return new Worker(DefaultReactiveExecutor.this);
+        }
+    });
+
+    // use for statistics so we have insights at runtime
+    private final AtomicInteger createdWorkers = new AtomicInteger();
+    private final AtomicInteger runningWorkers = new AtomicInteger();
+    private final AtomicLong pendingTasks = new AtomicLong();
+    @ManagedAttribute(description = "Number of created workers")
+    public int getCreatedWorkers() {
+        return createdWorkers.get();
+    }
+
+    @ManagedAttribute(description = "Number of running workers")
+    public int getRunningWorkers() {
+        return runningWorkers.get();
+    }
+
+    @ManagedAttribute(description = "Number of pending tasks")
+    public long getPendingTasks() {
+        return pendingTasks.get();
+    }
+
+        private final DefaultReactiveExecutor executor;
+        public Worker(DefaultReactiveExecutor executor) {
+            this.executor = executor;
+        }
+
+                executor.pendingTasks.incrementAndGet();
+                executor.pendingTasks.incrementAndGet();
+                executor.runningWorkers.incrementAndGet();
+                            executor.pendingTasks.decrementAndGet();
+                    executor.runningWorkers.decrementAndGet();
+                executor.pendingTasks.decrementAndGet();

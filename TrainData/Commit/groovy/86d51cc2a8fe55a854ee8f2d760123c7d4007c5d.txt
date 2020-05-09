@@ -1,0 +1,20 @@
+    public static void traverse(final File self, final Map<String, ?> options, @ClosureParams(value = SimpleType.class, options = "java.io.File") final Closure closure)
+        final int maxDepth;
+        final boolean preRoot;
+        final boolean postRoot;
+        final boolean visitRoot;
+
+        {
+            Object maxDepthValue = options.remove("maxDepth");
+            maxDepth = maxDepthValue == null ? -1 : DefaultGroovyMethods.asType(maxDepthValue, Number.class).intValue();
+            Object preRootValue = options.get("preRoot");
+            preRoot = preRootValue == null ? false : DefaultGroovyMethods.asType(preRootValue, Boolean.class).booleanValue();
+            Object postRootValue = options.get("postRoot");
+            postRoot = postRootValue == null ? false : DefaultGroovyMethods.asType(postRootValue, Boolean.class).booleanValue();
+            Object visitRootValue = options.get("visitRoot");
+            visitRoot = visitRootValue == null ? false : DefaultGroovyMethods.asType(visitRootValue, Boolean.class).booleanValue();
+        }
+
+
+    public static void traverse(final File self, final Map<String, ?> options)
+    private static FileVisitResult traverse(final File self, final Map<String, ?> options, final Closure closure, final int maxDepth)

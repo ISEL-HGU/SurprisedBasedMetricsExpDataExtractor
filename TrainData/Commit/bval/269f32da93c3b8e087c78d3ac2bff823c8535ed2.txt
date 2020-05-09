@@ -1,0 +1,3 @@
+    @SuppressWarnings("unchecked")
+    public static <T> Constructor<? extends T>[] getDeclaredConstructors(final Class<T> clazz) {
+        return (Constructor<? extends T>[]) clazz.getDeclaredConstructors();

@@ -1,0 +1,5 @@
+    private static final Pattern userinfoPattern = Pattern.compile("(^[^:]):?(.*)");
+            if (userinfoMatcher.matches()) {
+                username = userinfoMatcher.group(USERNAME_GROUP);
+                password = userinfoMatcher.group(PASSWORD_GROUP);
+            }

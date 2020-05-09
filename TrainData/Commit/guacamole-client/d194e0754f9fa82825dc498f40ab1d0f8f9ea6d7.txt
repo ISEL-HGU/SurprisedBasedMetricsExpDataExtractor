@@ -1,0 +1,7 @@
+        
+        // Send client timezone
+        writer.writeInstruction(
+                new GuacamoleInstruction(
+                    "timezone",
+                    info.getTimezone()
+                ));

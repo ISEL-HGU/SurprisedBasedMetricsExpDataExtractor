@@ -1,0 +1,2 @@
+        if (channel != null) {
+            LOG.trace("Terminating channel to the remote gRPC server");

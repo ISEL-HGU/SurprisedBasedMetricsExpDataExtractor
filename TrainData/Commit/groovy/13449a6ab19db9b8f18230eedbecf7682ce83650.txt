@@ -1,0 +1,47 @@
+import org.codehaus.groovy.ast.expr.MethodReferenceExpression;
+import static org.codehaus.groovy.transform.stc.StaticTypesMarker.INFERRED_TYPE;
+        Object type = node.getNodeMetaData(INFERRED_TYPE);
+        node.putNodeMetaData(INFERRED_TYPE, node);
+        ClassNode cn = (ClassNode) expression.getNodeMetaData(INFERRED_TYPE);
+                    source.putNodeMetaData(INFERRED_TYPE, getterNode.getReturnType());
+                    ClassNode inferredType = getInferredTypeFromTempInfo(variable, variable.getNodeMetaData(INFERRED_TYPE));
+            ClassNode previousIt = vexp.getNodeMetaData(INFERRED_TYPE);
+            vexp.putNodeMetaData(INFERRED_TYPE, previousIt);
+                    && leftExpression.getNodeMetaData(INFERRED_TYPE) == null) {
+                            ClassNode type = var.getNodeMetaData(INFERRED_TYPE);
+        ClassNode newlyInferred = (ClassNode) virtualDecl.getNodeMetaData(INFERRED_TYPE);
+
+            inferMethodReferenceType(call, argumentList, receiver);
+    private void inferMethodReferenceType(MethodCallExpression call, ArgumentListExpression argumentList, ClassNode receiver) {
+        Tuple2<ClassNode[], ClassNode> typeInfo = null;
+        ClassNode[] inferredParameterTypes = null;
+        List<Expression> argumentExpressionList = argumentList.getExpressions();
+
+        for (int i = 0, n = argumentExpressionList.size(); i < n; i) {
+            Expression argumentExpression = argumentExpressionList.get(i);
+            if (!(argumentExpression instanceof MethodReferenceExpression)) {
+                continue;
+            }
+
+            if (null == typeInfo) {
+                MethodNode directMethodCallTargetMethodNode = call.getNodeMetaData(StaticTypesMarker.DIRECT_METHOD_CALL_TARGET);
+                typeInfo = GenericsUtils.parameterizeMethodNode(directMethodCallTargetMethodNode, receiver);
+            }
+
+            if (null == inferredParameterTypes) {
+                inferredParameterTypes = typeInfo.getV1();
+            }
+
+            ClassNode inferredParameterType = inferredParameterTypes[i];
+
+            storeType(argumentExpression, inferredParameterType);
+        }
+    }
+
+        ClassNode oldValue = (ClassNode) exp.putNodeMetaData(INFERRED_TYPE, cn);
+                ((Parameter) accessedVariable).putNodeMetaData(INFERRED_TYPE, cn);
+        ClassNode cn = exp.getNodeMetaData(INFERRED_TYPE);
+            ClassNode closureReturnType = expression.getNodeMetaData(INFERRED_TYPE);
+                varOrigType.put(ve, (ClassNode) ve.getNodeMetaData(INFERRED_TYPE));
+            ClassNode inferred = parameter.getNodeMetaData(INFERRED_TYPE);
+                parameter.setNodeMetaData(INFERRED_TYPE, inferred);

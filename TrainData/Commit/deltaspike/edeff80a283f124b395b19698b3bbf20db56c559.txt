@@ -1,0 +1,4 @@
+// promotes deltaspike interceptors to global interceptors in case of cdi 1.1
+    private BeanManager beanManager;
+        this.beanManager = beanManager;
+    protected void promoteInterceptors(@Observes ProcessAnnotatedType pat)

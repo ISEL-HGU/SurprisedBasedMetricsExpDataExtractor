@@ -1,0 +1,26 @@
+import java.io.InputStream;
+                File file = new File(fileDir, getBlobFileName(cfg));
+                os = new FileOutputStream(file);  
+            if (os == null) {
+                // Let the producers like file: deal with it
+                InputStream blobStream = client.openInputStream(
+                    opts.getAccessCond(), opts.getRequestOpts(), opts.getOpContext());
+                exchange.getIn().setBody(blobStream);
+                exchange.getIn().setHeader(Exchange.FILE_NAME, getBlobFileName(cfg));
+            } else {
+                Long blobOffset = cfg.getBlobOffset();
+                Long blobDataLength = cfg.getDataLength();
+                if (client instanceof CloudPageBlob) {
+                    PageRange range = exchange.getIn().getHeader(BlobServiceConstants.PAGE_BLOB_RANGE, PageRange.class);
+                    if (range != null) {
+                        blobOffset = range.getStartOffset();
+                        blobDataLength = range.getEndOffset() - range.getStartOffset();
+                    }
+                }
+                client.downloadRange(blobOffset, blobDataLength, os,
+                                     opts.getAccessCond(), opts.getRequestOpts(), opts.getOpContext());
+            }
+            if (os != null && cfg.isCloseStreamAfterRead()) {
+    private static String getBlobFileName(BlobServiceConfiguration cfg) {
+        return cfg.getBlobName()   ".blob";
+    }

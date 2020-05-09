@@ -1,0 +1,14 @@
+import org.apache.camel.component.as2.api.AS2CompressionAlgorithm;
+         * The algorithm used to compress EDI message.
+         */
+        private AS2CompressionAlgorithm compressionAlgorithm;
+        /**
+        public AS2CompressionAlgorithm getCompressionAlgorithm() {
+            return compressionAlgorithm;
+        }
+
+        public void setCompressionAlgorithm(
+                AS2CompressionAlgorithm compressionAlgorithm) {
+            this.compressionAlgorithm = compressionAlgorithm;
+        }
+

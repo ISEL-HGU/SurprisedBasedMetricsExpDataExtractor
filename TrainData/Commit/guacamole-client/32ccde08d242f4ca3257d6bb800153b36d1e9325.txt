@@ -1,0 +1,2 @@
+                if (keyStreamIn != null)
+                    keyStreamIn.close();

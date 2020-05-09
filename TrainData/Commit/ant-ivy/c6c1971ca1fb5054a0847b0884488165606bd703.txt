@@ -1,0 +1,8 @@
+import org.apache.ivy.util.PropertiesFile;
+                        new OptionBuilder("properties").arg("propertiesfile")
+                            .description("use given file for properties not specified in settings").create())
+                .addOption(
+        if (line.hasOption("properties")) {
+            settings.addAllVariables(new PropertiesFile(new File(line.getOptionValue("properties")),
+                    "additional properties"));
+        }

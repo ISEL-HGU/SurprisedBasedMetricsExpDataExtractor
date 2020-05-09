@@ -1,0 +1,11 @@
+    private boolean supportIteratorForEmptyDirectory;
+        this.supportIteratorForEmptyDirectory = false;
+                if (supportIteratorForEmptyDirectory) {
+    
+    public boolean isSupportIteratorForEmptyDirectory() {
+        return supportIteratorForEmptyDirectory;
+    }
+
+    public void setSupportIteratorForEmptyDirectory(boolean supportIteratorForEmptyDirectory) {
+        this.supportIteratorForEmptyDirectory = supportIteratorForEmptyDirectory;
+    }

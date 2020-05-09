@@ -1,0 +1,13 @@
+import java.util.stream.Collectors;
+
+        if ("false".equals(eipModel.getOutput())) {
+            // filter out outputs if we do not support it (and preserve order so we need to use linked hash-set)
+            options = options.stream().filter(o -> !"outputs".equals(o.getName())).collect(Collectors.toCollection(LinkedHashSet::new));
+        }
+
+
+        // special for transacted/policy which should not have output
+        if ("policy".equals(model.getName()) || "transacted".equals(model.getName())) {
+            return false;
+        }
+

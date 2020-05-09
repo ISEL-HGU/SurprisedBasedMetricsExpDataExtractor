@@ -1,0 +1,3 @@
+            if (name instanceof QName) {
+            this.result = new WeakReference<>(null);
+            result = new WeakReference<>(string);

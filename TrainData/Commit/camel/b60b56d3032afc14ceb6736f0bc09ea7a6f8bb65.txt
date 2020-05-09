@@ -1,0 +1,2 @@
+import com.amazonaws.services.identitymanagement.AbstractAmazonIdentityManagement;
+public class AmazonIAMClientMock extends AbstractAmazonIdentityManagement {

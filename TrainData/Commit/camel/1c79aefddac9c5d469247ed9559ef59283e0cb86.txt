@@ -1,0 +1,6 @@
+import org.apache.camel.examples.CamelHelloGrpc;
+import org.apache.camel.examples.CamelHelloReply;
+import org.apache.camel.examples.CamelHelloRequest;
+
+    private static final Logger LOG = Logger.getLogger(HelloCamelServer.class.getName());
+        LOG.info("Server started. I'm listening on "  port);

@@ -1,0 +1,4 @@
+        if (activeConnection == null)
+            return;
+        
+        if (hasObjectPermissions(user, identifier, ObjectPermission.Type.DELETE)) {

@@ -1,0 +1,11 @@
+import org.apache.camel.util.ObjectHelper;
+        if (ObjectHelper.isNotEmpty(ignore)) {
+            Boolean bool = ObjectConverter.toBoolean(ignore);
+            if (bool != null) {
+                ignoreDuplicateServletName = bool;
+            } else {
+                // always log so people can see it easier
+                String msg = "Invalid parameter value for init-parameter ignoreDuplicateServletName with value: "  ignore;
+                LOG.error(msg);
+                throw new ServletException(msg);
+            }

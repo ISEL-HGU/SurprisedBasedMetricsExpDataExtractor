@@ -1,0 +1,2 @@
+     *   <li>TryRename is only applicable if tempFileName option is in use. This allows to try renaming the file from the temporary name to the actual name,
+     *   without doing any exists check. This check may be faster on some file systems and especially FTP servers.</li>

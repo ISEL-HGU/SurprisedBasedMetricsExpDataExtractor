@@ -1,0 +1,6 @@
+     * the corresponding REST configuration in the Camel Context. If you give
+     * taken from this specification, but these can be overridden with
+     * properties on the component or endpoint level. If not given the component
+     * tries to load swagger.json resource. Note that the host defined on the
+     * component and endpoint of this Component should contain the scheme,
+     * hostname and optionally the port in the URI syntax (i.e.

@@ -1,0 +1,3 @@
+import com.google.common.collect.Sets;
+        return Sets.union(user.getEffectiveUserGroups(),
+                super.getEffectiveUserGroups());

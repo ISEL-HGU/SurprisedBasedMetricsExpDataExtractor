@@ -1,0 +1,27 @@
+import java.net.URI;
+import java.util.Collection;
+import org.apache.camel.Endpoint;
+import org.apache.camel.util.CollectionStringBuffer;
+import org.apache.camel.util.ObjectHelper;
+import org.apache.camel.util.StringHelper;
+            CollectionStringBuffer csb = new CollectionStringBuffer(",");
+
+            Collection<HttpHandlerRegistrationInfo> handlers = getEndpoint().getComponent().getHandlers();
+            for (HttpHandlerRegistrationInfo reg : handlers) {
+                URI uri = reg.getUri();
+                // what other HTTP methods may exists for the same path
+                if (reg.getMethodRestrict() != null && getEndpoint().getHttpURI().equals(uri)) {
+                    String restrict = reg.getMethodRestrict();
+                    if (restrict.endsWith(",OPTIONS")) {
+                        restrict = restrict.substring(0, restrict.length() - 8);
+                    }
+                    csb.append(restrict);
+            }
+            String allowedMethods = csb.toString();
+            if (ObjectHelper.isEmpty(allowedMethods)) {
+                allowedMethods = getEndpoint().getHttpMethodRestrict();
+            }
+            if (ObjectHelper.isEmpty(allowedMethods)) {
+            if (!allowedMethods.contains("OPTIONS")) {
+                allowedMethods = allowedMethods  ",OPTIONS";
+            }

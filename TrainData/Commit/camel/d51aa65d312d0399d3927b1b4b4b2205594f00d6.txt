@@ -1,0 +1,20 @@
+ * Configuration of global SSL parameters.
+@ConditionalOnBean(HttpComponentAutoConfiguration.class)
+@AutoConfigureAfter(HttpComponentAutoConfiguration.class)
+    public HttpSSLPostProcessor cacheAutoConfigurationValidatorPostProcessor(CamelContext context, HttpComponentConfiguration config) {
+        return new HttpSSLPostProcessor(context, config);
+        private HttpComponentConfiguration config;
+
+        HttpSSLPostProcessor(CamelContext context, HttpComponentConfiguration config) {
+            this.config = config;
+                if (config != null && config.getUseGlobalSSLContextParameters() != null && config.getUseGlobalSSLContextParameters()) {
+                    SSLContextParameters globalSSLParams = context.getSSLContextParameters();
+                    if (globalSSLParams != null) {
+                        ProtocolSocketFactory factory =
+                                new SSLContextParametersSecureProtocolSocketFactory(globalSSLParams, context);
+                        Protocol.registerProtocol("https",
+                                new Protocol(
+                                        "https",
+                                        factory,
+                                        443));
+                    }

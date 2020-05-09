@@ -1,0 +1,2 @@
+    private static final MetaMethod[] EMPTY = MetaMethod.EMPTY_ARRAY;
+            myNewMetaMethods = arr.toArray(MetaMethod.EMPTY_ARRAY);

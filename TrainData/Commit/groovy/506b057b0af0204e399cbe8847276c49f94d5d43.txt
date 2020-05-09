@@ -1,0 +1,7 @@
+import static org.codehaus.groovy.syntax.Types.COMPARE_NOT_INSTANCEOF;
+        if (fn != null && !fn.isStatic() && !fn.isPrivate() && !"delegate".equals(delegationData) &&
+                source instanceof PropertyExpression && typeCheckingContext.getEnclosingClosureStack().size() == 1) {
+            // check for reference to method, closure, for loop or catch block parameter
+                ownerProperty = !(((VariableExpression) pe.getObjectExpression()).getAccessedVariable() instanceof Parameter);
+        if (op != KEYWORD_INSTANCEOF) {
+        if (op != COMPARE_NOT_INSTANCEOF) {

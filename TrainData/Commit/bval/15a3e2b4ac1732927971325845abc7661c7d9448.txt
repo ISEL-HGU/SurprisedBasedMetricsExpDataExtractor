@@ -1,0 +1,42 @@
+        
+        UnwrappingInfo inTermsOf(Class<?> containerClass) {
+            final Class<?> keyContainer = containerElementKey.getContainerClass();
+            if (keyContainer.equals(containerClass)) {
+                return this;
+            }
+            Validate.validState(keyContainer.isAssignableFrom(containerClass), "Cannot render %s in terms of %s",
+                containerElementKey, containerClass);
+
+            final ContainerElementKey key;
+
+            if (containerElementKey.getTypeArgumentIndex() == null) {
+                key = new ContainerElementKey(containerClass, null);
+            } else {
+                Integer typeArgumentIndex = null;
+                final Map<TypeVariable<?>, Type> typeArguments =
+                    TypeUtils.getTypeArguments(containerClass, keyContainer);
+                Type t = typeArguments
+                    .get(keyContainer.getTypeParameters()[containerElementKey.getTypeArgumentIndex().intValue()]);
+                while (t instanceof TypeVariable<?>) {
+                    final TypeVariable<?> var = (TypeVariable<?>) t;
+                    if (containerClass.equals(var.getGenericDeclaration())) {
+                        typeArgumentIndex =
+                            Integer.valueOf(ObjectUtils.indexOf(containerClass.getTypeParameters(), var));
+                        break;
+                    }
+                    t = typeArguments.get(t);
+                }
+                key = new ContainerElementKey(containerClass, typeArgumentIndex);
+            }
+            return new UnwrappingInfo(key, valueExtractor);
+        }
+
+        @Override
+        public String toString() {
+            return String.format("%s:%s", containerElementKey, valueExtractor);
+        }
+            .filter(e -> valueUnwrapping == ValidateUnwrappedValue.UNWRAP || isUnwrapByDefault(e.getValue()))
+            maximallySpecific(unwrapping, u -> u.containerElementKey.getContainerClass())
+                .map(u -> u.inTermsOf(containerClass));
+        if (!result.isPresent() && valueUnwrapping == ValidateUnwrappedValue.UNWRAP) {
+        return result;

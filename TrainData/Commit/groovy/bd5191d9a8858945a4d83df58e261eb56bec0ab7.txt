@@ -1,0 +1,30 @@
+                blockParameterTypes = new ClassNode[p.length];
+                for (int i = 0; i < p.length; i) {
+                    if (p[i] != null && !p[i].isDynamicTyped()) {
+                        blockParameterTypes[i] = p[i].getType();
+                    } else {
+                        blockParameterTypes[i] = typeOrNull(parameterTypesForSAM, i);
+                    }
+                }
+                if (type == null && enclosingClosure != null && temporaryTypesForExpression == null) {
+                    type = getTypeFromClosureArguments(parameter, enclosingClosure);
+    private ClassNode getTypeFromClosureArguments(Parameter parameter, TypeCheckingContext.EnclosingClosure enclosingClosure) {
+        ClosureExpression closureExpression = enclosingClosure.getClosureExpression();
+        ClassNode[] closureParamTypes = (ClassNode[]) closureExpression.getNodeMetaData(StaticTypesMarker.CLOSURE_ARGUMENTS);
+        if (closureParamTypes == null) return null;
+        final Parameter[] parameters = closureExpression.getParameters();
+        String name = parameter.getName();
+
+        if (parameters.length == 0) {
+            return "it".equals(name) && closureParamTypes.length != 0 ? closureParamTypes[0] : null;
+        }
+
+        for (int index = 0; index < parameters.length; index) {
+            if (name.equals(parameters[index].getName())) {
+                return closureParamTypes.length > index ? closureParamTypes[index] : null;
+            }
+        }
+
+        return null;
+    }
+

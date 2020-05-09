@@ -1,0 +1,1 @@
+            LOG.trace("Copying InputStream: {} -> OutputStream: {} with buffer: {} and flush on each write {}", input, output, bufferSize, flushOnEachWrite);

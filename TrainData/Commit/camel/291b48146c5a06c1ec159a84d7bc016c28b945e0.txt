@@ -1,0 +1,1 @@
+                keyPairProvider = new ResourceHelperKeyPairProvider(new String[]{certResource}, endpoint.getCamelContext());

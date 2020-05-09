@@ -1,0 +1,2 @@
+ * Zip Deflate Compression data format is a message compression and
+ * de-compression format (not zip files).

@@ -1,0 +1,6 @@
+import java.lang.UnsupportedOperationException;
+                break;
+            default:
+                throw new UnsupportedOperationException(
+                    "A driver has been specified that is not supported by this module."
+                );

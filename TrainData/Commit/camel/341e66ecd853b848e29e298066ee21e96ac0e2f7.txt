@@ -1,0 +1,9 @@
+        newConnection.addSyncStanzaListener(new XmppLogger("INBOUND"), stanza -> true);
+        newConnection.addSyncStanzaListener(new XmppLogger("OUTBOUND"), stanza -> true);
+        XMPPTCPConnectionConfiguration conf = XMPPTCPConnectionConfiguration.builder()
+                .setHostAddress(InetAddress.getByName(host))
+                .setPort(port)
+                .setXmppDomain(sName)
+                .build();
+                    XMPPError.from(Condition.item_not_found, "Cannot find any XMPPServiceDomain by MultiUserChatManager on connection: "  getConnectionMessage(connection)).build());
+        return room  "@"  xmppServiceDomains.iterator().next();

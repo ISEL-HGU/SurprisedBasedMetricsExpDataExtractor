@@ -1,0 +1,2 @@
+        super("File operation failed"  (reason != null ? ": "  reason : "")  ". Code: "  code);
+        super("File operation failed"  (reason != null ? ": "  reason : "")  ". Code: "  code, cause);

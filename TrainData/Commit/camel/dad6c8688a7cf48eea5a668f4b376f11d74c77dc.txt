@@ -1,0 +1,3 @@
+        ServiceHelper.startServices(beforeProducer, producer, afterProducer);
+        ServiceHelper.stopServices(beforeProducer, producer, afterProducer);
+        ServiceHelper.stopAndShutdownServices(beforeProducer, producer, afterProducer);

@@ -1,0 +1,9 @@
+import static org.apache.groovy.ast.tools.ClassNodeUtils.addGeneratedMethod;
+        addGeneratedMethod(declaringClass, setter);
+        addGeneratedMethod(declaringClass,
+        addGeneratedMethod(declaringClass,
+        addGeneratedMethod(declaringClass,
+        addGeneratedMethod(declaringClass,
+        addGeneratedMethod(declaringClass,
+        addGeneratedMethod(declaringClass,
+        addGeneratedMethod(declaringClass,

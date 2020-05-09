@@ -1,0 +1,21 @@
+  public CassandraMappingBuilder() {
+  }
+
+   * Constructor for builder to create the mapper.
+   * @param store Cassandra Store
+   */
+  CassandraMappingBuilder(final CassandraStore<K, T> store) {
+    this.dataStore = store;
+  }
+
+  private static int getReplicationFactor(Element element) {
+    String value = element.getAttributeValue("replication_factor");
+    if (value == null) {
+      return 1;
+    } else {
+      return Integer.parseInt(value);
+    }
+  }
+
+  /**
+  private void processClass(CassandraMapping cassandraMapping, Element classElement) {

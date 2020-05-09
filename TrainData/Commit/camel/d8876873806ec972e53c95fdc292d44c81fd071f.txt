@@ -1,0 +1,7 @@
+    private CodingErrorAction malformedInputErrorAction = CodingErrorAction.REPORT;
+
+
+
+    public void setMalformedInputErrorAction(CodingErrorAction malformedInputErrorAction) {
+
+    }

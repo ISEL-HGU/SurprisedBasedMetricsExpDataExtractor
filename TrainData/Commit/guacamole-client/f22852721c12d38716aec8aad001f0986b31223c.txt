@@ -1,0 +1,10 @@
+                // Check if weight of a is non-null and retrieve it.
+                if (a.getConnectionWeight() != null && a.getConnectionWeight().intValue() > 0)
+                    weightA = a.getConnectionWeight().intValue();
+                // In all other cases assign 1 for sorting.
+                    weightA = 1;
+                if (b.getConnectionWeight() != null && b.getConnectionWeight().intValue() > 0)
+                    weightB = b.getConnectionWeight().intValue();
+                // In all other cases assign 1 for sorting.
+                    weightB = 1;
+                // Get current active connections, add 1 to both to avoid calculations with 0.

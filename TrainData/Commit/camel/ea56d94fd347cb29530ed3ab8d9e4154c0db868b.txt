@@ -1,0 +1,4 @@
+                // we could not open the channel so release the lock
+                if (!consumer.getEndpoint().isAutoAck()) {
+                    lock.release();
+                }

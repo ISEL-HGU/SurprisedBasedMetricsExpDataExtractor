@@ -1,0 +1,2 @@
+     * The number of retries when attempting a RADIUS packet transaction.
+     * The network timeout when attempting a RADIUS packet transaction.

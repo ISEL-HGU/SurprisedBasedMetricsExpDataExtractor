@@ -1,0 +1,2 @@
+import org.apache.camel.api.management.ManagedResource;
+@ManagedResource(description = "Managed FtpsEndpoint")

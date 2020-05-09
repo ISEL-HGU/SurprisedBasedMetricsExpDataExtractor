@@ -1,0 +1,5 @@
+
+    private final Method addProtocolHandlerMethod;
+                addProtocolHandlerMethod = List.class.getMethod("add", Object.class);
+                addProtocolHandlerMethod = getProtocolHandlersType.getMethod("put", ProtocolHandler.class);
+        addProtocolHandlerMethod.invoke(protocolHandlers, new SalesforceSecurityHandler(this));

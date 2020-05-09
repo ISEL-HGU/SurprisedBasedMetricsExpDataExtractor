@@ -1,0 +1,15 @@
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+        private final Map<String, Object> properties;
+
+            if (route.getProperties() != null) {
+                this.properties = new HashMap<>(route.getProperties());
+            } else {
+                this.properties = Collections.emptyMap();
+            }
+
+        public Map<String, Object> getProperties() {
+            return properties;
+        }
+

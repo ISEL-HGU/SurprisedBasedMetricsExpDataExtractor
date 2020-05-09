@@ -1,0 +1,12 @@
+ * @version
+    private final Exchange original;
+        this(null, propagateException);
+    /**
+     * Creates a new instance as a clone of this strategy with the new given original.
+     */
+    public UseOriginalAggregationStrategy newInstance(Exchange original) {
+        return new UseOriginalAggregationStrategy(original, propagateException);
+    }
+
+    @Deprecated
+        throw new UnsupportedOperationException("This method is deprecated");

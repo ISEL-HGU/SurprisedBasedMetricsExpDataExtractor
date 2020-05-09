@@ -1,0 +1,2 @@
+    public CayenneRuntimeException(String messageFormat, Throwable cause, Object... messageArgs) {
+        super(messageFormat == null ? null : String.format(messageFormat, messageArgs), cause);

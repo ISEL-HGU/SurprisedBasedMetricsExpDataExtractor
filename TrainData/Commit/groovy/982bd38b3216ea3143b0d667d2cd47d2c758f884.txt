@@ -1,0 +1,4 @@
+import java.io.Serializable;
+public class IntRange extends AbstractList<Integer> implements Range<Integer>, Serializable {
+
+    private static final long serialVersionUID = -7827097587793510780L;

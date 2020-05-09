@@ -1,0 +1,5 @@
+         * Number of successful conversions by optimised core converters
+         */
+        long getCoreHitCounter();
+
+        /**

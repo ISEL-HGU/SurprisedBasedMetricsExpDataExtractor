@@ -1,0 +1,1 @@
+        public boolean bind(CamelContext camelContext, Object target, Map<String, Object> properties) {

@@ -1,0 +1,7 @@
+        if (t != null) {
+            // ensure the object is validate before we borrow it
+            if (!factory.validateObject(t)) {
+                invalidateObject(t);
+                t = null;
+            }
+        }

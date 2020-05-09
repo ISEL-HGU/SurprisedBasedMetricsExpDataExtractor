@@ -1,0 +1,2 @@
+     * The default value is false.
+    private boolean endpointRuntimeStatisticsEnabled;

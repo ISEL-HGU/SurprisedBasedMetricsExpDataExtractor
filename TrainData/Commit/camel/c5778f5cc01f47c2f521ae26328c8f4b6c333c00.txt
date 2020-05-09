@@ -1,0 +1,12 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+    private static final Logger LOG = LoggerFactory.getLogger(RestBindingAdvice.class);
+                LOG.trace("Consuming content type does not match contentType header {}. Stopping routing.", contentType);
+                LOG.trace("Produced content type does not match accept header {}. Stopping routing.", contentType);
+        // Any MIME type
+        // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept#Directives
+        if ("*/*".equals(target)) {
+          return true;
+        }
+

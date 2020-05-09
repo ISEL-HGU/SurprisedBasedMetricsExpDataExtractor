@@ -1,0 +1,8 @@
+    
+    @Override
+    protected void doStop() throws Exception {
+        super.doStop();
+        if (client != null) {
+        	client.shutdown();
+        }
+    }

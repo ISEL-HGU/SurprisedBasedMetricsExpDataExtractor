@@ -1,0 +1,26 @@
+import java.io.UnsupportedEncodingException;
+            Set<String> components = new HashSet<>();
+            Set<String> languages = new HashSet<>();
+            Set<String> dataformats = new HashSet<>();
+            if (uri == null || uri.startsWith(PropertiesComponent.DEFAULT_PREFIX_TOKEN)) {
+            // validate uri here up-front so a meaningful error can be logged for blueprint
+            // it will also speed up tests in case of failure
+            if (!validateUri(uri)) {
+                return;
+            }
+
+            String splitURI[] = ObjectHelper.splitOnCharacter(uri, ":", 2);
+            if (splitURI[1] != null) {
+                String scheme = splitURI[0];
+                components.add(scheme);
+                    // ignore as uri should be already validated at findUriComponent method
+        private static boolean validateUri(String uri) {
+            try {
+                // the same validation as done in DefaultCamelContext#normalizeEndpointUri(String)
+                URISupport.normalizeUri(uri);
+            } catch (URISyntaxException | UnsupportedEncodingException e) {
+                LOG.error("Endpoint URI '"  uri  "' is not valid due to: "  e.getMessage(), e);
+                return false;
+            }
+            return true;
+        }

@@ -1,0 +1,6 @@
+            // skip options for json based-data formats as these are implied
+            if ("org.apache.camel.model.dataformat.JsonLibrary".equals(type)) {
+                continue;
+            }
+
+

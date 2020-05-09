@@ -1,0 +1,18 @@
+                            final CreationalContext<Object> creationalContext =
+                                    beanManager.createCreationalContext(null);
+                            pool = ExecutorService.class.cast(beanManager.getReference(
+                                    bean, ExecutorService.class, creationalContext));
+                                "", "java:app/", "java:global/", "java:global/threads/",
+                                "java:global/deltaspike/", "java:"))
+                            try
+                            {
+                            }
+                            catch (final NamingException e)
+                            {
+                        else
+                        final String threadFactoryName = ConfigResolver.getPropertyValue(
+                                configPrefix  "threadFactory.name");
+                        final String rejectedHandlerName = ConfigResolver.getPropertyValue(
+                                configPrefix  "rejectedExecutionHandler.name");
+    private <T> T lookupByName(final String name, final Class<T> type)
+    {

@@ -1,0 +1,22 @@
+import java.time.chrono.ChronoLocalDate;
+import java.time.chrono.ChronoLocalDateTime;
+import java.time.chrono.ChronoZonedDateTime;
+import java.util.Comparator;
+public abstract class TimeValidator<A extends Annotation, T> implements ConstraintValidator<A, T> {
+    protected static final Comparator<ChronoLocalDate> CHRONO_LOCAL_DATE_COMPARATOR =
+        Comparator.nullsFirst((quid, quo) -> quid.isBefore(quo) ? -1 : quid.isAfter(quo) ? 1 : 0);
+
+    protected static final Comparator<ChronoLocalDateTime<?>> CHRONO_LOCAL_DATE_TIME_COMPARATOR =
+            Comparator.nullsFirst((quid, quo) -> quid.isBefore(quo) ? -1 : quid.isAfter(quo) ? 1 : 0);
+
+    protected static final Comparator<ChronoZonedDateTime<?>> CHRONO_ZONED_DATE_TIME_COMPARATOR =
+            Comparator.nullsFirst((quid, quo) -> quid.isBefore(quo) ? -1 : quid.isAfter(quo) ? 1 : 0);
+    private final Comparator<? super T> cmp;
+
+    @SuppressWarnings("unchecked")
+        this(now, (Comparator<T>) Comparator.naturalOrder(), test);
+    }
+
+    protected TimeValidator(Function<Clock, T> now, Comparator<? super T> cmp,IntPredicate test) {
+        this.cmp = cmp;
+        return value == null || test.test(cmp.compare(value, now.apply(context.getClockProvider().getClock())));

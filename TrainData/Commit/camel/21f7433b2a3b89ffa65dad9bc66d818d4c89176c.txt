@@ -1,0 +1,5 @@
+ *     <li>nested - Properties can be nested using the dot syntax (OGNL and builder pattern using with as prefix), eg foo.bar=123</li>
+        return setProperty(camelContext, target, name, value, null, true, true);
+    private static boolean setProperty(CamelContext context, Object target, String name, Object value, String refName,
+                    Set<Method> newSetters = findSetterMethods(newClass, part, allowBuilderPattern);
+        return IntrospectionSupport.setProperty(context, context.getTypeConverter(), target, name, value, refName, allowBuilderPattern);

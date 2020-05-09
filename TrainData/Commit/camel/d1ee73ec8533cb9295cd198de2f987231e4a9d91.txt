@@ -1,0 +1,1 @@
+            logger = new CamelLogProcessor(new CamelLogger(getLogName(), getLogLevel()), formatter, null, null);

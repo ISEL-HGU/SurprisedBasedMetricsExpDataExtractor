@@ -1,0 +1,48 @@
+import org.codehaus.groovy.ast.expr.ConstructorCallExpression;
+    protected final LinkedList<ConstructorCallExpression> enclosingConstructorCalls = new LinkedList<ConstructorCallExpression>();
+    protected final LinkedList<PropertyExpression> enclosingPropertyExpressions = new LinkedList<PropertyExpression>();
+    public void pushEnclosingPropertyExpression(PropertyExpression propertyExpression) {
+        enclosingPropertyExpressions.addFirst(propertyExpression);
+    public Expression popEnclosingPropertyExpression() {
+        return enclosingPropertyExpressions.removeFirst();
+    public Expression getEnclosingPropertyExpression() {
+        if (enclosingPropertyExpressions.isEmpty()) return null;
+        return enclosingPropertyExpressions.getFirst();
+    public List<PropertyExpression> getEnclosingPropertyExpressions() {
+        return Collections.unmodifiableList(enclosingPropertyExpressions);
+
+    /**
+     * Pushes a constructor call into the constructor call stack.
+     * @param call the call expression to be pushed
+     */
+    public void pushEnclosingConstructorCall(ConstructorCallExpression call) {
+        enclosingConstructorCalls.addFirst(call);
+    }
+
+    /**
+     * Pops a constructor call from the enclosing constructor call stack.
+     * @return the popped call
+     */
+    public Expression popEnclosingConstructorCall() {
+        return enclosingConstructorCalls.removeFirst();
+    }
+
+    /**
+     * Returns the constructor call which is on the top of the stack, or null
+     * if there's no such element.
+     * @return the enclosing constructor call on top of the stack, or null if no such element.
+     */
+    public Expression getEnclosingConstructorCall() {
+        if (enclosingConstructorCalls.isEmpty()) return null;
+        return enclosingConstructorCalls.getFirst();
+    }
+
+    /**
+     * Returns the current stack of enclosing constructor calls. The first
+     * element is the top of the stack, that is to say the currently visited constructor call.
+     * @return an immutable list of enclosing constructor calls.
+     */
+    public List<Expression> getEnclosingConstructorCalls() {
+        return Collections.unmodifiableList(enclosingConstructorCalls);
+    }
+

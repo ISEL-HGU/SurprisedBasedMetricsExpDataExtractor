@@ -1,0 +1,6 @@
+import org.apache.camel.impl.DefaultComponent;
+public class SnsComponent extends DefaultComponent {
+        this(null);
+        super(context);
+        
+        registerExtension(new SnsComponentVerifierExtension());

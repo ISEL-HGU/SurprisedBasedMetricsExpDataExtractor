@@ -1,0 +1,13 @@
+     * Whitelist of accepted filename extensions for accepting uploaded files.
+     * Multiple extensions can be separated by comma, such as txt,xml.
+     */
+    private String fileNameExtWhitelist;
+    /**
+    public String getFileNameExtWhitelist() {
+        return fileNameExtWhitelist;
+    }
+
+    public void setFileNameExtWhitelist(String fileNameExtWhitelist) {
+        this.fileNameExtWhitelist = fileNameExtWhitelist;
+    }
+

@@ -1,0 +1,10 @@
+
+
+
+
+            // TODO How to enable the chunk transport
+
+            uriForRequest = URISupport.pathAndQueryOf(new URI(uriForRequest));
+
+
+

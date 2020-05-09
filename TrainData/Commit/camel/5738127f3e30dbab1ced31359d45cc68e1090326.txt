@@ -1,0 +1,2 @@
+                    .to("fhir://"  PATH_PREFIX  "/resourceById");
+                    .to("fhir://"  PATH_PREFIX  "/resourceById");

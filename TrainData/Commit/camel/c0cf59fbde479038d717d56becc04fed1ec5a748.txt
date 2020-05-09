@@ -1,0 +1,26 @@
+     * The pulsar autoconfiguration. The option is a
+     * org.apache.camel.component.pulsar.utils.AutoConfiguration type.
+     */
+    private String autoConfiguration;
+    /**
+     * The pulsar client. The option is a
+     * org.apache.pulsar.client.api.PulsarClient type.
+     */
+    private String pulsarClient;
+    /**
+    public String getAutoConfiguration() {
+        return autoConfiguration;
+    }
+
+    public void setAutoConfiguration(String autoConfiguration) {
+        this.autoConfiguration = autoConfiguration;
+    }
+
+    public String getPulsarClient() {
+        return pulsarClient;
+    }
+
+    public void setPulsarClient(String pulsarClient) {
+        this.pulsarClient = pulsarClient;
+    }
+

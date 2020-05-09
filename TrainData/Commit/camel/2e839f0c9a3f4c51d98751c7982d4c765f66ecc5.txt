@@ -1,0 +1,5 @@
+import org.apache.camel.util.FileUtil;
+            String host = configuration.getAmazonAWSHost();
+            host = FileUtil.stripTrailingSeparator(host);
+            queueUrl = "https://sqs."  configuration.getRegion()  "."  host  "/"
+            LOG.debug("Using Amazon SQS queue url: {}", queueUrl);

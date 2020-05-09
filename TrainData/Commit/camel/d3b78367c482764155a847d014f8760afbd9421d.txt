@@ -1,0 +1,9 @@
+        int cntSlashsAtStart = 0;
+        if (path.startsWith("/") || path.startsWith("\\")) {
+            cntSlashsAtStart;
+            // for Windows, preserve up to 2 starting slashes, which is necessary for UNC paths.
+            if (isWindows() && path.length() > 1 && (path.charAt(1) == '/' || path.charAt(1) == '\\')) {
+                cntSlashsAtStart;
+            }
+        }
+        for (int i = 0; i < cntSlashsAtStart; i) {

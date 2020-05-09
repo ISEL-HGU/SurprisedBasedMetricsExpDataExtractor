@@ -1,0 +1,6 @@
+        OperandStack operandStack = controller.getOperandStack();
+        operandStack.doAsType(fieldNode.getType());
+
+        operandStack.push(classNode);
+
+        operandStack.swap();

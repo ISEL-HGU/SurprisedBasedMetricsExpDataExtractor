@@ -1,0 +1,24 @@
+import java.util.EventObject;
+import org.apache.camel.management.event.CamelContextStartedEvent;
+import org.apache.camel.support.EventNotifierSupport;
+                if (!camelContextConfigurations.isEmpty()) {
+                    // we want to call these notifications just after CamelContext has been fully started
+                    // so use an event notifier to trigger when this happens
+                    camelContext.getManagementStrategy().addEventNotifier(new EventNotifierSupport() {
+                        @Override
+                        public void notify(EventObject eventObject) throws Exception {
+                            for (CamelContextConfiguration camelContextConfiguration : camelContextConfigurations) {
+                                LOG.debug("CamelContextConfiguration found. Invoking afterApplicationStart: {}", camelContextConfiguration);
+                                try {
+                                    camelContextConfiguration.afterApplicationStart(camelContext);
+                                } catch (Exception e) {
+                                    LOG.warn("Error during calling afterApplicationStart due "  e.getMessage()  ". This exception is ignored", e);
+                                }
+                            }
+                        }
+
+                        @Override
+                        public boolean isEnabled(EventObject eventObject) {
+                            return eventObject instanceof CamelContextStartedEvent;
+                        }
+                    });

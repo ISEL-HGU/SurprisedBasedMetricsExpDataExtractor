@@ -1,0 +1,20 @@
+    public Long getHalfOpenAfter() {
+    public void setHalfOpenAfter(Long milliseconds) {
+    public Long getFailureWindow() {
+    public void setFailureWindow(Long milliseconds) {
+    public Integer getFailureThreshold() {
+    public void setFailureThreshold(Integer numberOfFailures) {
+    public String getHalfOpenHandlerName() {
+    public Integer getCurrentFailures() {
+    public Long getLastFailure() {
+        if (getPolicy().getLastFailure() == 0) {
+            return 0L;
+        } else {
+            return System.currentTimeMillis() - getPolicy().getLastFailure();
+        }
+    public Long getOpenAt() {
+        if (getPolicy().getOpenedAt() == 0) {
+            return 0L;
+        } else {
+            return System.currentTimeMillis() - getPolicy().getOpenedAt();
+        }

@@ -1,0 +1,2 @@
+        PropertyPlaceholderConfigurer configurer = DefinitionPropertiesPlaceholderProviderHelper.provider(this).orElse(null);
+        return configurer != null ? configurer.getWritePropertyPlaceholderOptions(camelContext) : null;

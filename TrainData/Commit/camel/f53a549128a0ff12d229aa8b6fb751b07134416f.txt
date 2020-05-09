@@ -1,0 +1,7 @@
+import org.apache.camel.util.ObjectHelper;
+            String extra = "<restConfiguration component=\""  restComponent  "\"";
+                extra = extra.concat(" contextPath=\""  restContextPath  "\"");
+            if (ObjectHelper.isNotEmpty(apiContextPath)) {
+                extra = extra.concat(" apiContextPath=\""  apiContextPath  "\"");
+            }
+            extra = extra.concat("/>");

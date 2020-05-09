@@ -1,0 +1,5 @@
+import org.apache.camel.spring.boot.util.CamelPropertiesHelper;
+                    CamelPropertiesHelper.setCamelProperties(camelContext,
+                            nestedProperty, nestedParameters, false);
+        CamelPropertiesHelper.setCamelProperties(camelContext, component,
+                parameters, false);

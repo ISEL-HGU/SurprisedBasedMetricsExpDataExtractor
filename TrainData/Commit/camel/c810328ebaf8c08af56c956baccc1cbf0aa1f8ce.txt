@@ -1,0 +1,4 @@
+
+                        ResultErrorBuilder.withCode(ComponentVerifier.VerificationError.StandardCode.UNSUPPORTED)
+                            .detail("camel_connector_name", getConnectorName())
+                            .detail("camel_component_name", getComponentName())

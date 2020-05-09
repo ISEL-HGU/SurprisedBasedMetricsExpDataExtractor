@@ -1,0 +1,1 @@
+            entry.getValue().removeIf(factory -> factory.getClass() == clazz);

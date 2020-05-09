@@ -1,0 +1,6 @@
+import static org.apache.cayenne.access.sqlbuilder.SQLBuilder.aliased;
+import static org.apache.cayenne.access.sqlbuilder.SQLBuilder.function;
+import static org.apache.cayenne.access.sqlbuilder.SQLBuilder.table;
+import static org.apache.cayenne.access.sqlbuilder.SQLBuilder.value;
+        } else if(node.getType() == FUNCTION_CALL) {
+            return null;

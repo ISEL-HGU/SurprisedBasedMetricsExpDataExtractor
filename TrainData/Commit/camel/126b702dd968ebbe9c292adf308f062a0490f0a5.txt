@@ -1,0 +1,1 @@
+     * Similar to the startingDirectoryMustExist option but this applies during polling (after starting the consumer).

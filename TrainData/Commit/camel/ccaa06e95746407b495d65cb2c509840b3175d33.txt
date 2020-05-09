@@ -1,0 +1,19 @@
+    /**
+     * Returns the precedence that is used by Spring to choose the appropriate
+     * execution order of test listeners.
+     * 
+     * See {@link SpringTestExecutionListenerSorter#getPrecedence(Class)} for more.
+     */
+    @Override
+    public int getOrder() {
+        return SpringTestExecutionListenerSorter.getPrecedence(getClass());
+    }
+
+        ConfigurableApplicationContext context = (ConfigurableApplicationContext)testContext.getApplicationContext();
+        // Post CamelContext(s) instantiation but pre CamelContext(s) start
+        // setup
+        ConfigurableApplicationContext context = (ConfigurableApplicationContext)testContext.getApplicationContext();
+            // dump route coverage for each test method so its accurate
+            // statistics
+            // even if spring application context is running (i.e. its not
+            // dirtied per test method)

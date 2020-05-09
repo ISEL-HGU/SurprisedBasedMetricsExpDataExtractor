@@ -1,0 +1,1 @@
+        /* OSGi -> */ "camel-blueprint", "camel-core-osgi", "camel-spring-dm", "camel-eventadmin", "camel-paxlogging", "camel-scr",

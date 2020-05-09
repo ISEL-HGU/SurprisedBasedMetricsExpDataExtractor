@@ -1,0 +1,91 @@
+import org.apache.camel.NoSuchLanguageException;
+                validateOptionAndValue(key, option, value);
+                properties.put(optionKey(option), value);
+                validateOptionAndValue(key, option, value);
+                hystrixProperties.put(optionKey(option), value);
+                validateOptionAndValue(key, option, value);
+                restProperties.put(optionKey(option), value);
+            if (key.startsWith("camel.component.properties.")) {
+                int dot = key.indexOf(".", 26);
+                String option = dot == -1 ? "" : key.substring(dot  1);
+                String value = prop.getProperty(key, "");
+                validateOptionAndValue(key, option, value);
+                Map<String, Object> values = properties.getOrDefault(component, new LinkedHashMap<>());
+                values.put(optionKey(option), value);
+                properties.put(component, values);
+                validateOptionAndValue(key, option, value);
+                properties.put(optionKey(option), value);
+            if (key.startsWith("camel.component.")) {
+                // grab name
+                int dot = key.indexOf(".", 16);
+                String name = dot == -1 ? key.substring(16) : key.substring(16, dot);
+                if (component == null) {
+                    throw new IllegalArgumentException("Error configuring property: "  key  " because cannot find component with name "  name
+                             ". Make sure you have the component on the classpath");
+                String option = dot == -1 ? "" : key.substring(dot  1);
+                String value = prop.getProperty(key, "");
+                validateOptionAndValue(key, option, value);
+                Map<String, Object> values = properties.getOrDefault(component, new LinkedHashMap<>());
+                // we ignore case for property keys (so we should store them in canonical style
+                values.put(optionKey(option), value);
+                properties.put(component, values);
+            if (key.startsWith("camel.dataformat.")) {
+                // grab name
+                int dot = key.indexOf(".", 17);
+                String name = dot == -1 ? key.substring(17) : key.substring(17, dot);
+                if (dataformat == null) {
+                    throw new IllegalArgumentException("Error configuring property: "  key  " because cannot find dataformat with name "  name
+                             ". Make sure you have the dataformat on the classpath");
+                String option = dot == -1 ? "" : key.substring(dot  1);
+                String value = prop.getProperty(key, "");
+                validateOptionAndValue(key, option, value);
+                Map<String, Object> values = properties.getOrDefault(dataformat, new LinkedHashMap<>());
+                values.put(optionKey(option), value);
+                properties.put(dataformat, values);
+            if (key.startsWith("camel.language.")) {
+                // grab name
+                int dot = key.indexOf(".", 15);
+                String name = dot == -1 ? key.substring(15) : key.substring(15, dot);
+                Language language;
+                try {
+                    language = camelContext.resolveLanguage(name);
+                } catch (NoSuchLanguageException e) {
+                    throw new IllegalArgumentException("Error configuring property: "  key  " because cannot find language with name "  name
+                             ". Make sure you have the language on the classpath");
+                String option = dot == -1 ? "" : key.substring(dot  1);
+                String value = prop.getProperty(key, "");
+                validateOptionAndValue(key, option, value);
+                Map<String, Object> values = properties.getOrDefault(language, new LinkedHashMap<>());
+                values.put(optionKey(option), value);
+                properties.put(language, values);
+        // TODO: log if any options was not configured
+    protected static Properties loadEnvironmentVariablesAsProperties(String[] prefixes) {
+        Properties answer = new OrderedProperties();
+        if (prefixes == null || prefixes.length == 0) {
+            return answer;
+        }
+
+        for (String prefix : prefixes) {
+            final String pk = prefix.toUpperCase(Locale.US).replaceAll("[^\\w]", "-");
+            final String pk2 = pk.replace('-', '_');
+            System.getenv().forEach((k, v) -> {
+                k = k.toUpperCase(Locale.US);
+                if (k.startsWith(pk) || k.startsWith(pk2)) {
+                    String key = k.toLowerCase(Locale.US).replace('_', '.');
+                    answer.put(key, v);
+                }
+            });
+        }
+
+        return answer;
+    }
+
+    protected void validateOptionAndValue(String key, String option, String value) {
+        if (ObjectHelper.isEmpty(option)) {
+            throw new IllegalArgumentException("Error configuring property: "  key  " because option is empty");
+        }
+        if (ObjectHelper.isEmpty(value)) {
+            throw new IllegalArgumentException("Error configuring property: "  key  " because value is empty");
+        }
+    }
+

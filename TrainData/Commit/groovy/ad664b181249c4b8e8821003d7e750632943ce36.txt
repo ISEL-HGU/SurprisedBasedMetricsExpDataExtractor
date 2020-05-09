@@ -1,0 +1,34 @@
+
+            // last resort look in the category
+            if (method == null && GroovyCategorySupport.hasCategoryInCurrentThread()) {
+                method = getCategoryMethodMissing(instanceKlazz);
+                if (method != null) {
+                    return method.invoke(instance, new Object[]{methodName, arguments});
+                }
+            }
+        // check for propertyMissing provided through a category
+        Object[] arguments = EMPTY_ARGUMENTS;
+        if (method == null && !useSuper && !isStatic && GroovyCategorySupport.hasCategoryInCurrentThread()) {
+            method = getCategoryMethodGetter(sender, "propertyMissing", true);
+            if (method != null) arguments = new Object[]{name};
+        }
+
+
+
+    private static MetaMethod getCategoryMethodMissing(Class sender) {
+        List possibleGenericMethods = GroovyCategorySupport.getCategoryMethods("methodMissing");
+        if (possibleGenericMethods != null) {
+            for (Iterator iter = possibleGenericMethods.iterator(); iter.hasNext();) {
+                MetaMethod mmethod = (MetaMethod) iter.next();
+                if (!mmethod.getDeclaringClass().getTheClass().isAssignableFrom(sender))
+                    continue;
+
+                CachedClass[] paramTypes = mmethod.getParameterTypes();
+                if (paramTypes.length == 2 && paramTypes[0].getTheClass() == String.class) {
+                    return mmethod;
+                }
+            }
+        }
+        return null;
+    }
+

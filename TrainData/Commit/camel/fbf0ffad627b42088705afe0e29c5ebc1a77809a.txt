@@ -1,0 +1,13 @@
+import org.apache.camel.CamelContext;
+import org.apache.camel.spring.SpringCamelContext;
+        // we are customizing the Camel context with
+        // CamelAnnotationsHandler so we do not want to start it
+        // automatically, which would happen when SpringCamelContext
+        // is added to Spring ApplicationContext, so we set the flag
+        // not to start it just yet
+        SpringCamelContext.setNoStart(true);
+        SpringCamelContext.setNoStart(false);
+        CamelContext camelContext = context.getBean(CamelContext.class);
+
+        // after our customizations we should start the CamelContext
+        camelContext.start();

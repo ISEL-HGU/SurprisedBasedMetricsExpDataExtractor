@@ -1,0 +1,7 @@
+    public String getRaftId() {
+        return raftId;
+    }
+
+    public void setRaftId(String raftId) {
+        this.raftId = raftId;
+    }

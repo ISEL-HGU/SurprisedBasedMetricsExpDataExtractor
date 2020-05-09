@@ -1,0 +1,1 @@
+                            formatDuration(Duration.between(ZonedDateTime.parse(pod.getStatus().getStartTime()), ZonedDateTime.now()))))

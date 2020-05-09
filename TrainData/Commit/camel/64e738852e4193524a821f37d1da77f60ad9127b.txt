@@ -1,0 +1,4 @@
+    private String xmlCipherAlgorithm = "TRIPLEDES";
+    private String keyCipherAlgorithm = "RSA_OAEP";
+    private String digestAlgorithm = "SHA1";
+    private String mgfAlgorithm = "MGF1_SHA1";

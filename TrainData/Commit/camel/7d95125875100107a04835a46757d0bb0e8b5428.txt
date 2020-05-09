@@ -1,0 +1,1 @@
+    public void setConfiguration(JBPMConfiguration configuration) {

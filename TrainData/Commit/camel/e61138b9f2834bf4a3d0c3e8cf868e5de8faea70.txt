@@ -1,0 +1,7 @@
+                client.getVersions(Collections.emptyMap(), (response, headers, exception) -> processSalesforceException(builder, Optional.ofNullable(exception)));
+            builder.error(ResultErrorBuilder.withMissingOption(e.getOptionName()).build());
+            if (e.getCause() instanceof SalesforceException) {
+                processSalesforceException(builder, Optional.of((SalesforceException)e.getCause()));
+            } else {
+                builder.error(ResultErrorBuilder.withException(e).build());
+            }

@@ -1,0 +1,3 @@
+        error.append("The signature value could not be validated by the public key. Either the message has been tampered with or the public key is not correct.");
+                .format("The calculated digest value of the document  %s is not equal to the value specified in the XML signature. The document may have been tampered with.",
+                .format("The calculated digest value of the manifest  %s is not equal to the value specified in the XML signature. The document may have been tampered with.",

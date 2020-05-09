@@ -1,0 +1,11 @@
+        boolean specialNamedArgCase = (ImmutableASTTransformation.isSpecialNamedArgCase(list, !defaults) && superList.isEmpty()) ||
+                (ImmutableASTTransformation.isSpecialNamedArgCase(superList, !defaults) && list.isEmpty());
+            } else if (!superInPre && !specialNamedArgCase) {
+        if (!specialNamedArgCase || !hasMapCons) {
+        if (!params.isEmpty() && defaults && !hasMapCons && specialNamedArgCase) {
+            ClassNode firstParamType = params.get(0).getType();
+            if (params.size() > 1 || firstParamType.equals(ClassHelper.OBJECT_TYPE)) {
+                addSpecialMapConstructors(cNode, false, message);
+    public static void addSpecialMapConstructors(ClassNode cNode, boolean addNoArg, String message) {
+        // potentially add a no-arg constructor too
+        if (addNoArg) {

@@ -1,0 +1,2 @@
+import org.apache.camel.component.google.mail.GoogleMailComponentVerifierExtension;
+        registerExtension(new GoogleMailComponentVerifierExtension());

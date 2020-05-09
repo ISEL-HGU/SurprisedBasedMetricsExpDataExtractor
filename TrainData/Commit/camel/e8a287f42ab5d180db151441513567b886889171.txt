@@ -1,0 +1,25 @@
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.atomic.LongAdder;
+import org.apache.camel.ShutdownRunningTask;
+import org.apache.camel.spi.ShutdownAware;
+public class WireTapProcessor extends ServiceSupport implements AsyncProcessor, Traceable, ShutdownAware, IdAware, CamelContextAware {
+    private final LongAdder taskCount = new LongAdder();
+    @Override
+    public boolean deferShutdown(ShutdownRunningTask shutdownRunningTask) {
+        // not in use
+        return true;
+    }
+
+    @Override
+    public int getPendingExchangesSize() {
+        return taskCount.intValue();
+    }
+
+    @Override
+    public void prepareShutdown(boolean suspendOnly, boolean forced) {
+        // noop
+    }
+
+                taskCount.increment();
+                } finally {
+                    taskCount.decrement();

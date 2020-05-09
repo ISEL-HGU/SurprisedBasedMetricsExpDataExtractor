@@ -1,0 +1,32 @@
+import java.util.LinkedHashMap;
+public class SimpleRegistry extends LinkedHashMap<String, Map<Class<?>, Object>> implements Registry {
+        return lookupByNameAndType(name, Object.class);
+        Map<Class<?>, Object> map = this.get(name);
+        if (map == null) {
+        Object answer = map.get(type);
+        if (answer == null) {
+            for (Map.Entry<Class<?>, Object> entry : map.entrySet()) {
+                if (type.isAssignableFrom(entry.getKey())) {
+                    answer = entry.getValue();
+                    break;
+                }
+            }
+        }
+        if (answer == null) {
+            return null;
+        }
+            answer = unwrap(answer);
+        Map<String, T> result = new LinkedHashMap<>();
+        for (Map.Entry<String, Map<Class<?>, Object>> entry : entrySet()) {
+            for (Object value : entry.getValue().values()) {
+                if (type.isInstance(value)) {
+                    value = unwrap(value);
+                    result.put(entry.getKey(), type.cast(value));
+                }
+        for (Map.Entry<String, Map<Class<?>, Object>> entry : entrySet()) {
+            for (Object value : entry.getValue().values()) {
+                if (type.isInstance(value)) {
+                    value = unwrap(value);
+                    result.add(type.cast(value));
+                }
+        computeIfAbsent(id, k -> new LinkedHashMap<>()).put(bean.getClass(), wrap(bean));

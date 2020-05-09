@@ -1,0 +1,3 @@
+    String LATITUDE = "CamelRedis.Latitude";
+    String LONGITUDE = "CamelRedis.Longitude";
+    String RADIUS = "CamelRedis.Radius";

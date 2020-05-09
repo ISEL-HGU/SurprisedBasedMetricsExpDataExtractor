@@ -1,0 +1,8 @@
+            int count;
+            if (coreOnly) {
+                count = 1;
+            } else {
+                count = models.stream()
+                            .map(DataFormatModel::getArtifactId)
+                            .collect(toSet()).size();
+            }

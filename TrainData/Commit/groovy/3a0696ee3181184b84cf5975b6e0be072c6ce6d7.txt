@@ -1,0 +1,9 @@
+        methods = filterMethodsByVisibility(methods);
+    private List<MethodNode> filterMethodsByVisibility(List<MethodNode> methods) {
+        for (MethodNode methodNode : methods) {
+            if (methodNode.isPrivate() && !enclosingClassNode.equals(methodNode.getDeclaringClass())) {
+                continue;
+            if (methodNode.isProtected() && !enclosingClassNode.isDerivedFrom(methodNode.getDeclaringClass())) {
+                continue;
+
+            result.add(methodNode);

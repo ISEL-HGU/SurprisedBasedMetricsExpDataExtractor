@@ -1,0 +1,6 @@
+        boolean shouldBeSynthetic = false; // !isAbstract(node.getModifiers());
+            MethodNode methodNode = addMethod(node, shouldBeSynthetic,
+            MethodNode methodNode = addMethod(node, shouldBeSynthetic,
+            MethodNode methodNode = addMethod(node, shouldBeSynthetic,
+            MethodNode methodNode = addMethod(node, shouldBeSynthetic,
+            MethodNode methodNode = addMethod(node, shouldBeSynthetic,

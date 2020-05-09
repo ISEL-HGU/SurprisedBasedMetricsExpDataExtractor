@@ -1,0 +1,4 @@
+import org.codehaus.groovy.ast.decompiled.DecompiledClassNode;
+                if (type.getClass() != ClassNode.class
+                        && type.getClass() != InnerClassNode.class
+                        && type.getClass() != DecompiledClassNode.class) {

@@ -1,0 +1,3 @@
+          delete.addColumns(hcol.getFamily(), qualifier);
+        delete.addColumns(hcol.getFamily(), qualifier);
+      delete.addColumns(col.family, col.qualifier);

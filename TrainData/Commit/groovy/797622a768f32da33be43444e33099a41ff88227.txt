@@ -1,0 +1,13 @@
+        CharStream charStream = createCharStream(sourceUnit);
+    private CharStream createCharStream(SourceUnit sourceUnit) {
+        CharStream charStream = null;
+
+        try {
+            charStream = CharStreams.fromReader(sourceUnit.getSource().getReader(), sourceUnit.getName());
+        } catch (IOException e) {
+            throw new RuntimeException("Error occurred when reading source code.", e);
+        }
+
+        return charStream;
+    }
+

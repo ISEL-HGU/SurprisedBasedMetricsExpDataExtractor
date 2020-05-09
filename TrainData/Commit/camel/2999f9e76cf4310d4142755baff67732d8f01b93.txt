@@ -1,0 +1,2 @@
+                    ServiceStatus status = getRouteStatus(route.getId());
+                    if (status != null && status.isStarted()) {

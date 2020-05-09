@@ -1,0 +1,2 @@
+        from("foo:wine?period=2000")
+            .to("wine:Wine?amount=2")

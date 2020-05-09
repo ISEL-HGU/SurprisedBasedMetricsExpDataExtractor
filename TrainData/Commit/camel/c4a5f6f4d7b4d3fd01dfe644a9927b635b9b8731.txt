@@ -1,0 +1,13 @@
+         * Define if you want to apply delaySeconds option to the queue or on
+         * single messages
+         */
+        private Boolean delayQueue = false;
+        /**
+        public Boolean getDelayQueue() {
+            return delayQueue;
+        }
+
+        public void setDelayQueue(Boolean delayQueue) {
+            this.delayQueue = delayQueue;
+        }
+

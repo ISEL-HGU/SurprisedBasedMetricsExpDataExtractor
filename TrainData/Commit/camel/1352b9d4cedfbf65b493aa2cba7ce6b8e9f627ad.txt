@@ -1,0 +1,15 @@
+import org.apache.camel.ha.CamelClusterService;
+    private final CamelClusterService clusterService;
+        this.clusterService = null;
+    }
+
+    public ClusteredRoutePolicyFactory(CamelClusterService clusterService, String viewName) {
+        this.namespace = ObjectHelper.notNull(viewName, "Cluster View Namespace");
+        this.clusterService = ObjectHelper.notNull(clusterService, "Cluster Service");
+            return clusterService != null
+                ? ClusteredRoutePolicy.forNamespace(clusterService, namespace)
+                : ClusteredRoutePolicy.forNamespace(camelContext, namespace);
+
+    public static ClusteredRoutePolicyFactory forNamespace(CamelClusterService clusterService, String namespace) {
+        return new ClusteredRoutePolicyFactory(clusterService, namespace);
+    }

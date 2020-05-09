@@ -1,0 +1,7 @@
+import org.apache.camel.RuntimeCamelException;
+        if (clientId == null || clientSecret == null) {
+            throw new IllegalArgumentException("clientId and clientSecret are required to create Gmail client.");
+        }
+            Credential credential = authorize(clientId, clientSecret, scopes);
+            throw new RuntimeCamelException("Could not create Gmail client.", e);
+}

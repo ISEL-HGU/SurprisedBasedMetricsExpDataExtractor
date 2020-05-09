@@ -1,0 +1,6 @@
+    @SuppressWarnings("unchecked")
+        Collection modules = getExtraModules();
+        return ServerRuntime.builder()
+                        .addConfig(configurationLocation)
+                        .addModules(modules)
+                        .build();

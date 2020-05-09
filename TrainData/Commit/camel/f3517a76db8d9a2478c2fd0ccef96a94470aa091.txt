@@ -1,0 +1,4 @@
+import org.apache.camel.model.dataformat.FhirJsonDataFormat;
+import org.apache.camel.model.dataformat.FhirXmlDataFormat;
+        @XmlElement(required = false, name = "fhirJson", type = FhirJsonDataFormat.class),
+        @XmlElement(required = false, name = "fhirXml", type = FhirXmlDataFormat.class),

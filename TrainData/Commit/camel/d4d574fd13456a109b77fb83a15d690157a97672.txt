@@ -1,0 +1,7 @@
+        private Integer timeout = 5000;
+        private Boolean listChildren = false;
+        private Boolean repeat = false;
+        private Boolean awaitExistence = true;
+        private Long backoff = 5000L;
+        private Boolean create = false;
+        private Boolean sendEmptyMessageOnDelete = true;

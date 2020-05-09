@@ -1,0 +1,2 @@
+            sslcf = new SslContextFactory.Server();
+        SslContextFactory answer = client ? new SslContextFactory.Client() : new SslContextFactory.Server();

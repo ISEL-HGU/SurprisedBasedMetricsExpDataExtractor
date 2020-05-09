@@ -1,0 +1,70 @@
+import org.apache.gora.persistency.Persistent;
+import org.apache.gora.store.DataStore;
+import java.util.Locale;
+public class CassandraStore<K, T extends Persistent> implements DataStore<K, T> {
+  private BeanFactory<K, T> beanFactory;
+
+  private Class keyClass;
+
+  private Class persistentClass;
+
+   *
+      this.keyClass = keyClass;
+      this.persistentClass = persistentClass;
+      isUseCassandraMappingManager = Boolean.parseBoolean(properties.getProperty(CassandraStoreParameters.USE_CASSANDRA_NATIVE_SERIALIZATION));
+          String tableName = classElement.getAttributeValue("table");
+                  keyField.setOrder(ClusterKeyField.Order.valueOf(attributeValue.toUpperCase(Locale.ENGLISH)));
+    String serversParam = properties.getProperty(CassandraStoreParameters.CASSANDRA_SERVERS);
+    String portProp = properties.getProperty(CassandraStoreParameters.PORT);
+    String clusterNameProp = properties.getProperty(CassandraStoreParameters.CLUSTER_NAME);
+    String compressionProp = properties.getProperty(CassandraStoreParameters.COMPRESSION);
+    String enableJMXProp = properties.getProperty(CassandraStoreParameters.ENABLE_JMX_REPORTING);
+    String enableMetricsProp = properties.getProperty(CassandraStoreParameters.ENABLE_METRICS);
+    String versionProp = properties.getProperty(CassandraStoreParameters.PROTOCOL_VERSION);
+    String enableSSLProp = properties.getProperty(CassandraStoreParameters.ENABLE_SSL);
+    String loadBalancingProp = properties.getProperty(CassandraStoreParameters.LOAD_BALANCING_POLICY);
+          String dataCenter = properties.getProperty(CassandraStoreParameters.DATA_CENTER);
+                  properties.getProperty(CassandraStoreParameters.ALLOW_REMOTE_DCS_FOR_LOCAL_CONSISTENCY_LEVEL));
+          String dataCenter = properties.getProperty(CassandraStoreParameters.DATA_CENTER);
+                  properties.getProperty(CassandraStoreParameters.ALLOW_REMOTE_DCS_FOR_LOCAL_CONSISTENCY_LEVEL));
+    String usernameProp = properties.getProperty(CassandraStoreParameters.USERNAME);
+    String passwordProp = properties.getProperty(CassandraStoreParameters.PASSWORD);
+    String localCoreConnectionsPerHost = properties.getProperty(CassandraStoreParameters.LOCAL_CORE_CONNECTIONS_PER_HOST);
+    String remoteCoreConnectionsPerHost = properties.getProperty(CassandraStoreParameters.REMOTE_CORE_CONNECTIONS_PER_HOST);
+    String localMaxConnectionsPerHost = properties.getProperty(CassandraStoreParameters.LOCAL_MAX_CONNECTIONS_PER_HOST);
+    String remoteMaxConnectionsPerHost = properties.getProperty(CassandraStoreParameters.REMOTE_MAX_CONNECTIONS_PER_HOST);
+    String localNewConnectionThreshold = properties.getProperty(CassandraStoreParameters.LOCAL_NEW_CONNECTION_THRESHOLD);
+    String remoteNewConnectionThreshold = properties.getProperty(CassandraStoreParameters.REMOTE_NEW_CONNECTION_THRESHOLD);
+    String localMaxRequestsPerConnection = properties.getProperty(CassandraStoreParameters.LOCAL_MAX_REQUESTS_PER_CONNECTION);
+    String remoteMaxRequestsPerConnection = properties.getProperty(CassandraStoreParameters.REMOTE_MAX_REQUESTS_PER_CONNECTION);
+    String consistencyLevelProp = properties.getProperty(CassandraStoreParameters.CONSISTENCY_LEVEL);
+    String serialConsistencyLevelProp = properties.getProperty(CassandraStoreParameters.SERIAL_CONSISTENCY_LEVEL);
+    String fetchSize = properties.getProperty(CassandraStoreParameters.FETCH_SIZE);
+    String reconnectionPolicy = properties.getProperty(CassandraStoreParameters.RECONNECTION_POLICY);
+          String constantReconnectionPolicyDelay = properties.getProperty(CassandraStoreParameters.CONSTANT_RECONNECTION_POLICY_DELAY);
+          String exponentialReconnectionPolicyBaseDelay = properties.getProperty(CassandraStoreParameters.EXPONENTIAL_RECONNECTION_POLICY_BASE_DELAY);
+          String exponentialReconnectionPolicyMaxDelay = properties.getProperty(CassandraStoreParameters.EXPONENTIAL_RECONNECTION_POLICY_MAX_DELAY);
+    String retryPolicy = properties.getProperty(CassandraStoreParameters.RETRY_POLICY);
+    String connectionTimeoutMillisProp = properties.getProperty(CassandraStoreParameters.CONNECTION_TIMEOUT_MILLIS);
+    String keepAliveProp = properties.getProperty(CassandraStoreParameters.KEEP_ALIVE);
+    String readTimeoutMillisProp = properties.getProperty(CassandraStoreParameters.READ_TIMEOUT_MILLIS);
+    String receiveBufferSizeProp = properties.getProperty(CassandraStoreParameters.RECEIVER_BUFFER_SIZE);
+    String reuseAddress = properties.getProperty(CassandraStoreParameters.REUSE_ADDRESS);
+    String sendBufferSize = properties.getProperty(CassandraStoreParameters.SEND_BUFFER_SIZE);
+    String soLinger = properties.getProperty(CassandraStoreParameters.SO_LINGER);
+    String tcpNoDelay = properties.getProperty(CassandraStoreParameters.TCP_NODELAY);
+    this.persistentClass = persistentClass;
+    return this.persistentClass;
+    return this.keyClass;
+    this.keyClass = keyClass;
+    try {
+      return beanFactory.newKey();
+    } catch (Exception ex) {
+      LOG.error(ex.getMessage(), ex);
+      return null;
+    }
+    return this.beanFactory.newPersistent();
+    this.beanFactory = beanFactory;
+    return this.beanFactory;
+      return null;
+

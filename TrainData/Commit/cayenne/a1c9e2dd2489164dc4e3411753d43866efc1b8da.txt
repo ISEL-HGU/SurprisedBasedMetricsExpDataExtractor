@@ -1,0 +1,6 @@
+
+        final DataMap[] maps = new DataMap[1];
+
+            loaderContext.addDataMapListener(dataMap -> maps[0] = dataMap);
+        if(maps[0] == null) {
+        DataMap map = maps[0];

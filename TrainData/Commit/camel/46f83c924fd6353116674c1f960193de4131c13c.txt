@@ -1,0 +1,3 @@
+ * @version
+ * @deprecated not in use, will be removed in next Camel release.
+@Deprecated

@@ -1,0 +1,1 @@
+        setAttribute(dataObjectFormat, "ObjectReference", "#"  contentReferenceId);

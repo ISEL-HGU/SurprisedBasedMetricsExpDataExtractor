@@ -1,0 +1,3 @@
+        XmppMessage answer = new XmppMessage();
+        answer.setCamelContext(getCamelContext());
+        return answer;

@@ -1,0 +1,21 @@
+import org.codehaus.groovy.ast.NodeMetaDataHandler;
+        } else if (baseExpr instanceof MethodCallExpression && !isInsideParentheses(baseExpr)) { // e.g. m {} a, b  OR  m(...) a, b
+                !isInsideParentheses(baseExpr)
+            if (isInsideParentheses(baseExpr)) { // e.g. (obj.x)(), (obj.@x)()
+        Boolean insidePar = isInsideParentheses(expression);
+                && isInsideParentheses(leftExpr)) { // it is a special multiple assignment whose variable count is only one, e.g. (a) = [1]
+                                && !isInsideParentheses(leftExpr)) // e.g. p = 123
+            if (expression instanceof VariableExpression && !isInsideParentheses(expression)) {
+    private boolean isInsideParentheses(NodeMetaDataHandler nodeMetaDataHandler) {
+        Integer insideParenLevel = nodeMetaDataHandler.getNodeMetaData(INSIDE_PARENTHESES_LEVEL);
+
+        if (asBoolean((Object) insideParenLevel)) {
+            return insideParenLevel > 0;
+        }
+
+        return false;
+    }
+
+    private boolean isTrue(NodeMetaDataHandler nodeMetaDataHandler, String key) {
+        Object nmd = nodeMetaDataHandler.getNodeMetaData(key);
+            throw new GroovyBugError(nodeMetaDataHandler  " node meta data["  key  "] is not an instance of Boolean");

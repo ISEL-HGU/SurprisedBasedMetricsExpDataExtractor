@@ -1,0 +1,2 @@
+            long contentLength = ByteStreams.toByteArray(is).length;
+        long contentLength = ByteStreams.toByteArray(cache.getInputStream()).length;

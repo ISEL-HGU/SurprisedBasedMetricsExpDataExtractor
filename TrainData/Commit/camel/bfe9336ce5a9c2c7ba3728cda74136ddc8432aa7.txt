@@ -1,0 +1,45 @@
+import org.apache.camel.model.RouteDefinitionHelper;
+        // don't double wrap
+        DefaultChannel channel = new DefaultChannel();
+        List<InterceptStrategy> interceptors = new ArrayList<>();
+        addInterceptStrategies(routeContext, interceptors, routeContext.getCamelContext().adapt(ExtendedCamelContext.class).getInterceptStrategies());
+        addInterceptStrategies(routeContext, interceptors, routeContext.getInterceptStrategies());
+        addInterceptStrategies(routeContext, interceptors, definition.getInterceptStrategies());
+
+        // force the creation of an id
+        RouteDefinitionHelper.forceAssignIds(routeContext.getCamelContext(), definition);
+
+        // fix parent/child relationship. This will be the case of the routes has been
+        // defined using XML DSL or end user may have manually assembled a route from the model.
+        // Background note: parent/child relationship is assembled on-the-fly when using Java DSL (fluent builders)
+        // where as when using XML DSL (JAXB) then it fixed after, but if people are using custom interceptors
+        // then we need to fix the parent/child relationship beforehand, and thus we can do it here
+        // ideally we need the design time route -> runtime route to be a 2-phase pass (scheduled work for Camel 3.0)
+        if (child != null && definition != child) {
+            child.setParent(definition);
+        }
+        RouteDefinition route = ProcessorDefinitionHelper.getRoute(definition);
+        boolean first = false;
+        if (route != null && !route.getOutputs().isEmpty()) {
+            first = route.getOutputs().get(0) == definition;
+        }
+        // set scoping
+        boolean routeScoped = true;
+        if (definition instanceof OnExceptionDefinition) {
+            routeScoped = ((OnExceptionDefinition) definition).isRouteScoped();
+        } else if (this.definition instanceof OnCompletionDefinition) {
+            routeScoped = ((OnCompletionDefinition) definition).isRouteScoped();
+        }
+        // initialize the channel
+        channel.initChannel(routeContext, definition, child, interceptors, processor, route, first, routeScoped);
+        boolean wrap = false;
+                wrap = true;
+                wrap = true;
+            wrap = true;
+        }
+        if (wrap) {
+        channel.postInitChannel();
+    private void wrapChannelInErrorHandler(DefaultChannel channel, RouteContext routeContext, Boolean inheritErrorHandler) throws Exception {
+     * @param interceptors  the list to add strategies
+    protected void addInterceptStrategies(RouteContext routeContext, List<InterceptStrategy> interceptors, List<InterceptStrategy> strategies) {
+            interceptors.add(strategy);

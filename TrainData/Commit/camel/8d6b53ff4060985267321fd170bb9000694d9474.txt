@@ -1,0 +1,3 @@
+            String fileName = stripRootPath(asRelativeFile(t.getFileName()));
+                            String fileName = stripRootPath(asRelativeFile(t.getValue().get(0).getFileName()));
+                            String out = templateCoverageData(fileName, null, coverage, notCovered);

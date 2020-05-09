@@ -1,0 +1,16 @@
+import org.apache.http.conn.HttpClientConnectionManager;
+import org.springframework.boot.context.properties.NestedConfigurationProperty;
+     * Set the connection manager.
+     */
+    @NestedConfigurationProperty
+    private HttpClientConnectionManager connectionManager;
+    /**
+    public HttpClientConnectionManager getConnectionManager() {
+        return connectionManager;
+    }
+
+    public void setConnectionManager(
+            HttpClientConnectionManager connectionManager) {
+        this.connectionManager = connectionManager;
+    }
+

@@ -1,0 +1,21 @@
+
+    @UriPath(enums = "activity,workflow")
+    @Metadata(required = "true")
+    @UriParam(label = "common")
+    private String region;
+    public String getRegion() {
+        return region;
+    }
+
+    /**
+     * Amazon AWS Region.
+     */
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+     * To configure the AmazonSimpleWorkflowClient using the key/values from the
+     * Map.
+     * 
+     * An instance of com.amazonaws.services.simpleworkflow.flow.DataConverter
+     * to use for serializing/deserializing the data.

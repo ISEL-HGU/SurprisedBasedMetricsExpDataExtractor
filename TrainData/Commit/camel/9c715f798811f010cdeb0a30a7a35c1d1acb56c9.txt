@@ -1,0 +1,1 @@
+    @Uri("netty-http:http:someserver:80/hello")

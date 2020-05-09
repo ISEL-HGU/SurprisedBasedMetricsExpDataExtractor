@@ -1,0 +1,4 @@
+
+    public Tuple<E> subTuple(int fromIndex, int toIndex) {
+        return (Tuple<E>) subList(fromIndex, toIndex);
+    }

@@ -1,0 +1,3 @@
+            for (Map.Entry<String, Object> entry : parts.entrySet()) {
+                String key = entry.getKey();
+                String value = entry.getValue().toString();

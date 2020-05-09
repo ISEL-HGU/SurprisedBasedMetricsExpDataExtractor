@@ -1,0 +1,3 @@
+            // Get the username from the header configured in guacamole.properties
+            String username = request.getHeader(confService.getHttpAuthHeader());
+            if(username != null) {

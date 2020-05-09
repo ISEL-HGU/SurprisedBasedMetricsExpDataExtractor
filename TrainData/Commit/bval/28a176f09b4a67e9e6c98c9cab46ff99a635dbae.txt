@@ -1,0 +1,1 @@
+        // BVAL-170: simple pre-check to improve performance

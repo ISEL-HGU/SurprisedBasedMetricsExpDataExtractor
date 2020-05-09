@@ -1,0 +1,5 @@
+        if (userContext == null)
+            userContext = new QuickConnectUserContext(this,
+                    authenticatedUser.getIdentifier());
+
+        return userContext;

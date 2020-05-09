@@ -1,0 +1,17 @@
+        javaClass.addImport("org.apache.camel.spring.boot.util.CamelPropertiesHelper");
+             "// These options is configured specially further below, so remove them first\n"
+             "properties.remove(\"enableCors\");\n"
+             "properties.remove(\"apiProperty\");\n"
+             "properties.remove(\"componentProperty\");\n"
+             "properties.remove(\"consumerProperty\");\n"
+             "properties.remove(\"dataFormatProperty\");\n"
+             "properties.remove(\"endpointProperty\");\n"
+             "properties.remove(\"corsHeaders\");\n"
+             "CamelPropertiesHelper.setCamelProperties(camelContext, definition, properties, true);\n"
+        javaClass.addImport("org.apache.camel.spring.boot.util.CamelPropertiesHelper");
+        javaClass.addImport("org.apache.camel.spring.boot.util.CamelPropertiesHelper");
+        javaClass.addImport("org.apache.camel.spring.boot.util.CamelPropertiesHelper");
+        sb.append("            CamelPropertiesHelper.setCamelProperties(camelContext, nestedProperty, nestedParameters, false);\n");
+        sb.append("CamelPropertiesHelper.setCamelProperties(camelContext, component, parameters, false);\n");
+        sb.append("            CamelPropertiesHelper.setCamelProperties(camelContext, dataformat, parameters, false);\n");
+        sb.append("CamelPropertiesHelper.setCamelProperties(camelContext, language, parameters, false);\n");

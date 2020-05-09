@@ -1,0 +1,2 @@
+import io.fabric8.kubernetes.client.dsl.RollableScalableResource;
+        NonNamespaceOperation<Deployment, DeploymentList, DoneableDeployment, RollableScalableResource<Deployment, DoneableDeployment>> deployments = getEndpoint().getKubernetesClient()

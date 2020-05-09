@@ -1,0 +1,5 @@
+import org.apache.camel.catalog.LanguageValidationResult;
+            LanguageValidationResult result;
+                result = catalog.validateSimplePredicate(null, detail.getSimple());
+                result = catalog.validateSimpleExpression(null, detail.getSimple());
+                sb.append("\n\t").append(result.getText());

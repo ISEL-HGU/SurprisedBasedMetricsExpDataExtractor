@@ -1,0 +1,12 @@
+        /**
+         * Sets delivery delay to use for send calls for JMS.
+         */
+        private Long deliveryDelay = -1L;
+
+        public Long getDeliveryDelay() {
+            return deliveryDelay;
+        }
+
+        public void setDeliveryDelay(Long deliveryDelay) {
+            this.deliveryDelay = deliveryDelay;
+        }

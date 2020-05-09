@@ -1,0 +1,18 @@
+     * Sets the server list.
+     * Each entry can be a list of servers separated by comma in the format:
+     *
+     *   [service@]host:port,[service@]host2:port,[service@]host3:port
+     *
+     * @param servers a list of servers.
+     * @return this instance
+     * Sets the server list.
+     * Each entry can be a list of servers separated by comma in the format:
+     *
+     *   [service@]host:port,[service@]host2:port,[service@]host3:port
+     *
+     * @param servers a list of servers.
+     * @return this instance
+     * Sets the server list.
+     *
+     * @param servers a list of servers separated by comma in the format: [service@]host:port,[service@]host2:port,[service@]host3:port
+     * @return this instance

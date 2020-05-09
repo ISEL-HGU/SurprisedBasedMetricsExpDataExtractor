@@ -1,0 +1,2 @@
+            if ((result[0] == null)
+                || (result[0] instanceof ClientEntitySet && (((ClientEntitySet) result[0]).getEntities().isEmpty()))) {

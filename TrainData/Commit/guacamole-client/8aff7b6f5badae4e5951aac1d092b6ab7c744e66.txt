@@ -1,0 +1,2 @@
+            return this.major > otherVersion.getMajor();
+            return this.minor > otherVersion.getMinor();

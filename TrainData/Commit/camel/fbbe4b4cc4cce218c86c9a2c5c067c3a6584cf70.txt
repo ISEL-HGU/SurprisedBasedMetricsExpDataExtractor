@@ -1,0 +1,35 @@
+import java.net.MalformedURLException;
+    private int initialDelay = 10;
+    private int delay = 60;
+    public int getInitialDelay() {
+        return initialDelay;
+    }
+
+    /**
+     * Delay in seconds before the initial (first) scan.
+     */
+    public void setInitialDelay(int initialDelay) {
+        this.initialDelay = initialDelay;
+    }
+
+    public int getDelay() {
+    public void setDelay(int delay) {
+        if (!started.compareAndSet(false, true)) {
+            log.info("NexusRepository is already started");
+            return;
+        }
+
+        log.info("Starting NexusRepository to scan every {} seconds", delay);
+
+        }, initialDelay, delay, TimeUnit.SECONDS);
+    protected URL createNexusUrl() throws MalformedURLException {
+        String query = nexusUrl  "?q="  getClassifier();
+        return new URL(query);
+    }
+
+        URL url = createNexusUrl();
+            NodeList list = (NodeList) exp.evaluate("//data/artifact", dom, XPathConstants.NODESET);
+                String g = getNodeText(node.getChildNodes(), "groupId");
+                String a = getNodeText(node.getChildNodes(), "artifactId");
+                String v = getNodeText(node.getChildNodes(), "version");
+                String l = getNodeText(node.getChildNodes(), "artifactLink");

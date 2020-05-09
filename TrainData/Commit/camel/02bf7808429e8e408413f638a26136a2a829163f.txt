@@ -1,0 +1,4 @@
+import net.sf.saxon.om.AllElementsSpaceStrippingRule;
+import net.sf.saxon.om.IgnorableSpaceStrippingRule;
+import net.sf.saxon.om.SpaceStrippingRule;
+                configuration.getParseOptions().setSpaceStrippingRule(isStripsAllWhiteSpace() ? AllElementsSpaceStrippingRule.getInstance() : IgnorableSpaceStrippingRule.getInstance());

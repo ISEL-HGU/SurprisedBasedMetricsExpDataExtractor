@@ -1,0 +1,6 @@
+    private final CamelContext camelContext;
+            if (camelContext.getUptime() != null) {
+                builder.withDetail("uptime", camelContext.getUptime());
+                builder.withDetail("uptimeMillis", camelContext.getUptimeMillis());
+            }
+            builder.withDetail("status", camelContext.getStatus().name());

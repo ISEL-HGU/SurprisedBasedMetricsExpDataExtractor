@@ -1,0 +1,5 @@
+     * Sets the system property mode. The default mode (override) is to use
+     * system properties if present, and override any existing properties.
+     * Sets the OS environment variables mode. The default mode (override) is to
+     * use OS environment variables if present, and override any existing
+     * properties.

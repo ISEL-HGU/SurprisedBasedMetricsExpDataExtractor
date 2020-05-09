@@ -1,0 +1,14 @@
+import org.apache.camel.spi.ExpressionResultTypeAware;
+        } else if (expression instanceof ExpressionResultTypeAware && expression.getClass().getName().equals("org.apache.camel.language.xpath.XPathBuilder")) {
+            ExpressionResultTypeAware aware = (ExpressionResultTypeAware) expression;
+            XPathExpression answer = new XPathExpression(expression);
+            answer.setExpression(aware.getExpressionText());
+            answer.setResultType(answer.getResultType());
+            return answer;
+        } else if (predicate instanceof ExpressionResultTypeAware && predicate.getClass().getName().equals("org.apache.camel.language.xpath.XPathBuilder")) {
+            ExpressionResultTypeAware aware = (ExpressionResultTypeAware) predicate;
+            Expression expression = (Expression) predicate;
+            XPathExpression answer = new XPathExpression(expression);
+            answer.setExpression(aware.getExpressionText());
+            answer.setResultType(answer.getResultType());
+            return answer;

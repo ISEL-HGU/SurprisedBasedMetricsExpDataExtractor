@@ -1,0 +1,2 @@
+                LinkDataMapsAction.class.getName(),
+                RemoveAction.class.getName()));

@@ -1,0 +1,45 @@
+import org.apache.camel.Consumer;
+    @UriParam(defaultValue = "true", label = "consumer,scheduler",
+    @UriParam(defaultValue = "1000", label = "consumer,scheduler",
+    @UriParam(defaultValue = "500", label = "consumer,scheduler",
+    @UriParam(defaultValue = "MILLISECONDS", label = "consumer,scheduler",
+    @UriParam(defaultValue = "true", label = "consumer,scheduler",
+    @UriParam(label = "consumer,advanced",
+    @UriParam(defaultValue = "TRACE", label = "consumer,scheduler",
+    @UriParam(label = "consumer",
+    @UriParam(label = "consumer,scheduler",
+    @UriParam(enums = "none,spring,quartz",
+    @UriParam(label = "consumer,scheduler",
+    @UriParam(label = "consumer,scheduler",
+    @UriParam(label = "consumer,scheduler",
+    @UriParam(label = "consumer,scheduler",
+    protected void configureConsumer(Consumer consumer) throws Exception {
+        super.configureConsumer(consumer);
+        doConfigureConsumer(consumer);
+    @Override
+    public void configureProperties(Map<String, Object> options) {
+        super.configureProperties(options);
+        configureScheduledPollConsumerProperties(options);
+    }
+
+    protected void configureScheduledPollConsumerProperties(Map<String, Object> options) {
+        if (!schedulerProperties.isEmpty()) {
+    protected void doConfigureConsumer(Consumer consumer) {
+        if (consumer instanceof ScheduledPollConsumer) {
+            ScheduledPollConsumer spc = (ScheduledPollConsumer) consumer;
+            spc.setBackoffErrorThreshold(backoffErrorThreshold);
+            spc.setBackoffIdleThreshold(backoffIdleThreshold);
+            spc.setBackoffMultiplier(backoffMultiplier);
+            spc.setDelay(delay);
+            spc.setGreedy(greedy);
+            spc.setInitialDelay(initialDelay);
+            spc.setPollStrategy(pollStrategy);
+            spc.setRunLoggingLevel(runLoggingLevel);
+            spc.setScheduledExecutorService(scheduledExecutorService);
+            spc.setSendEmptyMessageWhenIdle(sendEmptyMessageWhenIdle);
+            spc.setTimeUnit(timeUnit);
+            spc.setUseFixedDelay(useFixedDelay);
+            spc.setStartScheduler(startScheduler);
+            spc.setScheduler(consumerScheduler);
+            spc.setSchedulerProperties(schedulerProperties);
+        // noop

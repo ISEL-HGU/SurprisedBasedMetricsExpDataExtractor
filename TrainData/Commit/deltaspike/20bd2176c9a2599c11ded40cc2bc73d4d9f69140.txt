@@ -1,0 +1,1 @@
+        if (schedulerControl != null && schedulerControl.vetoJobExecution(jobClass))

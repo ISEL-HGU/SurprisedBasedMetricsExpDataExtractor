@@ -1,0 +1,4 @@
+import org.apache.camel.model.RouteDefinition;
+            // see if there has been configured a error handler builder on the route
+            // TODO: Avoid using RouteDefinition - tests should pass: https://issues.apache.org/jira/browse/CAMEL-13984
+            // check if its also a ref with no error handler configuration like me

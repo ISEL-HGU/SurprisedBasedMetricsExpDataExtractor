@@ -1,0 +1,39 @@
+        String routeState = stateAsString(num);
+            return String.format("*** State %s, failures %d, last failure %d ms ago", routeState, failures.get(), System.currentTimeMillis() - lastFailure);
+            return String.format("*** State %s, failures %d", routeState, failures.get());
+    public int getFailureThreshold() {
+        return failureThreshold;
+    }
+
+    public void setFailureThreshold(int failureThreshold) {
+        this.failureThreshold = failureThreshold;
+    }
+
+    public long getFailureWindow() {
+        return failureWindow;
+    }
+
+    public void setFailureWindow(long failureWindow) {
+        this.failureWindow = failureWindow;
+    }
+
+    public long getHalfOpenAfter() {
+        return halfOpenAfter;
+    }
+
+    public void setHalfOpenAfter(long halfOpenAfter) {
+        this.halfOpenAfter = halfOpenAfter;
+    }
+
+    public int getFailures() {
+        return failures.get();
+    }
+
+    public long getLastFailure() {
+        return lastFailure;
+    }
+
+    public long getOpenedAt() {
+        return openedAt;
+    }
+

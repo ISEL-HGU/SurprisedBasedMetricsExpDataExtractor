@@ -1,0 +1,2 @@
+public class ServiceStopFailureEvent extends EventObject implements FailureEvent {
+    @Override

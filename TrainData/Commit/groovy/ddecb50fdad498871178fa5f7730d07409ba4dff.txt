@@ -1,0 +1,8 @@
+            AccessPermissionChecker.checkAccessPermission(cachedMethod);
+        }
+        catch (CacheAccessControlException ex) {
+            throw new InvokerInvocationException(ex);
+        }
+        try {
+        AccessPermissionChecker.checkAccessPermission(cachedMethod);
+        AccessPermissionChecker.checkAccessPermission(cachedMethod);

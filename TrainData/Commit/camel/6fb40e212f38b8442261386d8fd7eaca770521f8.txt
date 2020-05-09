@@ -1,0 +1,10 @@
+        Throwable hystrixExecutionException = getExecutionException();
+        Exception camelExchangeException = copy.getException();
+            if (hystrixExecutionException != null) {
+                exchange.setException(new CamelExchangeException("Hystrix execution exception occurred while processing Exchange", exchange, hystrixExecutionException));
+            // in case of an exception in the exchange
+            // we need to trigger this by throwing the exception so Hystrix will execute the fallback
+            // or open the circuit
+            if (hystrixExecutionException == null && camelExchangeException != null) {
+                throw camelExchangeException;
+            //}

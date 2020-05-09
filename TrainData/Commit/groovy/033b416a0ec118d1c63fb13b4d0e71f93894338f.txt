@@ -1,0 +1,5 @@
+import org.objectweb.asm.util.Textifier;
+import org.objectweb.asm.util.TraceClassVisitor;
+import java.io.PrintWriter;
+            //TraceClassVisitor tracer = new TraceClassVisitor(visitor, new PrintWriter(System.err,true));
+            //AsmClassGenerator generator = new AsmClassGenerator(source, context, tracer, sourceName);

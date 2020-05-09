@@ -1,0 +1,2 @@
+            this.headers.addAll(Arrays.asList(headers));
+                headers.add(convertToMandatoryType(exchange, String.class, key));

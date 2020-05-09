@@ -1,0 +1,4 @@
+ * <br/>
+ * The exchange properties are not propagated by default. However you can specify they should be included
+ * by the {@link DefaultExchangeHolder#marshal(Exchange, boolean)} method.
+ * <br/>

@@ -1,0 +1,3 @@
+                // Get connection weight for the two systems being compared.                
+                int weightA = a.getConnectionWeight().intValue();
+                int weightB = b.getConnectionWeight().intValue();

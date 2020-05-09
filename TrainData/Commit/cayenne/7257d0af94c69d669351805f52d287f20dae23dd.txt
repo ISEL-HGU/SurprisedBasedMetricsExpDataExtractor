@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+				return createScalarRowReader(descriptor, queryMetadata, (ScalarResultSegment) segment);
+					reader.addRowReader(i, createScalarRowReader(descriptor, queryMetadata, (ScalarResultSegment) segment));
+	protected RowReader<?> createScalarRowReader(RowDescriptor descriptor, QueryMetadata queryMetadata, ScalarResultSegment segment) {
+		return new ScalarRowReader<Object>(descriptor, segment);
+	}
+
+	protected RowReader<?> createEntityRowReader(RowDescriptor descriptor, QueryMetadata queryMetadata,
+	protected RowReader<?> createFullRowReader(RowDescriptor descriptor, QueryMetadata queryMetadata,
+	protected class PostprocessorFactory {

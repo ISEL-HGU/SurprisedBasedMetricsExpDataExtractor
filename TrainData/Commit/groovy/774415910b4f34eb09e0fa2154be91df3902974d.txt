@@ -1,0 +1,6 @@
+    public static final Class<Trait> TRAIT_CLASS = Trait.class;
+    public static boolean isTrait(final Class<?> clazz) {
+        Class<?> aClass = annotation.traitClass();
+    public @interface Implemented {}
+     public @interface TraitBridge {
+        Class<?> traitClass();

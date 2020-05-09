@@ -1,0 +1,14 @@
+                .columnQuery(Table1.class, PropertyFactory.createSelf(Table1.class))
+                .columnQuery(Table1.class,
+                        PropertyFactory.createSelf(Table1.class),
+                        Table1.PLAIN_INT)
+                .columnQuery(Table1.class,
+                        PropertyFactory.createSelf(Table1.class),
+                        Table1.CRYPTO_INT)
+                        Table1.CRYPTO_INT,
+        assertEquals(1, result.get(0)[0]);
+        assertEquals(1, ((Table1)result.get(0)[1]).getCryptoInt());
+        assertEquals("test", ((Table1)result.get(0)[1]).getCryptoString());
+        assertEquals(1, result.get(0)[2]);
+        assertEquals(2, result.get(0)[3]);
+        assertEquals("string", result.get(0)[4]);

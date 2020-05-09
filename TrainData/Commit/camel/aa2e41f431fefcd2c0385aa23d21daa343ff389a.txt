@@ -1,0 +1,9 @@
+        ObjectListing list = new ObjectListing();
+        list.setBucketName("test");
+        list.setTruncated(false);
+        S3ObjectSummary summary = new S3ObjectSummary();
+        summary.setBucketName("test");
+        summary.setSize(10000L);
+        summary.setKey("Myfile");
+        list.getObjectSummaries().add(summary);
+        return list;

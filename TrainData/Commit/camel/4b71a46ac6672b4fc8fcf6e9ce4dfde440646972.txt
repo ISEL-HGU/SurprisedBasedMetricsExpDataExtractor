@@ -1,0 +1,1 @@
+                Method getter = context.adapt(ExtendedCamelContext.class).getBeanIntrospection().getPropertyGetter(target.getClass(), name, false);

@@ -1,0 +1,20 @@
+    
+    /**
+     * The LDAP DN used to bind this user.
+     */
+    private Dn bindDn;
+     * 
+     * @param bindDn
+     *     The LDAP DN used to bind this user.
+            Set<String> effectiveGroups, Dn bindDn) {
+        this.bindDn = bindDn;
+    
+    /**
+     * Returns the LDAP DN used to bind this user.
+     * 
+     * @return 
+     *     The LDAP DN used to bind this user.
+     */
+    public Dn getBindDn() {
+        return bindDn;
+    }

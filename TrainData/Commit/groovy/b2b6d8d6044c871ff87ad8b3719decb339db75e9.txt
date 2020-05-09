@@ -1,0 +1,14 @@
+import java.util.Objects;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GroovyCodeSource that = (GroovyCodeSource) o;
+        return Objects.equals(codeSource, that.codeSource);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(codeSource);
+    }

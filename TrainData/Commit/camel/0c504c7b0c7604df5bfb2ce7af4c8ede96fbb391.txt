@@ -1,0 +1,4 @@
+        if (value instanceof String) {
+            return new BigInteger((String) value);
+        }
+

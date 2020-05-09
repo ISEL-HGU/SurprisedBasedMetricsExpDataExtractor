@@ -1,0 +1,78 @@
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
+import org.apache.camel.Exchange;
+import org.apache.camel.TypeConverter;
+import org.apache.camel.dataformat.bindy.BindyAbstractDataFormat;
+import org.apache.camel.dataformat.bindy.BindyAbstractFactory;
+import org.apache.camel.dataformat.bindy.BindyKeyValuePairFactory;
+import org.apache.camel.dataformat.bindy.FormatFactory;
+import org.apache.camel.dataformat.bindy.WrappedException;
+import org.apache.camel.dataformat.bindy.util.ConverterUtils;
+import org.apache.camel.spi.DataFormat;
+import org.apache.camel.util.IOHelper;
+import org.apache.camel.util.ObjectHelper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.BufferedReader;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+        BindyKeyValuePairFactory factory = (BindyKeyValuePairFactory) getFactory();
+        // Use a Stream to stream a file across
+        try (Stream<String> lines = new BufferedReader(in).lines()) {
+            // Retrieve the pair separator defined to split the record
+            ObjectHelper.notNull(factory.getPairSeparator(), "The pair separator property of the annotation @Message");
+            String separator = factory.getPairSeparator();
+            AtomicInteger count = new AtomicInteger(0);
+            try {
+                lines.forEachOrdered(line -> {
+                    consumeFile(factory, models, lists, separator, count, line);
+                });
+            } catch (WrappedException e) {
+                throw e.getWrappedException();
+    private void consumeFile(BindyKeyValuePairFactory factory, List<Map<String, Object>> models, Map<String, List<Object>> lists, String separator, AtomicInteger count, String line) {
+        try {
+            // Trim the line coming in to remove any trailing whitespace
+            String trimmedLine = line.trim();
+
+            if (!ObjectHelper.isEmpty(trimmedLine)) {
+                // Increment counter
+                count.incrementAndGet();
+                // Pojos of the model
+                Map<String, Object> model;
+
+                // Create POJO
+                model = factory.factory();
+
+                // Split the message according to the pair separator defined in
+                // annotated class @Message
+                // Explicitly replace any occurrence of the Unicode new line character.
+                List<String> result = Arrays.stream(line.split(separator))
+                        .map(x -> x.replace("\u0085", ""))
+                        .collect(Collectors.toList());
+
+                if (result.size() == 0 || result.isEmpty()) {
+                    throw new IllegalArgumentException("No records have been defined in the KVP");
+                }
+
+                if (result.size() > 0) {
+                    // Bind data from message with model classes
+                    // Counter is used to detect line where error occurs
+                    factory.bind(getCamelContext(), result, model, count.get(), lists);
+
+                    // Link objects together
+                    factory.link(model);
+
+                    // Add objects graph to the list
+                    models.add(model);
+
+                    LOG.debug("Graph of objects created: {}", model);
+                }
+            }
+        } catch (Exception e) {
+            throw new WrappedException(e);
+        }
+    }
+

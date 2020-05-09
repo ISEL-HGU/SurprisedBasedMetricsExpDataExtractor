@@ -1,0 +1,1 @@
+     * {@link CayenneClientModuleProvider} service provider interface.

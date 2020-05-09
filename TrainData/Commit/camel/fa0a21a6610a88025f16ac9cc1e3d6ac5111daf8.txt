@@ -1,0 +1,2 @@
+        if (definition.getConfiguration() != null) {
+            setProperty(camelContext, dataFormat, "configurations", definition.getConfiguration());

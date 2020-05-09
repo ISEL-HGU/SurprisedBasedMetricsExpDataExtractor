@@ -1,0 +1,7 @@
+import org.apache.cayenne.di.Provider;
+import org.apache.cayenne.event.NoopEventBridgeProvider;
+    Provider<EventBridge> eventBridgeProvider;
+    public DefaultDataRowStoreFactory(@Inject Provider<EventBridge> eventBridgeProvider,
+        this.eventBridgeProvider = eventBridgeProvider;
+        isNoopEventBridge = eventBridgeProvider instanceof NoopEventBridgeProvider;
+            store.setEventBridge(eventBridgeProvider.get());

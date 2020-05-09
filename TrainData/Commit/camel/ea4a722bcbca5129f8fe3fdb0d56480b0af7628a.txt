@@ -1,0 +1,1 @@
+ * A sample Spring Boot application that starts the Atomix bootstrap node.

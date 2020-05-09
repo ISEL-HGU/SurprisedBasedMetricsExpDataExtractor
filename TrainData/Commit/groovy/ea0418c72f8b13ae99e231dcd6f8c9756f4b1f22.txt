@@ -1,0 +1,12 @@
+    private final StaticTypesClosureWriter staticTypesClosureWriter;
+    private final WriterController controller;
+    private final WriterControllerFactory factory;
+        this.factory = normalController -> controller;
+        List<Parameter> methodParameterList = new LinkedList<>(Arrays.asList(parametersWithExactType));
+        for (Parameter parameter : parameters) {
+            ClassNode inferredType = parameter.getNodeMetaData(StaticTypesMarker.INFERRED_TYPE);
+            parameter.setType(inferredType);
+            parameter.setOriginType(inferredType);
+        private final CorrectAccessedVariableVisitor correctAccessedVariableVisitor;
+        private final Parameter enclosingThisParameter;
+            this.correctAccessedVariableVisitor = new CorrectAccessedVariableVisitor(icn);

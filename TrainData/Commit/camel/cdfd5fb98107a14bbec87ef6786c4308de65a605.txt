@@ -1,0 +1,3 @@
+     * The normalized line separator of the files The default value is a new
+     * line character.
+    private String normalizedLineSeparator;

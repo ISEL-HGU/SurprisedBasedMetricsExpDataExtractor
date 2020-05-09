@@ -1,0 +1,9 @@
+        private Boolean dualstackEnabled = false;
+
+        public Boolean getDualstackEnabled() {
+            return dualstackEnabled;
+        }
+
+        public void setDualstackEnabled(Boolean dualstackEnabled) {
+            this.dualstackEnabled = dualstackEnabled;
+        }

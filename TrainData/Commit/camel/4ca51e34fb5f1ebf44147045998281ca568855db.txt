@@ -1,0 +1,46 @@
+/*
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+import org.jboss.forge.roaster.Roaster;
+import org.jboss.forge.roaster.model.source.JavaClassSource;
+import org.jboss.forge.roaster.model.source.MethodSource;
+
+import static org.apache.camel.maven.GenerateHelper.sanitizeDescription;
+     * Whether to allow downloading -source JARs when generating spring boot tooling to include
+     * javadoc as description for discovered options.
+     */
+    @Parameter(property = "camel.downloadSourceJars", defaultValue = "true")
+    protected boolean downloadSourceJars;
+
+    /**
+                            c -> !c.isInterface()
+                            && Modifier.isPublic(c.getModifiers())
+                            && !Modifier.isAbstract(c.getModifiers())
+                            && c.getEnclosingClass() == null
+                            && isValidAutowireClass(c))
+                            .collect(Collectors.toSet());
+                                JavaClassSource javaClassSource = null;
+                                if (downloadSourceJars && !setters.isEmpty()) {
+                                        String text = IOHelper.loadText(is);
+                                        javaClassSource = (JavaClassSource) Roaster.parse(text);
+                                    getLog().debug("Loaded source code: "  clazz);
+                                    String desc = extractJavaDocFromMethod(javaClassSource, m);
+                                    if (desc == null) {
+                                        desc = "";
+                                    } else {
+                                        desc = sanitizeDescription(desc, false);
+                                        if (!desc.endsWith(".")) {
+                                            desc = ". ";
+                                        }
+                                    }
+                                    desc = "Auto discovered option from class: "  best.getName()  " to set the option via setter: "  m.getName();
+    private static String extractJavaDocFromMethod(JavaClassSource clazz, Method method) {
+        if (clazz == null) {
+            return null;
+        }
+        MethodSource ms = clazz.getMethod(method.getName(), method.getParameterTypes()[0]);
+        if (ms != null) {
+            return ms.getJavaDoc().getText();
+        }
+        return null;

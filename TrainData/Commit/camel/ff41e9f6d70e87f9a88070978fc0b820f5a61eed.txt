@@ -1,0 +1,6 @@
+import org.apache.camel.util.StringHelper;
+public final class EndpointKey extends ValueHolder<String> {
+    public EndpointKey(String uri) {
+        StringHelper.notEmpty(uri, "uri");
+    public EndpointKey(String uri, boolean normalized) {
+        StringHelper.notEmpty(uri, "uri");

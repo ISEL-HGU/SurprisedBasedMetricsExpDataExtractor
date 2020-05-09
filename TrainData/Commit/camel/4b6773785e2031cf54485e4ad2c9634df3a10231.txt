@@ -1,0 +1,5 @@
+import org.apache.camel.util.URISupport;
+            String sanitizedKey = URISupport.sanitizeUri(key);
+            if (LOG.isTraceEnabled() && sanitizedKey != null) {
+                LOG.trace("Using serviceName: {} as fallback", sanitizedKey);
+            return sanitizedKey;

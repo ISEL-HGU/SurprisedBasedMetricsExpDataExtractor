@@ -1,0 +1,4 @@
+import org.apache.camel.component.aws.s3.client.AWSS3ClientFactory;
+        s3Client = configuration.getAmazonS3Client() != null ? configuration.getAmazonS3Client()
+                : AWSS3ClientFactory.getAWSS3Client(configuration, getMaxConnections()).getS3Client();
+

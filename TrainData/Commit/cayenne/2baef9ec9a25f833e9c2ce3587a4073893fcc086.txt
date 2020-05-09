@@ -1,0 +1,7 @@
+                editor.getDbDetailView().repaint();
+                editor.getObjDetailView().repaint();
+                editor.getDbDetailView().repaint();
+                editor.getObjDetailView().repaint();
+        editor.getEmbeddableView().repaint();
+        editor.getProcedureView().repaint();
+        editor.getProcedureView().repaint();

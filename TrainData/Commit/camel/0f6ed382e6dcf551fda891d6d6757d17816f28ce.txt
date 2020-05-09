@@ -1,0 +1,3 @@
+        if (schemaSeverityLevel != null) {
+            setProperty(camelContext, dataFormat, "schemaSeverityLevel", schemaSeverityLevel);
+        }

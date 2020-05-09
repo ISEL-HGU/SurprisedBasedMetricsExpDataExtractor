@@ -1,0 +1,3 @@
+ * Maven mojo that generates database schema based on Cayenne mapping.
+ * It is a logical counterpart of cdbimport mojo.
+ *

@@ -1,0 +1,1 @@
+        if (allowProcessor(explicitMethodName, beanInfo)) {

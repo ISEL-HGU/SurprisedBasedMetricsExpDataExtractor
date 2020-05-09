@@ -1,0 +1,2 @@
+import org.apache.camel.model.dataformat.ASN1DataFormat;
+        @XmlElement(required = false, name = "asn1", type = ASN1DataFormat.class),

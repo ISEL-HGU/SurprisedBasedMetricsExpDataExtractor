@@ -1,0 +1,6 @@
+            getEndpoint().getAntInclude(),
+            PathUtils.normalizeToString(baseDirectory.relativize(fileEvent.getEventPath())) // match against relativized path
+            return !isStoppingOrStopped() && !isSuspendingOrSuspended();
+            handleException(e);
+            while (!isStoppingOrStopped() && !isSuspendingOrSuspended()) {
+                        handleException(t);

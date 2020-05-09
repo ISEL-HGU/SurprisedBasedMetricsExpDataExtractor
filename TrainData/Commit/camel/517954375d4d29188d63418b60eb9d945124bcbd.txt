@@ -1,0 +1,3 @@
+        org.web3j.protocol.core.methods.request.EthFilter ethFilter = Web3jEndpoint.buildEthFilter(fromBlock, toBlock, addresses, topics);
+        org.web3j.protocol.core.methods.request.EthFilter ethFilter = Web3jEndpoint.buildEthFilter(fromBlock, toBlock, addresses, topics);
+        org.web3j.protocol.core.methods.request.ShhFilter shhFilter = Web3jEndpoint.buildShhFilter(data, topics);

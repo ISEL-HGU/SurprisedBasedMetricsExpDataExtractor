@@ -1,0 +1,4 @@
+        if (it instanceof Closeable) {
+            IOHelper.closeWithException((Closeable) it);
+        }
+            IOException ioException = ((java.util.Scanner) it).ioException();

@@ -1,0 +1,4 @@
+            if (ObjectHelper.isNotEmpty(serializableParameter.getDefault())) {
+                String value = serializableParameter.getDefault().toString();
+                emit("defaultValue", value);
+            }

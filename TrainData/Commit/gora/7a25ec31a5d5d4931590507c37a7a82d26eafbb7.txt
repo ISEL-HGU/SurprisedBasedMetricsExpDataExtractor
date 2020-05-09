@@ -1,0 +1,2 @@
+        String keyClass = prop.getProperty(Constants.KEY_CLASS_KEY, Constants.KEY_CLASS_VALUE);
+        String persistentClass = prop.getProperty(Constants.PERSISTENCE_CLASS_KEY, Constants.PERSISTENCE_CLASS_VALUE);

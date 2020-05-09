@@ -1,0 +1,4 @@
+import org.apache.groovy.util.SystemUtil;
+
+                String key = SystemUtil.setSystemPropertyFrom(params);
+                System.setProperty(key, assignProperties(System.getProperty(key)));

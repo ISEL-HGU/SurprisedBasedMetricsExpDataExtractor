@@ -1,0 +1,6 @@
+import io.swagger.models.properties.ByteArrayProperty;
+            // special for byte arrays
+            if (array && ("byte".equals(typeName) || "java.lang.Byte".equals(typeName))) {
+                prop = new ByteArrayProperty();
+                array = false;
+            } else if ("java.lang.String".equals(typeName)) {

@@ -1,0 +1,7 @@
+        // If the SAX implementation does not provide the local name, the
+        // qualified name should be used instead
+        String name = localName.isEmpty() ? qName : localName;
+
+            if (!name.equals(rootElementName))
+            handler = parent_handler.childElement(name);
+            throw new SAXException("Unexpected element: '"  name  "'");

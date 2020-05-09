@@ -1,0 +1,10 @@
+    @Override
+    public int hashCode() {
+        return text().hashCode();
+    }
+
+    @Override
+        if (null == obj) {
+            return false;
+        }
+

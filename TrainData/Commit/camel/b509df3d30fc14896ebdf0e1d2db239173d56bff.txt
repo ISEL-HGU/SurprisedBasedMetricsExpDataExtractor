@@ -1,0 +1,10 @@
+        if (summary != null) {
+            builder.setSummary(summary);
+        }
+        String description = exchange.getIn().getBody(String.class);
+        if (description != null) {
+            builder.setDescription(description);
+        }
+        if (assigneeName != null) {
+            builder.setAssigneeName(assigneeName);
+        }

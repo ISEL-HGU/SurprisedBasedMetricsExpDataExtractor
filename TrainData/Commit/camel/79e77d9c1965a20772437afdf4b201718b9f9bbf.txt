@@ -1,0 +1,21 @@
+        public <T> Collection<T> update(Deque<T> buffer, T newItem) {
+            // always buffer
+            buffer.addLast(newItem);
+            // never discard
+     * Keeps only the oldest onNext value, discarding any future value
+     * until it's consumed by the downstream subscriber.
+    OLDEST {
+        public <T> Collection<T> update(Deque<T> buffer, T newItem) {
+                // the buffer has another item, so discarding the incoming one
+                return Collections.singletonList(newItem);
+                // add the new item to the buffer, since it was empty
+                buffer.addLast(newItem);
+                // nothing is discarded
+        public <T> Collection<T> update(Deque<T> buffer, T newItem) {
+                // there should be an item in the buffer,
+                // so removing it to overwrite
+            // add the new item to the buffer
+            // (it should be the only item in the buffer now)
+            buffer.addLast(newItem);
+     * @param newItem the elment that should possibly be inserted
+    public abstract <T> Collection<T> update(Deque<T> buffer, T newItem);

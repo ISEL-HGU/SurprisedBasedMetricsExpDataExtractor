@@ -1,0 +1,2 @@
+            PrintDocument printDoc = new PrintDocument(body, printerOperations.getFlavor());
+            printerOperations.print(printDoc, config.isSendToPrinter(), config.getMimeType(), jobName); 

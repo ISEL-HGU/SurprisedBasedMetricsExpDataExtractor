@@ -1,0 +1,4 @@
+import static org.codehaus.groovy.transform.stc.StaticTypeCheckingSupport.findActualTypeByPlaceholderName;
+                ClassNode actualType = findActualTypeByPlaceholderName(originalType.getUnresolvedName(), GenericsUtils.extractPlaceholders(parameterizedType));
+                if (null != actualType) {
+                    storeType(vexp, actualType);

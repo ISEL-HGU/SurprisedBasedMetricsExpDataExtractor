@@ -1,0 +1,21 @@
+    private boolean shouldClose;
+
+    public Vertx getVertx() {
+        return vertx;
+    }
+
+    /**
+     * To use an existing instance of {@link Vertx} instead of creating a default instance.
+     */
+    public void setVertx(Vertx vertx) {
+        this.vertx = vertx;
+    }
+        if (vertx == null) {
+            LOG.debug("Starting VertX");
+            shouldClose = true;
+            vertx = Vertx.vertx();
+        }
+        if (vertx != null && shouldClose) {
+            LOG.debug("Stopping VertX");
+            vertx.close();
+        }

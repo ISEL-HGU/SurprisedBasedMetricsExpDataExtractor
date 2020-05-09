@@ -1,0 +1,10 @@
+import org.apache.guacamole.GuacamoleSecurityException;
+        catch (GuacamoleSecurityException e) {
+            logger.info("User \"{}\" cannot store their TOTP key as they "
+                     "lack permission to update their own account. TOTP "
+                     "will be disabled for this user.",
+                    self.getIdentifier());
+            logger.debug("Permission denied to set TOTP key of user "
+                     "account.", e);
+            return false;
+        }

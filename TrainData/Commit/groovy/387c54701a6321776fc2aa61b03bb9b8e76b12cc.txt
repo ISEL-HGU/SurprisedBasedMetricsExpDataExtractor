@@ -1,0 +1,4 @@
+    @SuppressWarnings("unchecked")
+            if (value instanceof Collection) {
+    @SuppressWarnings("unchecked")
+            if (value instanceof Collection) {

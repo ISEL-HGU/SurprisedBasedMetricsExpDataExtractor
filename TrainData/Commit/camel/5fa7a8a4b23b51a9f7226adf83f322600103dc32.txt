@@ -1,0 +1,31 @@
+import java.util.function.Supplier;
+import org.apache.camel.util.ObjectHelper;
+    private final Supplier<String> headerSupplier;
+    private final Supplier<String> defaultHeaderValueSupplier;
+    public HeaderSelectorProducer(Endpoint endpoint, Supplier<String> headerSupplier) {
+        this(endpoint, headerSupplier, () -> null, null);
+    }
+        this(endpoint, () -> header, () -> null, null);
+        this(endpoint, () -> header, () -> null, target);
+    }
+
+    public HeaderSelectorProducer(Endpoint endpoint,  Supplier<String> headerSupplier, Object target) {
+        this(endpoint, headerSupplier, () -> null, target);
+        this(endpoint, () -> header, () -> defaultHeaderValue, null);
+    }
+
+    public HeaderSelectorProducer(Endpoint endpoint, Supplier<String> headerSupplier, Supplier<String> defaultHeaderValueSupplier) {
+        this(endpoint, headerSupplier, defaultHeaderValueSupplier, null);
+        this(endpoint, () -> header, () -> defaultHeaderValue, target);
+    }
+
+    public HeaderSelectorProducer(Endpoint endpoint, Supplier<String> headerSupplier, Supplier<String> defaultHeaderValueSupplier, Object target) {
+        this.headerSupplier = ObjectHelper.notNull(headerSupplier, "headerSupplier");
+        this.defaultHeaderValueSupplier = ObjectHelper.notNull(defaultHeaderValueSupplier, "defaultHeaderValueSupplier");
+        String header = headerSupplier.get();
+        String action = exchange.getIn().getHeader(headerSupplier.get(), String.class);
+
+        if (action == null) {
+            action = defaultHeaderValueSupplier.get();
+        }
+            "Unsupported operation "  exchange.getIn().getHeader(headerSupplier.get())

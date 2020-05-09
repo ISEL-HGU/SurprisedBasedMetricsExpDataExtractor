@@ -1,0 +1,8 @@
+import org.apache.camel.CamelContext;
+import org.apache.camel.CatalogCamelContext;
+import org.apache.camel.ManagementStatisticsLevel;
+import org.apache.camel.Route;
+import org.apache.camel.RuntimeCamelException;
+import org.apache.camel.ServiceStatus;
+import org.apache.camel.TimerListener;
+            return ModelHelper.dumpModelAsXml(context, def, resolvePlaceholders, resolveDelegateEndpoints);

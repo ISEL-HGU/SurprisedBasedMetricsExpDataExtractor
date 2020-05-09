@@ -1,0 +1,6 @@
+import groovy.transform.Internal;
+                    if (!reflectionMethod.isSynthetic() && !isMarkedInternal(reflectionMethod)) {
+        private boolean isMarkedInternal(Method reflectionMethod) {
+            return reflectionMethod.getAnnotation(Internal.class) != null;
+        }
+

@@ -1,0 +1,11 @@
+    // special for documentation rendering
+    private boolean newGroup;
+
+    public boolean isNewGroup() {
+        return newGroup;
+    }
+
+    public void setNewGroup(boolean newGroup) {
+        this.newGroup = newGroup;
+    }
+

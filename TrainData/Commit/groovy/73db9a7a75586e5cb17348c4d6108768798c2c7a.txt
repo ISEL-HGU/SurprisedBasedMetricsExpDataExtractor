@@ -1,0 +1,3 @@
+    // the groovy.compiler.strictNames system property is experimental and may change default value or be removed in a future version of Groovy
+    private final boolean strictNames = Boolean.parseBoolean(System.getProperty("groovy.compiler.strictNames", "false"));
+        if (!strictNames) return;

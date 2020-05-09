@@ -1,0 +1,5 @@
+import java.util.Collections;
+import java.util.Map;
+    public Map<String, String> create(@FormParam("uri") String uri) 
+        return Collections.singletonMap("identifier",
+                directory.create(QCParser.getConfiguration(uri)));

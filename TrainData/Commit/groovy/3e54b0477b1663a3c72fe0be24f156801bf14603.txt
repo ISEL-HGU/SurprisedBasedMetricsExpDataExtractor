@@ -1,0 +1,5 @@
+     * Sets the bytecode compatibility level.
+     * The parameter can take one of the values in {@link CompilerConfiguration#ALLOWED_JDKS}.
+     * @param version the bytecode compatibility level
+     * Retrieves the compiler bytecode compatibility level.
+     * @return bytecode compatibility level. Can be one of the values in {@link CompilerConfiguration#ALLOWED_JDKS}.

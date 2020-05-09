@@ -1,0 +1,4 @@
+import java.util.function.Supplier;
+    private final Supplier<ValidatorFactory> instance;
+    public ValidatorFactoryBean(final Supplier<ValidatorFactory> validatorFactory) {
+        return instance.get();

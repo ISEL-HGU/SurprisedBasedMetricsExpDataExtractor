@@ -1,0 +1,3 @@
+import static org.codehaus.groovy.ast.tools.GeneralUtils.getAllFields;
+        if (includeSuperProperties || includeSuperFields) {
+            superList.addAll(getAllFields(cNode.getSuperClass(), includeSuperProperties, includeSuperFields));

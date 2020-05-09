@@ -1,0 +1,8 @@
+    private static final String GROOVY_ANTLR4_OPT = "groovy.antlr4";
+
+    /**
+     * The default source encoding
+     */
+    public static final String DEFAULT_SOURCE_ENCODING = "UTF-8";
+
+        if (encoding == null) encoding = DEFAULT_SOURCE_ENCODING;

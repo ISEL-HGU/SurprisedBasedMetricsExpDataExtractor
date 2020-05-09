@@ -1,0 +1,8 @@
+
+            if (serviceName != null) {
+                properties.put(ServiceDefinition.SERVICE_META_NAME, serviceName);
+            }
+
+            if (serviceId != null) {
+                properties.put(ServiceDefinition.SERVICE_META_ID, serviceId);
+            }

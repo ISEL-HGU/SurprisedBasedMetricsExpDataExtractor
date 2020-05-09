@@ -1,0 +1,31 @@
+import org.apache.camel.ha.CamelClusterService;
+import org.apache.camel.ha.CamelClusterService.Selector;
+import org.springframework.boot.context.properties.NestedConfigurationProperty;
+ * Camel Master Support
+     * Inject the service to use.
+     */
+    @NestedConfigurationProperty
+    private CamelClusterService service;
+    /**
+     * Inject the service selector used to lookup the CamelClusterService to
+     * use.
+     */
+    @NestedConfigurationProperty
+    private Selector serviceSelector;
+    /**
+    public CamelClusterService getService() {
+        return service;
+    }
+
+    public void setService(CamelClusterService service) {
+        this.service = service;
+    }
+
+    public Selector getServiceSelector() {
+        return serviceSelector;
+    }
+
+    public void setServiceSelector(Selector serviceSelector) {
+        this.serviceSelector = serviceSelector;
+    }
+

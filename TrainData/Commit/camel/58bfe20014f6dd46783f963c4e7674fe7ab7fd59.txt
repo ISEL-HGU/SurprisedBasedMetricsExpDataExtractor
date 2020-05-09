@@ -1,0 +1,5 @@
+            clientConfiguration.setMaxConnections(configuration.getMaxConnections());
+            isClientConfigFound = true;
+        } else {
+            clientConfiguration = new ClientConfiguration();
+            clientConfiguration.setMaxConnections(configuration.getMaxConnections());

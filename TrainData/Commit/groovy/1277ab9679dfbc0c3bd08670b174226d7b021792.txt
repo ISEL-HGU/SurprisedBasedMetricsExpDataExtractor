@@ -1,0 +1,5 @@
+        List<Token> tokenListToRender = findTokensToRender(tokenList);
+        for (Token token : tokenListToRender) {
+    private List<Token> findTokensToRender(List<Token> tokenList) {
+            return tokenList;
+        return tokenList.subList(startTokenIndex, stopTokenIndex);

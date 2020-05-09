@@ -1,0 +1,10 @@
+    @XmlAttribute
+    private Boolean useOriginalBody;
+    public Boolean getUseOriginalBody() {
+        return useOriginalBody;
+    }
+
+    public void setUseOriginalBody(Boolean useOriginalBody) {
+        this.useOriginalBody = useOriginalBody;
+    }
+

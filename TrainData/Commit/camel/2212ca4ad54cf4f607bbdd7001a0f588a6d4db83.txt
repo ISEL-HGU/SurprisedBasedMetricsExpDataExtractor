@@ -1,0 +1,2 @@
+import org.apache.camel.util.StringHelper;
+        specificationUri = before(remaining, "#", StringHelper::trimToNull).map(URI::create)

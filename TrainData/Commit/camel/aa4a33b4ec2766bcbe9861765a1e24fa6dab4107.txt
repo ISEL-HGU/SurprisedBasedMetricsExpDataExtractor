@@ -1,0 +1,13 @@
+
+        if ("true".equals(model.getDeprecated())) {
+            method.addAnnotation(Deprecated.class);
+        }
+
+        String desc = model.getTitle()  " ("  model.getArtifactId()  ")";
+        desc = "\n"  model.getDescription();
+        desc = "\n";
+        desc = "\nSyntax: <code>"  model.getSyntax()  "</code>";
+        desc = "\nCategory: "  model.getLabel();
+        desc = "\nAvailable as of version: "  model.getFirstVersionShort();
+        desc = "\nMaven coordinates: "  project.getGroupId()  ":"  project.getArtifactId();
+        method.getJavaDoc().setText(desc);

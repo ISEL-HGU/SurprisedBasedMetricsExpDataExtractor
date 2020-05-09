@@ -1,0 +1,4 @@
+
+    // lazy instantiation to avoid org.apache.hive.com.esotericsoftware.kryo.KryoException: java.lang.NullPointerException
+    private transient CharArraySet _stopWords;
+

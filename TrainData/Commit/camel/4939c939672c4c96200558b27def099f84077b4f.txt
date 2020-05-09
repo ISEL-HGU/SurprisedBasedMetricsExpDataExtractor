@@ -1,0 +1,13 @@
+import com.github.benmanes.caffeine.cache.RemovalListener;
+        /**
+         * Set a specific removal Listener for the cache
+         */
+        private RemovalListener removalListener;
+
+        public RemovalListener getRemovalListener() {
+            return removalListener;
+        }
+
+        public void setRemovalListener(RemovalListener removalListener) {
+            this.removalListener = removalListener;
+        }

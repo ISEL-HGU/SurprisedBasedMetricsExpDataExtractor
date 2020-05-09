@@ -1,0 +1,14 @@
+    @Parameter(defaultValue = "camel.connector")
+    private String configurationPrefix;
+
+        // compute the configuration prefix to use with spring boot configuration
+        String prefix = "";
+        if (!"false".equalsIgnoreCase(configurationPrefix)) {
+            // make sure prefix is in lower case
+            prefix = configurationPrefix.toLowerCase(Locale.US);
+            if (!prefix.endsWith(".")) {
+                prefix = ".";
+            }
+        }
+        prefix = connectorScheme.toLowerCase(Locale.US);
+

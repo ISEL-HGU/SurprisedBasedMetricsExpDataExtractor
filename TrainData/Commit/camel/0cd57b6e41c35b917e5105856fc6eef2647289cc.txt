@@ -1,0 +1,15 @@
+    protected boolean fileWatchDirectoryRecursively;
+    
+    public boolean isFileWatchDirectoryRecursively() {
+        return fileWatchDirectoryRecursively;
+    }
+    
+    /**
+     * Sets the flag to watch directory of XML file changes recursively to trigger live reload of Camel routes.
+     * <p/>
+     * Notice you cannot set this value and a custom {@link ReloadStrategy} as well.
+     */
+    public void setFileWatchDirectoryRecursively(boolean fileWatchDirectoryRecursively) {
+        this.fileWatchDirectoryRecursively = fileWatchDirectoryRecursively;
+    }
+            ReloadStrategy reload = new FileWatcherReloadStrategy(fileWatchDirectory, fileWatchDirectoryRecursively);

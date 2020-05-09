@@ -1,0 +1,8 @@
+import org.apache.camel.impl.DefaultUuidGenerator;
+            id = DefaultUuidGenerator.generateSanitizedId(basePath  uriTemplate);
+            id = DefaultUuidGenerator.generateSanitizedId(basePath);
+        // speedup pooling to also be able to shutdown faster
+        seda.setPollTimeout(10);
+        String id = DefaultUuidGenerator.generateSanitizedId(contextPath);
+        // speedup pooling to also be able to shutdown faster
+        seda.setPollTimeout(10);

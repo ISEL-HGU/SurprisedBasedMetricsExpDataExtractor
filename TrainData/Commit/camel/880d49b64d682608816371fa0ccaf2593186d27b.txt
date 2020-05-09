@@ -1,0 +1,2 @@
+         * 
+         * @deprecated use the {@link #encryption} query parameter instead.

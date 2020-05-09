@@ -1,0 +1,4 @@
+            if (c > BinaryGuesser.NON_ASCII_THRESHOLD
+                    || c <= BinaryGuesser.ASCII_CHAR_THRESHOLD) {
+    public static final int NON_ASCII_THRESHOLD = 256;
+    public static final int ASCII_CHAR_THRESHOLD = 8;

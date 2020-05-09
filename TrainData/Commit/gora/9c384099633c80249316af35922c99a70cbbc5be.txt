@@ -1,0 +1,30 @@
+      while (result.next()) {
+        if (aerospikeClient.delete(null, getAerospikeKey(result.getKey()))) {
+    else if (query.getKey() != null) {
+      if (record != null) {
+    //    else if (query.getStartKey() != null && query.getEndKey() != null) {
+    //
+    //      // the key range filtering at the gora side, which is not a better solution
+    //      String lowerBound  = query.getStartKey().toString();
+    //      String upperBound  = query.getEndKey().toString();
+    //
+    //      try (RecordSet recordSet = aerospikeClient.query(null, getStatement(namespace, set))) {
+    //        while (recordSet.next()) {
+    //          Key key = recordSet.getKey();
+    //          Record record = recordSet.getRecord();
+    //
+    //          String input = key.userKey.toString();
+    //          boolean isSpecifiedRange =  input.compareToIgnoreCase(lowerBound) >= 0 && input
+    //                  .compareToIgnoreCase(upperBound) <= 0;
+    //
+    //          if (isSpecifiedRange) {
+    //            AerospikeResultRecord aerospikeRecord = new AerospikeResultRecord(key, record);
+    //            resultRecords.add(aerospikeRecord);
+    //          }
+    //
+    //        }
+    //      }
+    //    }
+   * Method to create a Aerospike specific statement
+  private Statement getStatement(String namespace, String set) {
+  private Key getAerospikeKey(K key) {

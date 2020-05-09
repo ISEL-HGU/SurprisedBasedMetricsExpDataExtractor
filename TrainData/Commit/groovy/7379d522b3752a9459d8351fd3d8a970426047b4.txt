@@ -1,0 +1,9 @@
+import static org.apache.groovy.ast.tools.AnnotatedNodeUtils.markAsGenerated;
+import static org.apache.groovy.ast.tools.ClassNodeUtils.hasExplicitConstructor;
+        List<PropertyNode> list = getAllProperties(names, cNode, includeProperties, includeFields, false, allProperties, false, true);
+        if (hasExplicitConstructor(null, cNode) && !force && !makeImmutable) return;
+        ConstructorNode consNode = new ConstructorNode(modifiers, params.toArray(new Parameter[params.size()]), ClassNode.EMPTY_ARRAY, body);
+        markAsGenerated(cNode, consNode);
+        cNode.addConstructor(consNode);
+        markAsGenerated(cNode, init);
+            markAsGenerated(cNode, init);

@@ -1,0 +1,3 @@
+    private boolean initialized;
+                     "' not found in ServiceRegistry. This can be caused by the order in which the platform extensions are initialized. " 
+                     "Deferring Camel ProducerTemplate creation until the first WorkItemHandler call.";

@@ -1,0 +1,2 @@
+        V value = prior.getValue();
+        final int weight = weigher.weightOf(key, value);

@@ -1,0 +1,6 @@
+import org.apache.camel.util.ObjectHelper;
+        if (ObjectHelper.isNotEmpty(localPath)) {
+            File file = new File(localPath);
+            if (!file.exists()) {
+                throw new DropboxException("option <localPath> is not an existing file or directory!");
+            }

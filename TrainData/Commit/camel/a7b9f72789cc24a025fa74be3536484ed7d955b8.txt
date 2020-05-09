@@ -1,0 +1,8 @@
+import java.util.HashMap;
+import java.util.Map;
+
+        private final Map<String, KubernetesConfiguration> configurations = new HashMap<>();
+
+        public Map<String, KubernetesConfiguration> getConfigurations() {
+            return configurations;
+        }

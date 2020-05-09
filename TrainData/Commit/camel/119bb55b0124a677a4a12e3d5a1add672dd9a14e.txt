@@ -1,0 +1,15 @@
+    // Thread-safe deferred-construction singleton via nested static class
+    private static class VelocityEngineHolder {
+        private static final VelocityEngine ENGINE;
+        static {
+            Logger velocityLogger = LoggerFactory.getLogger("org.apache.camel.maven.Velocity");
+            ENGINE = new VelocityEngine(velocityProperties);
+            ENGINE.init();
+    }
+
+    protected static VelocityEngine getEngine() throws MojoExecutionException {
+        try {
+            return VelocityEngineHolder.ENGINE;
+        } catch (Exception e) {
+            throw new MojoExecutionException(e.getMessage(), e);
+        }

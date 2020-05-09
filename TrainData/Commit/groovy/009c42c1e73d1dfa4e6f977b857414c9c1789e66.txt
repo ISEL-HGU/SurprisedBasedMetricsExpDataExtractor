@@ -1,0 +1,25 @@
+        final Variable accessedVariable = vexp.getAccessedVariable();
+        if (accessedVariable instanceof PropertyNode) {
+        } else if (accessedVariable instanceof FieldNode) {
+            FieldNode fieldNode = (FieldNode) accessedVariable;
+
+            ClassNode parameterizedType = GenericsUtils.findParameterizedType(fieldNode.getDeclaringClass(), typeCheckingContext.getEnclosingClassNode());
+            if (null != parameterizedType) {
+                ClassNode originalType = fieldNode.getOriginType();
+                GenericsType gt = GenericsUtils.extractPlaceholders(parameterizedType).get(originalType.getUnresolvedName());
+
+                if (null != gt) {
+                    ClassNode redirect = gt.getType().redirect();
+                    storeType(vexp, redirect);
+                    return;
+                }
+            }
+        if (!(accessedVariable instanceof DynamicVariable)) {
+                if (accessedVariable instanceof Parameter) {
+                    variable = new ParameterVariableExpression((Parameter) accessedVariable);
+                } else if (accessedVariable instanceof VariableExpression) {
+                    variable = (VariableExpression) accessedVariable;
+
+        DynamicVariable dyn = (DynamicVariable) accessedVariable;
+
+

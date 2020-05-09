@@ -1,0 +1,8 @@
+
+import javax.xml.XMLConstants;
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+            dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, Boolean.TRUE);
+            DocumentBuilder builder = dbf.newDocumentBuilder();
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        transformerFactory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, Boolean.TRUE);
+        Transformer transformer = transformerFactory.newTransformer();

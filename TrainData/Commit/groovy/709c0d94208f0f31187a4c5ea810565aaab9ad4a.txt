@@ -1,0 +1,4 @@
+            if (baseExpr instanceof VariableExpression) { // void and primitive type AST node must be an instance of VariableExpression
+    public VariableExpression visitBuiltInTypePrmrAlt(BuiltInTypePrmrAltContext ctx) {
+    public VariableExpression visitBuiltInType(BuiltInTypeContext ctx) {
+        return configureAST(new VariableExpression(text), ctx);

@@ -1,0 +1,5 @@
+            if (getEndpoint().isSharedEntityManager()) {
+                this.entityManager = SharedEntityManagerCreator.createSharedEntityManager(entityManagerFactory);
+            } else {
+                this.entityManager = entityManagerFactory.createEntityManager();
+            }

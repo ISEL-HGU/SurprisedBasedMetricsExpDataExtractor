@@ -1,0 +1,1 @@
+    @Bean(name = "hdfs-component")

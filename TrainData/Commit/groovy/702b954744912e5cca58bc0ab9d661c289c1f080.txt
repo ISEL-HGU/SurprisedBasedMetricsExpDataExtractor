@@ -1,0 +1,3 @@
+/**
+ * Base exception indicating a syntax error.
+    private static final long serialVersionUID = -6086822614839477581L;

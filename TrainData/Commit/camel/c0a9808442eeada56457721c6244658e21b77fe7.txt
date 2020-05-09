@@ -1,0 +1,3 @@
+        // remove STREAM_CACHE_UNIT_OF_WORK property because this wire tap will
+        // close its own created stream cache(s)
+        copy.removeProperty(Exchange.STREAM_CACHE_UNIT_OF_WORK);

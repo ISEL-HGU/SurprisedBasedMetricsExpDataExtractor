@@ -1,0 +1,4 @@
+    public CamelContext getCamelContext() {
+        return camelContext;
+    }
+

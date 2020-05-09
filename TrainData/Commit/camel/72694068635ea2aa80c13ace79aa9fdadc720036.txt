@@ -1,0 +1,19 @@
+import java.util.function.Predicate;
+        case REMOVE_ALL:
+            this.removeAll(exchange);
+            break;
+            
+        case REMOVE_IF:
+            this.removeIf(exchange);
+            break;
+            
+    
+    private void removeAll(Exchange exchange) {
+        Collection body = exchange.getIn().getBody(Collection.class);
+        this.queue.removeAll(body);
+    }
+    
+    private void removeIf(Exchange exchange) {
+        Predicate filter = exchange.getIn().getBody(Predicate.class);
+        exchange.getOut().setBody(this.queue.removeIf(filter));
+    }

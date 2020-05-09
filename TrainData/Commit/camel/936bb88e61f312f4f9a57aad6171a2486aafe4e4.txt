@@ -1,0 +1,1 @@
+            if (columnType == Types.CLOB) {

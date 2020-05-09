@@ -1,0 +1,22 @@
+        // camel message headers takes precedence over endpoint configuration
+        if (hasRecipientHeaders(exchange)) {
+            setRecipientFromCamelMessage(mimeMessage, endpoint.getConfiguration(), exchange);
+        } else {
+            // fallback to endpoint configuration
+            setRecipientFromEndpointConfiguration(mimeMessage, endpoint, exchange);
+        }
+    private void setRecipientFromCamelMessage(MimeMessage mimeMessage, MailConfiguration configuration, Exchange exchange) throws MessagingException, IOException {
+    }
+    /**
+     * Appends the Mail headers from the endpoint configuration.
+     */
+    protected void setRecipientFromEndpointConfiguration(MimeMessage mimeMessage, MailEndpoint endpoint, Exchange exchange)
+        throws MessagingException, IOException {
+
+        Map<Message.RecipientType, String> recipients = endpoint.getConfiguration().getRecipients();
+        if (recipients.containsKey(Message.RecipientType.TO)) {
+            appendRecipientToMimeMessage(mimeMessage, endpoint.getConfiguration(), exchange, Message.RecipientType.TO.toString(), recipients.get(Message.RecipientType.TO));
+        if (recipients.containsKey(Message.RecipientType.CC)) {
+            appendRecipientToMimeMessage(mimeMessage, endpoint.getConfiguration(), exchange, Message.RecipientType.CC.toString(), recipients.get(Message.RecipientType.CC));
+        if (recipients.containsKey(Message.RecipientType.BCC)) {
+            appendRecipientToMimeMessage(mimeMessage, endpoint.getConfiguration(), exchange, Message.RecipientType.BCC.toString(), recipients.get(Message.RecipientType.BCC));

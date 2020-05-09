@@ -1,0 +1,3 @@
+import org.apache.guacamole.auth.quickconnect.rest.QuickConnectREST;
+    public static final String ROOT_IDENTIFIER = "ROOT";
+        return new QuickConnectREST(this);

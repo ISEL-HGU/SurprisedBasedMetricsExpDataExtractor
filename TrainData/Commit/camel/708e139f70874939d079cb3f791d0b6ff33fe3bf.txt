@@ -1,0 +1,3 @@
+        setDestinationType("temp-topic");
+        super("jms:temp-topic:"  jmsDestination.getTopicName(), null);
+        setDestinationType("temp-topic");

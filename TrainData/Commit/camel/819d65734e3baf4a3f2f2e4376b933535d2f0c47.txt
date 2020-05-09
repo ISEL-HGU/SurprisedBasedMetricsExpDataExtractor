@@ -1,0 +1,2 @@
+ b/camel-core/src/test/java/org/apache/camel/processor/interceptor/ConditionSupport.java
+package org.apache.camel.processor.interceptor;

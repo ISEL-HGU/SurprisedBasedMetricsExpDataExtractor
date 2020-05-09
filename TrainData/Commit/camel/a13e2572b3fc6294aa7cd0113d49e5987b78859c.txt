@@ -1,0 +1,7 @@
+                        } else {
+                            // this module must be active with a source folder
+                            File src = new File(dir, "src");
+                            boolean active = src.isDirectory() && src.exists();
+                            if (!active) {
+                                continue;
+                            }

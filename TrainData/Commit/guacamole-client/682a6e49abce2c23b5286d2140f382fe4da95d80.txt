@@ -1,0 +1,1 @@
+        recordModel.setRemoteHost(record.getRemoteHost());

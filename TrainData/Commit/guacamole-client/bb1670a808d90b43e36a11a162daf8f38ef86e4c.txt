@@ -1,0 +1,17 @@
+    private void closeConnection(WsOutbound outbound, int guacamoleStatusCode,
+            int webSocketCode) {
+            byte[] message = Integer.toString(guacamoleStatusCode).getBytes("UTF-8");
+                    closeConnection(outbound, e.getStatus().getGuacamoleStatusCode(),
+                            e.getWebSocketCode());
+                    closeConnection(outbound, GuacamoleStatus.RESOURCE_NOT_FOUND.getGuacamoleStatusCode(),
+                            GuacamoleStatus.RESOURCE_NOT_FOUND.getWebSocketCode());
+                                closeConnection(outbound, GuacamoleStatus.SUCCESS.getGuacamoleStatusCode(),
+                                        GuacamoleStatus.SUCCESS.getWebSocketCode());
+                                closeConnection(outbound, e.getStatus().getGuacamoleStatusCode(),
+                                        e.getWebSocketCode());
+                                closeConnection(outbound, GuacamoleStatus.SUCCESS.getGuacamoleStatusCode(),
+                                        GuacamoleStatus.SUCCESS.getWebSocketCode());
+                                closeConnection(outbound, e.getStatus().getGuacamoleStatusCode(),
+                                        e.getWebSocketCode());
+                            closeConnection(outbound, GuacamoleStatus.SERVER_ERROR.getGuacamoleStatusCode(),
+                                    GuacamoleStatus.SERVER_ERROR.getWebSocketCode());

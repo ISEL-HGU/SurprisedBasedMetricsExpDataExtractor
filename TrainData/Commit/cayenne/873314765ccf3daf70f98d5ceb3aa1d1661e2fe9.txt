@@ -1,0 +1,6 @@
+		SelectById<T> q = new SelectById<>();
+		SelectById<T> q = new SelectById<>();
+		SelectById<T> q = new SelectById<>();
+		context.iterate(this, callback);
+		SelectQuery<Object> query = new SelectQuery<>();
+		return entityName != null ? resolver.getObjEntity(entityName) : resolver.getObjEntity(entityType, true);

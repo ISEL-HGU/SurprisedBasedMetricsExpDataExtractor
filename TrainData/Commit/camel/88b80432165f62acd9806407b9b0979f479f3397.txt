@@ -1,0 +1,7 @@
+    private final boolean coreOnly;
+
+    public ComponentModel(boolean coreOnly) {
+        this.coreOnly = coreOnly;
+    }
+
+            return coreOnly ? "src/main/docs" : "../camel-core/src/main/docs";

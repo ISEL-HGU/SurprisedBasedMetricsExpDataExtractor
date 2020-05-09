@@ -1,0 +1,4 @@
+        if (asBoolean(ctx) && asBoolean(ctx.COMMA()) && !asBoolean(ctx.enhancedArgumentList())) {
+            throw createParsingFailedException("Expression expected", ctx);
+        }
+

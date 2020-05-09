@@ -1,0 +1,50 @@
+import static org.codehaus.groovy.syntax.Types.INTDIV;
+import static org.codehaus.groovy.syntax.Types.INTDIV_EQUAL;
+            if (checkPossibleLossOfPrecision(leftRedirect, inferredrhsType, rightExpression)) {
+            // adjust typing for explicit math methods which have special handling - operator variants handled elsewhere
+            if (NUMBER_OPS.containsKey(name) && isNumberType(receiver) && argumentList.getExpressions().size() == 1
+                    && isNumberType(getType(argumentList.getExpression(0)))) {
+                ClassNode right = getType(argumentList.getExpression(0));
+                ClassNode resultType = getMathResultType(NUMBER_OPS.get(name), receiver, right, name);
+                if (resultType != null) {
+                    storeType(call, resultType);
+                }
+            }
+
+     * @param args the arguments of the method call
+     * @param returnType the original return type, as inferred by the type checker
+     * @return fixed return type if the selected method is {@link org.codehaus.groovy.runtime.DefaultGroovyMethods#withTraits(Object, Class[]) withTraits}
+        }
+        if (isBoolIntrinsicOp(op)) {
+        }
+        if (isArrayOp(op)) {
+        }
+        if (op == FIND_REGEX) {
+        String operationName = getOperationName(op);
+        ClassNode mathResultType = getMathResultType(op, leftRedirect, rightRedirect, operationName);
+        if (mathResultType != null) {
+            return mathResultType;
+        }
+
+        // GROOVY-5890
+        // do not mix Class<Foo> with Foo
+        if (leftExpression instanceof ClassExpression) {
+            left = CLASS_Type.getPlainNodeReference();
+        }
+
+        MethodNode method = findMethodOrFail(expr, left, operationName, right);
+        if (method != null) {
+            storeTargetMethod(expr, method);
+            typeCheckMethodsWithGenericsOrFail(left, new ClassNode[]{right}, method, expr);
+            if (isAssignment(op)) return left;
+            if (isCompareToBoolean(op)) return boolean_TYPE;
+            if (op == COMPARE_TO) return int_TYPE;
+            return inferReturnTypeGenerics(left, method, args(rightExpression));
+        }
+        //TODO: other cases
+        return null;
+    }
+
+    private ClassNode getMathResultType(int op, ClassNode leftRedirect, ClassNode rightRedirect, String operationName) {
+        if (isNumberType(leftRedirect) && isNumberType(rightRedirect)) {
+            } else if (isBitOperator(op) || op == INTDIV || op == INTDIV_EQUAL) {

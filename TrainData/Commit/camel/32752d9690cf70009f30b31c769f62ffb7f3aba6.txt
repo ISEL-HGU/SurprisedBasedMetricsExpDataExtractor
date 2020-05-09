@@ -1,0 +1,62 @@
+    protected List<Object> configurations = new ArrayList<>();
+    protected String configurationClasses;
+    public String getConfigurationClasses() {
+    public void setConfigurationClasses(String configurations) {
+        this.configurationClasses = configurations;
+    public void addConfigurationClass(Class... configuration) {
+        String existing = configurationClasses;
+        if (existing == null) {
+            existing = "";
+        if (configuration != null) {
+            for (Class clazz : configuration) {
+                if (!existing.isEmpty()) {
+                    existing = existing  ",";
+                }
+                existing = existing  clazz.getName();
+            }
+        }
+        setConfigurationClasses(existing);
+    }
+
+    public void addConfiguration(Object configuration) {
+        configurations.add(configuration);
+    public List<Object> getConfigurations() {
+        return configurations;
+    }
+
+    public void setConfigurations(List<Object> configurations) {
+        this.configurations = configurations;
+    }
+
+    protected void loadConfigurations(CamelContext camelContext) throws Exception {
+        // lets use Camel's bean post processor on any existing configuration classes
+        // so the instance has some support for dependency injection
+        CamelBeanPostProcessor postProcessor = camelContext.getBeanPostProcessor();
+        for (Object configuration : getConfigurations()) {
+            postProcessor.postProcessBeforeInitialization(configuration, configuration.getClass().getName());
+            postProcessor.postProcessAfterInitialization(configuration, configuration.getClass().getName());
+        }
+
+        if (configurationClasses != null) {
+            String[] configClasses = configurationClasses.split(",");
+            for (String configClass : configClasses) {
+                Class<?> configClazz = camelContext.getClassResolver().resolveClass(configClass);
+                // lets use Camel's injector so the class has some support for dependency injection
+                Object config = camelContext.getInjector().newInstance(configClazz);
+                getConfigurations().add(config);
+            }
+        }
+
+        for (Object config : getConfigurations()) {
+            // invoke configure method if exists
+            Method method = findMethod(config.getClass(), "configure");
+            if (method != null) {
+                log.info("Calling configure method on configuration class: {}", config.getClass().getName());
+                invokeMethod(method, config);
+            }
+        }
+    }
+
+        // try to load configurations
+        loadConfigurations(camelContext);
+        // try to load the route builders

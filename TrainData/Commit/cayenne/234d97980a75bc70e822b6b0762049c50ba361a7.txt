@@ -1,0 +1,8 @@
+public abstract class RelationshipFault<E> {
+    protected abstract void mergeLocalChanges(List<E> resolved);
+    protected List<E> resolveFromDB() {
+            return new ArrayList<>();
+        List<E> resolved = relationshipOwner.getObjectContext().performQuery(
+        /*
+            resolved = new ArrayList<>(resolved);
+    protected void updateReverse(List<E> resolved) {

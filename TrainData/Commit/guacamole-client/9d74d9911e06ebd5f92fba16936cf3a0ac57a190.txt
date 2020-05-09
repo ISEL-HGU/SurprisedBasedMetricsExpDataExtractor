@@ -1,0 +1,3 @@
+     * will not be interpreted unless explicitly requested.
+     * requested.
+     * {@link org.apache.guacamole.net.auth.Connection} directly.

@@ -1,0 +1,2 @@
+                    return (Integer) receiver / (Double) arg;
+                    return ((Long) receiver).doubleValue() / (Double) arg;

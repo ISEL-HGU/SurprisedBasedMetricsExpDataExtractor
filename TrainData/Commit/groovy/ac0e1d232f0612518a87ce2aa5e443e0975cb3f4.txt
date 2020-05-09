@@ -1,0 +1,3 @@
+import java.util.Objects;
+            if (e.hash == h && cls == e.cls && (Objects.equals(e.name, name) || e.name.equals(name)) )
+            if (e.hash == h && cls == e.cls && (Objects.equals(e.name, name) || e.name.equals(name)) )

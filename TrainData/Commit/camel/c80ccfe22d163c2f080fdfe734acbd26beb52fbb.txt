@@ -1,0 +1,3 @@
+            expectedPropertyValues = new HashMap<String, Object>();
+        expectedPropertyValues.put(name, value);
+                        // we accept that an expectedValue of null also means that the property may be absent

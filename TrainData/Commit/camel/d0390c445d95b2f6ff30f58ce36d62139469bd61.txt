@@ -1,0 +1,18 @@
+     * Sets the system property (and environment variable) mode. The default
+     * mode (override) is to check system properties (and environment variables)
+     * first, before trying the specified properties. This allows system
+     * properties/environment variables to override any other property source.
+     * Sets the OS environment variables mode. The default mode (fallback) is to
+     * check OS environment variables, if the property cannot be resolved from
+     * its sources first. This allows environment variables as fallback values.
+     */
+    private Integer environmentVariableMode = 1;
+    /**
+    public Integer getEnvironmentVariableMode() {
+        return environmentVariableMode;
+    }
+
+    public void setEnvironmentVariableMode(Integer environmentVariableMode) {
+        this.environmentVariableMode = environmentVariableMode;
+    }
+

@@ -1,0 +1,27 @@
+                        } else {
+                            // this module must be active with a source folder
+                            File src = new File(dir, "src");
+                            boolean active = src.isDirectory() && src.exists();
+                            if (!active) {
+                                continue;
+                            }
+                        // this module must be active with a source folder
+                        File src = new File(dir, "src");
+                        boolean active = src.isDirectory() && src.exists();
+                        if (active) {
+                            findDataFormatFilesRecursive(target, jsonFiles, dataFormatFiles, new CamelDataFormatsFileFilter());
+                        }
+                        // this module must be active with a source folder
+                        File src = new File(dir, "src");
+                        boolean active = src.isDirectory() && src.exists();
+                        if (active) {
+                            findLanguageFilesRecursive(target, jsonFiles, languageFiles, new CamelLanguagesFileFilter());
+                        }
+                        if (target.exists()) {
+                            // this module must be active with a source folder
+                            File src = new File(dir, "src");
+                            boolean active = src.isDirectory() && src.exists();
+                            if (active) {
+                                findOtherFilesRecursive(target, jsonFiles, otherFiles, new CamelOthersFileFilter());
+                            }
+                        }

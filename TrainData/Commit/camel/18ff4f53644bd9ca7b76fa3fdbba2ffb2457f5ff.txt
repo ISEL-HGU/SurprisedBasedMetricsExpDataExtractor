@@ -1,0 +1,9 @@
+import io.opentracing.Tracer;
+
+import org.springframework.beans.factory.annotation.Autowired;
+    @Autowired(required = false)
+    private Tracer tracer;
+
+        if (tracer != null) {
+            ottracer.setTracer(tracer);
+        }

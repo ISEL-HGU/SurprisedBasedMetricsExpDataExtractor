@@ -1,0 +1,18 @@
+    protected void executeDataFormatsReadme(boolean coreOnly) throws MojoExecutionException, MojoFailureException {
+                if (coreOnly) {
+                    if ("camel-core".equals(model.getArtifactId())) {
+                        // only include core components
+                        dataFormats.add(model);
+                    }
+                } else {
+                    // we want to include everything in the big file (also from camel-core)
+            if (coreOnly) {
+    protected void executeLanguagesReadme(boolean coreOnly) throws MojoExecutionException, MojoFailureException {
+                if (coreOnly) {
+                    if ("camel-core".equals(model.getArtifactId())) {
+                        // only include core components
+                        languages.add(model);
+                    }
+                } else {
+                    // we want to include everything in the big file (also from camel-core)
+            if (coreOnly) {

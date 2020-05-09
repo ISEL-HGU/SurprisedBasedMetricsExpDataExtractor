@@ -1,0 +1,60 @@
+import java.util.concurrent.ExecutorService;
+import org.springframework.context.ConfigurableApplicationContext;
+                        if (configurationProperties.getDurationMaxMessages() > 0) {
+                            LOG.info("CamelSpringBoot will terminate after processing {} messages", configurationProperties.getDurationMaxMessages());
+                            EventNotifier notifier = new MainDurationEventNotifier(camelContext, configurationProperties.getDurationMaxMessages(),
+                                controller.getCompleted(), controller.getLatch(), true);
+                        if (configurationProperties.getDurationMaxSeconds() > 0) {
+                            LOG.info("CamelSpringBoot will terminate after {} seconds", configurationProperties.getDurationMaxSeconds());
+                            terminateMainControllerAfter(camelContext, configurationProperties.getDurationMaxSeconds(),
+                        if (applicationContext instanceof ConfigurableApplicationContext) {
+                            ConfigurableApplicationContext cac = (ConfigurableApplicationContext) applicationContext;
+
+                            if (configurationProperties.getDurationMaxSeconds() > 0) {
+                                LOG.info("CamelSpringBoot will terminate after {} seconds", configurationProperties.getDurationMaxSeconds());
+                                terminateApplicationContext(cac, camelContext, configurationProperties.getDurationMaxSeconds());
+                            }
+
+                            if (configurationProperties.getDurationMaxMessages() > 0) {
+                                // needed by MainDurationEventNotifier to signal when we have processed the max messages
+                                final AtomicBoolean completed = new AtomicBoolean();
+                                final CountDownLatch latch = new CountDownLatch(1);
+
+                                // register lifecycle so we can trigger to shutdown the JVM when maximum number of messages has been processed
+                                EventNotifier notifier = new MainDurationEventNotifier(camelContext, configurationProperties.getDurationMaxMessages(), completed, latch, false);
+                                // register our event notifier
+                                ServiceHelper.startService(notifier);
+                                camelContext.getManagementStrategy().addEventNotifier(notifier);
+
+                                LOG.info("CamelSpringBoot will terminate after processing {} messages", configurationProperties.getDurationMaxMessages());
+                                terminateApplicationContext(cac, camelContext, configurationProperties.getDurationMaxMessages(), latch);
+                            }
+                        }
+
+        ScheduledExecutorService executorService = camelContext.getExecutorServiceManager().newSingleThreadScheduledExecutor(this, "CamelSpringBootTerminateTask");
+            LOG.info("CamelSpringBoot max seconds triggering shutdown of the JVM.");
+    private void terminateApplicationContext(final ConfigurableApplicationContext applicationContext, final CamelContext camelContext, int seconds) {
+        ScheduledExecutorService executorService = camelContext.getExecutorServiceManager().newSingleThreadScheduledExecutor(this, "CamelSpringBootTerminateTask");
+        Runnable task = () -> {
+            LOG.info("CamelSpringBoot max seconds triggering shutdown of the JVM.");
+            // we need to run a daemon thread to stop ourselves so this thread pool can be stopped nice also
+            new Thread(applicationContext::close).start();
+        };
+        executorService.schedule(task, seconds, TimeUnit.SECONDS);
+    }
+
+    private void terminateApplicationContext(final ConfigurableApplicationContext applicationContext, final CamelContext camelContext, int messages, final CountDownLatch latch) {
+        ExecutorService executorService = camelContext.getExecutorServiceManager().newSingleThreadExecutor(this, "CamelSpringBootTerminateTask");
+        Runnable task = () -> {
+            try {
+                latch.await();
+                LOG.info("CamelSpringBoot max messages "  messages  " triggering shutdown of the JVM.");
+                // we need to run a daemon thread to stop ourselves so this thread pool can be stopped nice also
+                new Thread(applicationContext::close).start();
+            } catch (Throwable e) {
+                // ignore
+            }
+        };
+        executorService.submit(task);
+    }
+

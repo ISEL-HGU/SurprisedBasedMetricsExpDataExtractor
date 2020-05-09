@@ -1,0 +1,22 @@
+import org.apache.camel.component.ipfs.IPFSConfiguration.IPFSCommand;
+
+        return (IPFSEndpoint)super.getEndpoint();
+
+
+
+        } else if (IPFSCommand.add == cmd) {
+
+
+        } else if (IPFSCommand.cat == cmd) {
+
+        } else if (IPFSCommand.get == cmd) {
+
+        if (body instanceof Path) {
+            return (Path)body;
+        }
+        if (body instanceof String) {
+            return Paths.get((String)body);
+        }
+        if (body instanceof File) {
+            return ((File)body).toPath();
+        }

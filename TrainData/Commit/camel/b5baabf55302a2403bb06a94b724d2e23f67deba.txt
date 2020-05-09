@@ -1,0 +1,12 @@
+        /**
+         * Define if Accelerate Mode enabled is true or false
+         */
+        private Boolean accelerateModeEnabled = false;
+
+        public Boolean getAccelerateModeEnabled() {
+            return accelerateModeEnabled;
+        }
+
+        public void setAccelerateModeEnabled(Boolean accelerateModeEnabled) {
+            this.accelerateModeEnabled = accelerateModeEnabled;
+        }

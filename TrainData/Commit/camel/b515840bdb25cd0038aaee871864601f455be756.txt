@@ -1,0 +1,3 @@
+            if (boolean.class == type) {
+            if (boolean.class == type) {
+            if (boolean.class == type) {

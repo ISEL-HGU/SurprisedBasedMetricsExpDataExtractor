@@ -1,0 +1,2 @@
+        // See AbstractDocument.DefaultDocumentEvent.getPresentationName() method
+        if("AbstractDocument.styleChangeText".equals(e.getEdit().getPresentationName())) {

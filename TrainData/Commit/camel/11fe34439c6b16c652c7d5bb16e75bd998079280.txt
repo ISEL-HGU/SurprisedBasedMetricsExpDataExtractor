@@ -1,0 +1,10 @@
+     * To use a custom ContainerIdFactory for creating container ids. The option
+     * is a org.apache.camel.component.zookeepermaster.ContainerIdFactory type.
+    private String containerIdFactory;
+     * ensemble. The option is a org.apache.curator.framework.CuratorFramework
+     * type.
+    private String curator;
+    public String getContainerIdFactory() {
+    public void setContainerIdFactory(String containerIdFactory) {
+    public String getCurator() {
+    public void setCurator(String curator) {

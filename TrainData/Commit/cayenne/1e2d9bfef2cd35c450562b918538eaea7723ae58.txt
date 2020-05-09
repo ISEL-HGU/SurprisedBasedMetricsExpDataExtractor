@@ -1,0 +1,4 @@
+		assertEquals(0, ivSub1Table.getRowCount());
+		Object[] subdata = ivSub1Table.select();
+		assertEquals(0, ivSub2Table.getRowCount());
+		Object[] subdata = ivSub2Table.select();

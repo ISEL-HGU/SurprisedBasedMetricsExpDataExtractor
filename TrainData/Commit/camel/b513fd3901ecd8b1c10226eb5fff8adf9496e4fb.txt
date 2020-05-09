@@ -1,0 +1,92 @@
+        final String objectType = (String)parameters.get("objectType");
+
+        if (ObjectHelper.equalIgnoreCase(objectType, ServiceNowConstants.RESOURCE_TABLE)) {
+            // validate meta parameters
+            ObjectHelper.notNull(context.getObjectType(), "objectType");
+            ObjectHelper.notNull(context.getObjectName(), "objectName");
+
+        if (ObjectHelper.equalIgnoreCase(objectType, ServiceNowConstants.RESOURCE_IMPORT)) {
+            final MetaContext context = new MetaContext(parameters);
+
+            // validate mate parameters
+            ObjectHelper.notNull(context.getObjectType(), "objectType");
+
+            return importSetMeta(context);
+        }
+
+        throw new UnsupportedOperationException("Unsupported object type <"  objectType  ">");
+                    .withAttribute(MetaData.CONTEXT, ServiceNowConstants.RESOURCE_TABLE)
+    private Optional<MetaDataExtension.MetaData> importSetMeta(MetaContext context) {
+        try {
+            Optional<JsonNode> response = context.getClient().reset()
+                .types(MediaType.APPLICATION_JSON_TYPE)
+                .path("now")
+                .path(context.getConfiguration().getApiVersion())
+                .path("table")
+                .path("sys_db_object")
+                .query("sysparm_exclude_reference_link", "true")
+                .query("sysparm_fields", "name%2Csys_id")
+                .query("sysparm_query", "name=sys_import_set_row")
+                .trasform(HttpMethod.GET, this::findResultNode);
+
+            if (response.isPresent()) {
+                final JsonNode node = response.get();
+                final JsonNode sysId = node.findValue("sys_id");
+
+                if (sysId == null) {
+                    throw new RuntimeException("Unable to determine sys_id of sys_import_set_row");
+                }
+
+                response = context.getClient().reset()
+                    .types(MediaType.APPLICATION_JSON_TYPE)
+                    .path("now")
+                    .path(context.getConfiguration().getApiVersion())
+                    .path("table")
+                    .path("sys_db_object")
+                    .query("sysparm_exclude_reference_link", "true")
+                    .query("sysparm_fields", "name%2Csys_name")
+                    .queryF("sysparm_query", "super_class=%s", sysId.textValue())
+                    .trasform(HttpMethod.GET, this::findResultNode);
+
+                if (response.isPresent()) {
+                    final ObjectNode root = context.getConfiguration().getOrCreateMapper().createObjectNode();
+
+                    processResult(response.get(), n -> {
+                        final JsonNode name = n.findValue("name");
+                        final JsonNode label = n.findValue("sys_name");
+
+                        if (name != null && label != null) {
+                            root.put(name.textValue(), label.textValue());
+                        }
+                    });
+
+                    return Optional.of(
+                        MetaDataBuilder.on(getCamelContext())
+                            .withAttribute(MetaData.CONTENT_TYPE, "application/json")
+                            .withAttribute(MetaData.JAVA_TYPE, JsonNode.class)
+                            .withAttribute(MetaData.CONTEXT, ServiceNowConstants.RESOURCE_IMPORT)
+                            .withPayload(root)
+                            .build()
+                    );
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        return Optional.empty();
+    }
+
+    /**
+     * Determine the hierarchy of a table by inspecting the super_class attribute.
+     */
+                final JsonNode node = response.get();
+                final JsonNode nameNode = node.findValue("name");
+                final JsonNode classNode = node.findValue("super_class");
+        MetaContext(Map<String, Object> parameters) {
+            try {
+                IntrospectionSupport.setProperties(configuration, new HashMap<>(parameters));
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+            this.objectType = (String)parameters.getOrDefault("objectType", ServiceNowConstants.RESOURCE_TABLE);

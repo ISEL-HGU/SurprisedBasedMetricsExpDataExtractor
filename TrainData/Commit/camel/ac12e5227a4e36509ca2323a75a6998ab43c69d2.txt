@@ -1,0 +1,13 @@
+     * The hazelcast mode reference which kind of instance should be used. If
+     * you don't specify the mode then the node mode will be the default.
+     */
+    private String hazelcastMode = "node";
+    /**
+    public String getHazelcastMode() {
+        return hazelcastMode;
+    }
+
+    public void setHazelcastMode(String hazelcastMode) {
+        this.hazelcastMode = hazelcastMode;
+    }
+

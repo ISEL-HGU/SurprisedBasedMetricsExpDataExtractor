@@ -1,0 +1,3 @@
+        LOG.error("An error occurred whilst closing HBase Admin. ", e);
+        LOG.error("An error occurred whilst closing HBase Admin. ", e);
+        LOG.error("An error occurred whilst closing HBase Admin. ", e);

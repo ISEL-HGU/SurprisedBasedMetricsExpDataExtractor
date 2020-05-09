@@ -1,0 +1,3 @@
+                String prefix = "camel.";
+                } else {
+                    prefix = "main.";

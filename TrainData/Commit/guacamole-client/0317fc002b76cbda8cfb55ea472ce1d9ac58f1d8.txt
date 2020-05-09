@@ -1,0 +1,14 @@
+            // Build a filter using the configured or default user search filter
+            // to find all user objects in the LDAP tree
+            StringBuilder userSearchFilter = new StringBuilder();
+            userSearchFilter.append("(&");
+            userSearchFilter.append(confService.getUserSearchFilter());
+            userSearchFilter.append("(");
+            userSearchFilter.append(escapingService.escapeLDAPSearchFilter(usernameAttribute));
+            userSearchFilter.append("=*))");
+         
+                userSearchFilter.toString(),
+        // and with the configured or default search filter
+        StringBuilder ldapQuery = new StringBuilder();
+        ldapQuery.append("(&");
+        ldapQuery.append(confService.getUserSearchFilter());

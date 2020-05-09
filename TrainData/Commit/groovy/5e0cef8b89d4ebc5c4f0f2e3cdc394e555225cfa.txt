@@ -1,0 +1,4 @@
+    protected final EvictableCache<String, Class> classCache = new UnlimitedConcurrentCache<String, Class>();
+    protected final StampedCommonCache<String, Class> sourceCache = new StampedCommonCache<String, Class>();
+        return sourceCache.getAndPut(
+        Map<String, Class> clearedClasses = classCache.clearAll();

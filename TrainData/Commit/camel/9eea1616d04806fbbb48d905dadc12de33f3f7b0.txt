@@ -1,0 +1,2 @@
+        byte[] body = exchange.getIn().getBody(byte[].class);
+        producer.produce(topic, body);

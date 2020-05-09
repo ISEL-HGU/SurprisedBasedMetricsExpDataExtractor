@@ -1,0 +1,2 @@
+        q.addParameter("paintingPrice", 3000);
+        q.addParameter("paintingPrice", 3000);

@@ -1,0 +1,14 @@
+    private static final Pattern COMPONENT_SYNTAX_PARSER = Pattern.compile("([^\\w-]*)([\\w-])");
+        String originalSyntax = null;
+                originalSyntax = row.get("syntax");
+        if (originalSyntax == null) {
+        originalSyntax = after(originalSyntax, ":");
+        Map<String, String> copy = new TreeMap<>(properties);
+        String syntax = "";
+        Matcher syntaxMatcher = COMPONENT_SYNTAX_PARSER.matcher(originalSyntax);
+        while (syntaxMatcher.find()) {
+            syntax = syntaxMatcher.group(1);
+            String propertyName = syntaxMatcher.group(2);
+            String propertyValue = copy.remove(propertyName);
+            syntax = propertyValue != null ? propertyValue : propertyName;
+            sb.append(syntax);

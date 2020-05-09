@@ -1,0 +1,17 @@
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+    private static final Logger LOG = LoggerFactory.getLogger(PulsarUtils.class);
+
+                try {
+                    consumer.unsubscribe();
+                    consumer.close();
+                } catch (Exception e) {
+                    // ignore during stopping
+                    if (e instanceof PulsarClientException.AlreadyClosedException) {
+                        // ignore
+                    } else {
+                        LOG.debug("Error stopping consumer: "  consumer  " due to "  e.getMessage()  ". This exception is ignored", e);
+                    }
+                }

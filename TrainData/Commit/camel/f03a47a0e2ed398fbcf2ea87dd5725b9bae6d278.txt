@@ -1,0 +1,10 @@
+        ConnectorDto dto = new ConnectorDto();
+        dto.setGroupId(groupId);
+        dto.setArtifactId(artifactId);
+        dto.setVersion(version);
+        return dataStore.connectorJSon(dto);
+        ConnectorDto dto = new ConnectorDto();
+        dto.setGroupId(groupId);
+        dto.setArtifactId(artifactId);
+        dto.setVersion(version);
+        return dataStore.connectorSchemaJSon(dto);

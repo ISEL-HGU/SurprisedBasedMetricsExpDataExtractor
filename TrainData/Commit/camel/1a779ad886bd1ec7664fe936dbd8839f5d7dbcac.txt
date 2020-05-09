@@ -1,0 +1,6 @@
+            // special for bindy
+            if ("org.apache.camel.model.dataformat.BindyType".equals(option.getJavaType())) {
+                // force to use a string type
+                type = "java.lang.String";
+            } else if (option.getJavaType().contains("org.apache.camel.model.dataformat")) {
+                // skip options that are from the model as they are not possible to configure anyway

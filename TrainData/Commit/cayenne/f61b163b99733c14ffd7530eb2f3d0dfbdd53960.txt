@@ -1,0 +1,7 @@
+	public static final String SINGLE_SERVER_CLASS = "Single Server class";
+		standardSubclassTemplates.add(SINGLE_SERVER_CLASS);
+		standardTemplates.put(SINGLE_SERVER_CLASS, ClassGenerationAction.SINGLE_CLASS_TEMPLATE);
+		String[] keys = {};
+		for (String key : keys) {
+			FSPath path = new FSPath(preference.node(key));
+			customTemplates.put(key, path.getPath());

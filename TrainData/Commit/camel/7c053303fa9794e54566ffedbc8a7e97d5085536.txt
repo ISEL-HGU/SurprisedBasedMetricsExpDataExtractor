@@ -1,0 +1,4 @@
+    public boolean process(Exchange exchange, AsyncCallback originalCallback) {
+            originalCallback.done(true);
+                originalCallback.done(true);
+                exchange.getContext().getReactiveExecutor().callback(originalCallback);

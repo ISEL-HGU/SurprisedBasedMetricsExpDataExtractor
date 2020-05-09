@@ -1,0 +1,7 @@
+    private volatile boolean running;
+
+            running = true;
+        running = false;
+    public boolean isRunning() {
+        return running;
+    }

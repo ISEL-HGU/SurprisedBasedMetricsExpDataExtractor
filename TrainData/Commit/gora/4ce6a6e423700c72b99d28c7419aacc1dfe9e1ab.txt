@@ -1,0 +1,10 @@
+import org.apache.gora.cassandra.query.CassandraQuery;
+    return (T) cassandraSerializer.get(key, fields);
+    return (Result<K,T>) cassandraSerializer.execute(this, query);
+  }
+
+  public void updateByQuery(Query<K,T> query) {
+
+    Query<K,T> query = new CassandraQuery(this);
+    query.setFields(mapping.getFieldNames());
+    return query;

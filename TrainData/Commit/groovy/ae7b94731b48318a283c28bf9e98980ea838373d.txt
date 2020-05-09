@@ -1,0 +1,4 @@
+import java.util.ArrayList;
+        List<String> stringList = new ArrayList<String>(Arrays.asList(getStrings()));
+        List<Object> valueList = new ArrayList<Object>(Arrays.asList(getValues()));
+            thatStrings = new ArrayList<String>(thatStrings);

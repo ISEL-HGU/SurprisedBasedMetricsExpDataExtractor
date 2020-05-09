@@ -1,0 +1,39 @@
+import org.codehaus.groovy.classgen.asm.util.LoggableClassVisitor;
+    private static final String GROOVY_LOG_CLASSGEN = "groovy.log.classgen";
+    private static final boolean LOG_CLASSGEN;
+    static {
+        LOG_CLASSGEN = Boolean.valueOf(System.getProperty(GROOVY_LOG_CLASSGEN));
+    }
+
+        this.cv = this.createClassVisitor(cv);
+    private ClassVisitor createClassVisitor(ClassVisitor cv) {
+        if (!LOG_CLASSGEN) {
+            return cv;
+        }
+        if (cv instanceof LoggableClassVisitor) {
+            return cv;
+        }
+        return new LoggableClassVisitor(cv);
+    }
+
+
+
+
+
+
+    }
+
+                && classNode.getOuterClass() != null
+                && classNode.getSuperClass() == ClassHelper.CLOSURE_TYPE;
+
+
+
+
+
+
+
+
+        lineNumber = n;
+    public void resetLineNumber() {
+        setLineNumber(-1);
+    }

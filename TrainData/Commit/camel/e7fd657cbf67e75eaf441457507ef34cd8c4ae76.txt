@@ -1,0 +1,6 @@
+import org.apache.camel.impl.DefaultComponent;
+public class CwComponent extends DefaultComponent {
+        this(null);
+        super(context);
+        
+        registerExtension(new CwComponentVerifierExtension());

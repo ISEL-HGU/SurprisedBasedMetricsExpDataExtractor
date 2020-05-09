@@ -1,0 +1,1 @@
+            getContext().setGlobalOptions(getProperties().asMap());

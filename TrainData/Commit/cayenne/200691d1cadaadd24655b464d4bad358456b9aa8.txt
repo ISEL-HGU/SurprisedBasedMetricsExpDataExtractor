@@ -1,0 +1,43 @@
+import org.apache.cayenne.modeler.action.ObjEntityToSuperEntityAction;
+import javax.swing.ImageIcon;
+import javax.swing.table.TableCellRenderer;
+import java.awt.Point;
+import java.awt.Rectangle;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+        table.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                int row = table.rowAtPoint(e.getPoint());
+                int col = table.columnAtPoint(e.getPoint());
+                ObjRelationshipTableModel tableModel = ((ObjRelationshipTableModel) table.getModel());
+                ObjRelationship relationship = tableModel.getRelationship(row);
+                int columnFromModel = table.getColumnModel().getColumn(col).getModelIndex();
+                if (row >= 0 && columnFromModel == ObjRelationshipTableModel.REL_NAME) {
+                    if(relationship.getSourceEntity() != tableModel.getEntity()) {
+                        TableCellRenderer renderer = table.getCellRenderer(row, col);
+                        Rectangle rectangle = table.getCellRect(row, col, false);
+                        ((StringRenderer) renderer).mouseClicked(e, rectangle.x);
+                    }
+                }
+            }
+        });
+
+            setIcon(null);
+
+            column = table.getColumnModel().getColumn(column).getModelIndex();
+                setForeground(isSelected ? new Color(0xCECECE) : Color.GRAY);
+                if(column == ObjRelationshipTableModel.REL_NAME) {
+                    ImageIcon icon = ModelerUtil.buildIcon("icon-inheritance.png");
+                    setIcon(icon);
+                }
+
+
+        public void mouseClicked(MouseEvent event, int x) {
+            Point point = event.getPoint();
+            ImageIcon icon = ModelerUtil.buildIcon("icon-inheritance.png");
+            if(point.x - x <= icon.getIconWidth()) {
+                ActionManager actionManager = Application.getInstance().getActionManager();
+                actionManager.getAction(ObjEntityToSuperEntityAction.class).performAction(null);
+            }
+        }

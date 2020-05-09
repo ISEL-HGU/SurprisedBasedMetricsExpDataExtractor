@@ -1,0 +1,9 @@
+        Producer producer = endpoint.createProducer();
+        return new ConnectorProducer(endpoint, producer, getComponent().getBeforeProducer(), getComponent().getAfterProducer());
+        Consumer answer = endpoint.createConsumer(processor);
+        return answer;
+    }
+
+    @Override
+    public ConnectorComponent getComponent() {
+        return (ConnectorComponent) super.getComponent();

@@ -1,0 +1,10 @@
+        this.metaClass = getDefaultMetaClass();
+        return this.metaClass;
+        this.metaClass =
+                null == metaClass
+                    ? getDefaultMetaClass()
+                    : metaClass;
+    }
+
+    private MetaClass getDefaultMetaClass() {
+        return InvokerHelper.getMetaClass(this.getClass());

@@ -1,0 +1,9 @@
+import org.codehaus.groovy.ast.PropertyNode;
+                    for (ClassNode inode : node.getAllInterfaces()) {
+                        if (Traits.isTrait(inode)) {
+                            List<PropertyNode> traitProps = inode.getProperties();
+                            for (PropertyNode pn : traitProps) {
+                                visitProperty(pn);
+                            }
+                        }
+                    }

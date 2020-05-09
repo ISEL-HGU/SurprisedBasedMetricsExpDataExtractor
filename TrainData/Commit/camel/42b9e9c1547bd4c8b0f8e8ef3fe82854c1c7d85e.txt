@@ -1,0 +1,2 @@
+@UriEndpoint(firstVersion = "2.14.0", scheme = "box", title = "Box", syntax = "box:apiName/methodName",
+    consumerClass = BoxConsumer.class, consumerPrefix = "consumer", label = "api,file,cloud", lenientProperties = true)

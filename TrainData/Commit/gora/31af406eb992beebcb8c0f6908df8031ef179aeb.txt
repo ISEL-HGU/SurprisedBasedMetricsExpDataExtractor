@@ -1,0 +1,18 @@
+
+      String mappingBinName = aerospikeParameters.getAerospikeMapping().getBinMapping()
+              .get(fields.get(i).name());
+      if (mappingBinName == null) {
+        LOG.error("Aerospike mapping for field {}#{} not found. Wrong gora-aerospike-mapping.xml?",
+                persistent.getClass().getName(), fields.get(i).name());
+        throw new RuntimeException(
+                "Aerospike mapping for field ["  persistent.getClass().getName()  "#"  fields
+                        .get(i).name()  "] not found. Wrong gora-aerospike-mapping.xml?");
+      Bin bin;
+      if (persistentValue != null) {
+        bin = new Bin(mappingBinName,
+                getSerializableValue(persistentValue, fields.get(i).schema()));
+      } else {
+        bin = Bin.asNull(mappingBinName);
+      }
+      aerospikeClient
+              .put(aerospikeParameters.getAerospikeMapping().getWritePolicy(), recordKey, bin);

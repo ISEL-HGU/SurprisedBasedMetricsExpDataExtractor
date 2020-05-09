@@ -1,0 +1,1 @@
+        return bmpSingleton != null && bmpSingleton.bmInfos.containsKey(ClassUtils.getClassLoader(null));

@@ -1,0 +1,1 @@
+        return exchange.getProperty(Exchange.INTERRUPTED, false, boolean.class);

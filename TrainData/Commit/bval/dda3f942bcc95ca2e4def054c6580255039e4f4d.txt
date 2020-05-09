@@ -1,0 +1,15 @@
+            each(expand(group), (g, s) -> {
+                validateDescriptorConstraints(g, s);
+                recurse(g, s);
+            }, sink);
+            propertyFrames().forEach(f -> f.process(group, sink));
+        private Stream<Frame<?>> propertyFrames() {
+            final Stream<PropertyD<?>> reachableProperties = properties.filter(d -> {
+                final PathImpl p = PathImpl.copy(context.getPath());
+                p.addProperty(d.getPropertyName());
+                return traversableResolver.isReachable(context.getValue(), p.removeLeafNode(), getRootBeanClass(), p,
+                    d.getElementType());
+            });
+                d -> d.read(context).filter(context -> !context.isRecursive()).map(child -> propertyFrame(d, child)));
+                validatorContext.getGroupsComputer().computeCascadingGroups(descriptor.getGroupConversions(),
+                    descriptor.getDeclaringClass().isAssignableFrom(group) ? Default.class : group);

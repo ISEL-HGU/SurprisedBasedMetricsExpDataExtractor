@@ -1,0 +1,3 @@
+     * WLC algorithm.  null indicates nothing has been set, and anything less
+     * than 1 eliminates the system from being used for connections.
+     *     The connection weight as an Integer.

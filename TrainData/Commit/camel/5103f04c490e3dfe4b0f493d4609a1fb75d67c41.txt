@@ -1,0 +1,2 @@
+import org.apache.camel.support.dump.ProcessorStatDump;
+import org.apache.camel.support.dump.RouteStatDump;

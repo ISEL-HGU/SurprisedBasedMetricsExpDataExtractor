@@ -1,0 +1,10 @@
+import org.apache.cayenne.unit.UnitDbAdapter;
+    @Inject
+    private UnitDbAdapter unitDbAdapter;
+
+        if(unitDbAdapter.isLowerCaseNames()) {
+            assertTrue(row.containsKey("artist_id"));
+        } else {
+            assertTrue(row.containsKey("ARTIST_ID"));
+            assertEquals(1L, row.get("ARTIST_ID"));
+            assertEquals("a", row.get("ARTIST_NAME"));

@@ -1,0 +1,2 @@
+     * The AWS KMS default configuration
+     * The region in which KMS client needs to work

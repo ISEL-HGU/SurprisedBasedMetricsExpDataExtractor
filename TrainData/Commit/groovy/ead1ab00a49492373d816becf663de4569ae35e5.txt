@@ -1,0 +1,2 @@
+        return l.toArray(new GenericsType[0]);
+            doCreateSuperForwarder(targetNode, superForwarder, traits.toArray(new ClassNode[0]), genericsSpec);

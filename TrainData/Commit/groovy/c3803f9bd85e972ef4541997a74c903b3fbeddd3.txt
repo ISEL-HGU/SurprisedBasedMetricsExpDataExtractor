@@ -1,0 +1,8 @@
+        incrementBatchCount();
+    }
+
+    /**
+     * Increments batch count (after addBatch(..) has been called)
+     * and execute {@code delegate.executeBatch()} if batchSize has been reached.
+     */
+    protected void incrementBatchCount() throws SQLException {

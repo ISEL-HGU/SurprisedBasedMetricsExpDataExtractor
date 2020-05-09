@@ -1,0 +1,5 @@
+            int count = 0;
+                        count;
+
+            getLog().info("Generated "  jaxbIndexOutDir  " containing "  count  " jaxb.index elements");
+

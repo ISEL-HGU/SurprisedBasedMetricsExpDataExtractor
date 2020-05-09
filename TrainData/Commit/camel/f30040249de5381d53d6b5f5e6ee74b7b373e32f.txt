@@ -1,0 +1,24 @@
+import java.util.Map;
+
+     * A map of caches configurations to be used to create caches.
+     */
+    private Map<String, CacheConfiguration<?, ?>> cachesConfigurations;
+    /**
+    public Map<String, CacheConfiguration<?, ?>> getCachesConfigurations() {
+        return cachesConfigurations;
+    }
+
+    public void setCachesConfigurations(
+            Map<String, CacheConfiguration<?, ?>> cachesConfigurations) {
+        this.cachesConfigurations = cachesConfigurations;
+    }
+
+        private Map configurations;
+        public Map getConfigurations() {
+            return configurations;
+        }
+
+        public void setConfigurations(Map configurations) {
+            this.configurations = configurations;
+        }
+

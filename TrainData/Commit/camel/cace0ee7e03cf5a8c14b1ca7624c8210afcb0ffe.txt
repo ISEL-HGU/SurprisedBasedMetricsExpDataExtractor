@@ -1,0 +1,1 @@
+        private String outputNodeSearchType = org.apache.camel.component.xmlsecurity.api.DefaultXmlSignature2Message.OUTPUT_NODE_SEARCH_TYPE_DEFAULT;

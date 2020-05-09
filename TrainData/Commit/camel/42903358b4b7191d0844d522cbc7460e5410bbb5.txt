@@ -1,0 +1,6 @@
+             "if (config.getCorsHeaders() != null) {\n"
+             "    Map<String, Object> map = CollectionHelper.flatternKeysInMap(config.getCorsHeaders(), \".\");\n"
+             "    Map<String, String> target = new HashMap<>();\n"
+             "    map.forEach((k, v) -> target.put(k, v.toString()));\n"
+             "    definition.setCorsHeaders(target);\n"
+             "}\n"

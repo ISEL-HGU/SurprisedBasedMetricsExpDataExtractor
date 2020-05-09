@@ -1,0 +1,45 @@
+        String typeName = type.getName();
+        ModuleNode module = currentClass.getModule();
+        for (ImportNode importNode : module.getStaticImports().values()) {
+            String importFieldName = importNode.getFieldName();
+            String importAlias = importNode.getAlias();
+            if (!typeName.equals(importAlias)) continue;
+
+            ConstructedOuterNestedClassNode constructedOuterNestedClassNode = tryToConstructOuterNestedClassNodeViaStaticImport(compileUnit, importNode, importFieldName);
+            if (null != constructedOuterNestedClassNode) {
+                compileUnit.addClassNodeToResolve(constructedOuterNestedClassNode);
+        for (Map.Entry<String, ClassNode> entry : compileUnit.getClassesToCompile().entrySet()) {
+            ClassNode outerClassNode = entry.getValue();
+            ConstructedOuterNestedClassNode constructedOuterNestedClassNode = tryToConstructOuterNestedClassNode(type, outerClassNode);
+            if (null != constructedOuterNestedClassNode) {
+                compileUnit.addClassNodeToResolve(constructedOuterNestedClassNode);
+                return true;
+            }
+        }
+
+        boolean toResolveFurther = false;
+        for (ImportNode importNode : module.getStaticStarImports().values()) {
+            ConstructedOuterNestedClassNode constructedOuterNestedClassNode = tryToConstructOuterNestedClassNodeViaStaticImport(compileUnit, importNode, typeName);
+            if (null != constructedOuterNestedClassNode) {
+                compileUnit.addClassNodeToResolve(constructedOuterNestedClassNode);
+                toResolveFurther = true; // do not return here and try all static star imports because currently we do not know which outer class the class to resolve is declared in
+            }
+        }
+
+        return toResolveFurther;
+    private ConstructedOuterNestedClassNode tryToConstructOuterNestedClassNodeViaStaticImport(CompileUnit compileUnit, ImportNode importNode, String typeName) {
+        String importClassName = importNode.getClassName();
+        ClassNode outerClassNode = compileUnit.getClass(importClassName);
+
+        if (null == outerClassNode) return null;
+
+        String outerNestedClassName = importClassName  "$"  typeName.replace(".", "$");
+        return new ConstructedOuterNestedClassNode(outerClassNode, outerNestedClassName);
+    }
+
+    private ConstructedOuterNestedClassNode tryToConstructOuterNestedClassNode(ClassNode type, ClassNode outerClassNode) {
+        String outerClassName = outerClassNode.getName();
+
+            if (outerClassName.endsWith(ident)) {
+                String outerNestedClassName = outerClassName  typeName.substring(ident.length()).replace(".", "$");
+                return new ConstructedOuterNestedClassNode(outerClassNode, outerNestedClassName);

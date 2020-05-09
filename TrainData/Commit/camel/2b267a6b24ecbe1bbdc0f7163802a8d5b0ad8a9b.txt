@@ -1,0 +1,7 @@
+     * The output directory for generated component schema file
+     *
+     * @parameter default-value="${project.build.directory}/classes"
+     */
+    protected File classesDir;
+
+    /**

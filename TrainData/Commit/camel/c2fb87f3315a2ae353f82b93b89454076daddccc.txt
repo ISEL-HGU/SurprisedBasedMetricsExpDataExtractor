@@ -1,0 +1,27 @@
+ * schema documentation and for some models java source code is generated
+ * which allows for faster property placeholder resolution at runtime; without the
+ * overhead of using reflections.
+        processFile(processingEnv, packageName, fileName, writer -> writeJSonSchemeAndPropertyPlaceholderProvider(processingEnv, writer,
+        // if last then generate source code for helper that contains all the generated property placeholder providers
+        // (this allows fast property placeholders at runtime without reflection overhead)
+    protected void writeJSonSchemeAndPropertyPlaceholderProvider(ProcessingEnvironment processingEnv, PrintWriter writer, RoundEnvironment roundEnv, TypeElement classElement,
+                                                                 XmlRootElement rootElement, String javaTypeName, String modelName, Set<String> propertyPlaceholderDefinitions) {
+        // write json schema file
+        // generate property placeholder provider java source code
+        generatePropertyPlaceholderProviderSource(processingEnv, writer, roundEnv, classElement, eipModel, eipOptions, propertyPlaceholderDefinitions);
+    protected void generatePropertyPlaceholderProviderSource(ProcessingEnvironment processingEnv, PrintWriter writer, RoundEnvironment roundEnv, TypeElement classElement,
+                                                             EipModel eipModel, Set<EipOption> options, Set<String> propertyPlaceholderDefinitions) {
+        // not ever model classes support property placeholders as this has been limited to mainly Camel routes
+        // so filter out unwanted models
+                    String getOrSet = sanitizePropertyPlaceholderOptionName(def, option);
+    /**
+     * Some models have different setter/getter names vs the xml name (eg as defined in @XmlAttribute).
+     * So we need to correct this using this method.
+     */
+    public String sanitizePropertyPlaceholderOptionName(String def, EipOption option) {
+            w.write("        Map<Class, Function<Object, DefinitionPropertyPlaceholderConfigurable>> map = new HashMap<>("  propertyPlaceholderDefinitions.size()  ");\n");
+            int weight = weight(o1);
+            int weight2 = weight(o2);
+            if (weight == weight2) {
+                return weight2 - weight;
+        private int weight(EipOption o) {

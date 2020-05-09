@@ -1,0 +1,3 @@
+    public void setRequestContent(InputStream ins, int contentLength) {
+        this.request.content(new CamelInputStreamContentProvider(ins, contentLength), this.requestContentType);
+    }

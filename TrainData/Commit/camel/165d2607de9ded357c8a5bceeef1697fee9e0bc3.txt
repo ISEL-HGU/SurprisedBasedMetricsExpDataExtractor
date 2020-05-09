@@ -1,0 +1,25 @@
+import org.apache.camel.language.simple.SimpleLanguage;
+        // the values can be dynamic using simple language so compute those
+        String val = uri;
+        if (SimpleLanguage.hasSimpleFunction(val)) {
+            val = SimpleLanguage.simple(val).evaluate(exchange, String.class);
+        }
+        message.setHeader(ServiceCallConstants.SERVICE_CALL_URI, val);
+
+        val = contextPath;
+        if (SimpleLanguage.hasSimpleFunction(val)) {
+            val = SimpleLanguage.simple(val).evaluate(exchange, String.class);
+        }
+        message.setHeader(ServiceCallConstants.SERVICE_CALL_CONTEXT_PATH, val);
+
+        val = scheme;
+        if (SimpleLanguage.hasSimpleFunction(val)) {
+            val = SimpleLanguage.simple(val).evaluate(exchange, String.class);
+        }
+        message.setHeader(ServiceCallConstants.SERVICE_CALL_SCHEME, val);
+
+        String serviceName = name;
+        if (SimpleLanguage.hasSimpleFunction(serviceName)) {
+            serviceName = SimpleLanguage.simple(serviceName).evaluate(exchange, String.class);
+        }
+        message.setHeader(ServiceCallConstants.SERVICE_NAME, serviceName);

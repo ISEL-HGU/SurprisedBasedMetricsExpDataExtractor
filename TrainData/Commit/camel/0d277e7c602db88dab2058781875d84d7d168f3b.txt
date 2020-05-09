@@ -1,0 +1,13 @@
+     * To use the given configuration for security with JAAS. The option is a
+     * javax.security.auth.login.Configuration type.
+     */
+    private String jAASConfiguration;
+    /**
+    public String getJAASConfiguration() {
+        return jAASConfiguration;
+    }
+
+    public void setJAASConfiguration(String jAASConfiguration) {
+        this.jAASConfiguration = jAASConfiguration;
+    }
+

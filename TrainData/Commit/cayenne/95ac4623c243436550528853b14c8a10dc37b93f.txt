@@ -1,0 +1,1 @@
+        builder.add(new JLabel("Remove Object Attributes mapped on Foreign Keys?"), cc

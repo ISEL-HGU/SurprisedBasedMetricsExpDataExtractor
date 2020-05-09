@@ -1,0 +1,14 @@
+    @Metadata(defaultValue = "0", description = "Sets the interval for log messages when retries are attempted.")
+    private String retryAttemptedLogInterval;
+    @XmlAttribute
+        if (retryAttemptedLogInterval != null) {
+            answer.setRetryAttemptedLogInterval(CamelContextHelper.parseInteger(context, retryAttemptedLogInterval));
+        }
+    public String getRetryAttemptedLogInterval() {
+        return retryAttemptedLogInterval;
+    }
+
+    public void setRetryAttemptedLogInterval(String retryAttemptedLogInterval) {
+        this.retryAttemptedLogInterval = retryAttemptedLogInterval;
+    }
+

@@ -1,0 +1,2 @@
+            node.addMember(entry.getKey(), annotationValueToExpression(entry.getValue(), resolver));
+            return new ClassExpression(resolver.resolveType(Type.getType(((TypeWrapper) value).desc)));

@@ -1,0 +1,19 @@
+import java.util.Optional;
+import org.apache.camel.util.ObjectHelper;
+import org.apache.camel.util.StringHelper;
+import org.apache.camel.util.URISupport;
+            final String exchangeUri = UndertowHelper.createURL(exchange, getEndpoint());
+            final URI uri = UndertowHelper.createURI(exchange, exchangeUri, getEndpoint());
+
+            final String pathAndQuery = URISupport.pathAndQueryOf(uri);
+            request.setPath(pathAndQuery);
+            final HeaderMap requestHeaders = request.getRequestHeaders();
+
+            // Set the Host header
+            Message message = exchange.getIn();
+            final String host = message.getHeader("Host", String.class);
+            requestHeaders.put(Headers.HOST, Optional.ofNullable(host).orElseGet(()-> uri.getAuthority()));
+
+                requestHeaders.put(Headers.CONTENT_LENGTH, bodyAsByte.array().length);
+                    requestHeaders.putAll(new HttpString(entry.getKey()), entry.getValue());
+                LOG.debug("Executing http {} method: {}", method, pathAndQuery);

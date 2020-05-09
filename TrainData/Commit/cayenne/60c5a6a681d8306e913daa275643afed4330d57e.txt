@@ -1,0 +1,5 @@
+import javax.swing.table.TableModel;
+    private static final int DB_ATTRIBUTE_PATH_COLUMN = 2;
+        ObjAttributeTableModel currentModel = (ObjAttributeTableModel) table.getModel();
+                currentModel.setUpdatedValueAt(dbAttributePath, row, DB_ATTRIBUTE_PATH_COLUMN);
+                currentModel.getAttribute(row).getValue().setDbAttributePath(dbAttributePath);

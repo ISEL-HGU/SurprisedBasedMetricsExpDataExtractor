@@ -1,0 +1,4 @@
+        // if the component has known class name
+        if (!"@@@JAVATYPE@@@".equals(componentModel.getJavaType())) {
+            generateComponentConfigurer(roundEnv, uriEndpoint, scheme, schemes, componentModel, componentOptions);
+        }

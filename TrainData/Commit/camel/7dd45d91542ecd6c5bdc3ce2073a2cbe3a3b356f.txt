@@ -1,0 +1,10 @@
+        @XmlElement(name = "ribbonLoadBalancer", type = RibbonServiceCallLoadBalancerConfiguration.class),
+        @XmlElement(name = "defaultLoadBalancer", type = DefaultServiceCallLoadBalancerConfiguration.class) }
+    public ServiceCallDefinition defaultLoadBalancer() {
+        DefaultServiceCallLoadBalancerConfiguration conf = new DefaultServiceCallLoadBalancerConfiguration();
+        setLoadBalancerConfiguration(conf);
+
+        return this;
+    }
+
+        } else if (config != null && config.getServiceFilterConfiguration() != null) {

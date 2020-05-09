@@ -1,0 +1,12 @@
+    protected boolean buildDirectory(File dir, Set<PosixFilePermission> permissions, boolean absolute) {
+
+            File base;
+            // reusing absolute flag to handle relative and absolute paths
+            if (absolute) {
+                base = new File("");
+            } else {
+                base = new File(".");
+            }
+
+            buildDirectory(endpoint.getFile(), endpoint.getDirectoryPermissions(), absolute);
+                return buildDirectory(path, endpoint.getDirectoryPermissions(), absolute);

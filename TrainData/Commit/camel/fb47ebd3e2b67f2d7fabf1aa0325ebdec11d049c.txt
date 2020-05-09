@@ -1,0 +1,6 @@
+import org.apache.camel.component.telegram.model.SendVenueMessage;
+import org.apache.camel.component.telegram.model.StopMessageLiveLocationMessage;
+        } else if (message instanceof StopMessageLiveLocationMessage) {
+            resultMessage = api.stopMessageLiveLocation(authorizationToken, (StopMessageLiveLocationMessage) message);
+        } else if (message instanceof SendVenueMessage) {
+            resultMessage = api.sendVenue(authorizationToken, (SendVenueMessage) message);

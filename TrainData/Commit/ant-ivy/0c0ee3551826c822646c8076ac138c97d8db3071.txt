@@ -1,0 +1,2 @@
+            for (File file : currDir.listFiles()) {
+                zipFiles(rootDir, file, zos);

@@ -1,0 +1,1 @@
+    void closeWithoutModelReset() throws HiveException {

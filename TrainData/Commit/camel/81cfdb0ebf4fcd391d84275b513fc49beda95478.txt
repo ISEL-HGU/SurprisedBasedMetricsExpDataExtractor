@@ -1,0 +1,1 @@
+            // get bundle classloader for camel-hdfs bundle

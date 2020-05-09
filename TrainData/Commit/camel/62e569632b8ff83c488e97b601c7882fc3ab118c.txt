@@ -1,0 +1,14 @@
+                                if (row.containsKey("deprecated")) {
+                                    languageModel.setDeprecated(row.get("deprecated"));
+                                }
+        boolean deprecated = "true".equals(languageModel.getDeprecated());
+        buffer.append("\n    \"deprecated\": ").append(deprecated).append(",");
+        private String deprecated;
+        public String getDeprecated() {
+            return deprecated;
+        }
+
+        public void setDeprecated(String deprecated) {
+            this.deprecated = deprecated;
+        }
+

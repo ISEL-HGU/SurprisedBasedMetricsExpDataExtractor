@@ -1,0 +1,12 @@
+import static org.apache.camel.builder.ExpressionBuilder.routeIdExpression;
+
+        // get the current route id we use
+        final String id = routeIdExpression().evaluate(exchange, String.class);
+
+        Stack<String> fatals = exchange.getProperty(Exchange.FATAL_FALLBACK_ERROR_HANDLER, null, Stack.class);
+        if (fatals.search(id) > -1) {
+            LOG.warn("Circular error-handler detected at route: {} - breaking out processing Exchange: {}", id, exchange);
+            exchange.setProperty(Exchange.ERRORHANDLER_CIRCUIT_DETECTED, true);
+        fatals.push(id);
+                    Stack<String> fatals = exchange.getProperty(Exchange.FATAL_FALLBACK_ERROR_HANDLER, null, Stack.class);
+                        fatals.remove(id);

@@ -1,0 +1,56 @@
+import java.io.StringReader;
+import java.io.StringWriter;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+        final PathVisitor<RestsDefinition> restDslStatement = new PathVisitor<>(swagger.getBasePath(), emitter, filter,
+            destinationGenerator());
+        final RestsDefinition rests = emitter.result();
+        final String xml = ModelHelper.dumpModelAsXml(context, rests);
+
+        final DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+        builderFactory.setNamespaceAware(true);
+
+        final DocumentBuilder builder = builderFactory.newDocumentBuilder();
+
+        final Document document = builder.parse(new InputSource(new StringReader(xml)));
+
+        final Element root = document.getDocumentElement();
+
+            document.renameNode(root, "http://camel.apache.org/schema/blueprint", root.getTagName());
+
+        final NodeList elements = document.getElementsByTagName("*");
+        for (int i = 0; i < elements.getLength(); i) {
+            final Element element = (Element) elements.item(i);
+            element.removeAttribute("customId");
+        }
+            final Element configuration = document.createElement("restConfiguration");
+            configuration.setAttribute("component", restComponent);
+
+                configuration.setAttribute("contextPath", restContextPath);
+
+                configuration.setAttribute("apiContextPath", apiContextPath);
+
+            root.insertBefore(configuration, root.getFirstChild());
+        final TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        final Transformer transformer = transformerFactory.newTransformer();
+
+        final StringWriter writer = new StringWriter();
+        transformer.transform(new DOMSource(document), new StreamResult(writer));
+
+        return writer.toString();
+    }
+
+    public RestDslXmlGenerator withBlueprint() {
+        blueprint = true;
+        return this;

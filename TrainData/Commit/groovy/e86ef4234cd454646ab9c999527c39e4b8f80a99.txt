@@ -1,0 +1,2 @@
+import org.codehaus.groovy.runtime.memoize.CommonCache;
+    private static final CommonCache<ClassLoader, Map<String, List<MethodNode>>> CACHE = new CommonCache<>(new WeakHashMap<>());

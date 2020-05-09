@@ -1,0 +1,98 @@
+import java.util.Set;
+import org.apache.guacamole.properties.StringSetProperty;
+     * A comma-separated list of the identifiers of all authentication
+     * providers whose internal failures should be tolerated during the
+     * authentication process. If an authentication provider within this list
+     * encounters an internal error during the authentication process, it will
+     * simply be skipped, allowing other authentication providers to continue
+     * trying to authenticate the user. Internal errors within authentication
+     * providers that are not within this list will halt the authentication
+     * process entirely.
+     */
+    private final StringSetProperty TOLERATE_INTERNAL_FAILURES = new StringSetProperty() {
+
+        @Override
+        public String getName() {
+            return "tolerate-internal-failures";
+        }
+
+    };
+
+    /**
+     *
+     * @param tolerateFailures
+     *     The set of identifiers of all authentication providers whose
+     *     internal failures should be tolerated during the authentication
+     *     process. If the identifier of an authentication provider is within
+     *     this set, errors during authentication will result in the
+     *     authentication provider being ignored for that authentication
+     *     attempt, with the authentication process proceeding as if that
+     *     authentication provider were not present. By default, errors during
+     *     authentication halt the authentication process entirely.
+    private void bindAuthenticationProvider(
+            Class<? extends AuthenticationProvider> authenticationProvider,
+            Set<String> tolerateFailures) {
+        boundAuthenticationProviders.add(new AuthenticationProviderFacade(
+                authenticationProvider, tolerateFailures));
+     *
+     * @param tolerateFailures
+     *     The set of identifiers of all authentication providers whose
+     *     internal failures should be tolerated during the authentication
+     *     process. If the identifier of an authentication provider is within
+     *     this set, errors during authentication will result in the
+     *     authentication provider being ignored for that authentication
+     *     attempt, with the authentication process proceeding as if that
+     *     authentication provider were not present. By default, errors during
+     *     authentication halt the authentication process entirely.
+    private void bindAuthenticationProviders(
+            Collection<Class<AuthenticationProvider>> authProviders,
+            Set<String> tolerateFailures) {
+            bindAuthenticationProvider(authenticationProvider, tolerateFailures);
+     * Returns the set of identifiers of all authentication providers whose
+     * internal failures should be tolerated during the authentication process.
+     * If the identifier of an authentication provider is within this set,
+     * errors during authentication will result in the authentication provider
+     * being ignored for that authentication attempt, with the authentication
+     * process proceeding as if that authentication provider were not present.
+     * By default, errors during authentication halt the authentication process
+     * entirely.
+     *
+     * @return
+     *     The set of identifiers of all authentication providers whose
+     *     internal failures should be tolerated during the authentication
+     *     process.
+     */
+    private Set<String> getToleratedAuthenticationProviders() {
+
+        // Parse list of auth providers whose internal failures should be
+        // tolerated
+        try {
+            return environment.getProperty(TOLERATE_INTERNAL_FAILURES, Collections.<String>emptySet());
+        }
+
+        // Use empty set by default if property cannot be parsed
+        catch (GuacamoleException e) {
+            logger.warn("The list of authentication providers specified via the \"{}\" property could not be parsed: {}", TOLERATE_INTERNAL_FAILURES.getName(), e.getMessage());
+            logger.debug("Unable to parse \"{}\" property.", TOLERATE_INTERNAL_FAILURES.getName(), e);
+            return Collections.<String>emptySet();
+        }
+
+    }
+
+    /**
+     *
+     * @param toleratedAuthProviders
+     *     The set of identifiers of all authentication providers whose
+     *     internal failures should be tolerated during the authentication
+     *     process. If the identifier of an authentication provider is within
+     *     this set, errors during authentication will result in the
+     *     authentication provider being ignored for that authentication
+     *     attempt, with the authentication process proceeding as if that
+     *     authentication provider were not present. By default, errors during
+     *     authentication halt the authentication process entirely.
+            Collection<Resource> cssResources,
+            Set<String> toleratedAuthProviders) {
+                bindAuthenticationProviders(extension.getAuthenticationProviderClasses(), toleratedAuthProviders);
+        final Set<String> toleratedAuthProviders = getToleratedAuthenticationProviders();
+        loadExtensions(javaScriptResources, cssResources, toleratedAuthProviders);
+        bindAuthenticationProvider(FileAuthenticationProvider.class, toleratedAuthProviders);

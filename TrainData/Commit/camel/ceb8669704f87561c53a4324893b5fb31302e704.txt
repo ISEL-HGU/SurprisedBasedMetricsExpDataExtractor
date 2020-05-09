@@ -1,0 +1,3 @@
+
+        // show how you can add a fixed header
+        setBeforeConsumer(e -> e.getIn().setHeader("whoami", "I am foo"));

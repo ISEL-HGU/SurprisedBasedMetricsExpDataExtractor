@@ -1,0 +1,26 @@
+import java.time.Instant;
+import javax.annotation.Generated;
+
+        commonClass.addAnnotation(Generated.class).setStringValue("value", SpringBootAutoConfigurationMojo.class.getName())
+        .setStringValue("date", Instant.now().toString());
+            configClass.addAnnotation(Generated.class).setStringValue("value", SpringBootAutoConfigurationMojo.class.getName())
+            .setStringValue("date", Instant.now().toString());
+        javaClass.addAnnotation(Generated.class).setStringValue("value", SpringBootAutoConfigurationMojo.class.getName())
+        .setStringValue("date", Instant.now().toString());
+        javaClass.addAnnotation(Generated.class).setStringValue("value", SpringBootAutoConfigurationMojo.class.getName())
+        .setStringValue("date", Instant.now().toString());
+        javaClass.addAnnotation(Generated.class).setStringValue("value", SpringBootAutoConfigurationMojo.class.getName())
+        .setStringValue("date", Instant.now().toString());
+        javaClass.addAnnotation(Generated.class).setStringValue("value", SpringBootAutoConfigurationMojo.class.getName())
+        .setStringValue("date", Instant.now().toString());
+        javaClass.addAnnotation(Generated.class).setStringValue("value", SpringBootAutoConfigurationMojo.class.getName())
+        .setStringValue("date", Instant.now().toString());
+        javaClass.addAnnotation(Generated.class).setStringValue("value", SpringBootAutoConfigurationMojo.class.getName())
+            .setStringValue("date", Instant.now().toString());
+        javaClass.addAnnotation(Generated.class).setStringValue("value", SpringBootAutoConfigurationMojo.class.getName())
+        .setStringValue("date", Instant.now().toString());
+        javaClass.addAnnotation(Generated.class).setStringValue("value", SpringBootAutoConfigurationMojo.class.getName())
+        .setStringValue("date", Instant.now().toString());
+        
+        condition.addAnnotation(Generated.class).setStringValue("value", SpringBootAutoConfigurationMojo.class.getName())
+        .setStringValue("date", Instant.now().toString());

@@ -1,0 +1,15 @@
+    @Nonnull
+    public static <T> T[] shuffle(@Nonnull final T[] array) {
+        return array;
+    @Nonnull
+    public static <T> T[] shuffle(@Nonnull final T[] array, final Random rnd) {
+        return array;
+    @Nonnull
+    public static <T> T[] shuffle(@Nonnull final T[] array, final int size) {
+        return array;
+    @Nonnull
+    public static <T> T[] shuffle(@Nonnull final T[] array, final int size,
+        return array;
+    @Nonnull
+    public static int[] shuffle(@Nonnull final int[] array, @Nonnull final Random rnd) {
+        return array;

@@ -1,0 +1,12 @@
+    private transient Processor processor;
+    private transient boolean lookupProcessorDone;
+    private final Object lock = new Object();
+
+            processor = getProcessor();
+            if (processor == null && !lookupProcessorDone) {
+                // only attempt to lookup the processor once or nearly once
+                synchronized (lock) {
+                    lookupProcessorDone = true;
+                    // so if there is a custom type converter for the bean to processor
+                    processor = exchange.getContext().getTypeConverter().tryConvertTo(Processor.class, exchange, bean);
+                }

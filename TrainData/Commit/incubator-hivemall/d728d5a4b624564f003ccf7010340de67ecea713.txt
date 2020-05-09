@@ -1,0 +1,10 @@
+    public static long getLong(@Nullable Object o, @Nonnull PrimitiveObjectInspector oi) {
+        if (o == null) {
+            return 0L;
+        }
+        return PrimitiveObjectInspectorUtils.getLong(o, oi);
+    }
+
+                throw new UDFArgumentTypeException(0, "Only floating point number is accepted but "
+                         argOI.getTypeName()  " is passed.");
+                    "Only numeric argument is accepted but "  argOI.getTypeName()  " is passed.");

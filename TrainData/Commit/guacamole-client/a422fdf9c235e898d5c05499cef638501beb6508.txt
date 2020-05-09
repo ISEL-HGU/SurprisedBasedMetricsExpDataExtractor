@@ -1,0 +1,24 @@
+import com.google.inject.Inject;
+import org.apache.guacamole.auth.totp.conf.ConfigurationService;
+     * Service for retrieving configuration information.
+     */
+    @Inject
+    private ConfigurationService confService;
+
+    /**
+    private UserTOTPKey key;
+        super(PARAMETER_NAME, FIELD_TYPE_NAME);
+    }
+
+    /**
+     * Exposes the given key to facilitate enrollment.
+     *
+     * @param key
+     *     The TOTP key to expose to the user for the sake of enrollment.
+     */
+    public void exposeKey(UserTOTPKey key) {
+        this.key = key;
+        String issuer = confService.getIssuer();
+                .queryParam("algorithm", confService.getMode())
+                .queryParam("digits", confService.getDigits())
+                .queryParam("period", confService.getPeriod())

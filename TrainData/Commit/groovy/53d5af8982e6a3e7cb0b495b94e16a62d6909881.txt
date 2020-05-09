@@ -1,0 +1,26 @@
+import java.io.Reader;
+    public Reduction parseCST(SourceUnit sourceUnit, Reader reader) throws CompilationFailedException {
+        handleSourceUnit(sourceUnit, reader);
+        this.builder = new AstBuilder(sourceUnit, null);
+        builder.buildCST();
+        handleSourceUnit(sourceUnit, null);
+    private void handleSourceUnit(SourceUnit sourceUnit, Reader reader) {
+            initReaderSource(sourceUnit, reader, readerSource);
+
+
+    private void initReaderSource(SourceUnit sourceUnit, Reader reader, ReaderSource readerSource) throws IOException {
+        if (null != this.readerSource) {
+            return;
+        }
+
+        if (null != readerSource && null != readerSource.getReader()) {
+            this.readerSource = readerSource;
+            return;
+        }
+
+        if (null == reader) {
+            return;
+        }
+
+        this.readerSource = new StringReaderSource(IOGroovyMethods.getText(reader), sourceUnit.getConfiguration());
+    }

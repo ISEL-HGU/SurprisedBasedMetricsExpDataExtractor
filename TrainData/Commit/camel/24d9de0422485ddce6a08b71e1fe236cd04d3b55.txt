@@ -1,0 +1,20 @@
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+ * This customizer can be disabled/enabled with different strategies:
+ *
+ * 1. globally using:
+ *    camel.component.customizer.enable = true/false
+ *
+ * 2. for component:
+ *    camel.component.ehcache.customizer.enabled = true/false
+ *
+ * 3. individually:
+ *    camel.component.ehcache.customizer.cache-manager.enabled = true/false
+@ConditionalOnProperty(name = "camel.component.ehcache.customizer.cache-manager.enabled", matchIfMissing = true)
+@EnableConfigurationProperties(CacheManagerCustomizerConfiguration.class)
+    @Autowired
+    private CacheManagerCustomizerConfiguration configuration;
+        // Set the cache manager only if the customizer is configured to always
+        // set it or if no cache manager is already configured on component
+        if (configuration.isOverride() || component.getCacheManager() == null) {
+            component.setCacheManager(cacheManager);
+        }

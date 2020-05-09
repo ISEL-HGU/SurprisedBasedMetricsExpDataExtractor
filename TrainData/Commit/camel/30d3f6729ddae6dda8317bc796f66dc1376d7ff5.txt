@@ -1,0 +1,2 @@
+        if (ObjectHelper.isNotEmpty(definition.getDefinition())) {
+            setProperty(camelContext, dataFormat, "definition", definition.getDefinition());

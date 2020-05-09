@@ -1,0 +1,7 @@
+import org.apache.cayenne.util.XMLSerializable;
+        encodeNode(node);
+        encodeNode(node);
+    private void encodeNode(XMLSerializable node) {
+        XMLEncoder encoder = new XMLEncoder(printWriter, "\t", version);
+        delegate.setXMLEncoder(encoder);
+        node.encodeAsXML(encoder, delegate);

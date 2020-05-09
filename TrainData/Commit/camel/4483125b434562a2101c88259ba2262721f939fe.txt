@@ -1,0 +1,1 @@
+ * For {@link org.apache.camel.impl.UriEndpointComponent} implementations created for Endpoints annotated with {@link org.apache.camel.spi.UriEndpoint} and the

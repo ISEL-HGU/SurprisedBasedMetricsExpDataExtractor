@@ -1,0 +1,25 @@
+import org.apache.cayenne.ConfigurationException;
+import org.w3c.dom.Document;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.InputStream;
+	 * @since 4.1
+	 * @param url to read
+	 * @return org.w3c.dom.Document from the given URL
+	 */
+	public static Document readDocument(URL url) {
+		DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+		documentBuilderFactory.setNamespaceAware(false);
+		try {
+			DocumentBuilder domBuilder = documentBuilderFactory.newDocumentBuilder();
+			try (InputStream inputStream = url.openStream()) {
+				return domBuilder.parse(inputStream);
+			} catch (IOException | SAXException e) {
+				throw new ConfigurationException("Error loading configuration from %s", e, url);
+			}
+		} catch (ParserConfigurationException e) {
+			throw new ConfigurationException(e);
+		}
+	}
+
+	/**

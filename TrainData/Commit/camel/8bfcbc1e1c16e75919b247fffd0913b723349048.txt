@@ -1,0 +1,3 @@
+    private final AtomicBoolean init = new AtomicBoolean();
+            // default use a 1st level cache
+            this.cache = LRUCacheFactory.newLRUCache(1000);

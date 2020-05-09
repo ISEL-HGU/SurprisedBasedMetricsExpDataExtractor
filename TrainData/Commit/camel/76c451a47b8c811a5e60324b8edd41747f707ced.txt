@@ -1,0 +1,2 @@
+        private String query = "is:unread";
+        private Long maxResults = 10L;

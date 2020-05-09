@@ -1,0 +1,5 @@
+    
+    @Override
+    public void populateHeaders(GenericFileMessage<T> message, boolean isProbeContentTypeFromEndpoint) {
+        populateHeaders(message);
+    }

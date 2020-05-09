@@ -1,0 +1,6 @@
+import javax.validation.constraints.NotEmpty;
+
+ * {@link ConstraintValidator} implementation for {@link NotEmpty}.
+ * Additionally, check the non-emptiness of an
+ * any object that has a public isEmpty():boolean or a valid toString() method.
+            return false;

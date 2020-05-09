@@ -1,0 +1,2 @@
+        if (is == null || is.available() <= 0) {
+        if (is == null || is.available() <= 0) {

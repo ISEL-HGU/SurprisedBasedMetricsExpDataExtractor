@@ -1,0 +1,2 @@
+ * The Twilio component allows you to interact with the Twilio REST APIs using
+ * Twilio Java SDK.

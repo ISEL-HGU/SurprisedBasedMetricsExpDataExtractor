@@ -1,0 +1,31 @@
+import java.math.BigInteger;
+            MetaMethod bigIntegerMetaMethod = transformBigIntegerMetaMethod(metaMethod, params, theClass);
+            if (bigIntegerMetaMethod != metaMethod) {
+                return bigIntegerMetaMethod;
+            }
+
+    private static MetaMethod transformBigIntegerMetaMethod(MetaMethod metaMethod, Class<?>[] params, Class<?> theClass) {
+        if (BigInteger.class != theClass) {
+            return metaMethod;
+        }
+
+        if (MULTIPLY.equals(metaMethod.getName())
+                && (1 == params.length && (Integer.class == params[0] || Long.class == params[0] || Short.class == params[0]))) {
+            try {
+                return new CachedMethod(BigInteger.class.getDeclaredMethod(MULTIPLY, BigInteger.class));
+            } catch (NoSuchMethodException e) {
+                throw new GroovyBugError("Failed to transform "  MULTIPLY  " method of BigInteger", e);
+            }
+        }
+
+        return metaMethod;
+    }
+
+    private Optional<MetaMethod> getAccessibleMetaMethod(MetaMethod metaMethod, Class<?>[] params, Class<?> caller, Class<?> sc) {
+    @Override
+    public boolean checkAccessible(Class<?> callerClass, Class<?> declaringClass, int memberModifiers, boolean allowIllegalAccess) {
+            if (Modifier.isPublic(memberModifiers)) {
+            if (Modifier.isProtected(memberModifiers)
+                    && Modifier.isStatic(memberModifiers)
+    private static final String MULTIPLY = "multiply";
+

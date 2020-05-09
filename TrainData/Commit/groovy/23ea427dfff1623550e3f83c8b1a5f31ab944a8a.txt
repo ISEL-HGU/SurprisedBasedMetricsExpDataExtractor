@@ -1,0 +1,6 @@
+        if (oldMethod.isFinal()) {
+            // GROOVY-8955 -- allow "def" as universal non-primitive return type
+            if (overridingMethod.isDynamicReturnType() && normalEqualParameters) {
+                overridingMethod.setReturnType(cleanType(omr));
+                return null;
+            }

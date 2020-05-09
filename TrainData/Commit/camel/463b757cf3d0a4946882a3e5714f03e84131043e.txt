@@ -1,0 +1,2 @@
+ b/platforms/spring-boot/components-starter/camel-mongodb-starter/src/main/java/org/apache/camel/component/mongodb/springboot/MongoDbComponentConfiguration.java
+package org.apache.camel.component.mongodb.springboot;

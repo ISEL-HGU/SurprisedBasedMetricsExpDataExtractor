@@ -1,0 +1,1 @@
+        initialCapacity = values.length * Math.max(initialCapacity / strings.length, 8);

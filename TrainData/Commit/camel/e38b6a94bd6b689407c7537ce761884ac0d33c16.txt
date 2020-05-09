@@ -1,0 +1,8 @@
+        return parseConfigurationSource(new File(fileName));
+    }
+
+    /**
+     * Parses the Camel Main configuration java source file.
+     */
+    public List<ConfigurationModel> parseConfigurationSource(File file) throws FileNotFoundException {
+        JavaClassSource clazz = (JavaClassSource) Roaster.parse(file);

@@ -1,0 +1,2 @@
+import io.undertow.util.URLUtils;
+        String basePath = URLUtils.normalizeSlashes(getBasePath(path));

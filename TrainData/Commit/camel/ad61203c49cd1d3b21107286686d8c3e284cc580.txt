@@ -1,0 +1,1 @@
+    public static TrendsType fromString(String uri) {

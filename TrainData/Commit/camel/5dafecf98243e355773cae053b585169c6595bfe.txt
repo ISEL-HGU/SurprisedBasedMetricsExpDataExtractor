@@ -1,0 +1,6 @@
+import java.util.Arrays;
+@Conditional(CamelCloudServiceFilterAutoConfiguration.Condition.class)
+    public CamelCloudServiceFilter serviceFilter(CamelCloudConfigurationProperties properties) {
+        return new CamelCloudServiceFilter(Arrays.asList(new HealthyServiceFilter(), blacklist));
+    public static class Condition extends GroupCondition {
+        public Condition() {

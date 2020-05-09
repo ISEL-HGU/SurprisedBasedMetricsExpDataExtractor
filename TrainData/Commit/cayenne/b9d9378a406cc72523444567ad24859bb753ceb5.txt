@@ -1,0 +1,28 @@
+import org.apache.cayenne.CayenneRuntimeException;
+import org.apache.commons.lang3.SerializationUtils;
+    DataMap sourceDataMap;
+    DbImportConfiguration config;
+    DbImportConfiguration tmpConfig;
+
+    public void execute(DbImportConfiguration config) throws Exception {
+        this.config = config;
+        this.sourceDataMap = loadDataMap(config);
+    }
+
+
+    public void commit() throws Exception {
+        commit(config, sourceDataMap);
+    }
+
+    @Override
+        resultDialog.getOkButton().addActionListener(e -> {
+            try {
+                commit();
+            } catch (Exception ex) {
+                throw new CayenneRuntimeException("Nothing to commit.");
+            } finally {
+                resultDialog.setVisible(false);
+            }
+        });
+        resultDialog.getRevertButton().addActionListener(e -> resultDialog.setVisible(false));
+        resultDialog.setVisible(true);

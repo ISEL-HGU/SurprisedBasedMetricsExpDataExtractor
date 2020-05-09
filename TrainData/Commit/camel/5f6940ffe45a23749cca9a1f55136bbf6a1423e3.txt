@@ -1,0 +1,16 @@
+import org.apache.camel.StreamCache;
+import org.apache.camel.util.ObjectHelper;
+        
+        if (inBody == null) {
+            return null;
+        }
+        
+        if (inBody instanceof StreamCache) {
+            long length = ((StreamCache) inBody).length();
+            if (length <= 0) {
+                return inBody;
+            }
+        }
+            if (ObjectHelper.isEmpty(jsonString)) {
+                return null;
+            }

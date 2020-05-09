@@ -1,0 +1,3 @@
+import java.util.Collection;
+
+        assertEquals("failure: "  translated, ExpressionFactory.exp("db:paintingArray.toArtist.ARTIST_NAME = 'aa'"), translated);

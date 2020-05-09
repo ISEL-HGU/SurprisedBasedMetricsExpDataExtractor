@@ -1,0 +1,2 @@
+        Map<String, String> endpointHttpHeaders = (Map<String, String>) properties.get(ENDPOINT_HTTP_HEADERS_PROPERTY);
+        properties.put(EDM_PROPERTY, apiProxy.getEdm(endpointHttpHeaders));

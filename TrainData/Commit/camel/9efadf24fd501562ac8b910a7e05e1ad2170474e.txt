@@ -1,0 +1,7 @@
+import com.amazonaws.regions.Regions;
+import org.apache.camel.util.ObjectHelper;
+        AmazonSimpleWorkflowClientBuilder builder = AmazonSimpleWorkflowClientBuilder.standard().withClientConfiguration(clientConfiguration).withCredentials(credentialsProvider);
+        if (ObjectHelper.isNotEmpty(configuration.getRegion())) {
+            builder = builder.withRegion(Regions.valueOf(configuration.getRegion()));
+        }
+        AmazonSimpleWorkflow client = builder.build();

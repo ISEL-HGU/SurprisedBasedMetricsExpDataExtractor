@@ -1,0 +1,1 @@
+                LOG.info("Configuring Zipkin URLConnectionSender using endpoint: {}", endpoint);

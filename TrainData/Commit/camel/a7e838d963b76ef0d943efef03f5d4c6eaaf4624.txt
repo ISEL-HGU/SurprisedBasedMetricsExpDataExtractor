@@ -1,0 +1,5 @@
+
+            return false;
+
+        callback.done(true);
+        return true;

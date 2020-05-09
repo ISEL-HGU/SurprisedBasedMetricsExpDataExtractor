@@ -1,0 +1,4 @@
+        if (mConnector != null) {
+            mConnector.close();
+        }
+

@@ -1,0 +1,2 @@
+        prepareDerbyDatabase("empty_db"); // create empty db to avoid problems on Java 11
+        prepareDerbyDatabase("empty_db"); // create empty db to avoid problems on Java 11

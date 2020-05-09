@@ -1,0 +1,3 @@
+import org.apache.camel.util.UnitOfWorkHelper;
+import org.apache.cxf.message.Exchange;
+import org.apache.cxf.message.Message;

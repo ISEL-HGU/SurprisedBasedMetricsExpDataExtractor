@@ -1,0 +1,1 @@
+@Metadata(firstVersion = "3.0.0", label = "dataformat,transformation,json", title = "CBOR")

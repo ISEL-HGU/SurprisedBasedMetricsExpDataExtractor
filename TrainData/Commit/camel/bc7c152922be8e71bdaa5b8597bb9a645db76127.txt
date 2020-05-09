@@ -1,0 +1,1 @@
+            answer = HttpMethods.valueOf(endpoint.getHttpMethod());

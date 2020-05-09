@@ -1,0 +1,4 @@
+    private static final ImageIcon INHERITANCE_ICON = ModelerUtil.buildIcon("icon-inheritance.png");
+
+                    setIcon(INHERITANCE_ICON);
+            if(point.x - x <= INHERITANCE_ICON.getIconWidth()) {

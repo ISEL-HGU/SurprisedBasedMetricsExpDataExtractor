@@ -1,0 +1,1 @@
+     * Indicate if the values (and headers) must be quoted when marshaling (optional)

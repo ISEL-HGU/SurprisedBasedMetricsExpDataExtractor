@@ -1,0 +1,5 @@
+import hivemall.math.vector.SparseVector;
+    private final Vector _importance;
+            _importance.incr(node.splitFeature, node.splitScore);
+        this._importance = x.isSparse() ? new SparseVector() : new DenseVector(_attributes.length);
+    public Vector importance() {

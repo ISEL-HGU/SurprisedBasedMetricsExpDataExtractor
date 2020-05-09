@@ -1,0 +1,7 @@
+import java.util.LinkedHashMap;
+          copy.declaredVariables = new LinkedHashMap<String, Variable>(declaredVariables);
+            copy.referencedClassVariables = new LinkedHashMap<String, Variable>(referencedClassVariables);
+            copy.referencedLocalVariables = new LinkedHashMap<String, Variable>(referencedLocalVariables);
+          declaredVariables = new LinkedHashMap<String, Variable>();
+          referencedLocalVariables = new LinkedHashMap<String, Variable>();
+          referencedClassVariables = new LinkedHashMap<String, Variable>();

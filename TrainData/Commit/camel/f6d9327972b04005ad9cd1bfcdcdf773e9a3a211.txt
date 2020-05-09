@@ -1,0 +1,2 @@
+        } else if (operation == ElasticsearchOperation.Info) {
+            message.setBody(restHighLevelClient.info());

@@ -1,0 +1,4 @@
+        if (dependencyXml.contains("<groupId>org.springframework.boot</groupId>") && dependencyXml.contains("<artifactId>spring-boot-starter")) {
+            return dependencyXml;
+        }
+

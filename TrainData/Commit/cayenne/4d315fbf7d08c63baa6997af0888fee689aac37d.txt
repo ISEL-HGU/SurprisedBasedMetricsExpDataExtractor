@@ -1,0 +1,3 @@
+        return this.paintingTitle;
+        out.writeObject(this.paintingTitle);
+        this.paintingTitle = (String)in.readObject();

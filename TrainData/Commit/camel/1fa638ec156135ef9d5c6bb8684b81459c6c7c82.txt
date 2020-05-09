@@ -1,0 +1,2 @@
+import java.util.regex.Matcher;
+        String onlyName = Matcher.quoteReplacement(FileUtil.stripPath(fileName));

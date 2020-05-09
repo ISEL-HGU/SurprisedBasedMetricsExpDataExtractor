@@ -1,0 +1,3 @@
+
+            for (int readBytes; (readBytes = keyStreamIn.read(keyBuffer)) != -1;)
+                keyStreamOut.write(keyBuffer, 0, readBytes);

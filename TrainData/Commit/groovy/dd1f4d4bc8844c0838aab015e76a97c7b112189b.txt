@@ -1,0 +1,4 @@
+ *     &lt;fileset dir="${groovy.home}/lib"&gt;
+ *       &lt;include name="groovy-*${groovy.version}.jar" /&gt;
+ *     &lt;fileset dir="${groovy.home}/lib"&gt;
+ *       &lt;include name="groovy-*${groovy.version}.jar" /&gt;

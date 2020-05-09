@@ -1,0 +1,2 @@
+        // optimised to not include runtimeEndpointRegistry unless its enabled or JMX statistics is in extended mode
+            log.debug("Skip starting routes as CamelContext has been configured with autoStartup=false");

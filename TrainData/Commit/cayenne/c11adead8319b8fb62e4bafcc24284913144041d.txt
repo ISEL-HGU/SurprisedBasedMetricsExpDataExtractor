@@ -1,0 +1,12 @@
+        addIsolatedObjects(isolatedObjects);
+		graph.addMouseWheelListener(e -> {
+            // limit scale
+            double scale = graph.getScale() / Math.pow(ZOOM_FACTOR, e.getWheelRotation());
+            scale = Math.max(scale, 0.1);
+            scale = Math.min(scale, 3);
+            graph.setScale(scale);
+	private void addIsolatedObjects(List<DefaultGraphCell> isolatedObjects) {
+            runWithUndoDisabled(() -> graph.getGraphLayoutCache().remove(new Object[] { cell }, true, true));
+            runWithUndoDisabled(() -> graph.getGraphLayoutCache().remove(new Object[] { edge }));
+        runWithUndoDisabled(() -> graph.getGraphLayoutCache().edit(map));
+        runWithUndoDisabled(() -> graph.getGraphLayoutCache().insert(cell));

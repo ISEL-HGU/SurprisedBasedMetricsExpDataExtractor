@@ -1,0 +1,2 @@
+        throw new IOException("Failed response to request '"  httpMethod  " "  sourceURL  "' "  response.getStatusLine().getStatusCode()
+                 " - '"  response.getStatusLine().getReasonPhrase());

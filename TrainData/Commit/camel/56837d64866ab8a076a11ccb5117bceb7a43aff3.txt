@@ -1,0 +1,6 @@
+import java.util.Date;
+                } else if (value instanceof Date) {
+                    MessageAttributeValue mav = new MessageAttributeValue();
+                    mav.setDataType("String");
+                    mav.withStringValue(value.toString());
+                    result.put(entry.getKey(), mav);

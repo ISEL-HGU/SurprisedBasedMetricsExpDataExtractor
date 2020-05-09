@@ -1,0 +1,15 @@
+        JComboBox<String> prefetchBox = new JComboBox<>();
+            } else {
+        } catch (ExpressionException e) {
+                prefetches = selectQuery.getPrefetchesMap().keySet().toArray(new String[0]);
+        @Override
+        @Override
+        @Override
+        @Override
+        @Override
+                    throw new IndexOutOfBoundsException("Invalid column: "  column);
+        @Override
+            return column == 2;
+
+        @Override
+        public void setValueAt(Object value, int row, int column) {

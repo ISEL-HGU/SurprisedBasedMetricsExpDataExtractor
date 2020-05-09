@@ -1,0 +1,12 @@
+        if (bean == null) {
+            // no bean so then create an instance from its type
+            bean = camelContext.getInjector().newInstance(clazz);
+        camelContext.getRegistry().bind(name, bean);
+                Annotation[] anns = method.getParameterAnnotations()[i];
+                if (anns.length == 1) {
+                    // we dont assume there are multiple annotations on the same parameter so grab first
+                        // build key with default value included as this is supported during resolving
+                        // need to force property lookup by having key enclosed in tokens
+                        key = camelContext.getPropertiesComponent().getPrefixToken()  key  camelContext.getPropertiesComponent().getSuffixToken();
+                            Object value = camelContext.resolvePropertyPlaceholders(key);
+            // each parameter must be mapped

@@ -1,0 +1,29 @@
+    private static final int OK_STATUS = 0;
+    private static final String OK_MESSAGE = "OK";
+
+            createResultHeadersFromExchange(null, exchange);
+        } catch (SftpException e) {
+            createResultHeadersFromExchange(e, exchange);
+            throw new GenericFileOperationFailedException("Cannot retrieve file: "  name, e);
+        } catch (IOException e) {
+            createResultHeadersFromExchange(e, exchange);
+        createResultHeadersFromExchange(null, exchange);
+            createResultHeadersFromExchange(null, exchange);
+            createResultHeadersFromExchange(e, exchange);
+
+    /**
+     * Helper method which gets result code and message from sftpException and puts it into header.
+     * In case that exception is null, it sets successfull response.
+     */
+    private void createResultHeadersFromExchange(SftpException sftpException, Exchange exchange) {
+
+        //if exception is null, it means that result was ok
+        if (sftpException == null) {
+            exchange.getIn().setHeader(FtpConstants.FTP_REPLY_CODE, OK_STATUS);
+            exchange.getIn().setHeader(FtpConstants.FTP_REPLY_STRING, OK_MESSAGE);
+        } else {
+            // store client reply information after the operation
+            exchange.getIn().setHeader(FtpConstants.FTP_REPLY_CODE, sftpException.id);
+            exchange.getIn().setHeader(FtpConstants.FTP_REPLY_STRING, sftpException.getMessage());
+        }
+    }

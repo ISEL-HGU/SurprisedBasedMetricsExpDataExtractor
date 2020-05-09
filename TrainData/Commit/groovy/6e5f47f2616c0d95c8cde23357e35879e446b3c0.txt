@@ -1,0 +1,1 @@
+            handle = MethodHandles.insertArguments(SAM_CONVERSION, 1, m, staticTargetType);

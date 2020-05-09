@@ -1,0 +1,42 @@
+import org.apache.camel.support.ObjectHelper;
+import org.jboss.forge.roaster.model.Extendable;
+import org.jboss.forge.roaster.model.JavaType;
+import org.jboss.forge.roaster.model.source.Importer;
+import org.jboss.forge.roaster.model.source.MethodHolderSource;
+    private String extractJavaDocFromMethod(Object input, Method method) {
+        if (input == null) {
+
+        String answer = "";
+
+        // input can be both a class or interface so we need to split this up into several pieces
+        MethodHolderSource mhs = (MethodHolderSource) input;
+        JavaType jt = (JavaType) input;
+        Extendable ext = null;
+        if (input instanceof Extendable) {
+            ext = (Extendable) input;
+        }
+        Importer importer = null;
+        if (input instanceof Importer) {
+            importer = (Importer) input;
+        }
+        MethodSource ms = mhs.getMethod(method.getName(), method.getParameterTypes()[0]);
+            answer = ms.getJavaDoc().getText();
+        String st = null;
+        if (answer.isEmpty()) {
+            // special for activemq-artemis
+            if ("org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory".equals(jt.getQualifiedName())) {
+                st = "org.apache.activemq.artemis.api.core.client.ServerLocator";
+            } else {
+                // maybe its from the super class
+                st = ext != null ? ext.getSuperType() : null;
+            }
+        }
+
+        if (answer.isEmpty() && st != null && !"java.lang.Object".equals(st) && !"Object".equals(st)) {
+            st = importer != null ? importer.resolveType(st) : st;
+                String text;
+                    input = Roaster.parse(text);
+                    getLog().debug("Loaded source code: "  input);
+                    answer = extractJavaDocFromMethod(input, method);
+
+        return answer;

@@ -1,0 +1,5 @@
+        MockEndpoint mock = getMockEndpoint("mock:result");
+        mock.setExpectedMessageCount(1);
+
+        mock.assertIsSatisfied();
+

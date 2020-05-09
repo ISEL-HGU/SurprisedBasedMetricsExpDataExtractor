@@ -1,0 +1,1 @@
+            && ((GroovyClassLoader) parentLoader).hasCompatibleConfiguration(config)) {

@@ -1,0 +1,2 @@
+//        LinkedList<DeclarationExpression> declarations = new LinkedList<DeclarationExpression>();
+//                declarations.add((DeclarationExpression) expr);

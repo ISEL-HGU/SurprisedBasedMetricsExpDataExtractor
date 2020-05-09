@@ -1,0 +1,17 @@
+        return validateAttribute(attribute.getEmbeddable().getClassName(), attribute.getName(), attribute.getType());
+    }
+    private ValidationFailure validateAttribute(String objectName, String attributeName, String attributeType) {
+        ValidationFailure emptyName = BeanValidationFailure.validateNotEmpty(objectName, "attribute.name",
+                attributeName);
+        ValidationFailure badName = CodeValidationUtil.validateJavaIdentifier(objectName, "attribute.name",
+                attributeName);
+        ValidationFailure emptyType = BeanValidationFailure.validateNotEmpty(objectName, "attribute.type",
+                attributeType);
+        return BeanValidationFailure.validateJavaClassName(objectName, "attribute.type", attributeType);
+        return BeanValidationFailure.validateJavaClassName(name, "className", embeddable.getClassName());
+            return BeanValidationFailure.validateJavaClassName(name, "superClassName", entity.getSuperClassName());
+        return validateAttribute(attribute.getEntity().getName(), attribute.getName(), attribute.getType());
+        return validateAttribute(name, attr, attribute.getType());
+                return BeanValidationFailure.validateJavaClassName(name, "relationship.targetEntity.className",
+                        targetEntity.getClassName());
+    public Predicate<Object> getDefaultClassFilter() {

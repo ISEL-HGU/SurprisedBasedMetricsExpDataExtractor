@@ -1,0 +1,5 @@
+import java.io.IOException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+    private final ObjectMapper jackson = new ObjectMapper();
+    private boolean handleJsonFrame(ByteBuf in, List<Object> out) throws IOException {
+        Object jsonMessage = jackson.readValue(jsonStr, Object.class);

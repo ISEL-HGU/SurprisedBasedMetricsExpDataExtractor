@@ -1,0 +1,53 @@
+import org.codehaus.groovy.ast.ASTNode;
+                applyTrait(trait, cNode, helpers, unit);
+    private static void applyTrait(final ClassNode trait, final ClassNode cNode, final TraitHelpersTuple helpers, SourceUnit unit) {
+                createForwarderMethod(trait, cNode, methodNode, originalMethod, helperClassNode, methodGenericsSpec, helperMethodParams, origParams, params, argList, unit);
+            Map<String, ClassNode> genericsSpec,
+            ArgumentListExpression helperMethodArgList, SourceUnit unit) {
+        MethodNode existingMethod = findExistingMethod(targetNode, forwarder);
+        if (existingMethod != null) {
+            if (!forwarder.isStatic() && existingMethod.isStatic()) {
+                // found an existing static method that is going to conflict with interface
+                unit.addError(createException(trait, targetNode, forwarder, existingMethod));
+                return;
+            }
+        }
+
+    private static SyntaxException createException(ClassNode trait, ClassNode targetNode, MethodNode forwarder, MethodNode existingMethod) {
+        String middle;
+        ASTNode errorTarget;
+        if (existingMethod.getLineNumber() == -1) {
+            // came from a trait
+            errorTarget = targetNode;
+            List<AnnotationNode> allAnnos = existingMethod.getAnnotations(Traits.TRAITBRIDGE_CLASSNODE);
+            AnnotationNode bridgeAnno = allAnnos == null ? null : allAnnos.get(0);
+            String fromTrait = null;
+            if (bridgeAnno != null) {
+                Expression traitClass = bridgeAnno.getMember("traitClass");
+                if (traitClass instanceof ClassExpression) {
+                    ClassExpression ce = (ClassExpression) traitClass;
+                    fromTrait = ce.getType().getNameWithoutPackage();
+                }
+            }
+            middle = "in '"  targetNode.getNameWithoutPackage();
+            if (fromTrait != null) {
+                middle = "' from trait '"  fromTrait;
+            }
+        } else {
+            errorTarget = existingMethod;
+            middle = "declared in '"  targetNode.getNameWithoutPackage();
+        }
+        String message = "The static '"  forwarder.getName()  "' method "  middle 
+                "' conflicts with the instance method having the same signature from trait '"  trait.getNameWithoutPackage()  "'";
+        return new SyntaxException(message, errorTarget);
+    }
+
+    private static MethodNode findExistingMethod(final ClassNode cNode, final MethodNode forwarder) {
+        return findExistingMethod(cNode, forwarder.getName(), forwarder.getParameters());
+    }
+
+    private static MethodNode findExistingMethod(final ClassNode cNode, final String name, final Parameter[] params) {
+        return cNode.getDeclaredMethod(name, params);
+    }
+
+        if (isExistingProperty(name, cNode, params) || findExistingMethod(cNode, name, params) != null) {

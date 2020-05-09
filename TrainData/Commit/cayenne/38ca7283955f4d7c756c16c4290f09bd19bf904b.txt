@@ -1,0 +1,8 @@
+        if(object == null) {
+            if(!context.haveObject(getIdentifier())) {
+                return '$'  getIdentifier();
+            }
+            return "";
+        }
+
+        return object.toString();

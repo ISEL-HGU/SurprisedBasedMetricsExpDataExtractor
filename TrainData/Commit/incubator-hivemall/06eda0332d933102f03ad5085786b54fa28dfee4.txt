@@ -1,0 +1,1 @@
+                "A similar function to PostgreSQL's [generate_serics](https://www.postgresql.org/docs/current/static/functions-srf.html)",

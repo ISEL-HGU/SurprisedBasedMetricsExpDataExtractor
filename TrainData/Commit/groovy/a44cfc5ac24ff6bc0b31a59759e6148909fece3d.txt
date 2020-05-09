@@ -1,0 +1,23 @@
+import java.util.Objects;
+import static org.codehaus.groovy.ast.tools.GeneralUtils.isOrImplements;
+                if (storeField(field, isAttributeExpression, pexp, current, visitor, receiver.getData(), !readMode)) {
+                    pexp.removeNodeMetaData(StaticTypesMarker.READONLY_PROPERTY);
+                }
+                boolean isThisExpression = objectExpression instanceof VariableExpression && ((VariableExpression) objectExpression).isThisExpression()
+                        && (objectExpressionType.equals(current) || (objectExpressionType.isDerivedFrom(current) && hasAccessToField(field, objectExpressionType)));
+                if (storeField(field, isThisExpression, pexp, receiver.getType(), visitor, receiver.getData(), !readMode)) {
+                    pexp.removeNodeMetaData(StaticTypesMarker.READONLY_PROPERTY);
+                }
+    private static boolean hasAccessToField(FieldNode field, ClassNode objectExpressionType) {
+        if (field != null) {
+            if (field.isPublic() || field.isProtected()) {
+                return true;
+            }
+            if (!field.isPrivate() && Objects.equals(objectExpressionType.getPackageName(), field.getDeclaringClass().getPackageName())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+        if (!isOrImplements(param.getType(), ClassHelper.MAP_TYPE)) return;

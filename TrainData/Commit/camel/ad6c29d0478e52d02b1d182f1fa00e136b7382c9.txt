@@ -1,0 +1,7 @@
+        if (value instanceof DataValue) {
+            this.value = (DataValue)value;
+        } else if (value instanceof Variant) {
+            this.value = new DataValue((Variant)value, StatusCode.GOOD, DateTime.now());
+        } else {
+            this.value = new DataValue(new Variant(value), StatusCode.GOOD, DateTime.now());
+        }

@@ -1,0 +1,1 @@
+            log.info("Initializing fast TypeConverterRegistry - requires converters to be annotated with @Converter(loader = true)");

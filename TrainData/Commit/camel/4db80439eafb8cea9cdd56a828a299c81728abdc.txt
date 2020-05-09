@@ -1,0 +1,2 @@
+                throw new IllegalArgumentException("ExecutorServiceRef "  definition.getExecutorServiceRef() 
+                         " not found in registry (as an ScheduledExecutorService instance) or as a thread pool profile.");

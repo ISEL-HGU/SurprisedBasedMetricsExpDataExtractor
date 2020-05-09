@@ -1,0 +1,4 @@
+            builder.error(ResultErrorBuilder.withCodeAndDescription(VerificationError.StandardCode.GENERIC, 
+                    "You must specify a webhookUrl (for producer) or a token (for consumer)").parameterKey("webhookUrl").parameterKey("token").build());
+            builder.error(ResultErrorBuilder.withCodeAndDescription(VerificationError.StandardCode.GENERIC, 
+                    "You must specify a webhookUrl (for producer) or a token (for consumer). You can't specify both.").parameterKey("webhookUrl").parameterKey("token").build());

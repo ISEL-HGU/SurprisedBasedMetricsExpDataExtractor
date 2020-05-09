@@ -1,0 +1,7 @@
+     * Gets the connection factory to be used.
+     */
+    public ConnectionFactory getConnectionFactory() {
+        return getConfiguration().getConnectionFactory();
+    }
+
+    /**

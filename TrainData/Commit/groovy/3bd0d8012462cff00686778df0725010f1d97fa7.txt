@@ -1,0 +1,5 @@
+		for (Map.Entry<String, String> replacementEntry : replacements.entrySet()) {
+			String key = replacementEntry.getKey();
+			String value = replacementEntry.getValue();
+				sb.replace(start, start  keyLength, value);
+				start = sb.indexOf(key, start  valueLength);

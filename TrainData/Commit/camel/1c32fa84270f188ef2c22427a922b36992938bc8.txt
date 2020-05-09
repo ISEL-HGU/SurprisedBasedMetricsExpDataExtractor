@@ -1,0 +1,2 @@
+        sendExchange(paxLoggingEvent);
+    protected void sendExchange(final PaxLoggingEvent paxLoggingEvent) {

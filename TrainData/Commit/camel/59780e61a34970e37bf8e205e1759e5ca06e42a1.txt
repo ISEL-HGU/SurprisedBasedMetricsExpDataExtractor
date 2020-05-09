@@ -1,0 +1,5 @@
+                    log.debug("attempting add of {}", ldifEntry);
+                    log.debug("attempting modify of {}", ldifEntry);
+                    log.debug("attempting delete of {}", ldifEntry);
+                    log.debug("attempting DN move of {}", ldifEntry);
+                    log.debug("attempting RDN move of {}", ldifEntry);

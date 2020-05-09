@@ -1,0 +1,4 @@
+import org.cometd.client.BayeuxClient.State;
+        client.disconnect();
+        boolean disconnected = client.waitFor(timeout, State.DISCONNECTED);
+            client.abort();

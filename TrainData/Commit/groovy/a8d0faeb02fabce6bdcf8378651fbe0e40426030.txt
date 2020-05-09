@@ -1,0 +1,8 @@
+import static org.apache.groovy.parser.antlr4.GroovyLexer.COMMA;
+import static org.apache.groovy.parser.antlr4.GroovyLexer.SEMI;
+        // commas, semicolons
+        for (int t : Arrays.asList(COMMA, SEMI)) {
+            Style style = createDefaultStyleByTokenType(t);
+            StyleConstants.setForeground(style, Color.BLUE.darker());
+        }
+

@@ -1,0 +1,3 @@
+            if(username == null)
+
+                logger.debug("Authenticating with user {}", username);

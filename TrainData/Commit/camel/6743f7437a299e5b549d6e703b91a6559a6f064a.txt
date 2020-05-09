@@ -1,0 +1,1 @@
+ * Pluggable resolver to load JSon schema files for components, data formats, languages etc.

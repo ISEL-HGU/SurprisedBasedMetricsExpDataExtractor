@@ -1,0 +1,1 @@
+                        if (statementList.stream().noneMatch(x -> asBoolean(x))) {

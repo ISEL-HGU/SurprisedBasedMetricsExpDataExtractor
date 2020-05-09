@@ -1,0 +1,2 @@
+@UriEndpoint(firstVersion = "${version}", scheme = "${scheme}", title = "${name}", syntax="${scheme}:name", 
+             consumerClass = ${name}Consumer.class, label = "custom")

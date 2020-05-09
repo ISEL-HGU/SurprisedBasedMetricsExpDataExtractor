@@ -1,0 +1,2 @@
+        if (ObjectHelper.isNotEmpty(exchange.getIn().getHeader(EKSConstants.VPC_CONFIG))) {
+            VpcConfigRequest vpcConfig = exchange.getIn().getHeader(EKSConstants.VPC_CONFIG, VpcConfigRequest.class);

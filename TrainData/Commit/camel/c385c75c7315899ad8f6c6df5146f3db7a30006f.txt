@@ -1,0 +1,2 @@
+import com.amazonaws.services.kms.AbstractAWSKMS;
+public class AmazonKMSClientMock extends AbstractAWSKMS {

@@ -1,0 +1,1 @@
+ * AsyncCallback that provides a {@link CompletableFuture} completed when async action is done

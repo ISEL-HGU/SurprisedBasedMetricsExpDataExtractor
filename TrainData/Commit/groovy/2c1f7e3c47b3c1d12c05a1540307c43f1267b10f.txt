@@ -1,0 +1,8 @@
+                if (isNonStringConstantOutsideParentheses(expression)) {
+                if (isNonStringConstantOutsideParentheses(expression)) {
+    private boolean isNonStringConstantOutsideParentheses(Expression expression) {
+        return expression instanceof ConstantExpression
+                && !(((ConstantExpression) expression).getValue() instanceof String)
+                && !isInsideParentheses(expression);
+    }
+

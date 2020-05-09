@@ -1,0 +1,3 @@
+ * Notice the details about using a graceful shutdown at first, and then falling back to aggressive shutdown in case
+     * <br/>You can also use <tt>#longName#</tt> is the long thread name which can include endpoint parameters etc.
+     * Gets the thread name pattern to use

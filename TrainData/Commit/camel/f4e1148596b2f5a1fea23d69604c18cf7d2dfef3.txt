@@ -1,0 +1,8 @@
+            .andCommandKey(hcCommandKey)
+            .andThreadPoolKey(tpKey);
+                .andCommandKey(hcFallbackCommandKey)
+                .andThreadPoolKey(tpFallbackKey);
+            () -> camelContext.adapt(ModelCamelContext.class).getHystrixConfiguration(null),
+            () -> lookup(camelContext, HystrixConstants.DEFAULT_HYSTRIX_CONFIGURATION_ID, HystrixConfigurationDefinition.class))
+                () -> camelContext.adapt(ModelCamelContext.class).getHystrixConfiguration(ref),
+                () -> mandatoryLookup(camelContext, ref, HystrixConfigurationDefinition.class))

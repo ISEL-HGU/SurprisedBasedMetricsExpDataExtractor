@@ -1,0 +1,24 @@
+    @Parameter(defaultValue = "${project.build.directory}/generated-sources/swagger")
+    String modelOutput;
+
+    @Parameter
+    String modelNamePrefix;
+
+    @Parameter
+    String modelNameSuffix;
+
+    @Parameter(defaultValue = "true")
+    String modelWithXml;
+
+        if (modelOutput != null) {
+            elements.add(new MojoExecutor.Element("output", modelOutput));
+        }
+        if (modelNamePrefix != null) {
+            elements.add(new MojoExecutor.Element("modelNamePrefix", modelNamePrefix));
+        }
+        if (modelNameSuffix != null) {
+            elements.add(new MojoExecutor.Element("modelNameSuffix", modelNameSuffix));
+        }
+        if (modelWithXml != null) {
+            elements.add(new MojoExecutor.Element("withXml", modelPackage));
+        }

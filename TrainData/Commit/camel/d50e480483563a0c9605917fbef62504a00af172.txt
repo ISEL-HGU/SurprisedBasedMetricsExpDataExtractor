@@ -1,0 +1,1 @@
+        ZooKeeperMessage out = new ZooKeeperMessage(getEndpoint().getCamelContext(), context.node, result.getStatistics(), context.in.getHeaders());

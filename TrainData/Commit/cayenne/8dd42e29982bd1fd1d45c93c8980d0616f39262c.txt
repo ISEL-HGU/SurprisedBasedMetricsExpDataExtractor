@@ -1,0 +1,13 @@
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import org.apache.cayenne.modeler.ClassLoadingService;
+
+        try {
+            ClassLoadingService classLoadingService = Application.getInstance().getClassLoadingService();
+            config.getDbLoaderConfig().setFiltersConfig(new FiltersConfigBuilder(reverseEngineering)
+                    .dataSource(connectionInfo.makeDataSource(classLoadingService))
+                    .dbAdapter(connectionInfo.makeAdapter(classLoadingService))
+                    .build());
+        } catch (Exception e) {
+            processException(e, "Fail while building configs.");
+        }

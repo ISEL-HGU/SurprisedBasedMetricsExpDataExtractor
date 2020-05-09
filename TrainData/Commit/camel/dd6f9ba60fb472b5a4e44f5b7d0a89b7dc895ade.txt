@@ -1,0 +1,11 @@
+import java.net.URI;
+import java.util.Optional;
+import io.undertow.util.HeaderMap;
+        final HeaderMap requestHeaders = clientRequest.getRequestHeaders();
+
+            requestHeaders.put(Headers.CONTENT_TYPE, contentType);
+        // Set the Host header
+        final String host = message.getHeader("Host", String.class);
+        requestHeaders.put(Headers.HOST, Optional.ofNullable(host).orElseGet(()-> URI.create(clientRequest.getPath()).getAuthority()));
+
+                    requestHeaders.add(new HttpString(key), headerValue);

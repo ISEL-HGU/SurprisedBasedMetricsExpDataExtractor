@@ -1,0 +1,5 @@
+            LOG.info("Auto configuring properties component from loaded properties: {}", total);
+                // skip properties as its already configured earlier
+                if ("properties".equals(name)) {
+                    continue;
+                }

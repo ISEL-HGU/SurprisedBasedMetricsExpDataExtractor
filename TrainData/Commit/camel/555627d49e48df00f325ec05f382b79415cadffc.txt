@@ -1,0 +1,1 @@
+            paths.add(new HttpRestConsumerPath(handler));

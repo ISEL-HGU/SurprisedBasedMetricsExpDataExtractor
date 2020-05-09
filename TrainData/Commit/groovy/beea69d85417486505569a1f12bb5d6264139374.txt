@@ -1,0 +1,4 @@
+
+        LookupResult lr = classNodeResolver.resolveName(name, compilationUnit);
+        if (lr != null) {
+        Expression ret;

@@ -1,0 +1,15 @@
+import java.util.Collections;
+
+            List<Method> methods = new ArrayList<>();
+            Collections.addAll(methods, Method.OPTIONS);
+                Collections.addAll(methods, endpoint.getRestletMethods());
+                Collections.addAll(methods, endpoint.getRestletMethod());
+            }
+            for (Method method : methods) {
+                router.removeRoute(method);
+        List<Method> methods = new ArrayList<>();
+        Collections.addAll(methods, Method.OPTIONS);
+            Collections.addAll(methods, endpoint.getRestletMethods());
+            Collections.addAll(methods, endpoint.getRestletMethod());
+        }
+        for (Method method : methods) {

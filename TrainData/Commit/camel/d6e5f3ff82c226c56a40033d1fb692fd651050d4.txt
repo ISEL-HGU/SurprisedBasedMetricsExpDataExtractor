@@ -1,0 +1,3 @@
+    @Produce("stream:out")
+    @Consume(value = "direct:numbers", predicate = "${body} < 100")
+    @Consume(value = "direct:numbers", predicate = "${body} >= 100")

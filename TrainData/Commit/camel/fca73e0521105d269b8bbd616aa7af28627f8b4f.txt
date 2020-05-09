@@ -1,0 +1,31 @@
+     * Sets swagger operation response messages.
+     * @param method the HTTP verb name such as {@code get, post, put, patch, delete, head}.
+     * @param uri the query path for this REST service, such as {@code /&#123;id&#125;}.
+     * @param consumes the HTTP Content Type of the input data, such as {@code application/xml} or {@code application/json}.
+     *                 This option will override what may be configured on a parent level.
+     * @param produces the HTTP Content Type of the output data, such as {@code application/xml} or {@code application/json}.
+     *                 This option will override what may be configured on a parent level.
+     * @param bindingMode the binding mode to use. The default value is {@code RestBindingMode.auto}.
+     *                    This option will override what may be configured on a parent level.
+     *
+     * @see RestBindingMode
+     * @param skipBindingOnErrorCode set to {@code true} to ignore the specified binding mode on output if there
+     *                               is a custom HTTP error code header. This allows to build custom error messages
+     *                               that do not bind to json / xml etc, as success messages otherwise will do.
+     *                               This option will override what may be configured on a parent level.
+     *
+     * @see VerbDefinition#setBindingMode(RestBindingMode)
+     * @param enableCORS set to {@code true} to enable CORS headers in the HTTP response. The default value is {@code false}.
+     *                   This option will override what may be configured on a parent level.
+     * This option will override what may be configured on a parent level.
+     *
+     * @param type the canonical name of the class of the input data. Append a {@code []} to the end
+     *             of the canonical name if you want the input to be an array of {@code type}.
+     * This option will override what may be configured on a parent level.
+     *
+     * @param outType the canonical name of the class of the output data. Append a {@code []} to the end
+     *                of the canonical name if you want the output to be an array of {@code outType}.
+     * @param routeId the route id this rest-dsl is using (read-only).
+     * @param apiDocs set to {@code true} to include or exclude the VerbDefinition in API documentation.
+     *                The default value is true.
+        // so we infer the verb from the instance type

@@ -1,0 +1,31 @@
+import java.util.List;
+    /*
+     * Cached unmodifiable List used for iteration. Any method that mutates
+     * the runnerMap must set to null to invalidate the cache. Volatile is
+     * used because reads for DCL are faster than a lock/unlock.
+     * The values are cached in order to speed up iteration and avoid
+     * allocation of new collections on each call to the iterator.
+     */
+    private volatile List<GroovyRunner> cachedValues;
+
+            cachedValues = null;
+            cachedValues = null;
+            cachedValues = null;
+        Map<String, GroovyRunner> map = getMap();
+            cachedValues = null;
+                if (entry.getKey() != null && entry.getValue() != null) {
+                    map.put(entry.getKey(), entry.getValue());
+                }
+            cachedValues = null;
+        List<GroovyRunner> values = cachedValues;
+        if (values == null) {
+            Map<String, GroovyRunner> map = getMap();
+            // racy, multiple threads may set cachedValues but rather have that than take a write lock
+            readLock.lock();
+            try {
+                if ((values = cachedValues) == null) {
+                    cachedValues = values = Collections.unmodifiableList(new ArrayList<>(map.values()));
+                }
+            } finally {
+                readLock.unlock();
+        return values;

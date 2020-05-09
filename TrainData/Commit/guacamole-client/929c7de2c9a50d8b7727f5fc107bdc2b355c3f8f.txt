@@ -1,0 +1,52 @@
+     * All user permissions granted to this user.
+    private final Set<ObjectPermission> userPermissions = new HashSet<>();
+
+    /**
+     * All user group permissions granted to this user.
+     */
+    private final Set<ObjectPermission> userGroupPermissions = new HashSet<>();
+    private final Set<ObjectPermission> connectionPermissions = new HashSet<>();
+    private final Set<ObjectPermission> connectionGroupPermissions = new HashSet<>();
+        super.setIdentifier(username);
+        identifiers.forEach(identifier ->
+            permissions.add(new ObjectPermission(
+                identifier)
+
+     * the connections and connection groups having the given identifiers.
+     * the users, user groups, connections, and connection groups having the
+     * given identifiers.
+     *
+     * @param username
+     *     The username to assign to this SimpleUser.
+     *
+     * @param userIdentifiers
+     *     The identifiers of all users this user has READ access to.
+     *
+     * @param userGroupIdentifiers
+     *     The identifiers of all user groups this user has READ access to.
+     *
+     * @param connectionIdentifiers
+     *     The identifiers of all connections this user has READ access to.
+     *
+     * @param connectionGroupIdentifiers
+     *     The identifiers of all connection groups this user has READ access
+     *     to.
+     */
+    public SimpleUser(String username,
+            Collection<String> userIdentifiers,
+            Collection<String> userGroupIdentifiers,
+            Collection<String> connectionIdentifiers,
+            Collection<String> connectionGroupIdentifiers) {
+
+        this(username);
+
+        // Add permissions
+        addReadPermissions(userPermissions,            userIdentifiers);
+        addReadPermissions(userGroupPermissions,       userGroupIdentifiers);
+        addReadPermissions(connectionPermissions,      connectionIdentifiers);
+        addReadPermissions(connectionGroupPermissions, connectionGroupIdentifiers);
+
+    }
+
+    /**
+     * Creates a new SimpleUser having the given username and READ access to

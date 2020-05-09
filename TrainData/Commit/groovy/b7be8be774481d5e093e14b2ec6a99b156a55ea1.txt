@@ -1,0 +1,30 @@
+import org.codehaus.groovy.runtime.memoize.CommonCache;
+import org.codehaus.groovy.runtime.memoize.EvictableCache;
+import java.util.WeakHashMap;
+        private final CommonCache<ClassLoader, Map<String, List<MethodNode>>> cache = new CommonCache<ClassLoader, Map<String, List<MethodNode>>>(new WeakHashMap<>());
+            return cache.getAndPut(
+                    loader,
+                    new EvictableCache.ValueProvider<ClassLoader, Map<String, List<MethodNode>>>() {
+                        @Override
+                        public Map<String, List<MethodNode>> provide(final ClassLoader key) {
+                            final List<ExtensionModule> modules = new LinkedList<ExtensionModule>();
+                            ExtensionModuleScanner scanner =
+                                    new ExtensionModuleScanner(
+                                            new ExtensionModuleScanner.ExtensionModuleListener() {
+                                                public void onModule(final ExtensionModule module) {
+                                                    boolean skip = false;
+                                                    for (ExtensionModule extensionModule : modules) {
+                                                        if (extensionModule.getName().equals(module.getName())) {
+                                                            skip = true;
+                                                            break;
+                                                        }
+                                                    }
+                                                    if (!skip) modules.add(module);
+                                                }
+                                            },
+                                            key
+                                    );
+                            scanner.scanClasspathModules();
+
+                            return getDGMMethods(modules);
+                    });

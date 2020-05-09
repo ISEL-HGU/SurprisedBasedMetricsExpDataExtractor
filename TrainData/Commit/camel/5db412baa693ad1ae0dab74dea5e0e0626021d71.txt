@@ -1,0 +1,5 @@
+    private static final Pattern REPLACE_IN_PATTERN = Pattern.compile("\\:\\?in\\:(\\w|\\$\\{[^\\}]\\}|\\$simple\\{[^\\}]\\})", Pattern.MULTILINE);
+    private static final Pattern REPLACE_PATTERN = Pattern.compile("\\:\\?\\w|\\:\\?\\$\\{[^\\}]\\}|\\:\\?\\$simple\\{[^\\}]\\}", Pattern.MULTILINE);
+    private static final Pattern NAME_PATTERN = Pattern.compile("\\:\\?((in\\:(\\w|\\$\\{[^\\}]\\}|\\$simple\\{[^\\}]\\}))|(\\w|\\$\\{[^\\}]\\}|\\$simple\\{[^\\}]\\}))", Pattern.MULTILINE);
+        if ((nextParam.startsWith("$simple{") || nextParam.startsWith("${")) && nextParam.endsWith("}")) {
+        if ((nextParam.startsWith("$simple{") || nextParam.startsWith("${")) && nextParam.endsWith("}")) {

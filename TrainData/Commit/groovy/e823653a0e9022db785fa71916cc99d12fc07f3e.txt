@@ -1,0 +1,12 @@
+            methodCallExpression = this.configureAST(this.createCallMethodCallExpression(baseExpr, arguments), arguments);
+                return this.configureAST(createCallMethodCallExpression(baseExpr, argumentsExpr), ctx);
+            return this.configureAST(createCallMethodCallExpression(baseExpr, argumentsExpr), ctx);
+    private MethodCallExpression createCallMethodCallExpression(Expression baseExpr, Expression argumentsExpr) {
+        MethodCallExpression methodCallExpression =
+                new MethodCallExpression(baseExpr, CALL_STR, argumentsExpr);
+
+        methodCallExpression.setImplicitThis(false);
+
+        return methodCallExpression;
+    }
+

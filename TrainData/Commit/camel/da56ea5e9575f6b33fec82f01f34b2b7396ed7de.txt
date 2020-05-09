@@ -1,0 +1,2 @@
+import org.apache.camel.support.PatternHelper;
+            match = Arrays.stream(patterns).anyMatch(pattern -> PatternHelper.matchPattern(name, pattern));

@@ -1,0 +1,1 @@
+                        logger.error("Could not follow referral: {}", e.getFailedReferral());

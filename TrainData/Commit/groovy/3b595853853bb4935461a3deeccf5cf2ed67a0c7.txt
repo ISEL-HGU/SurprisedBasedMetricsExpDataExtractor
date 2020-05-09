@@ -1,0 +1,3 @@
+        return //this.configureAST(
+                this.createPathExpression((Expression) this.visit(ctx.primary()), ctx.pathElement());
+                //ctx);

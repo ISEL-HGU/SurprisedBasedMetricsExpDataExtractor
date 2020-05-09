@@ -1,0 +1,2 @@
+        Integer bytecodeVersion = CompilerConfiguration.JDK_TO_BYTECODE_VERSION_MAP.get(targetBytecode);
+        if (invokedynamic && bytecodeVersion < Opcodes.V1_8) {

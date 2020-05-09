@@ -1,0 +1,2 @@
+import org.codehaus.groovy.transform.trait.Traits;
+        if (node.getSuperClass().isInterface() || Traits.isAnnotatedWithTrait(node.getSuperClass())) {

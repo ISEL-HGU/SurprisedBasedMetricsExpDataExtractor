@@ -1,0 +1,3 @@
+                if (!answer.containsValue(data)) {
+                    answer.put(data);
+                }

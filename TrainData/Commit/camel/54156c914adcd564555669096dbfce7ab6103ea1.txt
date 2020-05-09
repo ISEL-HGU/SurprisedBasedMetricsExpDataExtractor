@@ -1,0 +1,10 @@
+                } else if ("restart".equals(action)) {
+                    getEndpoint().getCamelContext().stopRoute(id);
+                    int delay = getEndpoint().getRestartDelay();
+                    try {
+                        log.debug("Sleeping {} ms before starting route");
+                        Thread.sleep(delay);
+                    } catch (InterruptedException e) {
+                        // ignore
+                    }
+                    getEndpoint().getCamelContext().startRoute(id);

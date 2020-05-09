@@ -1,0 +1,6 @@
+    public static final String SCHEMA_XSD_LOCATION = "https://cayenne.apache.org/schema/10/modelMap.xsd";
+		this(mapName, Collections.emptyMap());
+			properties = Collections.emptyMap();
+		this.quotingSQLIdentifiers = (quoteSqlIdentifier != null) && "true".equalsIgnoreCase(quoteSqlIdentifier.toString());
+		this.clientSupported = (clientEntities != null) && "true".equalsIgnoreCase(clientEntities.toString());
+				.attribute("xsi:schemaLocation", SCHEMA_XSD  " "  SCHEMA_XSD_LOCATION, true)

@@ -1,0 +1,15 @@
+    @ModifiedBy(onCreate = false)
+    private String changerOnly;
+
+    @ModifiedBy(onCreate = false)
+    @ManyToOne(targetEntity = Principal.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Principal changerOnlyPrincipal;
+
+
+    public String getChangerOnly() {
+        return changerOnly;
+    }
+
+    public Principal getChangerOnlyPrincipal() {
+        return changerOnlyPrincipal;
+    }

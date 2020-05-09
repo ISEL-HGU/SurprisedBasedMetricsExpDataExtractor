@@ -1,0 +1,20 @@
+     * Service for validating and generating unique nonce values.
+     */
+    @Inject
+    private NonceService nonceService;
+
+    /**
+            // Verify a nonce is present
+            String nonce = claims.getStringClaimValue("nonce");
+            if (nonce == null) {
+                logger.info("Rejected OpenID token without nonce.");
+                return null;
+            }
+
+            // Verify that we actually generated the nonce, and that it has not
+            // already been used
+            if (!nonceService.isValid(nonce)) {
+                logger.debug("Rejected OpenID token with invalid/old nonce.");
+                return null;
+            }
+

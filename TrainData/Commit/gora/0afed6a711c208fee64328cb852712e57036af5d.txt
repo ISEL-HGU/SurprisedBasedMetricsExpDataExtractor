@@ -1,0 +1,6 @@
+     * If both approaches fail, throws ClassNotFoundException.
+     * @return The class.
+     * @throws ClassNotFoundException If and only if no definition for the class with the specified name could be found.
+     * If both approaches fail, throws ClassNotFoundException.
+     * @return The class.
+     * @throws ClassNotFoundException If and only if no definition for the class with the specified name could be found.

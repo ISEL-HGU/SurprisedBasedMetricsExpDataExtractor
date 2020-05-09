@@ -1,0 +1,6 @@
+import java.io.StringWriter;
+            templateWithBindingApplied = t.make(binding).writeTo(reasonableSizeWriter()).toString();
+    private static StringWriter reasonableSizeWriter() {
+        return new StringWriter(65536);
+    }
+

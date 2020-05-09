@@ -1,0 +1,2 @@
+     * To integrate with the Soroush chat bot.
+     * Maven coordinates: org.apache.camel:camel-soroush

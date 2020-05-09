@@ -1,0 +1,2 @@
+import java.util.Arrays;
+            LOG.trace(String.format("Recieved event of type %s did not match any watched types %s", received, Arrays.toString(awaitedTypes)));

@@ -1,0 +1,3 @@
+        return this.localMember.isLeader()
+            ? Optional.of(this.localMember)
+            : Optional.empty();

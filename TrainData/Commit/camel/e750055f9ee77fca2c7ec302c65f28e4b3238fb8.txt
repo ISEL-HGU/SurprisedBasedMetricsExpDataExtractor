@@ -1,0 +1,2 @@
+        AS2Component component =  exchange.getContext().getComponent("as2", AS2Component.class);
+        AS2Configuration configuration = component.getConfiguration();

@@ -1,0 +1,7 @@
+    private static final String EXCLUDE_FILE_CLI = "E";
+    private static final String STYLESHEET_CLI = "s";
+        final Option excludeFile = Option.builder(EXCLUDE_FILE_CLI)
+                .argName("fileName")
+                .longOpt("exclude-file")
+                .desc("Excludes files matching regular expression in <file> " 
+                .build();

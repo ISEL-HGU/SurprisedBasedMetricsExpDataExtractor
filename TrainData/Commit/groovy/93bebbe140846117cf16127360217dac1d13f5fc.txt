@@ -1,0 +1,2 @@
+        GroovyShell groovy = new GroovyShell(Thread.currentThread().getContextClassLoader(), conf);
+        GroovyShell groovy = new GroovyShell(Thread.currentThread().getContextClassLoader(), conf);

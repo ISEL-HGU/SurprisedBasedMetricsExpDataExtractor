@@ -1,0 +1,55 @@
+    
+
+            value = "/{id}/detail",
+            produces = {
+                    ActuatorMediaTypes.APPLICATION_ACTUATOR_V1_JSON_VALUE,
+                    MediaType.APPLICATION_JSON_VALUE
+            }
+            value = "/{id}/info",
+            produces = {
+                    ActuatorMediaTypes.APPLICATION_ACTUATOR_V1_JSON_VALUE,
+                    MediaType.APPLICATION_JSON_VALUE
+            }
+            value = "/{id}/stop",
+            produces = {
+                    ActuatorMediaTypes.APPLICATION_ACTUATOR_V1_JSON_VALUE,
+                    MediaType.APPLICATION_JSON_VALUE
+            }
+                        id,
+                        Optional.ofNullable(timeout),
+                        Optional.of(TimeUnit.SECONDS),
+                        Optional.ofNullable(abortAfterTimeout)
+            value = "/{id}/start",
+            produces = {
+                    ActuatorMediaTypes.APPLICATION_ACTUATOR_V1_JSON_VALUE,
+                    MediaType.APPLICATION_JSON_VALUE
+            }
+    @PostMapping(value = "/{id}/reset", produces = {ActuatorMediaTypes.APPLICATION_ACTUATOR_V1_JSON_VALUE, MediaType.APPLICATION_JSON_VALUE})
+    public Object reset(@PathVariable String id) {
+
+        return doIfEnabled(() -> {
+            try {
+                delegate.resetRoute(id);                
+            } catch (Exception e) {
+                throw new GenericException("Error resetting route stats "  id, e);
+            }
+
+            return ResponseEntity.ok().build();
+        });
+    }
+
+
+    @ResponseBody
+            value = "/{id}/suspend",
+            produces = {
+                    ActuatorMediaTypes.APPLICATION_ACTUATOR_V1_JSON_VALUE,
+                    MediaType.APPLICATION_JSON_VALUE
+            }
+                        id,
+                        Optional.ofNullable(timeout),
+                        Optional.of(TimeUnit.SECONDS)
+            value = "/{id}/resume",
+            produces = {
+                    ActuatorMediaTypes.APPLICATION_ACTUATOR_V1_JSON_VALUE,
+                    MediaType.APPLICATION_JSON_VALUE
+            }

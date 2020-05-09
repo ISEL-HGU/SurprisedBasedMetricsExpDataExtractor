@@ -1,0 +1,2 @@
+        return "Loss function [default: SquaredLoss/squared, QuantileLoss/quantile, "
+                 "EpsilonInsensitiveLoss/epsilon_insensitive, HuberLoss/huber]";

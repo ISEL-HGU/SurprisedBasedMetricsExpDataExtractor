@@ -1,0 +1,10 @@
+	/**
+	 * If set to <code>true</code>, will generate PK attributes as Properties.
+	 * Default is <code>false</code>.
+	 * @since 4.1
+	 */
+	@Parameter(defaultValue = "false")
+	private boolean createPKProperties;
+
+	private transient Injector injector;
+        action.setCreatePKProperties(createPKProperties);

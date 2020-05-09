@@ -1,0 +1,213 @@
+    public static boolean notifyCamelContextStarting(CamelContext context) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyCamelContextStarted(CamelContext context) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyCamelContextStartupFailed(CamelContext context, Throwable cause) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyCamelContextStopping(CamelContext context) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyCamelContextStopped(CamelContext context) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyCamelContextStopFailed(CamelContext context, Throwable cause) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyServiceStopFailure(CamelContext context, Object service, Throwable cause) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyServiceStartupFailure(CamelContext context, Object service, Throwable cause) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyRouteStarted(CamelContext context, Route route) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyRouteStopped(CamelContext context, Route route) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyRouteAdded(CamelContext context, Route route) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyRouteRemoved(CamelContext context, Route route) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyExchangeCreated(CamelContext context, Exchange exchange) {
+            return false;
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyExchangeDone(CamelContext context, Exchange exchange) {
+            return false;
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyExchangeFailed(CamelContext context, Exchange exchange) {
+            return false;
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyExchangeFailureHandling(CamelContext context, Exchange exchange, Processor failureHandler,
+            return false;
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyExchangeFailureHandled(CamelContext context, Exchange exchange, Processor failureHandler,
+            return false;
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyExchangeRedelivery(CamelContext context, Exchange exchange, int attempt) {
+            return false;
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyExchangeSending(CamelContext context, Exchange exchange, Endpoint endpoint) {
+            return false;
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyExchangeSent(CamelContext context, Exchange exchange, Endpoint endpoint, long timeTaken) {
+            return false;
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyCamelContextSuspending(CamelContext context) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyCamelContextSuspended(CamelContext context) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyCamelContextResuming(CamelContext context) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyCamelContextResumed(CamelContext context) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    public static boolean notifyCamelContextResumeFailed(CamelContext context, Throwable cause) {
+            return false;
+            return false;
+            return false;
+        boolean answer = false;
+                    return false;
+            answer |= doNotifyEvent(notifier, event);
+        return answer;
+    private static boolean doNotifyEvent(EventNotifier notifier, EventObject event) {
+            return false;
+            return false;
+
+        return true;

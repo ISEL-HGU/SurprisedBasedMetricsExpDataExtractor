@@ -1,0 +1,4 @@
+        return Boolean.TRUE.equals(left) && Boolean.TRUE.equals(right);
+        return Boolean.TRUE.equals(left) || Boolean.TRUE.equals(right);
+        return !Boolean.TRUE.equals(left) || Boolean.TRUE.equals(right);
+        return Boolean.TRUE.equals(left) ^ Boolean.TRUE.equals(right);

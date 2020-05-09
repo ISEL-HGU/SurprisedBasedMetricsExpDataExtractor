@@ -1,0 +1,5 @@
+                    new OptionBuilder("m2compatible").description("use Maven 2 compatibility")
+                .addOption(new OptionBuilder("overwriteMode").arg("overwriteMode")
+                        .description("use given overwrite mode for retrieve")
+                        .create())
+                        .setOverwriteMode(line.getOptionValue("overwriteMode"))

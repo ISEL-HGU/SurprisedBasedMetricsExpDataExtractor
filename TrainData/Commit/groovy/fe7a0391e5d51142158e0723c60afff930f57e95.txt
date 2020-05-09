@@ -1,0 +1,6 @@
+	 * The modified implementation is based on StringUtils#replace(String text, String searchString, String replacement, int max), Apache commons-lang3-3.6
+	public static String replace(final String text, String searchString, final String replacement) {
+		if (isEmpty(text) || isEmpty(searchString) || replacement == null) {
+		int end = text.indexOf(searchString, start);
+		increase = (increase < 0 ? 0 : increase) * 16;
+			end = text.indexOf(searchString, start);

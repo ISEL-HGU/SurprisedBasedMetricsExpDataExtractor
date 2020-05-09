@@ -1,0 +1,3 @@
+    String CAYENNE_PREFERENCES_PATH = "org/apache/cayenne";
+    String EDITOR = "editor";
+    String LAST_PROJ_FILES = "lastSeveralProjectFiles";

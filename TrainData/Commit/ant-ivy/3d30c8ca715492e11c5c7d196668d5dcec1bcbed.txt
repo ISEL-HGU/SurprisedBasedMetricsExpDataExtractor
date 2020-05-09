@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+    private final List<ConfiguredTTL> configuredTTLs = new ArrayList<ConfiguredTTL>();
+
+    public void setSettings(final IvySettings settings) {
+        // process and setup the configured TTLs (which weren't yet processed since they needed a settings instance to be present)
+        for (final ConfiguredTTL configuredTTL : configuredTTLs) {
+            this.addTTL(configuredTTL.attributes,
+                    configuredTTL.matcher == null ? ExactPatternMatcher.INSTANCE : settings.getMatcher(configuredTTL.matcher), configuredTTL.duration);
+        }
+        // clear off the configured TTLs since we have now processed them and created TTL rules out of them
+        this.configuredTTLs.clear();
+    public void addConfiguredTtl(final Map<String, String> attributes) {
+        final String durationValue = attributes.get("duration");
+        if (durationValue == null) {
+        final long duration = parseDuration(durationValue);
+        final ConfiguredTTL configuredTTL = new ConfiguredTTL(duration, attributes.get("matcher"), attributes);
+        // Processing TTLs requires access to an initialized/usable IvySettings instance.
+        // we keep track of these configured TTLs and process them when the IvySettings instance becomes usable
+        this.configuredTTLs.add(configuredTTL);
+    private static final class ConfiguredTTL {
+        // attributes on the TTL, that don't contribute to module matching
+        private static final Set<String> attributesNotContributingToMatching = new HashSet<String>();
+        static {
+            attributesNotContributingToMatching.add("duration");
+            attributesNotContributingToMatching.add("matcher");
+        }
+
+        private final String matcher;
+        private final long duration;
+        private final Map<String, String> attributes;
+
+        private ConfiguredTTL(final long duration, final String matcher, final Map<String, String> attributes) {
+            this.matcher = matcher;
+            this.duration = duration;
+            if (attributes == null) {
+                this.attributes = Collections.emptyMap();
+            } else {
+                final Map<String, String> attrs = new HashMap<String, String>(attributes);
+                for (final String removable : attributesNotContributingToMatching) {
+                    attrs.remove(removable);
+                }
+                this.attributes = Collections.unmodifiableMap(attrs);
+            }
+        }
+
+    }

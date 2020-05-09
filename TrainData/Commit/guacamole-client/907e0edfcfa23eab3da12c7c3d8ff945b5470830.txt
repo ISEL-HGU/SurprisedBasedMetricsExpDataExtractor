@@ -1,0 +1,6 @@
+            constraints.setDereference(confService.getDereferenceAliases());
+            LDAPSearchConstraints constraints = new LDAPSearchConstraints();
+            constraints.setDereference(confService.getDereferenceAliases());
+
+                false,
+                constraints

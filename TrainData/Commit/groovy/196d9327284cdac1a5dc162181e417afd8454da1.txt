@@ -1,0 +1,12 @@
+        this.visitStatements(ctx.statements())
+    public List<ASTNode> visitStatements(StatementsContext ctx) {
+        if (!asBoolean(ctx)) {
+            return Collections.emptyList();
+        }
+
+        return ctx.statement().stream()
+                .map(e -> (ASTNode) visit(e))
+                .collect(Collectors.toList());
+    }
+
+    @Override

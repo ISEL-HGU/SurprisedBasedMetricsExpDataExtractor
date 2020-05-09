@@ -1,0 +1,7 @@
+            connection = DriverManager.getConnection(url.toString(), props);
+            if (!props.containsKey("password")) {
+                LOG.fine("props = "  props);
+            } else {
+                Properties propsCopy = new Properties();
+                propsCopy.putAll(props);
+                LOG.fine("props = "  propsCopy);

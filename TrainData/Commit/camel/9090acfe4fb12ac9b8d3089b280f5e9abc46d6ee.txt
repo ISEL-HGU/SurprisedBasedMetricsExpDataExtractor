@@ -1,0 +1,6 @@
+                    writeHttpHeader(batchRequestHeaderOutputStream, HttpHeaders.ACCEPT,
+                            contentType.getType().toLowerCase()  "/"  contentType.getSubtype().toLowerCase());
+                    writeHttpHeader(batchRequestHeaderOutputStream, HttpHeaders.ACCEPT,
+                            contentType.getType().toLowerCase()  "/"  contentType.getSubtype().toLowerCase());
+            httpUriRequest.addHeader(HttpHeaders.ACCEPT,
+                    contentType.getType().toLowerCase()  "/"  contentType.getSubtype().toLowerCase());

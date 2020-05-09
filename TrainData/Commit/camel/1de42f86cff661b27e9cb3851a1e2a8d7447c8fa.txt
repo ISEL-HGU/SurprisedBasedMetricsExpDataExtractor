@@ -1,0 +1,2 @@
+import org.jboss.arquillian.core.spi.InvocationException;
+                throw new InvocationException(new RuntimeException(alert));

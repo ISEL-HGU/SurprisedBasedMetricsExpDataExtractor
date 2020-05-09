@@ -1,0 +1,2 @@
+ b/gora-pig/src/main/java/org/apache/gora/pig/mapreduce/PigGoraOutputFormat.java
+package org.apache.gora.pig.mapreduce;

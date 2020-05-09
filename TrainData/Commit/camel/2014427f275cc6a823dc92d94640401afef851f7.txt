@@ -1,0 +1,5 @@
+         * Confluent documentation. This option is only available in the
+         * Confluent Kafka product (not standard Apache Kafka)
+         * mapped to {username}. For more details on the format please see the
+         * security authorization and acls documentation.. Multiple values can
+         * be separated by comma

@@ -1,0 +1,30 @@
+ * consumer group, so in a cluster of 10 Camel processes using the same topic each will control its own offset.
+    public void setCamelContext(CamelContext camelContext) {
+        this.camelContext = camelContext;
+    }
+
+    @Override
+    public CamelContext getCamelContext() {
+        return this.camelContext;
+    }
+
+    @Override
+        ObjectHelper.notNull(camelContext, "camelContext");
+
+        // warm up the cache
+        executorService = camelContext.getExecutorServiceManager().newSingleThreadExecutor(this, "KafkaIdempotentRepository");
+        log.info("Warming up cache from topic {}", topic);
+                     "Duplicate records may not be detected.", topic);
+            log.warn("Interrupted while warming up cache. This exception is ignored.", e.getMessage());
+                log.info("Cache from topic {} shutdown successfully", topic);
+            } else {
+                log.warn("Timeout waiting for cache to shutdown from topic {}. Proceeding anyway.", topic);
+            log.warn("Interrupted waiting on shutting down cache due {}. This exception is ignored.", e.getMessage());
+        private final CountDownLatch shutdownLatch = new CountDownLatch(1);
+        private final AtomicBoolean running = new AtomicBoolean(true);
+
+        @Override
+        public String toString() {
+            return "TopicPoller["  topic  "]";
+        }
+

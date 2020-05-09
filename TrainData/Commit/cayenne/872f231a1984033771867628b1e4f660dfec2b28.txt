@@ -1,0 +1,1 @@
+        super(messageFormat == null ? null : String.format(messageFormat, messageArgs));

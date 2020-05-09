@@ -1,0 +1,6 @@
+import org.apache.camel.impl.cloud.CombinedServiceFilter;
+    private final CombinedServiceFilter serviceFilter;
+    public CamelCloudServiceFilter(List<ServiceFilter> serviceFilterList) {
+        this.serviceFilter = new CombinedServiceFilter(serviceFilterList);
+    public List<ServiceDefinition> apply(List<ServiceDefinition> serviceDefinitionList) {
+        return  this.serviceFilter.apply(serviceDefinitionList);

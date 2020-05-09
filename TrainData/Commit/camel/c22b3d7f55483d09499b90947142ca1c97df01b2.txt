@@ -1,0 +1,44 @@
+import java.io.InputStream;
+import org.apache.camel.Consumer;
+import org.apache.camel.Endpoint;
+import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
+import org.apache.camel.processor.UnitOfWorkProducer;
+import org.apache.camel.support.DefaultProducer;
+import org.apache.camel.support.ServiceHelper;
+    private long delay = 500;
+    private Processor task;
+    private Endpoint endpoint;
+    private Consumer consumer;
+     * Sets the delay in millis between checks for updated files.
+     * The default is 500 millis.
+    public void setDelay(long delay) {
+        this.delay = delay;
+            endpoint = getCamelContext().getEndpoint("file:"  dir  "?delay="  delay  "&recursive="  isRecursive
+                 "&readLock=none&noop=true&idempotentKey=${file:name}-${file:modified}");
+            // must wrap in unit of work
+            task = new UnitOfWorkProducer(new UpdatedFileProcessor(endpoint));
+            consumer = endpoint.createConsumer(task);
+            ServiceHelper.startService(endpoint);
+            ServiceHelper.startService(consumer);
+        if (consumer != null) {
+            ServiceHelper.stopAndShutdownServices(consumer);
+            getCamelContext().removeService(consumer);
+        if (endpoint != null) {
+            ServiceHelper.stopAndShutdownServices(endpoint);
+            getCamelContext().removeEndpoint(endpoint);
+    protected class UpdatedFileProcessor extends DefaultProducer {
+        public UpdatedFileProcessor(Endpoint endpoint) {
+            super(endpoint);
+        @Override
+        public void process(Exchange exchange) throws Exception {
+            String name = exchange.getMessage().getHeader(Exchange.FILE_NAME, String.class);
+            log.trace("Modified/Created file: {}", name);
+            // must be an .xml file
+            if (name.toLowerCase(Locale.US).endsWith(".xml")) {
+                log.debug("Modified/Created XML file: {}", name);
+                    InputStream is = exchange.getMessage().getMandatoryBody(InputStream.class);
+                    onReloadXml(getCamelContext(), name, is);
+                    IOHelper.close(is);
+                } catch (Exception e) {
+                    log.warn("Error reloading routes from file: "  name  " due "  e.getMessage()  ". This exception is ignored.", e);

@@ -1,0 +1,8 @@
+ * complex implementations try the Spring or CDI implementations.
+    @Override
+        return newInstance(type, true);
+    }
+
+    @Override
+    public <T> T newInstance(Class<T> type, boolean postProcessBean) {
+        // does not support post processing

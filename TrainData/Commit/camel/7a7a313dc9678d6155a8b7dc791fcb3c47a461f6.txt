@@ -1,0 +1,19 @@
+    private final EventNotifierSupport eventNotifier;
+        if (eventNotifier.isStopped()) {
+            throw new IllegalStateException("A destroyed NotifyBuilder cannot be re-created.");
+        }
+     * De-registers this builder from its {@link CamelContext}.
+     * <p/>
+     * Once destroyed, this instance will not function again.
+     */
+    public void destroy() {
+        context.getManagementStrategy().removeEventNotifier(eventNotifier);
+        try {
+            ServiceHelper.stopService(eventNotifier);
+        } catch (Exception e) {
+            throw ObjectHelper.wrapRuntimeCamelException(e);
+        }
+        created = false;
+    }
+
+    /**

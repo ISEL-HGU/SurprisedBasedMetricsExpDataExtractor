@@ -1,0 +1,1 @@
+                    log.error("Error starting CamelContext ("  getName()  ") due to exception thrown: "  e.getMessage(), e);

@@ -1,0 +1,2 @@
+            log.trace("Sending {} messages to bigquery table {}, suffix {}, partition {}",
+            log.trace("Sent {} messages to bigquery table {}, suffix {}, partition {}",

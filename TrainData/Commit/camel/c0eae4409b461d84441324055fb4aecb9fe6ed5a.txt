@@ -1,0 +1,3 @@
+    private int maxCacheEntries = 100;
+    private EncryptionAlgorithm encryptionAlgorithm = EncryptionAlgorithm.RSA_SHA_256;
+    private String authenticationType = APP_USER_AUTHENTICATION;

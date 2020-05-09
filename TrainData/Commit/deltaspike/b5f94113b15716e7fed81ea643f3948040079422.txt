@@ -1,0 +1,2 @@
+        if (genericTypes.length < constructor.getParameterTypes().length)
+            genericTypes = new Type[constructor.getParameterTypes().length];

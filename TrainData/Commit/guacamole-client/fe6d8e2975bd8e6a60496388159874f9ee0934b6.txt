@@ -1,0 +1,3 @@
+        catch (TicketValidationException e) {
+            throw new GuacamoleException("Ticket validation failed.", e);
+        }

@@ -1,0 +1,1 @@
+        File allStartersDir = new File(camelProjectRoot(baseDir, "platforms"), "platforms/spring-boot/components-starter");

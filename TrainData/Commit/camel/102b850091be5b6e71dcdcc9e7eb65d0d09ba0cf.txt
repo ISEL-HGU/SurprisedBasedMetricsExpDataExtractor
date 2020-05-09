@@ -1,0 +1,1 @@
+     * Adds a onCompletion {@link org.apache.camel.spi.Synchronization} hook that invoke this route as

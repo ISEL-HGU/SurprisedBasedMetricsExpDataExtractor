@@ -1,0 +1,16 @@
+  public int JJTASTERISK = 43;
+  public int JJTCOUNT = 44;
+  public int JJTAVG = 45;
+  public int JJTMAX = 46;
+  public int JJTMIN = 47;
+  public int JJTSUM = 48;
+  public int JJTNAMEDPARAMETER = 49;
+  public int JJTOBJPATH = 50;
+  public int JJTDBPATH = 51;
+    "Asterisk",
+    "Count",
+    "Avg",
+    "Max",
+    "Min",
+    "Sum",
+/* JavaCC - OriginalChecksum=0fe59a033c5f411d1c7cc0cc441fabf6 (do not edit this line) */

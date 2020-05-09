@@ -1,0 +1,10 @@
+import org.antlr.v4.runtime.ParserRuleContext;
+import org.antlr.v4.runtime.misc.Interval;
+
+                    throw createParsingFailedException("Unexpected input: '"  getOriginalText(ctx.expression())  "'", ctx.expression());
+    private String getOriginalText(ParserRuleContext context) {
+        CharStream charStream = lexer.getInputStream();
+        return charStream.getText(Interval.of(context.getStart().getStartIndex(), context.getStop().getStopIndex()));
+
+    }
+

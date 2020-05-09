@@ -1,0 +1,30 @@
+import org.codehaus.groovy.classgen.asm.util.TypeDescriptionUtil;
+import static org.codehaus.groovy.ast.ClassHelper.VOID_TYPE;
+import static org.codehaus.groovy.ast.ClassHelper.boolean_TYPE;
+import static org.codehaus.groovy.ast.ClassHelper.byte_TYPE;
+import static org.codehaus.groovy.ast.ClassHelper.char_TYPE;
+import static org.codehaus.groovy.ast.ClassHelper.double_TYPE;
+import static org.codehaus.groovy.ast.ClassHelper.float_TYPE;
+import static org.codehaus.groovy.ast.ClassHelper.int_TYPE;
+import static org.codehaus.groovy.ast.ClassHelper.long_TYPE;
+import static org.codehaus.groovy.ast.ClassHelper.short_TYPE;
+
+                buf.append(TypeDescriptionUtil.getDescriptionByType(d));
+            return prefix  TypeDescriptionUtil.getDescriptionByName(name)  (TypeDescriptionUtil.isPrimitiveType(name) ? "" : name.replace('/', '.')  ";");
+        }
+
+        return name.replace('/', '.');
+        if (ClassHelper.isPrimitiveType(type) && type != VOID_TYPE) {
+        if (type == boolean_TYPE) {
+        if (type == double_TYPE) {
+        } else if (type == float_TYPE) {
+        if (type== long_TYPE) {
+            if (type == double_TYPE) {
+            } else if (type == float_TYPE) {
+            } else if (type == long_TYPE) {
+                    type == boolean_TYPE
+                            || type == char_TYPE
+                            || type == byte_TYPE
+                            || type == int_TYPE
+                            || type == short_TYPE) {
+            } else if (type == VOID_TYPE) {

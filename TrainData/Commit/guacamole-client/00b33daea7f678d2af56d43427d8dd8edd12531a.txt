@@ -1,0 +1,18 @@
+import java.util.List;
+     *
+            String username) throws GuacamoleException {
+        try {
+            // Get LDAP attributes by querying LDAP
+            LDAPEntry userEntry = ldapConnection.read(userDN, attrArray);
+            LDAPAttributeSet attrSet = userEntry.getAttributeSet();
+
+            // Add each attribute into Map
+            for (Object attrObj : attrSet) {
+                LDAPAttribute attr = (LDAPAttribute)attrObj;
+                String attrName = attr.getName();
+                String attrValue = attr.getStringValue();
+                attrMap.put(attrName, attrValue);
+            }
+        }
+        catch (LDAPException e) {
+            throw new GuacamoleServerException("Error while querying for User Attributes.", e);

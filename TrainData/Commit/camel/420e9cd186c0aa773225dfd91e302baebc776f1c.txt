@@ -1,0 +1,1 @@
+    @Bean({"coap-component", "coaptcp-component", "coaps-component", "coapstcp-component"})

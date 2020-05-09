@@ -1,0 +1,1 @@
+        ExtendedType<?> decorator = map.getExplictlyRegisteredType(valueObjectType.getTargetType().getCanonicalName());

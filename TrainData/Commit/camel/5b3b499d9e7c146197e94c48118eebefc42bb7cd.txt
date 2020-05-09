@@ -1,0 +1,18 @@
+    private String schemaRegistryURL;
+    @UriParam(label = "common")
+        addPropertyIfNotNull(props, "schema.registry.url", getSchemaRegistryURL());
+        addPropertyIfNotNull(props, "schema.registry.url", getSchemaRegistryURL());
+    public String getSchemaRegistryURL() {
+		return schemaRegistryURL;
+	}
+
+    /**
+     * URL of the Kafka schema registry to use.
+     * The format is host1:port1,host2:port2.
+     * <p/>
+     * This option is known as <tt>schema.registry.url</tt> in the Kafka documentation.
+     */
+	public void setSchemaRegistryURL(String schemaRegistryURL) {
+		this.schemaRegistryURL = schemaRegistryURL;
+	}
+

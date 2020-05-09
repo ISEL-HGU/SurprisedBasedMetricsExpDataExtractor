@@ -1,0 +1,2 @@
+                result = test.call(key, value);
+                        result = test.call(key, newValue);

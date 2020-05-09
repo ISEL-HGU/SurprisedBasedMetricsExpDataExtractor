@@ -1,0 +1,2 @@
+ b/components/camel-cdi/src/main/java/org/apache/camel/cdi/CdiRouteBuilder.java
+public abstract class CdiRouteBuilder extends RouteBuilder {

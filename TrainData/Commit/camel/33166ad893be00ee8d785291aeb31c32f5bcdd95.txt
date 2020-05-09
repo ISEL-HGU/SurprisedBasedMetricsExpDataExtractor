@@ -1,0 +1,8 @@
+ *      http://www.apache.org/licenses/LICENSE-2.0
+import java.net.InetSocketAddress;
+import java.net.Proxy;
+
+    /**
+     * To use google apiKey
+     */
+        } else {

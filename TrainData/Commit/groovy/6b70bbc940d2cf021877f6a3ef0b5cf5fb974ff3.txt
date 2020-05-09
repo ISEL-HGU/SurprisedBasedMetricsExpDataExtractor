@@ -1,0 +1,6 @@
+                        ClassNode objectExpressionType = expr.getObjectExpression().getType();
+                        final String typename = getExpressionType(objectExpressionType).getName();
+        private ClassNode getExpressionType(ClassNode objectExpressionType) {
+            return objectExpressionType.isArray() ? getExpressionType(objectExpressionType.getComponentType()) : objectExpressionType;
+        }
+

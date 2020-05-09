@@ -1,0 +1,4 @@
+    public T gzipDeflater() {
+    public T zipDefalter() {
+        ZipDeflaterDataFormat zdf = new ZipDeflaterDataFormat();
+    public T zipDefalter(int compressionLevel) {

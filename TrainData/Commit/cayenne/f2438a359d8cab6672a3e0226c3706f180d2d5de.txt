@@ -1,0 +1,11 @@
+    Font DEFAULT_FONT = new Font("Courier", Font.PLAIN, 14);
+    Color DEFAULT_COLOR = Color.black;
+    String COMMENT_TEXT = "(?:/\\*(?:[^*]|(?:\\*[^*/]))*\\*/)|(?://.*)";
+    String COMMENT_TEXT_START = "/\\*.?";
+    String STRING_TEXT = "'[^']*'";
+    String NUMBER_TEXT = "\\d";
+    String[] getKEYWORDS();
+    String[] getKEYWORDS2();
+    String[] getTYPES();
+    String[] getOPERATORS();
+    String getContentType();

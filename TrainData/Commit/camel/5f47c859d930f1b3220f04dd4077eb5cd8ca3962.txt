@@ -1,0 +1,2 @@
+@UriEndpoint(firstVersion = "2.19.0", scheme = "pubnub", title = "PubNub", syntax = "pubnub:channel",
+    consumerClass = PubNubConsumer.class, label = "cloud,iot,messaging")

@@ -1,0 +1,12 @@
+import org.objectweb.asm.Opcodes;
+    /**
+     * JDK version to bytecode version mapping
+     */
+    public static final Map<String, Integer> JDK_TO_BYTECODE_VERSION_MAP = Collections.unmodifiableMap(new HashMap<String, Integer>() {{
+        put(JDK4, Opcodes.V1_4);
+        put(JDK5, Opcodes.V1_5);
+        put(JDK6, Opcodes.V1_6);
+        put(JDK7, Opcodes.V1_7);
+        put(JDK8, Opcodes.V1_8);
+    }});
+

@@ -1,0 +1,2 @@
+        final PathVisitor<RestsDefinition> restDslStatement = new PathVisitor<>(swagger.getBasePath(), emitter, filter, destinationGenerator());
+            xml = xml.replaceFirst("<rest ", extra  "\n    <rest ");

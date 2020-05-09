@@ -1,0 +1,1 @@
+        final Class<A> annotationClass = this.<A> loadClass(toQualifiedClassName(constraint.getAnnotation()));

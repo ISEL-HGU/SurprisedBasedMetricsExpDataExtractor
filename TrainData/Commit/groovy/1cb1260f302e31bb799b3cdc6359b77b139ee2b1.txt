@@ -1,0 +1,2 @@
+        ClassNode result = ClassHelper.make(ctx.getText());
+        ClassNode result = ClassHelper.make(ctx.getText());

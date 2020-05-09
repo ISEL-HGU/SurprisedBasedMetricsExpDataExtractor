@@ -1,0 +1,38 @@
+ * <code>CamelEndpointId</code>{@link WorkItem} parameter. E.g. when a the value "myCamelEndpoint" is passed to the {link WorkItem} via the
+ * <code>CamelEndpointId</code> parameter, this command will send the {@link WorkItem} to the Camel URI
+ * <code>direct:myCamelEndpoint</code>.
+ * Camel route that is consuming from that endpoint, unless the endpoint is overridden by passing a the <code>CamelEndpointId</code> in the
+ * {@link WorkItem} parameters.
+    private ProducerTemplate producerTemplate;
+    
+    private final String camelContextKey;
+    
+    private boolean initialized = false;
+    
+        this.camelContextKey = JBPMConstants.GLOBAL_CAMEL_CONTEXT_SERVICE_KEY;
+        this.producerTemplate = buildProducerTemplate(camelContextKey);
+        this.initialized = true;
+        this.camelContextKey = runtimeManager.getIdentifier()  JBPMConstants.DEPLOYMENT_CAMEL_CONTEXT_SERVICE_KEY_POSTFIX;
+        /*
+         * Depending on the order of session creation and CamelContext creation and registration, the CamelContext might not yet be
+         * available. Hence, when we deal with a Deployment scoped CamelContext, we can lazy-init when the context is not yet available.
+         */
+        try {
+            this.producerTemplate = buildProducerTemplate(camelContextKey);
+            this.initialized = true;
+        } catch (IllegalArgumentException iae) {
+            String message = "CamelContext with identifier '"  camelContextKey
+                     "' not found in ServiceRegistry. This can be caused by the order in which the platform extensions are initialized. Deferring Camel ProducerTemplate creation until the first WorkItemHandler call.";
+            logger.info(message, iae);
+        }
+    private ProducerTemplate buildProducerTemplate(String key) {
+        CamelContext camelContext = (CamelContext) ServiceRegistry.get().service(key);
+        return this.producerTemplate = camelContext.createProducerTemplate();
+    }
+    
+    
+        if (!initialized) {
+            this.producerTemplate = buildProducerTemplate(camelContextKey);
+            initialized = true;
+        }
+        String camelUri = "direct:"  workItemCamelEndpointId;

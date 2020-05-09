@@ -1,0 +1,20 @@
+    private final List<String> endProgress = new ArrayList<>();
+    private final List<String> logs = new ArrayList<>();
+    private final List<String> rawLogs = new ArrayList<>();
+    private int progressCalls;
+        endProgress.add(msg);
+        logs.add(level  " "  msg);
+        progressCalls;
+        rawLogs.add(level  " "  msg);
+        return endProgress;
+        return logs;
+        return progressCalls;
+        return rawLogs;
+        logs.clear();
+        rawLogs.clear();
+        endProgress.clear();
+        progressCalls = 0;
+        for (String log : logs) {
+                 "' logs='\n"  join(logs)  "'");
+        for (String log : logs) {
+                         "' logs='\n"  join(logs)  "'");

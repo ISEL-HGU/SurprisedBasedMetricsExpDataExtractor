@@ -1,0 +1,4 @@
+import java.util.Locale;
+        String accept = request.getHeader("Accept");
+            json = accept.toLowerCase(Locale.US).contains("json");
+            yaml = accept.toLowerCase(Locale.US).contains("yaml");

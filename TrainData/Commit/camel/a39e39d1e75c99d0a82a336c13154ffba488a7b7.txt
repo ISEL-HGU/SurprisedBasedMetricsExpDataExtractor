@@ -1,0 +1,2 @@
+                        if ("camel-as2".equals(dir.getName())) {
+                            target = new File(dir, "camel-fhir-component/src/main/docs");

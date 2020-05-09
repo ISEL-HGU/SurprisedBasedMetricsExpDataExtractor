@@ -1,0 +1,11 @@
+import org.apache.cxf.transport.http.HTTPConduit;
+        HTTPConduit httpConduit = WebClient.getConfig(this.api).getHttpConduit();
+        httpConduit.getClient().setAllowChunking(false);
+    }
+
+    @Override
+    public void setHttpProxy(String host, Integer port) {
+        HTTPConduit httpConduit = WebClient.getConfig(this.api).getHttpConduit();
+        httpConduit.getClient().setProxyServer(host);
+        httpConduit.getClient().setProxyServerPort(port);
+}

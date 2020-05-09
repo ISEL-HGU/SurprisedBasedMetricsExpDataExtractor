@@ -1,0 +1,7 @@
+/*
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+/**
+ * A JUnit rule to tear down Camel when using createCamelContextPerClass=true.
+ */

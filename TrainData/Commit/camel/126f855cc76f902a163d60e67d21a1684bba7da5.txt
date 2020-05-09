@@ -1,0 +1,11 @@
+import java.util.StringJoiner;
+            // skip lines with comments
+            StringJoiner sj = new StringJoiner("\n");
+            String[] lines = answer.split("\n");
+            for (String line : lines) {
+                String trim = line.trim();
+                if (!trim.isEmpty() && !trim.startsWith("--")) {
+                    sj.add(line);
+                }
+            }
+            answer = sj.toString();

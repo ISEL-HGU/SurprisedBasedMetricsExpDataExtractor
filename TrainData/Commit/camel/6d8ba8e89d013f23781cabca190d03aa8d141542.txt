@@ -1,0 +1,25 @@
+import java.util.Iterator;
+                        Iterator<ConsumerRecord<Object, Object>> recordIterator = allRecords.records(partition).iterator();
+                        if (recordIterator.hasNext()) {
+                            ConsumerRecord<Object, Object> record = null;
+                            while (recordIterator.hasNext()) {
+                                record = recordIterator.next();
+                                if (LOG.isTraceEnabled()) {
+                                    LOG.trace("partition = {}, offset = {}, key = {}, value = {}", record.partition(), record.offset(), record.key(),
+                                              record.value());
+                                }
+                                Exchange exchange = endpoint.createKafkaExchange(record);
+                                if (endpoint.getConfiguration().isAutoCommitEnable() != null && !endpoint.getConfiguration().isAutoCommitEnable()) {
+                                    exchange.getIn().setHeader(KafkaConstants.LAST_RECORD_BEFORE_COMMIT, !recordIterator.hasNext());
+                                }
+                                try {
+                                    processor.process(exchange);
+                                } catch (Exception e) {
+                                    getExceptionHandler().handleException("Error during processing", exchange, e);
+                                }
+                            long partitionLastOffset = record.offset();
+                            if (offsetRepository != null) {
+                                offsetRepository.setState(serializeOffsetKey(partition), serializeOffsetValue(partitionLastOffset));
+                                // if autocommit is false
+                            } else if (endpoint.getConfiguration().isAutoCommitEnable() != null && !endpoint.getConfiguration().isAutoCommitEnable()) {
+                                consumer.commitSync(Collections.singletonMap(partition, new OffsetAndMetadata(partitionLastOffset  1)));

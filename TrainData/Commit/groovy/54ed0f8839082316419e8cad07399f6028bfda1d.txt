@@ -1,0 +1,11 @@
+    private static final boolean PERMISSIVE_PROPERTY_ACCESS = SystemUtil.getBooleanSafe("groovy.permissive.property.access");
+    private boolean permissivePropertyAccess = PERMISSIVE_PROPERTY_ACCESS;
+            if (!permissivePropertyAccess) {
+
+    public boolean isPermissivePropertyAccess() {
+        return permissivePropertyAccess;
+    }
+
+    public void setPermissivePropertyAccess(boolean permissivePropertyAccess) {
+        this.permissivePropertyAccess = permissivePropertyAccess;
+    }

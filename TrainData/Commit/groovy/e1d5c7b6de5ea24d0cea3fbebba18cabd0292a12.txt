@@ -1,0 +1,9 @@
+        List<String> parameterNames = method.parameterNames;
+            String parameterName = "param"  i;
+            if (parameterNames != null && i < parameterNames.size()) {
+                String decompiledName = parameterNames.get(i);
+                if (decompiledName != null) {
+                    parameterName = decompiledName;
+                }
+            }
+            parameters[i] = new Parameter(parameterTypes[i], parameterName);

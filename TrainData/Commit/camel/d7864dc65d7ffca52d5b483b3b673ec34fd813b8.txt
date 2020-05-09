@@ -1,0 +1,2 @@
+import org.apache.camel.CatalogCamelContext;
+                    String json = camelContext.adapt(CatalogCamelContext.class).explainEipJson(line, false);

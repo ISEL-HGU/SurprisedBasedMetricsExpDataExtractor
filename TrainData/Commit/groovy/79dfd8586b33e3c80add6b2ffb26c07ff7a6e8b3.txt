@@ -1,0 +1,119 @@
+import javax.annotation.Nullable;
+
+
+    private static final Comparator<CachedClass> CACHED_CLASS_NAME_COMPARATOR = Comparator.comparing(CachedClass::getName);
+            additionalMetaMethods = MetaMethod.EMPTY_ARRAY;
+        if (o instanceof FastArray) {
+        } else {
+        }
+        MetaProperty metaProperty = null;
+
+        metaProperty = (MetaProperty) propertyMap.get(name);
+        if (metaProperty == null) {
+            metaProperty = (MetaProperty) staticPropertyIndex.get(name);
+            if (metaProperty == null) {
+                propertyMap = classPropertyIndexForSuper.getNotNull(theCachedClass);
+                metaProperty = (MetaProperty) propertyMap.get(name);
+                if (metaProperty == null) {
+                    CachedClass superClass = theCachedClass;
+                    while (superClass != null && superClass != ReflectionCache.OBJECT_CLASS) {
+                        MetaBeanProperty property = findPropertyInClassHierarchy(name, superClass);
+                        if (property != null) {
+                            onSuperPropertyFoundInHierarchy(property);
+                            metaProperty = property;
+                            break;
+                        }
+                        superClass = superClass.getCachedSuperClass();
+
+        return metaProperty;
+        while (iter.hasNext()) {
+        while (iter.hasNext()) {
+                if (o instanceof FastArray) {
+                } else {
+                }
+        while (iter.hasNext()) {
+        if (firstGroovy == null) {
+        } else {
+        if (entry == null) {
+        } else if (isCallToSuper) {
+                } else {
+                }
+                if (isGetter) {
+                } else {
+                if (methodMissing instanceof ClosureMetaMethod) {
+                } else {
+                }
+        } else if (original != null) {
+            throw original;
+        } else {
+            throw new MissingMethodExceptionNoStack(methodName, theClass, arguments, false);
+        }
+                        if (method != null) {
+                        } else if (delegate != closure && (delegate instanceof GroovyObject)) {
+                                } else {
+                                }
+                                } else {
+                                }
+            MetaMethod transformedMetaMethod = VMPluginFactory.getPlugin().transformMetaMethod(this, method, MetaClassHelper.convertToTypeArray(arguments), MetaClassImpl.class);
+        if (metaProperty != null) {
+        } else {
+            } else {
+                return false;
+            }
+        } else {
+        }
+            MetaMethod transformedMetaMethod = VMPluginFactory.getPlugin().transformMetaMethod(this, method, MetaClassHelper.convertToTypeArray(arguments), MetaClassImpl.class);
+        if (isStatic || object instanceof Class) {
+        } else {
+        }
+        if (isStatic || object instanceof Class) {
+        } else {
+        }
+        if (ret == null) {
+        } else if (ret instanceof List) {
+        } else {
+                copyNonPrivateFields(sPropertyIndex, iPropertyIndex, null);
+            } else {
+            }
+                copyNonPrivateFields(iPropertyIndex, sPropertyIndex, null);
+    private static void addFields(CachedClass klass, SingleKeyHashMap propertyIndex) {
+        for (CachedField field : klass.getFields()) {
+    private static void copyNonPrivateFields(SingleKeyHashMap from, SingleKeyHashMap to, @Nullable CachedClass klass) {
+        for (ComplexKeyHashMap.EntryIterator it = from.getEntrySetIterator(); it.hasNext(); ) {
+            SingleKeyHashMap.Entry entry = (SingleKeyHashMap.Entry) it.next();
+            CachedField field = (CachedField) entry.getValue();
+            int modifiers = field.getModifiers();
+            if (Modifier.isPublic(modifiers) || Modifier.isProtected(modifiers) || (!Modifier.isPrivate(modifiers)
+                    && klass != null && inSamePackage(field.getDeclaringClass(), klass.getTheClass()))) {
+                to.put(entry.getKey(), field);
+            }
+        return PROP_NAMES.computeIfAbsent(methodName, k -> {
+            return BeanUtils.decapitalize(methodName.startsWith("is")
+                    ? methodName.substring(2) : methodName.substring(3));
+        });
+            int modifiers = field.getModifiers();
+            if (Modifier.isFinal(modifiers)) {
+            if (!this.isMap || Modifier.isPublic(modifiers) || Modifier.isProtected(modifiers)) {
+            MetaMethod transformedMetaMethod = VMPluginFactory.getPlugin().transformMetaMethod(this, method, MetaClassHelper.convertToTypeArray(arguments), MetaClassImpl.class);
+        if ((isStatic || object instanceof Class) && !"metaClass".equals(name)) {
+        } else {
+        }
+    //--------------------------------------------------------------------------
+     * @return {@code false}: add method
+     *         {@code null} : ignore method
+     *         {@code true} : replace
+            if (Boolean.TRUE.equals(match)) {
+                    if (matchingMethods == null) {
+                    } else if (matchingMethods instanceof ArrayList) {
+                    } else {
+            method = (method == null ? infMethod : mostSpecific(method, infMethod, instanceKlazz));
+        if (m.getDeclaringClass().getTheClass().isAssignableFrom(instanceKlazz) && m.isValidExactMethod(arguments)) {
+            method = (method == null ? m : mostSpecific(method, m, instanceKlazz));
+        if (instanceKlazz != metaClass.getTheClass()) {
+            MetaMethod ownMethod = metaClass.pickMethod(methodName, arguments);
+            if (ownMethod != null) {
+                method = (method == null ? ownMethod : mostSpecific(method, ownMethod, instanceKlazz));
+            }
+            if (value instanceof FastArray) {
+            } else {
+            }

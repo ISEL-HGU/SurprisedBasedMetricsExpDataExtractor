@@ -1,0 +1,24 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+     * The regex to use to split username and password.
+     */
+    private static final Pattern userinfoPattern = Pattern.compile("(^[^:]):(.*)");
+
+    /**
+     * The regex group of the username.
+     */
+    private static final int USERNAME_GROUP = 1;
+
+    /**
+     * THe regex group of the password.
+     */
+    private static final int PASSWORD_GROUP = 2;
+
+    /**
+
+            Matcher userinfoMatcher = userinfoPattern.matcher(userInfo);
+            username = userinfoMatcher.group(USERNAME_GROUP);
+            password = userinfoMatcher.group(PASSWORD_GROUP);
+
+        if (username != null && username.length() > 0)
+        if (password != null && password.length() > 0)

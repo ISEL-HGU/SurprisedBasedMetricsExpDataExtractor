@@ -1,0 +1,45 @@
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.Iterator;
+    private boolean preservePathElements;
+        String filename;
+        String filepath = exchange.getIn().getHeader(FILE_NAME, String.class);
+        if (filepath == null) {
+            filename = filepath = StringHelper.sanitize(exchange.getIn().getMessageId());
+            filename = Paths.get(filepath).getFileName().toString(); // remove any path elements
+
+        if (preservePathElements) {
+            createZipEntries(zos, filepath);
+        } else {
+            createZipEntries(zos, filename);
+        }
+    private void createZipEntries(ZipOutputStream zos, String filepath) throws IOException {
+        Iterator<Path> elements = Paths.get(filepath).iterator();
+        StringBuilder sb = new StringBuilder();
+
+        while (elements.hasNext()) {
+            Path path = elements.next();
+            String element = path.toString();
+
+            // If there are more elements to come this element is a directory
+            // The "/" at the end tells the ZipEntry it is a folder
+            if (elements.hasNext()) {
+                element = "/";
+            }
+
+            // Each entry needs the complete path, including previous created folders.
+            zos.putNextEntry(new ZipEntry(sb  element));
+
+            sb.append(element);
+        }
+    }
+
+    public boolean isPreservePathElements() {
+        return preservePathElements;
+    }
+
+    public void setPreservePathElements(boolean preservePathElements) {
+        this.preservePathElements = preservePathElements;
+    }
+
+}

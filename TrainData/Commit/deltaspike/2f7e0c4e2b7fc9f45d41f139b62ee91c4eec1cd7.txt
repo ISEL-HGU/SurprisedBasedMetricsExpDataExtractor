@@ -1,0 +1,1 @@
+        for (Property<Object> property : getProperties(entity, CreatedOn.class, ModifiedOn.class, create))

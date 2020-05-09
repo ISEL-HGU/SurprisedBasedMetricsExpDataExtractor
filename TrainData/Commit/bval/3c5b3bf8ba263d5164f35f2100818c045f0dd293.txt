@@ -1,0 +1,37 @@
+                Class<?> declaringType = null;
+                for (Map.Entry<Meta<?>, Set<ValidationElement>> e : detectedValidationElements.entrySet()){
+                    final Class<?> t = e.getKey().getDeclaringClass();
+                    if (declaringType != null) {
+                        if (declaringType.isAssignableFrom(t)) {
+                            continue;
+                        }
+                    if (!e.getValue().isEmpty()){
+                        declaringType = t;
+                    }
+                if (detectedValidationElements.size() < 2) {
+                    // no unrelated hierarchy possible
+                final Map<Class<?>, Set<ValidationElement>> interfaceValidation = new LinkedHashMap<>();
+                detectedValidationElements.forEach((k,v)->{
+                    final Class<?> t = k.getDeclaringClass();
+                    if (t.isInterface()){
+                        interfaceValidation.put(t, v);
+                    }
+                });
+                if (interfaceValidation.isEmpty()) {
+                    // if all are classes, there can be no unrelated types in the hierarchy:
+                    return true;
+                }
+                // verify that all types can be assigned to the constrained interfaces:
+                for (Meta<?> meta : detectedValidationElements.keySet()) {
+                    final Class<?> t = meta.getDeclaringClass();
+                    for (Map.Entry<Class<?>, Set<ValidationElement>> e : interfaceValidation.entrySet()) {
+                        if (t.equals(e.getKey()) || e.getValue().isEmpty()) {
+                            continue;
+                        }
+                        if (!e.getKey().isAssignableFrom(t)) {
+                            return false;
+                        }
+                    }
+                }
+                return true;
+                .filter(si -> !(si == StrengtheningIssue.overriddenHierarchy

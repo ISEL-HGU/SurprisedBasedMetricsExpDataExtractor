@@ -1,0 +1,12 @@
+ b/components/camel-grpc/src/main/java/org/apache/camel/component/grpc/auth/jwt/JwtServerInterceptor.java
+package org.apache.camel.component.grpc.auth.jwt;
+    public JwtServerInterceptor(JwtAlgorithm algorithm, String secret, String issuer, String subject) {
+        verifier = prepareJwtVerifier(algorithm, secret, issuer, subject);
+    public static JWTVerifier prepareJwtVerifier(JwtAlgorithm algorithmName, String secret, String issuer, String subject) {
+        try {
+            Algorithm algorithm = JwtHelper.selectAlgorithm(algorithmName, secret);
+            return JWT.require(algorithm).withIssuer(issuer).withSubject(subject).build();
+        } catch (JWTCreationException e) {
+            throw new IllegalArgumentException("Unable to create JWT verifier", e);
+        } catch (UnsupportedEncodingException e) {
+            throw new IllegalArgumentException("UTF-8 encoding not supported during JWT verifier creation", e);

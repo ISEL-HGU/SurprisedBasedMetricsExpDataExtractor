@@ -1,0 +1,9 @@
+    private boolean antlr2Parser = true; // TODO replace it with ParserVersion
+
+    public void setParserVersion(ParserVersion parserVersion) {
+        if (ParserVersion.V_2 == parserVersion) {
+            this.antlr2Parser = true;
+        } else {
+            this.antlr2Parser = false;
+        }
+    }

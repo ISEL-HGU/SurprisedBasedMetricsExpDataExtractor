@@ -1,0 +1,10 @@
+     * The camel-core directory
+     * The camel-base directory
+     */
+    @Parameter(defaultValue = "${project.build.directory}/../../../core/camel-base")
+    protected File baseDir;
+
+    /**
+        if (baseDir != null && baseDir.isDirectory()) {
+            File target = new File(baseDir, "target/classes");
+            target = new File(baseDir, "../camel-jaxp/target/classes");

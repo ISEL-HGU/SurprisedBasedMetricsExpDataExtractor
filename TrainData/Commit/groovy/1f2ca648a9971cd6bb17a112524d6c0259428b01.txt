@@ -1,0 +1,21 @@
+        if (text.startsWith(TSQ_STR) || text.startsWith(TDQ_STR)) {
+        } else if (text.startsWith(SQ_STR) || text.startsWith(DQ_STR) || (startsWithSlash = text.startsWith(SLASH_STR))) {
+        } else if (text.startsWith(DOLLAR_SLASH_STR)) {
+        return text.startsWith(SLASH_STR) ? StringUtils.SLASHY :
+                    text.startsWith(DOLLAR_SLASH_STR) ? StringUtils.DOLLAR_SLASHY : StringUtils.NONE_SLASHY;
+            if (it.startsWith(TDQ_STR)) {
+            } else if (it.startsWith(DOLLAR_SLASH_STR)) {
+                it = DQ_STR  it.substring(2); // translate leading $/ to "
+            } else if (it.startsWith(SLASH_STR)) {
+            if (it.endsWith(TDQ_STR)) {
+            } else if (it.endsWith(SLASH_DOLLAR_STR)) {
+                it = StringGroovyMethods.getAt(it, new IntRange(false, 0, -2))  DQ_STR; // translate tailing /$ to "
+            } else if (it.endsWith(SLASH_STR)) {
+    private static final String SLASH_STR = "/";
+    private static final String SLASH_DOLLAR_STR = "/$";
+    private static final String TDQ_STR = "\"\"\"";
+    private static final String TSQ_STR = "'''";
+    private static final String SQ_STR = "'";
+    private static final String DQ_STR = "\"";
+    private static final String DOLLAR_SLASH_STR = "$/";
+

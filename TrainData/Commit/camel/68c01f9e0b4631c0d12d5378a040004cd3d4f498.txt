@@ -1,0 +1,12 @@
+        /**
+         * Setting the autocreation of the topic
+         */
+        private Boolean autoCreateTopic = true;
+
+        public Boolean getAutoCreateTopic() {
+            return autoCreateTopic;
+        }
+
+        public void setAutoCreateTopic(Boolean autoCreateTopic) {
+            this.autoCreateTopic = autoCreateTopic;
+        }

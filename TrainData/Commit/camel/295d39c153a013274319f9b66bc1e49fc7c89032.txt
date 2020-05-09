@@ -1,0 +1,7 @@
+    private volatile boolean closeKafkaProducer;
+                log.trace("Creating KafkaProducer");
+                closeKafkaProducer = true;
+            log.debug("Created KafkaProducer: {}", kafkaProducer);
+        if (kafkaProducer != null && closeKafkaProducer) {
+            log.debug("Closing KafkaProducer: {}", kafkaProducer);
+            kafkaProducer = null;

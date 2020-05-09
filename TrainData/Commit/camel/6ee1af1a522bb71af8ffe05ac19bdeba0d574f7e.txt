@@ -1,0 +1,1 @@
+        log.debug("Cannot propagate header value of type[{}], skipping... "  "Supported types: String, Integer, Long, Double, byte[].", value != null ? value.getClass() : "null");

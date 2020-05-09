@@ -1,0 +1,6 @@
+    	MimeEntity signedEntity = getSignedDataEntity();
+        if (signedEntity == null || applicationPkcs7SignatureEntity == null) {
+            signedEntity.writeTo(outstream);
+    public MimeEntity getSignedDataEntity() {
+        if (getPartCount() > 0) {
+            return getPart(0);

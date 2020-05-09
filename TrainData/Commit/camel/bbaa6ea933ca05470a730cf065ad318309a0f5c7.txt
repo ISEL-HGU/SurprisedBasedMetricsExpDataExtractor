@@ -1,0 +1,4 @@
+            if (redelivered == null) {
+                // not from a transactional resource so mark it as false by default
+                redelivered = false;
+            exchange.setProperty(Exchange.EXTERNAL_REDELIVERED, redelivered);

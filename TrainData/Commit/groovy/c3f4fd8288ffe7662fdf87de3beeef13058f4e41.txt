@@ -1,0 +1,20 @@
+            if (!ClassHelper.isFunctionalInterface(paramType.redirect())) {
+                addError("The argument is a method reference, but the parameter type is not a functional interface", argumentExpression);
+                newArgumentExpressionList.add(argumentExpression);
+                continue;
+            Parameter[] newParameters = createParametersForLambdaExpression(paramType);
+            LambdaExpression lambdaExpression = new LambdaExpression(newParameters, block());
+    private Parameter[] createParametersForLambdaExpression(ClassNode functionalInterfaceType) {
+        MethodNode abstractMethodNode = ClassHelper.findSAM(functionalInterfaceType);
+        Parameter[] abstractMethodNodeParameters = abstractMethodNode.getParameters();
+        if (null == abstractMethodNodeParameters) {
+            abstractMethodNodeParameters = Parameter.EMPTY_ARRAY;
+        }
+
+        Parameter[] newParameters = new Parameter[abstractMethodNodeParameters.length];
+        for (int j = 0; j < newParameters.length; j) {
+            newParameters[j] = new Parameter(DYNAMIC_TYPE, "p"  System.nanoTime());
+        }
+        return newParameters;
+    }
+

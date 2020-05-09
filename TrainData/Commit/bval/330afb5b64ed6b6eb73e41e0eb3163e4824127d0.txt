@@ -1,0 +1,5 @@
+                ct -> new Signature(meta.getHost().getName(), params.apply(ct));
+            this.withGetConstraintTypes(ClassType::getConstraint);
+                .withGetIgnoreAnnotations(ReturnValueType::getIgnoreAnnotations).withGetValid(ReturnValueType::getValid)
+                .withGetGroupConversions(ReturnValueType::getConvertGroup)
+                .withGetContainerElementTypes(ReturnValueType::getContainerElementType);

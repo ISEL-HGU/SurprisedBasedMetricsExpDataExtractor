@@ -1,0 +1,2 @@
+        if (asBoolean(ctx.statementExpression())) {
+            return this.configureAST((ExpressionStatement) this.visit(ctx.statementExpression()), ctx);

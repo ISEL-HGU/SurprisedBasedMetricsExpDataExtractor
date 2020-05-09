@@ -1,0 +1,2 @@
+        SwingUtilities.invokeLater(() -> JOptionPane
+                .showMessageDialog(Application.getFrame(), th.getMessage(), message, JOptionPane.ERROR_MESSAGE));

@@ -1,0 +1,5 @@
+        new TextField(User.Attribute.ORGANIZATIONAL_ROLE),
+        new TimeZoneField(TIMEZONE_ATTRIBUTE_NAME)
+        // Set timezone attribute
+        attributes.put(TIMEZONE_ATTRIBUTE_NAME, getModel().getTimeZone());
+

@@ -1,0 +1,10 @@
+        }
+            }
+
+            dateList.sort((o1, o2) -> o1.compareTo(o2));
+            Date lastUpdateDate = dateList.get(dateList.size() - 1);
+            java.util.Calendar calendar = java.util.Calendar.getInstance();
+            calendar.setTime(lastUpdateDate);
+            calendar.add(java.util.Calendar.SECOND, 1);
+            finalLastUpdate = calendar.getTime();
+            finalLastUpdate = new Date();

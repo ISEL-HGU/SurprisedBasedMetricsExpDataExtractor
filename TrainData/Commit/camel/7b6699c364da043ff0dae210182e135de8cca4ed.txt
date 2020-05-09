@@ -1,0 +1,17 @@
+
+     * The subject which is used if the message header 'CamelAwsSnsSubject' is
+     * not present.
+
+
+
+
+     * The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a
+     * custom CMK.
+        return autoCreateTopic;
+    }
+    public void setAutoCreateTopic(boolean autoCreateTopic) {
+        this.autoCreateTopic = autoCreateTopic;
+    }
+
+    public SnsConfiguration copy() {
+}

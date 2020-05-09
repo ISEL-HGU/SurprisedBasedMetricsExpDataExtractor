@@ -1,0 +1,11 @@
+import org.apache.camel.Message;
+import org.apache.camel.util.ExchangeHelper;
+
+            Message msg = submitted.hasOut() ? submitted.getOut() : submitted.getIn();
+                msg.getHeaders().entrySet().removeIf(e -> headerFilterStrategy.applyFilterToExternalHeaders(e.getKey(), e.getValue(), submitted));
+            }
+
+            if (exchange != submitted) {
+                // only need to copy back if they are different
+                exchange.setException(submitted.getException());
+                exchange.getOut().copyFrom(msg);

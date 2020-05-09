@@ -1,0 +1,2 @@
+import org.apache.camel.support.ScheduledPollEndpoint;
+    extends ScheduledPollEndpoint implements PropertyNamesInterceptor, PropertiesInterceptor {

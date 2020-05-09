@@ -1,0 +1,9 @@
+import org.apache.cayenne.modeler.CayenneModelerFrame;
+import org.apache.cayenne.modeler.editor.EditorView;
+    
+    protected static EditorView editor() {
+        return ((CayenneModelerFrame) Application
+                .getInstance()
+                .getFrameController()
+                .getView()).getView();
+    }

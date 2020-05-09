@@ -1,0 +1,6 @@
+import static org.apache.camel.util.URISupport.sanitizeUri;
+
+        if (log.isInfoEnabled()) {
+            // the uris can have sensitive information so sanitize
+            log.info("Connector resolved: {} -> {}", sanitizeUri(uri), sanitizeUri(delegateUri));
+        }

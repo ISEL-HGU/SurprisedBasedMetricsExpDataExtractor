@@ -1,0 +1,9 @@
+import java.util.List;
+    private List<String> extractors;
+    private String baseURI;
+    public List<String> getExtractors() {
+    public void setExtractors(List<String> extractors) {
+    public String getBaseURI() {
+        return baseURI;
+    public void setBaseURI(String baseURI) {
+        this.baseURI = baseURI;

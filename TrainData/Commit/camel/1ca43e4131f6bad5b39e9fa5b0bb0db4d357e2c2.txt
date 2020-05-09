@@ -1,0 +1,23 @@
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.camel.component.reactive.streams.ReactiveStreamsHelper;
+import org.apache.camel.component.reactive.streams.engine.ReactiveStreamsEngineConfiguration;
+import org.apache.camel.util.IntrospectionSupport;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+@EnableConfigurationProperties(ReactiveStreamsComponentConfiguration.class)
+    @Autowired
+    private CamelContext context;
+    @Autowired
+    private ReactiveStreamsComponentConfiguration configuration;
+    public CamelReactiveStreamsService camelReactiveStreamsService() throws Exception {
+        ReactiveStreamsEngineConfiguration engineConfiguration = new ReactiveStreamsEngineConfiguration();
+
+        if (configuration.getInternalEngineConfiguration() != null) {
+            Map<String, Object> parameters = new HashMap<>();
+            IntrospectionSupport.getProperties(configuration.getInternalEngineConfiguration(), parameters, null, false);
+            IntrospectionSupport.setProperties(context, context.getTypeConverter(), engineConfiguration, parameters);
+        }
+
+        return ReactiveStreamsHelper.resolveReactiveStreamsService(context, configuration.getServiceType(), engineConfiguration);

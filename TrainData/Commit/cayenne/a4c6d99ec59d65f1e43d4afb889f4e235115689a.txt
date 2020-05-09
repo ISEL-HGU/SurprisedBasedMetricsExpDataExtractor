@@ -1,0 +1,2 @@
+        // IMPORTANT: include Invocation target object(not a WeakReference) into
+        // algorithm is used to compute hashCode.

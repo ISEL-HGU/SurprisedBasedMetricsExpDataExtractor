@@ -1,0 +1,1 @@
+@javax.xml.bind.annotation.XmlSchema(namespace = "message.jaxb.converter.camel.apache.org")

@@ -1,0 +1,3 @@
+    @Override
+    public Optional<E> findOptionalBy(PK primaryKey)
+        E found = null;

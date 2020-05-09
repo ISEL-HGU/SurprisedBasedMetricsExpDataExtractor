@@ -1,0 +1,41 @@
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import org.apache.camel.util.json.Jsoner;
+            List list = new ArrayList();
+                String javaType = row.getJavaType();
+
+                Map p = new LinkedHashMap();
+                p.put("name", name);
+                p.put("type", javaType);
+                p.put("sourceType", sourceType);
+                p.put("description", desc);
+                    p.put("defaultValue", defaultValue);
+                    p.put("deprecated", true);
+                    p.put("deprecation", Collections.EMPTY_MAP);
+                list.add(p);
+
+            List groups = new ArrayList();
+            Map group1 = new LinkedHashMap();
+            group1.put("name", "camel.main");
+            group1.put("description", "camel-main configurations.");
+            group1.put("sourceType", "org.apache.camel.main.DefaultConfigurationProperties");
+            Map group2 = new LinkedHashMap();
+            group2.put("name", "camel.hystrix");
+            group2.put("description", "camel-hystrix configurations.");
+            group2.put("sourceType", "org.apache.camel.main.HystrixConfigurationProperties");
+            Map group3 = new LinkedHashMap();
+            group3.put("name", "camel.rest");
+            group3.put("description", "camel-rest configurations.");
+            group3.put("sourceType", "org.apache.camel.spi.RestConfiguration");
+            groups.add(group1);
+            groups.add(group2);
+            groups.add(group3);
+
+            Map map = new LinkedHashMap();
+            map.put("groups", groups);
+            map.put("properties", list);
+
+            String json = Jsoner.serialize(map);
+            json = Jsoner.prettyPrint(json);
+                fos.write(json.getBytes());

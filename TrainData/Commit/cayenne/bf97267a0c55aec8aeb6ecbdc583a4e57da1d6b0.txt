@@ -1,0 +1,2 @@
+		Expression havingQualifier = getSelectQuery().getHavingQualifier();
+		Collection<Property<?>> columns = getSelectQuery().getColumns();

@@ -1,0 +1,4 @@
+            return "Route("  getId()  ")["  (input != null ? input : "")  " -> "  outputs  "]";
+    @XmlElementRef(required = false)
+        // required = false: in rest-dsl you can embed an in-lined route which
+        // does not have a <from> as its implied to be the rest endpoint

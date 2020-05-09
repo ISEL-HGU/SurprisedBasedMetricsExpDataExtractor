@@ -1,0 +1,21 @@
+import org.apache.camel.support.ServiceSupport;
+import org.apache.camel.util.ServiceHelper;
+    private volatile boolean stopOffsetRepo;
+        // is the offset repository already started?
+        StateRepository repo = endpoint.getConfiguration().getOffsetRepository();
+        if (repo instanceof ServiceSupport) {
+            boolean started = ((ServiceSupport) repo).isStarted();
+            // if not already started then we would do that and also stop it
+            if (!started) {
+                stopOffsetRepo = true;
+                log.debug("Starting OffsetRepository: {}", repo);
+                ServiceHelper.startService(endpoint.getConfiguration().getOffsetRepository());
+            }
+        }
+
+        if (stopOffsetRepo) {
+            StateRepository repo = endpoint.getConfiguration().getOffsetRepository();
+            log.debug("Stopping OffsetRepository: {}", repo);
+            ServiceHelper.stopAndShutdownService(repo);
+        }
+

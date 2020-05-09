@@ -1,0 +1,1 @@
+ * This can be useful for testing, visualisation tools or debugging. The exchanges sent to the endpoint are all available to be browsed.

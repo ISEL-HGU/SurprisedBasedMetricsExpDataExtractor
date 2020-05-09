@@ -1,0 +1,4 @@
+            if (VOID_STR.equals(ctx.getText())) { // TODO refine error message for `void`
+                throw createParsingFailedException("void is not allowed here", ctx);
+            }
+

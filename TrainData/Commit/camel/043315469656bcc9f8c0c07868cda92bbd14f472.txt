@@ -1,0 +1,10 @@
+    private final MeterRegistry registry;
+        this.registry = registry;
+        return delegate.schedule(meter().wrap(command), delay, unit);
+        return delegate.schedule(meter().wrap(callable), delay, unit);
+        return delegate.scheduleAtFixedRate(meter().wrap(command), initialDelay, period, unit);
+        return delegate.scheduleWithFixedDelay(meter().wrap(command), initialDelay, delay, unit);
+    }
+
+    private Timer meter() {
+        return registry.find("executor").timer();

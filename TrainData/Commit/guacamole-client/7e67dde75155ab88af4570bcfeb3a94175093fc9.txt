@@ -1,0 +1,41 @@
+     * The tokens which should apply strictly to the next call to
+     * {@link #connect(org.apache.guacamole.protocol.GuacamoleClientInformation)}.
+     * This storage is intended as a temporary bridge allowing the old version
+     * of connect() to be overridden while still resulting in the same behavior
+     * as older versions of SimpleConnection. <strong>This storage should be
+     * removed once support for the old, deprecated connect() is removed.</strong>
+     */
+    private final ThreadLocal<Map<String, String>> currentTokens =
+            new ThreadLocal<Map<String, String>>() {
+
+        @Override
+        protected Map<String, String> initialValue() {
+            return Collections.emptyMap();
+        }
+
+    };
+
+    /**
+     * Creates a completely uninitialized SimpleConnection. The name,
+     * identifier, and configuration of this SimpleConnection must eventually
+     * be set before the SimpleConnection may be used.
+    @SuppressWarnings("deprecation")
+    public GuacamoleTunnel connect(GuacamoleClientInformation info)
+            throws GuacamoleException {
+        new TokenFilter(currentTokens.get()).filterValues(filteredConfig.getParameters());
+
+    }
+
+    @Override
+    public GuacamoleTunnel connect(GuacamoleClientInformation info,
+            Map<String, String> tokens) throws GuacamoleException {
+
+        // Make received tokens available within the legacy connect() strictly
+        // in context of the current connect() call
+        try {
+            currentTokens.set(tokens);
+            return connect(info);
+        }
+        finally {
+            currentTokens.remove();
+        }

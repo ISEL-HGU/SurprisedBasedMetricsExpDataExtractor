@@ -1,0 +1,8 @@
+        List<String> args = new ArrayList<>();
+        Set<Thread> uncooperativeThreads = new HashSet<>(); // these were not responsive
+        Collection<Thread> result = new ArrayList<>(numThreads);
+        List<URL> classpathURLs = new ArrayList<>();
+        List<Artifact> answer = new ArrayList<>();
+        List<Artifact> artifacts = new ArrayList<>();
+            List<String> exclusions = new ArrayList<>();
+                relevantDependencies = new HashSet<>(this.pluginDependencies);

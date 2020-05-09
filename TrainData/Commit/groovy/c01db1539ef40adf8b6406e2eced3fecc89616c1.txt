@@ -1,0 +1,4 @@
+import static org.codehaus.groovy.runtime.DefaultGroovyMethods.asBoolean;
+    public static final String QUESTION_MARK = "?";
+            boolean isWild = QUESTION_MARK.equals(name);
+                    if (asBoolean(upperBound.isUsingGenerics())) {

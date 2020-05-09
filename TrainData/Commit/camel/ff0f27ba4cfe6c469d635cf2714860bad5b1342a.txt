@@ -1,0 +1,22 @@
+import org.apache.camel.Expression;
+import org.apache.camel.spi.RouteContext;
+import org.apache.camel.spi.UnitOfWork;
+    private static Expression routeIdExpression() {
+        return new Expression() {
+            @Override
+            public <T> T evaluate(Exchange exchange, Class<T> type) {
+                String answer = null;
+                UnitOfWork uow = exchange.getUnitOfWork();
+                RouteContext rc = uow != null ? uow.getRouteContext() : null;
+                if (rc != null) {
+                    answer = rc.getRoute().getId();
+                }
+                if (answer == null) {
+                    // fallback and get from route id on the exchange
+                    answer = exchange.getFromRouteId();
+                }
+                return type.cast(answer);
+            }
+        };
+    }
+

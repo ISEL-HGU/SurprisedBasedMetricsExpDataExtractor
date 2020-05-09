@@ -1,0 +1,11 @@
+
+        // grab selected camel context from the first argument
+        String contextName = null;
+        String[] args = commandLine.getArguments();
+        if (args != null && args.length > 1) {
+            // 0 is the command name itself
+            // 1 is the first argument which is the camel context name
+            contextName = args[1];
+        }
+
+            List<Map<String, String>> routes = getRoutes(contextName);

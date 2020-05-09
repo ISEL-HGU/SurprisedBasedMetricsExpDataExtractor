@@ -1,0 +1,14 @@
+            disableMatchingHighlighter();
+                enableMatchingHighlighter(smartDocumentFilter);
+
+    private void enableMatchingHighlighter(SmartDocumentFilter smartDocumentFilter) {
+        textEditor.addCaretListener(new MatchingHighlighter(smartDocumentFilter, textEditor));
+    }
+
+    private void disableMatchingHighlighter() {
+        for (CaretListener cl : textEditor.getCaretListeners()) {
+            if (cl instanceof MatchingHighlighter) {
+                textEditor.removeCaretListener(cl);
+            }
+        }
+    }

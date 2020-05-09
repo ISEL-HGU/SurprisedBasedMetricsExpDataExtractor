@@ -1,0 +1,3 @@
+            // favor description from the model schema
+            if (row.containsKey("description")) {
+                dataFormatModel.setDescription(row.get("description"));

@@ -1,0 +1,11 @@
+    public CamelMicroProfilePropertiesSource() {
+    }
+
+    public CamelMicroProfilePropertiesSource(Config config) {
+        this.config = config;
+    }
+
+        for (String name: config.getPropertyNames()) {
+        if (config == null) {
+            config = ConfigProvider.getConfig();
+        }

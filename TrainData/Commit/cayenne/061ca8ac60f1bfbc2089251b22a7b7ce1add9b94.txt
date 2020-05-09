@@ -1,0 +1,4 @@
+import org.apache.cayenne.modeler.action.dbimport.ReverseEngineeringToolMenuAction;
+        registerAction(new ReverseEngineeringToolMenuAction(application));
+                PasteAction.class.getName(),
+                ReverseEngineeringToolMenuAction.class.getName()));

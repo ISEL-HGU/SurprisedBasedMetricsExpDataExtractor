@@ -1,0 +1,7 @@
+        StringBuilder ret = new StringBuilder(obj  "."  method  "(");
+            ret.append(")");
+            return ret.toString();
+            ret.append(args[i]);
+                ret.append(",");
+                ret.append(")");
+        return ret.toString();

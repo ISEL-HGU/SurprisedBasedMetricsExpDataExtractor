@@ -1,0 +1,2 @@
+    @XmlAttribute @Metadata(required = true)
+    private String uri;

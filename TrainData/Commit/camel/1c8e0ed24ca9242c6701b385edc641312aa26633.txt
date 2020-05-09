@@ -1,0 +1,3 @@
+        // validate that top-level is only added on the route (eg top level) (or still allow if using advice-with)
+        boolean parentIsRoute = RouteDefinition.class.isAssignableFrom(this.getClass())
+                || AdviceWithDefinition.class.isAssignableFrom(this.getClass());

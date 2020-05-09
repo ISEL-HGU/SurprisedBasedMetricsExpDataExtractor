@@ -1,0 +1,8 @@
+                ClassNode type = null;
+                // check if param part of control structure - but not if inside instanceof
+                List<ClassNode> temporaryTypesForExpression = getTemporaryTypesForExpression(vexp);
+                if (temporaryTypesForExpression == null || temporaryTypesForExpression.isEmpty()) {
+                    type = typeCheckingContext.controlStructureVariables.get(parameter);
+                }
+                // now check for closure override
+                    if (parameters.length == 0 && temporaryTypesForExpression == null && closureParamTypes.length != 0) {

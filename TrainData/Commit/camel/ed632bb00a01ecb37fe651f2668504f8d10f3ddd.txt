@@ -1,0 +1,7 @@
+        log.trace("Creating new connection ...");
+                if (log.isDebugEnabled()) {
+                    log.debug("Logging in to XMPP as user: {} on connection: {}", user, getConnectionMessage(newConnection));
+                    log.warn("No password configured for user: {} on connection: {}", user, getConnectionMessage(newConnection));
+                if (log.isDebugEnabled()) {
+                    log.debug("Logging in anonymously to XMPP on connection: {}", getConnectionMessage(newConnection));
+        log.debug("Created new connection successfully: {}", newConnection);

@@ -1,0 +1,2 @@
+            throw new GuacamoleServerException("RSA algorithm is not available.", e);
+            throw new GuacamoleServerException("Key is not in expected PKCS8 encoding.", e);

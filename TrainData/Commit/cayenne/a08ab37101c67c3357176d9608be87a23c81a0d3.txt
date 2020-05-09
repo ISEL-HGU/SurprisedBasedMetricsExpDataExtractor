@@ -1,0 +1,1 @@
+            assertTrue(Types.DATE == a.getType() || Types.TIMESTAMP == a.getType());

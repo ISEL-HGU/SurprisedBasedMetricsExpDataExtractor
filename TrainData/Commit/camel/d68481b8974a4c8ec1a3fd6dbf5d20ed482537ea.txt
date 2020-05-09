@@ -1,0 +1,3 @@
+                new BasicNameValuePair("protocol", AS2MimeType.APPLICATION_PKCS7_SIGNATURE),
+                new BasicNameValuePair("boundary", boundary), new BasicNameValuePair("micalg", micalg),
+                new BasicNameValuePair("charset", charsetName)};

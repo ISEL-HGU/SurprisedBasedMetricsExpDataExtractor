@@ -1,0 +1,6 @@
+        
+        if (isNotEmpty(kerberosNamedNodes)) {
+            return Arrays.stream(kerberosNamedNodes.split(",")).distinct().collect(Collectors.toList());
+        }
+
+        return Collections.emptyList();

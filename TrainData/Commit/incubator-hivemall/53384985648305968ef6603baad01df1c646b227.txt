@@ -1,0 +1,2 @@
+     * Find the first singular vector/value of a matrix A based on the Power method.
+     * @see http://www.cs.yale.edu/homes/el327/datamining2013aFiles/07_singular_value_decomposition.pdf

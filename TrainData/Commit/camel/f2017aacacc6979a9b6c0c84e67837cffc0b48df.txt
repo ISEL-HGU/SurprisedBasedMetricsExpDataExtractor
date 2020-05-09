@@ -1,0 +1,1 @@
+            if (headerName.equals("JMSCorrelationID") && !endpoint.isUseMessageIDAsCorrelationID()) {

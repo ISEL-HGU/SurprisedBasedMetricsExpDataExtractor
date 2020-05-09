@@ -1,0 +1,2 @@
+import org.apache.camel.model.dataformat.ThriftDataFormat;
+        @XmlElement(required = false, name = "thrift", type = ThriftDataFormat.class),

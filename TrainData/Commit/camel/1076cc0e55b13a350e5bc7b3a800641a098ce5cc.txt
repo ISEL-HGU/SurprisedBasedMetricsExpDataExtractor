@@ -1,0 +1,28 @@
+import org.apache.camel.util.StringHelper;
+
+        // load properties from ENV (override existing)
+        Properties propENV = loadEnvironmentVariablesAsProperties(new String[]{"camel.component.properties."});
+        if (!propENV.isEmpty()) {
+            prop.putAll(propENV);
+            LOG.debug("Properties from OS environment variables:");
+            for (String key : propENV.stringPropertyNames()) {
+                LOG.debug("    {}={}", key, propENV.getProperty(key));
+            }
+        }
+
+                    properties.put(optionKey(option), value);
+                    hystrixProperties.put(optionKey(option), value);
+                    restProperties.put(optionKey(option), value);
+                    values.put(optionKey(option), value);
+                    properties.put(optionKey(option), value);
+                    // we ignore case for property keys (so we should store them in canonical style
+                    values.put(optionKey(option), value);
+                    values.put(optionKey(option), value);
+                    values.put(optionKey(option), value);
+    private static String optionKey(String key) {
+        // as we ignore case for property names we should use keys in same case and without dashes
+        key = StringHelper.replaceAll(key, "-", "");
+        key = key.toLowerCase(Locale.US);
+        return key;
+    }
+

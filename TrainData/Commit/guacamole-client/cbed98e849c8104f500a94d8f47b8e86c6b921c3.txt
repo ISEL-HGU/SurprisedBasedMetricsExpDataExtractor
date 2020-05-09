@@ -1,0 +1,4 @@
+     * GUACAMOLE_HOME/user-mapping.xml. If the XML file has been modified or has
+     * not yet been read, this function may reread the file.
+        // Read user mapping from GUACAMOLE_HOME/user-mapping.xml
+        File userMappingFile = new File(environment.getGuacamoleHome(), USER_MAPPING_FILENAME);

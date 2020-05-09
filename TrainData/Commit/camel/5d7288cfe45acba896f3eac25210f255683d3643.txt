@@ -1,0 +1,1 @@
+         * The region in which S3 client needs to work

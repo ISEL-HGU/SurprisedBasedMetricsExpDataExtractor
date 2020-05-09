@@ -1,0 +1,5 @@
+        Groovydoc groovydocAnnotation = holder.<Groovydoc>getAnnotation(Groovydoc.class);
+
+        return null == groovydocAnnotation
+                    ? null
+                    : new groovy.lang.groovydoc.Groovydoc(groovydocAnnotation.value(), holder);

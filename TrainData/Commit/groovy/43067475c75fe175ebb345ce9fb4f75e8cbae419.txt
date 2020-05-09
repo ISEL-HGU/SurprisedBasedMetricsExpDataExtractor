@@ -1,0 +1,2 @@
+import groovy.lang.groovydoc.GroovydocHolder;
+        node.putNodeMetaData(DOC_COMMENT, new groovy.lang.groovydoc.Groovydoc(docCommentNodeText, (GroovydocHolder) node));

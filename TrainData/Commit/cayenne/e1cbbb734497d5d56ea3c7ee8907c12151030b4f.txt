@@ -1,0 +1,1 @@
+            while (rsCatalog.next() && dbAdapter.supportsCatalogsOnReverseEngineering()) {

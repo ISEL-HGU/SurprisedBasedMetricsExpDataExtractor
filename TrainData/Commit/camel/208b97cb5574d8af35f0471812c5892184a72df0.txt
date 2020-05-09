@@ -1,0 +1,58 @@
+        private final XMLReader xmlReader;
+        private boolean readerInvalid;
+            try {
+                // reset XMLReader to its initial state
+                for (Map.Entry<String, Boolean> feature : initFeatures.entrySet()) {
+                    try {
+                        xmlReader.setFeature(feature.getKey(), feature.getValue().booleanValue());
+                    } catch (Exception e) {
+                        // ignore
+                    }
+                for (Map.Entry<String, Object> property : initProperties.entrySet()) {
+                    try {
+                        xmlReader.setProperty(property.getKey(), property.getValue());
+                    } catch (Exception e) {
+                        // ignore
+                    }
+                xmlReader.setContentHandler(initContentHandler);
+                xmlReader.setDTDHandler(initDtdHandler);
+                xmlReader.setEntityResolver(initEntityResolver);
+                xmlReader.setErrorHandler(initErrorHandler);
+                // return the wrapped instance to the pool
+                pool.offer(new WeakReference<XMLReader>(xmlReader));
+            } finally {
+                readerInvalid = true;
+        public boolean getFeature(String name) throws SAXNotRecognizedException, SAXNotSupportedException {
+        public void setFeature(String name, boolean value) throws SAXNotRecognizedException, SAXNotSupportedException {
+            if (!readerInvalid) {
+                if (!initFeatures.containsKey(name)) {
+                    initFeatures.put(name, Boolean.valueOf(xmlReader.getFeature(name)));
+                }
+                xmlReader.setFeature(name, value);
+        public Object getProperty(String name) throws SAXNotRecognizedException, SAXNotSupportedException {
+        public void setProperty(String name, Object value) throws SAXNotRecognizedException, SAXNotSupportedException {
+            if (!readerInvalid) {
+                if (!initProperties.containsKey(name)) {
+                    initProperties.put(name, xmlReader.getProperty(name));
+                }
+                xmlReader.setProperty(name, value);
+            if (!readerInvalid) {
+                xmlReader.setContentHandler(handler);
+            }
+            if (!readerInvalid) {
+                xmlReader.setDTDHandler(handler);
+            }
+            if (!readerInvalid) {
+                xmlReader.setEntityResolver(resolver);
+            }
+            if (!readerInvalid) {
+                xmlReader.setErrorHandler(handler);
+            }
+        public synchronized void parse(InputSource input) throws IOException, SAXException {
+        public synchronized void parse(String systemId) throws IOException, SAXException {
+        
+        private void checkValid() {
+            if (readerInvalid) {
+                throw new IllegalStateException("OneTimeXMLReader can only be used once!");
+            }
+        }

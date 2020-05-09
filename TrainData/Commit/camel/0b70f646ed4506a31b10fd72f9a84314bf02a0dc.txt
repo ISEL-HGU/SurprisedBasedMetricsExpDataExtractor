@@ -1,0 +1,6 @@
+         * The calendarId to be used
+        private String calendarId = "primary";
+        public String getCalendarId() {
+            return calendarId;
+        public void setCalendarId(String calendarId) {
+            this.calendarId = calendarId;

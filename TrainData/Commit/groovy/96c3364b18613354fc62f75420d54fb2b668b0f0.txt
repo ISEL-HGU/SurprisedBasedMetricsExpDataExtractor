@@ -1,0 +1,2 @@
+                if (retAnn != null && !retAnn.value().equals(RetentionPolicy.SOURCE) && !isRepeatable(annTypeClass)) {
+                    // remember non-source/non-repeatable annos (auto collecting of Repeatable annotations is handled elsewhere)

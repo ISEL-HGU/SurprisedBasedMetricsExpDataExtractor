@@ -1,0 +1,3 @@
+ * An interface to represent an object which support validation
+     * Get the {@link ComponentVerifier}
+     * @return the Component Verifier

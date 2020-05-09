@@ -1,0 +1,67 @@
+import org.apache.camel.model.rest.RestPropertyDefinition;
+                    if (ObjectHelper.isNotEmpty(param.getDescription())) {
+                        parameter.setDescription(param.getDescription());
+                    }
+                        // set default value on parameter
+                        if (ObjectHelper.isNotEmpty(param.getDefaultValue())) {
+                        // add examples
+                        if (param.getExamples() != null && param.getExamples().size() >= 1) {
+                            // we can only set one example on the parameter
+                            qp.example(param.getExamples().get(0).getValue());
+                        }
+                        // add examples
+                        if (param.getExamples() != null) {
+                            for (RestPropertyDefinition prop : param.getExamples()) {
+                                bp.example(prop.getKey(), prop.getValue());
+                            }
+                        }
+            if (ObjectHelper.isNotEmpty(msg.getMessage())) {
+                response.setDescription(msg.getMessage());
+            }
+                        // add example
+                        if (header.getExample() != null) {
+                            sp.example(header.getExample());
+                        }
+                            values = new ArrayList<>();
+                        // add example
+                        if (header.getExample() != null) {
+                            ip.example(Integer.valueOf(header.getExample()));
+                        }
+                            values = new ArrayList<>();
+                        // add example
+                        if (header.getExample() != null) {
+                            lp.example(Long.valueOf(header.getExample()));
+                        }
+                        FloatProperty fp = new FloatProperty();
+                        fp.setName(name);
+                        fp.setDescription(header.getDescription());
+                            values = new ArrayList<>();
+                            fp.setEnum(values);
+                        // add example
+                        if (header.getExample() != null) {
+                            fp.example(Float.valueOf(header.getExample()));
+                        }
+                        response.addHeader(name, fp);
+                            values = new ArrayList<>();
+                        // add example
+                        if (header.getExample() != null) {
+                            dp.example(Double.valueOf(header.getExample()));
+                        }
+                        // add example
+                        if (header.getExample() != null) {
+                            bp.example(Boolean.valueOf(header.getExample()));
+                        }
+                        if (ObjectHelper.isNotEmpty(header.getDescription())) {
+                            ap.setDescription(header.getDescription());
+                        }
+                        // add example
+                        if (header.getExample() != null) {
+                            ap.example(header.getExample());
+                        }
+            // add examples
+            if (msg.getExamples() != null) {
+                for (RestPropertyDefinition prop : msg.getExamples()) {
+                    response.example(prop.getKey(), prop.getValue());
+                }
+            }
+

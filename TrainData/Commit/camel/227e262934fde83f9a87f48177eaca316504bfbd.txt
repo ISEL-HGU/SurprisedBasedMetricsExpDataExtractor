@@ -1,0 +1,2 @@
+    protected final boolean rawPayload;
+        this.rawPayload = endpoint.getConfiguration().getRawPayload();

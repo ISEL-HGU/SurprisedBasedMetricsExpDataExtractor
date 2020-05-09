@@ -1,0 +1,5 @@
+import org.codehaus.groovy.syntax.RuntimeParserException;
+        // TODO move the `findMethodRefMethod` and checking to `StaticTypeCheckingVisitor`
+            throw new RuntimeParserException("Failed to find the expected method["
+                     ")] in the type["  typeOrTargetRefType.getName()  "]", methodReferenceExpression);
+                throw new RuntimeParserException("Constructor reference must be className::new", methodReferenceExpression);

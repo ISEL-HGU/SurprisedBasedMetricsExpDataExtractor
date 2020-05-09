@@ -1,0 +1,2 @@
+     * Property that controls whether or not the LDAP connection follows
+     * (dereferences) aliases as it searches the tree.

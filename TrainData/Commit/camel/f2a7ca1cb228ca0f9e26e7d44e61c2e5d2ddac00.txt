@@ -1,0 +1,1 @@
+ * The linkedin component is used for retrieving LinkedIn user profiles,

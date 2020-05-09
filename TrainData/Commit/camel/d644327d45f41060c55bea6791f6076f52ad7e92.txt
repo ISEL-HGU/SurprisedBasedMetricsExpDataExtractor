@@ -1,0 +1,23 @@
+import org.apache.camel.api.management.ManagedAttribute;
+import org.apache.camel.api.management.ManagedResource;
+import org.apache.camel.support.service.ServiceSupport;
+@ManagedResource(description = "Managed MessageHistoryFactory")
+public class DefaultMessageHistoryFactory extends ServiceSupport implements MessageHistoryFactory {
+        if (!isRunAllowed()) {
+            return null;
+        }
+
+    @ManagedAttribute(description = "Whether a copy of the message is included in the message history")
+    @ManagedAttribute(description = "Whether a copy of the message is included in the message history")
+    @ManagedAttribute(description = "Pattern to filter EIPs")
+    @ManagedAttribute(description = "Pattern to filter EIPs")
+
+    @Override
+    protected void doStart() throws Exception {
+        // noop
+    }
+
+    @Override
+    protected void doStop() throws Exception {
+        // noop
+    }

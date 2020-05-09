@@ -1,0 +1,5 @@
+            Path prevPath = cgenConfiguration.buildPath();
+                if(prevPath.isAbsolute()) {
+                    Path relPath = resourcePath.relativize(prevPath).normalize();
+                    cgenConfiguration.setRelPath(relPath);
+                }

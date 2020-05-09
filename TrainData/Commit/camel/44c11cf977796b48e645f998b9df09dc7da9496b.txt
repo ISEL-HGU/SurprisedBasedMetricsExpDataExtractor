@@ -1,0 +1,2 @@
+     * The AWS IAM default configuration
+     * The region in which IAM client needs to work

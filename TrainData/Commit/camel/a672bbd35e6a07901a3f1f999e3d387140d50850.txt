@@ -1,0 +1,7 @@
+                logger.debug("Processing new artifact: {}:{}:{}", dto.getGroupId(), dto.getArtifactId(), dto.getVersion());
+                logger.warn("Error downloading connector JAR "  dto.getArtifactLink()  ". This exception is ignored. "  e.getMessage());
+        logger.info("Added connector: {}:{}:{}", dto.getGroupId(), dto.getArtifactId(), dto.getVersion());
+            logger.warn("Error scanning JAR for custom Camel components", e);
+            logger.warn("Error loading "  path  " file", e);
+            logger.warn("Error loading "  path  " file", e);
+            logger.warn("Error loading "  path  " file", e);

@@ -1,0 +1,3 @@
+                if (entry.isStale(ivyFile, validated, ivySettings)) {
+        boolean isStale(File ivyFile, boolean validated, ParserSettings newParserSettings) {
+                    || md.getLastModified() != ivyFile.lastModified()

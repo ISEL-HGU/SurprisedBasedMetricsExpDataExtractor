@@ -1,0 +1,22 @@
+	private static final String BACKSLASH = "\\";
+
+		if (!text.contains(BACKSLASH)) {
+			return text;
+		}
+
+		if (!text.contains(BACKSLASH)) {
+			return text;
+		}
+
+		if (!text.contains(BACKSLASH)) {
+			return text;
+		}
+
+		if (!text.contains(BACKSLASH)) {
+			return text;
+		}
+
+		if (!text.contains(BACKSLASH)) {
+			return text;
+		}
+

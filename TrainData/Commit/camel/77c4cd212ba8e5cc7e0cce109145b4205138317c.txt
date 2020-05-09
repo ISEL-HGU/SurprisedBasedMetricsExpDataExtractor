@@ -1,0 +1,4 @@
+import java.util.stream.Collectors;
+                    // join multi-values separated by semi-colon
+                    httpRequest.addHeader(key, entry.getValue().stream().collect(Collectors.joining(";")));
+            m.computeIfAbsent(name, k -> new ArrayList<>()).add(value);

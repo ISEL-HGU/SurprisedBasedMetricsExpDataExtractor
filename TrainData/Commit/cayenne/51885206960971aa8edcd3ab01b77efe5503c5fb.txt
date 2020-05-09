@@ -1,0 +1,12 @@
+import org.apache.cayenne.map.DataMap;
+import org.apache.cayenne.map.Embeddable;
+import org.apache.cayenne.map.ObjEntity;
+import org.apache.cayenne.map.QueryDescriptor;
+
+	/**
+	 *
+	 * @param entities
+	 * @throws CayenneException
+	 *
+	 * @since 4.0 throws exception
+	 */

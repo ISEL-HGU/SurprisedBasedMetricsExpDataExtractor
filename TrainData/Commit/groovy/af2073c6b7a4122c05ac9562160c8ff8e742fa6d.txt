@@ -1,0 +1,9 @@
+     * Read a single, whole line from the given Reader. This method is designed for use with
+     * Readers that support the {@code mark()} operation like BufferReader. It has a fallback
+     * behavior for Readers that don't support mark() but the behavior doesn't correctly
+     * detect multi-character line termination (e.g. carriage return followed by linefeed).
+     * We recommend for Readers that don't support mark() you consider using one of the
+     * following methods instead: eachLine, readLines, or iterator.
+     * @see #readLines(java.io.Reader)
+     * @see #iterator(java.io.Reader)
+     * @see #eachLine(java.io.Reader, groovy.lang.Closure)

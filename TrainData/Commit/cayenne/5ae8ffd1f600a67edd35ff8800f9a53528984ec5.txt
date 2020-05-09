@@ -1,0 +1,65 @@
+		tArtist.setColumns("ARTIST_ID", "ARTIST_NAME", "DATE_OF_BIRTH");
+	private void createArtistDataSet() throws SQLException {
+		tArtist.insert(15, "Surikov", new Date(System.currentTimeMillis()));
+		tArtist.insert(16, "Ivanov", new Date(System.currentTimeMillis()));
+	}
+
+	public void testSQLTemplateForDataMapWithInsert() throws SQLException {
+		createArtistDataSet();
+		DataMap testDataMap = context.getEntityResolver().getDataMap("testmap");
+		assertEquals(2, result.size());
+	public void testSQLTemplateForDataMapWithInsertException() throws SQLException {
+		createArtistDataSet();
+		DataMap testDataMap = context.getEntityResolver().getDataMap("testmap");
+	public void testExceptionWhenUsingColumnsTypesAndSQLResult() throws SQLException {
+		createArtistDataSet();
+
+	public void testExceptionWhenUsingColumnsTypesAndSQLResultUsingScalar() throws SQLException {
+		createArtistDataSet();
+
+	public void testWithRootUsingScalar() throws SQLException {
+		createArtistDataSet();
+
+	public void testWithRootUsingDataRow() throws SQLException {
+		createArtistDataSet();
+
+	public void testWithRootException() throws SQLException {
+		createArtistDataSet();
+
+	public void testUsingScalarAndDataRow() throws SQLException {
+		createArtistDataSet();
+
+	public void testDataRowWithTypes() throws SQLException {
+		createArtistDataSet();
+		DataMap testDataMap = context.getEntityResolver().getDataMap("testmap");
+	public void testDataRowReturnAndDirectives() throws SQLException {
+		createArtistDataSet();
+		DataMap testDataMap = context.getEntityResolver().getDataMap("testmap");
+	public void testDataRowReturnAndDirectivesExc() throws SQLException {
+		createArtistDataSet();
+
+	public void testObjectArrayReturnAndDirectives() throws SQLException {
+		createArtistDataSet();
+		DataMap testDataMap = context.getEntityResolver().getDataMap("testmap");
+	public void testObjectArrayReturnAndDirectivesException() throws SQLException {
+		createArtistDataSet();
+		DataMap testDataMap = context.getEntityResolver().getDataMap("testmap");
+	public void testObjectArrayWithSingleObjectReturnAndDirectives() throws SQLException {
+		createArtistDataSet();
+		DataMap testDataMap = context.getEntityResolver().getDataMap("testmap");
+	public void testObjectArrayReturnWithException() throws SQLException {
+		createArtistDataSet();
+
+	public void testObjectArrayWithSingleObjectReturn() throws SQLException {
+		createArtistDataSet();
+		DataMap testDataMap = context.getEntityResolver().getDataMap("testmap");
+	public void testObjectArrayReturnWithDefaultTypes() throws SQLException {
+		createArtistDataSet();
+		DataMap testDataMap = context.getEntityResolver().getDataMap("testmap");
+		createArtistDataSet();
+
+		SQLTemplate q5 = new SQLTemplate(testDataMap, "SELECT * FROM ARTIST", false);
+
+		DataMap testDataMap = context.getEntityResolver().getDataMap("testmap");
+		tArtist.insert(1, "artist1", null);
+		tArtist.insert(2, "artist2", null);

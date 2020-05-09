@@ -1,0 +1,3 @@
+                    long lowWatermark = Math.max(0, Math.round(consumer.getEndpoint().getExchangesRefillLowWatermark() * max));
+                    long minRequests = Math.max(max, max - lowWatermark);
+                    if (newRequest > 0 && newRequest >= minRequests) {

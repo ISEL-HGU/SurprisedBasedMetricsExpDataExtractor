@@ -1,0 +1,8 @@
+            "Type of output [default: js, javascript/js, graphviz/dot");
+        javascript, graphviz;
+            } else if ("dot".equalsIgnoreCase(name) || "graphviz".equalsIgnoreCase(name)
+                    || "graphvis".equalsIgnoreCase(name)) { // "graphvis" for backward compatibility (HIVEMALL-192)
+                return graphviz;
+                    "Please provide a valid `-type` option from [javascript, graphviz]: "  name);
+                case graphviz: {
+                case graphviz: {

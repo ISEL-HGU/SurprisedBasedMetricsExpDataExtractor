@@ -1,0 +1,12 @@
+     * @param delimiter the delimiter
+    public static List<String> tokenize(CharSequence self, Character delimiter) {
+        return tokenize(self, delimiter.toString());
+     * Tokenize a CharSequence based on the given CharSequence. Each character in the CharSequence is a separate
+     * delimiter.
+     * @param delimiters the delimiters
+    public static List<String> tokenize(CharSequence self, CharSequence delimiters) {
+        return InvokerHelper.asList(new StringTokenizer(self.toString(), delimiters.toString()));
+    public static List<String> tokenize(String self, Character delimiter) {
+        return tokenize((CharSequence) self, delimiter);
+    public static List<String> tokenize(String self, String delimiters) {
+        return tokenize((CharSequence) self, (CharSequence) delimiters);

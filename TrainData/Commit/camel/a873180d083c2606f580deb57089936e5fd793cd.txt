@@ -1,0 +1,16 @@
+import java.io.FileInputStream;
+import org.apache.camel.util.IOHelper;
+    private String delimiter;
+        this(sourceFile, null);
+        if (delimiter != null) {
+            try (Scanner scanner = new Scanner(sourceFile, null, delimiter)) {
+                while (scanner.hasNext()) {
+                    String nextPayload = scanner.next();
+                    if ((nextPayload != null) && (nextPayload.length() > 0)) {
+                        bodies.add(nextPayload);
+                    }
+        } else {
+            Object data = IOHelper.loadText(new FileInputStream(sourceFile));
+            bodies.add(data);
+
+        setDefaultBodies(bodies);

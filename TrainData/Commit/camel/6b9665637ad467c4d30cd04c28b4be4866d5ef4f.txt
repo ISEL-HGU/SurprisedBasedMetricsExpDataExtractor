@@ -1,0 +1,7 @@
+import java.net.InetSocketAddress;
+                socket = socketFactory.createSocket();
+                // jsmpp uses enquire link timer as socket read timeout, so also use it to establish the initial connection
+                socket.connect(new InetSocketAddress(config.getHttpProxyHost(), config.getHttpProxyPort()), config.getEnquireLinkTimer());
+                socket = socketFactory.createSocket();
+                // jsmpp uses enquire link timer as socket read timeout, so also use it to establish the initial connection
+                socket.connect(new InetSocketAddress(host, port), config.getEnquireLinkTimer());

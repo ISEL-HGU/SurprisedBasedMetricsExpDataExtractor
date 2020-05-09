@@ -1,0 +1,3 @@
+            result = content.contentEquals(contentCall.content);
+            result = name.contentEquals(openElement.elementName);
+            result = name.contentEquals(attribute.name) && value.contentEquals(attribute.value);

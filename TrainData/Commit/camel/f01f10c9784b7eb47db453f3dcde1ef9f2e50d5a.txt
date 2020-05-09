@@ -1,0 +1,3 @@
+import org.apache.camel.support.PropertyBindingSupport;
+        	PropertyBindingSupport.bindProperties(getCamelContext(), startWorkflowOptions, configuration.getStartWorkflowOptionsParameters());
+            PropertyBindingSupport.bindProperties(getCamelContext(), startWorkflowOptions, configuration.getStartWorkflowOptionsParameters());

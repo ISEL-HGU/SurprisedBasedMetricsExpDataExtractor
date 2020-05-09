@@ -1,0 +1,22 @@
+        if(textIsEmptyOrNull()){
+            return null;
+        }
+        if(textIsEmptyOrNull()){
+            return null;
+        }
+        if(textIsEmptyOrNull()){
+            return null;
+        }
+        if(textIsEmptyOrNull()){
+            return null;
+        }
+        if(textIsEmptyOrNull()){
+            return null;
+        }
+        if(textIsEmptyOrNull()){
+            return null;
+        }
+    private boolean textIsEmptyOrNull() {
+        return text() == null || text().equals("");
+    }
+

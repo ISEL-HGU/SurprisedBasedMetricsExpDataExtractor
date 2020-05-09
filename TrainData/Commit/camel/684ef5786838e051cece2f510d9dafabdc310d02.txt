@@ -1,0 +1,13 @@
+import io.netty.handler.codec.http.HttpHeaders;
+
+                        body = new InputStreamBodyGenerator(new ByteArrayInputStream(bytes));
+                            body = new InputStreamBodyGenerator(new ByteArrayInputStream(((String) data).getBytes(charset)));
+                            body = new InputStreamBodyGenerator(new ByteArrayInputStream(((String) data).getBytes()));
+    public void onHeadersReceived(AhcEndpoint endpoint, Exchange exchange, HttpHeaders headers) throws Exception {
+        for (String name:headers.names()) {
+            List<String> values = headers.getAll(name);
+            if (values.size() == 1) {
+                exchange.getOut().getHeaders().put(name, values.get(0));
+            } else {
+                exchange.getOut().getHeaders().put(name, values);
+            m.put(name, values);

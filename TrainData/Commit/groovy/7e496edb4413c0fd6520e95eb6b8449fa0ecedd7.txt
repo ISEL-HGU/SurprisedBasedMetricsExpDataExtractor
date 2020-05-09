@@ -1,0 +1,8 @@
+
+        // GROOVY-9136 -- object expression should not overlap source range of property; property stands in for original varibale expression
+        receiver.setLineNumber(expr.getLineNumber());
+        receiver.setColumnNumber(expr.getColumnNumber());
+
+        pexp.getProperty().setSourcePosition(expr);
+
+

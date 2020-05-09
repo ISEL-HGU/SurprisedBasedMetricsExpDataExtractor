@@ -1,0 +1,6 @@
+                            c -> !c.isInterface()
+                                 && Modifier.isPublic(c.getModifiers())
+                                 && !Modifier.isAbstract(c.getModifiers())
+                                 && c.getEnclosingClass() == null
+                                 && isValidAutowireClass(c))
+                                 .collect(Collectors.toSet());

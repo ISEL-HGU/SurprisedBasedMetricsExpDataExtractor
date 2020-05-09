@@ -1,0 +1,18 @@
+    /**
+     * The field returned by the RADIUS challenge/response.
+     */
+
+    /**
+     * The type of field to initialize for the challenge/response.
+     */
+
+    /**
+     * The state of the connection passed by the previous RADIUS attempt.
+     */
+
+    /**
+     * The message the RADIUS server sent back in the challenge.
+     */
+    /**
+     * Initialize the field with the reply message and the state.
+     */

@@ -1,0 +1,8 @@
+     * Builder for endpoint consumers for the Mina component.
+     * Advanced builder for endpoint consumers for the Mina component.
+     * Builder for endpoint producers for the Mina component.
+     * Advanced builder for endpoint producers for the Mina component.
+     * Builder for endpoint for the Mina component.
+     * Advanced builder for endpoint for the Mina component.
+     * Mina (camel-mina)
+     * Maven coordinates: org.apache.camel:camel-mina

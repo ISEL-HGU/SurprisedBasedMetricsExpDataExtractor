@@ -1,0 +1,6 @@
+                final Object id = attributes.getAttribute(HTML.Attribute.ID);
+                if (name != null || id != null) {
+                    final String idAttr = (String) id;
+                        && ("method_summary".equals(nameAttr) || "method.summary".equals(nameAttr)
+                            || "method_summary".equals(idAttr) || "method.summary".equals(idAttr))) {
+                            if (hrefAttr != null && (hrefAttr.contains(hrefPattern) || hrefAttr.charAt(0) == '#')) {

@@ -1,0 +1,2 @@
+        T partition = exchange.getIn().getHeader(header, type);
+        return partition != null ? String.valueOf(partition) : exchange.getIn().getHeader(header, String.class);

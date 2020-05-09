@@ -1,0 +1,2 @@
+ * The websocket component provides websocket endpoints with Jetty for
+ * communicating with clients using websocket.

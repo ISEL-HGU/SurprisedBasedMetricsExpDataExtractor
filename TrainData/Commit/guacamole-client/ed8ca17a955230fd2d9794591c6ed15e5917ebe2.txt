@@ -1,0 +1,4 @@
+        logger.debug(">>>QuickConnect<<< Constructor with authProvider and configs.");
+
+        logger.debug(">>>QuickConnect<<< Returning the entire user directory: {}", userDirectory.getIdentifiers());
+
