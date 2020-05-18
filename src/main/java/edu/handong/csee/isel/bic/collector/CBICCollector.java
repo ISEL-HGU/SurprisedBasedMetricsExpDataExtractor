@@ -55,6 +55,8 @@ public class CBICCollector implements BICCollector {
 			e.printStackTrace();
 		}
 		repo = git.getRepository();
+		System.out.println("bfcList:");
+		System.out.println(bfcList);
 		
 		List<BICInfo> lstBIChanges = new ArrayList<BICInfo>();
 		for (RevCommit commit : commitList) {
