@@ -1,0 +1,79 @@
+import org.apache.guacamole.properties.StringGuacamoleProperty;
+     * The authorization endpoint (URI) of the OpenID service.
+     */
+    private static final StringGuacamoleProperty OPENID_AUTHORIZATION_ENDPOINT =
+            new StringGuacamoleProperty() {
+
+        @Override
+        public String getName() { return "openid-authorization-endpoint"; }
+
+    };
+
+    /**
+     * The endpoint (URI) of the JWKS service which defines how received ID
+     * tokens (JWTs) shall be validated.
+     */
+    private static final StringGuacamoleProperty OPENID_JWKS_ENDPOINT =
+            new StringGuacamoleProperty() {
+
+        @Override
+        public String getName() { return "openid-jwks-endpoint"; }
+
+    };
+
+    /**
+     * The issuer to expect for all received ID tokens.
+     */
+    private static final StringGuacamoleProperty OPENID_ISSUER =
+            new StringGuacamoleProperty() {
+
+        @Override
+        public String getName() { return "openid-issuer"; }
+
+    };
+
+    /**
+     * The claim type which contains the authenticated user's username within
+     * any valid JWT.
+     */
+    private static final StringGuacamoleProperty OPENID_USERNAME_CLAIM_TYPE =
+            new StringGuacamoleProperty() {
+
+        @Override
+        public String getName() { return "openid-username-claim-type"; }
+
+    };
+
+    /**
+     * OpenID client ID which should be submitted to the OpenID service when
+     * necessary. This value is typically provided by the OpenID service when
+     * OpenID credentials are generated for your application.
+     */
+    private static final StringGuacamoleProperty OPENID_CLIENT_ID =
+            new StringGuacamoleProperty() {
+
+        @Override
+        public String getName() { return "openid-client-id"; }
+
+    };
+
+    /**
+     * The URI that the OpenID service should redirect to after the
+     * authentication process is complete. This must be the full URL that a
+     * user would enter into their browser to access Guacamole.
+     */
+    private static final StringGuacamoleProperty OPENID_REDIRECT_URI =
+            new StringGuacamoleProperty() {
+
+        @Override
+        public String getName() { return "openid-redirect-uri"; }
+
+    };
+
+    /**
+        return environment.getRequiredProperty(OPENID_AUTHORIZATION_ENDPOINT);
+        return environment.getRequiredProperty(OPENID_CLIENT_ID);
+        return environment.getRequiredProperty(OPENID_REDIRECT_URI);
+        return environment.getRequiredProperty(OPENID_ISSUER);
+        return environment.getRequiredProperty(OPENID_JWKS_ENDPOINT);
+        return environment.getRequiredProperty(OPENID_USERNAME_CLAIM_TYPE);

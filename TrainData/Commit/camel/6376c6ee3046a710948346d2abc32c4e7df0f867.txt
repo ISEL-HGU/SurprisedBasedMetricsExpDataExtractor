@@ -1,0 +1,7 @@
+import org.apache.camel.support.AsyncProcessorSupport;
+    public void process(Exchange exchange) {
+    protected void processInTransaction(final Exchange exchange) {
+        awaitManager.process(new AsyncProcessorSupport() {
+            public boolean process(Exchange exchange, AsyncCallback callback) {
+                return TransactionErrorHandler.super.process(exchange, callback);
+        }, exchange);

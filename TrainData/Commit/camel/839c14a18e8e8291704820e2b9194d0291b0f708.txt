@@ -1,0 +1,7 @@
+import java.util.StringJoiner;
+                    StringJoiner joiner = new StringJoiner("; ");
+                        joiner.add(value);
+                    if (log.isTraceEnabled()) {
+                        log.trace("Adding header {} = {}", key, joiner.toString());
+                    }
+                    builder.addHeader(key, joiner.toString());

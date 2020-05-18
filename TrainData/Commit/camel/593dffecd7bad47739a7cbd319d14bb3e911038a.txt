@@ -1,0 +1,36 @@
+import org.apache.camel.api.management.ManagedAttribute;
+import org.apache.camel.api.management.ManagedResource;
+@ManagedResource(description = "Route policy using Consul as clustered lock")
+public class ConsulRoutePolicy extends RoutePolicySupport implements CamelContextAware {
+    private Route route;
+    public void onInit(Route route) {
+        super.onInit(route);
+        this.route = route;
+    }
+
+    @Override
+    @ManagedAttribute(description = "The route id")
+    public String getRouteId() {
+        if (route != null) {
+            return route.getId();
+        }
+        return null;
+    }
+
+    @ManagedAttribute(description = "The consumer endpoint", mask = true)
+    public String getEndpointUrl() {
+        if (route != null && route.getConsumer() != null && route.getConsumer().getEndpoint() != null) {
+            return route.getConsumer().getEndpoint().toString();
+        }
+        return null;
+    }
+
+    @ManagedAttribute(description = "The consul service name")
+    @ManagedAttribute(description = "The time to live")
+    @ManagedAttribute(description = "The lock delay")
+    @ManagedAttribute(description = "Whether to stop consumer when starting up and failed to become master")
+    @ManagedAttribute(description = "Is this route the master or a slave")
+    public boolean isLeader() {
+        return leader.get();
+    }
+

@@ -1,0 +1,3 @@
+        final Long replayId = endpoint.getReplayId();
+
+        return Stream.of(replayId, endpointReplayId, componentReplayId, endpointDefaultReplayId, componentDefaultReplayId)

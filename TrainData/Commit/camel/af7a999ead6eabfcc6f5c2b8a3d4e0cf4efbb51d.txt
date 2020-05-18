@@ -1,0 +1,7 @@
+import org.apache.camel.model.dataformat.ZipDeflaterDataFormat;
+public class ZipDataFormatReifier extends DataFormatReifier<ZipDeflaterDataFormat> {
+        super((ZipDeflaterDataFormat) definition);
+    protected void configureDataFormat(DataFormat dataFormat, CamelContext camelContext) {
+        if (definition.getCompressionLevel() != null) {
+            setProperty(camelContext, dataFormat, "compressionLevel", definition.getCompressionLevel());
+        super.configureDataFormat(dataFormat, camelContext);

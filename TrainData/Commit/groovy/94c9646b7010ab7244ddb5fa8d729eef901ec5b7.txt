@@ -1,0 +1,2 @@
+    public static final int DIVISION_EXTRA_PRECISION = 32;
+    public static final int DIVISION_MIN_SCALE = 32;

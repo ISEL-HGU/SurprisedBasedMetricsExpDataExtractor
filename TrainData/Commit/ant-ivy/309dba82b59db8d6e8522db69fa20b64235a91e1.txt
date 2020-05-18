@@ -1,0 +1,5 @@
+                final int contentLength = srcConn.getContentLength();
+                final long destFileSize = dest.length();
+                if (contentLength != -1 && destFileSize != contentLength) {
+                            "Downloaded file size ("  destFileSize  ") doesn't match expected " 
+                                    "Content Length ("  contentLength  ") for "  normalizedURL  ". Please retry.");

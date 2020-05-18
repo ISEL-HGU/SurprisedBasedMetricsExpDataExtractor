@@ -1,0 +1,20 @@
+import org.apache.camel.CamelContext;
+import org.apache.camel.CamelContextAware;
+public class CamelEndpointMapping extends AbstractEndpointMapping implements InitializingBean, CamelSpringWSEndpointMapping, SoapEndpointMapping, CamelContextAware {
+    private CamelContext camelContext;
+    public CamelContext getCamelContext() {
+        return camelContext;
+    }
+
+    @Override
+    public void setCamelContext(CamelContext camelContext) {
+        this.camelContext = camelContext;
+    }
+
+    @Override
+            if (key.getLookupKey().equals(messageKey)) {
+                if (key.getLookupKey().equals(messageKey)) {
+    private String getRootQName(MessageContext messageContext) throws TransformerException {
+    private String getXPathResult(MessageContext messageContext, XPathExpression expression) {
+            Node domNode = camelContext.getTypeConverter().convertTo(Node.class, messageContext.getRequest().getPayloadSource());
+        if (transformerFactory == null) {

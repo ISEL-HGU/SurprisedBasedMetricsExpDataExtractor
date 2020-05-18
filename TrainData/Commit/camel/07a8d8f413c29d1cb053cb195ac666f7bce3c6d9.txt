@@ -1,0 +1,11 @@
+    private int totalHitsThreshold;
+    public LuceneQueryProcessor(String indexDirectoryPath, Analyzer analyzer, String defaultSearchPhrase, int maxNumberOfHits, int totalHitsThreshold) {
+            hits = searcher.search(phrase, maxNumberOfHits, totalHitsThreshold, luceneVersion, isReturnLuceneDocs);
+
+	public int getTotalHitsThreshold() {
+		return totalHitsThreshold;
+	}
+
+	public void setTotalHitsThreshold(int totalHitsThreshold) {
+		this.totalHitsThreshold = totalHitsThreshold;
+	}

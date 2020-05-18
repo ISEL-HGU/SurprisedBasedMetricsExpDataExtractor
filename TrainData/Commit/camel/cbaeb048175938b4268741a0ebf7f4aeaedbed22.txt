@@ -1,0 +1,10 @@
+     *     <il><customProtocol>:uri - to lookup the resource using a custom {@link java.net.URLStreamHandler} registered for the <customProtocol>,
+     *     on how to register it @see java.net.URL#URL(java.lang.String, java.lang.String, int, java.lang.String)</il>
+        } else if (uri.contains(":")) {
+            LOG.trace("Loading resource: {} with UrlHandler for protocol {}", uri, uri.split(":")[0]);
+            URL url = new URL(uri);
+            URLConnection con = url.openConnection();
+            return con.getInputStream();
+        } else if (uri.contains(":")) {
+            LOG.trace("Loading resource: {} with UrlHandler for protocol {}", uri, uri.split(":")[0]);
+            return new URL(uri);

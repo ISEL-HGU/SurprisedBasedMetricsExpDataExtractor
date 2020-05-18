@@ -1,0 +1,4 @@
+                                    ? this.createConstantExpression(baseExpr)
+                                ? this.createConstantExpression(baseExpr)
+        return isAnonymousInnerEnumDeclaration;
+        return null != name && name.endsWith(PACKAGE_INFO_FILE_NAME);

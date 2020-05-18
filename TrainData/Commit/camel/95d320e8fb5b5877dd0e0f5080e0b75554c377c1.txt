@@ -1,0 +1,2 @@
+        // lookup and configure SPI beans
+        DefaultConfigurationConfigurer.afterPropertiesSet(camelContext);

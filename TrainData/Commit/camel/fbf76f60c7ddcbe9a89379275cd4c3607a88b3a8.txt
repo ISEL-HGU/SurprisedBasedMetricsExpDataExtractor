@@ -1,0 +1,6 @@
+        } catch (Exception e) {
+        } catch (Error e) {
+            responseHandler.onException(new ODataException("Runtime Error Occurred", e));
+        } catch (Exception e) {
+        } catch (Error e) {
+            responseHandler.onException(new ODataException("Runtime Error Occurred", e));

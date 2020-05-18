@@ -1,0 +1,4 @@
+import javax.xml.bind.annotation.XmlTransient;
+
+                boolean ignore = sourceProp.getAnnotation(XmlTransient.class) != null;
+                if (ignore || propType.isType("CamelContext")) {

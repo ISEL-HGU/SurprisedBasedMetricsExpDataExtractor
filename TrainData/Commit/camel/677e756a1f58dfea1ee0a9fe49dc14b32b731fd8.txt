@@ -1,0 +1,2 @@
+import org.apache.camel.support.DefaultEndpoint;
+import org.apache.camel.util.ObjectHelper;

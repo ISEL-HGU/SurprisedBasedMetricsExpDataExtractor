@@ -1,0 +1,25 @@
+    private Map<String, String> globalOptions = new HashMap<String, String>();
+        if (globalOptions != null && !globalOptions.isEmpty()) {
+            for (Map.Entry<String, String> entry : globalOptions.entrySet()) {
+    @Deprecated
+        return getGlobalOptions();
+    @Override
+    public Map<String, String> getGlobalOptions() {
+        return globalOptions;
+    }
+
+    @Deprecated
+        this.setGlobalOptions(properties);
+    }
+
+    @Override
+    public void setGlobalOptions(Map<String, String> globalOptions) {
+        this.globalOptions = globalOptions;
+    @Deprecated
+        return getGlobalOption(name);
+    }
+
+    @Override
+    public String getGlobalOption(String name) {
+        String value = getGlobalOptions().get(name);
+                throw new RuntimeCamelException("Error getting global option: "  name, e);

@@ -1,0 +1,3 @@
+            // In case, when uses EditRelationship button, relationship doesn't exist => it doesn't have joins
+            // and just return targetName
+            return stemmed(last.getTargetEntityName());

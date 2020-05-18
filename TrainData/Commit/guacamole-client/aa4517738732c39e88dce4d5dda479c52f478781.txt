@@ -1,0 +1,9 @@
+import net.jradius.packet.AccessChallenge;
+import net.jradius.packet.RadiusResponse;
+            RadiusResponse reply = radiusClient.sendReceive(radAcc, confService.getRadiusRetries());
+            if ((reply instanceof AccessChallenge) && (reply.findAttribute(Attr_EAPMessage.TYPE) != null)) {
+                logger.debug("We got an AccessChallenge message, and it appears to be an EAP mechanism, trying to process.");
+                radAuth.processChallenge(radAcc, reply);
+                reply = radiusClient.sendReceive(radAcc, confService.getRadiusRetries());
+            }
+            return reply;

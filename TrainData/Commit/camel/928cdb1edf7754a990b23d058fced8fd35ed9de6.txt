@@ -1,0 +1,1 @@
+                    ZipEntry dirEntry = new ZipEntry(entry.getName());

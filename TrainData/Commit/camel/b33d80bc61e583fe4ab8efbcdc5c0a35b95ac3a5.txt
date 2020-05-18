@@ -1,0 +1,1 @@
+ * from) a JMS Queue or Topic (uses JMS 2.x API).

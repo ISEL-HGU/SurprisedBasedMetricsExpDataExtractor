@@ -1,0 +1,1 @@
+                .getResourceAsStream(rulesDir.concat("/").concat(href));

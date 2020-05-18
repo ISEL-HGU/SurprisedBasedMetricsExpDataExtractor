@@ -1,0 +1,13 @@
+            OgnlInvokeProcessor ognl = new OgnlInvokeProcessor(beanHolder, beanName, method);
+            InvokeProcessor invoke = new InvokeProcessor(beanHolder, beanName, method);
+    private static final class InvokeProcessor implements Processor {
+        private final BeanHolder beanHolder;
+        private final String methodName;
+        private final String beanName;
+        private InvokeProcessor(BeanHolder beanHolder, String beanName, String methodName) {
+            this.beanName = beanName;
+    private static final class OgnlInvokeProcessor implements Processor {
+        private final String beanName;
+        private OgnlInvokeProcessor(BeanHolder beanHolder, String beanName, String ognl) {
+            this.beanName = beanName;
+                    InvokeProcessor invoke = new InvokeProcessor(holder, beanName, methodName);

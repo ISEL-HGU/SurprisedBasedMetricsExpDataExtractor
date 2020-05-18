@@ -1,0 +1,3 @@
+import org.apache.cayenne.modeler.util.ProjectUtil;
+        Collection<ObjEntity> objEntities = ProjectUtil.getCollectionOfChildren((ObjEntity) e.getEntity());
+

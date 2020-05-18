@@ -1,0 +1,9 @@
+    private boolean ignoreStepEvents;
+    public boolean isIgnoreStepEvents() {
+        return ignoreStepEvents;
+    }
+
+    public void setIgnoreStepEvents(boolean ignoreStepEvents) {
+        this.ignoreStepEvents = ignoreStepEvents;
+    }
+

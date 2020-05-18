@@ -1,0 +1,14 @@
+            Element digestMethod = createElementNS(doc, input, "DigestMethod");
+            Element digestValue = createElementNS(doc, input, "DigestValue");
+        Element digestMethod = createElementNS(doc, input, "DigestMethod");
+        Element digestValue = createElementNS(doc, input, "DigestValue");
+    protected Element createElementNS(Document doc, Input input, String elementName) {
+        Element digestMethod;
+        if (HTTP_URI_ETSI_ORG_01903_V1_1_1.equals(findNamespace(input.getMessage()))) {
+            digestMethod = createElement(elementName, doc, input);
+        } else {
+            digestMethod = createDigSigElement(elementName, doc, input.getPrefixForXmlSignatureNamespace());
+        }
+        return digestMethod;
+    }
+

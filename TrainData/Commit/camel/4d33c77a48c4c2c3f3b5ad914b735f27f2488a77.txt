@@ -1,0 +1,2 @@
+                "camel-blueprint", "camel-fhir", "camel-hl7")
+    );

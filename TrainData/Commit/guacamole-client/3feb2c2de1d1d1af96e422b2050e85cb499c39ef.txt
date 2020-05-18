@@ -1,0 +1,13 @@
+import org.apache.guacamole.net.auth.AbstractUserContext;
+public class QuickConnectUserContext extends AbstractUserContext {
+            DEFAULT_ROOT_CONNECTION_GROUP,
+            DEFAULT_ROOT_CONNECTION_GROUP
+            Collections.singleton(DEFAULT_ROOT_CONNECTION_GROUP)
+        this.userDirectory = new SimpleDirectory<User>(self);
+        this.connectionDirectory = new QuickConnectDirectory(this.rootGroup);
+        this.connectionGroupDirectory = new SimpleDirectory<ConnectionGroup>(Collections.singleton(this.rootGroup));
+    public QuickConnectDirectory getConnectionDirectory() {
+        return connectionDirectory;
+    }
+
+    @Override

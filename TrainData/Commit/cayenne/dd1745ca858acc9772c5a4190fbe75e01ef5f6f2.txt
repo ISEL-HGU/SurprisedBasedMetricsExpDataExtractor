@@ -1,0 +1,20 @@
+    private static final Integer ZERO = 0;
+            QueryCacheStrategy.NO_CACHE,
+            QueryCacheStrategy.LOCAL_CACHE,
+    private static final Map<QueryCacheStrategy, String> cachePolicyLabels = new TreeMap<>();
+        cachePolicyLabels.put(QueryCacheStrategy.NO_CACHE,      NO_CACHE_LABEL);
+        cachePolicyLabels.put(QueryCacheStrategy.LOCAL_CACHE,   LOCAL_CACHE_LABEL);
+        cachePolicyLabels.put(QueryCacheStrategy.SHARED_CACHE,  SHARED_CACHE_LABEL);
+                QueryCacheStrategy strategy = (QueryCacheStrategy) cacheStrategy.getModel().getSelectedItem();
+                setCacheGroupsEnabled(strategy != QueryCacheStrategy.NO_CACHE);
+        setCacheGroupsEnabled(selectedStrategy != null && selectedStrategy != QueryCacheStrategy.NO_CACHE);
+        string = string == null ? "" : string.trim();
+        } else {
+            } else {
+                throw new ValidationException("Fetch offset must be an integer: %s", string);
+        } else {
+            } else {
+                throw new ValidationException("Fetch limit must be an integer: %s", string);
+        } else {
+            } else {
+                throw new ValidationException("Page size must be an integer: %s", string);

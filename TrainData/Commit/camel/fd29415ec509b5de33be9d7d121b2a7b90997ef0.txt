@@ -1,0 +1,2 @@
+         * Protocol used to communicate with brokers. SASL_PLAINTEXT, PLAINTEXT
+         * and SSL are supported

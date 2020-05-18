@@ -1,0 +1,5 @@
+import org.springframework.jdbc.datasource.DataSourceUtils;
+
+            conn = DataSourceUtils.getConnection(dataSource);
+            conn = DataSourceUtils.getConnection(dataSource);
+            if (shouldCloseResources && !DataSourceUtils.isConnectionTransactional(conn, dataSource)) {

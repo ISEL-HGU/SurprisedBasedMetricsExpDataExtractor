@@ -1,0 +1,14 @@
+        this(componentName, loadConnectorClass(className));
+    }
+
+    protected DefaultConnectorComponent(String componentName, Class<?> className) {
+        this.catalog.addComponent(componentName, className.getName());
+    private static Class<?> loadConnectorClass(String className) {
+        try {
+            ClassLoader classLoader = DefaultConnectorComponent.class.getClassLoader();
+            return classLoader.loadClass(className);
+        } catch (ClassNotFoundException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+

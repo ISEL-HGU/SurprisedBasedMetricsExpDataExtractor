@@ -1,0 +1,7 @@
+    public ModuleNode buildAST(SourceUnit sourceUnit, ClassLoader classLoader, Reduction cst) throws ParserException {
+        try {
+            ReaderSource readerSource = sourceUnit.getSource();
+            if (null == readerSource || null == readerSource.getReader()) {
+                sourceUnit.setSource(this.readerSource);
+            }
+        } catch (IOException e) {

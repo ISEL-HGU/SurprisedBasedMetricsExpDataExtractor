@@ -1,0 +1,27 @@
+import org.apache.camel.management.InstrumentationInterceptStrategy;
+import org.apache.camel.management.InstrumentationProcessor;
+import org.apache.camel.processor.RedeliveryErrorHandler;
+    private InstrumentationProcessor instrumentationProcessor;
+        // setup instrumentation processor for management (jmx)
+        // this is later used in postInitChannel as we need to setup the error handler later as well
+        if (managed != null && managed instanceof InstrumentationInterceptStrategy) {
+            InstrumentationInterceptStrategy iis = (InstrumentationInterceptStrategy) managed;
+            instrumentationProcessor = new InstrumentationProcessor(targetOutputDef.getShortName(), target);
+            iis.prepareProcessor(targetOutputDef, target, instrumentationProcessor);
+        // if jmx was enabled for the processor then either add as advice or wrap and change the processor
+        // on the error handler. See more details in the class javadoc of InstrumentationProcessor
+        if (instrumentationProcessor != null) {
+            boolean redeliveryPossible = false;
+            if (errorHandler instanceof RedeliveryErrorHandler) {
+                redeliveryPossible = ((RedeliveryErrorHandler) errorHandler).determineIfRedeliveryIsEnabled();
+                if (redeliveryPossible) {
+                    // okay we can redeliver then we need to change the output in the error handler
+                    // to use us which we then wrap the call so we can capture before/after for redeliveries as well
+                    ((RedeliveryErrorHandler) errorHandler).changeOutput(instrumentationProcessor);
+                }
+            }
+            if (!redeliveryPossible) {
+                // optimise to use advice as we cannot redeliver
+                addAdvice(instrumentationProcessor);
+            }
+        }

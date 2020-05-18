@@ -1,0 +1,14 @@
+import org.apache.camel.component.zookeepermaster.ContainerIdFactory;
+     * To use a custom ContainerIdFactory for creating container ids.
+     */
+    @NestedConfigurationProperty
+    private ContainerIdFactory containerIdFactory;
+    /**
+    public ContainerIdFactory getContainerIdFactory() {
+        return containerIdFactory;
+    }
+
+    public void setContainerIdFactory(ContainerIdFactory containerIdFactory) {
+        this.containerIdFactory = containerIdFactory;
+    }
+

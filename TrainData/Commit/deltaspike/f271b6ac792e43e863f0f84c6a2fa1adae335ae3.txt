@@ -1,0 +1,6 @@
+    // only needed for some old Weld versions
+    public MapConfigSource()
+    {
+        map = null;
+    }
+

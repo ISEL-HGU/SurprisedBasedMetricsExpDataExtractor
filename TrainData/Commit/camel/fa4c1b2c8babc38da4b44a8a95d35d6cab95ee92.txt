@@ -1,0 +1,68 @@
+import java.util.Iterator;
+import java.util.ServiceLoader;
+import org.apache.camel.CamelContext;
+import org.apache.camel.component.jbpm.config.CamelContextBuilder;
+import org.kie.internal.runtime.manager.InternalRuntimeManager;
+import org.kie.internal.runtime.manager.RuntimeManagerRegistry;
+    
+    protected CamelContextBuilder camelContextBuilder;
+        this.camelContextBuilder = discoverCamelContextBuilder();
+    }
+    
+    public CamelKieServerExtension(CamelContextBuilder camelContextBuilder) {
+        this.managedCamel = true;
+        this.camelContextBuilder = camelContextBuilder;
+        this.camelContextBuilder = discoverCamelContextBuilder();
+    }
+
+    public CamelKieServerExtension(DefaultCamelContext camelContext, CamelContextBuilder camelContextBuilder) {
+        this.camelContext = camelContext;
+        this.managedCamel = false;
+        this.camelContextBuilder = camelContextBuilder;
+            this.camelContext = (DefaultCamelContext) buildGlobalContext();
+                DefaultCamelContext context = (DefaultCamelContext) buildDeploymentContext(id);
+    
+    public DefaultCamelContext getCamelContext() {
+        return camelContext;
+    }
+    
+    public CamelContextBuilder getCamelContextBuilder() {
+        return camelContextBuilder;
+    }
+                }                
+    
+    protected CamelContext buildGlobalContext() {
+        if (camelContextBuilder != null) {
+            return camelContextBuilder.buildCamelContext();
+        }
+        
+        return new CamelContextBuilder(){}.buildCamelContext();
+    }
+    
+    protected CamelContext buildDeploymentContext(String identifier) {
+        
+        InternalRuntimeManager runtimeManager = (InternalRuntimeManager) RuntimeManagerRegistry.get().getManager(identifier);
+        
+        if (runtimeManager != null) {
+            
+            CamelContextBuilder deploymentContextBuilder = (CamelContextBuilder) runtimeManager.getEnvironment()
+                                                                                        .getEnvironment()
+                                                                                        .get(JBPMConstants.CAMEL_CONTEXT_BUILDER_KEY);
+            if (deploymentContextBuilder != null) {
+                return deploymentContextBuilder.buildCamelContext();
+            }
+        }
+        
+        return new CamelContextBuilder(){}.buildCamelContext();
+    }
+    
+    protected CamelContextBuilder discoverCamelContextBuilder() {
+        
+        ServiceLoader<CamelContextBuilder> builders = ServiceLoader.load(CamelContextBuilder.class);
+        Iterator<CamelContextBuilder> it = builders.iterator();
+        if (it.hasNext()) {
+            return it.next();
+        }
+        
+        return null;
+    }

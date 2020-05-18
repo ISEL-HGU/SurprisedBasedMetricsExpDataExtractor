@@ -1,0 +1,2 @@
+ * Component used for transferring data secure and reliable over the internet
+ * using the AS2 protocol.

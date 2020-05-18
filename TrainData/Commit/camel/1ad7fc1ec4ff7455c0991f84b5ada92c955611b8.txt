@@ -1,0 +1,6 @@
+            sslcf = new SslContextFactory();
+            sslcf.setEndpointIdentificationAlgorithm(null);
+        SslContextFactory answer = new SslContextFactory();
+        if (!client) {
+            answer.setEndpointIdentificationAlgorithm(null);
+        }

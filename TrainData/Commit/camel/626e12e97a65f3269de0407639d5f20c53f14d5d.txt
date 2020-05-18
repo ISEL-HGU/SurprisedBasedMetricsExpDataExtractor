@@ -1,0 +1,17 @@
+
+import org.apache.camel.catalog.CamelCatalog;
+import org.apache.camel.catalog.DefaultCamelCatalog;
+    private CamelCatalog catalog = new DefaultCamelCatalog();
+
+                    checkConnectorScheme(newScheme);
+
+    private void checkConnectorScheme(String connectorScheme) {
+        List<String> componentNames = catalog.findComponentNames();
+        if (componentNames != null && componentNames.contains(connectorScheme)) {
+            String format = "Can't package a connector with scheme '%s' as a component with the same scheme is already registered in the catalog";
+            String message = String.format(format, connectorScheme);
+            getLog().error(message);
+            throw new IllegalArgumentException(message);
+        }
+    }
+

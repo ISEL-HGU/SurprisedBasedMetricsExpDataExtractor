@@ -1,0 +1,4 @@
+            // skip all camel-catalog and other tooling JARs as they should not be in the BOM
+            boolean parser = dep.getArtifactId().startsWith("camel-route-parser");
+            if (catalog || parser) {
+                getLog().debug("Skipping dependency: "  dep.getArtifactId());

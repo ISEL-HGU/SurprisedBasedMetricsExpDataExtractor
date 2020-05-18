@@ -1,0 +1,2 @@
+    public void setUri(URI u) {
+       uri = u;

@@ -1,0 +1,19 @@
+   * Builds the mapping document for a particular data store.
+   * @param keys  The keys of the mapping file
+   * @param db    The datastore to build the mapping file for
+   * @param mappingDocument   The name of the mapping document
+   * @param rootNode          The root node of the mapping document
+   * @param fullNameSpace     The full name space of the persistent object
+   * @param jsonObject        The json object of the avro schema
+   * @param mappingClass      The mapping class element
+   * Gets the data store to benchmark.
+   * @param properties the properties
+   * class keyClass="java.lang.String" name=
+   * "org.apache.gora.benchmark.generated.User" document="users" //CouchDB
+   * class keyClass="java.lang.String" name=
+   * "org.apache.gora.benchmark.generated.User" table="users"
+   * @param mappingClass the mapping class
+   * @param mappingDocument          the entire mapping documentmappingClass
+   * @param rootNode          the node we are setting, top most node
+   * @param fullNameSpace          name clearspace of data bean
+   * @param dataStore the data store

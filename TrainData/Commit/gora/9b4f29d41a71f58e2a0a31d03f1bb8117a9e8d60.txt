@@ -1,0 +1,1 @@
+      splitSize = Integer.parseInt(properties.getProperty(BUFFER_LIMIT_READ_NAME, getConf().get(BUFFER_LIMIT_READ_NAME, String.valueOf(BUFFER_LIMIT_READ_VALUE))));

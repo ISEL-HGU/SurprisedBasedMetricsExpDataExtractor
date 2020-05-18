@@ -1,0 +1,5 @@
+import org.codehaus.groovy.runtime.memoize.CacheKey;
+    private static final CommonCache<CacheKey<ClassLoader>, Map<String, List<MethodNode>>> CACHE = new CommonCache<CacheKey<ClassLoader>, Map<String, List<MethodNode>>>(new WeakHashMap<CacheKey<ClassLoader>, Map<String, List<MethodNode>>>());
+        return CACHE.getAndPut(new CacheKey<ClassLoader>(classLoader), new EvictableCache.ValueProvider<CacheKey<ClassLoader>, Map<String, List<MethodNode>>>() {
+            public Map<String, List<MethodNode>> provide(CacheKey<ClassLoader> key) {
+                return getMacroMethodsFromClassLoader(key.getKey());

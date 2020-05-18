@@ -1,0 +1,3 @@
+		if("SUBSTRING".equals(functionExpression.getFunctionName())) {
+			out.append("SUBSTR");
+		} else if(!"CONCAT".equals(functionExpression.getFunctionName())) {

@@ -1,0 +1,8 @@
+                    PropertyExpression propertyExpression = new PropertyExpression(
+                            new VariableExpression(weaved), accessedVariable.getName());
+                    propertyExpression.getProperty().setSourcePosition(exp);
+                    return propertyExpression;
+                PropertyExpression propertyExpression = new PropertyExpression(
+                        new VariableExpression(weaved), accessedVariable.getName());
+                propertyExpression.getProperty().setSourcePosition(exp);
+                return propertyExpression;

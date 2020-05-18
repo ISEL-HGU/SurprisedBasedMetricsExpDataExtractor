@@ -1,0 +1,3 @@
+        return Document.parse(s);
+    public static Document fromFileToDocument(File f, Exchange exchange) throws Exception {
+    public static Document fromInputStreamToDocument(InputStream is, Exchange exchange) throws Exception {

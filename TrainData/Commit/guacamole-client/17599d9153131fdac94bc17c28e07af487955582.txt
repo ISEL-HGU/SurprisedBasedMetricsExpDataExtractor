@@ -1,0 +1,3 @@
+import java.nio.charset.Charset;
+        validator.setEncoding("UTF-8");
+            return new String(cipherData, Charset.forName("UTF-8"));

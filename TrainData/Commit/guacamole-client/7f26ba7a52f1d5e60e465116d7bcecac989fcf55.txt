@@ -1,0 +1,5 @@
+import org.apache.guacamole.GuacamoleSecurityException;
+            if (username == null)
+                throw new GuacamoleSecurityException("No username provided by CAS.");
+            
+            credentials.setUsername(username);

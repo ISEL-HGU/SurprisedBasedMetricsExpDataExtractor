@@ -1,0 +1,7 @@
+        applyCompilationCustomizers(configuration);
+
+        this.classgenCallback = null;
+        this.classNodeResolver = new ClassNodeResolver();
+    }
+
+    private void applyCompilationCustomizers(CompilerConfiguration configuration) {

@@ -1,0 +1,2 @@
+                changed = changed.trim();
+                    text = before  start  "\n      "  changed  "\n      "  end  after;

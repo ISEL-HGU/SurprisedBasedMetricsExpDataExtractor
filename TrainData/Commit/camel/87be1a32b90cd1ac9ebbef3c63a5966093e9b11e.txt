@@ -1,0 +1,14 @@
+    @UriParam(defaultValue = "false") @Metadata(label = "consumer")
+    private boolean mimeDecodeHeaders;
+
+
+    /**
+     * This option enables transparent MIME decoding and unfolding for mail headers.
+     */
+    public void setMimeDecodeHeaders(boolean mimeDecodeHeaders) {
+        this.mimeDecodeHeaders = mimeDecodeHeaders;
+    }
+
+    public boolean isMimeDecodeHeaders() {
+        return mimeDecodeHeaders;
+    }

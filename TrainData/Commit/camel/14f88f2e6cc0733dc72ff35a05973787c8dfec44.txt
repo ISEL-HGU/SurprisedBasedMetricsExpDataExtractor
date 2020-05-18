@@ -1,0 +1,47 @@
+import java.util.ArrayList;
+import org.apache.camel.ha.CamelClusterService;
+        String[] addresses = System.getProperty("atomix.cluster").split(",");
+
+        List<Address> cluster = new ArrayList<>();
+        for (int i = 0; i < addresses.length; i) {
+            String[] parts = addresses[i].split(":");
+            cluster.add(new Address(parts[0], Integer.valueOf(parts[1])));
+        final String id = String.format("atomix-%d", cluster.get(0).port());
+        final File path = new File("target", id);
+        // Cleanup
+        FileUtil.removeDir(path);
+        AtomixClusterService service = new AtomixClusterService();
+        service.setStoragePath(path.getAbsolutePath());
+        service.setStorageLevel(StorageLevel.DISK);
+        service.setAddress(cluster.get(0));
+        service.setNodes(cluster);
+        DefaultCamelContext context = new DefaultCamelContext();
+        context.addService(service);
+        context.addRoutes(new RouteBuilder() {
+            @Override
+            public void configure() throws Exception {
+                CamelClusterService cluster = getContext().hasService(AtomixClusterService.class);
+                CamelClusterView view = cluster.createView("my-view");
+                RoutePolicy policy = ClusteredRoutePolicy.forView(view);
+                fromF("timer:%s-1?period=2s", id)
+                    .routeId(id  "-1")
+                    .routePolicy(policy)
+                    .log("${routeId} (1)");
+                fromF("timer:%s-2?period=5s", id)
+                    .routeId(id  "-2")
+                    .routePolicy(policy)
+                    .log("${routeId} (2)");
+            }
+        });
+        context.start();
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            @Override
+            public void run() {
+                try {
+                    context.stop();
+                } catch (Exception e) {
+                    LOGGER.warn("", e);
+            }
+        });
+        for (int i = 0; i < Integer.MAX_VALUE; i) {
+            Thread.sleep(1000);

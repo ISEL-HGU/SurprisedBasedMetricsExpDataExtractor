@@ -1,0 +1,11 @@
+ b/src/test/groovy/bugs/Groovy1567.java
+import org.junit.Test;
+public final class Groovy1567 {
+    @Test
+    public void testGroovyScriptEngineVsGroovyShell() throws Exception {
+        File currentDir = new File("src/test/groovy/bugs");
+        String file = "scriptForGroovy1567.groovy";
+
+        //
+        shell.run(new File(currentDir, file), test);
+        // a MME was ensued here stating no 't.start()' was available in the script

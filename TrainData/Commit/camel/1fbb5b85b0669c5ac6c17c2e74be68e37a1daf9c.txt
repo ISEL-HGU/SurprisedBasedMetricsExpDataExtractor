@@ -1,0 +1,3 @@
+        ContentStream contentStream = document.getContentStream();
+        if (document != null && contentStream != null) {
+            return contentStream.getStream();

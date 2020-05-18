@@ -1,0 +1,2 @@
+    GET_PAGE_LIKES(ResponseList.class, "getPageLikes", String.class, "pageId"),
+    GET_PAGE_LIKES_WITH_READING(ResponseList.class, "getPageLikes", String.class, "pageId", Reading.class, FacebookConstants.READING_PROPERTY),

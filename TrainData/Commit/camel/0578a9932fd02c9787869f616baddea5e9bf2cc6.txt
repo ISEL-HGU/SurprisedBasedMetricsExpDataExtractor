@@ -1,0 +1,12 @@
+        /**
+         * Being able to autodetect the source language
+         */
+        private Boolean autodetectSourceLanguage = false;
+
+        public Boolean getAutodetectSourceLanguage() {
+            return autodetectSourceLanguage;
+        }
+
+        public void setAutodetectSourceLanguage(Boolean autodetectSourceLanguage) {
+            this.autodetectSourceLanguage = autodetectSourceLanguage;
+        }

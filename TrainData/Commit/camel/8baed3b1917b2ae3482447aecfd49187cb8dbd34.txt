@@ -1,0 +1,8 @@
+import org.apache.camel.component.file.remote.SftpRemoteFile;
+            List files; // operations.listFiles returns List<SftpRemoteFile> so do not use generic in the List files
+            for (Object f : files) {
+                SftpRemoteFile rf = (SftpRemoteFile) f;
+                    match = rf.getFilename().equals(file.getAbsoluteFilePath()) || rf.getFilename().equals(file.getFileNameOnly());
+                    match = rf.getFilename().equals(file.getFileNameOnly());
+                    newLastModified = rf.getLastModified();
+                    newLength = rf.getFileLength();

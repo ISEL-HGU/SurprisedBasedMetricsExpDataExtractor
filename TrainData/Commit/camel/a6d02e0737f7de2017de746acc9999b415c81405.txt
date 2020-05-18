@@ -1,0 +1,53 @@
+import java.lang.reflect.Method;
+import org.apache.camel.support.IntrospectionSupport;
+     * Whether generating autowiring is enabled.
+     */
+    @Parameter(property = "camel.autowireEnabled", defaultValue = "true")
+    protected boolean autowireEnabled;
+
+    /**
+     * Whether generating spring boot tooling support is enabled.
+     */
+    @Parameter(property = "camel.springBootEnabled", defaultValue = "true")
+    protected boolean springBootEnabled;
+
+    /**
+            if (springBootEnabled) {
+                getLog().debug("Spring Boot option: "  key);
+                springBootData.add(new SpringBootData(key, springBootJavaType(javaType), description, defaultValue));
+            }
+            if (autowireEnabled && "object".equals(type)) {
+                            key = "camel.component."  componentName  "."  dash;
+                            getLog().debug("Autowire: "  key  "="  value);
+                            if (springBootEnabled) {
+                                // gather additional spring boot data for this class
+                                // we dont have documentation or default values
+                                List<Method> setters = new ArrayList<>();
+                                extraSetterMethods(best, setters);
+                                // sort the setters
+                                setters.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
+                                for (Method m : setters) {
+                                    String shortHand = IntrospectionSupport.getSetterShorthandName(m);
+                                    String bootName = camelCaseToDash(shortHand);
+                                    String bootKey = "camel.component."  componentName  "."  dash  "."  bootName;
+                                    String bootJavaType = m.getParameterTypes()[0].getName();
+                                    getLog().debug("Spring Boot option: "  bootKey);
+                                    String desc = "Auto discovered option from class: "  best.getName()  " to set the option via setter: "  m.getName();
+                                    springBootData.add(new SpringBootData(bootKey, springBootJavaType(bootJavaType), desc, null));
+                                }
+                            }
+                if (row.getDescription() != null) {
+                    sb.append("      \"description\": \""  row.getDescription()  "\"");
+                }
+    private static void extraSetterMethods(Class<?> clazz, List<Method> answer) {
+        if (clazz == null || clazz == Object.class) {
+            return;
+        }
+        Method[] methods = clazz.getMethods();
+        for (Method m : methods) {
+            if (IntrospectionSupport.isSetter(m)) {
+                answer.add(m);
+            }
+        }
+    }
+

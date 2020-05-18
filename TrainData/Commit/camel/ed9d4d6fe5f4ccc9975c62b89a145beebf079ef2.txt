@@ -1,0 +1,12 @@
+import java.net.URI;
+import org.apache.camel.util.URISupport;
+    @SuppressWarnings("rawtypes")
+    @SuppressWarnings("rawtypes")
+    @SuppressWarnings("rawtypes")
+    @SuppressWarnings("rawtypes")
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    protected Iterator<ProducerRecord> createRecorder(Exchange exchange) throws Exception {
+            // if topic property was not received from configuration or header parameters take it from the remaining URI
+            topic = URISupport.extractRemainderPath(new URI(endpoint.getEndpointUri()), true);
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    @SuppressWarnings({"unchecked", "rawtypes"})

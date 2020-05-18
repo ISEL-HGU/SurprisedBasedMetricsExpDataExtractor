@@ -1,0 +1,6 @@
+    public InfinispanProducer(InfinispanEndpoint endpoint, String cacheName, InfinispanManager manager, InfinispanConfiguration configuration) {
+        this.manager = manager;
+
+
+
+

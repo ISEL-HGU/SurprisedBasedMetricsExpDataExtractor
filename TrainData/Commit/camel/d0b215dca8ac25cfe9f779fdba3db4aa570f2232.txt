@@ -1,0 +1,2 @@
+    @UriParam(defaultValue = "120000")
+    private int pingInterval = 120000;

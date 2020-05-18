@@ -1,0 +1,4 @@
+        if(cgenConfiguration.getArtifactsGenerationMode().equalsIgnoreCase("all")) {
+            ((CodeGeneratorControllerBase) parent).setCurrentClass(cgenConfiguration.getDataMap());
+            ((CodeGeneratorControllerBase) parent).setSelected(true);
+        }

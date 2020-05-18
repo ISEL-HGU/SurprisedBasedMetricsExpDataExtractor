@@ -1,0 +1,3 @@
+import org.apache.guacamole.net.auth.ActivityRecord;
+    public ActivityRecordSet<ActivityRecord> getUserHistory()
+        return new SimpleActivityRecordSet<ActivityRecord>();

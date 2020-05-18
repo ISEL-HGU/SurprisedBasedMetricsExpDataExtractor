@@ -1,0 +1,2 @@
+            curr = curr != null ? curr : endpoint.getConfiguration().getCurrency();
+            pair = pair != null ? pair : endpoint.getConfiguration().getCurrencyPair();

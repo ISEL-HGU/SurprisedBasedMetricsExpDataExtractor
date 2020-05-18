@@ -1,0 +1,33 @@
+    private String required;
+    private String type;
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getRequired() {
+        return required;
+    }
+
+    public void setRequired(String required) {
+        this.required = required;
+    }
+
+    public String getShortJavaType() {
+        if (javaType.startsWith("java.util.Map")) {
+            return "Map";
+        } else if (javaType.startsWith("java.util.Set")) {
+            return "Set";
+        } else if (javaType.startsWith("java.util.List")) {
+            return "List";
+        }
+        int pos = javaType.lastIndexOf(".");
+        if (pos != -1) {
+            return javaType.substring(pos  1);
+        } else {
+            return javaType;
+        }
+    }

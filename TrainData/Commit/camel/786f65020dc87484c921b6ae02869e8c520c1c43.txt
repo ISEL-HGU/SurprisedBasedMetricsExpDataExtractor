@@ -1,0 +1,12 @@
+  public Any23DataFormatReifier(DataFormatDefinition definition) {
+    super((Any23DataFormat) definition);
+  }
+  @Override
+  protected void configureDataFormat(DataFormat dataFormat, CamelContext camelContext) {
+//    if (definition.getDataObjectType() != null) {
+//      setProperty(camelContext, dataFormat, "dataObjectType", definition.getDataObjectType());
+//    }
+//    if (definition.getOmitXmlDeclaration() != null) {
+//      setProperty(camelContext, dataFormat, "omitXmlDeclaration", definition.getOmitXmlDeclaration());
+//    }
+  }

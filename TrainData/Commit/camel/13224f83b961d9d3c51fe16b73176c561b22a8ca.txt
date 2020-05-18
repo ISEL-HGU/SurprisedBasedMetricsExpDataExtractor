@@ -1,0 +1,5 @@
+import org.apache.camel.support.DefaultRegistry;
+    protected final Registry registry = new DefaultRegistry();
+        registry.bind(name, bean);
+        return registry.lookupByName(name);
+        return new DefaultCamelContext(registry);

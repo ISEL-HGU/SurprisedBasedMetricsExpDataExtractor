@@ -1,0 +1,3 @@
+import org.apache.camel.ha.CamelClusterEventListener;
+    private final CamelClusterEventListener.Leadership leadershipEventListener;
+    private class CamelClusterLeadershipListener implements CamelClusterEventListener.Leadership {

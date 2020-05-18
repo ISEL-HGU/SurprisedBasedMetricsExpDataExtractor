@@ -1,0 +1,7 @@
+                    context.adapt(ExtendedCamelContext.class).getBeanIntrospection().setProperty(context, json, "unmarshalType", clazz);
+                    context.adapt(ExtendedCamelContext.class).getBeanIntrospection().setProperty(context, json, "useList", type.endsWith("[]"));
+                    context.adapt(ExtendedCamelContext.class).getBeanIntrospection().setProperty(context, outJson, "unmarshalType", outClazz);
+                    context.adapt(ExtendedCamelContext.class).getBeanIntrospection().setProperty(context, outJson, "useList", outType.endsWith("[]"));
+                    context.adapt(ExtendedCamelContext.class).getBeanIntrospection().setProperty(context, jaxb, "context", jc);
+                    context.adapt(ExtendedCamelContext.class).getBeanIntrospection().setProperty(context, outJaxb, "context", jc);
+                    context.adapt(ExtendedCamelContext.class).getBeanIntrospection().setProperty(context, outJaxb, "context", jc);

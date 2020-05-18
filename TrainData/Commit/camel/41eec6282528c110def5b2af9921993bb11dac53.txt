@@ -1,0 +1,2 @@
+        LOG.debug("Checking if the current leader has changed to notify the event handler...");
+            LOG.info("Current leader has changed from {} to {}. Sending notification...", this.currentLeader, newLeader);

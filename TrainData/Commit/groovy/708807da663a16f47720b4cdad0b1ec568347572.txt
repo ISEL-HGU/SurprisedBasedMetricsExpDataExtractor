@@ -1,0 +1,37 @@
+import groovy.transform.NamedParam;
+    public static Sql newInstance(
+            @NamedParam(value = "url", type = String.class, required = true)
+            @NamedParam(value = "properties", type = Properties.class)
+            @NamedParam(value = "driverClassName", type = String.class)
+            @NamedParam(value = "driver", type = String.class)
+            @NamedParam(value = "user", type = String.class)
+            @NamedParam(value = "password", type = String.class)
+            @NamedParam(value = "cacheNamedQueries", type = Boolean.class)
+            @NamedParam(value = "cacheStatements", type = Boolean.class)
+            @NamedParam(value = "enableNamedQueries", type = Boolean.class)
+            @NamedParam(value = "resultSetConcurrency", type = Integer.class)
+            @NamedParam(value = "resultSetHoldability", type = Integer.class)
+            @NamedParam(value = "resultSetType", type = Integer.class)
+            // TODO below will be deleted once we fix type checker to understand
+            // readonly Map otherwise seen as Map<String, Serializable>
+            @NamedParam(value = "unused", type = Object.class)
+            Map<String, Object> args) throws SQLException, ClassNotFoundException {
+        sqlArgs.remove("unused"); // TODO remove
+    public static void withInstance(
+            @NamedParam(value = "url", type = String.class, required = true)
+            @NamedParam(value = "properties", type = Properties.class)
+            @NamedParam(value = "driverClassName", type = String.class)
+            @NamedParam(value = "driver", type = String.class)
+            @NamedParam(value = "user", type = String.class)
+            @NamedParam(value = "password", type = String.class)
+            @NamedParam(value = "cacheNamedQueries", type = Boolean.class)
+            @NamedParam(value = "cacheStatements", type = Boolean.class)
+            @NamedParam(value = "enableNamedQueries", type = Boolean.class)
+            @NamedParam(value = "resultSetConcurrency", type = Integer.class)
+            @NamedParam(value = "resultSetHoldability", type = Integer.class)
+            @NamedParam(value = "resultSetType", type = Integer.class)
+            // TODO below will be deleted once we fix type checker to understand
+            // readonly Map otherwise seen as Map<String, Serializable>
+            @NamedParam(value = "unused", type = Object.class)
+            Map<String, Object> args,
+            Closure c) throws SQLException, ClassNotFoundException {

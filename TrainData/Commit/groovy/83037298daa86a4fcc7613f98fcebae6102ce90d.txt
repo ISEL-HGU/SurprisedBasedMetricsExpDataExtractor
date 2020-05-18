@@ -1,0 +1,43 @@
+                    FieldNode helperField = null;
+                    fieldMods = 0;
+                    isStatic = 0;
+
+                    // look first for field with encoded modifier information
+                    for (Integer mod : Traits.FIELD_PREFIXES) {
+                        helperField = fieldHelperClassNode.getField(String.format("$0x%04x", mod)  fieldName);
+                        if (helperField != null) {
+                            if ((mod & Opcodes.ACC_STATIC) != 0) isStatic = Opcodes.ACC_STATIC;
+                            fieldMods = fieldMods | mod;
+                            break;
+                        }
+
+                    if (helperField == null) {
+                        // look for possible legacy fields (trait compiled pre 2.4.8)
+                        helperField = fieldHelperClassNode.getField(Traits.FIELD_PREFIX  Traits.PUBLIC_FIELD_PREFIX  fieldName);
+                            helperField = fieldHelperClassNode.getField(Traits.FIELD_PREFIX  Traits.PRIVATE_FIELD_PREFIX  fieldName);
+                        if (helperField==null) {
+                            publicField = true;
+                            // try to find a static one
+                            helperField = fieldHelperClassNode.getField(Traits.STATIC_FIELD_PREFIXTraits.PUBLIC_FIELD_PREFIXfieldName);
+                            if (helperField==null) {
+                                publicField = false;
+                                helperField = fieldHelperClassNode.getField(Traits.STATIC_FIELD_PREFIXTraits.PRIVATE_FIELD_PREFIX fieldName);
+                            fieldMods = fieldMods | Opcodes.ACC_STATIC;
+                            isStatic = Opcodes.ACC_STATIC;
+                    boolean finalSetter = !getter && (fieldMods & Opcodes.ACC_FINAL) != 0;
+                                    (finalSetter ? null : stmt(
+                                    ));
+                    // add getter/setter even though setter not strictly needed for final fields
+                    // but add empty body for setter for legacy compatibility
+                    MethodNode impl = new MethodNode(
+                            methodNode.getName(),
+                            Opcodes.ACC_PUBLIC | isStatic,
+                            returnType,
+                            newParams,
+                            ClassNode.EMPTY_ARRAY,
+                            body
+                    );
+                    AnnotationNode an = new AnnotationNode(COMPILESTATIC_CLASSNODE);
+                    impl.addAnnotation(an);
+                    cNode.addTransform(StaticCompileTransformation.class, an);
+                    cNode.addMethod(impl);

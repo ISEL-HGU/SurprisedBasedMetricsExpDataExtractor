@@ -1,0 +1,2 @@
+                ClassNodeResolver.LookupResult lookupResult = getClassNodeResolver().resolveName(name, CompilationUnit.this);
+                return lookupResult == null ? null : lookupResult.getClassNode();

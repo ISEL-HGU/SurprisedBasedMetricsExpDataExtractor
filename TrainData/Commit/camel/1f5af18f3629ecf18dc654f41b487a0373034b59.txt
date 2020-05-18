@@ -1,0 +1,4 @@
+import static org.apache.camel.util.UnsafeUriCharactersEncoder.encodeHttpURI;
+import java.io.IOException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+        CloseableHttpResponse closeableHttpResponse = getConfig().getHttpClient().execute(httpPost);

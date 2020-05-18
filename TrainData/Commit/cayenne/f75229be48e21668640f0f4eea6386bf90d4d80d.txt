@@ -1,0 +1,4 @@
+    private static final long serialVersionUID = 1L; 
+    public static final Property<String> NAME = Property.create("name", String.class);
+    public static final Property<Artist> ARTIST = Property.create("artist", Artist.class);
+    public static final Property<Gallery> GALLERY = Property.create("gallery", Gallery.class);

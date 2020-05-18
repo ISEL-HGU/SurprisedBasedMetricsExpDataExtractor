@@ -1,0 +1,5 @@
+    private JButton manageTemplatesLink;
+                cgenConfiguration.setSuperTemplate(Application.getInstance().getCodeTemplateManager().getTemplatePath(item, cgenConfiguration.getRootPath()));
+                cgenConfiguration.setTemplate(Application.getInstance().getCodeTemplateManager().getTemplatePath(item, cgenConfiguration.getRootPath()));
+        this.manageTemplatesLink = new JButton("Customize Templates...");
+    public JButton getManageTemplatesLink() {

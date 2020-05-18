@@ -1,0 +1,17 @@
+        server = createServer();
+    }
+
+    protected Server createServer() {
+        CxfRsEndpoint endpoint = (CxfRsEndpoint) getEndpoint();
+        Bus bus = endpoint.getBus();
+        // We need to apply the bus setting from the CxfRsEndpoint which does not use the default bus
+        return svrBean.create();
+
+        if (server == null) {
+            server = createServer();
+        }
+        if (server != null) {
+            server.stop();
+            server.destroy();
+            server = null;
+        }

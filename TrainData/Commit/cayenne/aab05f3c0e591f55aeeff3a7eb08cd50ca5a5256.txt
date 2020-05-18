@@ -1,0 +1,5 @@
+    public static final Property<ClientMtTable1> TABLE1 = Property.create("table1", ClientMtTable1.class);
+
+            objectContext.propertyChanged(this, "globalAttribute", this.globalAttribute, globalAttribute);
+
+            objectContext.propertyChanged(this, "table1", this.table1.getValueDirectly(), table1);

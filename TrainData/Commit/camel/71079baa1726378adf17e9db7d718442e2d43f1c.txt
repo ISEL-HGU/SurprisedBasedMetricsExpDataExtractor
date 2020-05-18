@@ -1,0 +1,4 @@
+    @UriParam(label = "advanced", description = "Currently only XMPPTCPConnectionConfiguration is supported (XMPP over TCP) and not BOSHConfiguration (XMPP over HTTP)")
+    private ConnectionConfiguration connectionConfig;
+            return new XMPPTCPConnection((XMPPTCPConnectionConfiguration) connectionConfig);
+    public void setConnectionConfig(ConnectionConfiguration connectionConfig) {

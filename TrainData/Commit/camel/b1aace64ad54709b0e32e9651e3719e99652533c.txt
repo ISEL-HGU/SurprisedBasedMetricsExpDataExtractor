@@ -1,0 +1,3 @@
+        for (CamelContext context : contexts) {
+            CdiTypeConverterLoader loader = new CdiTypeConverterLoader();
+            for (Class<?> converter : converters) {

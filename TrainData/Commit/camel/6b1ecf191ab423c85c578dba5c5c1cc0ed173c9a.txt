@@ -1,0 +1,2 @@
+import org.apache.camel.util.ObjectHelper;
+        ObjectHelper.notNull(camelContext, "CamelContext");

@@ -1,0 +1,4 @@
+                w = getEndpoint().getKubernetesClient().configMaps().withLabel(getEndpoint().getKubernetesConfiguration().getLabelKey(),
+                                                                               getEndpoint().getKubernetesConfiguration().getLabelValue());
+                w = (FilterWatchListDeletable<ConfigMap, ConfigMapList, Boolean, Watch, Watcher<ConfigMap>>)getEndpoint().getKubernetesClient().configMaps()
+                    .withName(getEndpoint().getKubernetesConfiguration().getResourceName());

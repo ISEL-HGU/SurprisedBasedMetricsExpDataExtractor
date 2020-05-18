@@ -1,0 +1,2 @@
+import org.apache.camel.util.StringHelper;
+        String shortName = name.contains("?") ? StringHelper.before(name, "?") : name;

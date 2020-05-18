@@ -1,0 +1,3 @@
+ * To use JsonPath in Camel expressions or predicates.
+     * Whether to allow in inlined simple exceptions in the JsonPath expression
+     * Whether to write the output of each row/element as a JSON String value

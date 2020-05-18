@@ -1,0 +1,20 @@
+import org.apache.camel.catalog.CamelCatalog;
+    final Logger log = LoggerFactory.getLogger(getClass());
+    private CamelCatalog camelCatalog;
+    private String classifier;
+
+    public BaseNexusRepository(String classifier) {
+        this.classifier = classifier;
+    }
+
+    public CamelCatalog getCamelCatalog() {
+        return camelCatalog;
+    }
+
+    public void setCamelCatalog(CamelCatalog camelCatalog) {
+        this.camelCatalog = camelCatalog;
+    }
+        if (camelCatalog == null) {
+            throw new IllegalArgumentException("CamelCatalog must be configured");
+        }
+

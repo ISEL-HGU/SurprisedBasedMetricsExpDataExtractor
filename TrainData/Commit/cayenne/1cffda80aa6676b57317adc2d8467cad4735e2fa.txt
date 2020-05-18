@@ -1,0 +1,10 @@
+import javax.cache.Cache;
+import javax.cache.CacheException;
+import javax.cache.CacheManager;
+import java.util.List;
+import java.util.Objects;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+
+    protected CacheManager cacheManager;
+    protected JCacheConfigurationFactory configurationFactory;

@@ -1,0 +1,52 @@
+        
+        addMouseListeners();
+        setLayout(doLayout);
+
+        /*
+         * Adding isolated objects
+         * 
+         * We're placing them so that they will take maximum space in left top
+         * corner. The sample order is below:
+         * 
+         * 1 2 6 7... 3 5 8 ... 4 9... 10 ...
+         */
+        addIsolatedObjetcs(isolatedObjects);
+
+        view.insert(isolatedObjects.toArray());
+        graph.getModel().addUndoableEditListener(this);
+    }
+
+	private void setLayout(boolean doLayout) {
+		if (doLayout) {
+	}
+	private void addMouseListeners() {
+		graph.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                if (e.isPopupTrigger()) {
+                    Object selected = graph.getSelectionCell();
+                    if (selected != null && selected instanceof DefaultGraphCell) {
+                        Object userObject = ((DefaultGraphCell) selected).getUserObject();
+                        if (userObject instanceof EntityCellMetadata) {
+                            showPopup(e.getPoint(), ((EntityCellMetadata) userObject).fetchEntity());
+                        }
+                    }
+                }
+            }
+        });
+		
+		graph.addMouseWheelListener(new MouseWheelListener() {
+            @Override
+            public void mouseWheelMoved(MouseWheelEvent e) {
+                // limit scale
+                double scale = graph.getScale() / Math.pow(ZOOM_FACTOR, e.getWheelRotation());
+                scale = Math.max(scale, 0.1);
+                scale = Math.min(scale, 3);
+                graph.setScale(scale);
+            }
+        });
+	}
+
+	private void addIsolatedObjetcs(List<DefaultGraphCell> isolatedObjects) {
+		if (isolatedObjects.size() > 0) {
+	}

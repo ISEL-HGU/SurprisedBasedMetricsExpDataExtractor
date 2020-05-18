@@ -1,0 +1,39 @@
+ b/guacamole-ext/src/main/java/org/apache/guacamole/token/TokenName.java
+package org.apache.guacamole.token;
+     * Pattern which matches logical groupings of words within a
+     * string. This pattern is intended to match logical groupings
+    private static final Pattern STRING_NAME_GROUPING = Pattern.compile(
+     * the given string. The provided string will be automatically transformed
+     * from "CamelCase", "headlessCamelCase", "lowercase_with_underscores",
+     * and "mixes_ofBoth_Styles" to consistent "UPPERCASE_WITH_UNDERSCORES".
+     * Each returned token name will be prefixed with the string value provided
+     * in the prefix.  The value provided in prefix will be prepended to the
+     * string, but will itself not be transformed.
+     *     The string to be used to generate the token name.
+     * 
+     * @param prefix
+     *     The prefix to prepend to the generated token name.
+     *     given string.
+    public static String canonicalize(final String name, final String prefix) {
+        // simply converting the string to uppercase and adding the
+        Matcher groupMatcher = STRING_NAME_GROUPING.matcher(name);
+            return prefix  name.toUpperCase();
+        StringBuilder builder = new StringBuilder(prefix);
+    
+    /**
+     * Generate the name of a parameter token from the given string, with no
+     * added prefix, such that the token name will simply be the transformed
+     * version of the string. See
+     * {@link #canonicalize(java.lang.String, java.lang.String)}
+     * 
+     * 
+     * @param name
+     *     The string to use to generate the token name.
+     * 
+     * @return 
+     *     The name of the parameter token that should be populated with the
+     *     given string.
+     */
+    public static String canonicalize(final String name) {
+        return canonicalize(name, "");
+    }

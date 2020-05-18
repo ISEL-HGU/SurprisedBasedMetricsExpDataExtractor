@@ -1,0 +1,14 @@
+import org.apache.camel.component.telegram.model.OutgoingDocumentMessage;
+        case DOCUMENT:
+                // this can be any file
+                OutgoingDocumentMessage document = new OutgoingDocumentMessage();
+                String title = (String) exchange.getIn().getHeader(TelegramConstants.TELEGRAM_MEDIA_TITLE_CAPTION);
+                String fileName = "file."  type.getFileExtension();
+
+                document.setCaption(title);
+                document.setFilenameWithExtension(fileName);
+                document.setDocument(message);
+
+                result = document;
+                break;
+            }

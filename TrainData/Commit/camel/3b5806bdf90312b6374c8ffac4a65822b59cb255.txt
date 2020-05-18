@@ -1,0 +1,3 @@
+                resumeOrStartConsumer(route.getConsumer());
+                suspendOrStopConsumer(route.getConsumer());
+                    resumeOrStartConsumer(route.getConsumer());

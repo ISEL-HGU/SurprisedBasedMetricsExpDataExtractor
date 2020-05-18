@@ -1,0 +1,21 @@
+ * The complex logic for loading properties has been kept from the JDK {@link Properties} class.
+    public synchronized Object get(Object key) {
+        return map.get(key);
+    }
+
+    @Override
+    public synchronized boolean isEmpty() {
+        return map.isEmpty();
+    }
+
+    @Override
+    public synchronized Object remove(Object key) {
+        return map.remove(key);
+    }
+
+    @Override
+    public synchronized void clear() {
+        map.clear();
+    }
+
+    @Override

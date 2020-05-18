@@ -1,0 +1,2 @@
+import org.slf4j.Logger;
+        Logger logger = new AntLogger(this);

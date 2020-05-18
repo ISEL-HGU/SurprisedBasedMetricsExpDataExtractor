@@ -1,0 +1,122 @@
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+import org.w3c.dom.Comment;
+import org.w3c.dom.Node;
+ * The Class GoraBenchmarkUtils has some utilities that dynamically generate files needed to for gora.
+ * It generate the following files. 
+ * a. Database Mapping File
+ * b. Avro Files
+ * c. Data Beans
+  private static final String NAMESPACE_VALUE = "org.apache.gora.benchmark.generated";
+   * @param field
+   *          the field
+   * @param values
+   *          the values
+   * 
+   * Generate avro schema based on the number of fields. supplied when running
+   * the benchmark. These files are json files
+   * @param numberOfFields
+   *          the number of fields
+   * Generate database mapping file. Each database has its own mapping syntax.
+   * These files are xml files
+   * @param dbName
+   *          the db name
+       
+      
+      
+//      Element element = doc.getDocumentElement();
+//      Comment comment = doc.createComment("This is a comment");
+//      element.getParentNode().insertBefore(comment, element);
+      
+      
+      Element commentElement = mappingDocument.getDocumentElement();
+      String license = new LicenseHeaders("ASLv2").getLicense();
+      Comment licenseHeader = mappingDocument.createComment(license);
+      commentElement.getParentNode().insertBefore(licenseHeader, commentElement);
+      
+      if (dbName.equals(MONGODB)) {
+        result = new StreamResult(new File(DB_MAPPING_PATH  "/"  MONGO_MAPPING_FILE));
+      } else if (dbName.equals(HBASE)) {
+        result = new StreamResult(new File(DB_MAPPING_PATH  "/"  HBASE_MAPPING_FILE));
+      } else if (dbName.equals(COUCHDB)) {
+        result = new StreamResult(new File(DB_MAPPING_PATH  "/"  COUCHDB_MAPPING_FILE));
+      }
+
+
+   * @param fileName
+   *          the file name
+      String jsonString = new String(Files.readAllBytes(Paths.get(fileName)), StandardCharsets.UTF_8);
+   * @param keys
+   *          the keys
+   * @param db
+   *          the db
+   * @param mappingDocument
+   *          the mapping document
+   * @param rootNode
+   *          the root node
+   * @param fullNameSpace
+   *          the full name space
+   * @param jsonObject
+   *          the json object
+    case HBASE: {
+      Element mappingDescription = mappingDocument.createElement("table");
+      rootNode.appendChild(mappingDescription);
+      // setting attribute to element
+      Attr tableAttribute = mappingDocument.createAttribute("name");
+      tableAttribute.setValue(jsonObject.getString("name").toLowerCase(Locale.ROOT)  "s");
+      mappingDescription.setAttributeNode(tableAttribute);
+      Element familyName = mappingDocument.createElement("family");
+      mappingDescription.appendChild(familyName);
+      // setting attribute to element
+      Attr familyAttribute = mappingDocument.createAttribute("name");
+      familyAttribute.setValue("info");
+      familyName.setAttributeNode(familyAttribute);
+      Element mappingClass = mappingDocument.createElement("class");
+      rootNode.appendChild(mappingClass);
+      // setting attribute to element
+      Attr beanName = mappingDocument.createAttribute("name");
+      beanName.setValue(fullNameSpace);
+      mappingClass.setAttributeNode(beanName);
+      // setting attribute to element.getJSONArray("type").getString(0)
+      Attr keyClass = mappingDocument.createAttribute("keyClass");
+      keyClass.setValue(KEYCLASS);
+      mappingClass.setAttributeNode(keyClass);
+      // setting attribute to elementC:\\cars.xml
+      Attr table = mappingDocument.createAttribute("table");
+      table.setValue("users");
+      mappingClass.setAttributeNode(table);
+      while (keys.hasNext()) {
+        String currentKey = keys.next();
+        if (jsonObject.get(currentKey) instanceof JSONArray) {
+          JSONArray mappingFields = jsonObject.getJSONArray(currentKey);
+          for (int i = 0; i < mappingFields.length(); i) {
+            JSONObject currentObj = mappingFields.getJSONObject(i);
+            Element fields = mappingDocument.createElement("field");
+            Attr name = mappingDocument.createAttribute("name");
+            name.setValue(currentObj.getString("name"));
+            fields.setAttributeNode(name);
+            Attr docfield = mappingDocument.createAttribute("qualifier");
+            docfield.setValue(currentObj.getString("name"));
+            fields.setAttributeNode(docfield);
+            Attr type = mappingDocument.createAttribute("family");
+            type.setValue("info");
+            fields.setAttributeNode(type);
+            mappingClass.appendChild(fields);
+
+   * @param p
+   *          the p

@@ -1,0 +1,7 @@
+        // if bad request then break-out
+        if (exchange.getException() instanceof HystrixBadRequestException) {
+            return null;
+        }
+
+                exchange.setException(camelExchangeException);
+                throw camelExchangeException;

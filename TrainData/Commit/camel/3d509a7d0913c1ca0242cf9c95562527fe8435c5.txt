@@ -1,0 +1,14 @@
+
+import org.apache.camel.RuntimeCamelException;
+    
+    // *************************************************
+    //
+    // *************************************************
+
+    public BlobServiceConfiguration copy() {
+        try {
+            return (BlobServiceConfiguration)super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeCamelException(e);
+        }
+    }

@@ -1,0 +1,13 @@
+     * The hostname of the running RabbitMQ instance or cluster.
+     * Allow pass null values to header
+     */
+    private Boolean allowNullHeaders = false;
+    /**
+    public Boolean getAllowNullHeaders() {
+        return allowNullHeaders;
+    }
+
+    public void setAllowNullHeaders(Boolean allowNullHeaders) {
+        this.allowNullHeaders = allowNullHeaders;
+    }
+

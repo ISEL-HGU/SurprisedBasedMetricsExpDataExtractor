@@ -1,0 +1,17 @@
+        final GroovyCodeVisitor visitor = createGroovyCodeVisitor();
+
+    protected GroovyCodeVisitor createGroovyCodeVisitor() {
+        return new SecuringCodeVisitor();
+    }
+
+    protected void checkMethodDefinitionAllowed(ClassNode owner) {
+
+    protected static List<MethodNode> filterMethods(ClassNode owner) {
+    protected void assertStarImportIsAllowed(final String packageName) {
+    protected void assertImportIsAllowed(final String className) {
+    protected void assertStaticImportIsAllowed(final String member, final String className) {
+    protected class SecuringCodeVisitor implements GroovyCodeVisitor {
+        protected void assertStatementAuthorized(final Statement statement) throws SecurityException {
+        protected void assertExpressionAuthorized(final Expression expression) throws SecurityException {
+        protected ClassNode getExpressionType(ClassNode objectExpressionType) {
+        protected void assertTokenAuthorized(final Token token) throws SecurityException {

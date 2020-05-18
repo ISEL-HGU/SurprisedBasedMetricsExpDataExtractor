@@ -1,0 +1,10 @@
+
+        @SuppressWarnings("unchecked")
+        final List<Artist> objects = SQLSelect.query(Artist.class, "SELECT "
+                 "WHERE t0.ARTIST_ID = t1.ARTIST_ID")
+                .addPrefetch(Artist.PAINTING_ARRAY.joint())
+                .select(context);
+        SQLSelect.query(Artist.class, "SELECT "
+                 "FROM ARTIST t0, GALLERY t2 ")
+                .addPrefetch(Artist.PAINTING_ARRAY.dot(Painting.TO_GALLERY).joint())
+                .select(context);

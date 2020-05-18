@@ -1,0 +1,9 @@
+import org.apache.deltaspike.core.api.jmx.Table;
+    @JmxManaged // just a marker to expose it as an attribute, will call the getter
+    private Table table2;
+
+    @JmxManaged
+    public Table getTable2() {
+        return new Table().withColumns("a", "b", "c").withLine("1", "2", "3").withLine("alpha", "beta", "gamma");
+    }
+

@@ -1,0 +1,15 @@
+ * to generate a GuacamoleConfiguration object.
+     * The default protocol to use if one is not provided in
+     * the incoming URI.
+     * Parse out a URI string and get a GuacamoleConfiguration
+     * from that string, or an exception if the parsing fails.
+
+        // Break out individual components of the URI.
+
+        // Assign default protocol if one is not found in the URI.
+        // Assign default host if one is not found in the URI.
+        // Look for extra query parameters and parse them out.
+        // Look for the username and password and parse them out.
+        // Generate a new GuacamoleConfiguration and set parameters.
+     *     The query string to parse for key/value pairs.
+        // Loop through key/value pairs and put them in the Map.

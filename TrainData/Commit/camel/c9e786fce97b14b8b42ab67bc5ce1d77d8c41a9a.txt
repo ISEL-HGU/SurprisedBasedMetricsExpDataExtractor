@@ -1,0 +1,71 @@
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * limitations under the License.
+ */
+/**
+ * Represents structural entities in JSON.
+ * 
+ * @since 2.0.0
+ */
+class Yytoken {
+    enum Types {
+        /**
+         * Tokens of this type will always have a value that is a boolean, null,
+         * number, or string.
+         */
+    private final Types type;
+    /**
+     * @param type represents the kind of token the instantiated token will be.
+     * @param value represents the value the token is associated with, will be
+     *            ignored unless type is equal to Types.DATUM.
+     * @see Types
+     */
+    Yytoken(final Types type, final Object value) {
+        /*
+         * Sanity check. Make sure the value is ignored for the proper value
+         * unless it is a datum token.
+         */
+        switch (type) {
+        case COLON:
+            this.value = ":";
+            break;
+        case COMMA:
+            this.value = ",";
+            break;
+        case END:
+            this.value = "";
+            break;
+        case LEFT_BRACE:
+            this.value = "{";
+            break;
+        case LEFT_SQUARE:
+            this.value = "[";
+            break;
+        case RIGHT_BRACE:
+            this.value = "}";
+            break;
+        case RIGHT_SQUARE:
+            this.value = "]";
+            break;
+        default:
+            this.value = value;
+            break;
+    /**
+     * @return which of the Types the token is.
+     * @see Types
+     */
+    Types getType() {
+    /**
+     * @return what the token is.
+     * @see Types
+     */
+    Object getValue() {
+    public String toString() {

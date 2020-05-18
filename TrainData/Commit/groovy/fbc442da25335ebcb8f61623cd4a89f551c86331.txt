@@ -1,0 +1,3 @@
+        return  resolveNestedClass(type) ||
+                resolveToOuter(type) ||
+                resolveFromStaticInnerClasses(type, testStaticInnerClasses);

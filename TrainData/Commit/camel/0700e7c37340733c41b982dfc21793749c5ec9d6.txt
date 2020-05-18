@@ -1,0 +1,2 @@
+        iamClient = configuration.getIamClient() != null ? configuration.getIamClient() : createIAMClient();
+    AmazonIdentityManagement createIAMClient() {

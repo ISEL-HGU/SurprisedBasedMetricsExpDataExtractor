@@ -1,0 +1,2 @@
+        tMeaningfulPKTest1Table.setColumns("PK_ATTRIBUTE", "DESCR", "INT_ATTRIBUTE");
+            tMeaningfulPKTest1Table.insert(i, "a"  i, 0);

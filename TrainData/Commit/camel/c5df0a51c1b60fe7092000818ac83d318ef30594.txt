@@ -1,0 +1,3 @@
+import org.json.simple.JsonObject;
+        } if (ObjectHelper.isNotEmpty((String)parameters.get("token"))) {
+                JsonObject obj = (JsonObject) Jsoner.deserialize(jsonString);

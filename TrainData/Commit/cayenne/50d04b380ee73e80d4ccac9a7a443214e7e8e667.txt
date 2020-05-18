@@ -1,0 +1,1 @@
+                if (isTransferable && includeTable.getIncludeColumns().isEmpty() && includeTable.getExcludeColumns().isEmpty()) {

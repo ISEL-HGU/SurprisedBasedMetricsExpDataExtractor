@@ -1,0 +1,50 @@
+        private static final long serialVersionUID = 1L;
+
+            ResolvedModuleRevision rmr = findModuleInCache(systemDd, data);
+                nsMd = rmr.getDescriptor();
+
+                // check descriptor data is in sync with resource revision and names
+                systemMd = toSystem(nsMd);
+                if (isCheckconsistency()) {
+                    checkDescriptorConsistency(systemMrid, systemMd, ivyRef);
+                    checkDescriptorConsistency(nsMrid, nsMd, ivyRef);
+                } else {
+                    if (systemMd instanceof DefaultModuleDescriptor) {
+                        DefaultModuleDescriptor defaultMd = (DefaultModuleDescriptor) systemMd;
+                        ModuleRevisionId revision = getRevision(ivyRef, systemMrid, systemMd);
+                        defaultMd.setModuleRevisionId(revision);
+                        defaultMd.setResolvedModuleRevisionId(revision);
+                    } else {
+                        Message.warn(
+                            "consistency disabled with instance of non DefaultModuleDescriptor... module info can't be updated, so consistency check will be done");
+                        checkDescriptorConsistency(nsMrid, nsMd, ivyRef);
+                        checkDescriptorConsistency(systemMrid, systemMd, ivyRef);
+                    }
+                }
+                rmr = new ResolvedModuleRevision(this, this, systemMd,
+                        toSystem(rmr.getReport()), isForce());
+                         " has information which can't be converted into the system namespace. It will require the availability of the namespace '"
+            }
+            if (pubDate == -1) {
+        int index = systemMrid.getRevision().indexOf('@');
+                    if (rmr != null) {
+                return null;
+        StringBuilder errors = new StringBuilder();
+        for (Map.Entry<String, String> extra : mrid.getExtraAttributes().entrySet()) {
+                }
+                if (!versionMatcher.accept(mrid, md)) {
+                found = r;
+        for (Map.Entry<Artifact, List<String>> entry : artattempts.entrySet()) {
+                        if (resource != null) {
+                            String revision = origin.getArtifact().getModuleRevisionId().getRevision();
+                            return new ResolvedResource(resource, revision);
+                    return null;
+        for (String configName : md.getConfigurationsNames()) {
+            for (Artifact artifact : md.getArtifacts(configName)) {
+                ResolvedResource ret = getArtifactRef(artifact, data.getDate());
+        for (String checksum : getChecksumAlgorithms()) {
+            if (check(resource, dest, checksum)) {
+                break;
+            }
+        for (String checksum : csDef.split(",")) {
+            String cs = checksum.trim();

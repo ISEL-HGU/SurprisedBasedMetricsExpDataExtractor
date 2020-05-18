@@ -1,0 +1,6 @@
+import io.fabric8.kubernetes.client.Watch;
+import io.fabric8.kubernetes.client.Watcher;
+import io.fabric8.kubernetes.client.dsl.FilterWatchListMultiDeletable;
+                .buildConfigs().inAnyNamespace().list();
+            FilterWatchListMultiDeletable<BuildConfig, BuildConfigList, Boolean, Watch, Watcher<BuildConfig>> buildConfigs; 
+            buildConfigs = getEndpoint().getKubernetesClient().adapt(OpenShiftClient.class).buildConfigs().inAnyNamespace();

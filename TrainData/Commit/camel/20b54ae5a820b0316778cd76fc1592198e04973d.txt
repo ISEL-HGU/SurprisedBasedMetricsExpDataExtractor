@@ -1,0 +1,15 @@
+import org.springframework.boot.context.properties.NestedConfigurationProperty;
+import org.zendesk.client.v2.Zendesk;
+     * To use a shared Zendesk instance.
+     */
+    @NestedConfigurationProperty
+    private Zendesk zendesk;
+    /**
+    public Zendesk getZendesk() {
+        return zendesk;
+    }
+
+    public void setZendesk(Zendesk zendesk) {
+        this.zendesk = zendesk;
+    }
+

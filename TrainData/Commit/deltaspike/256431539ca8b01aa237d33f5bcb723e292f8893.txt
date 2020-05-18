@@ -1,0 +1,9 @@
+ b/deltaspike/modules/jpa/impl/src/main/java/org/apache/deltaspike/jpa/impl/entitymanager/EntityManagerRefLookup.java
+
+package org.apache.deltaspike.jpa.impl.entitymanager;
+    public EntityManagerRef lookupReference(final EntityManagerMetadata entityManagerMetadata)
+        if (entityManagerMetadata.getEntityManagerResolverClass() != null)
+            ref.setEntityManagerResolverClass(entityManagerMetadata.getEntityManagerResolverClass());
+            if (entityManagerMetadata.isEntityManagerResolverIsNormalScope())
+        if (entityManagerMetadata.getEntityManagerFlushMode() != null)
+            ref.getEntityManager().setFlushMode(entityManagerMetadata.getEntityManagerFlushMode());

@@ -1,0 +1,33 @@
+
+     * The <code>PrintWriter</code> does nothing.
+     */
+    private PrintWriter output;
+
+
+
+
+     * no factory is set yet
+    private boolean antlr2Parser = true;
+            antlr2Parser = !"true".equals(System.getProperty("groovy.antlr4"));
+                || JDK6.equals(bytecodeVersion)
+                || JDK7.equals(bytecodeVersion)
+                || JDK8.equals(bytecodeVersion);
+                || JDK8.equals(bytecodeVersion);
+
+
+
+
+    @Deprecated
+
+
+
+
+
+
+
+     *
+     *
+
+
+
+

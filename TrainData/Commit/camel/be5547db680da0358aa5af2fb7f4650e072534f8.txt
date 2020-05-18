@@ -1,0 +1,13 @@
+import org.apache.camel.util.UnitOfWorkHelper;
+import org.apache.cxf.message.Exchange;
+import org.apache.cxf.message.Message;
+
+    public static void closeCamelUnitOfWork(Message message) {
+        Exchange cxfExchange = null;
+        if ((cxfExchange = message.getExchange()) != null) {
+            org.apache.camel.Exchange exchange = cxfExchange.get(org.apache.camel.Exchange.class);
+            if (exchange != null) {
+                UnitOfWorkHelper.doneUow(exchange.getUnitOfWork(), exchange);
+            }
+        }
+    }

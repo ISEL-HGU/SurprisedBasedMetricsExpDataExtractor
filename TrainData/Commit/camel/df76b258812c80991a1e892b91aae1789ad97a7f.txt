@@ -1,0 +1,2 @@
+import org.ops4j.pax.cdi.api.Service;
+    @Service

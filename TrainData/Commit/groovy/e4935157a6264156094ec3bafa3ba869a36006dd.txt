@@ -1,0 +1,2 @@
+            // GROOVY-8174: we'd like stricter checking here but many drivers currently in use just aren't consistent enough, so we log
+            if (metaData.getParameterCount() != params.size()) {

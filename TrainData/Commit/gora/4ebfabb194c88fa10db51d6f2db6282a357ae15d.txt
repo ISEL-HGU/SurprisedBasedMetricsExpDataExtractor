@@ -1,0 +1,8 @@
+import org.apache.gora.query.impl.PartitionQueryImpl;
+import org.apache.gora.query.ws.impl.PartitionWSQueryImpl;
+import java.util.ArrayList;
+    List<PartitionQuery<K,T>> partitions = new ArrayList<>();
+    PartitionWSQueryImpl<K, T> pqi = new PartitionWSQueryImpl<>(query);
+    pqi.setDataStore(this);
+    partitions.add(pqi);
+    return partitions;

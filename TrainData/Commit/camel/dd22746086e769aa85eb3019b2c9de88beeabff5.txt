@@ -1,0 +1,4 @@
+            failures.set(0);
+            lastFailure = 0;
+            openedAt = 0;
+            state.set(STATE_CLOSED);

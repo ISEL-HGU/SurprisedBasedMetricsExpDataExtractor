@@ -1,0 +1,13 @@
+     * Set whether breadcrumb is enabled.
+     */
+    private boolean useBreadcrumb = true;
+
+    /**
+    public boolean isUseBreadcrumb() {
+        return useBreadcrumb;
+    }
+
+    public void setUseBreadcrumb(boolean useBreadcrumb) {
+        this.useBreadcrumb = useBreadcrumb;
+    }
+

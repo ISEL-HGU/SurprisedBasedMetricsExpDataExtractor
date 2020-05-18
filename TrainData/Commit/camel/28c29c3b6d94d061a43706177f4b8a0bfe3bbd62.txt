@@ -1,0 +1,7 @@
+import org.apache.camel.spring.boot.health.HealthCheckVerboseConfiguration;
+    private final  HealthCheckVerboseConfiguration properties;
+    public CamelHealthIndicator(CamelContext camelContext, HealthCheckVerboseConfiguration properties) {
+        this.properties = properties;
+            if (properties.isVerbose()) {
+                builder.withDetail("version", camelContext.getVersion());
+            }

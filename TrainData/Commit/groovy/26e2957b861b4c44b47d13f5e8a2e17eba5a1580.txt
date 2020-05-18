@@ -1,0 +1,48 @@
+
+
+    public void writeBlockStatement(BlockStatement block) {
+
+        CompileStack compileStack = controller.getCompileStack();
+            Label blockEnd = new Label();
+            mv.visitLabel(blockEnd);
+
+
+
+        controller.getAcg().onLineNumber(loop, "visitForLoop");
+
+        controller.getAcg().onLineNumber(loop, "visitForLoop");
+            controller.getOperandStack().castToBool(mark, true);
+
+            if (constant.getValue() == Boolean.TRUE) {
+            } else if (constant.getValue() == Boolean.FALSE) {
+        if (!boolHandled) {
+        controller.getAcg().onLineNumber(loop, "visitWhileLoop");
+        controller.getCompileStack().pop();
+        controller.getAcg().onLineNumber(loop, "visitDoWhileLoop");
+        controller.getAcg().onLineNumber(ifElse, "visitIfElse");
+        if (ifElse.getElseBlock() instanceof EmptyStatement) {
+
+
+        }
+
+        Statement finallyStatement = statement.getFinallyStatement();
+        // used to handle exceptions in catches and regularly visited finals
+        // add "catch any" block to exception table for try part we do this
+        // store exception
+        // TODO: maybe define a Throwable and use it here instead of Object
+        int anyExceptionIndex = compileStack.defineTemporaryVariable("exception", true);
+
+        // GROOVY-9199
+        controller.resetLineNumber();
+        int line = finallyStatement.getLineNumber();
+        if (line > 0) mv.visitLineNumber(line, catchAny);
+
+    private BlockRecorder makeBlockRecorder(Statement finallyStatement) {
+        block.excludedStatement = new Runnable() {
+            @Override
+        controller.getCompileStack().pop();
+
+            Label thisLabel, Label nextLabel) {
+
+            @Override
+

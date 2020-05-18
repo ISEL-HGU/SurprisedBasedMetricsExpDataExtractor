@@ -1,0 +1,8 @@
+import org.apache.cayenne.di.Binder;
+        modules.add(new ServerModule(){
+            @Override
+            public void configure(Binder binder) {
+                super.configure(binder);
+                ServerModule.contributeProjectLocations(binder).add("CayenneModeler");
+            }
+        });

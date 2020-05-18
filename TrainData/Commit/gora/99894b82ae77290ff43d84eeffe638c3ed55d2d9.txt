@@ -1,0 +1,9 @@
+  public Field getFieldFromColumnName(String columnName) {
+    for (Field field1 : fieldList) {
+      if (field1.getColumnName().equals(columnName)) {
+        return field1;
+      }
+    }
+    return null;
+  }
+

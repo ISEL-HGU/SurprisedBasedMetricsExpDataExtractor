@@ -1,0 +1,7 @@
+    @Converter
+    public static ByteBuffer covertToByteBuffer(InputStream is) throws IOException {
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        IOHelper.copyAndCloseInput(is, os);
+        return ByteBuffer.wrap(os.toByteArray());
+    }
+

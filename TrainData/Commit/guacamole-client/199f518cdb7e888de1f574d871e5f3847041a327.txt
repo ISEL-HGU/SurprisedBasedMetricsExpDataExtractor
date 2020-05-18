@@ -1,0 +1,3 @@
+        SystemPermissionSet permissionSet = user.getUser().getEffectivePermissions().getSystemPermissions();
+    protected ObjectPermissionSet getEffectivePermissionSet(ModeledAuthenticatedUser user)
+        return user.getUser().getEffectivePermissions().getUserPermissions();

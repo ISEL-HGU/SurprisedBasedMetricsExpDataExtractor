@@ -1,0 +1,2 @@
+        InputStream inputStream = inputMessage.getBody(InputStream.class);
+        return new TarIterator(exchange, inputStream);

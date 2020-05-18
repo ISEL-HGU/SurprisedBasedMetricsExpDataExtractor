@@ -1,0 +1,22 @@
+    default void require(boolean condition, String msg, int offset, boolean toAttachPositionInfo) {
+        this.throwSyntaxError(msg, offset, toAttachPositionInfo);
+    }
+    default void require(boolean condition, String msg, boolean toAttachPositionInfo) {
+        require(condition, msg, 0, toAttachPositionInfo);
+    }
+    default void require(boolean condition, String msg, int offset) {
+        require(condition, msg, offset,false);
+        require(condition, msg, false);
+    default void throwSyntaxError(String msg, int offset, boolean toAttachPositionInfo) {
+        PositionInfo positionInfo = this.genPositionInfo(offset);
+        throw new GroovySyntaxError(msg  (toAttachPositionInfo ? positionInfo.toString() : ""),
+                this.getSyntaxErrorSource(),
+                positionInfo.getLine(),
+                positionInfo.getColumn()
+        );
+    default PositionInfo genPositionInfo(int offset) {
+        return new PositionInfo(getErrorLine(), getErrorColumn()  offset);
+    }
+
+    int getErrorLine();
+    int getErrorColumn();

@@ -1,0 +1,2 @@
+import org.apache.camel.NamedNode;
+    public Processor wrapProcessorInInterceptors(CamelContext context, NamedNode definition, Processor target, Processor nextTarget) throws Exception {

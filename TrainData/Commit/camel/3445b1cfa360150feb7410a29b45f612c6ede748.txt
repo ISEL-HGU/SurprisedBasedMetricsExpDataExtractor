@@ -1,0 +1,5 @@
+     * The first version this endpoint was added to Apache Camel.
+     */
+    String firstVersion() default "";
+
+    /**

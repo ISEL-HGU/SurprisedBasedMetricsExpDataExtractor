@@ -1,0 +1,3 @@
+        long now = new Date().getTime();
+        startTimestamp.updateValue(now);
+        resetTimestamp.updateValue(now);

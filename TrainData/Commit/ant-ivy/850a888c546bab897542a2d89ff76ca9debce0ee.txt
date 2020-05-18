@@ -1,0 +1,23 @@
+import org.apache.ivy.core.pack.PackagingManager;
+            final PackagingManager packagingManager = new PackagingManager();
+            packagingManager.setSettings(IvyContext.getContext().getSettings());
+            for (final ArtifactDownloadReport adr : artifacts) {
+
+                final Artifact artifact = adr.getArtifact();
+                final String ext;
+                if (adr.getUnpackedLocalFile() == null) {
+                    ext = artifact.getExt();
+                } else {
+                    final Artifact unpackedArtifact;
+                    // check if the download report is aware of the unpacked artifact
+                    if (adr.getUnpackedArtifact() != null) {
+                        unpackedArtifact = adr.getUnpackedArtifact();
+                    } else {
+                        // use the packaging manager to get hold of the unpacked artifact
+                        unpackedArtifact = packagingManager.getUnpackedArtifact(artifact);
+                    }
+                    if (unpackedArtifact == null) {
+                        throw new RuntimeException("Could not determine unpacked artifact for "  artifact 
+                                " while determining artifacts to copy for module "  mrid);
+                    }
+                    ext = unpackedArtifact.getExt();

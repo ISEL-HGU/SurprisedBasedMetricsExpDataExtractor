@@ -1,0 +1,18 @@
+import org.codehaus.groovy.ast.expr.DeclarationExpression;
+import org.codehaus.groovy.ast.expr.Expression;
+import org.codehaus.groovy.ast.expr.TupleExpression;
+    @Override
+    public void visitDeclarationExpression(DeclarationExpression expression) {
+        if (expression.isMultipleAssignmentDeclaration()) {
+            TupleExpression tExpr = expression.getTupleExpression();
+            for (Expression nextExpr : tExpr.getExpressions()) {
+                ClassNode declType = nextExpr.getType();
+                checkGenericsUsage(declType, declType.redirect());
+            }
+        } else {
+            ClassNode declType = expression.getVariableExpression().getType();
+            checkGenericsUsage(declType, declType.redirect());
+        }
+        super.visitDeclarationExpression(expression);
+    }
+

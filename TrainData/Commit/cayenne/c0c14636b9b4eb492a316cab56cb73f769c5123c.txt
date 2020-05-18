@@ -1,0 +1,10 @@
+        } else {
+            setSelected(newMapNode);
+    /** Makes node current, visible but not selected. */
+    private void setSelected(DefaultMutableTreeNode node) {
+        TreePath path = new TreePath(node.getPath());
+        if(!isVisible(path)) {
+            makeVisible(path);
+        }
+    }
+

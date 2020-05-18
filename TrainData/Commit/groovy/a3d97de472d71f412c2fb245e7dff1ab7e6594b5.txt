@@ -1,0 +1,5 @@
+import static org.apache.groovy.ast.tools.ClassNodeUtils.samePackageName;
+            if (methodNode.isProtected()
+                    && !enclosingClassNode.isDerivedFrom(declaringClass)
+                    && !samePackageName(enclosingClassNode, declaringClass)) {
+            if (methodNode.isPackageScope() && !samePackageName(enclosingClassNode, declaringClass)) {

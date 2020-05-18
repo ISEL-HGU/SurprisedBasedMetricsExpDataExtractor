@@ -1,0 +1,36 @@
+        processFile(processingEnv, packageName, fileName, writer -> writeJSonSchemeDocumentation(processingEnv, writer, roundEnv, classElement, rootElement, javaTypeName, name));
+    protected void writeJSonSchemeDocumentation(ProcessingEnvironment processingEnv, PrintWriter writer, RoundEnvironment roundEnv, TypeElement classElement,
+                                                XmlRootElement rootElement, String javaTypeName, String modelName) {
+                                                  entry.isDeprecated(), entry.getDeprecationNote(), false, null, null, entry.isEnumType(), entry.getEnums(), entry.isOneOf(),
+                                                  entry.getOneOfTypes(), entry.isAsPredicate(), null, null, false));
+                    // need to sanitize the description first (we only want a
+                    // summary)
+                    // the javadoc may actually be empty, so only change the doc
+                    // if we got something
+    protected void findClassProperties(ProcessingEnvironment processingEnv, PrintWriter writer, RoundEnvironment roundEnv, Set<EipOption> eipOptions, TypeElement originalClassType,
+                                       TypeElement classElement, String prefix, String modelName) {
+    private boolean processAttribute(ProcessingEnvironment processingEnv, RoundEnvironment roundEnv, TypeElement originalClassType, TypeElement classElement,
+                                     VariableElement fieldElement, String fieldName, XmlAttribute attribute, Set<EipOption> eipOptions, String prefix, String modelName) {
+            // find all the enum constants which has the possible enum value
+            // that can be used
+        EipOption ep = new EipOption(name, displayName, "attribute", fieldTypeName, required, defaultValue, docComment, deprecated, deprecationNote, isEnum, enums, false, null,
+                                     false);
+    private void processRoutes(RoundEnvironment roundEnv, TypeElement originalClassType, XmlElement element, VariableElement fieldElement, String fieldName,
+                               Set<EipOption> eipOptions, String prefix) {
+        EipOption ep = new EipOption("route", "Route", "element", fieldTypeName, false, "", "Contains the Camel routes", false, null, false, null, true, oneOfTypes, false);
+    private void processRests(RoundEnvironment roundEnv, TypeElement originalClassType, XmlElement element, VariableElement fieldElement, String fieldName,
+                              Set<EipOption> eipOptions, String prefix) {
+        EipOption ep = new EipOption("rest", "Rest", "element", fieldTypeName, false, "", "Contains the rest services defined using the rest-dsl", false, null, false, null, true,
+                                     oneOfTypes, false);
+    private void processElement(ProcessingEnvironment processingEnv, RoundEnvironment roundEnv, TypeElement classElement, XmlElement element, XmlElementRef elementRef,
+                                VariableElement fieldElement, Set<EipOption> eipOptions, String prefix) {
+                // find all the enum constants which has the possible enum value
+                // that can be used
+            EipOption ep = new EipOption(name, displayName, kind, fieldTypeName, required, defaultValue, docComment, deprecated, deprecationNote, isEnum, enums, oneOf, oneOfTypes,
+                                         asPredicate);
+    private void processElements(ProcessingEnvironment processingEnv, RoundEnvironment roundEnv, TypeElement classElement, XmlElements elements, VariableElement fieldElement,
+            EipOption ep = new EipOption(name, kind, displayName, fieldTypeName, required, defaultValue, docComment, deprecated, deprecationNote, false, null, true, oneOfTypes,
+                                         false);
+        private EipOption(String name, String displayName, String kind, String type, boolean required, String defaultValue, String documentation, boolean deprecated,
+                          String deprecationNote, boolean enumType, Set<String> enums, boolean oneOf, Set<String> oneOfTypes, boolean asPredicate) {
+            EipOption that = (EipOption)o;

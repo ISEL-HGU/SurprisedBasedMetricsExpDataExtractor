@@ -1,0 +1,2 @@
+                String radiusState = new String(stateAttr.getValue().getBytes());
+                                                     request.getParameter(RadiusStateField.PARAMETER_NAME),

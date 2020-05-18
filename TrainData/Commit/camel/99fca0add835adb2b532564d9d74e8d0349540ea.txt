@@ -1,0 +1,21 @@
+import io.fabric8.kubernetes.client.Watch;
+    private NamespacesConsumerTask nsWatcher;
+        nsWatcher = new NamespacesConsumerTask();
+        executor.submit(nsWatcher);
+                if (nsWatcher != null) {
+                    nsWatcher.getWatch().close();
+                }
+                if (nsWatcher != null) {
+                    nsWatcher.getWatch().close();
+                }
+
+        private Watch watch;
+            watch = w.watch(new Watcher<Namespace>() {
+        }
+        
+        public Watch getWatch() {
+            return watch;
+        }
+
+        public void setWatch(Watch watch) {
+            this.watch = watch;

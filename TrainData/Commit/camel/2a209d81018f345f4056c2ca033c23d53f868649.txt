@@ -1,0 +1,3 @@
+        if (camelContext == null) {
+            throw new IllegalStateException("Created CamelContext is null");
+        }

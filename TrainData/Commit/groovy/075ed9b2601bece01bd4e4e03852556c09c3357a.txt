@@ -1,0 +1,6 @@
+                if (propertyName.equals(CONSTRUCTOR)) {
+                    propertyName = GROOVY_CONSTRUCTOR;
+                }
+        if (name.equals(CONSTRUCTOR)) {
+            name = GROOVY_CONSTRUCTOR;
+        }

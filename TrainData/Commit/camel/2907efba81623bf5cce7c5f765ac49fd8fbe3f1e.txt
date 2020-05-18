@@ -1,0 +1,7 @@
+     * Creates a {@link BatchAggregationStrategy} aggregation strategy.
+     */
+    public static AggregationStrategy batch() {
+        return new BatchAggregationStrategy();
+    }
+
+    /**

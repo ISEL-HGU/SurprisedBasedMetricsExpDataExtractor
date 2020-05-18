@@ -1,0 +1,3 @@
+ b/components/camel-reactive-streams/src/main/java/org/apache/camel/component/reactive/streams/engine/DefaultCamelReactiveStreamsService.java
+public class DefaultCamelReactiveStreamsService extends ServiceSupport implements CamelReactiveStreamsService {
+    public DefaultCamelReactiveStreamsService() {

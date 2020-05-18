@@ -1,0 +1,4 @@
+        String dbName = md.getDatabaseProductName();
+        if (dbName == null || !dbName.toUpperCase().contains("MICROSOFT SQL SERVER")) {
+            return null;
+        }

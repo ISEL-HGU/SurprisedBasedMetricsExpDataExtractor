@@ -1,0 +1,2 @@
+ b/examples/camel-example-spring-boot/src/main/java/sample/camel/MyCamelRouter.java
+public class MyCamelRouter extends RouteBuilder {

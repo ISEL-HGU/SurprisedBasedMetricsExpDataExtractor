@@ -1,0 +1,10 @@
+ * method names if possible. If following Java/Groovy naming conventions, class names (contrary to method names) start
+ * to apply, or supply a pattern to match class names against. The transformation then works by
+ * matching the basename of the provided classes to any
+    /**
+     * @return one or more classes where "Python-style" constructor notation will be supported
+     */
+    /**
+     * @since 2.5.0
+     * @return a regex pattern for class names where "Python-style" constructor notation will be supported
+     */

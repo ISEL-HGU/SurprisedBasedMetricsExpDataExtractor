@@ -1,0 +1,7 @@
+     * The directory for spring boot starters
+     */
+    @Parameter(defaultValue = "${project.build.directory}/../../spring-boot/components-starter")
+    protected File startersDir;
+
+    /**
+        updateParentPom(startersDir, "camel starters");

@@ -1,0 +1,4 @@
+            if (classNode.getAnnotations(ClassHelper.make(GROOVY_TRANSFORM_COMPILE_DYNAMIC)).isEmpty()) {
+                attachCompileStaticAnnotation(classNode);
+            }
+    private static final String GROOVY_TRANSFORM_COMPILE_DYNAMIC = "groovy.transform.CompileDynamic";

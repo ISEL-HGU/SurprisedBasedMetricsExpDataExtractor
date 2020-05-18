@@ -1,0 +1,3 @@
+                // RAT-240: verify it works properly
+                //orFilter.addFileFilter(new NameFileFilter(exclude));
+                //orFilter.addFileFilter(new WildcardFileFilter(exclude));

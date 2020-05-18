@@ -1,0 +1,13 @@
+    @UriParam(label = "producer")
+    private String region;
+    public String getRegion() {
+        return region;
+    }
+
+    /**
+     * Amazon AWS Region
+     */
+    public void setRegion(String region) {
+        this.region = region;
+    }
+

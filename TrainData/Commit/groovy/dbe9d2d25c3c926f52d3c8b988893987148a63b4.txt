@@ -1,0 +1,6 @@
+    /**
+     * @return an array of zero (for implicit it) or more (when explicit args given) parameters or null otherwise (representing explicit no args)
+     */
+    /**
+     * @return true if one or more explicit parameters are supplied
+     */

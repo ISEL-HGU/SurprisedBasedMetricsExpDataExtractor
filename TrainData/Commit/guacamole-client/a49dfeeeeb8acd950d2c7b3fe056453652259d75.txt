@@ -1,0 +1,12 @@
+    private RadiusAuthenticator setupRadiusAuthenticator() throws GuacamoleException {
+        guacEnv = new LocalEnvironment();
+        basePath = guacEnv.getGuacamoleHome().getAbsolutePath()  '/';
+        radAuthName = confService.getRadiusAuthProtocol();
+        caFile = confService.getRadiusCAFile();
+        caPassword = confService.getRadiusCAPassword();
+        caType = confService.getRadiusCAType();
+        keyFile = confService.getRadiusKeyFile();
+        keyPassword = confService.getRadiusKeyPassword();
+        keyType = confService.getRadiusKeyType();
+        trustAll = confService.getRadiusTrustAll();
+        innerProtocol = confService.getRadiusEAPTTLSInnerProtocol();

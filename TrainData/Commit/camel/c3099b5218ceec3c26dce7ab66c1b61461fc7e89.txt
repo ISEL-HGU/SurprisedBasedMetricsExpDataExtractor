@@ -1,0 +1,1 @@
+                builder.withDetail("name", camelContext.getName());

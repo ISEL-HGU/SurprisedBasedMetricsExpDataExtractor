@@ -1,0 +1,33 @@
+import com.gargoylesoftware.htmlunit.html.HtmlButton;
+    private static final String AUTHORIZATION_URL_PREFIX = "https://www.linkedin.com";
+
+    private static final String AUTHORIZATION_URL =  AUTHORIZATION_URL_PREFIX  "/uas/oauth2/authorization?"
+    private static final String AUTHORIZATION_URL_WITH_SCOPE = AUTHORIZATION_URL_PREFIX  "/uas/oauth2/authorization?"
+            final HtmlDivision div = authPage.getFirstByXPath("//div[@role='alert'][not(contains(@class,'hidden'))]");
+            final HtmlButton submitInput = (HtmlButton) loginForm.getElementsByAttribute("button", "type", "submit").get(0);
+            String nextLocation = null;
+            } catch (FailingHttpStatusCodeException e) {
+
+                // escalate non redirect errors
+                if (e.getStatusCode() != HttpStatus.SC_MOVED_TEMPORARILY && e.getStatusCode() != HttpStatus.SC_SEE_OTHER) {
+                    throw e;
+                }
+                //redirect from auth page leads to the new page with acceptance of access
+                nextLocation = AUTHORIZATION_URL_PREFIXe.getResponse().getResponseHeaderValue(HttpHeaders.LOCATION);
+            }
+            if (nextLocation == null) {
+                throw new IllegalArgumentException("Redirect response query is null, check username, password and permissions");
+            }
+
+            //Allow access page
+            HtmlPage allowAccessPage = null;
+            String redirectQuery;
+            try {
+                //if access is already allowed, redirection exception is thrown
+                allowAccessPage = webClient.getPage(nextLocation);
+                //in other cases, allow button has to be used
+                final HtmlForm redirectForm = allowAccessPage.getForms().get(1);
+                final HtmlButton allowButton = (HtmlButton) redirectForm.getElementsByAttribute("button", "type", "submit").get(0);
+                final Page redirectPage = allowButton.click();
+                if (e.getStatusCode() != HttpStatus.SC_MOVED_TEMPORARILY && e.getStatusCode() != HttpStatus.SC_SEE_OTHER) {
+                redirectQuery = new URL(e.getResponse().getResponseHeaderValue(HttpHeaders.LOCATION)).getQuery();

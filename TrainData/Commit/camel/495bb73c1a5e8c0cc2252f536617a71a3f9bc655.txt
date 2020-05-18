@@ -1,0 +1,16 @@
+import static org.apache.camel.maven.packaging.PackageHelper.findCamelDirectory;
+     * The output directory for generated archetypes
+        // only generate this for the root pom
+        if ("pom".equals(project.getModel().getPackaging())) {
+            try {
+                generateArchetypeCatalog(getLog(), project, projectHelper, outDir);
+            } catch (IOException e) {
+                throw new MojoFailureException("Error generating archetype catalog due "  e.getMessage(), e);
+            }
+    public static void generateArchetypeCatalog(Log log, MavenProject project, MavenProjectHelper projectHelper, File outDir) throws MojoExecutionException, IOException {
+        File archetypes = findCamelDirectory(project.getBasedir(), "archetypes");
+        if (archetypes == null || !archetypes.exists()) {
+            throw new MojoExecutionException("Cannot find directory: archetypes");
+        }
+        log.info("Scanning for Camel Maven Archetypes from directory: "  archetypes);
+        File[] dirs = archetypes.listFiles(new FileFilter() {

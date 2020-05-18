@@ -1,0 +1,9 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+	protected RowReader<?> createFullRowReader(RowDescriptor descriptor, QueryMetadata queryMetadata,
+	protected class PostprocessorFactory {

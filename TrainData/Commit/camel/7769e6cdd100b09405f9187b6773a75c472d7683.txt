@@ -1,0 +1,19 @@
+        long startTime = new Date().getTime();
+                String path = file.getAbsoluteFilePath();
+                if (path.equals("/") || path.equals("\\")) {
+                    // special for root (= home) directory
+                    LOG.trace("Using fast exists to update file information in home directory");
+                    files = operations.listFiles();
+                } else {
+                    LOG.trace("Using fast exists to update file information for {}", path);
+                    files = operations.listFiles(path);
+                }
+                String path = file.getParent();
+                if (path.equals("/") || path.equals("\\")) {
+                    // special for root (= home) directory
+                    LOG.trace("Using full directory listing in home directory to update file information. Consider enabling fastExistsCheck option.");
+                    files = operations.listFiles();
+                } else {
+                    LOG.trace("Using full directory listing to update file information for {}. Consider enabling fastExistsCheck option.", path);
+                    files = operations.listFiles(path);
+                }

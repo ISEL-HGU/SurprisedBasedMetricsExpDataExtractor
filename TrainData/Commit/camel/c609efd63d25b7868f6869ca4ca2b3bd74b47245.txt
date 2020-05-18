@@ -1,0 +1,56 @@
+import java.io.IOException;
+    
+    /**
+     * check emptyStream and if CVSRecord is allow to process emptyStreams
+     * avoid IllegalArgumentException and return empty list when unmarshalling
+     */
+    private boolean checkEmptyStream(BindyCsvFactory factory, InputStream inputStream) throws IOException {
+    	boolean allowEmptyStream = factory.isAllowEmptyStream();
+        boolean isStreamEmpty = false;
+        boolean canReturnEmptyListOfModels = false;
+        
+        if(inputStream == null || inputStream.available() == 0)
+        	isStreamEmpty = true;
+        
+        if(isStreamEmpty == true && allowEmptyStream == true)
+        	canReturnEmptyListOfModels = true;
+        
+        return canReturnEmptyListOfModels;
+    }
+        ObjectHelper.notNull(factory, "not instantiated");        	
+        InputStreamReader in = null;
+        Scanner scanner = null;
+
+            if (checkEmptyStream(factory,inputStream))
+            	return models;
+    
+            in = new InputStreamReader(inputStream, IOHelper.getCharsetName(exchange));
+    
+            // Scanner is used to read big file
+            scanner = new Scanner(in);
+    
+            // Retrieve the separator defined to split the record
+            String separator = factory.getSeparator();
+            String quote = factory .getQuote();
+            ObjectHelper.notNull(separator, "The separator has not been defined in the annotation @CsvRecord or not instantiated during initModel.");
+    
+            int count = 0;
+            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            if(scanner != null) {
+                scanner.close();
+            }
+            if(in != null) {
+                IOHelper.close(in, "in", LOG);
+            }

@@ -1,0 +1,49 @@
+            case AS2MimeType.APPLICATION_PKCS7_MIME:
+                switch(entityContentType.getParameter("smime-type")) {
+                case "compressed-data":
+                    entity = parseApplicationPkcs7MimeCompressedDataEntityBody(inbuffer, boundary, entityContentType,
+                            contentTransferEncoding);
+                    break;
+                case "enveloped-data":
+                    entity = parseApplicationPkcs7MimeEnvelopedDataEntityBody(inbuffer, boundary, entityContentType,
+                            contentTransferEncoding);
+                    break;
+                default:
+                    break;
+                }
+                break;
+    public static ApplicationPkcs7MimeEnvelopedDataEntity parseApplicationPkcs7MimeEnvelopedDataEntityBody(AS2SessionInputBuffer inbuffer,
+    public static ApplicationPkcs7MimeCompressedDataEntity parseApplicationPkcs7MimeCompressedDataEntityBody(AS2SessionInputBuffer inbuffer,
+                                                                                                           String boundary,
+                                                                                                           ContentType contentType,
+                                                                                                           String contentTransferEncoding)
+            throws ParseException {
+
+        CharsetDecoder previousDecoder = inbuffer.getCharsetDecoder();
+
+        try {
+            Charset charset = contentType.getCharset();
+            if (charset == null) {
+                charset = Charset.forName(AS2Charset.US_ASCII);
+            }
+            CharsetDecoder charsetDecoder = charset.newDecoder();
+
+            inbuffer.setCharsetDecoder(charsetDecoder);
+
+            String pkcs7CompressedBodyContent = parseBodyPartText(inbuffer, boundary);
+
+            byte[] compressedContent = EntityUtils.decode(pkcs7CompressedBodyContent.getBytes(charset),
+                    contentTransferEncoding);
+
+            ApplicationPkcs7MimeCompressedDataEntity applicationPkcs7MimeEntity = new ApplicationPkcs7MimeCompressedDataEntity(
+                    compressedContent, contentTransferEncoding, false);
+            return applicationPkcs7MimeEntity;
+        } catch (Exception e) {
+            ParseException parseException = new ParseException("failed to parse PKCS7 Mime entity");
+            parseException.initCause(e);
+            throw parseException;
+        } finally {
+            inbuffer.setCharsetDecoder(previousDecoder);
+        }
+    }
+

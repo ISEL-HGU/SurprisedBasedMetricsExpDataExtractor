@@ -1,0 +1,4 @@
+        if (!fork) {
+            commandLineList.add("--classpath");
+            commandLineList.add(classpath.toString());
+        }

@@ -1,0 +1,5 @@
+            if(!target.exists()) {
+            	 CamelLogger.log(LOG,readLockLoggingLevel,"File "target.getName()" got deleted.");
+            	return false;
+            }
+

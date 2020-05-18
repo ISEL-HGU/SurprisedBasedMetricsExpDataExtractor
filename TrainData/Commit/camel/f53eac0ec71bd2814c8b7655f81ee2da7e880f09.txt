@@ -1,0 +1,15 @@
+         * The delimiter which is used in the
+         * com.amazonaws.services.s3.model.ListObjectsRequest to only consume
+         * objects we are interested in.
+         */
+        private String delimiter;
+        /**
+         * The delimiter which is used in the
+        public String getDelimiter() {
+            return delimiter;
+        }
+
+        public void setDelimiter(String delimiter) {
+            this.delimiter = delimiter;
+        }
+

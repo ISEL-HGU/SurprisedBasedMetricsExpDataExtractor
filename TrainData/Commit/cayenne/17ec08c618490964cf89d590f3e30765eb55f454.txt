@@ -1,0 +1,15 @@
+import org.apache.cayenne.modeler.util.ModelerUtil;
+import javax.swing.table.DefaultTableCellRenderer;
+
+
+        directionColumn.setCellRenderer(new DefaultTableCellRenderer() {
+            @Override
+            public Component getTableCellRendererComponent(JTable table, Object value,
+                                                           boolean isSelected, boolean hasFocus, int row, int column) {
+                super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
+                setHorizontalTextPosition(SwingConstants.LEFT);
+                setIcon(ModelerUtil.buildIcon("icon-arrow-open.png"));
+                return this;
+            }
+        });
+

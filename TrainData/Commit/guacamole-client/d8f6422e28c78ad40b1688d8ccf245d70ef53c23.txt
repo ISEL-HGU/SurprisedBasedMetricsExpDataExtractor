@@ -1,0 +1,10 @@
+     * The username used for the RADIUS authentication attempt.
+     */
+
+    /**
+    public RadiusChallengeResponseField(String username, String replyMsg, String radiusState) {
+        this.username = username;
+    public String getUsername() {
+        return username;
+    }
+

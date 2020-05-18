@@ -1,0 +1,12 @@
+  /**
+   * {@inheritDoc}
+   *
+   * @return a float value representing progress of the job
+   * @throws IOException          if there is an error obtaining progress
+   * @throws InterruptedException if progress stalls or is interrupted
+   */
+    if (resultRecords != null && resultRecords.size() > 0) {
+      return (float) offset / (float) resultRecords.size();
+    } else {
+      return 0;
+    }

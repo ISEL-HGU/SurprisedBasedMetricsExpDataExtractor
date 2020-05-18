@@ -1,0 +1,2 @@
+    public static TimeoutConstrainedURLHandler getHttp() {
+            return (TimeoutConstrainedURLHandler) instance.get(null);

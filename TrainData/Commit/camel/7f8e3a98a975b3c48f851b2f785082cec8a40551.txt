@@ -1,0 +1,12 @@
+
+                                  "4lOtyfj0kcclVV/zS7aenhfhX5Ixfgz/rHhsJwtCPPvTAdgQFGYrqaHlyetJiawiNPVc=");
+
+
+
+
+     * Cancel (put back onto queue) in flight messages if the visibility time
+     * has expired and has not been manually deleted (ack'd)
+    public ChangeMessageVisibilityResult changeMessageVisibility(ChangeMessageVisibilityRequest changeMessageVisibilityRequest)
+        throws AmazonServiceException, AmazonClientException {
+
+}

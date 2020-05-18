@@ -1,0 +1,21 @@
+import java.sql.Date;
+import java.sql.SQLException;
+import java.sql.Types;
+import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+				.scalarQuery( "SELECT PAINTING_ID FROM PAINTING WHERE PAINTING_TITLE = #bind($a)",
+						Integer.class)
+		List<Integer> ids = SQLSelect.scalarQuery("SELECT PAINTING_ID FROM PAINTING ORDER BY PAINTING_ID",
+				Integer.class).select(context);
+				.scalarQuery( "SELECT PAINTING_ID FROM PAINTING WHERE PAINTING_TITLE = #bind($a)",
+						Integer.class)
+				.scalarQuery("SELECT PAINTING_ID FROM PAINTING WHERE PAINTING_TITLE = #bind($a) " 
+						"OR PAINTING_TITLE = #bind($b) ORDER BY PAINTING_ID",
+						Integer.class)
+								 "#chunk($b) PAINTING_TITLE #bindEqual($b) #end #end ORDER BY PAINTING_ID",
+						Integer.class)
+								 "#chunk($b) PAINTING_TITLE #bindEqual($b) #end #end ORDER BY PAINTING_ID",
+						Integer.class)

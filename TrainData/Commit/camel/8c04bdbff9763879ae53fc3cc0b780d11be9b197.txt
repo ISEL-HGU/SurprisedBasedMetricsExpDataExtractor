@@ -1,0 +1,2 @@
+                    clientBuilder = clientBuilder.withRegion(Regions.valueOf(configuration.getRegion()));
+                    encClientBuilder = encClientBuilder.withRegion(Regions.valueOf(configuration.getRegion()));

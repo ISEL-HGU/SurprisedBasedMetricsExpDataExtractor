@@ -1,0 +1,64 @@
+import org.apache.cayenne.dbsync.reverse.dbimport.Catalog;
+import org.apache.cayenne.dbsync.reverse.dbimport.ExcludeTable;
+import org.apache.cayenne.dbsync.reverse.dbimport.FilterContainer;
+import org.apache.cayenne.dbsync.reverse.dbimport.IncludeColumn;
+import org.apache.cayenne.dbsync.reverse.dbimport.IncludeTable;
+import org.apache.cayenne.dbsync.reverse.dbimport.PatternParam;
+import org.apache.cayenne.dbsync.reverse.dbimport.ReverseEngineering;
+import org.apache.cayenne.dbsync.reverse.dbimport.Schema;
+import java.util.Collections;
+        reverseEngineering.getCatalogs().forEach(newCatalog -> {
+                return;
+            newCatalog.getIncludeTables().forEach(newTable -> {
+                    return;
+                        table.add(new DbImportTreeNode(column)));
+            });
+        });
+    }
+
+    private DbImportTreeNode findNodeInParent(DbImportTreeNode parent, Object object) {
+        for (int i = 0; i <= parent.getChildCount(); i) {
+            DbImportTreeNode node = (DbImportTreeNode) parent.getChildAt(i);
+            Object userObject = node.getUserObject();
+
+            if (object instanceof Catalog) {
+                Catalog catalog = (Catalog) object;
+                if (!(userObject instanceof Catalog)) {
+                    continue;
+                }
+
+                Catalog currentCatalog = (Catalog) userObject;
+                if (currentCatalog.getName().equals(catalog.getName())) {
+                    return node;
+                }
+            }
+
+            if (object instanceof IncludeTable) {
+                IncludeTable table = (IncludeTable) object;
+                if (!(userObject instanceof IncludeTable)) {
+                    continue;
+                }
+
+                IncludeTable currentTable = (IncludeTable) userObject;
+                if (currentTable.getPattern().equals(table.getPattern())) {
+                    return node;
+                }
+            }
+
+            if (object instanceof ExcludeTable) {
+                ExcludeTable table = (ExcludeTable) object;
+                if (!(userObject instanceof ExcludeTable)) {
+                    continue;
+                }
+
+                ExcludeTable currentTable = (ExcludeTable) userObject;
+                if (currentTable.getPattern().equals(table.getPattern())) {
+                    return node;
+                }
+        return null;
+
+                if (includeTable.getIncludeColumns().isEmpty() || includeTable.getExcludeColumns().isEmpty()) {
+                    printParams(Collections.singletonList(new IncludeColumn("Loading...")), node);
+                }
+
+                    action.performAction(null, path);

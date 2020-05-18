@@ -1,0 +1,1 @@
+     * @return a combined composite of the two exchanges, favor returning the <tt>oldExchange</tt> whenever possible

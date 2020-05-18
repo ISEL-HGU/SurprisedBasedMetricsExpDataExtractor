@@ -1,0 +1,2 @@
+ b/camel-core/src/test/java/org/apache/camel/processor/onexception/ErrorOccurredInOnExceptionRoute.java
+public class ErrorOccurredInOnExceptionRoute extends ContextTestSupport {

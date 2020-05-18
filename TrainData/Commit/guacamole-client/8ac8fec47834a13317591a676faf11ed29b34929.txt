@@ -1,0 +1,5 @@
+import org.apache.guacamole.auth.totp.form.AuthenticationCodeField;
+        String code = request.getParameter(AuthenticationCodeField.PARAMETER_NAME);
+                    "LOGIN.INFO_TOTP_REQUIRED", new CredentialsInfo(
+                        Collections.<Field>singletonList(new AuthenticationCodeField())
+                    ));

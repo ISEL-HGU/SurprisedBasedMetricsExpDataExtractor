@@ -1,0 +1,5 @@
+import org.apache.camel.component.hazelcast.topic.HazelcastTopicComponent;
+        HazelcastTopicComponent hazelcast = new HazelcastTopicComponent();
+        getContext().addComponent("hazelcast-topic", hazelcast);
+            .to("hazelcast-topic:foo");
+        from("hazelcast-topic:foo")

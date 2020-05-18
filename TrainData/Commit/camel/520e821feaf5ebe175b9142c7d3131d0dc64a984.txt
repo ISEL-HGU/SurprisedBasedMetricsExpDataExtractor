@@ -1,0 +1,4 @@
+import twitter4j.User;
+
+            User userStatus = endpoint.getProperties().getTwitter().showUser(toUsername);
+            endpoint.getProperties().getTwitter().sendDirectMessage(userStatus.getId(), text);

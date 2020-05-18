@@ -1,0 +1,5 @@
+     * the current username (GUAC_USERNAME), password (GUAC_PASSWORD), the
+     * server date and time (GUAC_DATE and GUAC_TIME respectively), and custom
+     * user attributes. If either the username or password are not set within
+     * the given user or their provided credentials, the corresponding token(s)
+     * will remain unset.

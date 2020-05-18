@@ -1,0 +1,3 @@
+            producerClass = javaClass.addNestedType().setPublic().setClass(false);
+        builderClass = javaClass.addNestedType().setPublic().setClass(false);
+            advancedBuilderClass = javaClass.addNestedType().setPublic().setClass(false);

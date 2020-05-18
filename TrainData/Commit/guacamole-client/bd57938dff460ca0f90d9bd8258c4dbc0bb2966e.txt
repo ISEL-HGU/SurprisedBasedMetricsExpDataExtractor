@@ -1,0 +1,3 @@
+     * @param credentials
+     *     The Credentials object to store retrieved username and
+     *     password values in.

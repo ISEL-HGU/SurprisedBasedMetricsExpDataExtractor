@@ -1,0 +1,1 @@
+    private Boolean whitelistEnabled = true;

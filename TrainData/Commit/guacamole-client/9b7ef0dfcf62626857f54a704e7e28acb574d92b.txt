@@ -1,0 +1,31 @@
+import java.util.concurrent.ConcurrentHashMap;
+import org.apache.guacamole.net.auth.AbstractUserContext;
+import org.apache.guacamole.net.auth.AuthenticatedUser;
+public class SimpleUserContext extends AbstractUserContext {
+     * The unique identifier (username) of the user whose permissions dictate
+     * the configurations accessible within this UserContext.
+    private final String username;
+     * configurations within the given Map. The username is set to the
+     * ANONYMOUS_IDENTIFIER defined by AuthenticatedUser, effectively declaring
+     * the current user as anonymous.
+        this(authProvider, AuthenticatedUser.ANONYMOUS_IDENTIFIER, configs);
+        // Produce map of connections from given configs
+        Map<String, Connection> connections = new ConcurrentHashMap<String, Connection>(configs.size());
+            connection.setParentIdentifier(DEFAULT_ROOT_CONNECTION_GROUP);
+            connections.put(identifier, connection);
+        this.username = username;
+        this.connectionDirectory = new SimpleDirectory<Connection>(connections);
+
+        try {
+            return new SimpleUser(username,
+                    getConnectionDirectory().getIdentifiers(),
+                    getConnectionGroupDirectory().getIdentifiers()
+            );
+        }
+
+        catch (GuacamoleException e) {
+            return new SimpleUser(username,
+                    Collections.<String>emptySet(),
+                    Collections.<String>emptySet());
+        }
+

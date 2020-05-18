@@ -1,0 +1,5 @@
+import static org.apache.ivy.util.StringUtils.isNullOrEmpty;
+
+        if (!isNullOrEmpty(user)) {
+            if (!isNullOrEmpty(passwd)) {
+        if (!isNullOrEmpty(host)) {

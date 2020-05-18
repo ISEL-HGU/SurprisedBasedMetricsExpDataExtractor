@@ -1,0 +1,21 @@
+import javax.swing.JTable;
+            List<Object> list = new ArrayList<>();
+            list.add(dataMap);
+            list.addAll(dataMap.getObjEntities());
+            list.addAll(dataMap.getEmbeddables());
+            JTable table = view.getDataMapTables().get(dataMap);
+            if(table != null) {
+                objectBindings.put(dataMap, tableBuilder.bindToTable(table, "currentCollection"));
+                table.getColumnModel().getColumn(1).setCellRenderer(new ImageRendererColumn());
+            JCheckBox checkBox = view.getDataMapJCheckBoxMap().get(dataMap);
+            if(checkBox != null) {
+                checkBox.addActionListener(val -> checkDataMap(dataMap, ((JCheckBox)val.getSource()).isSelected()));
+        int selectedCount = getParentController().getSelectedEntitiesSize()
+                 getParentController().getSelectedEmbeddablesSize()
+                 getParentController().getSelectedDataMapsSize();
+                ObjectBinding binding = objectBindings.get(dataMap);
+                if(binding != null) {
+                    binding.updateView();
+            ObjectBinding binding = objectBindings.get(dataMap);
+            if(binding != null) {
+                binding.updateView();

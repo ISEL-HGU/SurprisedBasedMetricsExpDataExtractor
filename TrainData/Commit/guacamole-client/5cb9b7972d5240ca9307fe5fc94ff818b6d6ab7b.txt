@@ -1,0 +1,31 @@
+import org.apache.guacamole.environment.LocalEnvironment;
+import net.jradius.packet.attribute.RadiusAttribute;
+        LocalEnvironment guacEnv;
+        String basePath;
+            guacEnv = new LocalEnvironment();
+            basePath = guacEnv.getGuacamoleHome().getAbsolutePath()  '/';
+                ((EAPTLSAuthenticator)radAuth).setCaFile(basePath  caFile);
+                ((EAPTLSAuthenticator)radAuth).setKeyFile(basePath  keyFile);
+            radAttrs.add(new Attr_CleartextPassword(password));
+
+            // EAP-TTLS tunnels protected attributes inside the TLS layer
+            if (radAuth instanceof EAPTTLSAuthenticator) {
+                radAuth.setUsername(new Attr_UserName(username));
+            }
+
+            // We receive a Challenge not asking for user input, so silently process the challenge
+            while((reply instanceof AccessChallenge) && (reply.findAttribute(Attr_ReplyMessage.TYPE) == null)) {
+            radAttrs.add(new Attr_CleartextPassword(response));
+
+            // EAP-TTLS tunnels protected attributes inside the TLS layer
+            if (radAuth instanceof EAPTTLSAuthenticator) {
+                radAuth.setUsername(new Attr_UserName(username));
+            }
+            RadiusResponse reply = radiusClient.sendReceive(radAcc, confService.getRadiusRetries());
+
+            // We receive a Challenge not asking for user input, so silently process the challenge
+            while((reply instanceof AccessChallenge) && (reply.findAttribute(Attr_ReplyMessage.TYPE) == null)) {
+                radAuth.processChallenge(radAcc, reply);
+                reply = radiusClient.sendReceive(radAcc, confService.getRadiusRetries());
+            }
+            return reply;

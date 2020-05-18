@@ -1,0 +1,1 @@
+        return Long.compare(leftVal, rightVal);

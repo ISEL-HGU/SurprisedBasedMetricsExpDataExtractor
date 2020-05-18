@@ -1,0 +1,3 @@
+import com.hazelcast.core.BaseQueue;
+        BaseQueue<?> queue = endpoint.getHazelcastInstance().getQueue(endpoint.getConfiguration().getQueueName());
+                        queue = transactionCtx.getQueue(endpoint.getConfiguration().getQueueName());

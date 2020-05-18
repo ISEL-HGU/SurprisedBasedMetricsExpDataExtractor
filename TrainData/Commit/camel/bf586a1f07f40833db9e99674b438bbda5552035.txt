@@ -1,0 +1,10 @@
+import java.util.Set;
+
+import com.amazonaws.services.kms.AWSKMS;
+        checkAndSetRegistryClient(configuration);
+    private void checkAndSetRegistryClient(KMSConfiguration configuration) {
+        Set<AWSKMS> clients = getCamelContext().getRegistry().findByType(AWSKMS.class);
+        if (clients.size() == 1) {
+            configuration.setKmsClient(clients.stream().findFirst().get());
+        }
+    }

@@ -1,0 +1,8 @@
+import org.apache.deltaspike.core.util.AnnotationUtils;
+import org.apache.deltaspike.jpa.api.transaction.Transactional;
+    @Inject
+    private BeanManager beanManager;
+    
+        
+        repositoryMethodMetadata.setTransactional(AnnotationUtils.extractAnnotationFromMethodOrClass(
+                beanManager, method, repositoryMetadata.getRepositoryClass(), Transactional.class));

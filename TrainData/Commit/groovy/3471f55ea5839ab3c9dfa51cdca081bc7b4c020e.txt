@@ -1,0 +1,14 @@
+import groovy.transform.ImmutableBase;
+import java.lang.annotation.Annotation;
+    private static final Class<? extends Annotation> IMMUTABLE_BASE_CLASS = ImmutableBase.class;
+    private static final ClassNode IMMUTABLE_BASE_TYPE = makeWithoutCaching(IMMUTABLE_BASE_CLASS, false);
+                    callSuper, force, excludes, includes, useSetters, defaults, allNames, allProperties,
+                                         boolean includeProperties, boolean includeSuperFields, boolean includeSuperProperties,
+                                         boolean callSuper, boolean force, List<String> excludes, final List<String> includes,
+                                         boolean useSetters, boolean defaults, boolean allNames,
+                                         SourceUnit sourceUnit, ClosureExpression pre, ClosureExpression post) {
+        createConstructor(xform, cNode, includeFields, includeProperties, includeSuperFields, includeSuperProperties, callSuper, force, excludes, includes, useSetters, defaults, allNames,false, sourceUnit, pre, post);
+                                         boolean useSetters, boolean defaults, boolean allNames, boolean allProperties,
+        List<AnnotationNode> annotations = cNode.getAnnotations(IMMUTABLE_BASE_TYPE);
+        AnnotationNode annoImmutable = annotations.isEmpty() ? null : annotations.get(0);
+        boolean makeImmutable = annoImmutable != null;

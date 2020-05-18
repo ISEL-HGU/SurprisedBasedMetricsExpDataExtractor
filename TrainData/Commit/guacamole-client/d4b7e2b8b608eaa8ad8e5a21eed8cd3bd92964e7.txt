@@ -1,0 +1,8 @@
+import java.lang.StringBuilder;
+        StringBuilder name = new StringBuilder("");
+            name.append(protocol).append("://");
+            name.append(user).append("@");
+            name.append(host);
+            name.append(":").append(port);
+        name.append("/");
+        return name.toString();

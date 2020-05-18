@@ -1,0 +1,2 @@
+            List<Entry> results = queryService.search(ldapConnection,
+                    configurationBaseDN, connectionSearchFilter, 0);

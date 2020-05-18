@@ -1,0 +1,11 @@
+import java.sql.Types;
+import java.util.Iterator;
+import java.util.List;
+
+            DbAttribute attribute = it.next();
+            bindings[i] = new DbAttributeBinding(dbAttributes.get(i));
+                ExtendedType extendedType = value != null
+                        ? adapter.getExtendedTypes().getRegisteredType(value.getClass())
+                        : adapter.getExtendedTypes().getDefaultType();
+
+                b.include(j, value, extendedType);

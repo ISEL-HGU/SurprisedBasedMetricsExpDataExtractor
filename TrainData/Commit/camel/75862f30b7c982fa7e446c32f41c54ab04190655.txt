@@ -1,0 +1,30 @@
+        return (NatsEndpoint)super.getEndpoint();
+
+
+            connection.close();
+            SSLContext sslCtx = getEndpoint().getNatsConfiguration().getSslContextParameters().createSSLContext(getEndpoint().getCamelContext());
+                    dispatcher = connection.createDispatcher(new MessageHandler() {
+                    dispatcher = dispatcher.subscribe(getEndpoint().getNatsConfiguration().getTopic(), getEndpoint().getNatsConfiguration().getQueueName());
+                        setActive(true);
+                    }
+                } else {
+                    dispatcher = connection.createDispatcher(new MessageHandler() {
+                        @Override
+                        public void onMessage(Message msg) {
+                            LOG.debug("Received Message: {}", msg);
+                            Exchange exchange = getEndpoint().createExchange();
+                            exchange.getIn().setBody(msg);
+                            exchange.getIn().setHeader(NatsConstants.NATS_MESSAGE_TIMESTAMP, System.currentTimeMillis());
+                            try {
+                                processor.process(exchange);
+                            } catch (Exception e) {
+                                getExceptionHandler().handleException("Error during processing", exchange, e);
+                            }
+                        }
+                    });
+                    dispatcher = dispatcher.subscribe(getEndpoint().getNatsConfiguration().getTopic());
+                    if (ObjectHelper.isNotEmpty(getEndpoint().getNatsConfiguration().getMaxMessages())) {
+                        dispatcher.unsubscribe(getEndpoint().getNatsConfiguration().getTopic(), Integer.parseInt(getEndpoint().getNatsConfiguration().getMaxMessages()));
+                    }
+                    if (dispatcher.isActive()) {
+                        setActive(true);

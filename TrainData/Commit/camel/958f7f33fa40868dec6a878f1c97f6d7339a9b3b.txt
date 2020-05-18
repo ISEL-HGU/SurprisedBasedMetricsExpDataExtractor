@@ -1,0 +1,20 @@
+                    final ContentType acceptType = getResourceContentType(uriInfo);
+                    final String acceptCharset = acceptType.getParameter(ContentType.PARAMETER_CHARSET);
+                    writeHttpHeader(batchRequestHeaderOutputStream, HttpHeaders.ACCEPT, acceptType.getType().toLowerCase());
+                    if (null != acceptCharset) {
+                        writeHttpHeader(batchRequestHeaderOutputStream, HttpHeaders.ACCEPT_CHARSET, acceptCharset.toLowerCase());
+                    }
+                    final ContentType acceptType = getResourceContentType(uriInfo);
+                    final String acceptCharset = acceptType.getParameter(ContentType.PARAMETER_CHARSET);
+                    writeHttpHeader(batchRequestHeaderOutputStream, HttpHeaders.ACCEPT, acceptType.getType().toLowerCase());
+                    if (null != acceptCharset) {
+                        writeHttpHeader(batchRequestHeaderOutputStream, HttpHeaders.ACCEPT_CHARSET, acceptCharset.toLowerCase());
+                    }
+                    writeHttpHeader(batchRequestHeaderOutputStream, HttpHeaders.CONTENT_TYPE, acceptType.toContentTypeString());
+            httpUriRequest.addHeader(HttpHeaders.ACCEPT, contentType.getType().toLowerCase());
+            final String acceptCharset = contentType.getParameter(ContentType.PARAMETER_CHARSET);
+            if (null != acceptCharset) {
+                httpUriRequest.addHeader(HttpHeaders.ACCEPT_CHARSET, acceptCharset.toLowerCase());
+            }
+            httpUriRequest.addHeader(HttpHeaders.CONTENT_TYPE, contentType.toString());
+            httpUriRequest.addHeader(HttpHeaders.ACCEPT_CHARSET, Constants.UTF8.toLowerCase());

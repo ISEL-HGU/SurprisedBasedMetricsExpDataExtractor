@@ -1,0 +1,1 @@
+    String FILE_LOCK_CHANNEL_FILE = "CamelFileLockChannelFile";

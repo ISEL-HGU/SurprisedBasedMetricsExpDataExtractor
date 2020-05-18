@@ -1,0 +1,3 @@
+ * def person = Person.builder().firstName("Robert").lastName("Lewandowski").age(21).build()
+ * def p2 = Person.builder().setFirstName("Robert").setLastName("Lewandowski").setAge(21).build()
+ * def p3 = Person.builder().withFirstName("Robert").withLastName("Lewandowski").withAge(21).build()

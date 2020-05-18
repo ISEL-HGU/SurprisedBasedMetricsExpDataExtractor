@@ -1,0 +1,96 @@
+import org.apache.gora.cassandra.bean.*;
+      Document doc = builder.build(getClass().getClassLoader().getResourceAsStream(filename));
+      List<Element> keys = doc.getRootElement().getChildren("cassandraKey");
+        KeySpace keyspace;
+            Element placementStrategy = keyspaceElement.getChild("placementStrategy");
+                List<Element> dataCenters = placementStrategy.getChildren("datacenter");
+                for (Element dataCenter : dataCenters) {
+                  String dataCenterName = dataCenter.getAttributeValue("name");
+      for (Element key : keys) {
+        if (keyClass.getName().equals(key.getAttributeValue("name"))) {
+          CassandraKey cassandraKey = new CassandraKey(keyClass.getName());
+          Element partitionKeys = key.getChild("partitionKey");
+          Element clusterKeys = key.getChild("clusterKey");
+          List<Element> partitionKeyFields = partitionKeys.getChildren("field");
+          List<Element> partitionCompositeKeyFields = partitionKeys.getChildren("compositeField");
+          // process non composite partition keys
+          for (Element partitionKeyField : partitionKeyFields) {
+            PartitionKeyField fieldKey = new PartitionKeyField();
+            List fieldAttributes = partitionKeyField.getAttributes();
+            for (Object anAttributeList : fieldAttributes) {
+              Attribute attribute = (Attribute) anAttributeList;
+              String attributeName = attribute.getName();
+              String attributeValue = attribute.getValue();
+              switch (attributeName) {
+                case "name":
+                  fieldKey.setFieldName(attributeValue);
+                  break;
+                case "column":
+                  fieldKey.setColumnName(attributeValue);
+                  break;
+                default:
+                  fieldKey.addProperty(attributeName, attributeValue);
+                  break;
+              }
+            }
+            cassandraKey.addPartitionKeyField(fieldKey);
+          }
+          // process composite partitions keys
+          for (Element partitionCompositeKeyField : partitionCompositeKeyFields) {
+            PartitionKeyField compositeFieldKey = new PartitionKeyField();
+            compositeFieldKey.setComposite(true);
+            List<Element> compositeKeyFields = partitionCompositeKeyField.getChildren("field");
+            for (Element partitionKeyField : compositeKeyFields) {
+              PartitionKeyField fieldKey = new PartitionKeyField();
+              List fieldAttributes = partitionKeyField.getAttributes();
+              for (Object anAttributeList : fieldAttributes) {
+                Attribute attribute = (Attribute) anAttributeList;
+                String attributeName = attribute.getName();
+                String attributeValue = attribute.getValue();
+                switch (attributeName) {
+                  case "name":
+                    fieldKey.setFieldName(attributeValue);
+                    break;
+                  case "column":
+                    fieldKey.setColumnName(attributeValue);
+                    break;
+                  default:
+                    fieldKey.addProperty(attributeName, attributeValue);
+                    break;
+                }
+              }
+              compositeFieldKey.addField(fieldKey);
+            }
+            cassandraKey.addPartitionKeyField(compositeFieldKey);
+
+          }
+
+          //process cluster keys
+          List<Element> clusterKeyFields = clusterKeys.getChildren("field");
+          for (Element clusterKeyField : clusterKeyFields) {
+            ClusterKeyField keyField = new ClusterKeyField();
+            List fieldAttributes = clusterKeyField.getAttributes();
+            for (Object anAttributeList : fieldAttributes) {
+              Attribute attribute = (Attribute) anAttributeList;
+              String attributeName = attribute.getName();
+              String attributeValue = attribute.getValue();
+              switch (attributeName) {
+                case "name":
+                  keyField.setFieldName(attributeValue);
+                  break;
+                case "column":
+                  keyField.setColumnName(attributeValue);
+                  break;
+                case "order":
+                  keyField.setOrder(ClusterKeyField.Order.valueOf(attributeValue.toUpperCase()));
+                  break;
+                default:
+                  keyField.addProperty(attributeName, attributeValue);
+                  break;
+              }
+            }
+            cassandraKey.addClusterKeyField(keyField);
+          }
+          map.setCassandraKey(cassandraKey);
+        }
+      }

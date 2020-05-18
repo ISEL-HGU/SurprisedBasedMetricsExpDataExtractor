@@ -1,0 +1,16 @@
+import java.net.URISyntaxException;
+                    if (disabledGlobalTransforms == null) disabledGlobalTransforms = Collections.emptySet();
+                                    try {
+                                        if (!service.toURI().equals(transformNames.get(className).toURI())) {
+                                            compilationUnit.getErrorCollector().addWarning(
+                                                    WarningMessage.POSSIBLE_ERRORS,
+                                                    "The global transform for class "  className  " is defined in both "
+                                                             transformNames.get(className).toExternalForm()
+                                                             " and "
+                                                             service.toExternalForm()
+                                                             " - the former definition will be used and the latter ignored.",
+                                                    null,
+                                                    null);
+                                        }
+                                    } catch (URISyntaxException e) {
+                                                "Failed to parse URL as URI because of exception "  e.toString(),

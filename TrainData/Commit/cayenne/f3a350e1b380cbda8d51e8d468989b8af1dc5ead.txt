@@ -1,0 +1,2 @@
+        out.writeObject(this.deps);
+        this.deps = in.readObject();

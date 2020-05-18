@@ -1,0 +1,6 @@
+        if (field.isProtected()) {
+            unit.addError(new SyntaxException("Cannot have protected field in a trait ("  trait.getName()  "#"  field.getName()  ")",
+                    field.getLineNumber(), field.getColumnNumber()));
+            return;
+        }
+

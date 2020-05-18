@@ -1,0 +1,41 @@
+
+import org.apache.camel.component.aws.xray.json.JsonArray;
+import org.apache.camel.component.aws.xray.json.JsonObject;
+import org.apache.camel.component.aws.xray.json.JsonParser;
+import org.apache.commons.lang.StringUtils;
+                    byte[] receiveData = new byte[2048];
+                        String raw = sb.toString().trim();
+                                if (!segment.endsWith("}")
+                                        || StringUtils.countMatches(segment, "{") != StringUtils.countMatches(segment, "}")
+                                        || StringUtils.countMatches(segment, "[") != StringUtils.countMatches(segment, "]")) {
+                                    LOG.trace("Skipping incomplete content: {}", segment);
+                                    continue;
+                                }
+                                    // clean the JSON string received
+                                    LOG.trace("Original JSON content: {}", segment);
+                                    locSegment = segment;
+                                    JsonObject json = (JsonObject) JsonParser.parse(segment);
+                                receivedTraces.size(), receivedTraces, raw);
+                    } catch (Exception jsonEx) {
+        private TestSegment convertData(JsonObject json) {
+                JsonArray jsonSubsegments = (JsonArray) json.get("subsegments");
+        private List<TestSubsegment> convertSubsegments(JsonArray jsonSubsegments) {
+            List<TestSubsegment> subsegments = new ArrayList<>(jsonSubsegments.size());
+            for (int i = 0; i < jsonSubsegments.size(); i) {
+                JsonObject jsonSubsegment = jsonSubsegments.toArray(new JsonObject[jsonSubsegments.size()])[i];
+        private TestSubsegment convertSubsegment(JsonObject json) {
+            TestSubsegment subsegment = new TestSubsegment((String)json.get("name"));
+                List<TestSubsegment> subsegments = convertSubsegments((JsonArray) json.get("subsegments"));
+        private void addAnnotationsIfAvailable(TestEntity<?> entity, JsonObject json) {
+                JsonObject annotations = (JsonObject) json.get("annotations");
+                for (String key : annotations.getKeys()) {
+                    entity.withAnnotation((String)key, annotations.get(key));
+        private void addMetadataIfAvailable(TestEntity<?> entity, JsonObject json) {
+                JsonObject rawMetadata = (JsonObject) json.get("metadata");
+                Map<String, Map<String, Object>> metadata = parseMetadata(rawMetadata);
+        private Map<String, Map<String, Object>> parseMetadata(JsonObject json) {
+            Map<String, Map<String, Object>> metadata = new LinkedHashMap<>(json.getKeys().size());
+            for (String namespace : json.getKeys()) {
+                JsonObject namespaceData = (JsonObject) json.get(namespace);
+                    metadata.put(namespace, new LinkedHashMap<>(namespaceData.getKeys().size()));
+                for (String key : namespaceData.getKeys()) {

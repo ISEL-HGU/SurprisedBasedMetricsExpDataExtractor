@@ -1,0 +1,3 @@
+        if (isNullOrEmpty(string)) {
+        String errMsg = (t instanceof RuntimeException) ? t.getMessage() : t.toString();
+        if (isNullOrEmpty(errMsg) || "null".equals(errMsg)) {

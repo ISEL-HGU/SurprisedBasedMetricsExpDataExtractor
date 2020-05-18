@@ -1,0 +1,8 @@
+import java.util.Date;
+    private Date eventDate;
+
+    private FileEvent() {
+        this.eventDate = new Date();
+    }
+    public Date getEventDate() {
+        return this.eventDate;

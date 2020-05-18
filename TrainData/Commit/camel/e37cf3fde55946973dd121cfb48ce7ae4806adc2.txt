@@ -1,0 +1,20 @@
+import org.apache.camel.processor.Pipeline;
+        final Producer producer = endpoint.createProducer();
+
+        final Processor beforeProducer = getComponent().getBeforeProducer();
+        final Processor afterProducer = getComponent().getAfterProducer();
+
+        // use a pipeline to process before, producer, after in that order
+        // create producer with the pipeline
+        final Processor pipeline = Pipeline.newInstance(getCamelContext(), beforeProducer, producer, afterProducer);
+
+        return new ConnectorProducer(endpoint, pipeline);
+    public Consumer createConsumer(final Processor processor) throws Exception {
+        final Processor beforeConsumer = getComponent().getBeforeConsumer();
+        final Processor afterConsumer = getComponent().getAfterConsumer();
+
+        // use a pipeline to process before, processor, after in that order
+        // create consumer with the pipeline
+        final Processor pipeline = Pipeline.newInstance(getCamelContext(), beforeConsumer, processor, afterConsumer);
+        final Consumer consumer = endpoint.createConsumer(pipeline);
+

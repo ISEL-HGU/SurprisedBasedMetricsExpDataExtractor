@@ -1,0 +1,2 @@
+ b/core/camel-core/src/main/java/org/apache/camel/reload/ReloadStrategySupport.java
+package org.apache.camel.reload;

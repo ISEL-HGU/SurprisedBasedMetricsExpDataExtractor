@@ -1,0 +1,6 @@
+            if (this.isBlankScript()) {
+            return Parameter.EMPTY_ARRAY;
+            return Parameter.EMPTY_ARRAY;
+        return parameterList.toArray(Parameter.EMPTY_ARRAY);
+            return ClassNode.EMPTY_ARRAY;
+    private boolean isBlankScript() {

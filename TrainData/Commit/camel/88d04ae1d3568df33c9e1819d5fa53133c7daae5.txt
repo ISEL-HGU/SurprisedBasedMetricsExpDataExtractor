@@ -1,0 +1,2 @@
+import org.apache.cxf.jaxws.support.JaxWsEndpointImpl;
+        Endpoint ep = new JaxWsEndpointImpl(getBus(), getService(), ei);

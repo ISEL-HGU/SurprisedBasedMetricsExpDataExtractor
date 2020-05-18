@@ -1,0 +1,1 @@
+            Serializable holder = DefaultExchangeHolder.marshal(exchange, true, endpoint.isAllowSerializedHeaders());

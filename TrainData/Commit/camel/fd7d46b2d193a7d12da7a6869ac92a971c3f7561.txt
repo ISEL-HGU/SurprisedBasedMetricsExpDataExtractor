@@ -1,0 +1,54 @@
+                    List<?> list = query(entityManager, messageId);
+                    if (list.isEmpty()) {
+                        MessageProcessed processed = new MessageProcessed();
+                        processed.setProcessorName(processorName);
+                        processed.setMessageId(messageId);
+                        processed.setCreatedAt(new Date());
+                        entityManager.persist(processed);
+                        entityManager.flush();
+                        entityManager.close();
+                        return Boolean.TRUE;
+                    } else {
+                        return Boolean.FALSE;
+                    }
+                } catch (Exception ex) {
+                    LOG.error("Something went wrong trying to add message to repository {}", ex);
+                    throw new PersistenceException(ex);
+                try {
+                    List<?> list = query(entityManager, messageId);
+                    if (list.isEmpty()) {
+                        return Boolean.FALSE;
+                    } else {
+                        MessageProcessed processed = (MessageProcessed) list.get(0);
+                        entityManager.remove(processed);
+                        entityManager.flush();
+                        entityManager.close();
+                        return Boolean.TRUE;
+                    }
+                } catch (Exception ex) {
+                    LOG.error("Something went wrong trying to remove message to repository {}", ex);
+                    throw new PersistenceException(ex);
+                    try {
+                        if (entityManager.isOpen()) {
+                            entityManager.close();
+                        }
+                    } catch (Exception e) {
+                        // ignore
+                    }
+                    List<?> list = queryClear(entityManager);
+                    if (!list.isEmpty()) {
+                        Iterator it = list.iterator();
+                        while (it.hasNext()) {
+                            Object item = it.next();
+                            entityManager.remove(item);
+                        }
+                        entityManager.flush();
+                        entityManager.close();
+                    }
+                    return Boolean.TRUE;
+                } catch (Exception ex) {
+                    LOG.error("Something went wrong trying to clear the repository {}", ex);
+                    throw new PersistenceException(ex);
+        LOG.debug("clear the store {}", MessageProcessed.class.getName());
+
+

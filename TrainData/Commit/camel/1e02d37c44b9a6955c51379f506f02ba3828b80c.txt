@@ -1,0 +1,3 @@
+                client = AmazonS3ClientBuilder.standard().withClientConfiguration(clientConfiguration).withCredentials(credentialsProvider).build();
+                client = AmazonS3ClientBuilder.standard().build();
+                client = AmazonS3ClientBuilder.standard().withClientConfiguration(clientConfiguration).build();

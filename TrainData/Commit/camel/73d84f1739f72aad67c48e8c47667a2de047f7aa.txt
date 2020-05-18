@@ -1,0 +1,69 @@
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+                File core = findCamelCoreDirectory(project.getBasedir());
+                    for (Map.Entry<String, String> entry : javaTypes.entrySet()) {
+                        String name = entry.getKey();
+                        String javaType = entry.getValue();
+                        String modelName = asModelName(name);
+                        InputStream is = new FileInputStream(new File(core, "target/classes/org/apache/camel/model/language/"  modelName  ".json"));
+                        String json = loadText(is);
+                        LanguageModel languageModel = new LanguageModel();
+                        languageModel.setName(name);
+                        languageModel.setTitle("");
+                        languageModel.setModelName(modelName);
+                        languageModel.setLabel("");
+                        languageModel.setDescription("");
+                        languageModel.setJavaType(javaType);
+                        languageModel.setGroupId(project.getGroupId());
+                        languageModel.setArtifactId(project.getArtifactId());
+                        languageModel.setVersion(project.getVersion());
+                        List<Map<String, String>> rows = JSonSchemaHelper.parseJsonSchema("model", json, false);
+                        for (Map<String, String> row : rows) {
+                            if (row.containsKey("title")) {
+                                // title may be special for some
+                                // languages
+                                String title = asTitle(name, row.get("title"));
+                                languageModel.setTitle(title);
+                            if (row.containsKey("description")) {
+                                // description may be special for some
+                                // languages
+                                String desc = asDescription(name, row.get("description"));
+                                languageModel.setDescription(desc);
+                            if (row.containsKey("label")) {
+                                languageModel.setLabel(row.get("label"));
+                            if (row.containsKey("deprecated")) {
+                                languageModel.setDeprecated(row.get("deprecated"));
+                            if (row.containsKey("deprecationNote")) {
+                                languageModel.setDeprecationNote(row.get("deprecationNote"));
+                            if (row.containsKey("javaType")) {
+                                languageModel.setModelJavaType(row.get("javaType"));
+                            }
+                            if (row.containsKey("firstVersion")) {
+                                languageModel.setFirstVersion(row.get("firstVersion"));
+                            }
+                        }
+                        if (log.isDebugEnabled()) {
+                            log.debug("Model: "  languageModel);
+                        }
+
+                        // build json schema for the data format
+                        String properties = after(json, "  \"properties\": {");
+                        String schema = createParameterJsonSchema(languageModel, properties);
+                        if (log.isDebugEnabled()) {
+                            log.debug("JSon schema\n"  schema);
+                        }
+
+                        // write this to the directory
+                        File dir = new File(schemaOutDir, schemaSubDirectory(languageModel.getJavaType()));
+                        dir.mkdirs();
+
+                        File out = new File(dir, name  ".json");
+                        OutputStream fos = buildContext.newFileOutputStream(out);
+                        fos.write(schema.getBytes());
+                        fos.close();
+
+                        buildContext.refresh(out);
+
+                        if (log.isDebugEnabled()) {
+                            log.debug("Generated "  out  " containing JSon schema for "  name  " language");

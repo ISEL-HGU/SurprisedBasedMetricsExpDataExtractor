@@ -1,0 +1,3 @@
+ *
+ * <p>If a ConfigSource implements the {@link java.lang.AutoCloseable} interface it will automatically
+ * be released when the Config is shut down.</p>

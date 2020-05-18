@@ -1,0 +1,3 @@
+ b/tooling/apt/src/main/java/org/apache/camel/tools/apt/CoreConverterProcessor.java
+public class CoreConverterProcessor extends AbstractCamelAnnotationProcessor {
+            writer.append("import org.apache.camel.util.DoubleMap;\n");

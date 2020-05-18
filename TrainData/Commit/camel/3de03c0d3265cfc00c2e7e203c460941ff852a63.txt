@@ -1,0 +1,3 @@
+        Message msg = null;
+            msg = exchange.getMessage().copy();
+        return new DefaultMessageHistory(routeId, node, timestamp, msg);

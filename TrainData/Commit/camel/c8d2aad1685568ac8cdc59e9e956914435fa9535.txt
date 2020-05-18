@@ -1,0 +1,3 @@
+            .log("I was mentioned by ${body}")
+            .process("tweetToContactMapper")
+            .to("salesforce-upsert-contact?sObjectIdName=TwitterScreenName__c");

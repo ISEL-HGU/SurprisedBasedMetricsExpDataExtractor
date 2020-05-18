@@ -1,0 +1,4 @@
+            MucEnterConfiguration mucc = chat.getEnterConfigurationBuilder(Resourcepart.from(endpoint.getNickname()))
+                    .requestNoHistory()
+                    .build();
+            LOG.info("Joined room: {} as: {}", room, endpoint.getNickname());

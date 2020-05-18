@@ -1,0 +1,7 @@
+import static org.apache.groovy.util.BeanUtils.capitalize;
+import static org.apache.groovy.util.BeanUtils.decapitalize;
+                    MethodNode setter = receiverType.getSetterMethod("set"  capitalize(pexp.getPropertyAsString()), false);
+        String capName = capitalize(propertyName);
+        String capName = capitalize(propertyName);
+            String propertyName = decapitalize(result);
+            if (result.equals(capitalize(propertyName))) return propertyName;

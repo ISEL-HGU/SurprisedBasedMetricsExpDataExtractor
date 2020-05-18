@@ -1,0 +1,17 @@
+                    desc = "\n";
+                    desc = "\nThe option is a: <code>"  ogtype.toString().replaceAll("<", "&lt;").replaceAll(">", "&gt;")  "</code> type.";
+                    desc = "\n";
+                    // the Endpoint DSL currently requires to provide the entire context-path and not as individual options
+                    // so lets only mark query parameters that are required as required
+                    if ("parameter".equals(option.getKind()) && "true".equals(option.getRequired())) {
+                        desc = "\nRequired: true";
+                    }
+                    desc = "\nGroup: "  option.getGroup();
+                        desc = "\n";
+                        desc = "\n";
+                        // the Endpoint DSL currently requires to provide the entire context-path and not as individual options
+                        // so lets only mark query parameters that are required as required
+                        if ("parameter".equals(option.getKind()) && "true".equals(option.getRequired())) {
+                            desc = "\nRequired: true";
+                        }
+                        desc = "\nGroup: "  option.getGroup();

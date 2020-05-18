@@ -1,0 +1,8 @@
+        this.groovydocManager = new GroovydocManager(this);
+        groovydocManager.attachDocCommentAsMetaData(classNode, ctx);
+        groovydocManager.attachDocCommentAsMetaData(enumConstant, ctx);
+        groovydocManager.attachDocCommentAsMetaData(methodNode, ctx);
+                    groovydocManager.attachDocCommentAsMetaData(fieldNode, ctx);
+                    groovydocManager.attachDocCommentAsMetaData(fieldNode, ctx);
+                    groovydocManager.attachDocCommentAsMetaData(propertyNode, ctx);
+    private final GroovydocManager groovydocManager;

@@ -1,0 +1,2 @@
+        selectedEntities.removeIf(ObjEntity::isGeneric);
+                generator.setForce(true);

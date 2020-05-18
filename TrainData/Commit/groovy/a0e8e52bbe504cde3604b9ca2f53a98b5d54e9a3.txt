@@ -1,0 +1,4 @@
+                this.configureAST(type, ctx);
+                this.configureAST(classNode, ctx);
+                this.configureAST(classNode, ctx);
+                        this.configureAST(ClassHelper.make(this.visitClassName(ctx.className())), ctx),

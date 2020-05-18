@@ -1,0 +1,9 @@
+        if(!logger.isInfoEnabled() || nodeDescriptor.getDataChannelDescriptor() == null) {
+            return;
+        }
+        logResult.append("Following runtime properties were ignored for node '").append(nodeName).append("': ");
+            logResult.delete(logResult.length() - 2, logResult.length())
+                    .append(". Will use project DataSource configuration. ")
+                    .append("Set driver and url properties to enable DataSource configuration override. ");
+            findUnusedProperties(nodeDescriptor);
+            findUnusedProperties(nodeDescriptor);

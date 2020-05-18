@@ -1,0 +1,10 @@
+import java.net.CookiePolicy;
+        return getCookieManagerInternal();
+    }
+
+    private CookieManager getCookieManagerInternal() {
+
+    @Override
+    public void setCookiePolicy(CookiePolicy cookiePolicy) {
+        getCookieManagerInternal().setCookiePolicy(cookiePolicy);
+    }

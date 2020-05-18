@@ -1,0 +1,14 @@
+import javax.swing.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Set;
+import java.util.prefs.Preferences;
+
+import org.apache.cayenne.gen.ClassGenerationActionFactory;
+import org.apache.cayenne.tools.ToolsInjectorBuilder;
+                ClassGenerationAction classGenerationAction = new ToolsInjectorBuilder()
+                        .create()
+                        .getInstance(ClassGenerationActionFactory.class)
+                        .createAction(cgenConfiguration);

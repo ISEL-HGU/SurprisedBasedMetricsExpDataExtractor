@@ -1,0 +1,1 @@
+public interface AuthenticatedUser extends Identifiable, Attributes {

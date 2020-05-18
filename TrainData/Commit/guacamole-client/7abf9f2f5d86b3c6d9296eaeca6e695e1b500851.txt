@@ -1,0 +1,3 @@
+     * The HttpServletRequest for the Throwable being intercepted.  Despite this
+     * class being a Singleton, this object will always be scoped with the
+     * current request for the Throwable that is being processed by this class.

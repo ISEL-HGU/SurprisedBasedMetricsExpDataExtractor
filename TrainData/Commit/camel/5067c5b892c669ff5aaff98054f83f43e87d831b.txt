@@ -1,0 +1,4 @@
+        if (endpoint.getHttpMethod() != null) {
+            // endpoint configured take precedence
+            answer = HttpMethods.valueOf(endpoint.getHttpMethod().name());
+            // compute what method to use either GET or POST (header take precedence)

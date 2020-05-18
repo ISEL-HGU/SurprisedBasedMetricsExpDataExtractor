@@ -1,0 +1,3 @@
+import static org.apache.camel.component.olingo4.api.impl.Olingo4Helper.getContentTypeHeader;
+
+                        final ContentType responseContentType = getContentTypeHeader(batchPartHttpResponse);

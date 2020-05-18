@@ -1,0 +1,27 @@
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Deque;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Queue;
+            private final Map<String, String> anonymousNs = new LinkedHashMap<>();
+                        } else {
+                            // maybe there is an anonymous namespace (xmlns)
+                            if (attributes != null) {
+                                ns = attributes.getValue("xmlns");
+                                if (ns != null) {
+                                    anonymousNs.put(qName, ns);
+                                } else if (!anonymousNs.isEmpty()) {
+                                    // grab latest anonymous namespace to use as the namespace as
+                                    // this child tag should use the parents namespace
+                                    List<String> values = new ArrayList<>(anonymousNs.values());
+                                    ns = values.get(values.size() - 1);
+                                }
+                            }
+                    if (attributes != null) {
+                        for (int i = 0; i < attributes.getLength(); i) {
+                            el.setAttribute(attributes.getQName(i), attributes.getValue(i));
+                        }
+
+                anonymousNs.remove(qName);

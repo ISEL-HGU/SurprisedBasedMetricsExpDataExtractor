@@ -1,0 +1,3 @@
+import com.dropbox.core.v2.files.SearchMatch;
+        for (SearchMatch entry : result.getFound()) {
+            fileExtracted.append(entry.getMetadata().getName()).append("-").append(entry.getMetadata().getPathDisplay()).append("\n");

@@ -1,0 +1,12 @@
+     * A Predicate to indicate when an aggregated exchange is complete.
+     * If this is not specified and the AggregationStrategy object implements Predicate,
+     * the aggregationStrategy object will be used as the completionPredicate.
+     * A Predicate to indicate when an aggregated exchange is complete.
+     * If this is not specified and the AggregationStrategy object implements Predicate,
+     * the aggregationStrategy object will be used as the completionPredicate.
+     * A Predicate to indicate when an aggregated exchange is complete.
+     * If this is not specified and the AggregationStrategy object implements Predicate,
+     * the aggregationStrategy object will be used as the completionPredicate.
+     * A Predicate to indicate when an aggregated exchange is complete.
+     * If this is not specified and the AggregationStrategy object implements Predicate,
+     * the aggregationStrategy object will be used as the completionPredicate.

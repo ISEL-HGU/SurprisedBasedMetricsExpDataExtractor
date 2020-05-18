@@ -1,0 +1,1 @@
+        S3Operations operation = exchange.getIn().getHeader(S3Constants.S3_OPERATION, S3Operations.class);

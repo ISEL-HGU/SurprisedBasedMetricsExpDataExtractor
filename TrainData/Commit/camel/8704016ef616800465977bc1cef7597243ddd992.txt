@@ -1,0 +1,4 @@
+ b/core/camel-core/src/main/java/org/apache/camel/impl/DefaultDeferServiceFactory.java
+package org.apache.camel.impl;
+import org.apache.camel.processor.EventNotifierProducer;
+import org.apache.camel.processor.UnitOfWorkProducer;

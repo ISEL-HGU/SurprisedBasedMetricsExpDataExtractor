@@ -1,0 +1,4 @@
+        ClassNode redirect = lambdaType.redirect();
+        if (null == lambdaType || !ClassHelper.isFunctionalInterface(redirect)) {
+        MethodNode abstractMethodNode = ClassHelper.findSAM(redirect);
+        operandStack.replace(redirect, 2);

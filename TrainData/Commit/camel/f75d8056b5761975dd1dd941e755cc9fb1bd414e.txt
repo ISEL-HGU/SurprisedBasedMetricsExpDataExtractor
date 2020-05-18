@@ -1,0 +1,2 @@
+ * Utility to export a spring-boot jar and check the content.
+                .module("camel-websocket")

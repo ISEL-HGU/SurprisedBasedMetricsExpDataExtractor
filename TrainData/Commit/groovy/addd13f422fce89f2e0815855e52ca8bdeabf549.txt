@@ -1,0 +1,1 @@
+     * @return -1 if arguments do not match, 0 if arguments are of the exact type and &gt; 0 when one or more argument is

@@ -1,0 +1,18 @@
+import static org.codehaus.groovy.ast.ClassHelper.VOID_TYPE;
+    private static String getDescription(Parameter node) {
+        return "parameter '"  node.getName()  "'";
+    }
+
+        String msg = "You are not allowed to overwrite the final "  getDescription(superCN)  ".";
+        addError(msg, cn);
+        for (Parameter param : node.getParameters()) {
+            if (param.getType().equals(VOID_TYPE)) {
+                addError("The "  getDescription(param)  " in "   getDescription(node)  " has invalid type void", param);
+            }
+        }
+        if (node.getType().equals(VOID_TYPE)) {
+            addError("The "  getDescription(node)  " has invalid type void", node);
+        }
+        if (expression.getVariableExpression().getOriginType().equals(VOID_TYPE)) {
+            addError("The variable '"  expression.getVariableExpression().getName()  "' has invalid type void", expression);
+        }

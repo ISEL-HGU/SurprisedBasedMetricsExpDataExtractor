@@ -1,0 +1,17 @@
+import java.util.Collection;
+import java.util.Collections;
+import java.util.stream.Collectors;
+    static Map<String, String> determineHeadersFrom(final Response response) {
+                final Object headerValue = inboundMessage.getHeader(headerName);
+
+                if (headerValue instanceof String) {
+                    answer.put(headerName, Collections.singletonList((String) headerValue));
+                } else if (headerValue instanceof String[]) {
+                    answer.put(headerName, Arrays.asList((String[]) headerValue));
+                } else if (headerValue instanceof Collection) {
+                    answer.put(headerName, ((Collection<?>) headerValue).stream().map(String::valueOf)
+                        .collect(Collectors.<String>toList()));
+                } else {
+                    throw new IllegalArgumentException(
+                        "Given value for header `"  headerName  "`, is not String, String array or a Collection");
+                }

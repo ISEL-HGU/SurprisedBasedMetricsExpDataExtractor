@@ -1,0 +1,13 @@
+import org.apache.camel.util.jsse.SSLContextParameters;
+@ConditionalOnBean(type = "org.apache.camel.spring.boot.CamelAutoConfiguration")
+@AutoConfigureAfter(name = "org.apache.camel.spring.boot.CamelAutoConfiguration")
+                SSLContextParameters globalSSLParams = context.getSSLContextParameters();
+                if (globalSSLParams != null) {
+                    ProtocolSocketFactory factory =
+                            new SSLContextParametersSecureProtocolSocketFactory(globalSSLParams, context);
+                    Protocol.registerProtocol("https",
+                            new Protocol(
+                                    "https",
+                                    factory,
+                                    443));
+                }

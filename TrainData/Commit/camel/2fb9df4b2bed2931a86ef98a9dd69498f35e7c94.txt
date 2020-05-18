@@ -1,0 +1,10 @@
+            // clear parameters if its empty
+            if (op.getParameters().isEmpty()) {
+                op.setParameters(null);
+            }
+
+
+        // must include an empty noop response if none exists
+        if (op.getResponses() == null) {
+            op.addResponse("200", new Response());
+        }

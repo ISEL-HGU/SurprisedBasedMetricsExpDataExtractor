@@ -1,0 +1,27 @@
+
+            return getValueStringList(listExpression);
+            list = getValueStringList(listExpression);
+    private static List<String> getValueStringList(ListExpression listExpression) {
+        List<String> list = new ArrayList<String>();
+        for (Expression itemExpr : listExpression.getExpressions()) {
+            if (itemExpr != null && itemExpr instanceof ConstantExpression) {
+                Object value = ((ConstantExpression) itemExpr).getValue();
+                if (value != null) list.add(value.toString());
+            }
+        }
+        return list;
+    }
+
+            list = getTypeList(listExpression);
+            list = getTypeList(listExpression);
+    private static List<ClassNode> getTypeList(ListExpression listExpression) {
+        List<ClassNode> list = new ArrayList<ClassNode>();
+        for (Expression itemExpr : listExpression.getExpressions()) {
+            if (itemExpr != null && itemExpr instanceof ClassExpression) {
+                ClassNode cn = itemExpr.getType();
+                if (cn != null) list.add(cn);
+            }
+        }
+        return list;
+    }
+

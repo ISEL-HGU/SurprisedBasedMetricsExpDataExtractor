@@ -1,0 +1,6 @@
+        String url = "undertow:"  host;
+        if (!ObjectHelper.isEmpty(basePath)) {
+            url = "/"  basePath;
+        }
+        if (!ObjectHelper.isEmpty(uriTemplate)) {
+            url = "/"  uriTemplate;

@@ -1,0 +1,2 @@
+    @Metadata(required = true, defaultValue = "translateText")
+    private TranslateOperations operation = TranslateOperations.translateText;

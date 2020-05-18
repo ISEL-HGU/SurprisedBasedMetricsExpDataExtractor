@@ -1,0 +1,11 @@
+import java.util.Set;
+import com.amazonaws.services.cloudwatch.AmazonCloudWatch;
+
+        checkAndSetRegistryClient(configuration);
+    
+    private void checkAndSetRegistryClient(CwConfiguration configuration) {
+        Set<AmazonCloudWatch> clients = getCamelContext().getRegistry().findByType(AmazonCloudWatch.class);
+        if (clients.size() == 1) {
+            configuration.setAmazonCwClient(clients.stream().findFirst().get());
+        }
+    }

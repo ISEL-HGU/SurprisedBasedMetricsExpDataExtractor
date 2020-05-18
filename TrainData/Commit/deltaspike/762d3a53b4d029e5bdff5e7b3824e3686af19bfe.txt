@@ -1,0 +1,21 @@
+import org.apache.deltaspike.data.api.SingleResultType;
+        initSingleResultType(repositoryMethodMetadata);
+
+        
+    
+    private void initSingleResultType(RepositoryMethodMetadata repositoryMethodMetadata)
+    {
+        SingleResultType singleResultType = repositoryMethodMetadata.getQuery() != null
+                ? repositoryMethodMetadata.getQuery().singleResult()
+                : repositoryMethodMetadata.getMethodPrefix().getSingleResultStyle();
+        
+        if (repositoryMethodMetadata.isReturnsOptional() && singleResultType == SingleResultType.JPA)
+        {
+            repositoryMethodMetadata.setSingleResultType(SingleResultType.OPTIONAL);
+        }
+        else
+        {
+            repositoryMethodMetadata.setSingleResultType(singleResultType);
+        }
+    }
+    

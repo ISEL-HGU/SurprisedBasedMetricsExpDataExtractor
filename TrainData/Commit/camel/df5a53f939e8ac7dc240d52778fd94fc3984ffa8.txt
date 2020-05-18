@@ -1,0 +1,3 @@
+import org.apache.camel.builder.endpoint.EndpointRouteBuilder;
+
+    protected AtomicInteger orderId = new AtomicInteger();

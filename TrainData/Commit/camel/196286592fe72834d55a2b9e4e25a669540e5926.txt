@@ -1,0 +1,1 @@
+        this.xquery.setModuleURIResolver(getModuleURIResolver());

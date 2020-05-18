@@ -1,0 +1,80 @@
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+import org.apache.camel.Service;
+    protected volatile List<Service> childServices;
+
+    public void start() throws Exception {
+        synchronized (lock) {
+            if (status == STARTED) {
+                log.trace("Service already started");
+                return;
+            if (status == STARTING) {
+                log.trace("Service already starting");
+                return;
+            }
+            status = STARTING;
+            log.trace("Starting service");
+                ServiceHelper.startService(childServices);
+                doStart();
+                status = STARTED;
+                log.trace("Service started");
+            } catch (Exception e) {
+                status = FAILED;
+                log.trace("Error while starting service", e);
+                ServiceHelper.stopService(childServices);
+                throw e;
+        synchronized (lock) {
+            if (status == STOPPED || status == SHUTTINGDOWN || status == SHUTDOWN) {
+                log.trace("Service already stopped");
+                return;
+            }
+            if (status == STOPPING) {
+                log.trace("Service already stopping");
+                return;
+            }
+            status = STOPPING;
+            log.trace("Stopping service");
+            try {
+                doStop();
+                ServiceHelper.stopService(childServices);
+                status = STOPPED;
+                log.trace("Service stopped service");
+            } catch (Exception e) {
+                status = FAILED;
+                log.trace("Error while stopping service", e);
+                throw e;
+            }
+    @Override
+    public void shutdown() throws Exception {
+        synchronized (lock) {
+            if (status == SHUTDOWN) {
+                log.trace("Service already shut down");
+                return;
+            }
+            if (status == SHUTTINGDOWN) {
+                log.trace("Service already shutting down");
+                return;
+            }
+            stop();
+            status = SHUTDOWN;
+            log.trace("Shutting down service");
+                doShutdown();
+                ServiceHelper.stopAndShutdownServices(childServices);
+                log.trace("Service shut down");
+                status = SHUTDOWN;
+            } catch (Exception e) {
+                status = FAILED;
+                log.trace("Error shutting down service", e);
+                throw e;
+            }
+        }
+    }
+
+    protected void addChildService(Object childService) {
+        if (childService instanceof Service) {
+            if (childServices == null) {
+                synchronized (lock) {
+                    if (childServices == null) {
+                        childServices = new CopyOnWriteArrayList<>();
+            childServices.add((Service) childService);

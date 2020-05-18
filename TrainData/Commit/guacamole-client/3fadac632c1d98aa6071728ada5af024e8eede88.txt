@@ -1,0 +1,4 @@
+        // Grab the remote host info.
+        if (request.getRemoteHost() != null && !request.getRemoteHost().isEmpty())
+	// Grab the remote ip info.
+        if(request.getRemoteHost() != null && !request.getRemoteAddr().isEmpty())

@@ -1,0 +1,1 @@
+    @Parameter(defaultValue = "${project.build.directory}/../../../core/camel-core")

@@ -1,0 +1,2 @@
+import static org.apache.groovy.ast.tools.ClassNodeUtils.addGeneratedInnerClass;
+        addGeneratedInnerClass(classNode, cmpClass);

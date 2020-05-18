@@ -1,0 +1,2 @@
+    public EventComponent configureEventComponent(CamelContext camelContext)
+            throws Exception {

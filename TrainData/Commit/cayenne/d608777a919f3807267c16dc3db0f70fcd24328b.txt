@@ -1,0 +1,8 @@
+import org.apache.cayenne.configuration.ConfigurationNodeVisitor;
+import org.apache.cayenne.configuration.EmptyConfigurationNodeVisitor;
+        } else {
+            ConfigurationNodeVisitor visitor = new EmptyConfigurationNodeVisitor();
+
+                ((XMLSerializable) data).encodeAsXML(encoder, visitor);
+            } else if (data instanceof List) {
+                    ((XMLSerializable) o).encodeAsXML(encoder, visitor);

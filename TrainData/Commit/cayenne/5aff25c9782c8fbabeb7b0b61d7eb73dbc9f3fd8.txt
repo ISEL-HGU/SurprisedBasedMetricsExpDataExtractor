@@ -1,0 +1,5 @@
+        // Old gradle versions will fail on new JDK
+        int javaMajorVersion = getJavaMajorVersion(System.getProperty("java.version"));
+        if(javaMajorVersion >= 11) {
+            versions = new String[]{"4.8"};
+        } else if (javaMajorVersion < 9) {

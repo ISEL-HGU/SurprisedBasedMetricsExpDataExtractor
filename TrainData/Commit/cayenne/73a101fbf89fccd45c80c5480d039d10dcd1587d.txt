@@ -1,0 +1,18 @@
+import org.apache.cayenne.CayenneRuntimeException;
+        frame.setTitle("* - "  getProjectLocationString());
+        frame.setTitle(getProjectLocationString());
+                File file = new File(project.getConfigurationResource().getURL().toURI());
+        frame.setTitle(getProjectLocationString());
+
+    protected String getProjectLocationString() {
+        if(projectController.getProject().getConfigurationResource() == null) {
+            return "[New Project]";
+        }
+        try {
+            File projectFile = new File(projectController.getProject().getConfigurationResource().getURL().toURI());
+            return projectFile.toString();
+        } catch (URISyntaxException e) {
+            throw new CayenneRuntimeException("Invalid project source URL", e);
+        }
+    }
+

@@ -1,0 +1,12 @@
+import com.amazonaws.services.kafka.model.DescribeClusterRequest;
+import com.amazonaws.services.kafka.model.DescribeClusterResult;
+    
+    @Override
+    public DescribeClusterResult describeCluster(DescribeClusterRequest request) {
+        DescribeClusterResult res = new DescribeClusterResult();
+        ClusterInfo clusterInfo = new ClusterInfo();
+        clusterInfo.setClusterArn("test-kafka");
+        clusterInfo.setState(ClusterState.ACTIVE.name());
+		res.setClusterInfo(clusterInfo);
+		return res;
+    }

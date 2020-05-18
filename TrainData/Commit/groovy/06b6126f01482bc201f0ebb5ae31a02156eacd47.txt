@@ -1,0 +1,10 @@
+import org.apache.groovy.sql.extensions.SqlExtensions;
+ * @deprecated use org.apache.groovy.sql.extensions.SqlExtensions
+@Deprecated
+    @Deprecated
+        return SqlExtensions.toRowResult(rs);
+    @Deprecated
+        return SqlExtensions.toTimestamp(d);
+    @Deprecated
+    @Deprecated
+        return SqlExtensions.iterator(resultSetMetaData);

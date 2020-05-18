@@ -1,0 +1,4 @@
+                LOG.debug("Processing failure of ExchangeId: {}", exchange.getExchangeId());
+            LOG.warn("Failed to rollback the JMS session: {}", e.getMessage());
+                LOG.debug("Processing completion of ExchangeId: {}", exchange.getExchangeId());
+            LOG.warn("Failed to commit the JMS session: {}", e.getMessage());

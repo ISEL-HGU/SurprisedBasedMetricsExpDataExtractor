@@ -1,0 +1,2 @@
+public class RouteStoppedEvent extends AbstractRouteEvent {
+        return "Stopped route: "  getRoute().getId();

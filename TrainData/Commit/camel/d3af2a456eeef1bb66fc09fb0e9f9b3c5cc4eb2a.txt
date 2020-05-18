@@ -1,0 +1,2 @@
+import org.apache.camel.support.IntrospectionSupport;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;

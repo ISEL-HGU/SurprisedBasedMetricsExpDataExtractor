@@ -1,0 +1,42 @@
+import org.apache.camel.*;
+        return dumpRouteAsXml(false, false);
+    }
+
+    public String dumpRouteAsXml(boolean resolvePlaceholders) throws Exception {
+        return dumpRouteAsXml(resolvePlaceholders, false);
+    public String dumpRouteAsXml(boolean resolvePlaceholders, boolean resolveDelegateEndpoints) throws Exception {
+
+                    private String prev;
+
+                        String after = text;
+                        if (resolveDelegateEndpoints && "uri".equals(prev)) {
+                            try {
+                                // must resolve placeholder as the endpoint may use property placeholders
+                                String uri = getContext().resolvePropertyPlaceholders(text);
+                                Endpoint endpoint = context.hasEndpoint(uri);
+                                if (endpoint instanceof DelegateEndpoint) {
+                                    endpoint = ((DelegateEndpoint) endpoint).getEndpoint();
+                                    after = endpoint.getEndpointUri();
+                                }
+                            } catch (Exception e) {
+                                // ignore
+
+                        if (resolvePlaceholders) {
+                            try {
+                                after = getContext().resolvePropertyPlaceholders(after);
+                            } catch (Exception e) {
+                                // ignore
+                            }
+                        }
+
+                        if (!changed.get()) {
+                            changed.set(!text.equals(after));
+                        }
+
+                        // okay the previous must be the attribute key with uri, so it refers to an endpoint
+                        prev = text;
+
+                        return after;
+
+                // okay there were some property placeholder or delegate endpoints replaced so re-create the model
+

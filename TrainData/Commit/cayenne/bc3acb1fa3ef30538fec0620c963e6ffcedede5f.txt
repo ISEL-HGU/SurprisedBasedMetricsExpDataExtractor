@@ -1,0 +1,10 @@
+
+        String catalog = connection.getCatalog();
+        String schema = connection.getSchema();
+
+        artist.setCatalog(catalog);
+        artist.setSchema(schema);
+        gallery.setCatalog(catalog);
+        gallery.setSchema(schema);
+        painting.setCatalog(catalog);
+        painting.setSchema(schema);

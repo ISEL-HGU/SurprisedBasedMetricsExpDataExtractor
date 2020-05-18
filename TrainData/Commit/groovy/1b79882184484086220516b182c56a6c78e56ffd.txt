@@ -1,0 +1,47 @@
+        if (!(vexp.getAccessedVariable() instanceof DynamicVariable)) {
+            if (typeCheckingContext.getEnclosingClosure() == null) {
+                VariableExpression variable = null;
+                if (vexp.getAccessedVariable() instanceof Parameter) {
+                    variable = new ParameterVariableExpression((Parameter) vexp.getAccessedVariable());
+                } else if (vexp.getAccessedVariable() instanceof VariableExpression) {
+                    variable = (VariableExpression) vexp.getAccessedVariable();
+                }
+                if (variable != null) {
+                    ClassNode inferredType = getInferredTypeFromTempInfo(variable, variable.getNodeMetaData(StaticTypesMarker.INFERRED_TYPE));
+                    // instanceof applies, stash away the type, reusing key used elsewhere
+                    if (inferredType != null && !inferredType.getName().equals("java.lang.Object")) {
+                        vexp.putNodeMetaData(StaticTypesMarker.INFERRED_RETURN_TYPE, inferredType);
+                    }
+                }
+            }
+            return;
+        }
+            final ClassNode inferredRightExpressionTypeOrig)
+        ClassNode inferredRightExpressionType = inferredRightExpressionTypeOrig;
+        // see if instanceof applies
+        if (rightExpression instanceof VariableExpression && hasInferredReturnType(rightExpression) && assignmentExpression.getOperation().getType() == EQUAL) {
+            inferredRightExpressionType = rightExpression.getNodeMetaData(StaticTypesMarker.INFERRED_RETURN_TYPE);
+        }
+        // handle instanceof cases
+        if ((expression instanceof VariableExpression) && hasInferredReturnType(expression)) {
+            type = expression.getNodeMetaData(StaticTypesMarker.INFERRED_RETURN_TYPE);
+        }
+            Object key = objectExpression instanceof ParameterVariableExpression
+                    ? ((ParameterVariableExpression) objectExpression).parameter
+                    : extractTemporaryTypeInfoKey(objectExpression);
+        ClassNode typeOfFalse = getType(falseExpression);
+        ClassNode typeOfTrue = getType(trueExpression);
+        // handle instanceof cases
+        if (hasInferredReturnType(falseExpression)) {
+            typeOfFalse = falseExpression.getNodeMetaData(StaticTypesMarker.INFERRED_RETURN_TYPE);
+        }
+        if (hasInferredReturnType(trueExpression)) {
+            typeOfTrue = trueExpression.getNodeMetaData(StaticTypesMarker.INFERRED_RETURN_TYPE);
+        }
+                resultType = wrapTypeIfNecessary(typeOfFalse);
+                resultType = wrapTypeIfNecessary(typeOfTrue);
+    private boolean hasInferredReturnType(Expression expression) {
+        ClassNode type = expression.getNodeMetaData(StaticTypesMarker.INFERRED_RETURN_TYPE);
+        return type != null && !type.getName().equals("java.lang.Object");
+    }
+

@@ -1,0 +1,12 @@
+     *
+     * @throws GuacamoleException
+     *     If the object instance cannot be created.
+            ModelType model) throws GuacamoleException;
+     *
+     * @throws GuacamoleException
+     *     If the model object instance cannot be created.
+            ExternalType object) throws GuacamoleException;
+     *
+     * @throws GuacamoleException
+     *     If any of the object instances cannot be created.
+            Collection<ModelType> models) throws GuacamoleException {

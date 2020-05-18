@@ -1,0 +1,2 @@
+        // Remove private methods
+        EXCLUDED_METHODS.removeIf(m -> Modifier.isPrivate(m.getModifiers()));

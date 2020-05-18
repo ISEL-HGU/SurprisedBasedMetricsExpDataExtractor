@@ -1,0 +1,4 @@
+import org.springframework.boot.actuate.endpoint.AbstractEndpoint;
+public class CamelRoutesEndpoint extends AbstractEndpoint<List<RouteEndpointInfo>> {
+    private static final String ENDPOINT_ID = "camelroutes";
+        super(ENDPOINT_ID);

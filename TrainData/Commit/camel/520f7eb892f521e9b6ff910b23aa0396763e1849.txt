@@ -1,0 +1,2 @@
+        super(ServiceCallDefinition.class.cast(definition));
+        throw new IllegalStateException("Cannot find camel-cloud on the classpath.");

@@ -1,0 +1,3 @@
+import org.apache.guacamole.net.auth.credentials.GuacamoleInsufficientCredentialsException;
+        throw new GuacamoleInsufficientCredentialsException(
+            "Please wait, redirecting to CAS authentication.",

@@ -1,0 +1,10 @@
+  @Override public void put(K key, T persistent) {
+    List<Field> fields = persistent.getSchema().getFields();
+      String mappingBinName = aerospikeParameters.getAerospikeMapping().getBinMapping()
+              .get(fields.get(i).name());
+      if (mappingBinName == null) {
+        throw new RuntimeException(
+                "Aerospike mapping for field ["  persistent.getClass().getName()  "#"  fields
+                        .get(i).name()  "] not found. Wrong gora-aerospike-mapping.xml?");
+      }
+      Bin bin = getBin(mappingBinName, persistent.get(i), fields.get(i));

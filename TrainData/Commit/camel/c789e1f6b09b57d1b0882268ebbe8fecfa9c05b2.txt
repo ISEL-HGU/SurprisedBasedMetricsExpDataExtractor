@@ -1,0 +1,2 @@
+            if (!continuation.isTimeout() && continuation.isResumed()) {
+                if (continuation.isTimeout() || !continuation.isPending()) {

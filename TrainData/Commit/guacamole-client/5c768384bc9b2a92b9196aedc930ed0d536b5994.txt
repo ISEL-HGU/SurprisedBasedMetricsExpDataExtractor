@@ -1,0 +1,2 @@
+     * a default of "(objectClass=*)" is returned.
+     *     "(objectClass=*)" if not specified.

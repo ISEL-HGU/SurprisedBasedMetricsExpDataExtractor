@@ -1,0 +1,9 @@
+
+import org.apache.groovy.util.SystemUtil;
+    private static final boolean GROOVY_PARSER_PROFILING_ENABLED = SystemUtil.getBooleanSafe("groovy.antlr4.profile");
+
+
+        if (GROOVY_PARSER_PROFILING_ENABLED) {
+            this.setProfile(true);
+        }
+

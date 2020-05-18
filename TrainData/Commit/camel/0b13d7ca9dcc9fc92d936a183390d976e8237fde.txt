@@ -1,0 +1,11 @@
+import org.apache.camel.maven.model.SpringBootData;
+        List<SpringBootData> componentData = new ArrayList<>();
+                componentData.add(new SpringBootData(key, javaType, desc, defaultValue));
+                SpringBootData row = componentData.get(i);
+                sb.append("      \"name\": \""  row.getName()  "\",\n");
+                sb.append("      \"type\": \""  row.getJavaType()  "\",\n");
+                sb.append("      \"description\": \""  row.getDescription()  "\"");
+                if (row.getDefaultValue() != null) {
+                    if (springBootDefaultValueQuotes(row.getJavaType())) {
+                        sb.append("      \"defaultValue\": \""  row.getDefaultValue()  "\"\n");
+                        sb.append("      \"defaultValue\": "  row.getDefaultValue()  "\n");

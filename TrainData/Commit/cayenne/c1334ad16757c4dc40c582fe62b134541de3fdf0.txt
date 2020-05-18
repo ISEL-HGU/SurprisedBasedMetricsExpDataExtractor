@@ -1,0 +1,2 @@
+import java.net.URLDecoder;
+                "-PdataMap="  URLDecoder.decode(getClass().getResource("test_datamap.map.xml").getFile(), "UTF-8")

@@ -1,0 +1,7 @@
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import org.apache.cayenne.swing.components.JCayenneCheckBox;
+        distinct = new JCayenneCheckBox();
+        distinct.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {

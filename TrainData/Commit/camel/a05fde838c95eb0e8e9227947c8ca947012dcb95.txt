@@ -1,0 +1,35 @@
+                return invokeBean(beanHolder, beanName, method, exchange);
+     * Invokes the bean and returns the result. If an exception was thrown while invoking the bean, then the
+     * exception is set on the exchange.
+    private static Object invokeBean(BeanHolder beanHolder, String beanName, String methodName, Exchange exchange) {
+        Object result;
+        BeanExpressionProcessor processor = new BeanExpressionProcessor(beanHolder);
+        if (methodName != null) {
+            processor.setMethod(methodName);
+            // enable OGNL like invocation
+            processor.setShorthandMethod(true);
+        try {
+            // copy the original exchange to avoid side effects on it
+            Exchange resultExchange = exchange.copy();
+            // remove any existing exception in case we do OGNL on the exception
+            resultExchange.setException(null);
+            // force to use InOut to retrieve the result on the OUT message
+            resultExchange.setPattern(ExchangePattern.InOut);
+            processor.process(resultExchange);
+            result = resultExchange.getOut().getBody();
+
+            // propagate properties and headers from result
+            if (resultExchange.hasProperties()) {
+                exchange.getProperties().putAll(resultExchange.getProperties());
+            if (resultExchange.getOut().hasHeaders()) {
+                exchange.getIn().getHeaders().putAll(resultExchange.getOut().getHeaders());
+
+            // propagate exceptions
+            if (resultExchange.getException() != null) {
+                exchange.setException(resultExchange.getException());
+            }
+        } catch (Throwable e) {
+            throw new RuntimeBeanExpressionException(exchange, beanName, methodName, e);
+        return result;
+                    Object newResult = invokeBean(holder, beanName, methodName, resultExchange);
+                    result = newResult;

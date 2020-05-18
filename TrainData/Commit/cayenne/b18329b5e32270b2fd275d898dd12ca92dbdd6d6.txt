@@ -1,0 +1,5 @@
+import org.apache.cayenne.dba.PkGenerator;
+	@Override
+	protected PkGenerator createPkGenerator() {
+		return new SQLServerPkGenerator(this);
+	}

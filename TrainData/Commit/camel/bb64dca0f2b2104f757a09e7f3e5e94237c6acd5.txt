@@ -1,0 +1,2 @@
+ * Use twitter-directmessage twitter-search twitter-streaming and
+ * twitter-timeline instead of this component.

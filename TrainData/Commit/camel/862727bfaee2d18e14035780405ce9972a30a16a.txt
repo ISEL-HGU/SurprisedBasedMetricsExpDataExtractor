@@ -1,0 +1,6 @@
+import java.io.IOException;
+            if (ioSession != null && !closedByMina(cause)) {
+        private boolean closedByMina(Throwable cause) {
+            return cause instanceof IOException;
+        }
+

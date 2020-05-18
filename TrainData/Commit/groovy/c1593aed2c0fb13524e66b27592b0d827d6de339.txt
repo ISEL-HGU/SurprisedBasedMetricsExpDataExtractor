@@ -1,0 +1,3 @@
+            scriptClass.getMethod("main", String[].class);
+            constructor = scriptClass.getConstructor((new String[]{}).getClass());
+                constructor = scriptClass.getConstructor();

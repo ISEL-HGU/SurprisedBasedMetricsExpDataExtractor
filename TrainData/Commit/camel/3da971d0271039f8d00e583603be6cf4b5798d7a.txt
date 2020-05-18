@@ -1,0 +1,1 @@
+                        getLog().debug("Reusing the existing pom.xml for the starter");

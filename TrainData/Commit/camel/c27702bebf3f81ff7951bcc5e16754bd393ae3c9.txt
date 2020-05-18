@@ -1,0 +1,1 @@
+            podList = getEndpoint().getKubernetesClient().pods().inAnyNamespace().list();

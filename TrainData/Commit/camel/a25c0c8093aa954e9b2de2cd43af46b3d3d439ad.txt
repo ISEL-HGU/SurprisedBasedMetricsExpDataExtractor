@@ -1,0 +1,3 @@
+ b/platforms/spring-boot/components-starter/camel-hdfs-starter/src/main/java/org/apache/camel/component/hdfs2/springboot/HdfsComponentConfiguration.java
+@ConfigurationProperties(prefix = "camel.component.hdfs")
+     * Whether to enable auto configuration of the hdfs component. This is

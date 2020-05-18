@@ -1,0 +1,6 @@
+ b/platforms/spring-boot/components-starter/camel-kubernetes-starter/src/main/java/org/apache/camel/component/openshift/builds/springboot/OpenshiftBuildsComponentConfiguration.java
+package org.apache.camel.component.openshift.builds.springboot;
+ * The Openshift Builds component provides a producer to execute openshift build
+ * operations.
+@ConfigurationProperties(prefix = "camel.component.openshift-builds")
+public class OpenshiftBuildsComponentConfiguration

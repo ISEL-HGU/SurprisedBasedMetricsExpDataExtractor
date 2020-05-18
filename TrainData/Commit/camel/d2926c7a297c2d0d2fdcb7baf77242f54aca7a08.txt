@@ -1,0 +1,2 @@
+import com.amazonaws.regions.Regions;
+            AmazonSNS client = AmazonSNSClientBuilder.standard().withCredentials(credentialsProvider).withRegion(Regions.valueOf(configuration.getRegion())).build();

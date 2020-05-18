@@ -1,0 +1,7 @@
+import org.apache.camel.util.ObjectHelper;
+import org.apache.camel.util.StringHelper;
+        // validate
+        StringHelper.notEmpty(lockMapName, "lockMapName", this);
+        StringHelper.notEmpty(lockKey, "lockKey", this);
+        StringHelper.notEmpty(lockValue, "lockValue", this);
+

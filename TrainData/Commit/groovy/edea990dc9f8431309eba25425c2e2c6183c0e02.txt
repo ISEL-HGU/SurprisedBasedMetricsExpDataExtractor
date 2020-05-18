@@ -1,0 +1,30 @@
+    protected ClassNode getType(final ASTNode exp) {
+        if (cn != null) {
+            return cn;
+        }
+        }
+        if (exp instanceof VariableExpression) {
+            final VariableExpression vexp = (VariableExpression) exp;
+            if (selfTrait != null) return makeSelf(selfTrait);
+                ClassNode[] closureParamTypes = (ClassNode[]) (enclosingClosure != null ? enclosingClosure.getClosureExpression().getNodeMetaData(StaticTypesMarker.CLOSURE_ARGUMENTS) : null);
+                if (type == null && enclosingClosure != null && "it".equals(variable.getName()) && closureParamTypes != null) {
+                    if (parameters.length == 0 && getTemporaryTypesForExpression(vexp) == null && closureParamTypes.length != 0) {
+                    storeType(vexp, type);
+            return vexp.getOriginType();
+        }
+        if (exp instanceof MapExpression) {
+        if (exp instanceof ClosureExpression) {
+            ClassNode irt = getInferredReturnType(exp);
+            if (irt != null) {
+                irt = wrapTypeIfNecessary(irt);
+                ClassNode result = CLOSURE_TYPE.getPlainNodeReference();
+                result.setGenericsTypes(new GenericsType[]{new GenericsType(irt)});
+                return result;
+            }
+        } else if (exp instanceof MethodCall) {
+            MethodNode target = (MethodNode) exp.getNodeMetaData(StaticTypesMarker.DIRECT_METHOD_CALL_TARGET);
+            if (target != null) {
+                return getType(target);
+            }
+        }
+        return ((Expression) exp).getType();

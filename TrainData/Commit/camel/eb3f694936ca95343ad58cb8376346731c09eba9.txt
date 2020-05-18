@@ -1,0 +1,3 @@
+    protected void addConnector(NexusArtifactDto dto, String name, String description, String labels, String connectorJson, String connectorSchemaJson) {
+        super.addConnector(dto, name, description, labels, connectorJson, connectorSchemaJson);
+

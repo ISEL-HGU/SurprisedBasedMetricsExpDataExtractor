@@ -1,0 +1,9 @@
+import org.apache.directory.api.ldap.model.message.BindResponse;
+import org.apache.directory.api.ldap.model.message.ResultCodeEnum;
+            BindResponse bindResponse = ldapConnection.bind(bindRequest);
+            if (bindResponse.getLdapResult().getResultCode() == ResultCodeEnum.SUCCESS)
+            
+            else
+                throw new GuacamoleInvalidCredentialsException("Error binding"
+                         " to server: "  bindResponse.toString(),
+                        CredentialsInfo.USERNAME_PASSWORD);

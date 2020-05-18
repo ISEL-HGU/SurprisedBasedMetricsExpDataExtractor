@@ -1,0 +1,4 @@
+import java.util.List;
+
+ * Defines API of a cache that stores query results.
+ *

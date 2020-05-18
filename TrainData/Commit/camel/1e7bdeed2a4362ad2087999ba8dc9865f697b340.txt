@@ -1,0 +1,16 @@
+ * The second option allows a custom check to be performed without having to take on the possibility of
+    private final AtomicInteger failures = new AtomicInteger();
+    private final AtomicInteger state = new AtomicInteger(STATE_CLOSED);
+    private volatile Timer halfOpenTimer;
+    private volatile long lastFailure;
+    private volatile long openedAt;
+        LOG.debug("Initializing ThrottlingExceptionRoutePolicy route policy...");
+                LOG.debug("Opening circuit...");
+                LOG.debug("Opening circuit...");
+                LOG.debug("Closing circuit...");
+                LOG.debug("Checking an open circuit...");
+                        LOG.debug("Closing circuit...");
+                        LOG.debug("Opening circuit...");
+                    LOG.debug("Half opening circuit...");
+            return String.format("State %s, failures %d, last failure %d ms ago", state, failures.get(), System.currentTimeMillis() - lastFailure);
+            return String.format("State %s, failures %d", state, failures.get());

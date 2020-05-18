@@ -1,0 +1,2 @@
+import org.apache.camel.Suspendable;
+public class CxfRsConsumer extends DefaultConsumer implements Suspendable {

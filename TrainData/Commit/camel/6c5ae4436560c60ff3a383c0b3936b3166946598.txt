@@ -1,0 +1,3 @@
+import org.apache.camel.support.ExchangeHelper;
+import org.apache.camel.support.ResourceHelper;
+import org.apache.camel.support.service.ServiceSupport;

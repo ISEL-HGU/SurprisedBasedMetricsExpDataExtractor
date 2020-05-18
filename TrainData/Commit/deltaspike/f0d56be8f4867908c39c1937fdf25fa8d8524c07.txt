@@ -1,0 +1,6 @@
+    public void registerUserConfigSources(@Observes AfterBeanDiscovery abd)
+    public void validateConfiguration(@Observes AfterDeploymentValidation adv)
+    {
+        processConfigurationValidation(adv);
+    }
+

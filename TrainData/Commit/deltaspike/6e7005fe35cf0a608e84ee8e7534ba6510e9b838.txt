@@ -1,0 +1,20 @@
+
+    private ConfigResolver.ConfigChanged<T> valueChangedCallback = null;
+    public ConfigResolver.TypedResolver<T> onChange(ConfigResolver.ConfigChanged<T> valueChangedCallback)
+    {
+        this.valueChangedCallback = valueChangedCallback;
+        return this;
+    }
+
+    @Override
+        if ((logChanges || valueChangedCallback != null)
+            && (value != null && !value.equals(lastValue) || (value == null && lastValue != null)))
+            if (logChanges)
+            {
+                LOG.log(Level.INFO, "New value {0} for key {1}.",
+            }
+
+            if (valueChangedCallback != null)
+            {
+                valueChangedCallback.onValueChange(keyOriginal, lastValue, value);
+            }

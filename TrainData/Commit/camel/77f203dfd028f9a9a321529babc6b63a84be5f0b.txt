@@ -1,0 +1,2 @@
+import org.apache.velocity.tools.generic.EscapeTool;
+                    context.put("esc", new EscapeTool());

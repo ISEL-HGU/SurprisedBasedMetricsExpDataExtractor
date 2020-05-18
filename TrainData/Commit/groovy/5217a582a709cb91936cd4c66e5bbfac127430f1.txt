@@ -1,0 +1,6 @@
+    private static final Map<ClassNode, String> PRIMITIVE_TYPE_TO_DESCRIPTION_MAP = Maps.of(
+    public static final Map<String, ClassNode> NAME_TO_PRIMITIVE_TYPE_MAP = Maps.of(
+        return NAME_TO_PRIMITIVE_TYPE_MAP.containsKey(name);
+        return PRIMITIVE_TYPE_TO_DESCRIPTION_MAP.containsKey(type);
+        String desc = PRIMITIVE_TYPE_TO_DESCRIPTION_MAP.get(type);
+        ClassNode type = NAME_TO_PRIMITIVE_TYPE_MAP.get(name);

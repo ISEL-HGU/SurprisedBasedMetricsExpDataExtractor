@@ -1,0 +1,7 @@
+
+
+
+            return CastUtils.cast((Class<?>) o);
+    void replaceWithClass(Properties props, String key, ClassResolver resolver, Class<?> type) {
+
+

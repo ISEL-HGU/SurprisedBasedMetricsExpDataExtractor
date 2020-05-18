@@ -1,0 +1,11 @@
+import org.codehaus.groovy.control.Phases;
+
+                if (isSource(includeName)) {
+                    cu.addSource(file);
+                }
+                if (includeName.endsWith(".groovy")) {
+            cu.compile(Phases.CONVERSION); // Generate the stubs
+
+    private boolean isSource(String includeName) {
+        return includeName.endsWith(".groovy") || includeName.endsWith(".java");
+    }

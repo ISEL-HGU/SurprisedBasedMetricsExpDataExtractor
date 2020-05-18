@@ -1,0 +1,16 @@
+import java.util.function.Function;
+        return mapJoinsToAttributes(DbJoin::getTarget);
+        return mapJoinsToAttributes(DbJoin::getSource);
+    }
+
+    private Collection<DbAttribute> mapJoinsToAttributes(Function<DbJoin, DbAttribute> mapper) {
+        // fast path for common case
+        if(joins.size() == 1) {
+            return Collections.singletonList(mapper.apply(joins.get(0)));
+        }
+        Collection<DbAttribute> result = new ArrayList<>(joins.size());
+        for(DbJoin join : joins) {
+            result.add(mapper.apply(join));
+        }
+        return result;
+        DbEntity targetEntity = getTargetEntity();

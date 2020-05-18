@@ -1,0 +1,2 @@
+        this.lexer = new GroovyLangLexer(createCharStream(sourceUnit));
+        this.parser.setErrorHandler(new DescriptiveErrorStrategy(this.lexer.getInputStream()));

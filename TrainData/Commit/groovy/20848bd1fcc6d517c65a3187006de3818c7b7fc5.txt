@@ -1,0 +1,38 @@
+import java.util.List;
+            processClass((ClassNode) candidate, visitor);
+            processConstructorOrMethod((MethodNode) candidate, visitor);
+            processField((FieldNode) candidate, visitor);
+            processLocalVariable((DeclarationExpression) candidate, visitor);
+        if (!isEnabled(cNode)) return;
+    private void processLocalVariable(DeclarationExpression de, ClassCodeVisitorSupport visitor) {
+        if (!isEnabled(de)) return;
+        if (de.getRightExpression() instanceof ClosureExpression) {
+            visitor.visitDeclarationExpression(de);
+        }
+    }
+
+    private void processField(FieldNode fNode, ClassCodeVisitorSupport visitor) {
+        if (!isEnabled(fNode)) return;
+        if (fNode.hasInitialExpression() && fNode.getInitialExpression() instanceof ClosureExpression) {
+            visitor.visitField(fNode);
+        }
+        if (!isEnabled(mNode)) return;
+
+    private boolean isEnabled(final AnnotatedNode node) {
+        if (node == null) return false;
+        List<AnnotationNode> annotations = node.getAnnotations(MY_TYPE);
+        if (annotations != null) {
+            // any explicit false for enabled disables functionality
+            // this allows, for example, configscript to set all
+            // classes to true and one class to be explicitly disabled
+            for (AnnotationNode anno : annotations) {
+                // abort if explicit false found
+                if (memberHasValue(anno, "enabled", false)) return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean hasNoExplicitAutoFinal(AnnotatedNode node) {
+        return node.getAnnotations(MY_TYPE).isEmpty();
+    }

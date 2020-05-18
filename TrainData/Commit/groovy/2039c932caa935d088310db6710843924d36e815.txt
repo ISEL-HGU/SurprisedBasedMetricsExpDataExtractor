@@ -1,0 +1,51 @@
+ *
+        Expression typeOrTargetRef = methodReferenceExpression.getExpression();
+        ClassNode typeOrTargetRefType = typeOrTargetRef.getType();
+        String methodRefName = methodReferenceExpression.getMethodName().getText();
+        boolean isConstructorReference = isConstructorReference(methodRefName);
+            methodRefName = createSyntheticMethodForConstructorReference();
+            addSyntheticMethodForConstructorReference(methodRefName, typeOrTargetRefType, parametersWithExactType);
+        MethodNode methodRefMethod = findMethodRefMethod(methodRefName, parametersWithExactType, typeOrTargetRef, isConstructorReference);
+        if (null == methodRefMethod) {
+                     methodRefName  "("  Arrays.asList(parametersWithExactType)  ")] in type["  typeOrTargetRefType.getName()  "]");
+        methodRefMethod.putNodeMetaData(ORIGINAL_PARAMETERS_WITH_EXACT_TYPE, parametersWithExactType);
+        boolean isClassExpr = isClassExpr(typeOrTargetRef);
+            if (methodRefMethod.isStatic()) {
+                ClassExpression classExpression = new ClassExpression(typeOrTargetRefType);
+                classExpression.setSourcePosition(typeOrTargetRef);
+                typeOrTargetRef = classExpression;
+                typeOrTargetRef.visit(controller.getAcg());
+                createAbstractMethodDesc(functionalInterfaceType, typeOrTargetRef),
+                        methodRefMethod.isStatic() || isConstructorReference ? Opcodes.H_INVOKESTATIC : Opcodes.H_INVOKEVIRTUAL,
+                        isConstructorReference ? controller.getClassNode() : typeOrTargetRefType,
+                        methodRefMethod)
+                                        ?
+                                        new ArrayExpression(
+                                        )
+                                        :
+                                        ctorX(returnType, ctorArgs)
+    private boolean isConstructorReference(String methodRefName) {
+        return "new".equals(methodRefName);
+    private static boolean isClassExpr(Expression methodRef) {
+        return methodRef instanceof ClassExpression;
+    private String createAbstractMethodDesc(ClassNode functionalInterfaceType, Expression methodRef) {
+        if (!(isClassExpr(methodRef))) {
+            ClassNode methodRefTargetType = methodRef.getType();
+            prependParameter(methodReferenceSharedVariableList, MR_EXPR_INSTANCE, methodRefTargetType);
+    private MethodNode findMethodRefMethod(String methodRefName, Parameter[] abstractMethodParameters, Expression typeOrTargetRef, boolean isConstructorReference) {
+            return controller.getClassNode().getMethod(methodRefName, abstractMethodParameters);
+        ClassNode typeOrTargetRefType = typeOrTargetRef.getType();
+        List<MethodNode> methodNodeList = typeOrTargetRefType.getMethods(methodRefName);
+        List<MethodNode> candidates = new LinkedList<>();
+                    candidates.add(mn);
+                if (isClassExpr(typeOrTargetRef)) {
+                    candidates.add(mn);
+        return chooseMethodRefMethodCandidate(typeOrTargetRef, candidates);
+    private MethodNode chooseMethodRefMethodCandidate(Expression methodRef, List<MethodNode> candidates) {
+        if (1 == candidates.size()) return candidates.get(0);
+        return candidates.stream()
+                .map(e -> Tuple.tuple(e, matchingScore(e, methodRef)))
+    private static Integer matchingScore(MethodNode mn, Expression typeOrTargetRef) {
+        ClassNode typeOrTargetRefType = typeOrTargetRef.getType();
+        for (ClassNode cn = mn.getDeclaringClass(); null != cn && !cn.equals(typeOrTargetRefType); cn = cn.getSuperClass()) {
+        boolean isClassExpr = isClassExpr(typeOrTargetRef);

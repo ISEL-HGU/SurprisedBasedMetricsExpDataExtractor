@@ -1,0 +1,2 @@
+            "org.fusesource.leveldbjni.JniDBFactory",
+            "org.iq80.leveldb.impl.Iq80DBFactory"

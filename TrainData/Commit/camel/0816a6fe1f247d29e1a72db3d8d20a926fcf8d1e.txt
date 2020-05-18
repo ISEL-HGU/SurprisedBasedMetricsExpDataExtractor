@@ -1,0 +1,14 @@
+
+        final UriInfo uriInfo = parseUri(edm, resourcePath, queryOptions, serviceUri);
+        final UriInfo uriInfo = parseUri(edm, resourcePath, queryOptions, serviceUri);
+        final UriInfo uriInfo = parseUri(edm, resourcePath, null, serviceUri);
+        final UriInfo uriInfo = parseUri(edm, resourcePath, null, serviceUri);
+        final UriInfo uriInfo = parseUri(edm, resourcePath, null, serviceUri);
+        final UriInfo uriInfo = parseUri(edm, resourcePath, null, serviceUri);
+        final UriInfo uriInfo = parseUri(edm, SegmentType.BATCH.getValue(), null, serviceUri);
+                    final UriInfo uriInfo = parseUri(edm, batchQueryPart.getResourcePath(), concatQueryParams(batchQueryPart.getQueryParams()), serviceUri);
+                    final UriInfo uriInfo = parseUri(edm, batchChangePart.getResourcePath(), null, serviceUri);
+                    final UriInfo uriInfo = parseUri(edm, batchPartQueryRequest.getResourcePath(), null, serviceUri);
+                                                             null, serviceUri);
+    private static UriInfo parseUri(Edm edm, String resourcePath, String queryOptions, String serviceUri) {
+            result = parser.parseUri(resourcePath, queryOptions, null, serviceUri);

@@ -1,0 +1,5 @@
+            Expression firstKeyExpression;
+            int mapEntryExpressionListSize = mapEntryExpressionList.size();
+            if (mapEntryExpressionListSize == 0) {
+            } else if (mapEntryExpressionListSize == 1 && (firstKeyExpression = mapEntryExpressionList.get(0).getKeyExpression()) instanceof SpreadMapExpression) {
+                right = firstKeyExpression;

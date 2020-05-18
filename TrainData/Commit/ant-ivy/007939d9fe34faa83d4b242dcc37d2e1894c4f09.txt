@@ -1,0 +1,8 @@
+        /**
+         * Deprecated because of renaming due spell check.
+         */
+        @Deprecated
+        public void childHanlded(DH child) throws SAXParseException {
+            childHandled(child);
+        }
+

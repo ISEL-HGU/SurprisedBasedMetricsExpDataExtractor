@@ -1,0 +1,18 @@
+import org.codehaus.groovy.ast.stmt.BlockStatement;
+import java.util.IdentityHashMap;
+    protected final LinkedList<BlockStatement> enclosingBlocks = new LinkedList<BlockStatement>();
+
+
+
+    /**
+     * This field used for type derivation
+     * Check IfStatement matched pattern :
+     * Object var1;
+     * if (!(var1 instanceOf Runnable)){
+     * return
+     * }
+     * // Here var1 instance of Runnable
+     */
+    protected final IdentityHashMap<BlockStatement, Map<VariableExpression, List<ClassNode>>> blockStatements2Types = new IdentityHashMap<BlockStatement, Map<VariableExpression, List<ClassNode>>>();
+
+

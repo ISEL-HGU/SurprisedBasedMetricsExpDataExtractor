@@ -1,0 +1,7 @@
+    /**
+     * Configuration of CamelContext properties such as limit of debug logging
+     * and other general options.
+     */
+    /**
+     * Miscellaneous configurations
+     */

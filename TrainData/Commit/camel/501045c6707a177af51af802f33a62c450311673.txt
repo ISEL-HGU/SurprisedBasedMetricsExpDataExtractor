@@ -1,0 +1,25 @@
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+import org.apache.camel.spi.ExecutorServiceManager;
+    private ExecutorServiceManager executorServiceManager;
+    private ScheduledExecutorService scheduledExecutorService;
+        this.executorServiceManager = endpoint.getCamelContext().getExecutorServiceManager();
+        this.scheduledExecutorService = this.executorServiceManager.newSingleThreadScheduledExecutor(this, "ConsulEventConsumer");
+    @Override
+    protected void doStop() throws Exception {
+        executorServiceManager.shutdownGraceful(scheduledExecutorService);
+        super.doStop();
+    }
+
+
+        public void watch(final EventClient client) {
+            scheduledExecutorService.schedule(new Runnable() {
+                @Override
+                public void run() {
+                    client.listEvents(
+                        key,
+                        QueryOptions.blockSeconds(configuration.getBlockSeconds(), index.get()).build(),
+                        EventWatcher.this
+                    );
+                }
+            }, configuration.getBlockSeconds(), TimeUnit.SECONDS);

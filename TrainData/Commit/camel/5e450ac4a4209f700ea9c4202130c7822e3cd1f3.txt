@@ -1,0 +1,23 @@
+
+    /**
+     * @deprecated use {@link PropertyBindingSupport}
+     */
+    @Deprecated
+    /**
+     * @deprecated use {@link PropertyBindingSupport}
+     */
+    @Deprecated
+    @Deprecated
+    /**
+     * @deprecated use {@link PropertyBindingSupport}
+     */
+    @Deprecated
+
+    /**
+     * @deprecated use {@link PropertyBindingSupport}
+     */
+    @Deprecated
+    /**
+     * @deprecated use {@link PropertyBindingSupport}
+     */
+    @Deprecated

@@ -1,0 +1,16 @@
+    
+    @XmlAttribute
+    private String mdcLoggingKeysPattern;
+
+	public String getMdcLoggingKeysPattern() {
+		return mdcLoggingKeysPattern;
+	}
+
+	public void setMdcLoggingKeysPattern(String mdcLoggingKeysPattern) {
+		this.mdcLoggingKeysPattern = mdcLoggingKeysPattern;
+	}
+
+	@Override
+	public String getMDCLoggingKeysPattern() {
+		return mdcLoggingKeysPattern;
+	}

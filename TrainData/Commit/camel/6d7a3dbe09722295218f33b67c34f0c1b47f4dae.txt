@@ -1,0 +1,1 @@
+            LOG.trace("createFunction command returned the error code {}", ase.getErrorCode());

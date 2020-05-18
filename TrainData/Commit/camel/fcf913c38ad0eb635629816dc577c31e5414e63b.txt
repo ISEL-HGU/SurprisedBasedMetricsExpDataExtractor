@@ -1,0 +1,20 @@
+import org.apache.camel.model.HystrixConfigurationDefinition;
+import org.apache.camel.model.ModelCamelContext;
+        Map<String, Object> hystrixProperties = new LinkedHashMap<>();
+            } else if (key.startsWith("camel.hystrix.")) {
+                // grab the value
+                String value = prop.getProperty(key);
+                String option = key.substring(14);
+                hystrixProperties.put(option, value);
+            setCamelProperties(camelContext, camelContext, properties, true);
+        if (!hystrixProperties.isEmpty()) {
+            LOG.info("Auto configuring Hystrix EIP from loaded properties: {}", hystrixProperties.size());
+            ModelCamelContext model = camelContext.adapt(ModelCamelContext.class);
+            HystrixConfigurationDefinition hystrix = model.getHystrixConfiguration(null);
+            if (hystrix == null) {
+                hystrix = new HystrixConfigurationDefinition();
+                model.setHystrixConfiguration(hystrix);
+            }
+            setCamelProperties(camelContext, hystrix, hystrixProperties, true);
+        }
+            setCamelProperties(camelContext, config, properties, true);

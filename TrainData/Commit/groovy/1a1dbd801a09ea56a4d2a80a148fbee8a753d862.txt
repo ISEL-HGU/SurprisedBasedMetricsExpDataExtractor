@@ -1,0 +1,10 @@
+        validateMethodDeclaration(ctx, methodNode, modifierManager, classNode);
+    private void validateMethodDeclaration(MethodDeclarationContext ctx, MethodNode methodNode, ModifierManager modifierManager, ClassNode classNode) {
+
+            boolean isInterfaceOrAbstractClass = asBoolean(classNode) && classNode.isAbstract() && !classNode.isAnnotationDefinition();
+            if (isInterfaceOrAbstractClass && !modifierManager.contains(DEFAULT) && isAbstractMethod && hasMethodBody) {
+                throw createParsingFailedException("You defined an abstract method["  methodNode.getName()  "] with body. Try removing the method body"  (classNode.isInterface() ? ", or declare it default" : ""), methodNode);
+            }
+                                .map(this::visitBlockStatement)
+                                .filter(e -> asBoolean(e))
+                                .collect(Collectors.toList())),

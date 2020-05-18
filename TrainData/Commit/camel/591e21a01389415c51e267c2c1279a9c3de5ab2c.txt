@@ -1,0 +1,10 @@
+     * Sets exclude pattern(s) that will disable tracing for Camel messages that
+     * matches the pattern.
+     * Activate or deactivate dash encoding in headers (required by JMS) for
+     * messaging
+    public Boolean getEncoding() {
+        return encoding;
+    }
+    public void setEncoding(Boolean encoding) {
+        this.encoding = encoding;
+    }

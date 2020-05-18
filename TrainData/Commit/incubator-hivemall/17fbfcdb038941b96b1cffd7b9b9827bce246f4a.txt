@@ -1,0 +1,10 @@
+        return elements.size();
+        long index = index(row, col);
+        elements.put(index, value);
+        this.numRows = Math.max(numRows, row  1);
+        this.numColumns = Math.max(numColumns, col  1);
+        long index = index(row, col);
+        float old = elements.put(index, value);
+        this.numRows = Math.max(numRows, row  1);
+        this.numColumns = Math.max(numColumns, col  1);
+        if (elements.size() == 0) {

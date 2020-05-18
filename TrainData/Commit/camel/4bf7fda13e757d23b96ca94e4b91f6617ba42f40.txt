@@ -1,0 +1,1 @@
+                writer.append("            ").append(v).append(" = new ").append(f).append("();\n");

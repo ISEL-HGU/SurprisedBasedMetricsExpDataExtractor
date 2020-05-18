@@ -1,0 +1,6 @@
+        Configuration.ConfigurationBuilder builder = Configuration.builder();
+            builder.options(options);
+        if (suppressExceptions) {
+            builder.options(SUPPRESS_EXCEPTIONS);
+        }
+        this.configuration = builder.build();

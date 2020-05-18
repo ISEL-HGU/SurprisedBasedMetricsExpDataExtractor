@@ -1,0 +1,1 @@
+                Bson removeObj = exchange.getIn().getMandatoryBody(Bson.class);

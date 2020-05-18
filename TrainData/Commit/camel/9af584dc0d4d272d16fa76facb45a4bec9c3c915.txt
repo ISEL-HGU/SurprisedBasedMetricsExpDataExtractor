@@ -1,0 +1,2 @@
+import com.amazonaws.regions.Regions;
+            AmazonKinesis client = AmazonKinesisClientBuilder.standard().withCredentials(credentialsProvider).withRegion(Regions.valueOf(configuration.getRegion())).build();

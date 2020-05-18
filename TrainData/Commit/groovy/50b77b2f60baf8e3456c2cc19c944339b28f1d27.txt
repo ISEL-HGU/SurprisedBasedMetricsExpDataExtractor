@@ -1,0 +1,19 @@
+import java.util.LinkedList;
+     * Find all traits associated with the given classnode
+     *
+     * @param cNode the given classnode
+     * @return the list of ordered trait classnodes
+     */
+    public static List<ClassNode> findTraits(ClassNode cNode) {
+        LinkedHashSet<ClassNode> interfaces = new LinkedHashSet<ClassNode>();
+        collectAllInterfacesReverseOrder(cNode, interfaces);
+        List<ClassNode> traits = new LinkedList<ClassNode>();
+        for (ClassNode candidate : interfaces) {
+            if (isAnnotatedWithTrait(candidate)) {
+                traits.add(candidate);
+            }
+        }
+        return traits;
+    }
+
+    /**

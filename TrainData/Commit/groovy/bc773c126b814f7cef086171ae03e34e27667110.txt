@@ -1,0 +1,5 @@
+
+        this(value, false);
+        return super.toString()  "["  value  "]";
+     */
+        return value == null ? "null" : value.toString();

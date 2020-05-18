@@ -1,0 +1,3 @@
+import org.apache.directory.ldap.client.api.LdapNetworkConnection;
+    public Map<String, User> getUsers(LdapNetworkConnection ldapConnection)
+    public List<Dn> getUserDNs(LdapNetworkConnection ldapConnection,

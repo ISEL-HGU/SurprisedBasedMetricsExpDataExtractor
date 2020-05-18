@@ -1,0 +1,16 @@
+import java.util.regex.Pattern;
+    private static final Pattern SECRETS = Pattern.compile(".*(passphrase|password|secretKey).*", Pattern.CASE_INSENSITIVE);
+                        if (LOG.isTraceEnabled()) {
+                            // hide sensitive data
+                            String val = ref != null ? ref.toString() : "";
+                            if (SECRETS.matcher(name).find()) {
+                                val = "xxxxxx";
+                            }
+                            LOG.trace("Configured property: {} on bean: {} with value: {}", new Object[]{name, target, val});
+                        if (LOG.isTraceEnabled()) {
+                            // hide sensitive data
+                            String val = ref != null ? ref.toString() : "";
+                            if (SECRETS.matcher(name).find()) {
+                                val = "xxxxxx";
+                            }
+                            LOG.trace("Configured property: {} on bean: {} with value: {}", new Object[]{name, target, val});

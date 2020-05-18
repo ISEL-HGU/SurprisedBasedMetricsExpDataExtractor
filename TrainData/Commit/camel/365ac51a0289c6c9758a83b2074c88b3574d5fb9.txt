@@ -1,0 +1,6 @@
+            if ("java.util.List<org.apache.camel.model.PropertyDefinition>".equalsIgnoreCase(type)) {
+                type = "java.util.Map<java.lang.String, java.lang.String>";
+            }
+
+                if ("java.lang.String".equals(type)) {
+                } else if ("long".equals(type) || "java.lang.Long".equals(type)) {

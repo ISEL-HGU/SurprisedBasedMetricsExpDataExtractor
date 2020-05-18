@@ -1,0 +1,10 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+    private static final Logger LOG = LoggerFactory.getLogger(CamelClientRemoting.class);
+
+        LOG.info("Notice this client requires that the CamelServer is already running!");
+        LOG.info("Invoking the multiply with 33");
+
+
+        LOG.info("... the result is: {}", response);

@@ -1,0 +1,6 @@
+     * If {@code service} is both {@link org.apache.camel.Suspendable} and {@link org.apache.camel.SuspendableService} then
+     * its {@link org.apache.camel.SuspendableService#resume()} is called but
+     * {@link org.apache.camel.Suspendable} and {@link org.apache.camel.SuspendableService} then its
+        if (service instanceof Suspendable && service instanceof SuspendableService) {
+     * its {@link org.apache.camel.SuspendableService#suspend()} is called but
+     * {@link org.apache.camel.Suspendable} and {@link org.apache.camel.SuspendableService} then its

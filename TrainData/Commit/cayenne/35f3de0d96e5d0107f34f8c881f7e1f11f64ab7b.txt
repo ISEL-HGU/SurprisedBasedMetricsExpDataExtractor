@@ -1,0 +1,2 @@
+ b/cayenne-cache-invalidation/src/test/java/org/apache/cayenne/cache/invalidation/db/auto/_E2.java
+package org.apache.cayenne.cache.invalidation.db.auto;

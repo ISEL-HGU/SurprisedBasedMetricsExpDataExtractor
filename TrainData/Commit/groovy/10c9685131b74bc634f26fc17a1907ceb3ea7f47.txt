@@ -1,0 +1,18 @@
+import org.apache.groovy.io.StringBuilderWriter;
+
+    /**
+     * Get the detail information of {@link Throwable} instance's stack trace
+     *
+     * @param self a Throwable instance
+     * @return the detail information of stack trace
+     * @since 2.5.3
+     */
+    public static String asString(Throwable self) {
+        StringBuilderWriter sw = new StringBuilderWriter();
+
+        try (PrintWriter pw = new PrintWriter(sw)) {
+            self.printStackTrace(pw);
+        }
+
+        return sw.toString();
+    }

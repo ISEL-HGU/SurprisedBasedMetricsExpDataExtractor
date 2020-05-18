@@ -1,0 +1,6 @@
+        if (log.isTraceEnabled()) {
+        if (log.isTraceEnabled()) {
+                apiRequestRows.size(), tableId, suffix, partitionDecorator);
+        if (log.isDebugEnabled()) {
+            log.debug("uploader thread/id: {} / {} . api call completed.", Thread.currentThread().getId(), exchangeId);
+        }

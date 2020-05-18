@@ -1,0 +1,6 @@
+import java.util.Map;
+        if (handleCache != null && isDefaultMethod(method) && !defaultOverridden(method)) {
+    private boolean defaultOverridden(Method method) {
+        return delegate instanceof Map && ((Map) delegate).containsKey(method.getName());
+    }
+

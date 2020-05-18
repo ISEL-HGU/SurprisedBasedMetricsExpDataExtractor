@@ -1,0 +1,6 @@
+import java.net.URLConnection;
+        URL feedUrl = new URL(uri);
+        URLConnection urlConn = feedUrl.openConnection();
+        urlConn.setConnectTimeout(60000);
+        urlConn.setReadTimeout(60000);
+        InputStream in = urlConn.getInputStream();

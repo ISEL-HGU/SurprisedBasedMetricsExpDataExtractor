@@ -1,0 +1,52 @@
+        // component options
+        generateComponentConfigurer(roundEnv, uriEndpoint, scheme, schemes, componentModel, componentOptions);
+        // endpoint options
+        generateEndpointConfigurer(roundEnv, classElement, uriEndpoint, scheme, schemes, componentModel, endpointOptions);
+    }
+    private void generateComponentConfigurer(RoundEnvironment roundEnv, UriEndpoint uriEndpoint, String scheme, String[] schemes,
+                                             ComponentModel componentModel, Set<ComponentOption> componentOptions) {
+        TypeElement parent;
+            // special for activemq and amqp scheme which should reuse jms
+            parent = findTypeElement(processingEnv, roundEnv, "org.apache.camel.component.jms.JmsComponentConfigurer");
+        } else {
+            parent = findTypeElement(processingEnv, roundEnv, "org.apache.camel.spi.TriPropertyConfigurer");
+        }
+        String fqComponentClassName = componentModel.getJavaType();
+        String componentClassName = fqComponentClassName.substring(fqComponentClassName.lastIndexOf('.')  1);
+        String className = componentClassName  "Configurer";
+        String packageName = fqComponentClassName.substring(0, fqComponentClassName.lastIndexOf('.'));
+        String fqClassName = packageName  "."  className;
+        if ("activemq".equals(scheme) || "amqp".equals(scheme)) {
+            ComponentPropertyConfigurerGenerator.generateExtendConfigurer(processingEnv, parent, packageName, className, fqClassName);
+            ComponentPropertyConfigurerGenerator.generateMetaInfConfigurer(processingEnv, componentModel.getScheme()  "-component", fqClassName);
+        } else if (uriEndpoint.generateConfigurer() && !componentOptions.isEmpty()) {
+                ComponentPropertyConfigurerGenerator.generatePropertyConfigurer(processingEnv, parent, packageName, className, fqClassName, componentClassName, componentOptions);
+                ComponentPropertyConfigurerGenerator.generateMetaInfConfigurer(processingEnv, componentModel.getScheme()  "-component", fqClassName);
+            }
+        }
+    }
+
+    private void generateEndpointConfigurer(RoundEnvironment roundEnv, TypeElement classElement, UriEndpoint uriEndpoint, String scheme, String[] schemes,
+                                            ComponentModel componentModel, Set<EndpointOption> endpointOptions) {
+        TypeElement parent;
+        if ("activemq".equals(scheme) || "amqp".equals(scheme)) {
+            // special for activemq and amqp scheme which should reuse jms
+            parent = findTypeElement(processingEnv, roundEnv, "org.apache.camel.component.jms.JmsEndpointConfigurer");
+        } else {
+            parent = findTypeElement(processingEnv, roundEnv, "org.apache.camel.spi.TriPropertyConfigurer");
+        }
+        String fqEndpointClassName = classElement.getQualifiedName().toString();
+        String packageName = fqEndpointClassName.substring(0, fqEndpointClassName.lastIndexOf('.'));
+        String endpointClassName = classElement.getSimpleName().toString();
+        String className = endpointClassName  "Configurer";
+        String fqClassName = packageName  "."  className;
+
+        if ("activemq".equals(scheme) || "amqp".equals(scheme)) {
+            EndpointPropertyConfigurerGenerator.generateExtendConfigurer(processingEnv, parent, packageName, className, fqClassName);
+            EndpointPropertyConfigurerGenerator.generateMetaInfConfigurer(processingEnv, componentModel.getScheme()  "-endpoint", fqClassName);
+        } else if (uriEndpoint.generateConfigurer() && !endpointOptions.isEmpty()) {
+            // only generate this once for the first scheme
+            if (schemes == null || schemes[0].equals(scheme)) {
+                EndpointPropertyConfigurerGenerator.generatePropertyConfigurer(processingEnv, parent, packageName, className, fqClassName, endpointClassName, endpointOptions);
+                EndpointPropertyConfigurerGenerator.generateMetaInfConfigurer(processingEnv, componentModel.getScheme()  "-endpoint", fqClassName);
+                // we usually favor putting the @Metadata annotation on the field instead of the setter, so try to use it if its there

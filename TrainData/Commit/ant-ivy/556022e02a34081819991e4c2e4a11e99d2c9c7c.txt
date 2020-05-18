@@ -1,0 +1,4 @@
+                    existingChild = new ArrayList<>(Arrays.asList(children));
+                if (!existingChild.isEmpty()) {
+                    existingChild.remove(childDest);
+                }

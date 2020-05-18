@@ -1,0 +1,5 @@
+import javax.xml.bind.annotation.XmlTransient;
+
+@XmlTransient
+public final class RouteFilters implements Function<RouteDefinition, Boolean> {
+    public static Function<RouteDefinition, Boolean> filterByPattern(String include, String exclude) {

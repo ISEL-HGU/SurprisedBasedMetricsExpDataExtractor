@@ -1,0 +1,3 @@
+        if (routingKey.startsWith("amq.rabbitmq.reply-to")) {
+            message.setHeader(RabbitMQConstants.EXCHANGE_NAME, ""); // use default exchange for reply-to messages
+        }

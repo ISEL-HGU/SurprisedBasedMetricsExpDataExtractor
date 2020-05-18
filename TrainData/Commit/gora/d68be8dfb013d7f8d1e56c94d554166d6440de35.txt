@@ -1,0 +1,47 @@
+  private static final Logger LOG = LoggerFactory.getLogger(AerospikeStore.class);
+  public void initialize(Class<K> keyClass, Class<T> persistentClass, Properties properties) {
+    AerospikeMappingBuilder aerospikeMappingBuilder = new AerospikeMappingBuilder();
+    aerospikeMappingBuilder
+            .readMappingFile(getConf().get(PARSE_MAPPING_FILE_KEY, DEFAULT_MAPPING_FILE), keyClass,
+                    persistentClass);
+    aerospikeParameters = new AerospikeParameters(aerospikeMappingBuilder.getAerospikeMapping(),
+            properties);
+    ClientPolicy policy = new ClientPolicy();
+    policy.writePolicyDefault = aerospikeParameters.getAerospikeMapping().getWritePolicy();
+    policy.readPolicyDefault = aerospikeParameters.getAerospikeMapping().getReadPolicy();
+
+    aerospikeClient = new AerospikeClient(aerospikeParameters.getHost(),
+            aerospikeParameters.getPort());
+    aerospikeParameters.setServerSpecificParameters(aerospikeClient);
+    aerospikeParameters.validateServerBinConfiguration(persistentClass.getFields());
+    LOG.info("Aerospike Gora datastore initialized successfully.");
+  @Override
+  public String getSchemaName() {
+  @Override
+  public void createSchema() {
+  @Override
+  public void deleteSchema() {
+  @Override
+  public boolean schemaExists() {
+   * @param key        key of the object
+   * @param persistent object to be persisted
+        LOG.error("Aerospike mapping for field {}#{} not found. Wrong gora-aerospike-mapping.xml?",
+                persistent.getClass().getName(), fields.get(i).name());
+  @Override
+  public boolean delete(K key) {
+  @Override
+  public long deleteByQuery(Query<K, T> query) {
+  @Override
+  public Result<K, T> execute(Query<K, T> query) {
+  @Override
+  public Query<K, T> newQuery() {
+  @Override
+  public List<PartitionQuery<K, T>> getPartitions(Query<K, T> query) throws IOException {
+    LOG.info("Aerospike Gora datastore destroyed successfully.");
+   * Aerospike does not support Utf8 format returned from Avro. This method provides those utf8
+   * valued bin (column) values as strings for aerospike Value to obtain the corresponding bin
+   * value, and returns the Bin (column in RDBMS)
+   * @param field      field name
+   * @param record     record retrieved from database
+      LOG.error("Aerospike mapping for field {} not found. Wrong gora-aerospike-mapping.xml",
+              field);

@@ -1,0 +1,20 @@
+        CloudBlockBlob client = createBlockBlobClient(cfg);
+        CloudAppendBlob client = createAppendBlobClient(cfg);
+        CloudPageBlob client = createPageBlobClient(cfg);
+        StorageCredentials creds = getAccountCredentials(cfg);
+    public static CloudBlockBlob createBlockBlobClient(BlobServiceConfiguration cfg)
+        CloudBlockBlob client = (CloudBlockBlob) getConfiguredClient(cfg);
+            StorageCredentials creds = getAccountCredentials(cfg);
+    public static CloudAppendBlob createAppendBlobClient(BlobServiceConfiguration cfg)
+        CloudAppendBlob client = (CloudAppendBlob) getConfiguredClient(cfg);
+            StorageCredentials creds = getAccountCredentials(cfg);
+    public static CloudPageBlob createPageBlobClient(BlobServiceConfiguration cfg)
+        CloudPageBlob client = (CloudPageBlob) getConfiguredClient(cfg);
+            StorageCredentials creds = getAccountCredentials(cfg);
+    public static CloudBlob getConfiguredClient(BlobServiceConfiguration cfg) {
+            if (cfg.getBlobType() == BlobType.blockblob) {
+            } else if (cfg.getBlobType() == BlobType.appendblob) {
+            } else if (cfg.getBlobType() == BlobType.pageblob) {
+                throw new IllegalArgumentException("Invalid Client Type");
+                throw new IllegalArgumentException("Invalid Client URI");
+    public static StorageCredentials getAccountCredentials(BlobServiceConfiguration cfg) {

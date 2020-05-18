@@ -1,0 +1,44 @@
+    private final ReentrantReadWriteLock rwlForSourceCache = new ReentrantReadWriteLock();
+    private final ReentrantReadWriteLock.ReadLock readLockForSourceCache = rwlForSourceCache.readLock();
+    private final ReentrantReadWriteLock.WriteLock writeLockForSourceCache = rwlForSourceCache.writeLock();
+
+        Class answer;
+        String codeSourceName = codeSource.getName();
+
+        readLockForSourceCache.lock();
+        try {
+            answer = sourceCache.get(codeSourceName);
+        } finally {
+            readLockForSourceCache.unlock();
+        }
+
+        writeLockForSourceCache.lock();
+        try {
+            // try to find the cached class again
+            answer = sourceCache.get(codeSourceName);
+            if (answer != null) return answer;
+
+        } finally {
+            writeLockForSourceCache.unlock();
+
+        return answer;
+                String name = source.toExternalForm();
+
+                writeLockForSourceCache.lock();
+                try {
+                } finally {
+                    writeLockForSourceCache.unlock();
+
+                if (isFile(source)) {
+                    try {
+                        return parseClass(new GroovyCodeSource(new File(source.toURI()), sourceEncoding));
+                    } catch (URISyntaxException e) {
+                        // do nothing and fall back to the other version
+                    }
+                }
+                return parseClass(new InputStreamReader(source.openStream(), sourceEncoding), name);
+        writeLockForSourceCache.lock();
+        try {
+        } finally {
+            writeLockForSourceCache.unlock();
+

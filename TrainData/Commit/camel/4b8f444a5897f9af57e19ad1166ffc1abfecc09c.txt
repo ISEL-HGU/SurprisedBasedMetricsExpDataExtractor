@@ -1,0 +1,1 @@
+@UriEndpoint(firstVersion = "1.0.0", scheme = "activemq", title = "ActiveMQ", syntax = "activemq:destinationType:destinationName", consumerClass = JmsConsumer.class, label = "messaging")

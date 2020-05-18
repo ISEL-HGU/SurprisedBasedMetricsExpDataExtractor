@@ -1,0 +1,13 @@
+import org.codehaus.groovy.classgen.VerifierCodeVisitor;
+
+                public void visitConstructor(ConstructorNode node) {
+                    Statement stmt = node.getCode();
+                    if (stmt != null) {
+                        stmt.visit(new VerifierCodeVisitor(getClassNode()));
+                    }
+
+                @Override
+                protected FinalVariableAnalyzer.VariableNotFinalCallback getFinalVariablesCallback() {
+                    return null;
+                }
+            // not found

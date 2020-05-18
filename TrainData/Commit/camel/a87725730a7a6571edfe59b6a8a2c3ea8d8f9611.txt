@@ -1,0 +1,7 @@
+        if (exchange.getException() != null) {
+            // do not convert if an exception has been thrown as if we attempt to convert and it also fails with a new
+            // exception then it will override the existing exception
+            callback.done(true);
+            return true;
+        }
+

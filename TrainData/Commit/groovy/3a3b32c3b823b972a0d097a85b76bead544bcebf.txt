@@ -1,0 +1,3 @@
+import org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache;
+        return Memoize.buildMemoizeFunction(new ConcurrentCommonCache(), this);
+        return Memoize.buildSoftReferenceMemoizeFunction(protectedCacheSize, new ConcurrentCommonCache(), this);

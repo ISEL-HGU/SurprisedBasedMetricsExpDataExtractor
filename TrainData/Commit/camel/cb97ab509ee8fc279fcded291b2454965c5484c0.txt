@@ -1,0 +1,1 @@
+        from("timer:hello?period={{timer.period}}").routeId("hello").routeGroup("hello-group")

@@ -1,0 +1,12 @@
+import org.apache.guacamole.auth.jdbc.usergroup.ModeledUserGroup;
+import org.apache.guacamole.auth.jdbc.usergroup.UserGroupDirectory;
+
+    /**
+     * User group directory restricted by the permissions of the user associated
+     * with this context.
+     */
+    @Inject
+    private UserGroupDirectory userGroupDirectory;
+        userGroupDirectory.init(currentUser);
+        return userGroupDirectory;
+        return ModeledUserGroup.ATTRIBUTES;

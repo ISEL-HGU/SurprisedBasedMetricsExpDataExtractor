@@ -1,0 +1,38 @@
+     * Printf to the standard output stream.
+     * @param values values referenced by the format specifiers in the format string
+     * Printf 0 or more values to the standard output stream using a format string.
+     * This method delegates to the owner to execute the method.
+     *
+     * @param self   a generated closure
+     * @param format a format string
+     * @param values values referenced by the format specifiers in the format string
+     * @since 3.0.0
+     */
+    public static void printf(Closure self, String format, Object[] values) {
+        Object owner = getClosureOwner(self);
+        Object[] newValues = new Object[values.length  1];
+        newValues[0] = format;
+        System.arraycopy(values, 0, newValues, 1, values.length);
+        InvokerHelper.invokeMethod(owner, "printf", newValues);
+    }
+
+    /**
+     * Printf a value to the standard output stream using a format string.
+     * This method delegates to the owner to execute the method.
+     *
+     * @param self   a generated closure
+     * @param format a format string
+     * @param value  value referenced by the format specifier in the format string
+     * @since 3.0.0
+     */
+    public static void printf(Closure self, String format, Object value) {
+        Object owner = getClosureOwner(self);
+        Object[] newValues = new Object[2];
+        newValues[0] = format;
+        newValues[1] = value;
+        InvokerHelper.invokeMethod(owner, "printf", newValues);
+    }
+
+    /**
+     * @param values values referenced by the format specifiers in the format string
+     * Prints a formatted string using the specified format string and arguments.

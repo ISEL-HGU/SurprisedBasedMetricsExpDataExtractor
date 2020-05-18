@@ -1,0 +1,459 @@
+    @Override
+    public void setEndpoint(String endpoint) {
+    }
+    @Override
+    public void setRegion(Region region) {
+    }
+    @Override
+    public AddClientIDToOpenIDConnectProviderResult addClientIDToOpenIDConnectProvider(AddClientIDToOpenIDConnectProviderRequest addClientIDToOpenIDConnectProviderRequest) {
+    }
+    @Override
+    public AddRoleToInstanceProfileResult addRoleToInstanceProfile(AddRoleToInstanceProfileRequest addRoleToInstanceProfileRequest) {
+    }
+    @Override
+    public AddUserToGroupResult addUserToGroup(AddUserToGroupRequest addUserToGroupRequest) {
+    }
+    @Override
+    public AttachGroupPolicyResult attachGroupPolicy(AttachGroupPolicyRequest attachGroupPolicyRequest) {
+    }
+    @Override
+    public AttachRolePolicyResult attachRolePolicy(AttachRolePolicyRequest attachRolePolicyRequest) {
+    }
+    @Override
+    public AttachUserPolicyResult attachUserPolicy(AttachUserPolicyRequest attachUserPolicyRequest) {
+    }
+    @Override
+    public ChangePasswordResult changePassword(ChangePasswordRequest changePasswordRequest) {
+    }
+    @Override
+    public CreateAccessKeyResult createAccessKey(CreateAccessKeyRequest createAccessKeyRequest) {
+    }
+    @Override
+    public CreateAccessKeyResult createAccessKey() {
+    }
+    @Override
+    public CreateAccountAliasResult createAccountAlias(CreateAccountAliasRequest createAccountAliasRequest) {
+    }
+    @Override
+    public CreateGroupResult createGroup(CreateGroupRequest createGroupRequest) {
+    }
+    @Override
+    public CreateInstanceProfileResult createInstanceProfile(CreateInstanceProfileRequest createInstanceProfileRequest) {
+    }
+    @Override
+    public CreateLoginProfileResult createLoginProfile(CreateLoginProfileRequest createLoginProfileRequest) {
+    }
+    @Override
+    public CreateOpenIDConnectProviderResult createOpenIDConnectProvider(CreateOpenIDConnectProviderRequest createOpenIDConnectProviderRequest) {
+    }
+    @Override
+    public CreatePolicyResult createPolicy(CreatePolicyRequest createPolicyRequest) {
+    }
+    @Override
+    public CreatePolicyVersionResult createPolicyVersion(CreatePolicyVersionRequest createPolicyVersionRequest) {
+    }
+    @Override
+    public CreateRoleResult createRole(CreateRoleRequest createRoleRequest) {
+    }
+    @Override
+    public CreateSAMLProviderResult createSAMLProvider(CreateSAMLProviderRequest createSAMLProviderRequest) {
+    }
+    @Override
+    public CreateServiceLinkedRoleResult createServiceLinkedRole(CreateServiceLinkedRoleRequest createServiceLinkedRoleRequest) {
+    }
+    @Override
+    public CreateServiceSpecificCredentialResult createServiceSpecificCredential(CreateServiceSpecificCredentialRequest createServiceSpecificCredentialRequest) {
+    }
+    @Override
+    public CreateUserResult createUser(CreateUserRequest createUserRequest) {
+    }
+    @Override
+    public CreateVirtualMFADeviceResult createVirtualMFADevice(CreateVirtualMFADeviceRequest createVirtualMFADeviceRequest) {
+    }
+    @Override
+    public DeactivateMFADeviceResult deactivateMFADevice(DeactivateMFADeviceRequest deactivateMFADeviceRequest) {
+    }
+    @Override
+    public DeleteAccessKeyResult deleteAccessKey(DeleteAccessKeyRequest deleteAccessKeyRequest) {
+    }
+    @Override
+    public DeleteAccountAliasResult deleteAccountAlias(DeleteAccountAliasRequest deleteAccountAliasRequest) {
+    }
+    @Override
+    public DeleteAccountPasswordPolicyResult deleteAccountPasswordPolicy(DeleteAccountPasswordPolicyRequest deleteAccountPasswordPolicyRequest) {
+    }
+    @Override
+    public DeleteAccountPasswordPolicyResult deleteAccountPasswordPolicy() {
+    }
+    @Override
+    public DeleteGroupResult deleteGroup(DeleteGroupRequest deleteGroupRequest) {
+    }
+    @Override
+    public DeleteGroupPolicyResult deleteGroupPolicy(DeleteGroupPolicyRequest deleteGroupPolicyRequest) {
+    }
+    @Override
+    public DeleteInstanceProfileResult deleteInstanceProfile(DeleteInstanceProfileRequest deleteInstanceProfileRequest) {
+    }
+    @Override
+    public DeleteLoginProfileResult deleteLoginProfile(DeleteLoginProfileRequest deleteLoginProfileRequest) {
+    }
+    @Override
+    public DeleteOpenIDConnectProviderResult deleteOpenIDConnectProvider(DeleteOpenIDConnectProviderRequest deleteOpenIDConnectProviderRequest) {
+    }
+    @Override
+    public DeletePolicyResult deletePolicy(DeletePolicyRequest deletePolicyRequest) {
+    }
+    @Override
+    public DeletePolicyVersionResult deletePolicyVersion(DeletePolicyVersionRequest deletePolicyVersionRequest) {
+    }
+    @Override
+    public DeleteRoleResult deleteRole(DeleteRoleRequest deleteRoleRequest) {
+    }
+    @Override
+    public DeleteRolePolicyResult deleteRolePolicy(DeleteRolePolicyRequest deleteRolePolicyRequest) {
+    }
+    @Override
+    public DeleteSAMLProviderResult deleteSAMLProvider(DeleteSAMLProviderRequest deleteSAMLProviderRequest) {
+    }
+    @Override
+    public DeleteSSHPublicKeyResult deleteSSHPublicKey(DeleteSSHPublicKeyRequest deleteSSHPublicKeyRequest) {
+    }
+    @Override
+    public DeleteServerCertificateResult deleteServerCertificate(DeleteServerCertificateRequest deleteServerCertificateRequest) {
+    }
+    @Override
+    public DeleteServiceLinkedRoleResult deleteServiceLinkedRole(DeleteServiceLinkedRoleRequest deleteServiceLinkedRoleRequest) {
+    }
+    @Override
+    public DeleteServiceSpecificCredentialResult deleteServiceSpecificCredential(DeleteServiceSpecificCredentialRequest deleteServiceSpecificCredentialRequest) {
+    }
+    @Override
+    public DeleteSigningCertificateResult deleteSigningCertificate(DeleteSigningCertificateRequest deleteSigningCertificateRequest) {
+    }
+    @Override
+    public DeleteUserResult deleteUser(DeleteUserRequest deleteUserRequest) {
+    }
+    @Override
+    public DeleteUserPolicyResult deleteUserPolicy(DeleteUserPolicyRequest deleteUserPolicyRequest) {
+    }
+    @Override
+    public DeleteVirtualMFADeviceResult deleteVirtualMFADevice(DeleteVirtualMFADeviceRequest deleteVirtualMFADeviceRequest) {
+    }
+    @Override
+    public DetachGroupPolicyResult detachGroupPolicy(DetachGroupPolicyRequest detachGroupPolicyRequest) {
+    }
+    @Override
+    public DetachRolePolicyResult detachRolePolicy(DetachRolePolicyRequest detachRolePolicyRequest) {
+    }
+    @Override
+    public DetachUserPolicyResult detachUserPolicy(DetachUserPolicyRequest detachUserPolicyRequest) {
+    }
+    @Override
+    public EnableMFADeviceResult enableMFADevice(EnableMFADeviceRequest enableMFADeviceRequest) {
+    }
+    @Override
+    public GenerateCredentialReportResult generateCredentialReport(GenerateCredentialReportRequest generateCredentialReportRequest) {
+    }
+    @Override
+    public GenerateCredentialReportResult generateCredentialReport() {
+    }
+    @Override
+    public GetAccessKeyLastUsedResult getAccessKeyLastUsed(GetAccessKeyLastUsedRequest getAccessKeyLastUsedRequest) {
+    }
+    @Override
+    public GetAccountAuthorizationDetailsResult getAccountAuthorizationDetails(GetAccountAuthorizationDetailsRequest getAccountAuthorizationDetailsRequest) {
+    }
+    @Override
+    public GetAccountAuthorizationDetailsResult getAccountAuthorizationDetails() {
+    }
+    @Override
+    public GetAccountPasswordPolicyResult getAccountPasswordPolicy(GetAccountPasswordPolicyRequest getAccountPasswordPolicyRequest) {
+    }
+    @Override
+    public GetAccountPasswordPolicyResult getAccountPasswordPolicy() {
+    }
+    @Override
+    public GetAccountSummaryResult getAccountSummary(GetAccountSummaryRequest getAccountSummaryRequest) {
+    }
+    @Override
+    public GetAccountSummaryResult getAccountSummary() {
+    }
+    @Override
+    public GetContextKeysForCustomPolicyResult getContextKeysForCustomPolicy(GetContextKeysForCustomPolicyRequest getContextKeysForCustomPolicyRequest) {
+    }
+    @Override
+    public GetContextKeysForPrincipalPolicyResult getContextKeysForPrincipalPolicy(GetContextKeysForPrincipalPolicyRequest getContextKeysForPrincipalPolicyRequest) {
+    }
+    @Override
+    public GetCredentialReportResult getCredentialReport(GetCredentialReportRequest getCredentialReportRequest) {
+    }
+    @Override
+    public GetCredentialReportResult getCredentialReport() {
+    }
+    @Override
+    public GetGroupResult getGroup(GetGroupRequest getGroupRequest) {
+    }
+    @Override
+    public GetGroupPolicyResult getGroupPolicy(GetGroupPolicyRequest getGroupPolicyRequest) {
+    }
+    @Override
+    public GetInstanceProfileResult getInstanceProfile(GetInstanceProfileRequest getInstanceProfileRequest) {
+    }
+    @Override
+    public GetLoginProfileResult getLoginProfile(GetLoginProfileRequest getLoginProfileRequest) {
+    }
+    @Override
+    public GetOpenIDConnectProviderResult getOpenIDConnectProvider(GetOpenIDConnectProviderRequest getOpenIDConnectProviderRequest) {
+    }
+    @Override
+    public GetPolicyResult getPolicy(GetPolicyRequest getPolicyRequest) {
+    }
+    @Override
+    public GetPolicyVersionResult getPolicyVersion(GetPolicyVersionRequest getPolicyVersionRequest) {
+    }
+    @Override
+    public GetRoleResult getRole(GetRoleRequest getRoleRequest) {
+    }
+    @Override
+    public GetRolePolicyResult getRolePolicy(GetRolePolicyRequest getRolePolicyRequest) {
+    }
+    @Override
+    public GetSAMLProviderResult getSAMLProvider(GetSAMLProviderRequest getSAMLProviderRequest) {
+    }
+    @Override
+    public GetSSHPublicKeyResult getSSHPublicKey(GetSSHPublicKeyRequest getSSHPublicKeyRequest) {
+    }
+    @Override
+    public GetServerCertificateResult getServerCertificate(GetServerCertificateRequest getServerCertificateRequest) {
+    }
+    @Override
+    public GetServiceLinkedRoleDeletionStatusResult getServiceLinkedRoleDeletionStatus(GetServiceLinkedRoleDeletionStatusRequest getServiceLinkedRoleDeletionStatusRequest) {
+    }
+    @Override
+    public GetUserResult getUser(GetUserRequest getUserRequest) {
+    }
+    @Override
+    public GetUserResult getUser() {
+    }
+    @Override
+    public GetUserPolicyResult getUserPolicy(GetUserPolicyRequest getUserPolicyRequest) {
+    }
+    @Override
+    public ListAccessKeysResult listAccessKeys(ListAccessKeysRequest listAccessKeysRequest) {
+    }
+    @Override
+    public ListAccessKeysResult listAccessKeys() {
+        ListAccessKeysResult result = new ListAccessKeysResult();
+        Collection<AccessKeyMetadata> accessKeyMetadata = new ArrayList<AccessKeyMetadata>();
+        AccessKeyMetadata meta = new AccessKeyMetadata();
+        meta.setAccessKeyId("1");
+        meta.setCreateDate(new Date());
+        meta.setStatus(StatusType.Active);
+        meta.setUserName("test");
+        accessKeyMetadata.add(meta);
+        result.setAccessKeyMetadata(accessKeyMetadata);
+        return result;
+    }
+    @Override
+    public ListAccountAliasesResult listAccountAliases(ListAccountAliasesRequest listAccountAliasesRequest) {
+    }
+    @Override
+    public ListAccountAliasesResult listAccountAliases() {
+    }
+    @Override
+    public ListAttachedGroupPoliciesResult listAttachedGroupPolicies(ListAttachedGroupPoliciesRequest listAttachedGroupPoliciesRequest) {
+    }
+    @Override
+    public ListAttachedRolePoliciesResult listAttachedRolePolicies(ListAttachedRolePoliciesRequest listAttachedRolePoliciesRequest) {
+    }
+    @Override
+    public ListAttachedUserPoliciesResult listAttachedUserPolicies(ListAttachedUserPoliciesRequest listAttachedUserPoliciesRequest) {
+    }
+    @Override
+    public ListEntitiesForPolicyResult listEntitiesForPolicy(ListEntitiesForPolicyRequest listEntitiesForPolicyRequest) {
+    }
+    @Override
+    public ListGroupPoliciesResult listGroupPolicies(ListGroupPoliciesRequest listGroupPoliciesRequest) {
+    }
+    @Override
+    public ListGroupsResult listGroups(ListGroupsRequest listGroupsRequest) {
+    }
+    @Override
+    public ListGroupsResult listGroups() {
+    }
+    @Override
+    public ListGroupsForUserResult listGroupsForUser(ListGroupsForUserRequest listGroupsForUserRequest) {
+    }
+    @Override
+    public ListInstanceProfilesResult listInstanceProfiles(ListInstanceProfilesRequest listInstanceProfilesRequest) {
+    }
+    @Override
+    public ListInstanceProfilesResult listInstanceProfiles() {
+    }
+    @Override
+    public ListInstanceProfilesForRoleResult listInstanceProfilesForRole(ListInstanceProfilesForRoleRequest listInstanceProfilesForRoleRequest) {
+    }
+    @Override
+    public ListMFADevicesResult listMFADevices(ListMFADevicesRequest listMFADevicesRequest) {
+    }
+    @Override
+    public ListMFADevicesResult listMFADevices() {
+    }
+    @Override
+    public ListOpenIDConnectProvidersResult listOpenIDConnectProviders(ListOpenIDConnectProvidersRequest listOpenIDConnectProvidersRequest) {
+    }
+    @Override
+    public ListOpenIDConnectProvidersResult listOpenIDConnectProviders() {
+    }
+    @Override
+    public ListPoliciesResult listPolicies(ListPoliciesRequest listPoliciesRequest) {
+    }
+    @Override
+    public ListPoliciesResult listPolicies() {
+    }
+    @Override
+    public ListPolicyVersionsResult listPolicyVersions(ListPolicyVersionsRequest listPolicyVersionsRequest) {
+    }
+    @Override
+    public ListRolePoliciesResult listRolePolicies(ListRolePoliciesRequest listRolePoliciesRequest) {
+    }
+    @Override
+    public ListRolesResult listRoles(ListRolesRequest listRolesRequest) {
+    }
+    @Override
+    public ListRolesResult listRoles() {
+    }
+    @Override
+    public ListSAMLProvidersResult listSAMLProviders(ListSAMLProvidersRequest listSAMLProvidersRequest) {
+    }
+    @Override
+    public ListSAMLProvidersResult listSAMLProviders() {
+    }
+    @Override
+    public ListSSHPublicKeysResult listSSHPublicKeys(ListSSHPublicKeysRequest listSSHPublicKeysRequest) {
+    }
+    @Override
+    public ListSSHPublicKeysResult listSSHPublicKeys() {
+    }
+    @Override
+    public ListServerCertificatesResult listServerCertificates(ListServerCertificatesRequest listServerCertificatesRequest) {
+    }
+    @Override
+    public ListServerCertificatesResult listServerCertificates() {
+    }
+    @Override
+    public ListServiceSpecificCredentialsResult listServiceSpecificCredentials(ListServiceSpecificCredentialsRequest listServiceSpecificCredentialsRequest) {
+    }
+    @Override
+    public ListSigningCertificatesResult listSigningCertificates(ListSigningCertificatesRequest listSigningCertificatesRequest) {
+    }
+    @Override
+    public ListSigningCertificatesResult listSigningCertificates() {
+    }
+    @Override
+    public ListUserPoliciesResult listUserPolicies(ListUserPoliciesRequest listUserPoliciesRequest) {
+    }
+    @Override
+    public ListUsersResult listUsers(ListUsersRequest listUsersRequest) {
+    }
+    @Override
+    public ListUsersResult listUsers() {
+    }
+    @Override
+    public ListVirtualMFADevicesResult listVirtualMFADevices(ListVirtualMFADevicesRequest listVirtualMFADevicesRequest) {
+    }
+    @Override
+    public ListVirtualMFADevicesResult listVirtualMFADevices() {
+    }
+    @Override
+    public PutGroupPolicyResult putGroupPolicy(PutGroupPolicyRequest putGroupPolicyRequest) {
+    }
+    @Override
+    public PutRolePolicyResult putRolePolicy(PutRolePolicyRequest putRolePolicyRequest) {
+    }
+    @Override
+    public PutUserPolicyResult putUserPolicy(PutUserPolicyRequest putUserPolicyRequest) {
+    }
+    @Override
+    public RemoveClientIDFromOpenIDConnectProviderResult removeClientIDFromOpenIDConnectProvider(RemoveClientIDFromOpenIDConnectProviderRequest removeClientIDFromOpenIDConnectProviderRequest) {
+    }
+    @Override
+    public RemoveRoleFromInstanceProfileResult removeRoleFromInstanceProfile(RemoveRoleFromInstanceProfileRequest removeRoleFromInstanceProfileRequest) {
+    }
+    @Override
+    public RemoveUserFromGroupResult removeUserFromGroup(RemoveUserFromGroupRequest removeUserFromGroupRequest) {
+    }
+    @Override
+    public ResetServiceSpecificCredentialResult resetServiceSpecificCredential(ResetServiceSpecificCredentialRequest resetServiceSpecificCredentialRequest) {
+    }
+    @Override
+    public ResyncMFADeviceResult resyncMFADevice(ResyncMFADeviceRequest resyncMFADeviceRequest) {
+    }
+    @Override
+    public SetDefaultPolicyVersionResult setDefaultPolicyVersion(SetDefaultPolicyVersionRequest setDefaultPolicyVersionRequest) {
+    }
+    @Override
+    public SimulateCustomPolicyResult simulateCustomPolicy(SimulateCustomPolicyRequest simulateCustomPolicyRequest) {
+    }
+    @Override
+    public SimulatePrincipalPolicyResult simulatePrincipalPolicy(SimulatePrincipalPolicyRequest simulatePrincipalPolicyRequest) {
+    }
+    @Override
+    public UpdateAccessKeyResult updateAccessKey(UpdateAccessKeyRequest updateAccessKeyRequest) {
+    }
+    @Override
+    public UpdateAccountPasswordPolicyResult updateAccountPasswordPolicy(UpdateAccountPasswordPolicyRequest updateAccountPasswordPolicyRequest) {
+    }
+    @Override
+    public UpdateAssumeRolePolicyResult updateAssumeRolePolicy(UpdateAssumeRolePolicyRequest updateAssumeRolePolicyRequest) {
+    }
+    @Override
+    public UpdateGroupResult updateGroup(UpdateGroupRequest updateGroupRequest) {
+    }
+    @Override
+    public UpdateLoginProfileResult updateLoginProfile(UpdateLoginProfileRequest updateLoginProfileRequest) {
+    }
+    @Override
+    public UpdateOpenIDConnectProviderThumbprintResult updateOpenIDConnectProviderThumbprint(UpdateOpenIDConnectProviderThumbprintRequest updateOpenIDConnectProviderThumbprintRequest) {
+    }
+    @Override
+    public UpdateRoleDescriptionResult updateRoleDescription(UpdateRoleDescriptionRequest updateRoleDescriptionRequest) {
+    }
+    @Override
+    public UpdateSAMLProviderResult updateSAMLProvider(UpdateSAMLProviderRequest updateSAMLProviderRequest) {
+    }
+    @Override
+    public UpdateSSHPublicKeyResult updateSSHPublicKey(UpdateSSHPublicKeyRequest updateSSHPublicKeyRequest) {
+    }
+    @Override
+    public UpdateServerCertificateResult updateServerCertificate(UpdateServerCertificateRequest updateServerCertificateRequest) {
+    }
+    @Override
+    public UpdateServiceSpecificCredentialResult updateServiceSpecificCredential(UpdateServiceSpecificCredentialRequest updateServiceSpecificCredentialRequest) {
+    }
+    @Override
+    public UpdateSigningCertificateResult updateSigningCertificate(UpdateSigningCertificateRequest updateSigningCertificateRequest) {
+    }
+    @Override
+    public UpdateUserResult updateUser(UpdateUserRequest updateUserRequest) {
+    }
+    @Override
+    public UploadSSHPublicKeyResult uploadSSHPublicKey(UploadSSHPublicKeyRequest uploadSSHPublicKeyRequest) {
+    }
+    @Override
+    public UploadServerCertificateResult uploadServerCertificate(UploadServerCertificateRequest uploadServerCertificateRequest) {
+    }
+    @Override
+    public UploadSigningCertificateResult uploadSigningCertificate(UploadSigningCertificateRequest uploadSigningCertificateRequest) {
+    }
+    @Override
+    public void shutdown() {
+    }
+    @Override
+    public ResponseMetadata getCachedResponseMetadata(AmazonWebServiceRequest request) {
+    }
+
+    @Override
+    public AmazonIdentityManagementWaiters waiters() {
+        throw new UnsupportedOperationException();
+    }

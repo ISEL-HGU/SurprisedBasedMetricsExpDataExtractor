@@ -1,0 +1,9 @@
+        // Grab HTTP request object and a response to a challenge.
+        // No challenge response, proceed with username/password authentication.
+            // No RadiusPacket is returned, we've encountered an error.
+            // Received AccessReject packet, login is denied.
+            // Received AccessChallenge packet, more credentials required to complete authentication
+            // Received AccessAccept, authentication has succeeded
+        // This is a response to a challenge, so authenticate with that response
+            // Received AccessAccept, authentication succeeded.
+            // Authentication failed.

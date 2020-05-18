@@ -1,0 +1,62 @@
+        final Stack<String> s = new Stack<String>();
+        final DissectedPath dissectedPath = dissect(path);
+        s.push(dissectedPath.root);
+        final StringTokenizer tok = new StringTokenizer(dissectedPath.remainingPath, File.separator);
+        final StringBuffer sb = new StringBuffer();
+     *
+     * @param path
+     *            the path to dissect.
+     * @return {@link DissectedPath}
+     * @throws java.lang.NullPointerException
+     *             if path is null.
+    private static DissectedPath dissect(final String path) {
+        final char sep = File.separatorChar;
+        final String pathToDissect = path.replace('/', sep).replace('\\', sep).trim();
+        // check if the path starts with a filesystem root
+        final File[] filesystemRoots = File.listRoots();
+        if (filesystemRoots != null) {
+            for (final File filesystemRoot : filesystemRoots) {
+                if (pathToDissect.startsWith(filesystemRoot.getPath())) {
+                    // filesystem root is the root and the rest of the path is the "remaining path"
+                    final String root = filesystemRoot.getPath();
+                    final String rest = pathToDissect.substring(root.length());
+                    final StringBuffer sbPath = new StringBuffer();
+                    // Eliminate consecutive slashes after the drive spec:
+                    for (int i = 0; i < rest.length(); i) {
+                        final char currentChar = rest.charAt(i);
+                        if (i == 0) {
+                            sbPath.append(currentChar);
+                            continue;
+                        }
+                        final char previousChar = rest.charAt(i -1);
+                        if (currentChar != sep || previousChar != sep) {
+                            sbPath.append(currentChar);
+                        }
+                    }
+                    return new DissectedPath(root, sbPath.toString());
+        // UNC drive
+        if (pathToDissect.length() > 1 && pathToDissect.charAt(1) == sep) {
+            int nextsep = pathToDissect.indexOf(sep, 2);
+            nextsep = pathToDissect.indexOf(sep, nextsep  1);
+            final String root = (nextsep > 2) ? pathToDissect.substring(0, nextsep  1) : pathToDissect;
+            final String rest = pathToDissect.substring(root.length());
+            return new DissectedPath(root, rest);
+        }
+
+        return new DissectedPath(File.separator, pathToDissect.substring(1));
+
+    private static final class DissectedPath {
+        private final String root;
+        private final String remainingPath;
+
+        private DissectedPath(final String root, final String remainingPath) {
+            this.root = root;
+            this.remainingPath = remainingPath;
+        }
+
+        @Override
+        public String toString() {
+            return new StringBuilder("Dissected Path [root=").append(root).append(", remainingPath=")
+                    .append(remainingPath).append("]").toString();
+        }
+    }

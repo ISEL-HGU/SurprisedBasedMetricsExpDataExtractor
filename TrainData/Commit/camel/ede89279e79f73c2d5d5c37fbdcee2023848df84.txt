@@ -1,0 +1,18 @@
+import org.apache.camel.component.dropbox.util.DropboxUploadMode;
+    public static void validateCommonProperties(DropboxConfiguration configuration) throws DropboxException {
+    public static void validateGetOp(String remotePath) throws DropboxException {
+        validateRemotePath(remotePath);
+    public static void validatePutOp(String localPath, String remotePath, DropboxUploadMode uploadMode) throws DropboxException {
+        validateLocalPath(localPath);
+        if (remotePath != null) {
+            validateRemotePathForPut(remotePath);
+            validatePathInUnix(localPath);
+        if (uploadMode == null) {
+    public static void validateSearchOp(String remotePath) throws DropboxException {
+        validateRemotePath(remotePath);
+    public static void validateDelOp(String remotePath) throws DropboxException {
+        validateRemotePath(remotePath);
+    public static void validateMoveOp(String remotePath, String newRemotePath) throws DropboxException {
+        validateRemotePath(remotePath);
+        validateRemotePath(newRemotePath);
+

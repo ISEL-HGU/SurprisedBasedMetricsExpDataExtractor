@@ -1,0 +1,91 @@
+     * Attempts to load the given resource as a stream using 
+     * first the given class loader, then the thread context
+     * class loader and finally the class loader used to load this class
+    	try {
+        	URL res = loadResourceAsURL(name);
+			return res != null ? res.openStream() : null;
+		} catch (IOException e) {
+			return null;
+		}
+    	
+        
+        // #1 First, try the given class loader
+        
+        	url = loader.getResource(resolvedName);
+        	if (url != null) return url;
+        
+        // #2 Next, is the TCCL
+        
+        ClassLoader tccl = Thread.currentThread().getContextClassLoader();
+        if (tccl != null) {
+        	
+        	url = tccl.getResource(resolvedName);
+        	if (url != null) return url;
+        	
+        	// #3 The TCCL may be able to see camel-core, but not META-INF resources
+        	
+        	try {
+        		
+				Class<?> clazz = tccl.loadClass("org.apache.camel.impl.DefaultCamelContext");
+	        	url = clazz.getClassLoader().getResource(resolvedName);
+	        	if (url != null) return url;
+	        	
+			} catch (ClassNotFoundException e) {
+				// ignore
+			}
+        
+    	// #4 Last, for the unlikely case that stuff can be loaded from camel-util
+    	
+        url = ObjectHelper.class.getClassLoader().getResource(resolvedName);
+    	if (url != null) return url;
+        
+    	url = ObjectHelper.class.getResource(resolvedName);
+     * @param uri the name of the package to load its resources
+    public static Enumeration<URL> loadResourcesAsURL(String uri) {
+        return loadResourcesAsURL(uri, null);
+     * @param uri the name of the package to load its resources
+    public static Enumeration<URL> loadResourcesAsURL(String uri, ClassLoader loader) {
+    	
+        Enumeration<URL> res = null;
+        // #1 First, try the given class loader
+        
+        	try {
+				res = loader.getResources(uri);
+				if (res != null) return res;
+			} catch (IOException e) {
+				// ignore
+			}
+        
+        // #2 Next, is the TCCL
+        
+        ClassLoader tccl = Thread.currentThread().getContextClassLoader();
+        if (tccl != null) {
+        	
+        	try {
+				res = tccl.getResources(uri);
+	        	if (res != null) return res;
+			} catch (IOException e1) {
+				// ignore
+			}
+        	
+        	// #3 The TCCL may be able to see camel-core, but not META-INF resources
+        	
+        	try {
+        		
+				Class<?> clazz = tccl.loadClass("org.apache.camel.impl.DefaultCamelContext");
+	        	res = clazz.getClassLoader().getResources(uri);
+	        	if (res != null) return res;
+	        	
+			} catch (ClassNotFoundException | IOException e) {
+				// ignore
+			}
+        
+    	// #4 Last, for the unlikely case that stuff can be loaded from camel-util
+        
+        try {
+			res = ObjectHelper.class.getClassLoader().getResources(uri);
+		} catch (IOException e) {
+			// ignore
+		}
+        
+        return res;

@@ -1,0 +1,15 @@
+import org.apache.groovy.io.StringBuilderWriter;
+        StringBuilderWriter buffer = new StringBuilderWriter(calcInitialCapacity());
+    private int calcInitialCapacity() {
+        String[] strings = getStrings();
+
+        int initialCapacity = 0;
+        for (String string : strings) {
+            initialCapacity = string.length();
+        }
+
+        initialCapacity = values.length * Math.max(Math.ceil(initialCapacity / strings.length), 1);
+
+        return Math.max((int) (initialCapacity  * 1.2), 16);
+    }
+

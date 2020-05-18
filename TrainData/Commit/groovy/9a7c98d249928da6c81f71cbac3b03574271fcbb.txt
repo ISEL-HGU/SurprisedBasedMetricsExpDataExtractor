@@ -1,0 +1,22 @@
+ * Notes:
+ * <ul>
+ *     <li>Caters for Groovy's lazy (rcurry) and eager (ncurry) calculation of argument position</li>
+ * </ul>
+    private final int minParamsExpected;
+    /**
+     * Creates the curried closure.
+     *
+     * @param index the position where the parameters should be injected (-ve for lazy)
+     * @param uncurriedClosure the closure to be called after the curried parameters are injected
+     * @param arguments the supplied parameters
+     */
+                minParamsExpected = 0;
+            } else {
+                minParamsExpected = index  arguments.length;
+        } else {
+            minParamsExpected = 0;
+        if (curriedParams.length  arguments.length < minParamsExpected) {
+            throw new IllegalArgumentException("When currying expected at least "  index  " argument(s) to be supplied before known curried arguments but found "  arguments.length);
+        }
+        // rcurried arguments are done lazily to allow normal method selection between overloaded alternatives
+        newIndex = Math.min(newIndex, arguments.length);

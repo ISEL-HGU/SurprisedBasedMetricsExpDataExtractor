@@ -1,0 +1,1 @@
+        parentClass.addImport("org.apache.camel.spring.boot.util.RelaxedPropertyResolver");

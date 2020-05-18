@@ -1,0 +1,45 @@
+import java.util.HashMap;
+import java.util.Map;
+        Map<String, String> queryParams = null;
+        if (query != null && !query.isEmpty()) {
+            try {
+                queryParams = parseQueryString(query);
+            }
+            catch (UnsupportedEncodingException e) {
+                throw new GuacamoleServerException("Unexpected lack of UTF-8 encoding support.", e);
+            }
+        }
+        if (queryParams != null)
+            for (Map.Entry<String, String> entry : queryParams.entrySet())
+                qcConfig.setParameter(entry.getKey(), entry.getValue());
+     * Parse the given string for parameter key/value pairs and return
+     * a map with the parameters.
+     *
+     * @param queryStr
+     *     The query string to parse for the values.
+     *
+     * @return
+     *     A map with the key/value pairs.
+     *
+     * @throws UnsupportedEncodingException
+     *     If Java lacks UTF-8 support.
+     */
+    private static Map<String, String> parseQueryString(String queryStr)
+            throws UnsupportedEncodingException {
+
+        // Split the query string into the pairs
+        List<String> paramList = Arrays.asList(queryStr.split("&"));
+        Map<String, String> parameters = new HashMap<String,String>();
+
+        // Split into key/value pairs and decode
+        for (String param : paramList) {
+            String[] paramArray = param.split("=", 2);
+            parameters.put(URLDecoder.decode(paramArray[0], "UTF-8"),
+                           URLDecoder.decode(paramArray[1], "UTF-8"));
+        }
+
+        return parameters;
+    }
+
+    /**
+        StringBuilder name = new StringBuilder();

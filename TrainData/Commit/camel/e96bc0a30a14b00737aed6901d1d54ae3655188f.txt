@@ -1,0 +1,6 @@
+import static org.apache.camel.maven.packaging.StringHelper.cutLastZeroDigit;
+
+    public String getFirstVersionShort() {
+        return cutLastZeroDigit(firstVersion);
+    }
+

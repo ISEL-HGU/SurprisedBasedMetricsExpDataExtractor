@@ -1,0 +1,8 @@
+        for (int i=0; i<blockParameterTypes.length; i) {
+            extractGenericsConnections(SAMTypeConnections, blockParameterTypes[i], typeOrNull(parameterTypesForSAM, i));
+        for (int i=0; i<blockParameterTypes.length; i) {
+                    applyGenericsContext(SAMTypeConnections, typeOrNull(parameterTypesForSAM, i));
+    private ClassNode typeOrNull(ClassNode[] parameterTypesForSAM, int i) {
+        return i < parameterTypesForSAM.length ? parameterTypesForSAM[i] : null;
+    }
+

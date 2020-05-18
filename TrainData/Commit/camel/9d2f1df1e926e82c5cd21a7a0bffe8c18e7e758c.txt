@@ -1,0 +1,11 @@
+    
+    @InvokeOnHeader("GETORDEFAULT")
+    void onGetOrDefault(Message message) {
+        final BasicCache<Object, Object> cache = manager.getCache(message, this.cacheName);
+        final Object key = message.getHeader(InfinispanConstants.KEY);
+        final Object defaultValue = message.getHeader(InfinispanConstants.DEFAULT_VALUE);
+        final Object result = cache.getOrDefault(key, defaultValue);
+
+        setResult(message, result);
+    }
+

@@ -1,0 +1,3 @@
+     *
+     * @deprecated replaced by @{link setOperation}
+        setOperation(InfinispanOperation.valueOf(command));

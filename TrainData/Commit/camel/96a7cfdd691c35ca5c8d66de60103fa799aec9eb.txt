@@ -1,0 +1,4 @@
+
+            localMember.setMaster(false);
+            fireLeadershipChangedEvent(getMaster().orElse(null));
+            fireLeadershipChangedEvent(getMaster().orElse(null));

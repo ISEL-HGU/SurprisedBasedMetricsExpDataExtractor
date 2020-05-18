@@ -1,0 +1,2 @@
+import org.apache.camel.support.LoggingExceptionHandler;
+    public DnsActivationPolicy() {

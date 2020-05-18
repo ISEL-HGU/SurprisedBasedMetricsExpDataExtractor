@@ -1,0 +1,57 @@
+ * add extended filter logic in
+ *
+ * DefaultHeaderFilterStrategy are being extended and invoked in camel-jms
+
+    private boolean filterOnMatch = true; // defaults to the previous behaviour
+
+     *
+
+     * be filtered out.
+     *
+     * be filtered out.
+     *
+
+     *
+     * be filtered out.
+     *
+
+     * be filtered out.
+     *
+
+     * whether header names should be case insensitive when checking it
+     *
+     * @return <tt>true</tt> if header names is case insensitive.
+     * whether header names should be case insensitive when checking it
+     *
+
+
+    }
+
+    public boolean isFilterOnMatch() {
+        return filterOnMatch;
+    }
+
+    /**
+     * Sets the filterOnMatch property which is a boolean to determine
+     * what to do when a pattern or filter set is matched.
+     *
+     * When set to true, a match will filter out the header. This is the default value for backwards compatibility.
+     *
+     * When set to false, the pattern or filter will indicate that the header must be kept; anything not matched will be filtered out.
+     *
+     * @param filterOnMatch <tt>true</tt> if a match filters out the header.
+     */
+    public void setFilterOnMatch(boolean filterOnMatch) {
+        this.filterOnMatch = filterOnMatch;
+    }
+        return !filterOnMatch;
+
+
+
+            filter = outFilter;
+
+            return filterOnMatch;
+
+                        return filterOnMatch;
+                    return filterOnMatch;
+                    return filterOnMatch;

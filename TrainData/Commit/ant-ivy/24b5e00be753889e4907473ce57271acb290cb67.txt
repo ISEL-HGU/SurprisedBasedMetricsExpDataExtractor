@@ -1,0 +1,18 @@
+    /**
+     * Returns a variable as boolean value.
+     * @param name name of the variable
+     * @param valueIfUnset value if the variable is unset
+     * @return <tt>true</tt> if the variable is <tt>'true'</tt> (ignoring case)
+     *     or the value of <i>valueIfUnset</i> if the variable is <tt>null</tt>
+     */
+    public synchronized boolean getVariableAsBoolean(String name, boolean valueIfUnset) {
+        String var = getVariable(name);
+        return var == null ? valueIfUnset : Boolean.valueOf(var);
+    }
+
+        return getVariableAsBoolean("ivy.log.modules.in.use", true);
+        return getVariableAsBoolean("ivy.log.module.when.found", true);
+        return getVariableAsBoolean("ivy.log.resolved.revision", true);
+            debugConflictResolution = getVariableAsBoolean("ivy.log.conflict.resolution", false);
+            debugLocking = getVariableAsBoolean("ivy.log.locking", false);
+            dumpMemoryUsage = getVariableAsBoolean("ivy.log.memory", false);

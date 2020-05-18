@@ -1,0 +1,12 @@
+import org.codehaus.groovy.classgen.asm.MethodReferenceExpressionWriter;
+    private MethodReferenceExpressionWriter methodReferenceExpressionWriter;
+        this.methodReferenceExpressionWriter = new StaticTypesMethodReferenceExpressionWriter(this);
+    public MethodReferenceExpressionWriter getMethodReferenceExpressionWriter() {
+        if (isInStaticallyCheckedMethod) {
+            return methodReferenceExpressionWriter;
+        }
+
+        return super.getMethodReferenceExpressionWriter();
+    }
+
+    @Override

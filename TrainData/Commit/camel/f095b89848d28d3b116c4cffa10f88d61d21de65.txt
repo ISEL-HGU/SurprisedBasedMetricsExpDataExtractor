@@ -1,0 +1,4 @@
+     * starting with x-) such as route ids class names etc. Not all 3rd party
+     * API gateways and tools supports vendor-extensions when importing your API
+     * docs.
+    private Boolean apiVendorExtension = false;

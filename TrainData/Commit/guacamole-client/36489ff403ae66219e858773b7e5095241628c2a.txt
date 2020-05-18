@@ -1,0 +1,2 @@
+import javax.crypto.Cipher;
+    public Cipher getClearpassCipher() throws GuacamoleException {

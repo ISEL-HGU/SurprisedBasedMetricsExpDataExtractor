@@ -1,0 +1,5 @@
+import javax.enterprise.inject.spi.ProcessProducerMethod;
+        if (processBean instanceof ProcessProducerMethod)
+        {
+            dynamicProducer = processBean.getBean();
+        }

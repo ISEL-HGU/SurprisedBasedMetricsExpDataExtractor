@@ -1,0 +1,1 @@
+ * Abstract {@link org.apache.camel.commands.LocalCamelController} that implementators should extend when implementing

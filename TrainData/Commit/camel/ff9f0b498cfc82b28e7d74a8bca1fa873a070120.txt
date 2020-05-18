@@ -1,0 +1,6 @@
+ * The aws-kms is used for managing Amazon Translate
+     * The AWS Translate default configuration
+     * The region in which Translate client needs to work
+         * To define a proxy host when instantiating the Translate client
+         * To define a proxy port when instantiating the Translate client
+         * The region in which Translate client needs to work. When using this

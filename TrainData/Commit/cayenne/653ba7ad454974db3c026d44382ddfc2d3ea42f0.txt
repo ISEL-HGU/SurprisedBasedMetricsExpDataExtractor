@@ -1,0 +1,15 @@
+import org.apache.cayenne.map.ObjEntity;
+    private static final char DUPLICATE_NAME_SUFFIX = '_';
+                utils.capitalizedAsConstant(attribute.getName())  PK_PROPERTY_SUFFIX,
+                generatePropertyName(attribute),
+    protected String generatePropertyName(ObjAttribute attribute) {
+        StringUtils utils = StringUtils.getInstance();
+        ObjEntity entity = attribute.getEntity();
+        String name = utils.capitalizedAsConstant(attribute.getName());
+        // ensure that final name is unique
+        while(entity.getAttribute(name) != null) {
+            name = name  DUPLICATE_NAME_SUFFIX;
+        }
+        return name;
+    }
+

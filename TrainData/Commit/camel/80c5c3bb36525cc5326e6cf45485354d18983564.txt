@@ -1,0 +1,5 @@
+ *     &lt;enumeration value="JSON"/>
+ *     &lt;enumeration value="ZIP_JSON"/>
+    JSON,
+    ZIP_CSV,
+    ZIP_JSON;

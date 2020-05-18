@@ -1,0 +1,2 @@
+        registerASTTransformations(helper);
+    private void registerASTTransformations(final ClassNode helper) {

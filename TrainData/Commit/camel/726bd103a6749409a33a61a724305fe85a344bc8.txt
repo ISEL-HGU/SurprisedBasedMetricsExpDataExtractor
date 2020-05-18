@@ -1,0 +1,1 @@
+                LOG.debug("Sending XMPP message to {} from {} : {}", participant, endpoint.getUser(), message.getBody());

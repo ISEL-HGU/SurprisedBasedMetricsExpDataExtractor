@@ -1,0 +1,3 @@
+import com.amazonaws.services.s3.AbstractAmazonS3;
+public class AmazonS3EncryptionClientMock extends AbstractAmazonS3 {
+        super();

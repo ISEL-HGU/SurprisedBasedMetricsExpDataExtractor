@@ -1,0 +1,13 @@
+     * Whether to use X-Forward headers for Host and related setting. The
+     * default value is true.
+     */
+    private Boolean useXForwardHeaders = true;
+    /**
+    public Boolean getUseXForwardHeaders() {
+        return useXForwardHeaders;
+    }
+
+    public void setUseXForwardHeaders(Boolean useXForwardHeaders) {
+        this.useXForwardHeaders = useXForwardHeaders;
+    }
+

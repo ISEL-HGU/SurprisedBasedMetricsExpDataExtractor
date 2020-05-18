@@ -1,0 +1,1 @@
+        return list.trim().split("\\s*,\\s*");

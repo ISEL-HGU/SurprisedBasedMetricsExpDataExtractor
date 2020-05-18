@@ -1,0 +1,2 @@
+import com.amazonaws.regions.Regions;
+            AmazonSQS client = AmazonSQSClientBuilder.standard().withCredentials(credentialsProvider).withRegion(Regions.valueOf(configuration.getRegion())).build();

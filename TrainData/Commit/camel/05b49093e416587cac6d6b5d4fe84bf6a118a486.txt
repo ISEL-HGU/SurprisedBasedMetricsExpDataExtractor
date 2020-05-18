@@ -1,0 +1,14 @@
+import zipkin2.reporter.AsyncReporter;
+import zipkin2.reporter.libthrift.LibthriftSender;
+ *
+ * curl -sSL https://zipkin.io/quickstart.sh | bash -s io.zipkin.java:zipkin-autoconfigure-collector-scribe:LATEST:module scribe.jar
+ * SCRIBE_ENABLED=true \
+ *     java \
+ *     -Dloader.path='scribe.jar,scribe.jar!/lib' \
+ *     -Dspring.profiles.active=scribe \
+ *     -cp zipkin.jar \
+ *     org.springframework.boot.loader.PropertiesLauncher
+ *
+ * <p>Note: the scribe transport is deprecated. Most use out-of-box defaults, such as Http, RabbitMQ
+ * or Kafka.
+        zipkin.setSpanReporter(AsyncReporter.create(LibthriftSender.create("127.0.0.1")));

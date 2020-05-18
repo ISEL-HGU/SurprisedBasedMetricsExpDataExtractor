@@ -1,0 +1,5 @@
+        private PrivateKey decryptingPrivateKey;
+        public PrivateKey getDecryptingPrivateKey() {
+            return decryptingPrivateKey;
+        public void setDecryptingPrivateKey(PrivateKey decryptingPrivateKey) {
+            this.decryptingPrivateKey = decryptingPrivateKey;

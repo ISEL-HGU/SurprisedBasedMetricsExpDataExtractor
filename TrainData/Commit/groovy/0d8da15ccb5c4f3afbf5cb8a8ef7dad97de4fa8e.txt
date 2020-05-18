@@ -1,0 +1,4 @@
+    public CommonCache(final int maxSize) {
+        this(16, maxSize);
+    }
+

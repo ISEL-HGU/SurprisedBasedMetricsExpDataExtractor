@@ -1,0 +1,1 @@
+    private static final int PORT = findAvailableTcpPort(18500); // 1024 is too low on CI servers to find free ports

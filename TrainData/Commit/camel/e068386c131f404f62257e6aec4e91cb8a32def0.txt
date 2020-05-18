@@ -1,0 +1,16 @@
+import org.apache.camel.util.IOHelper;
+        executorService = executorServiceManager.newSingleThreadExecutor(this, "KafkaIdempotentRepository");
+            log.error("Interrupted: {}", e.getMessage());
+        camelContext.getExecutorServiceManager().shutdown(executorService);
+        IOHelper.close(consumer, "consumer", log);
+        IOHelper.close(producer, "producer", log);
+            // update the local cache and broadcast the addition on the topic, which will be reflected
+            // at a later point in any peers
+            cache.put(key, key);
+        // update the local cache and broadcast the addition on the topic, which will be reflected
+        // at a later point in any peers
+        cache.remove(key, key);
+        return topicPoller.isRunning();
+        private static final int POLL_DURATION_MS = 100;
+                        log.warn("No idea how to {} a record. Shutting down.", action);
+        boolean isRunning() {

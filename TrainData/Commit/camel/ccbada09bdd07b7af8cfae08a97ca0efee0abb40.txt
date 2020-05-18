@@ -1,0 +1,12 @@
+import java.util.Set;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.s3.AmazonS3;
+
+        checkAndSetRegistryClient(configuration);
+    
+    private void checkAndSetRegistryClient(DdbConfiguration configuration) {
+        Set<AmazonDynamoDB> clients = getCamelContext().getRegistry().findByType(AmazonDynamoDB.class);
+        if (clients.size() == 1) {
+            configuration.setAmazonDDBClient(clients.stream().findFirst().get());
+        }
+    }

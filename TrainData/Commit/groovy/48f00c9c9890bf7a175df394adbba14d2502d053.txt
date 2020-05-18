@@ -1,0 +1,10 @@
+ * Goes through an AST and initializes the scopes.
+    private static boolean isAnonymous(ClassNode node) {
+        return (!node.isEnum() && node instanceof InnerClassNode && ((InnerClassNode) node).isAnonymous());
+    }
+
+            Variable var1 = scope.getDeclaredVariable(var.getName());
+            for (Parameter parameter : expression.getParameters()) {
+        if (isAnonymous(node)) return;
+     * Sets the current class node context.
+

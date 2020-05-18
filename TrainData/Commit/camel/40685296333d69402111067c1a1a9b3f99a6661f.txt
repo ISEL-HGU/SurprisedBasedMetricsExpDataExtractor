@@ -1,0 +1,37 @@
+import ca.uhn.hl7v2.parser.DefaultModelClassFactory;
+import ca.uhn.hl7v2.parser.ParserConfiguration;
+import ca.uhn.hl7v2.parser.UnexpectedSegmentBehaviourEnum;
+import ca.uhn.hl7v2.validation.ValidationContext;
+import static org.apache.camel.component.hl7.HL7Constants.HL7_CHARSET;
+import static org.apache.camel.component.hl7.HL7Constants.HL7_CONTEXT;
+import static org.apache.camel.component.hl7.HL7Constants.HL7_MESSAGE_CONTROL;
+import static org.apache.camel.component.hl7.HL7Constants.HL7_MESSAGE_TYPE;
+import static org.apache.camel.component.hl7.HL7Constants.HL7_PROCESSING_ID;
+import static org.apache.camel.component.hl7.HL7Constants.HL7_RECEIVING_APPLICATION;
+import static org.apache.camel.component.hl7.HL7Constants.HL7_RECEIVING_FACILITY;
+import static org.apache.camel.component.hl7.HL7Constants.HL7_SECURITY;
+import static org.apache.camel.component.hl7.HL7Constants.HL7_SENDING_APPLICATION;
+import static org.apache.camel.component.hl7.HL7Constants.HL7_SENDING_FACILITY;
+import static org.apache.camel.component.hl7.HL7Constants.HL7_TIMESTAMP;
+import static org.apache.camel.component.hl7.HL7Constants.HL7_TRIGGER_EVENT;
+import static org.apache.camel.component.hl7.HL7Constants.HL7_VERSION_ID;
+        String encoded = parser.encode(message);
+        Message message = parser.parse(bodyAsString);
+            ValidationContext validationContext;
+            if (validate) {
+                validationContext = ValidationContextFactory.defaultValidation();
+            } else {
+                validationContext = ValidationContextFactory.noValidation();
+            }
+            ParserConfiguration parserConfiguration;
+            if (parser == null) {
+                parserConfiguration = new ParserConfiguration();
+                parserConfiguration.setDefaultObx2Type("ST");
+                parserConfiguration.setInvalidObx2Type("ST");
+                parserConfiguration.setUnexpectedSegmentBehaviour(UnexpectedSegmentBehaviourEnum.ADD_INLINE);
+            } else {
+                parserConfiguration = parser.getParserConfiguration();
+            }
+
+            hapiContext = new DefaultHapiContext(parserConfiguration, validationContext, new DefaultModelClassFactory());
+

@@ -1,0 +1,6 @@
+        // TODO: The perfect emitter processor would have no buffer (0 sized)
+        // The chain caches one more item than expected.
+        // This implementation has (almost) full control over backpressure, but it's too chatty.
+        // There's a ticket to improve chattiness of the reactive-streams internal impl.
+        this.publisher = EmitterProcessor.create(1, false);
+            Flux<Exchange> flux = Flux.create(camelSink::set, FluxSink.OverflowStrategy.IGNORE);

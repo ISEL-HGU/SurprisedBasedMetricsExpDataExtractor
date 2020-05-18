@@ -1,0 +1,9 @@
+import org.apache.camel.ha.CamelClusterService;
+                              CamelConfigurationProperties config) throws Exception {
+    void afterPropertiesSet(ApplicationContext applicationContext, CamelContext camelContext) throws Exception {
+        // cluster service
+        CamelClusterService clusterService = getSingleBeanOfType(applicationContext, CamelClusterService.class);
+        if (clusterService != null) {
+            LOG.info("Using CamelClusterService: "  clusterService);
+            camelContext.addService(clusterService);
+        }

@@ -1,0 +1,22 @@
+    private boolean sourceCodeTimestamps;
+
+    public RestDslSourceCodeGenerator<T> withoutSourceCodeTimestamps() {
+        sourceCodeTimestamps = false;
+
+        return this;
+    }
+
+    public RestDslSourceCodeGenerator<T> withSourceCodeTimestamps() {
+        sourceCodeTimestamps = true;
+
+        return this;
+    }
+
+        final AnnotationSpec.Builder generatedAnnotation = AnnotationSpec.builder(Generated.class).addMember("value",
+            "$S", getClass().getName());
+
+        if (sourceCodeTimestamps) {
+            generatedAnnotation.addMember("date", "$S", generated());
+        }
+
+            .addAnnotation(generatedAnnotation.build())

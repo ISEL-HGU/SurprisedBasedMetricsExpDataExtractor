@@ -1,0 +1,4 @@
+import java.util.ArrayList;
+import java.util.Collection;
+
+        Collection<Module> modules = new ArrayList<>(super.getExtraModules());

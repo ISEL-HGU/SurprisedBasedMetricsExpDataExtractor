@@ -1,0 +1,2 @@
+     * @deprecated as of 2.19.0. Replaced with {@link #outType(Class)} with {@code []} appended to canonical class name,
+     * e.g. {@code outType(MyClass[].class}

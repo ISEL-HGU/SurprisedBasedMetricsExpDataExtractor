@@ -1,0 +1,6 @@
+import org.apache.camel.util.PropertiesHelper;
+    private void setEncryptionParameters(FOUserAgent userAgent, Map<String, Object> headers) {
+        Map<String, Object> encryptionParameters = PropertiesHelper
+        Map<String, Object> parameters = PropertiesHelper.extractProperties(headers, FopConstants.CAMEL_FOP_RENDERER_OPTIONS);
+    private void setRenderParameters(FOUserAgent userAgent, Map<String, Object> headers) {
+        Map<String, Object> parameters = PropertiesHelper.extractProperties(headers, FopConstants.CAMEL_FOP_RENDER);

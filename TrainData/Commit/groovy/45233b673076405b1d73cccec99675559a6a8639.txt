@@ -1,0 +1,8 @@
+import groovy.cli.Option;
+    private static final ClassNode OPTION_TYPE = make(Option.class);
+            // provide setter for CLI Builder purposes unless final
+            if (fieldNode.isFinal()) {
+                if (!de.getAnnotations(OPTION_TYPE).isEmpty()) {
+                    addError("Can't have a final field also annotated with @"  OPTION_TYPE.getNameWithoutPackage(), de);
+                }
+            } else {

@@ -1,0 +1,16 @@
+        protected VariableExpression declaredVariableExpression;
+                if (meta.declaredVariableExpression != null) {
+                    // declaration was replaced by assignment so we need to define the variable
+                    controller.getCompileStack().defineVariable(meta.declaredVariableExpression, false);
+                }
+                if (meta.declaredVariableExpression != null) {
+                    // declaration was replaced by assignment so we need to define the variable
+                    controller.getCompileStack().defineVariable(meta.declaredVariableExpression, false);
+                }
+        // stash declared variable in case we do subsequent visits after we
+        // change to assignment only
+        StatementMeta meta = statement.getNodeMetaData(StatementMeta.class);
+        if (meta != null) {
+            meta.declaredVariableExpression = declaration.getVariableExpression();
+        }
+

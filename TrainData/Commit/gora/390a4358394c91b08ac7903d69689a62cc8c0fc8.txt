@@ -1,0 +1,10 @@
+
+    if (aerospikeClient.exists(null, recordKey)) {
+      this.delete(key);
+    }
+      if (!persistent.isDirty(i)) {
+        continue;
+      }
+    // ToDo: Implement Query execution for key ranges
+
+    persistent.setDirty();

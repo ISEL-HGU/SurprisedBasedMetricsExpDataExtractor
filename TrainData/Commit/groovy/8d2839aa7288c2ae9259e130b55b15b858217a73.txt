@@ -1,0 +1,1 @@
+            try (LineNumberReader reader = new LineNumberReader(new StringReader(templateSource.toString()))) {

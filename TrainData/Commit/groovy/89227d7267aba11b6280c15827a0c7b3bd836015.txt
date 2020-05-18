@@ -1,0 +1,3 @@
+    protected static final ConcurrentHashMap<String, String> internedKeysCache;
+        } else {
+            internedKeysCache = null;

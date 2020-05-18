@@ -1,0 +1,15 @@
+
+
+        //getQuery() is not null if we reached here
+        getQuery().setQualifier((qualifier));
+        mediator.fireQueryEvent(new QueryEvent(this, getQuery()));
+
+     * @throws ValidationException if <code>text</code> can't be converted
+
+
+
+
+
+     * Entity
+
+

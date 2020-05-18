@@ -1,0 +1,2 @@
+        .to("infinispan://default")
+        .to("infinispan://default").log("Received body: ${body}");

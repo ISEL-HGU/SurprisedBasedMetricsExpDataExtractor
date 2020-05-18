@@ -1,0 +1,5 @@
+        super((String)null); // use ref attribute to refer to the bean, and not @XmlValue
+        super(ObjectHelper.className(instance)); // need to set some value in @XmlValue when we already have an instance bean
+        super((String)null); // use beanType attribute to refer to the bean, and not @XmlValue
+        this.beanTypeName = type.getName();
+    private String beanName() {

@@ -1,0 +1,4 @@
+    // keep a cache of endpoints so they can be properly cleaned up
+    private final Map<String, XmppEndpoint> endpointCache = new HashMap<>();
+
+        ReconnectionManager.setEnabledPerDefault(true);

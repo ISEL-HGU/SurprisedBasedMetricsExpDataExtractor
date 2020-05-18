@@ -1,0 +1,14 @@
+import de.flapdoodle.embed.mongo.config.Storage;
+
+import org.bson.Document;
+            IMongodConfig mongodConfig = new MongodConfigBuilder()
+                    .version(PRODUCTION)
+                    .net(new Net(PORT, localhostIsIPv6()))
+                    .replication(new Storage(null, "replicationName", 5000))
+                    .build();
+
+
+            // init replica set
+            MongoClient client = new MongoClient("localhost", PORT);
+            client.getDatabase("admin").runCommand(new Document("replSetInitiate", new Document()));
+

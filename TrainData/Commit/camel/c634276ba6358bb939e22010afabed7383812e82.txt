@@ -1,0 +1,4 @@
+    @Parameter(defaultValue = "${project.build.directory}/../../../core/camel-core")
+
+        getLog().info("Found "  answer.size()  " Camel Spring Boot starters from: "  componentsStarterDir);
+

@@ -1,0 +1,3 @@
+        List<Class<? extends Throwable>> classes = null;
+            classes = createExceptionClasses(routeContext.getCamelContext().getClassResolver());
+        return new CatchProcessor(classes, childProcessor, when, handle);

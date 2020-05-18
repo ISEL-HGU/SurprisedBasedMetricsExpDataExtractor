@@ -1,0 +1,3 @@
+ b/components/camel-spring-boot/src/main/java/org/apache/camel/spring/boot/actuate/endpoint/CamelRoutesMvcEndpoint.java
+public class CamelRoutesMvcEndpoint extends EndpointMvcAdapter {
+    public CamelRoutesMvcEndpoint(CamelRoutesEndpoint delegate) {

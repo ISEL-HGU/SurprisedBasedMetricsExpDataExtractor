@@ -1,0 +1,5 @@
+     * To include all routes form a specific package use: com/mycompany/foo/&#42;
+     * And to include all routes from two specific packages use: com/mycompany/foo/&#42;,com/mycompany/stuff/&#42;
+     * For example to exclude all classes starting with Bar use: &#42;&#42;/Bar&#42;
+     * To exclude all routes form a specific package use: com/mycompany/bar/&#42;
+     * And to exclude all routes from two specific packages use: com/mycompany/bar/&#42;,com/mycompany/stuff/&#42;

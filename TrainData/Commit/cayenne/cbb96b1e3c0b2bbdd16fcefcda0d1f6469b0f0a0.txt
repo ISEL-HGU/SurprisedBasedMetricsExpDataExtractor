@@ -1,0 +1,1 @@
+            id = Cayenne.pkForObject(o1);

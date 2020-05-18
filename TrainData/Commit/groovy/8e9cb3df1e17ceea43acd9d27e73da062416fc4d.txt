@@ -1,0 +1,4 @@
+        String propName = StringGroovyMethods.capitalize((CharSequence) property.getName());
+        String className = classNode.getName()  "$"  propName  "Comparator";
+        String fieldName = "this$"  propName  "Comparator";
+                "comparatorBy"  propName,

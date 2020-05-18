@@ -1,0 +1,7 @@
+    private int hashCode;
+        /**
+         * IMPORTANT: include Invocation target object(not a WeakReference) into
+         * algorithm is used to compute hashCode.
+         */
+        this.hashCode = 31 * target.hashCode()  method.hashCode();
+        return hashCode;

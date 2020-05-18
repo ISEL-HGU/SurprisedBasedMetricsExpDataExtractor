@@ -1,0 +1,1 @@
+            Iterator<InnerClassNode> it = icl.getOuterClass().getInnerClasses();

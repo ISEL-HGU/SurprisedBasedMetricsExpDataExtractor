@@ -1,0 +1,25 @@
+import com.mongodb.MongoClient;
+    /**
+     * A connection client provided externally
+     */
+    private MongoClient mongoConnection;
+
+        endpoint.setMongoConnection(mongoConnection);
+    /**
+     * Get the client used for connection
+     *
+     * @return the client using for connection to db
+     */
+    public MongoClient getMongoConnection() {
+        return mongoConnection;
+    }
+
+    /**
+     * Set the client used for connection
+     *
+     * @param mongoConnection
+     */
+    public void setMongoConnection(MongoClient mongoConnection) {
+        this.mongoConnection = mongoConnection;
+    }
+

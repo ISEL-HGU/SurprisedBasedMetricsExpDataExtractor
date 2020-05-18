@@ -1,0 +1,16 @@
+import org.apache.camel.component.twitter.util.TwitterSorter;
+    public TwitterEndpointPolling getEndpoint() {
+        return (TwitterEndpointPolling) super.getEndpoint();
+    }
+
+    @Override
+        exchanges = sort(exchanges);
+
+
+    protected List<Exchange> sort(List<Exchange> exchanges) {
+        if (getEndpoint().isSortById()) {
+            return TwitterSorter.sortBySinceId(exchanges);
+        }
+        return exchanges;
+    }
+    

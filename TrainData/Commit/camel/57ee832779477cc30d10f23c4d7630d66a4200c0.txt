@@ -1,0 +1,2 @@
+import org.apache.camel.spi.UriParam;
+    @UriParam(description = "The username when using timelineType=user")

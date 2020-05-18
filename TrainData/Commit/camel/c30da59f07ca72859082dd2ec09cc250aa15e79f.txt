@@ -1,0 +1,26 @@
+     * Timeout used by the HttpClient when waiting for response from the
+     * Salesforce server.
+     */
+    private Long httpClientIdleTimeout = 10000L;
+    /**
+     * Connection timeout used by the HttpClient when connecting to the
+     * Salesforce server.
+     */
+    private Long httpClientConnectionTimeout = 60000L;
+    /**
+    public Long getHttpClientIdleTimeout() {
+        return httpClientIdleTimeout;
+    }
+
+    public void setHttpClientIdleTimeout(Long httpClientIdleTimeout) {
+        this.httpClientIdleTimeout = httpClientIdleTimeout;
+    }
+
+    public Long getHttpClientConnectionTimeout() {
+        return httpClientConnectionTimeout;
+    }
+
+    public void setHttpClientConnectionTimeout(Long httpClientConnectionTimeout) {
+        this.httpClientConnectionTimeout = httpClientConnectionTimeout;
+    }
+

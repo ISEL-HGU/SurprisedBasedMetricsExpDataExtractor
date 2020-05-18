@@ -1,0 +1,4 @@
+import static org.apache.groovy.ast.tools.VisibilityUtils.getVisibility;
+        int modifiers = getVisibility(anno, mNode, mNode.getModifiers());
+                    modifiers,
+                    modifiers,

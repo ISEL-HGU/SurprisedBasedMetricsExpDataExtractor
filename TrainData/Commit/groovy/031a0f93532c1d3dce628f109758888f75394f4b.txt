@@ -1,0 +1,5 @@
+
+    @Deprecated
+    public static <T> T asType(CharSequence self, Class<T> c) {
+        return StringGroovyMethods.asType(self, c);
+    }

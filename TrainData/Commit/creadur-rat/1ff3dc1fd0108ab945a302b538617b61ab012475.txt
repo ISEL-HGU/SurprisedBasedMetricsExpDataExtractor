@@ -1,0 +1,15 @@
+import org.apache.commons.io.filefilter.*;
+import java.util.regex.PatternSyntaxException;
+                    final FilenameFilter filter = parseExclusions(FileUtils.readLines(new File(excludeFileName)));
+    private static FilenameFilter parseExclusions(List<String> excludes) throws IOException {
+        final OrFileFilter orFilter = new OrFileFilter();
+        for (String exclude : excludes) {
+            try {
+                orFilter.addFileFilter(new RegexFileFilter(exclude));
+            } catch(PatternSyntaxException e) {
+                System.err.println("Will skip given exclusion '"  exclude  "' due to "  e);
+            }
+        }
+        return new NotFileFilter(orFilter);
+    }
+

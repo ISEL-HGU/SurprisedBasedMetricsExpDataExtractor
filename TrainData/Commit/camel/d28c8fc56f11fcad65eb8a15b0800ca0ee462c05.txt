@@ -1,0 +1,1 @@
+    private static final Pattern SECRETS = Pattern.compile("([?&][^=]*(?:passphrase|password|secretKey)[^=]*)=(RAW\\(.*\\)|[^&]*)",

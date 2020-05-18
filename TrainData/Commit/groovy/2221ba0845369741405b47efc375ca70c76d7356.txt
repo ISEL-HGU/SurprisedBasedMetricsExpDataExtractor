@@ -1,0 +1,16 @@
+import java.util.HashSet;
+import java.util.Set;
+            // it might directly annotate a class, e.g. Specification in Spock 2
+            if (name.equals("org.junit.platform.commons.annotation.Testable") && tryLoadClass(name, loader)) {
+                return true;
+            }
+            if (isJUnit5TestableMetaAnnotationPresent(type, new HashSet<>()) && tryLoadClass(name, loader)) {
+    private boolean isJUnit5TestableMetaAnnotationPresent(Class<? extends Annotation> type, Set<String> seen) {
+            // It might annotate an annotation, e.g. jqwik @Property
+            // perhaps it's a meta-annotation, e.g. jqwik @Example is annotated with @Property
+            if (!seen.contains(annotation.annotationType().getName())) {
+                seen.add(annotation.annotationType().getName());
+                if (isJUnit5TestableMetaAnnotationPresent(annotation.annotationType(), seen)) {
+                    return true;
+                }
+            }

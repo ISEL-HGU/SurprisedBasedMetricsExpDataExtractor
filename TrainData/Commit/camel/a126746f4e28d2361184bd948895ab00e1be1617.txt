@@ -1,0 +1,1 @@
+                LOG.debug("Could not disconnect from {}. This exception is ignored.", getEndpoint().getConfiguration().getMailStoreLogInformation(), e);

@@ -1,0 +1,12 @@
+
+        if (parentLoader instanceof GroovyClassLoader) {
+          this.loader = (GroovyClassLoader) parentLoader;
+        } else {
+          this.loader = AccessController.doPrivileged(new PrivilegedAction<GroovyClassLoader>() {
+              public GroovyClassLoader run() {
+                  return new GroovyClassLoader(parentLoader,config);
+              }
+          });
+        }
+        this.context = binding;
+

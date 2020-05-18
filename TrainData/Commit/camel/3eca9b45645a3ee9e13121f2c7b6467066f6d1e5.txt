@@ -1,0 +1,42 @@
+        // special for environment-variable-enbaled as we need to know this early before we set all the other options
+        Object envEnabled = prop.remove("camel.main.autoConfigurationEnvironmentVariablesEnabled");
+        if (envEnabled == null) {
+            envEnabled = prop.remove("camel.main.auto-configuration-environment-variables-enabled");
+            if (envEnabled != null) {
+                PropertyBindingSupport.bindMandatoryProperty(camelContext, mainConfigurationProperties, "autoConfigurationEnvironmentVariablesEnabled", envEnabled, true);
+            }
+        }
+
+        Properties propENV = null;
+        if (mainConfigurationProperties.isAutoConfigurationEnvironmentVariablesEnabled()) {
+            propENV = loadEnvironmentVariablesAsProperties(new String[]{"camel.main."});
+            if (!propENV.isEmpty()) {
+                prop.putAll(propENV);
+                LOG.debug("Properties from OS environment variables:");
+                for (String key : propENV.stringPropertyNames()) {
+                    LOG.debug("    {}={}", key, propENV.getProperty(key));
+                }
+        Object failFast = propENV != null ? propENV.remove("camel.main.autoconfigurationfailfast") : null;
+        if (mainConfigurationProperties.isAutoConfigurationEnvironmentVariablesEnabled()) {
+            Properties propENV = loadEnvironmentVariablesAsProperties(new String[]{"camel.component.properties."});
+            if (!propENV.isEmpty()) {
+                prop.putAll(propENV);
+                LOG.debug("Properties from OS environment variables:");
+                for (String key : propENV.stringPropertyNames()) {
+                    LOG.debug("    {}={}", key, propENV.getProperty(key));
+                }
+        if (mainConfigurationProperties.isAutoConfigurationEnvironmentVariablesEnabled()) {
+            Properties propENV = loadEnvironmentVariablesAsProperties(new String[]{"camel.component.properties."});
+            if (!propENV.isEmpty()) {
+                prop.putAll(propENV);
+            }
+        if (mainConfigurationProperties.isAutoConfigurationEnvironmentVariablesEnabled()) {
+            Properties propENV = loadEnvironmentVariablesAsProperties(new String[]{"camel.main."});
+            if (!propENV.isEmpty()) {
+                prop.putAll(propENV);
+            }
+        if (mainConfigurationProperties.isAutoConfigurationEnvironmentVariablesEnabled()) {
+            Properties propENV = loadEnvironmentVariablesAsProperties(new String[]{"camel.component.", "camel.dataformat.", "camel.language."});
+            if (!propENV.isEmpty()) {
+                prop.putAll(propENV);
+            }

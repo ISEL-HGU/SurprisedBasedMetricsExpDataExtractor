@@ -1,0 +1,11 @@
+                // need to stop as some resources may have been started during startup
+                try {
+                    stop();
+                } catch (Exception e2) {
+                    // ignore
+                    log.trace("Error while stopping service after it failed to start: "  this  ". This exception is ignored", e);
+                }
+            if (status == FAILED) {
+                log.trace("Service: {} failed and regarded as already stopped", this);
+                return;
+            }

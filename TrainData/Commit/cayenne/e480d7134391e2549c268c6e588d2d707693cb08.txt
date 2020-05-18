@@ -1,0 +1,3 @@
+			logger.info("Using cgen config from pom.xml");
+			logger.info("Using cgen config from "  cgenConfiguration.getDataMap().getName());
+			logger.info("Using default cgen config.");

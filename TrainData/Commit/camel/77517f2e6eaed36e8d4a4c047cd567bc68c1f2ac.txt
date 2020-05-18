@@ -1,0 +1,38 @@
+                                           44, -1, 44, -1, -1, -1, -1, -1, 44, 44, -1, -1, -1, -1, 44, 44, -1, -1, -1, -1, -1, -1, -1, -1 };
+
+    /**
+     * Creates a new scanner There is also a java.io.InputStream version of this
+     * constructor.
+     *
+     * @param in the java.io.Reader to read input from.
+     */
+    Yylex(java.io.Reader in) {
+        this.zzReader = in;
+    }
+
+    /**
+     * Creates a new scanner. There is also java.io.Reader version of this
+     * constructor.
+     *
+     * @param in the java.io.Inputstream to read input from.
+     */
+    Yylex(java.io.InputStream in) {
+        this(new java.io.InputStreamReader(in));
+    }
+
+            do {
+            } while (--count > 0);
+            do {
+            } while (--count > 0);
+            do {
+            } while (--count > 0);
+        if (zzReader != null) {
+        }
+        if (number > yylength()) {
+        }
+    // CHECKSTYLE:OFF
+                    if (zzCurrentPosL < zzEndReadL) {
+                    } else if (zzAtEOF) {
+                    if (zzNext == -1) {
+                    }
+    // CHECKSTYLE:ON

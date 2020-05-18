@@ -1,0 +1,2 @@
+        String key = in.getHeader(RabbitMQConstants.ROUTING_KEY, String.class);
+        String key = exchange.getIn().getHeader(RabbitMQConstants.ROUTING_KEY, String.class);

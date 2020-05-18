@@ -1,0 +1,12 @@
+import java.util.Map;
+     * @param tokens
+     *     A Map containing the token names and corresponding values to be
+     *     applied as parameter tokens when establishing the connection.
+     *
+            GuacamoleClientInformation info, Map<String, String> tokens)
+                tunnel = connection.connect(info, tokens);
+                tunnel = group.connect(info, tokens);
+        AuthenticatedUser authenticatedUser = session.getAuthenticatedUser();
+            GuacamoleTunnel tunnel = createConnectedTunnel(userContext, type,
+                    id, info, new StandardTokenMap(authenticatedUser));
+            fireTunnelConnectEvent(authenticatedUser, authenticatedUser.getCredentials(), tunnel);

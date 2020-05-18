@@ -1,0 +1,11 @@
+import java.util.Set;
+
+import com.amazonaws.services.kinesisfirehose.AmazonKinesisFirehose;
+        checkAndSetRegistryClient(configuration);
+    
+    private void checkAndSetRegistryClient(KinesisFirehoseConfiguration configuration) {
+        Set<AmazonKinesisFirehose> clients = getCamelContext().getRegistry().findByType(AmazonKinesisFirehose.class);
+        if (clients.size() == 1) {
+            configuration.setAmazonKinesisFirehoseClient(clients.stream().findFirst().get());
+        }
+    }

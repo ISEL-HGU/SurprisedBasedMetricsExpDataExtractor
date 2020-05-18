@@ -1,0 +1,2 @@
+ b/core/camel-core/src/main/java/org/apache/camel/language/simple/Simple.java
+package org.apache.camel.language.simple;

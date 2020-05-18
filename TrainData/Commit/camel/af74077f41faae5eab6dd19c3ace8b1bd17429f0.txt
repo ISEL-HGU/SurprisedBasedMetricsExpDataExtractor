@@ -1,0 +1,5 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+        Deque<String> stack = new ArrayDeque<>();
+        // now we build back using FIFO so need to use descending
+        for (Iterator<String> it = stack.descendingIterator(); it.hasNext();) {

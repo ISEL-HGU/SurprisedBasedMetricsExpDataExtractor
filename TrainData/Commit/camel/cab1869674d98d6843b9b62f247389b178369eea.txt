@@ -1,0 +1,5 @@
+                } else if (value instanceof Number) {
+                    MessageAttributeValue mav = new MessageAttributeValue();
+                    mav.setDataType("Number");
+                    mav.withStringValue(((Number)value).toString());
+                    result.put(entry.getKey(), mav);

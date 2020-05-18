@@ -1,0 +1,2 @@
+     * delegate may substitute the Query with a different one or may return null to discard
+     * The delegate may substitute the Query with a different one or may return null to

@@ -1,0 +1,4 @@
+            // skip if its org.infinispan as we need explict version to work-around a problem when using test-jar dependencies
+            if ("org.infinispan".equals(groupId)) {
+                stripVersion = false;
+            }

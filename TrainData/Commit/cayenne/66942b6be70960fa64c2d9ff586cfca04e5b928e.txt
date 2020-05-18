@@ -1,0 +1,6 @@
+        if(!rel.isToPK()) {
+            // should ignore toOne not on PK relationship as it doesn't have any column to add to result
+            return true;
+        }
+
+        PathTranslationResult result = pathTranslator.translatePath(rel.getSourceEntity(), property.getName(), prefix);

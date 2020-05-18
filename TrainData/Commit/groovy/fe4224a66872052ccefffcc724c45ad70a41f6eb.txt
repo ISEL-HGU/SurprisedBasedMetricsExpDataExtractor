@@ -1,0 +1,2 @@
+        bp.children = childPaths.toArray(new BindPath[0]);
+        fb.bindPaths = rootPaths.toArray(new BindPath[0]);

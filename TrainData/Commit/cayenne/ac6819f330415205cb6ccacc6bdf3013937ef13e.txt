@@ -1,0 +1,16 @@
+import org.apache.cayenne.gen.ArtifactsGenerationMode;
+			CayenneGeneratorEntityFilterAction filterEntityAction = new CayenneGeneratorEntityFilterAction();
+			filterEntityAction.setNameFilter(NamePatternMatcher.build(logger, includeEntities, excludeEntities));
+
+			CayenneGeneratorEmbeddableFilterAction filterEmbeddableAction = new CayenneGeneratorEmbeddableFilterAction();
+			filterEmbeddableAction.setNameFilter(NamePatternMatcher.build(logger, null, excludeEmbeddables));
+		if(mode != null && mode.equals("datamap")) {
+			replaceDatamapGenerationMode();
+		}
+
+	private void replaceDatamapGenerationMode() {
+		this.mode = ArtifactsGenerationMode.ALL.getLabel();
+		this.excludeEntities = "*";
+		this.excludeEmbeddables = "*";
+		this.includeEntities = "";
+	}

@@ -1,0 +1,2 @@
+    public boolean isUpdated() {
+        return value.get() != -1;

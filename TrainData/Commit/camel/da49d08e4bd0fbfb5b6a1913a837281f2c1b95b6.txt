@@ -1,0 +1,1 @@
+            message.setBody(restHighLevelClient.bulk(bulkRequest).getItems());

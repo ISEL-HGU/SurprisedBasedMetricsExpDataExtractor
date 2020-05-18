@@ -1,0 +1,8 @@
+import org.codehaus.groovy.ast.expr.ElvisOperatorExpression;
+            } else if (op == ELVIS_EQUAL) {
+                ElvisOperatorExpression elvisOperatorExpression = new ElvisOperatorExpression(leftExpression, rightExpression);
+                elvisOperatorExpression.setSourcePosition(expression);
+                elvisOperatorExpression.visit(this);
+                resultType = getType(elvisOperatorExpression);
+                storeType(leftExpression, resultType);
+

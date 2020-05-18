@@ -1,0 +1,3 @@
+    public List<String> getChildren() {
+        ArrayList<String> list = new ArrayList<String>();
+                for (FileObject child : resourceImpl.getChildren()) {

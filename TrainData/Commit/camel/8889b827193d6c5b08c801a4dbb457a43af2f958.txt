@@ -1,0 +1,8 @@
+
+    public String toString(Object input) {
+        return "toString(Object) was called";
+    }
+
+    public String toString(String input) {
+        return "toString(String) was called";
+    }

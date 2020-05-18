@@ -1,0 +1,2 @@
+    private boolean antlr2Parser = true;
+            antlr2Parser = !"true".equals(System.getProperty("groovy.antlr4"));

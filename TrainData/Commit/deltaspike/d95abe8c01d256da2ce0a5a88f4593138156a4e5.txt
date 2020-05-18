@@ -1,0 +1,3 @@
+     * any XSS vectors. E.g. replace (,<, & etc to
+     * prevent attackers from injecting JavaScript function calls or html.
+        return windowId.replace('(', '_').replace('<', '_').replace('&', '_');

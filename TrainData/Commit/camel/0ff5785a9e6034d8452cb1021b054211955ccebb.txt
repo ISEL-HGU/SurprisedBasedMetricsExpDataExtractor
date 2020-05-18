@@ -1,0 +1,9 @@
+    static final int DEFAULT_PORT = 5684;
+
+
+            server = getServer(DEFAULT_PORT);
+
+    public Consumer createConsumer(CamelContext camelContext,
+                                   Processor processor,
+                                   String consumes,
+

@@ -1,0 +1,2 @@
+import org.apache.guacamole.net.auth.credentials.GuacamoleInvalidCredentialsException;
+            throw new GuacamoleInvalidCredentialsException("CAS login failed.", CredentialsInfo.USERNAME_PASSWORD);

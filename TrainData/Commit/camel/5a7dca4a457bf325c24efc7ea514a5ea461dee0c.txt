@@ -1,0 +1,2 @@
+                hit = PropertyBindingSupport.build().bind(context, target, name, value);
+                    hit = PropertyBindingSupport.build().bind(context, target, name, stringValue);

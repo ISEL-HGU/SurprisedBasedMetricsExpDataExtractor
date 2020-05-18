@@ -1,0 +1,2 @@
+ * <p/>
+ * You can also turn on route coverage globally via setting JVM system property <tt>CamelTestRouteCoverage=true</tt>.

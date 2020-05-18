@@ -1,0 +1,2 @@
+        if (solrUrlElements.length > 0) {
+        if (solrUrlElements.length > 0) {

@@ -1,0 +1,3 @@
+import org.apache.camel.BindToRegistry;
+        BindToRegistry bind = bean.getClass().getAnnotation(BindToRegistry.class);
+                BindToRegistry bind = field.getAnnotation(BindToRegistry.class);

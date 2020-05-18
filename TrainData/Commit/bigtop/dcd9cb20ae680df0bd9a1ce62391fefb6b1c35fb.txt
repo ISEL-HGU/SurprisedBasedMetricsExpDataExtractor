@@ -1,0 +1,16 @@
+    String inputTable = null;
+    String outputTable = null;
+    String inputSchemaStr = null;
+    String outputSchemaStr = null;
+    for(int i = 0; i < args.length; i){
+        if(args[i].equalsIgnoreCase("-it")){
+            inputTable = args[i1];
+        }else if(args[i].equalsIgnoreCase("-ot")){
+            outputTable = args[i1];
+        }else if(args[i].equalsIgnoreCase("-is")){
+            inputSchemaStr = args[i1];
+        }else if(args[i].equalsIgnoreCase("-os")){
+            outputSchemaStr = args[i1];
+        }
+    }
+    

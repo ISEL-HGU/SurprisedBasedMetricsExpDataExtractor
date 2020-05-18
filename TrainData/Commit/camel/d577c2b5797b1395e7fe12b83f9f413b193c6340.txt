@@ -1,0 +1,2 @@
+        if (ObjectHelper.isEmpty(inMessage.getHeader(Exchange.CONTENT_TYPE, String.class))
+                && ObjectHelper.isNotEmpty(client.getHeaders().get(Exchange.CONTENT_TYPE))) {

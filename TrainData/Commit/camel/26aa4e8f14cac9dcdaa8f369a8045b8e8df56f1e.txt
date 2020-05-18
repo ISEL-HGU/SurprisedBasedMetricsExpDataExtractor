@@ -1,0 +1,7 @@
+        } else if ("L".equals(dataField.align())) {
+            return rightTrim(token, myPaddingChar);
+            token = leftTrim(token, myPaddingChar);
+                            } else if (align.contains("B")) {
+                                temp.append(generatePaddingChars(padChar, fieldLength, result.length()));
+                                temp.append(result);
+                                         " must be equal to R for RIGHT or L for LEFT or B for trimming both ends");

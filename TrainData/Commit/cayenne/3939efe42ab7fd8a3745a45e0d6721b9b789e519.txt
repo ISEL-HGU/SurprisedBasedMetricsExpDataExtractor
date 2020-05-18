@@ -1,0 +1,4 @@
+            parser.setFeature("http://apache.org/xml/features/xinclude", true);
+            InputSource input = new InputSource(in);
+            input.setSystemId(configurationResource.getURL().toString());
+            parser.parse(input);

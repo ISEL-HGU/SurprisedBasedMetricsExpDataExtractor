@@ -1,0 +1,6 @@
+ b/extensions/guacamole-auth-quickconnect/src/main/java/org/apache/guacamole/auth/quickconnect/QuickConnectionGroup.java
+public class QuickConnectionGroup extends AbstractConnectionGroup {
+     * Set up a QuickConnectionGroup with a name and identifier, and
+     *     The name of the QuickConnectionGroup.
+     *     The identifier of the QuickConnectionGroup.
+    public QuickConnectionGroup(String name, String identifier) {

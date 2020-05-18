@@ -1,0 +1,9 @@
+        // setup management strategy first since end users may use it to add event notifiers
+        // using the management strategy before the CamelContext has been started
+        this.managementStrategy = createManagementStrategy();
+
+        this.routeController = routeController;
+        doAddService(routeController);
+                if (typeConverterRegistry == null) {
+            getRestRegistry();
+                    setShutdownStrategy(createShutdownStrategy());

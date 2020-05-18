@@ -1,0 +1,25 @@
+import org.apache.camel.support.DefaultConsumer;
+import org.apache.camel.support.service.ServiceHelper;
+public class MultiRestConsumer extends DefaultConsumer {
+        super(endpoint, processor);
+    protected void doInit() {
+            consumer.init();
+    public void doStart() throws Exception {
+        super.doStart();
+            ServiceHelper.startService(consumer);
+        }
+    }
+
+    @Override
+    public void doStop() throws Exception {
+        super.doStop();
+        for (Consumer consumer : this.delegateConsumers) {
+            ServiceHelper.stopService(consumer);
+        }
+    }
+
+    @Override
+    protected void doShutdown() throws Exception {
+        super.doShutdown();
+        for (Consumer consumer : this.delegateConsumers) {
+            ServiceHelper.stopAndShutdownService(consumer);

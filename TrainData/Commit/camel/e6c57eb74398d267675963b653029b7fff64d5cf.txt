@@ -1,0 +1,7 @@
+    // Deployments
+    String LIST_DEPLOYMENTS = "listDeployments";
+    String LIST_DEPLOYMENTS_BY_LABELS_OPERATION = "listDeploymentsByLabels";
+    String GET_DEPLOYMENT = "getDeployment";
+    String DELETE_DEPLOYMENT = "deleteDeployment";
+    String CREATE_DEPLOYMENT = "createDeployment";
+    

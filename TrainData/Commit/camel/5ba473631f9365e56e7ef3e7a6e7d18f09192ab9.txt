@@ -1,0 +1,2 @@
+ b/platforms/spring-boot/components-starter/camel-hdfs-starter/src/main/java/org/apache/camel/component/hdfs/springboot/HdfsComponentConfiguration.java
+package org.apache.camel.component.hdfs.springboot;

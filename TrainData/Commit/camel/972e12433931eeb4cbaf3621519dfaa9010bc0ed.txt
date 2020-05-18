@@ -1,0 +1,13 @@
+        // remove the OVERRIDE header so it does not propagate
+        String exchangeName = (String) exchange.getIn().removeHeader(RabbitMQConstants.EXCHANGE_OVERRIDE_NAME);
+        // If it is BridgeEndpoint we should ignore the message header of EXCHANGE_OVERRIDE_NAME
+        } else {
+            log.debug("Overriding header: {} detected sending message to exchange: {}", RabbitMQConstants.EXCHANGE_OVERRIDE_NAME, exchangeName);
+        // remove the OVERRIDE header so it does not propagate
+        String exchangeName = (String) exchange.getIn().removeHeader(RabbitMQConstants.EXCHANGE_OVERRIDE_NAME);
+        // If it is BridgeEndpoint we should ignore the message header of EXCHANGE_OVERRIDE_NAME
+        if (exchangeName == null || getEndpoint().isBridgeEndpoint()) {
+            exchangeName = getEndpoint().getExchangeName();
+        } else {
+            log.debug("Overriding header: {} detected sending message to exchange: {}", RabbitMQConstants.EXCHANGE_OVERRIDE_NAME, exchangeName);
+        }

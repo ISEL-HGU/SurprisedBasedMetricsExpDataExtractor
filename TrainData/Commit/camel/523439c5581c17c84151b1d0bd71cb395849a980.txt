@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+    private List<BeanRepository> repositories;
+     * @param repositories the first choice repositories such as Spring, JNDI, OSGi etc.
+    public DefaultRegistry(BeanRepository... repositories) {
+        if (repositories != null) {
+            this.repositories = new ArrayList<>(Arrays.asList(repositories));
+        }
+        simple.bind(id, bean);
+        if (repositories != null) {
+            for (BeanRepository r : repositories) {
+                Object answer = r.lookupByName(name);
+                if (answer != null) {
+                    return answer;
+                }
+            }
+        return simple.lookupByName(name);
+        if (repositories != null) {
+            for (BeanRepository r : repositories) {
+                T answer = r.lookupByNameAndType(name, type);
+                if (answer != null) {
+                    return answer;
+                }
+            }
+        return simple.lookupByNameAndType(name, type);
+        if (repositories != null) {
+            for (BeanRepository r : repositories) {
+                Map<String, T> answer = r.findByTypeWithName(type);
+                if (answer != null) {
+                    return answer;
+                }
+            }
+        return simple.findByTypeWithName(type);
+        if (repositories != null) {
+            for (BeanRepository r : repositories) {
+                Set<T> answer = r.findByType(type);
+                if (answer != null) {
+                    return answer;
+                }
+            }
+        return simple.findByType(type);

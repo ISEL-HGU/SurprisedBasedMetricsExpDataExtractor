@@ -1,0 +1,2 @@
+        for (Map.Entry<String,Integer> entry : LOOKUP.entrySet()) {
+            addDescription(entry.getValue(), entry.getKey());

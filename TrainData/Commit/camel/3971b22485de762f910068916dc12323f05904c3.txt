@@ -1,0 +1,2 @@
+            } else {
+                clientBuilder = AmazonSQSClientBuilder.standard();

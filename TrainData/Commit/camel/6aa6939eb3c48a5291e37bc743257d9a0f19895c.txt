@@ -1,0 +1,1 @@
+     * camel-jetty or camel-netty-http that includes a HTTP server.

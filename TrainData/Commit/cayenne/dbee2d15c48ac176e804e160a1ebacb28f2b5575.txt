@@ -1,0 +1,2 @@
+    protected JList<String> list;
+    public JList<String> getList() {

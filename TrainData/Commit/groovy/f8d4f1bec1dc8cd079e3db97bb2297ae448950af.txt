@@ -1,0 +1,29 @@
+import static org.codehaus.groovy.ast.GenericsType.GenericsTypeName;
+            Map<GenericsTypeName, GenericsType> resolvedPlaceholders = resolvePlaceHoldersFromDeclaration(receiver, declaringClass, null, isStatic);
+        Map<GenericsTypeName, GenericsType> targetMethodDeclarationClassConnections = new HashMap<GenericsTypeName, GenericsType>();
+        Map<GenericsTypeName, GenericsType> SAMTypeConnections = new HashMap<GenericsTypeName, GenericsType>();
+        Map<GenericsTypeName, GenericsType> connections = new HashMap<GenericsTypeName, GenericsType>();
+        Map<GenericsTypeName, GenericsType> connections = new HashMap<GenericsTypeName, GenericsType>();
+        Map<GenericsTypeName, GenericsType> resolvedPlaceholders = resolvePlaceHoldersFromDeclaration(receiver, getDeclaringClass(method, arguments), method, method.isStatic());
+        Map<GenericsTypeName, GenericsType> placeholdersFromContext = extractGenericsParameterMapOfThis(typeCheckingContext.getEnclosingMethod());
+                        Map<GenericsTypeName, GenericsType> pholders = applyGenericsContextToParameterClass(resolvedPlaceholders, type);
+                    Map<GenericsTypeName, GenericsType> connections = new HashMap<GenericsTypeName, GenericsType>();
+    private static void resolvePlaceholdersFromExplicitTypeHints(final MethodNode method, final GenericsType[] explicitTypeHints, final Map<GenericsTypeName, GenericsType> resolvedPlaceholders) {
+                    resolvedPlaceholders.put(new GenericsTypeName(methodGenericType.getName()), explicitTypeHint);
+    private static void extractGenericsConnectionsForSuperClassAndInterfaces(final Map<GenericsTypeName, GenericsType> resolvedPlaceholders, final Map<GenericsTypeName, GenericsType> connections) {
+    private static ClassNode convertClosureTypeToSAMType(final Expression expression, final ClassNode closureType, final ClassNode samType, final Map<GenericsTypeName, GenericsType> placeholders) {
+                placeholders.put(new GenericsTypeName(samReturnType.getGenericsTypes()[0].getName()), closureType.getGenericsTypes()[0]);
+                        placeholders.put(new GenericsTypeName(expected.getGenericsTypes()[0].getName()), new GenericsType(generifiedType));
+                                placeholders.put(new GenericsTypeName(name), foundGenericsTypes[i]);
+    private ClassNode resolveGenericsWithContext(Map<GenericsTypeName, GenericsType> resolvedPlaceholders, ClassNode currentType) {
+        Map<GenericsTypeName, GenericsType> placeholdersFromContext = extractGenericsParameterMapOfThis(typeCheckingContext.getEnclosingMethod());
+    private Map<GenericsTypeName, GenericsType> resolvePlaceHoldersFromDeclaration(ClassNode receiver, ClassNode declaration, MethodNode method, boolean isStaticTarget) {
+        Map<GenericsTypeName, GenericsType> resolvedPlaceholders;
+    private static Map<GenericsTypeName, GenericsType> extractPlaceHolders(MethodNode method, ClassNode receiver, ClassNode declaringClass) {
+            Map<GenericsTypeName, GenericsType> resolvedPlaceholders = new HashMap<GenericsTypeName, GenericsType>();
+        Map<GenericsTypeName, GenericsType> resolvedPlaceholders = null;
+                Map<GenericsTypeName, GenericsType> currentPlaceHolders = new HashMap<GenericsTypeName, GenericsType>();
+                    Set<Map.Entry<GenericsTypeName, GenericsType>> entries = currentPlaceHolders.entrySet();
+                    for (Map.Entry<GenericsTypeName, GenericsType> entry : entries) {
+                        GenericsType referenced = resolvedPlaceholders.get(new GenericsTypeName(gt.getName()));
+            Map<GenericsTypeName, GenericsType> classGTs = GenericsUtils.extractPlaceholders(receiver);

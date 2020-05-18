@@ -1,0 +1,1 @@
+                resolvers.add(new BundleTypeConverterLoader(bundle, url3 != null));

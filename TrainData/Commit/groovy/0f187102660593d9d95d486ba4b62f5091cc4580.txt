@@ -1,0 +1,9 @@
+        List<Tuple2<ClassNode, ClassNode>> upperBoundsToResolve = new LinkedList<>();
+
+                        upperBoundsToResolve.add(new Tuple2<>(upperBound, classNode));
+        for (Tuple2<ClassNode, ClassNode> tp : upperBoundsToResolve) {
+            ClassNode upperBound = tp.getFirst();
+            ClassNode classNode = tp.getSecond();
+            resolveOrFail(upperBound, classNode);
+        }
+

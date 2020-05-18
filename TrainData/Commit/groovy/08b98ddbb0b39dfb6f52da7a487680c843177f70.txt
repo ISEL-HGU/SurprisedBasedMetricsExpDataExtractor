@@ -1,0 +1,3 @@
+
+            try (InputStream stream = new BufferedInputStream(url.openStream())) {
+                new ClassReader(stream).accept(visitor, ClassReader.SKIP_FRAMES);

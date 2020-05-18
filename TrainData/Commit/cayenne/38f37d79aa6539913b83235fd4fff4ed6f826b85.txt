@@ -1,0 +1,1 @@
+        properties.put(ClientConstants.ROP_SERVICE_URL_PROPERTY, "http://localhost:8080/cayenne-service");

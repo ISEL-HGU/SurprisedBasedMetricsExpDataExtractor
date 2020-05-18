@@ -1,0 +1,7 @@
+
+
+        return channelpost;
+    }
+    public void setChannelpost(IncomingMessage channelpost) {
+        this.channelpost = channelpost;
+    }

@@ -1,0 +1,8 @@
+import java.security.Principal;
+        } else if (securityContext != null) {
+            Principal user = securityContext.getUserPrincipal();
+            if (user != null) {
+                Subject subject = new Subject();
+                subject.getPrincipals().add(user);
+                camelExchange.getIn().getHeaders().put(Exchange.AUTHENTICATION, subject);
+            }

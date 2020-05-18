@@ -1,0 +1,3 @@
+ b/core/camel-support/src/main/java/org/apache/camel/support/ScriptHelper.java
+package org.apache.camel.support;
+                if (exchange != null && LanguageSupport.hasSimpleFunction(external)) {

@@ -1,0 +1,3 @@
+     * guacConfigGroup object class may not work as expected if it is not
+     * defined (may always return zero results), it should only be explicitly
+     * excluded if it is expected to have been defined.

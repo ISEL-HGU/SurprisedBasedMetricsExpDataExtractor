@@ -1,0 +1,39 @@
+    /**
+     * Global option to enable/disable Camel cloud support, default is true.
+     */
+
+         * The uri can be dynamic computed using the simple language expression.
+         * The Camel component to use for calling the service. The default is http4 component.
+         * A reference to the org.apache.camel.cloud.ServiceDiscovery to use.
+         * A reference to the org.apache.camel.cloud.ServiceFilter to use.
+         * A reference to the org.apache.camel.cloud.ServiceChooser to use.
+         * A reference to the org.apache.camel.cloud.ServiceLoadBalancer to use.
+         * The expression to use.
+         * The expression language to use, default is ref.
+        /**
+         * Global option to enable/disable Camel cloud load balancer, default is true.
+         */
+        /**
+         * Configure service discoveries.
+         */
+        /**
+         * Configure cache timeout (in millis).
+         */
+        /**
+         * Global option to enable/disable Camel cloud service discovery, default is true.
+         */
+        /**
+         * Configure the service discovery rules.
+         */
+        /**
+         * Configure service filter blacklists.
+         */
+        /**
+         * Global option to enable/disable Camel cloud service filter, default is true.
+         */
+        /**
+         * Configure the service filtering rules.
+         */
+        /**
+         * Global option to enable/disable Camel cloud service chooser, default is true.
+         */

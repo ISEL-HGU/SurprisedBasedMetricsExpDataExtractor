@@ -1,0 +1,9 @@
+import javax.swing.border.AbstractBorder;
+import javax.swing.border.Border;
+import java.awt.*;
+        UIManager.put("Tree.selectionBackground",       darkGrey);
+        UIManager.put("Tree.selectionForeground",       Color.BLACK);
+        UIManager.put("MenuItem.selectionBackground",   darkGrey);
+        UIManager.put("MenuItem.selectionForeground",   Color.BLACK);
+        UIManager.put("MenuItem.opaque",        Boolean.TRUE);
+        UIManager.put("Button.border", BorderFactory.createEmptyBorder(2, 2, 2, 2));

@@ -1,0 +1,3 @@
+import com.amazonaws.services.sns.AbstractAmazonSNS;
+public class AmazonSNSClientMock extends AbstractAmazonSNS {
+        super();

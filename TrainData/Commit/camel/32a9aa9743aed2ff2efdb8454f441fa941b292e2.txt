@@ -1,0 +1,8 @@
+import java.util.List;
+import org.apache.camel.util.ObjectHelper;
+        Map<String, List<String>> services = properties.getServiceFilter().getBlacklist();
+        for (Map.Entry<String, List<String>> entry : services.entrySet()) {
+            for (String part : entry.getValue()) {
+                if (ObjectHelper.isNotEmpty(host) && ObjectHelper.isNotEmpty(port)) {
+                    blacklist.addServer(entry.getKey(), host, Integer.parseInt(port));
+                }

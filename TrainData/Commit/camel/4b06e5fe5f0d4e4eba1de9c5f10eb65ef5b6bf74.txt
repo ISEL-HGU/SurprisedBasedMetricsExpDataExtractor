@@ -1,0 +1,1 @@
+        return ByteBuffer.wrap(bytes);

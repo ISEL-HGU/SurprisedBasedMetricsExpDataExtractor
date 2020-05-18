@@ -1,0 +1,1 @@
+ * See <a href="https://github.com/DozerMapper/dozer">dozer project page</a> or more information on configuring Dozer

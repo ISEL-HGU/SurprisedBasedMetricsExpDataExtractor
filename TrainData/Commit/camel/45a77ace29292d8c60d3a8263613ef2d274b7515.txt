@@ -1,0 +1,2 @@
+        return new CamelContextProducer<>(delegate, annotated, manager, extension);
+        return new CamelContextInjectionTarget<>(delegate, producer);

@@ -1,0 +1,51 @@
+import org.apache.cayenne.map.ObjEntity;
+import org.apache.cayenne.map.ObjRelationship;
+import org.apache.cayenne.map.Relationship;
+	private static final long serialVersionUID = -1864303176024098961L;
+	private Relationship relationship;
+    private Relationship prevRelationship;
+    private ProjectController projectController;
+    private boolean useDb;
+
+	public RelationshipUndoableEdit(Relationship relationship) {
+		this.useDb = relationship instanceof DbRelationship;
+		fireRelationshipEvent(relationship, prevRelationship);
+		fireRelationshipEvent(prevRelationship, relationship);
+	private void fireRelationshipEvent(Relationship relToFire, Relationship currRel) {
+		if(useDb) {
+			fireDbRelationshipEvent(relToFire, currRel);
+		} else {
+			fireObjRelationshipEvent(relToFire, currRel);
+		}
+	}
+
+	private void fireDbRelationshipEvent(Relationship relToFire, Relationship currRel) {
+		DbEntity dbEntity = ((DbRelationship)currRel).getSourceEntity();
+	private void fireObjRelationshipEvent(Relationship relToFire, Relationship currRel) {
+		ObjEntity objEntity = ((ObjRelationship) currRel).getSourceEntity();
+		objEntity.removeRelationship(currRel.getName());
+		objEntity.addRelationship(relToFire);
+		projectController
+				.fireObjRelationshipEvent(
+						new RelationshipEvent(this, relToFire, relToFire.getSourceEntity(), MapEvent.ADD));
+	}
+
+	private Relationship copyRelationship(Relationship relationship) {
+		return useDb ? getDbRelationship(relationship) : getObjRelationship(relationship);
+	}
+
+	private DbRelationship getDbRelationship(Relationship dbRelationship) {
+		rel.setToDependentPK(((DbRelationship)dbRelationship).isToDependentPK());
+
+	private ObjRelationship getObjRelationship(Relationship objRelationship) {
+		ObjRelationship rel = new ObjRelationship();
+		rel.setName(objRelationship.getName());
+		rel.setTargetEntityName(objRelationship.getTargetEntityName());
+		rel.setSourceEntity(objRelationship.getSourceEntity());
+		rel.setDeleteRule(((ObjRelationship)objRelationship).getDeleteRule());
+		rel.setUsedForLocking(((ObjRelationship)objRelationship).isUsedForLocking());
+		rel.setDbRelationshipPath(((ObjRelationship)objRelationship).getDbRelationshipPath());
+		rel.setCollectionType(((ObjRelationship)objRelationship).getCollectionType());
+		rel.setMapKey(((ObjRelationship)objRelationship).getMapKey());
+		return rel;
+	}

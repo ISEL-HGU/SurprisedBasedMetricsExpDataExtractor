@@ -1,0 +1,13 @@
+        /**
+         * Set this to true to filter out results that have already been
+         * communicated by this component.
+         */
+        private Boolean filterAlreadySeen = false;
+
+        public Boolean getFilterAlreadySeen() {
+            return filterAlreadySeen;
+        }
+
+        public void setFilterAlreadySeen(Boolean filterAlreadySeen) {
+            this.filterAlreadySeen = filterAlreadySeen;
+        }

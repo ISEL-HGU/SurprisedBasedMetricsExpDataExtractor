@@ -1,0 +1,8 @@
+    public Boolean getCache() {
+        return delegate.getCache();
+    }
+
+    public void setCache(Boolean cache) {
+        delegate.setCache(cache);
+    }
+

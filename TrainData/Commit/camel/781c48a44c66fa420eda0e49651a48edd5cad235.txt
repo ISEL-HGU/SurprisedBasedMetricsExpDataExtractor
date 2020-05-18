@@ -1,0 +1,12 @@
+
+import org.atmosphere.cpr.AtmosphereRequestImpl;
+import org.atmosphere.cpr.AtmosphereResponseImpl;
+
+    public WebsocketConsumer(WebsocketEndpoint endpoint, Processor processor) {
+        super(endpoint, processor);
+        initializer = new AtmosphereFrameworkInitializer(false, true);
+    }
+    
+    public void configureEventsResending(final boolean enableEventsResending) {
+                                        getEndpoint().isUseStreaming() ? WebsocketStreamHandler.class.getName() : WebsocketHandler.class.getName());
+

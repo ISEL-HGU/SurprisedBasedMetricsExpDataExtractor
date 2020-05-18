@@ -1,0 +1,2 @@
+        from("netty-http:http://0.0.0.0:8088/metrics")
+                .routeId("netty-http:scrape")

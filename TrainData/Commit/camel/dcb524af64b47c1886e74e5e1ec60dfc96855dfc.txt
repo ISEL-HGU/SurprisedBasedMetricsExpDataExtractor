@@ -1,0 +1,5 @@
+    @Converter
+    public static Reader toReader(byte[] data, Exchange exchange) throws IOException {
+        return toReader(new ByteArrayInputStream(data), exchange);
+    }
+

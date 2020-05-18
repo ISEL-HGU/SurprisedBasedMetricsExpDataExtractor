@@ -1,0 +1,30 @@
+import javax.swing.JCheckBox;
+import javax.swing.JTable;
+import javax.swing.SwingConstants;
+import javax.swing.table.TableCellRenderer;
+import java.awt.Component;
+import java.awt.Color;
+        table.getColumnModel().getColumn(DbRelationshipTableModel.TO_DEPENDENT_KEY)
+                .setCellRenderer(new CheckBoxCellRenderer());
+
+        targetCombo.setRenderer(CellRenderers.entityListRendererWithIcons(entity.getDataMap()));
+
+    private class CheckBoxCellRenderer implements TableCellRenderer {
+
+        private final JCheckBox renderer;
+
+        public CheckBoxCellRenderer() {
+            renderer = new JCheckBox();
+            renderer.setHorizontalAlignment(SwingConstants.CENTER);
+        }
+
+        @Override
+        public Component getTableCellRendererComponent(JTable table, Object value,
+                                                       boolean isSelected, boolean hasFocus, int row, int column) {
+            Color color = isSelected ? table.getSelectionBackground() : table.getBackground();
+            renderer.setBackground(color);
+            renderer.setEnabled(table.isCellEditable(row, column));
+            renderer.setSelected(value != null && (Boolean)value);
+            return renderer;
+        }
+    }

@@ -1,0 +1,19 @@
+        for(ClassNode classToCheck = currentClass; classToCheck != ClassHelper.OBJECT_TYPE;
+            if (setRedirect(type, classToCheck)) return true;
+            if (setRedirect(type, testNode)) return true;
+        }
+
+        return false;
+    }
+
+    private boolean setRedirect(ClassNode type, ClassNode classToCheck) {
+        ClassNode val = new ConstructedNestedClass(classToCheck, type.getName());
+        if (resolveFromCompileUnit(val)) {
+            type.setRedirect(val);
+            return true;
+        }
+        // also check interfaces in case we have interfaces with nested classes
+        for (ClassNode next : classToCheck.getAllInterfaces()) {
+            if (type.getName().contains(next.getName())) continue;
+            val = new ConstructedNestedClass(next, type.getName());
+            if (resolve(val, false, false, false)) {

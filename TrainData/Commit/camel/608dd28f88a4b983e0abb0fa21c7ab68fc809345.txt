@@ -1,0 +1,7 @@
+            doMarshal(exchange, graph, stream, marshaller, charset);
+    void doMarshal(Exchange exchange, Object graph, OutputStream stream, Marshaller marshaller, String charset) throws Exception {
+                XMLStreamWriter writer = typeConverter.convertTo(XMLStreamWriter.class, exchange, stream);
+                    writer = new FilteringXmlStreamWriter(writer, charset);
+                            XMLStreamWriter writer = typeConverter.convertTo(XMLStreamWriter.class, exchange, stream);
+                                writer = new FilteringXmlStreamWriter(writer, charset);
+    

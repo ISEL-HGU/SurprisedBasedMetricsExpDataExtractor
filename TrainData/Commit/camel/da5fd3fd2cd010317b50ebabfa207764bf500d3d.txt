@@ -1,0 +1,13 @@
+                int idle = mainConfigurationProperties.getDurationMaxIdleSeconds();
+                int max = mainConfigurationProperties.getDurationMaxMessages();
+                } else if (idle > 0 || max > 0) {
+                    if (idle > 0 && max > 0) {
+                        LOG.info("Waiting to be idle for: {} seconds or until: {} messages has been processed", idle, max);
+                    } else if (idle > 0) {
+                        LOG.info("Waiting to be idle for: {} seconds", idle);
+                    } else {
+                        LOG.info("Waiting until: {} messages has been processed", max);
+                    }
+                // okay something interrupted us so terminate
+                completed.set(true);
+                latch.countDown();

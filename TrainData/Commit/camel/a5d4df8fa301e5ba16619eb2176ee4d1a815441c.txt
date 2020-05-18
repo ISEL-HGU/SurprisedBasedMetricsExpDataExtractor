@@ -1,0 +1,19 @@
+import org.apache.camel.impl.ha.ClusteredRoutePolicyFactory;
+        final Integer index = Integer.getInteger("atomix.index");
+        final String[] addresses = System.getProperty("atomix.cluster").split(",");
+        List<Address> nodes = new ArrayList<>();
+            nodes.add(new Address(parts[0], Integer.valueOf(parts[1])));
+        AtomixCluster cluster = new AtomixCluster();
+        cluster.setStorageLevel(StorageLevel.MEMORY);
+        cluster.setAddress(nodes.get(index));
+        cluster.setNodes(nodes);
+        context.addService(cluster);
+        context.addRoutePolicyFactory(ClusteredRoutePolicyFactory.forNamespace("my-ns"));
+                fromF("timer:atomix-%d-1?period=2s", nodes.get(index).port())
+                fromF("timer:atomix-%d-2?period=5s", nodes.get(index).port())
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            try {
+                context.stop();
+            } catch (Exception e) {
+                LOGGER.warn("", e);
+        }));

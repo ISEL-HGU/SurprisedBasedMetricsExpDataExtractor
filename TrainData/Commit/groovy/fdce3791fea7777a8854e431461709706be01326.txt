@@ -1,0 +1,44 @@
+import org.codehaus.groovy.ast.expr.LambdaExpression;
+import static org.codehaus.groovy.ast.tools.GeneralUtils.block;
+import static org.codehaus.groovy.ast.tools.GeneralUtils.cloneParams;
+import static org.codehaus.groovy.transform.stc.StaticTypesMarker.CLOSURE_ARGUMENTS;
+                        leftExpression.putNodeMetaData(CLOSURE_ARGUMENTS, parameters);
+                            ((Expression) ((VariableExpression) rightExpression).getAccessedVariable()).getNodeMetaData(CLOSURE_ARGUMENTS) != null) {
+                                    CLOSURE_ARGUMENTS,
+                                    ((Expression) ((VariableExpression) rightExpression).getAccessedVariable()).getNodeMetaData(CLOSURE_ARGUMENTS));
+        ClassNode[] blockParameterTypes = (ClassNode[]) openBlock.getNodeMetaData(CLOSURE_ARGUMENTS);
+        openBlock.putNodeMetaData(CLOSURE_ARGUMENTS, blockParameterTypes);
+                expression.putNodeMetaData(CLOSURE_ARGUMENTS, inferred);
+                        Object data = field.getNodeMetaData(CLOSURE_ARGUMENTS);
+                        Object data = ((ASTNode) variable).getNodeMetaData(CLOSURE_ARGUMENTS);
+        Parameter[] parameters = selectedMethod.getParameters();
+        List<Integer> methodReferenceParamIndexList = new LinkedList<>();
+        List<Expression> newArgumentExpressionList = new LinkedList<>();
+                newArgumentExpressionList.add(argumentExpression);
+            Parameter param = parameters[i];
+            ClassNode paramType = param.getType();
+            MethodNode abstractMethodNode = ClassHelper.findSAM(paramType);
+
+            Parameter[] abstractMethodNodeParameters = abstractMethodNode.getParameters();
+            if (null == abstractMethodNodeParameters) {
+                abstractMethodNodeParameters = Parameter.EMPTY_ARRAY;
+            }
+
+            LambdaExpression lambdaExpression =
+                    new LambdaExpression(
+                            cloneParams(abstractMethodNodeParameters),
+                            block()
+                    );
+
+            newArgumentExpressionList.add(lambdaExpression);
+            methodReferenceParamIndexList.add(i);
+        if (methodReferenceParamIndexList.isEmpty()) return;
+        visitMethodCallArguments(receiver, new ArgumentListExpression(newArgumentExpressionList), true, selectedMethod);
+        for (Integer methodReferenceParamIndex : methodReferenceParamIndexList) {
+            LambdaExpression lambdaExpression = (LambdaExpression) newArgumentExpressionList.get(methodReferenceParamIndex);
+            ClassNode[] argumentTypes = lambdaExpression.getNodeMetaData(CLOSURE_ARGUMENTS);
+            argumentExpressionList.get(methodReferenceParamIndex).putNodeMetaData(CLOSURE_ARGUMENTS, argumentTypes);
+        }
+        ClassNode[] closureParamTypes = (ClassNode[]) closureExpression.getNodeMetaData(CLOSURE_ARGUMENTS);
+                if (expression.getNodeMetaData(CLOSURE_ARGUMENTS) != null) {
+                    closureParamTypes = expression.getNodeMetaData(CLOSURE_ARGUMENTS);

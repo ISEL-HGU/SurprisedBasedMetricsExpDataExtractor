@@ -1,0 +1,2 @@
+import org.apache.groovy.util.SystemUtil;
+    private static final boolean reuseClassLoader = SystemUtil.getBooleanSafe("groovy.GStringTemplateEngine.reuseClassLoader");

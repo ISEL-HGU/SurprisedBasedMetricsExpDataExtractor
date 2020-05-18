@@ -1,0 +1,1 @@
+     * context-type=application/x-java-serialized-object. This is by default

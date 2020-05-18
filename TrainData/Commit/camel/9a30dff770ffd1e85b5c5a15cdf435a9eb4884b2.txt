@@ -1,0 +1,2 @@
+        // to configure some options
+        main.configure().withName("MyMainCamel").withJmxEnabled(false).withMessageHistory(false);

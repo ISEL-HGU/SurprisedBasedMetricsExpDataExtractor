@@ -1,0 +1,16 @@
+        for (Map.Entry<K, V> entry : self.entrySet()) {
+            K key = entry.getKey();
+            V value = entry.getValue();
+
+            ret.put(key, value);
+        for (Map.Entry<K, V> entry : self.entrySet()) {
+            K key = entry.getKey();
+            V value = entry.getValue();
+
+                ret.put(key, value);
+        for (Object o : self.entrySet()) {
+            Map.Entry entry = (Map.Entry) o;
+            Object key = entry.getKey();
+            Object value = entry.getValue();
+
+            if (!coercedEquals(value, other.get(key))) {

@@ -1,0 +1,3 @@
+            if (!target.isPrimaryKey()) {
+                return false;
+        return true;

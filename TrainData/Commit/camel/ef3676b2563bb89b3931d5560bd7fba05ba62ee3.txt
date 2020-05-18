@@ -1,0 +1,2 @@
+ * To collect various metrics directly from Camel routes using the Micrometer
+ * library.

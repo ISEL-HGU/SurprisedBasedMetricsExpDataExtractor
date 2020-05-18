@@ -1,0 +1,8 @@
+        if (null == string) {
+            return false;
+        }
+
+        if (null == matcher) {
+            return false;
+        }
+

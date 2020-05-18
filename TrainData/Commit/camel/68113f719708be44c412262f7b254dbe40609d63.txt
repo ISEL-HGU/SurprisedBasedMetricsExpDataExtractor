@@ -1,0 +1,9 @@
+                BasicCache<String, String> cache = manager.getCache(lockMapName);
+                // By default, previously existing values for java.util.Map operations
+                // are not returned for remote caches but policy needs it so force it.
+                BasicCache<String, String> cache = manager.getCache(lockMapName, true);
+                } else {
+                    version = cache.getWithMetadata(lockKey).getVersion();
+                    LOGGER.debug("Lock refreshed key={} with new version={}", lockKey, version);
+        public void onCacheEntryRemoved(ClientCacheEntryRemovedEvent<String> event) {
+        public void onCacheEntryExpired(ClientCacheEntryExpiredEvent<String> event) {

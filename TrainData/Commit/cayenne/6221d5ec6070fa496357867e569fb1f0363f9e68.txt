@@ -1,0 +1,4 @@
+        boundItem.addItemListener(e -> updateModel());
+                b = (Boolean) value;
+            } else if (value instanceof Number) {
+        } finally {

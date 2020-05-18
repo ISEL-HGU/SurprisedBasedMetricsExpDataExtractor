@@ -1,0 +1,10 @@
+import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Types;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
+			binding.getExtendedType().setJdbcObject(statement,

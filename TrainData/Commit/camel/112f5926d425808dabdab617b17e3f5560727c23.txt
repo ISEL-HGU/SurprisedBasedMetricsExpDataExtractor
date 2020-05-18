@@ -1,0 +1,11 @@
+        File upToDateFile = file.getFile();
+        if (fileHasMoved(file)) {
+            upToDateFile = new File(file.getAbsoluteFilePath());
+        }
+        long length = upToDateFile.length();
+        long modified = upToDateFile.lastModified();
+
+    private boolean fileHasMoved(GenericFile<File> file) {
+        // GenericFile's absolute path is always up to date whereas the underlying file is not
+        return !file.getFile().getAbsolutePath().equals(file.getAbsoluteFilePath());
+    }

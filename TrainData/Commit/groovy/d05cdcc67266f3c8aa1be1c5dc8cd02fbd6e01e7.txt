@@ -1,0 +1,17 @@
+     * <pre class="groovyTestCase">
+     * assert [1, 2, 3].any { it == 2 }
+     * assert ![1, 2, 3].any { it > 3 }
+     * </pre>
+     * <pre class="groovyTestCase">
+     * assert [1, 2, 3].iterator().any { it == 2 }
+     * assert ![1, 2, 3].iterator().any { it > 3 }
+     * </pre>
+     * <pre class="groovyTestCase">
+     * assert [1, 2, 3].any { it == 2 }
+     * assert ![1, 2, 3].any { it > 3 }
+     * </pre>
+     * <pre class="groovyTestCase">
+     * assert [false, true].any()
+     * assert [0, 1].any()
+     * assert ![0, 0].any()
+     * </pre>

@@ -1,0 +1,4 @@
+import javax.swing.JOptionPane;
+import javax.swing.WindowConstants;
+import java.awt.Component;
+            JOptionPane.showMessageDialog(getView(), "Can't map relationship without source DbEntity. Set source DbEntity.");

@@ -1,0 +1,6 @@
+    public HazelcastTopicProducer(HazelcastInstance hazelcastInstance, HazelcastDefaultEndpoint endpoint, String topicName, boolean reliable) {
+        if (!reliable) {
+            this.topic = hazelcastInstance.getTopic(topicName);
+        } else {
+            this.topic = hazelcastInstance.getReliableTopic(topicName);
+        }

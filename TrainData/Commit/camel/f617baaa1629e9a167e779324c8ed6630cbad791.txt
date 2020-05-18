@@ -1,0 +1,22 @@
+import io.fabric8.kubernetes.client.Watch;
+    private PodsConsumerTask podsWatcher;
+        
+        podsWatcher = new PodsConsumerTask();
+        executor.submit(podsWatcher);
+                if (podsWatcher != null) {
+                    podsWatcher.getWatch().close();
+                }
+                if (podsWatcher != null) {
+                    podsWatcher.getWatch().close();
+                }
+
+        private Watch watch;
+            watch = w.watch(new Watcher<Pod>() {
+        }
+
+        public Watch getWatch() {
+            return watch;
+        }
+
+        public void setWatch(Watch watch) {
+            this.watch = watch;

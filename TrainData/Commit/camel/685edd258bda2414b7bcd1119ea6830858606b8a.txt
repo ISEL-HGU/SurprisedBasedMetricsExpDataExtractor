@@ -1,0 +1,12 @@
+        // setup step id on exchange
+        final Object oldStepId = exchange.removeProperty(Exchange.STEP_ID);
+        exchange.setProperty(Exchange.STEP_ID, stepId);
+
+                if (oldStepId != null) {
+                    // restore step id
+                    exchange.setProperty(Exchange.STEP_ID, oldStepId);
+                } else {
+                    // clear step id
+                    exchange.removeProperty(Exchange.STEP_ID);
+                }
+        return "Step["  stepId  "]";

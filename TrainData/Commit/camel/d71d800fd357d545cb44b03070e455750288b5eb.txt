@@ -1,0 +1,1 @@
+    private Integer requestedChannelMax = 2047;

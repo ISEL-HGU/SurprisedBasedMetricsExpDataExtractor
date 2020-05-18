@@ -1,0 +1,33 @@
+import static org.codehaus.groovy.ast.ClassHelper.isPrimitiveType;
+
+ * <li>to replace numbered constants with references to static fields</li>
+ * <li>remove superfluous references to GroovyObject interface</li>
+    // TODO make @CS lookup smarter so that we don't need both these maps
+    private final Map<Object, FieldNode> const2Objects = new HashMap<Object, FieldNode>();
+    private final Map<Object, FieldNode> const2Prims = new HashMap<Object, FieldNode>();
+    private int index;
+        const2Objects.clear();
+        const2Prims.clear();
+        index = 0;
+        for (FieldNode f : missingFields) {
+        if (n instanceof Long && (0L == (Long) n || 1L == (Long) n)) return; // LCONST_0, LCONST_1
+        boolean isPrimitive = isPrimitiveType(constantExpression.getType());
+        FieldNode field = isPrimitive ? const2Prims.get(n) : const2Objects.get(n);
+        if (field != null) {
+        String name;
+        while (true) {
+            name = "$const$"  index;
+            if (currentClass.getDeclaredField(name) == null) break;
+        field = new FieldNode(name,
+                Opcodes.ACC_PRIVATE | Opcodes.ACC_STATIC | Opcodes.ACC_SYNTHETIC | Opcodes.ACC_FINAL,
+                constantExpression.getType(),
+                currentClass,
+                constantExpression);
+        field.setSynthetic(true);
+        missingFields.add(field);
+        if (isPrimitive) {
+            const2Prims.put(n, field);
+        } else {
+            const2Objects.put(n, field);
+        }
+            setConstField((ConstantExpression) exp);

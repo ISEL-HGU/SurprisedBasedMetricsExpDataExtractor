@@ -1,0 +1,6 @@
+
+        if (restComponent != null) {
+            String extra = "<restConfiguration component=\""  restComponent  "\"/>";
+            xml = xml.replaceFirst("<rest>", extra  "\n<rest>");
+        }
+

@@ -1,0 +1,1 @@
+ * If your producers/consumers need more control over their lifecycle it is advised

@@ -1,0 +1,4 @@
+ b/platforms/spring-boot/components-starter/camel-elasticsearch-rest-starter/src/main/java/org/apache/camel/component/elasticsearch/springboot/ElasticsearchComponentConfiguration.java
+package org.apache.camel.component.elasticsearch.springboot;
+ * using REST API.
+@ConfigurationProperties(prefix = "camel.component.elasticsearch-rest")

@@ -1,0 +1,2 @@
+ * The aws-s3 component is used for storing and retrieving object from Amazon S3
+ * Storage Service.

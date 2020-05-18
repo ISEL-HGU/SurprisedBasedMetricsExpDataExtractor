@@ -1,0 +1,2 @@
+import com.amazonaws.regions.Regions;
+            AmazonKinesisFirehose client = AmazonKinesisFirehoseClientBuilder.standard().withCredentials(credentialsProvider).withRegion(Regions.valueOf(configuration.getRegion())).build();

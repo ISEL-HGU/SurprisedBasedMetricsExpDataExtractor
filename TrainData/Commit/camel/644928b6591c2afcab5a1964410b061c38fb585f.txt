@@ -1,0 +1,1 @@
+@UriEndpoint(scheme = "pulsar", title = "Apache Pulsar", syntax = "pulsar:persistence://tenant/namespace/topic", label = "messaging")

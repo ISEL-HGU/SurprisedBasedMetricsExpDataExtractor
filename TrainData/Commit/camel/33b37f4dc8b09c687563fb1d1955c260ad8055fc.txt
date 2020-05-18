@@ -1,0 +1,7 @@
+    String convertersKey(String currentClass) {
+        return currentClass;
+    }
+
+    @Override
+    void writeConverters(Map<String, ClassConverters> converters) throws Exception {
+            writeConverters(key, "Loader", value);

@@ -1,0 +1,17 @@
+import org.apache.cayenne.query.ObjectSelect;
+        ObjectSelect<DataRow> q = ObjectSelect.dataRowQuery(Artist.class)
+                .pageSize(6).orderBy("db:ARTIST_ID", SortOrder.ASCENDING);
+    public void testGet1() {
+    public void testIndexOf1() {
+        List<DataRow> artists = ObjectSelect.dataRowQuery(Artist.class, Artist.ARTIST_NAME.eq("artist20")).select(context);
+        DataRow row = artists.get(0);
+    public void testIndexOf2() {
+        List<DataRow> artists =  ObjectSelect.dataRowQuery(Artist.class, Artist.ARTIST_NAME.eq("artist2")).select(context);
+        DataRow row = artists.get(0);
+    public void testLastIndexOf1() {
+        List<DataRow> artists = ObjectSelect.dataRowQuery(Artist.class, Artist.ARTIST_NAME.eq("artist3")).select(context);
+        DataRow row = artists.get(0);
+    public void testLastIndexOf2() {
+        List<DataRow> artists = ObjectSelect.dataRowQuery(Artist.class, Artist.ARTIST_NAME.eq("artist20")).select(context);
+        DataRow row = artists.get(0);
+    public void testIterator() {

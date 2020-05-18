@@ -1,0 +1,11 @@
+import java.lang.IllegalArgumentException;
+            logger.debug("Error locating the ClearPass key file: {}", e);
+            logger.debug("Error reading the ClearPass key file: {}", e);
+            logger.debug("Algorithm was not found: {}", e);
+            logger.debug("The loaded key was invalid: {}", e);
+            return null;
+        }
+        catch (IllegalArgumentException e) {
+            logger.error("Failed to parse Base64 data, password will not be decrypted.");
+            logger.debug("Data received was not valid Base64 data, so decryption cannot continue: {}", e);
+            logger.debug("Error in one of the components to decrypt the password: {}", t);

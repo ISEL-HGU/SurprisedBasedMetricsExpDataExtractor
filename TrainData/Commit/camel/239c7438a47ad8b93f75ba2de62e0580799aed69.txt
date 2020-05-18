@@ -1,0 +1,2 @@
+    public TemplateStoredProcedure(JdbcTemplate jdbcTemplate, Template template, boolean function) {
+        setFunction(function);

@@ -1,0 +1,108 @@
+ * most functions. Implementations must provide their own {@link #self()} and
+ * {@link #getAuthenticationProvider()}, but otherwise need only override an
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation simply returns {@code null}. Implementations that
+     * wish to expose REST resources specific to a user's session should
+     * override this function.
+     */
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation returns a {@link Directory} which contains only
+     * the {@link User} returned by {@link #self()} (the current user
+     * associated with this {@link UserContext}. Implementations that wish to
+     * expose the existence of other users should override this function.
+     */
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation simply returns an empty {@link Directory}.
+     * Implementations that wish to expose connections should override this
+     * function.
+     */
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation returns a {@link Directory} which contains only
+     * the root connection group returned by {@link #getRootConnectionGroup()}.
+     * Implementations that wish to provide a structured connection hierarchy
+     * should override this function. If only a flat list of connections will
+     * be used, only {@link #getConnectionDirectory()} needs to be overridden.
+     */
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation simply returns an empty {@link Directory}.
+     * Implementations that wish to expose the status of active connections
+     * should override this function.
+     */
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation simply returns an empty {@link Directory}.
+     * Implementations that wish to provide screen sharing functionality
+     * through the use of sharing profiles should override this function.
+     */
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation simply returns an empty {@link ActivityRecordSet}.
+     * Implementations that wish to expose connection usage history should
+     * override this function.
+     */
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation simply returns an empty {@link ActivityRecordSet}.
+     * Implementations that wish to expose user login/logout history should
+     * override this function.
+     */
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation returns a new {@link ConnectionGroup} with the
+     * identifier defined by {@link #DEFAULT_ROOT_CONNECTION_GROUP} and
+     * containing all connections exposed by the {@link Directory} returned by
+     * {@link #getConnectionDirectory()}. Implementations that wish to provide
+     * a structured connection hierarchy should override this function. If only
+     * a flat list of connections will be used, only
+     * {@link #getConnectionDirectory()} needs to be overridden.
+     */
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation simply returns an empty {@link Collection}.
+     * Implementations that wish to expose custom user attributes as fields
+     * within user edit screens should override this function.
+     */
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation simply returns an empty {@link Collection}.
+     * Implementations that wish to expose custom connection attributes as
+     * fields within connection edit screens should override this function.
+     */
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation simply returns an empty {@link Collection}.
+     * Implementations that wish to expose custom connection group attributes
+     * as fields within connection group edit screens should override this
+     * function.
+     */
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation simply returns an empty {@link Collection}.
+     * Implementations that wish to expose custom sharing profile attributes as
+     * fields within sharing profile edit screens should override this function.
+     */
+    /**
+     * {@inheritDoc}
+     *
+     * <p>This implementation does nothing. Implementations that wish to perform
+     * cleanup tasks when the user associated with this {@link UserContext} is
+     * being logged out should override this function.
+     */

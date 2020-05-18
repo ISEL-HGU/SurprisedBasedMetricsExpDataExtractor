@@ -1,0 +1,18 @@
+    
+    public static final String AMQP_SET_TOPIC_PREFIX = "AMQP_SET_TOPIC_PREFIX";
+    
+    private final boolean setTopicPrefix;
+        this.setTopicPrefix = true; 
+    }
+    
+    public AMQPConnectionDetails(String uri, String username, String password, boolean setTopicPrefix) {
+        this.uri = uri;
+        this.username = username;
+        this.password = password;
+        this.setTopicPrefix = setTopicPrefix;
+            boolean setTopicPrefix = Boolean.parseBoolean(property(propertiesComponent, AMQP_SET_TOPIC_PREFIX, "true"));
+            return new AMQPConnectionDetails("amqp://"  host  ":"  port, username, password, setTopicPrefix);
+    
+    public boolean setTopicPrefix() {
+        return setTopicPrefix;
+    }

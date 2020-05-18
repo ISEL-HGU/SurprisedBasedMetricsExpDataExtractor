@@ -1,0 +1,4 @@
+        super();
+        super.setName(name);
+        super.setIdentifier(identifier);
+        super.setType(ConnectionGroup.Type.ORGANIZATIONAL);

@@ -1,0 +1,14 @@
+         * <code>org.apache.camel.component.mongodb.MongoDbOperation</code>
+         * <code>org.apache.camel.component.mongodb.MongoDbOperation</code>
+         * <code>org.apache.camel.component.mongodb.MongoDbOutputType</code>
+         * <code>org.apache.camel.component.mongodb.MongoDbOutputType</code>
+         * <code>org.apache.camel.component.mongodb.MongoDbOperation</code>
+         * <code>org.apache.camel.component.mongodb.MongoDbOperation</code>
+         * <code>org.apache.camel.component.mongodb.MongoDbOutputType</code>
+         * <code>org.apache.camel.component.mongodb.MongoDbOutputType</code>
+         * <code>org.apache.camel.component.mongodb.MongoDbOperation</code>
+         * <code>org.apache.camel.component.mongodb.MongoDbOperation</code>
+         * <code>org.apache.camel.component.mongodb.MongoDbOutputType</code>
+         * <code>org.apache.camel.component.mongodb.MongoDbOutputType</code>
+     * <code>org.apache.camel.component.mongodb.MongoDbOperation</code> enum.
+     * <code>org.apache.camel.component.mongodb.MongoDbOutputType</code> enum.

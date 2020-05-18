@@ -1,0 +1,4 @@
+import java.util.function.Supplier;
+    public MetaMethod transformMetaMethod(MetaClass metaClass, MetaMethod metaMethod, Supplier<Class<?>[]> paramsSupplier, Class<?> caller) {
+            Class<?>[] params = paramsSupplier.get();
+            Class<?>[] params = paramsSupplier.get();

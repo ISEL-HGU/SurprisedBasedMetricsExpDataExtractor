@@ -1,0 +1,1 @@
+        super(Opcodes.ASM6, new ClassWriter(0));

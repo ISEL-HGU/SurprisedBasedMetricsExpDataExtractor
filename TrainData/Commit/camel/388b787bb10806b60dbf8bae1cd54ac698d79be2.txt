@@ -1,0 +1,5 @@
+        from("foo:ThirstyBear?period=2000")
+            .log("ThirstyBear ordered ${body}");
+        from("foo:Moes?period=5000")
+            .to("bar:Beer?amount=5&celebrity=true")
+            .log("Moes ordered ${body}");

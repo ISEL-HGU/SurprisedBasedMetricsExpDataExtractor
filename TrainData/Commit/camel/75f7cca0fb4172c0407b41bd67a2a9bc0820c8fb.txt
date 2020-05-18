@@ -1,0 +1,6 @@
+        int expectMessagePartsSize = boi.getInput().getMessageParts().size();
+        if (parameters.length < expectMessagePartsSize) {
+                                                expectMessagePartsSize  ", Parameter size "  parameters.length
+        if (parameters.length > expectMessagePartsSize) {
+            if (holdersSize  expectMessagePartsSize  soapHeadersSize < parameters.length) {
+                                                    (expectMessagePartsSize  holdersSize  soapHeadersSize)  ", Parameter size "  parameters.length

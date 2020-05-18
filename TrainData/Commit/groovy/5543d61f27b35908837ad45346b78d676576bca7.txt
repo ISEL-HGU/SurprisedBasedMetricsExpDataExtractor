@@ -1,0 +1,1 @@
+        return numLeft.compareTo(BigInteger.ZERO) > 0;

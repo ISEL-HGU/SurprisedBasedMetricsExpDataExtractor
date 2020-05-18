@@ -1,0 +1,5 @@
+import org.apache.groovy.io.StringBuilderWriter;
+        Writer sw = new StringBuilderWriter();
+        Writer sw = new StringBuilderWriter();
+        Writer sw = new StringBuilderWriter();
+        Writer sw = new StringBuilderWriter();

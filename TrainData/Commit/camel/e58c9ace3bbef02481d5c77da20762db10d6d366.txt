@@ -1,0 +1,8 @@
+
+        // if we are in first|last mode then we should
+        // and the user want to select first or last outputs in the route (not cross cutting functionality)
+        boolean skip = selectFirst || selectLast;
+
+            } else if (skip) {
+            } else {
+                outputs.add(output);

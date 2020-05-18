@@ -1,0 +1,10 @@
+import org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache;
+import org.codehaus.groovy.runtime.memoize.EvictableCache;
+    private static final EvictableCache<String, Set<String>> DEFAULT_IMPORT_CLASS_AND_PACKAGES_CACHE = new ConcurrentCommonCache<>();
+                    Set<String> packagePrefixSet = DEFAULT_IMPORT_CLASS_AND_PACKAGES_CACHE.getAndPut(typeName, new ConcurrentCommonCache.ValueProvider<String, Set<String>>() {
+                        @Override
+                        public Set<String> provide(String key) {
+                            return new HashSet<>(2);
+                        }
+                    });
+            Set<String> packagePrefixSet = DEFAULT_IMPORT_CLASS_AND_PACKAGES_CACHE.get(typeName);

@@ -1,0 +1,1 @@
+            log.info("Took {} millis to send to: {}", sent.getTimeTaken(), sent.getEndpoint());

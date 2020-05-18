@@ -1,0 +1,6 @@
+import com.googlecode.jsendnsca.encryption.Encryption;
+        private Encryption encryption;
+        public Encryption getEncryption() {
+            return encryption;
+        public void setEncryption(Encryption encryption) {
+            this.encryption = encryption;

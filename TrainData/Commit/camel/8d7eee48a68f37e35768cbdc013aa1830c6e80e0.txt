@@ -1,0 +1,5 @@
+    public String getShortName() {
+        return "verb";
+    }
+
+    @Override

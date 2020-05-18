@@ -1,0 +1,5 @@
+import static org.codehaus.groovy.syntax.Types.PLUS;
+
+ * Binary write operations specialised for Booleans
+        type = type - PLUS;
+        if (type < 0 || type > 5 || type == 3 /*DIV*/) return false;

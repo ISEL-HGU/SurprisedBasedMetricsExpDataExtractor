@@ -1,0 +1,1 @@
+    private static final long serialVersionUID = 2284470475073785118L;

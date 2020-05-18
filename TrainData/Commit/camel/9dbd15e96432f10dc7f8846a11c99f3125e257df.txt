@@ -1,0 +1,4 @@
+ b/platforms/spring-boot/components-starter/camel-netty-http-starter/src/main/java/org/apache/camel/component/netty4/http/springboot/NettyHttpComponentConfiguration.java
+@ConfigurationProperties(prefix = "camel.component.netty-http")
+     * Whether to enable auto configuration of the netty-http component. This is
+     * enabled by default.

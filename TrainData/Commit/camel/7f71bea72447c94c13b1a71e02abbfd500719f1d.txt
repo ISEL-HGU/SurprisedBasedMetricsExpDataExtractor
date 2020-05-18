@@ -1,0 +1,17 @@
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+        ByteArrayOutputStream baos = null;
+            baos = determineLengthInputStream(is);
+            objectMetadata.setContentLength(baos.size());
+            is = new ByteArrayInputStream(baos.toByteArray());  
+    
+    private ByteArrayOutputStream determineLengthInputStream(InputStream is) throws IOException {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        byte[] bytes = new byte[1024];
+        int count;
+        while ((count = is.read(bytes)) > 0) {
+            out.write(bytes, 0, count);
+        }
+        return out;
+    }

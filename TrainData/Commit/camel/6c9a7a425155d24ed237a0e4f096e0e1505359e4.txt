@@ -1,0 +1,8 @@
+        String deprecated = getOption(rows, "deprecated");
+        if (deprecated != null) {
+            sb.append("    \"deprecated\": "  deprecated  ",\n");
+        }
+            sb.append("    \"async\": "  async  ",\n");
+            sb.append("    \"producerOnly\": "  producerOnly  ",\n");
+            sb.append("    \"consumerOnly\": "  consumerOnly  ",\n");
+            sb.append("    \"lenientProperties\": "  lenientProperties  ",\n");

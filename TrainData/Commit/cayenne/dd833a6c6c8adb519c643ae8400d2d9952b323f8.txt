@@ -1,0 +1,2 @@
+		SQLServerSniffer sniffer = new SQLServerSniffer(objectFactory);
+		DbAdapter adapter;

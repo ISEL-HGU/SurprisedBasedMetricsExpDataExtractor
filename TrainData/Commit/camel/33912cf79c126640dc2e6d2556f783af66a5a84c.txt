@@ -1,0 +1,11 @@
+        checkCompositeBatchVersion(version, batch.getVersion());
+    static void checkCompositeBatchVersion(final String configuredVersion, final Version batchVersion)
+        throws SalesforceException {
+        if (Version.create(configuredVersion).compareTo(batchVersion) < 0) {
+            throw new SalesforceException("Component is configured with Salesforce API version "
+                                           configuredVersion
+                                           ", but the payload of the Composite API batch operation requires at least "
+                                           batchVersion, 0);
+        }
+    }
+

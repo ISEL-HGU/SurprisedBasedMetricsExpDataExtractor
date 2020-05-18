@@ -1,0 +1,64 @@
+        String text = parseStringLiteral(ctx.StringLiteral().getText());
+        ConstantExpression constantExpression = new ConstantExpression(text, true);
+        constantExpression.putNodeMetaData(IS_STRING, true);
+
+        return configureAST(constantExpression, ctx);
+    }
+
+    private String parseStringLiteral(String text) {
+        return StringUtils.replaceEscapes(text, slashyType);
+        final List<ConstantExpression> stringLiteralList = new LinkedList<>();
+        final String begin = ctx.GStringBegin().getText();
+        final String beginQuotation = beginQuotation(begin);
+        stringLiteralList.add(configureAST(new ConstantExpression(parseGStringBegin(ctx, beginQuotation)), ctx.GStringBegin()));
+                        .map(e -> configureAST(new ConstantExpression(parseGStringPart(e, beginQuotation)), e))
+                        .collect(Collectors.toList());
+        stringLiteralList.addAll(partStrings);
+        stringLiteralList.add(configureAST(new ConstantExpression(parseGStringEnd(ctx, beginQuotation)), ctx.GStringEnd()));
+        for (int i = 0, n = stringLiteralList.size(), s = values.size(); i < n; i) {
+            verbatimText.append(stringLiteralList.get(i).getValue());
+        return configureAST(new GStringExpression(verbatimText.toString(), stringLiteralList, values), ctx);
+    }
+
+    private String parseGStringEnd(GstringContext ctx, String beginQuotation) {
+        String text = ctx.GStringEnd().getText();
+        text = beginQuotation  text;
+
+        return this.parseStringLiteral(text);
+    }
+
+    private String parseGStringPart(TerminalNode e, String beginQuotation) {
+        String text = e.getText();
+        text = text.substring(0, text.length() - 1);  // remove the tailing $
+        text = beginQuotation  text  QUOTATION_MAP.get(beginQuotation);
+
+        return this.parseStringLiteral(text);
+    }
+
+    private String parseGStringBegin(GstringContext ctx, String beginQuotation) {
+        String text = ctx.GStringBegin().getText();
+        text = text.substring(0, text.length() - 1);  // remove the tailing $
+        text = text  QUOTATION_MAP.get(beginQuotation);
+
+        return this.parseStringLiteral(text);
+    }
+
+    private String beginQuotation(String text) {
+        if (text.startsWith(TDQ_STR)) {
+            return TDQ_STR;
+        } else if (text.startsWith(DOLLAR_SLASH_STR)) {
+            return DOLLAR_SLASH_STR;
+        } else if (text.startsWith(SLASH_STR)) {
+            return SLASH_STR;
+        } else {
+            return String.valueOf(text.charAt(0));
+        }
+    private static final Map<String, String> QUOTATION_MAP = Maps.of(
+            DQ_STR, DQ_STR,
+            SQ_STR, SQ_STR,
+            TDQ_STR, TDQ_STR,
+            TSQ_STR, TSQ_STR,
+            SLASH_STR, SLASH_STR,
+            DOLLAR_SLASH_STR, SLASH_DOLLAR_STR
+    );
+

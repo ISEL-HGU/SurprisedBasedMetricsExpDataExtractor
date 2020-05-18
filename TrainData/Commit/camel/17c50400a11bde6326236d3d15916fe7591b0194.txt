@@ -1,0 +1,4 @@
+            clientConfiguration = new ClientConfiguration();
+        if (configuration.getAccessKey() != null && configuration.getSecretKey() != null) {
+            if (isClientConfigFound) {
+                client = new AmazonCloudWatchClient();

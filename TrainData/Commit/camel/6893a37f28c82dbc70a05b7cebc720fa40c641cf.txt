@@ -1,0 +1,5 @@
+
+        from("undertow:http://localhost:9012")
+            .id("undertow-2")
+            .autoStartup(false)
+            .log("From undertow ...");

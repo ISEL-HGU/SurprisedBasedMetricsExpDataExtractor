@@ -1,0 +1,43 @@
+import org.apache.camel.component.as2.api.*;
+import org.apache.camel.component.as2.api.entity.*;
+import org.apache.http.*;
+import java.io.IOException;
+import java.io.StringWriter;
+import java.security.PrivateKey;
+import java.security.cert.Certificate;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+
+
+    private static final String DEFAULT_MDN_MESSAGE_TEMPLATE = "MDN for -\n"
+             " Message ID: $requestHeaders[\"Message-Id\"]\n"
+    public ResponseMDN(String as2Version, String serverFQDN, AS2SignatureAlgorithm signingAlgorithm,
+
+
+        DispositionNotificationMultipartReportEntity multipartReportEntity;
+        if (HttpMessageUtils.getHeaderValue(request, AS2Header.DISPOSITION_TYPE) != null || HttpMessageUtils.getHeaderValue(request, AS2Header.DISPOSITION_TYPE) == AS2DispositionType.FAILED.getType()) {
+            // Return a failed Message Disposition Notification Receipt in response body
+            String mdnMessage = createMdnDescription(httpEntityEnclosingRequest, response, DispositionMode.AUTOMATIC_ACTION_MDN_SENT_AUTOMATICALLY,
+                    AS2DispositionType.FAILED, null, null, null, null, null, AS2Charset.US_ASCII, DEFAULT_MDN_MESSAGE_TEMPLATE);
+            multipartReportEntity = new DispositionNotificationMultipartReportEntity(
+                    httpEntityEnclosingRequest, response, DispositionMode.AUTOMATIC_ACTION_MDN_SENT_AUTOMATICALLY,
+                    AS2DispositionType.FAILED, null, null, null, null, null, AS2Charset.US_ASCII, boundary, true, decryptingPrivateKey, mdnMessage);
+        } else {
+            String mdnMessage = createMdnDescription(httpEntityEnclosingRequest, response, DispositionMode.AUTOMATIC_ACTION_MDN_SENT_AUTOMATICALLY,
+                    AS2DispositionType.PROCESSED, null, null, null, null, null, AS2Charset.US_ASCII, DEFAULT_MDN_MESSAGE_TEMPLATE);
+            multipartReportEntity = new DispositionNotificationMultipartReportEntity(
+                    httpEntityEnclosingRequest, response, DispositionMode.AUTOMATIC_ACTION_MDN_SENT_AUTOMATICALLY,
+                    AS2DispositionType.PROCESSED, null, null, null, null, null, AS2Charset.US_ASCII, boundary, true, decryptingPrivateKey, mdnMessage);
+        }
+
+
+
+            for (Header header : request.getAllHeaders()) {
+
+            for (Header header : response.getAllHeaders()) {
+
+
+
+
+

@@ -1,0 +1,3 @@
+
+            RestConfiguration config = getCamelContext().getRestConfiguration(pname, true);
+

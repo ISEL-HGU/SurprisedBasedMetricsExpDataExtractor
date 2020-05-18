@@ -1,0 +1,2 @@
+        actionManager.getAction(ObjEntityCounterpartAction.class).navigateToEntity(objEntity);
+        actionManager.getAction(ObjEntityCounterpartAction.class).navigateToEntity(dbEntity);

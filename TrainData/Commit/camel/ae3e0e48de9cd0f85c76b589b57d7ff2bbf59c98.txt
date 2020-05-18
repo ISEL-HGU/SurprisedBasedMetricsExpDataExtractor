@@ -1,0 +1,38 @@
+            return (UpdateRequest)document;
+            updateRequest.doc((byte[])document);
+            updateRequest.doc((Map<String, Object>)document);
+            updateRequest.doc((String)document, XContentFactory.xContentType((String)document));
+            updateRequest.doc((XContentBuilder)document);
+        return updateRequest.waitForActiveShards(exchange.getIn().getHeader(ElasticsearchConstants.PARAM_WAIT_FOR_ACTIVE_SHARDS, Integer.class))
+            .index(exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_NAME, String.class))
+            .type(exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_TYPE, String.class))
+            .id(exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_ID, String.class));
+            return (IndexRequest)document;
+            indexRequest.source((byte[])document, XContentFactory.xContentType((byte[])document));
+            indexRequest.source((Map<String, Object>)document);
+            indexRequest.source((String)document, XContentFactory.xContentType((String)document));
+            indexRequest.source((XContentBuilder)document);
+        return indexRequest.waitForActiveShards(exchange.getIn().getHeader(ElasticsearchConstants.PARAM_WAIT_FOR_ACTIVE_SHARDS, Integer.class))
+            .index(exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_NAME, String.class))
+            .type(exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_TYPE, String.class));
+        return createIndexRequest(document, exchange).id(exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_ID, String.class));
+        return createUpdateRequest(document, exchange).id(exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_ID, String.class));
+            return (GetRequest)document;
+        return new GetRequest(exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_NAME, String.class))
+            .type(exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_TYPE, String.class)).id((String)document);
+            return (DeleteRequest)document;
+            return new DeleteRequest().index(exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_NAME, String.class))
+                .type(exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_TYPE, String.class)).id((String)document);
+
+            return (DeleteIndexRequest)document;
+            String index = exchange.getIn().getHeader(ElasticsearchConstants.PARAM_INDEX_NAME, String.class);
+            return (SearchRequest)queryObject;
+        // Only setup the indexName and indexType if the message header has the
+        // setting
+            Map<String, Object> mapQuery = (Map<String, Object>)queryObject;
+            // Remove 'query' prefix from the query object for backward
+            // compatibility
+                mapQuery = (Map<String, Object>)mapQuery.get(ES_QUERY_DSL_PREFIX);
+            queryText = (String)queryObject;
+            return (BulkRequest)documents;
+            for (Object document : (List<Object>)documents) {

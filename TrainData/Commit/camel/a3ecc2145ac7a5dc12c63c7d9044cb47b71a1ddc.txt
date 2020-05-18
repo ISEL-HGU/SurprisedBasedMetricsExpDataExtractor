@@ -1,0 +1,14 @@
+        answer[0] = loadJsonSchema(classLoader, "camel-connector.json");
+        answer[1] = loadJsonSchema(classLoader, "camel-connector-schema.json");
+        answer[2] = loadJsonSchema(classLoader, "camel-component-schema.json");
+	private static String loadJsonSchema(ClassLoader classLoader, String jsonSchemaPath) {
+		try (InputStream is = classLoader.getResourceAsStream(jsonSchemaPath)) {
+            if (is != null) {
+                return loadText(is);
+            }
+        } catch (Throwable e) {
+            LOG.warn("Error loading "  jsonSchemaPath  " file", e);
+        }
+		return null;
+	}
+

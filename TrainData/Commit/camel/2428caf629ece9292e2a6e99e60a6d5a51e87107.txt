@@ -1,0 +1,1 @@
+        this.currentMap = new ConfigMapBuilder(map).editOrNewMetadata().withResourceVersion(String.valueOf(versionCounter)).endMetadata().build();

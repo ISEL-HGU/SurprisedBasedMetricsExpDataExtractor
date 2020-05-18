@@ -1,0 +1,9 @@
+            if (methodNode.isPackageScope() && !getPackageName(enclosingClassNode).equals(getPackageName(declaringClass))) {
+                continue;
+            }
+    private static String getPackageName(ClassNode cn) {
+        String name = cn.getPackageName();
+
+        return null == name ? "" : name;
+    }
+

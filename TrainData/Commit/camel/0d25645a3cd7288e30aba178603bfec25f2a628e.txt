@@ -1,0 +1,3 @@
+                return producer.process(exchange, new AsyncCallback() {
+                callback.done(true);
+            return true;

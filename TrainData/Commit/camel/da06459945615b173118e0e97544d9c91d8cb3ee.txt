@@ -1,0 +1,14 @@
+    private Set<String> lenient;
+    public void addLenient(String name) {
+        if (lenient == null) {
+            lenient = new LinkedHashSet<String>();
+        }
+        if (!lenient.contains(name)) {
+            lenient.add(name);
+        }
+    }
+
+    public Set<String> getLenient() {
+        return lenient;
+    }
+

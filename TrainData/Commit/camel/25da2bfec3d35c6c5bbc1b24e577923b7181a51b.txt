@@ -1,0 +1,42 @@
+    protected final CamelLogger transferLogger = new CamelLogger(LoggerFactory.getLogger(FtpClientActivityListener.class));
+    protected volatile FtpClientActivityListener listener;
+        // setup download listener/logger when we connect
+        transferLogger.setLevel(endpoint.getTransferLoggingLevel());
+        listener = new DefaultFtpClientActivityListener(transferLogger, endpoint.isTransferLoggingVerbose(), endpoint.getConfiguration().remoteServerInformation());
+        client.setCopyStreamListener(listener);
+
+                listener.onConnecting(host);
+        // we are now connected
+        listener.onConnected(host);
+
+            FtpEndpoint<?> ftpEndpoint = endpoint;
+            listener.onLogin(host);
+                listener.onDisconnecting(host);
+                listener.onDisconnected(host);
+            listener.onLoginComplete(host);
+        listener.onDisconnecting(endpoint.getConfiguration().remoteServerInformation());
+        listener.onDisconnected(endpoint.getConfiguration().remoteServerInformation());
+        // store the name of the file to download on the listener
+        listener.setRemoteFileName(name);
+        listener.onBeginDownloading(endpoint.getConfiguration().remoteServerInformation(), name);
+
+        boolean answer;
+            answer = retrieveFileToFileInLocalWorkDirectory(name, exchange);
+            answer = retrieveFileToStreamInBody(name, exchange);
+
+        if (answer) {
+            listener.onDownloadComplete(endpoint.getConfiguration().remoteServerInformation(), name);
+        }
+        return answer;
+        // store the name of the file to upload on the listener
+        listener.setRemoteFileName(name);
+        listener.onBeginUploading(endpoint.getConfiguration().remoteServerInformation(), name);
+
+        boolean answer;
+        if (answer) {
+            listener.onUploadComplete(endpoint.getConfiguration().remoteServerInformation(), name);
+        }
+
+        listener.onScanningForFiles(endpoint.remoteServerInformation(), null);
+        listener.onScanningForFiles(endpoint.remoteServerInformation(), path);
+

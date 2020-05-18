@@ -1,0 +1,2 @@
+import com.amazonaws.regions.Regions;
+            AmazonMQ client = AmazonMQClientBuilder.standard().withCredentials(credentialsProvider).withRegion(Regions.valueOf(configuration.getRegion())).build();

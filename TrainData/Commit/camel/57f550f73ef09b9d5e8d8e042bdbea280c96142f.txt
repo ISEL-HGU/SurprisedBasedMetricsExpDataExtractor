@@ -1,0 +1,61 @@
+        private org.apache.kafka.clients.consumer.KafkaConsumer consumer;
+            boolean first = true;
+            boolean reConnect = true;
+
+            while (reConnect) {
+
+                // create consumer
+                ClassLoader threadClassLoader = Thread.currentThread().getContextClassLoader();
+                try {
+                    // Kafka uses reflection for loading authentication settings, use its classloader
+                    Thread.currentThread().setContextClassLoader(org.apache.kafka.clients.consumer.KafkaConsumer.class.getClassLoader());
+                    this.consumer = new org.apache.kafka.clients.consumer.KafkaConsumer(kafkaProps);
+                } finally {
+                    Thread.currentThread().setContextClassLoader(threadClassLoader);
+                }
+
+                if (!first) {
+                    // skip one poll timeout before trying again
+                    long delay = endpoint.getConfiguration().getPollTimeoutMs();
+                    log.info("Reconnecting {} to topic {} after {} ms", threadId, topicName, delay);
+                    try {
+                        Thread.sleep(delay);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+                }
+
+                first = false;
+
+                // doRun keeps running until we either shutdown or is told to re-connect
+                reConnect = doRun();
+            }
+        }
+
+        protected boolean doRun() {
+            // allow to re-connect thread in case we use that to retry failed messages
+            boolean reConnect = false;
+
+
+                while (isRunAllowed() && !reConnect && !isStoppingOrStopped() && !isSuspendingOrSuspended()) {
+
+                        long partitionLastOffset = -1;
+
+
+                                        log.warn("Error during processing {} from topic: {}. Will seek consumer to offset: {} and re-connect and start polling again.", exchange, topicName, partitionLastOffset);
+
+                    if (breakOnErrorHit) {
+                        // force re-connect
+                        reConnect = true;
+                    }
+                if (!reConnect) {
+                    if (endpoint.getConfiguration().isAutoCommitEnable() != null && endpoint.getConfiguration().isAutoCommitEnable()) {
+                        if ("async".equals(endpoint.getConfiguration().getAutoCommitOnStop())) {
+                            LOG.info("Auto commitAsync on stop {} from topic {}", threadId, topicName);
+                            consumer.commitAsync();
+                        } else if ("sync".equals(endpoint.getConfiguration().getAutoCommitOnStop())) {
+                            LOG.info("Auto commitSync on stop {} from topic {}", threadId, topicName);
+                            consumer.commitSync();
+                        }
+
+            return reConnect;

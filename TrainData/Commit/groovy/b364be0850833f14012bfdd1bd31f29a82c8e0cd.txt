@@ -1,0 +1,7 @@
+import org.codehaus.groovy.ast.groovydoc.GroovydocHolder;
+    public static final String DOC_COMMENT = GroovydocHolder.DOC_COMMENT; // keys for meta data
+        if (!(node instanceof GroovydocHolder)) {
+            return;
+        }
+
+        node.putNodeMetaData(DOC_COMMENT, new org.codehaus.groovy.ast.groovydoc.Groovydoc(docCommentNodeText, (GroovydocHolder) node));

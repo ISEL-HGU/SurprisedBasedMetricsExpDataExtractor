@@ -1,0 +1,6 @@
+public class SftpOperations implements RemoteFileOperations<SftpRemoteFile> {
+    public void setEndpoint(GenericFileEndpoint<SftpRemoteFile> endpoint) {
+    public synchronized List<SftpRemoteFile> listFiles() throws GenericFileOperationFailedException {
+    public synchronized List<SftpRemoteFile> listFiles(String path) throws GenericFileOperationFailedException {
+            final List<SftpRemoteFile> list = new ArrayList<>();
+                    list.add(new SftpRemoteFileJCraft((ChannelSftp.LsEntry) file));

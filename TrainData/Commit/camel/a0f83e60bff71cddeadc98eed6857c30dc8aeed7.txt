@@ -1,0 +1,25 @@
+import org.eclipse.californium.scandium.dtls.pskstore.PskStore;
+    private PskStore pskStore;
+
+    @UriParam
+
+    /**
+     * Get the PskStore to use for pre-shared key.
+     */
+    public PskStore getPskStore() {
+        return pskStore;
+    }
+
+    /**
+     * Set the PskStore to use for pre-shared key.
+     */
+    public void setPskStore(PskStore pskStore) {
+        this.pskStore = pskStore;
+    }
+
+            if (trustedRpkStore == null && getTruststore() == null && pskStore == null) {
+            if (privateKey == null && getKeystore() == null && pskStore == null) {
+            if (privateKey == null && pskStore == null && getAlias() == null) {
+            if (privateKey == null && pskStore == null && getPassword() == null) {
+            } else if (pskStore != null) {
+                builder.setPskStore(pskStore);

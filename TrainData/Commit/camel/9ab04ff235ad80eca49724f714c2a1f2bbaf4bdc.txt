@@ -1,0 +1,11 @@
+import java.util.Set;
+import com.amazonaws.services.sns.AmazonSNS;
+
+        checkAndSetRegistryClient(configuration);
+    
+    private void checkAndSetRegistryClient(SnsConfiguration configuration) {
+        Set<AmazonSNS> clients = getCamelContext().getRegistry().findByType(AmazonSNS.class);
+        if (clients.size() == 1) {
+            configuration.setAmazonSNSClient(clients.stream().findFirst().get());
+        }
+    }

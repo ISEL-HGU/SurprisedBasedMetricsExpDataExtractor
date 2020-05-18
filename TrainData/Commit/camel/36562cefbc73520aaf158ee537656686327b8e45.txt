@@ -1,0 +1,2 @@
+import static org.apache.camel.util.ObjectHelper.findMethodsWithAnnotation;
+}

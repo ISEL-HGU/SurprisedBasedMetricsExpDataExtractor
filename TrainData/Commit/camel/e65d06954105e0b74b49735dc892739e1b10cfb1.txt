@@ -1,0 +1,2 @@
+ b/components/camel-core-osgi/src/main/java/org/apache/camel/core/osgi/impl/Activator.java
+package org.apache.camel.core.osgi.impl;

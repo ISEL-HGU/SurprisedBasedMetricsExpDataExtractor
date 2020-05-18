@@ -1,0 +1,11 @@
+import org.apache.camel.RuntimeCamelException;
+    @Test(expected = RuntimeCamelException.class)
+    public void testRouteDoesNotHangOnOptionError() throws Exception {
+        template.sendBody("direct:wrong-expression", "Hello");
+    }
+
+                from("direct:wrong-expression")
+                        .saga()
+                        .option("id", simple("${10 / 0}"))
+                        .to("log:info");
+

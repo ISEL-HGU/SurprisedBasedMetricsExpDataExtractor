@@ -1,0 +1,2 @@
+        } else if ("sjms".equals(extendsScheme)) {
+            return new File("../camel-sjms/target/classes/org/apache/camel/component/sjms/sjms.json");

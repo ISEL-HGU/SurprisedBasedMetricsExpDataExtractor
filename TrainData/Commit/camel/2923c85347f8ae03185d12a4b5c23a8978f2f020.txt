@@ -1,0 +1,2 @@
+        } catch (IllegalStateException e) {
+            // do nothing

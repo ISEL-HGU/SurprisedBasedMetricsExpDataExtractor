@@ -1,0 +1,6 @@
+        for (Method method : methods) {
+        for (Method method : methods) {
+        if (value instanceof CharSequence) {
+            return self.append((CharSequence)value);
+        }
+        return self.append(value);

@@ -1,0 +1,22 @@
+        IncludeTableFilter include = getIncludeTableFilter(tableName);
+        if (include == null) return null;
+
+        return include.columnsFilter;
+    }
+
+    /**
+     * @since 4.1
+     */
+    public PatternFilter getIncludeTableRelationshipFilter(String tableName) {
+        IncludeTableFilter include = getIncludeTableFilter(tableName);
+        if (include == null) return null;
+
+        return include.relationshipFilter;
+    }
+
+    private IncludeTableFilter getIncludeTableFilter(String tableName) {
+        return include;
+        TreeSet<IncludeTableFilter> includes = new TreeSet<>();
+        return new TableFilter(includes, new TreeSet<>());
+        TreeSet<IncludeTableFilter> includes = new TreeSet<>();
+        return new TableFilter(includes, new TreeSet<>());

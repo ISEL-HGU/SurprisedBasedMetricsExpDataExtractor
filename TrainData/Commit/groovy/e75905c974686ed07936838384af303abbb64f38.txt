@@ -1,0 +1,48 @@
+import java.util.Collections;
+import java.util.List;
+
+ * A method call on an object or class.
+
+    private boolean implicitThis = true;
+    private boolean spreadSafe;
+    private boolean safe;
+    private GenericsType[] genericsTypes;
+    private boolean usesGenerics;
+    public static final Expression NO_ARGUMENTS = new TupleExpression() {
+        @Override
+        public List<Expression> getExpressions() {
+            return Collections.unmodifiableList(super.getExpressions());
+        }
+        @Override
+        public TupleExpression addExpression(Expression e) {
+            throw new UnsupportedOperationException();
+        }
+    };
+        this(objectExpression, new ConstantExpression(method), arguments);
+        setMethod(method);
+        setArguments(arguments);
+        setObjectExpression(objectExpression);
+
+        // TODO: set correct type here
+        // if setting type and a MethodCall is the last expression in a method,
+        if (!(arguments instanceof TupleExpression)) {
+            this.arguments.setSourcePosition(arguments);
+        if (!(method instanceof ConstantExpression)) return null;
+    public Expression getObjectExpression() {
+        return objectExpression;
+    }
+
+    public ASTNode getReceiver() {
+        return getObjectExpression();
+     * @return the target as method node if set
+     */
+    public MethodNode getMethodTarget() {
+        return target;
+    }
+
+    /**
+        if (mn != null) {
+
+    public String toString() {
+        return super.toString()  "[object: "  objectExpression  " method: "  method  " arguments: "  arguments  "]";
+    }

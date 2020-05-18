@@ -1,0 +1,25 @@
+import org.apache.deltaspike.core.spi.alternative.AlternativeBeanClassProvider;
+import org.apache.deltaspike.core.util.ServiceUtils;
+            loadGlobalAlternativeConfigs();
+    private void loadGlobalAlternativeConfigs()
+    {
+        List<AlternativeBeanClassProvider> alternativeBeanClassProviders =
+            new ArrayList<AlternativeBeanClassProvider>();
+
+        //add the default implementation first (if enabled), to give custom implementations a higher priority
+        //(they can replace mappings defined by the default implementation)
+        if (ClassDeactivationUtils.isActivated(LabelAwareGlobalAlternativeBeanClassProvider.class))
+        {
+            alternativeBeanClassProviders.add(new LabelAwareGlobalAlternativeBeanClassProvider());
+        }
+
+        alternativeBeanClassProviders.addAll(
+            ServiceUtils.loadServiceImplementations(AlternativeBeanClassProvider.class));
+
+        for (AlternativeBeanClassProvider currentProvider : alternativeBeanClassProviders)
+        {
+            Map<String, String> alternativeBeanMappings = currentProvider.getAlternativeMapping();
+            globalAlternatives.putAll(alternativeBeanMappings);
+        }
+    }
+

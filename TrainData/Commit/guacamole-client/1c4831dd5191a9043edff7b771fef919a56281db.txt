@@ -1,0 +1,2 @@
+    public AttributePrincipal validateTicket(String ticket) throws GuacamoleException {
+            return a.getPrincipal();

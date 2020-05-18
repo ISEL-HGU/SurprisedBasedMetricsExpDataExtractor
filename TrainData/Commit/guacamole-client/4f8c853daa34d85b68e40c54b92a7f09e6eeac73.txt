@@ -1,0 +1,29 @@
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+     * Logger for this class.
+     */
+    private final Logger logger = LoggerFactory.getLogger(TokenValidationService.class);
+
+    /**
+     * token is invalid, null is returned.
+     *     The username contained within the given ID token, or null if the ID
+     *     token is not valid or the username claim type is missing,
+     *     If guacamole.properties could not be parsed.
+            String usernameClaim = confService.getUsernameClaimType();
+
+            String username = claims.getStringClaimValue(usernameClaim);
+            if (username != null)
+                return username;
+            // Warn if username was not present in token, as it likely means
+            // the system is not set up correctly
+            logger.warn("Username claim \"{}\" missing from token. Perhaps the "
+                     "OpenID scope and/or username claim type are "
+                     "misconfigured?", usernameClaim);
+        // Log any failures to validate/parse the JWT
+            logger.info("Rejected invalid OpenID token: {}", e.getMessage());
+            logger.debug("Invalid JWT received.", e);
+            logger.info("Rejected OpenID token with malformed claim: {}", e.getMessage());
+            logger.debug("Malformed claim within received JWT.", e);
+        // Could not retrieve username from JWT
+        return null;
+

@@ -1,0 +1,9 @@
+import java.util.HashMap;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import org.apache.camel.model.PropertyDescriptionsAdapter;
+    @XmlJavaTypeAdapter(PropertyDescriptionsAdapter.class)
+    private Map<String, String> configuration = new HashMap<String, String>();
+        this.configuration = configurations;
+        this.configuration = configurations;
+        return configuration;
+        this.configuration = configurations;

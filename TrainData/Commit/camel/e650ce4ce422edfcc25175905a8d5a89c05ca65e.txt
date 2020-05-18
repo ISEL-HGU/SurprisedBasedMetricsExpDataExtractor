@@ -1,0 +1,15 @@
+import java.security.GeneralSecurityException;
+
+import javax.net.ssl.SSLContext;
+import org.eclipse.californium.elements.tcp.TlsClientConnector;
+    private synchronized CoapClient getClient(Exchange exchange) throws IOException, GeneralSecurityException {
+                TcpClientConnector tcpConnector = null;
+
+                // TLS  TCP
+                if (endpoint.getUri().getScheme().startsWith("coaps")) {
+                    SSLContext sslContext = endpoint.getSslContextParameters().createSSLContext(endpoint.getCamelContext());
+                    tcpConnector = new TlsClientConnector(sslContext, tcpThreads, tcpConnectTimeout, tcpIdleTimeout);
+                } else {
+                    tcpConnector = new TcpClientConnector(tcpThreads, tcpConnectTimeout, tcpIdleTimeout);
+                }
+

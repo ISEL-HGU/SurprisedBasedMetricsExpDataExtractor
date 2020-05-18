@@ -1,0 +1,5 @@
+         * The entity ID. Should be passed when the operation performed requires
+         * a specific entity, e.g. deleting a post
+        /**
+         * Search criteria
+         */

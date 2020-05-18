@@ -1,0 +1,1 @@
+ * This class returns half bound {@link org.apache.groovy.swing.binding.FullBinding}s on the source half to the model

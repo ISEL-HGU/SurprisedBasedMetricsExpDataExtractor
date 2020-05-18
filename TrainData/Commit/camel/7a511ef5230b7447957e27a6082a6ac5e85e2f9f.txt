@@ -1,0 +1,14 @@
+                for (Map.Entry<String, Object> entry : exchange.getIn().getHeaders().entrySet()) {
+                    if (entry.getKey().startsWith(SolrConstants.PARAM)) {
+                        String paramName = entry.getKey().substring(SolrConstants.PARAM.length());
+                        updateRequest.setParam(paramName, entry.getValue().toString());
+                    }
+                }
+
+                    for (Map.Entry<String, Object> entry : exchange.getIn().getHeaders().entrySet()) {
+                        if (entry.getKey().startsWith(SolrConstants.PARAM)) {
+                            String paramName = entry.getKey().substring(SolrConstants.PARAM.length());
+                            updateRequest.setParam(paramName, entry.getValue().toString());
+                        }
+                    }
+

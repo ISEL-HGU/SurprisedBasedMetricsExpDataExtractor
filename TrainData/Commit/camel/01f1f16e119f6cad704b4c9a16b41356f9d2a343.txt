@@ -1,0 +1,1 @@
+                        BeanProxyFactory factory = endpoint.getCamelContext().getBeanProxyFactory();

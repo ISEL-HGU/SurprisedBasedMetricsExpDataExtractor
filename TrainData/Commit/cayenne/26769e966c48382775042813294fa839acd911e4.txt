@@ -1,0 +1,8 @@
+    private static final String UNION  = "UNION";
+    private static final String FROM   = "FROM";
+    private static final char   SPACE  = ' ';
+        String modified = Pattern.compile(UNION.toLowerCase(), Pattern.CASE_INSENSITIVE)
+                .matcher(sql).replaceAll(UNION);
+        return Arrays.stream(queries)
+                .map(this::trimSqlSelectColumns)
+                .collect(Collectors.joining(SPACE  UNION));

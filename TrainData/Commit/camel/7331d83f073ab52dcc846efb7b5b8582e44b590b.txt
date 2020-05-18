@@ -1,0 +1,12 @@
+import java.util.stream.Collectors;
+            String allowedMethods = METHODS.stream().filter(m -> getServletResolveConsumerStrategy().isHttpMethodAllowed(request, m, getConsumers())).collect(Collectors.joining(","));
+            if (allowedMethods == null && consumer.getEndpoint().getHttpMethodRestrict() != null) {
+                allowedMethods = consumer.getEndpoint().getHttpMethodRestrict();
+            if (allowedMethods == null) {
+                // allow them all
+                allowedMethods = "GET,HEAD,POST,PUT,DELETE,TRACE,OPTIONS,CONNECT,PATCH";
+            }
+            if (!allowedMethods.contains("OPTIONS")) {
+                allowedMethods = allowedMethods  ",OPTIONS";
+            }
+            response.addHeader("Allow", allowedMethods);

@@ -1,0 +1,10 @@
+    private List<ClassNode> getPrimaryClassNodes(boolean sort) {
+        int unsortedSize = unsorted.size();
+        int[] indexClass = new int[unsortedSize];
+        int[] indexInterface = new int[unsortedSize];
+        int unsortedSize = unsorted.size();
+        List<ClassNode> sorted = new ArrayList<ClassNode>(unsortedSize);
+        for (int i = 0; i < unsortedSize; i) {
+            for (int j = 0; j < unsortedSize; j) {
+        for (ClassNode classNode : getPrimaryClassNodes(body.needSortedInput())) {
+                    for (Iterator<InnerClassNode> iterator = classNode.getInnerClasses(); iterator.hasNext(); ) {

@@ -1,0 +1,7 @@
+public class Tuple<E> extends AbstractTuple<E> {
+    private final E[] contents;
+    public Tuple(E... contents) {
+    public E get(int index) {
+    public List<E> subList(int fromIndex, int toIndex) {
+        E[] newContent = (E[]) new Object[size];
+        return new Tuple<>(newContent);

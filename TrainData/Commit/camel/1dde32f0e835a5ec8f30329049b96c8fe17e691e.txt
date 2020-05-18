@@ -1,0 +1,1 @@
+        lifecycleMode = IgniteLifecycleMode.USER_MANAGED;

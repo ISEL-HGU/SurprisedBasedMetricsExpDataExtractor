@@ -1,0 +1,2 @@
+import static com.mongodb.ServerAddress.defaultHost;
+        return new MongoClient(defaultHost(), PORT);

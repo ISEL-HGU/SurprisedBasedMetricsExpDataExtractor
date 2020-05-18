@@ -1,0 +1,5 @@
+    /**
+     * Examples of response messages
+     */
+     * The response code such as a HTTP status code
+     * to indicate general error responses that do not map to a specific HTTP status code

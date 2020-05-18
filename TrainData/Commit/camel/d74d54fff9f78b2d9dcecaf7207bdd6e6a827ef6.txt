@@ -1,0 +1,6 @@
+        super.doStart();
+
+    public String getLoginUrl() {
+        return loginUrl;
+    }
+

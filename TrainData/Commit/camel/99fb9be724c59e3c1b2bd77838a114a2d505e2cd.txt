@@ -1,0 +1,15 @@
+import org.apache.camel.spi.HeaderFilterStrategy;
+        /**
+         * To use a custom HeaderFilterStrategy to filter header to and from
+         * Camel message.
+         */
+        private HeaderFilterStrategy headerFilterStrategy;
+
+        public HeaderFilterStrategy getHeaderFilterStrategy() {
+            return headerFilterStrategy;
+        }
+
+        public void setHeaderFilterStrategy(
+                HeaderFilterStrategy headerFilterStrategy) {
+            this.headerFilterStrategy = headerFilterStrategy;
+        }

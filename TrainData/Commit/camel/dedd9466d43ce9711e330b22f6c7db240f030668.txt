@@ -1,0 +1,4 @@
+            if (answer != null && (context.isSetupRoutes() || context.isStartingRoutes())) {
+                dynamicMap.remove(o);
+                staticMap.put((EndpointKey) o, answer);
+            }

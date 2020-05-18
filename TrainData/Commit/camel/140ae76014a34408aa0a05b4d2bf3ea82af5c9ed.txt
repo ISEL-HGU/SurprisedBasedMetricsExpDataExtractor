@@ -1,0 +1,2 @@
+                LOG.debug("Detected and using RestRegistryFactory: {}", answer);
+        LOG.debug("Cannot find RestRegistryFactory. Make sure camel-rest is on the classpath.");

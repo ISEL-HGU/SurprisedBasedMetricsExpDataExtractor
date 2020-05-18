@@ -1,0 +1,3 @@
+            } else {
+                storeType(tupleExpression, elemType);
+                ClassNode rightComponentType = this.getType(element);

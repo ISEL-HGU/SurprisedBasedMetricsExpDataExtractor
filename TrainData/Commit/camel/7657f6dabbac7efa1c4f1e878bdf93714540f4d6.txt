@@ -1,0 +1,6 @@
+import org.apache.camel.support.IntrospectionSupport;
+
+                                // TODO: get options from best class (getter/setter pairs)
+                                // we dont have documentation
+                                // add as spring boot options
+

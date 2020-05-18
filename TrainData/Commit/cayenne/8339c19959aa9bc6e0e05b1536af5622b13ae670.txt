@@ -1,0 +1,88 @@
+                               ClassDescriptor descriptor, boolean needToSaveDuplicates) {
+     * Properly synchronized object resolution
+        PrefetchProcessorNode decoratedTree = decorateTree(tree, mainResultRows, extraResultsByPath);
+
+        // prepare data for disjoint by id prefetches
+        decoratedTree.traverse(new DisjointByIdProcessor());
+
+        // resolve objects under global lock to keep object graph consistent
+            // do a single path for disjoint prefetches, joint subtrees will be processed at
+            // each disjoint node that is a parent of joint prefetches.
+            decoratedTree.traverse(new DisjointProcessor());
+
+            // connect related objects
+            decoratedTree.traverse(new PostProcessor());
+    /**
+     * create a copy of the tree using DecoratedPrefetchNodes and then traverse it resolving objects...
+     */
+    private PrefetchProcessorNode decorateTree(PrefetchTreeNode tree,
+                                               List<DataRow> mainResultRows,
+                                               Map<String, List<?>> extraResultsByPath) {
+        return new PrefetchProcessorTreeBuilder(this, mainResultRows, extraResultsByPath)
+                .buildTree(tree);
+    }
+    final class DisjointByIdProcessor implements PrefetchProcessor {
+                // doing nothing in current implementation if parent node is phantom
+
+            // note that a disjoint prefetch that has adjacent joint prefetches
+            // will be a PrefetchProcessorJointNode, so here check for semantics, not node type
+            if (parentProcessorNode.getSemantics() == PrefetchTreeNode.JOINT_PREFETCH_SEMANTICS) {
+                parentDataRows = ((PrefetchProcessorJointNode) parentProcessorNode).getResolvedRows();
+            } else {
+                parentDataRows = parentProcessorNode.getDataRows();
+            }
+            return true;
+        public boolean startPhantomPrefetch(PrefetchTreeNode node) {
+            return true;
+        }
+
+        @Override
+        public boolean startDisjointPrefetch(PrefetchTreeNode node) {
+            return true;
+        }
+
+        @Override
+        public boolean startJointPrefetch(PrefetchTreeNode node) {
+            return true;
+        }
+
+        @Override
+        public boolean startUnknownPrefetch(PrefetchTreeNode node) {
+            throw new CayenneRuntimeException("Unknown prefetch node: %s", node);
+        }
+
+        @Override
+        public void finishPrefetch(PrefetchTreeNode node) {
+        }
+    }
+
+    final class DisjointProcessor implements PrefetchProcessor {
+
+        @Override
+        public boolean startDisjointPrefetch(PrefetchTreeNode node) {
+
+            PrefetchProcessorNode processorNode = (PrefetchProcessorNode) node;
+
+            // this means something bad happened during fetch
+            if (processorNode.getDataRows() == null) {
+                return false;
+            }
+
+            // continue with processing even if the objects list is empty to handle multi-step prefetches.
+            if (processorNode.getDataRows().isEmpty()) {
+                return true;
+            }
+
+            List<Persistent> objects = processorNode.getResolver().objectsFromDataRows(processorNode.getDataRows());
+            processorNode.setObjects(objects);
+
+            return true;
+        }
+
+        @Override
+        public boolean startDisjointByIdPrefetch(PrefetchTreeNode node) {
+            return startDisjointPrefetch(node);
+        }
+
+        @Override
+    final static class JointProcessor implements PrefetchProcessor {

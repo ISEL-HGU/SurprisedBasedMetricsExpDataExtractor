@@ -1,0 +1,2 @@
+import org.apache.camel.component.twitter.search.TwitterSearchComponent;
+        TwitterSearchComponent tc = getContext().getComponent("twitter-search", TwitterSearchComponent.class);

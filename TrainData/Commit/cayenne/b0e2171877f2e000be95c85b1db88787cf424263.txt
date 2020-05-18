@@ -1,0 +1,7 @@
+import org.apache.cayenne.access.types.CharacterValueType;
+        ServerModule.contributeProperties(binder)
+                // Use soft references instead of default weak.
+                // Should remove problems with random-failing tests (those that are GC-sensitive).
+                .put(Constants.SERVER_OBJECT_RETAIN_STRATEGY_PROPERTY, "soft");
+                .add(LocalDateTimeValueType.class)
+                .add(CharacterValueType.class);

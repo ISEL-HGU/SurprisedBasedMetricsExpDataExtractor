@@ -1,0 +1,3 @@
+ * Represents the core lifecycle API for services which can be initialized, started and stopped
+     *
+     * @throws RuntimeException is thrown if initialization failed

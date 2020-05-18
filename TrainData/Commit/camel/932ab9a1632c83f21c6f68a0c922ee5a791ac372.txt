@@ -1,0 +1,7 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+                    Matcher m = Pattern.compile("\\{(.*?)\\}").matcher(a);
+                    while (m.find()) {
+                        String key = m.group(1);
+                        //  merge if exists

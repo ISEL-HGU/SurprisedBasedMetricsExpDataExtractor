@@ -1,0 +1,5 @@
+    @UriParam(label = "common")
+    @UriParam(label = "common")
+    @UriParam(label = "advanced", defaultValue = "5000")
+    @UriParam(label = "advanced", defaultValue = "20000")
+    @UriParam(label = "advanced", defaultValue = "1000")

@@ -1,0 +1,30 @@
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import org.apache.camel.CatalogCamelContext;
+import org.apache.camel.FailedToStartRouteException;
+import org.apache.camel.Route;
+import org.apache.camel.model.DataFormatDefinition;
+import org.apache.camel.model.HystrixConfigurationDefinition;
+import org.apache.camel.model.ModelCamelContext;
+import org.apache.camel.model.ModelHelper;
+import org.apache.camel.model.ProcessorDefinition;
+import org.apache.camel.model.ProcessorDefinitionHelper;
+import org.apache.camel.model.RouteDefinition;
+import org.apache.camel.model.RouteDefinitionHelper;
+import org.apache.camel.model.RoutesDefinition;
+import org.apache.camel.spi.DataFormat;
+import org.apache.camel.spi.Registry;
+     * Creates the {@link CamelContext} using
+     * {@link org.apache.camel.support.DefaultRegistry} as registry.
+    public synchronized List<RouteDefinition> getRouteDefinitions() {
+        // eager lookup data formats and bind to registry so the dataformats can
+        // be looked up and used
+            ErrorHandlerBuilderSupport builder = (ErrorHandlerBuilderSupport)getErrorHandlerFactory();

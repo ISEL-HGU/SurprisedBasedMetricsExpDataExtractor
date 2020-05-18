@@ -1,0 +1,2 @@
+                client = new PreBuiltXPackTransportClient(getSettings()).addTransportAddresses(addresses.toArray(new TransportAddress[addresses.size()]));
+            .put("xpack.security.transport.ssl.enabled", configuration.getEnableSSL());

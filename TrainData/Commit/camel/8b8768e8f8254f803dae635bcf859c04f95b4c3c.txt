@@ -1,0 +1,2 @@
+    @UriParam(label = "consumer")
+    private boolean breakOnFirstError;

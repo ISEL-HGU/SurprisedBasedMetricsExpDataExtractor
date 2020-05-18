@@ -1,0 +1,13 @@
+     * @param webSocketCode The numeric WebSocket status code to send.
+    private void closeConnection(WsOutbound outbound, GuacamoleStatus guac_status,
+            Integer webSocketCode) {
+            if(webSocketCode == null)
+                webSocketCode = guac_status.getWebSocketCode();
+            outbound.close(webSocketCode, ByteBuffer.wrap(message));
+                    closeConnection(outbound, e.getStatus(), e.getWebSocketCode());
+                    closeConnection(outbound, GuacamoleStatus.RESOURCE_NOT_FOUND, null);
+                                closeConnection(outbound, GuacamoleStatus.SUCCESS, null);
+                                closeConnection(outbound, e.getStatus(), e.getWebSocketCode());
+                                closeConnection(outbound, GuacamoleStatus.SUCCESS, null);
+                                closeConnection(outbound, e.getStatus(), e.getWebSocketCode());
+                            closeConnection(outbound, GuacamoleStatus.SERVER_ERROR, null);

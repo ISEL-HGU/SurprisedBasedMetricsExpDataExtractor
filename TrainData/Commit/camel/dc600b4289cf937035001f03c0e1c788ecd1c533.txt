@@ -1,0 +1,3 @@
+        ListTagsResult result = new ListTagsResult();
+        result.addTagsEntry("test", "lambda-tag");
+        return result;

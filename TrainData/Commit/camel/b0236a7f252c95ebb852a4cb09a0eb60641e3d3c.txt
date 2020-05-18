@@ -1,0 +1,87 @@
+@SupportedAnnotationTypes({"org.apache.camel.Converter"})
+        private int sizeFallback;
+            sizeFallback;
+        long sizeFallback() {
+            return sizeFallback;
+        }
+
+            return size == 0 && sizeFallback == 0;
+                if (isFallbackConverter(ee)) {
+                    converters.computeIfAbsent(currentClass, c -> new ClassConverters(comparator)).addFallbackTypeConverter(ee);
+                    if (converters.containsKey(currentClass)) {
+                        converters.get(currentClass).setIgnoreOnLoadError(ignoreOnLoadError);
+                    }
+                } else {
+
+            writeConverterLoader(key, value, converterAnnotationType);
+    private static boolean isFallbackCanPromote(Element element) {
+            for (Map.Entry<? extends ExecutableElement, ? extends AnnotationValue> entry : ann.getElementValues().entrySet()) {
+                if ("fallbackCanPromote".equals(entry.getKey().getSimpleName().toString())) {
+                    return (Boolean) entry.getValue().getValue();
+                }
+    private static boolean isAllowNull(Element element) {
+            for (Map.Entry<? extends ExecutableElement, ? extends AnnotationValue> entry : ann.getElementValues().entrySet()) {
+                if ("allowNull".equals(entry.getKey().getSimpleName().toString())) {
+                    return (Boolean) entry.getValue().getValue();
+                }
+            }
+        }
+        return false;
+    }
+
+    private static boolean isFallbackConverter(ExecutableElement element) {
+        for (AnnotationMirror ann : element.getAnnotationMirrors()) {
+            for (Map.Entry<? extends ExecutableElement, ? extends AnnotationValue> entry : ann.getElementValues().entrySet()) {
+                if ("fallback".equals(entry.getKey().getSimpleName().toString())) {
+                    return (Boolean) entry.getValue().getValue();
+                }
+                                      TypeElement converterAnnotationType) throws Exception {
+
+            if (converters.size() > 0) {
+                writer.append("    static abstract class BaseTypeConverter extends TypeConverterSupport {\n");
+                writer.append("        private final boolean allowNull;\n");
+                writer.append("\n");
+                writer.append("        public BaseTypeConverter(boolean allowNull) {\n");
+                writer.append("            this.allowNull = allowNull;\n");
+                writer.append("        }\n");
+                writer.append("\n");
+                writer.append("        @Override\n");
+                writer.append("        public boolean allowNull() {\n");
+                writer.append("            return allowNull;\n");
+                writer.append("        }\n");
+                writer.append("\n");
+                writer.append("        @Override\n");
+                writer.append("        public <T> T convertTo(Class<T> type, Exchange exchange, Object value) throws TypeConversionException {\n");
+                writer.append("            try {\n");
+                writer.append("                return (T) doConvert(exchange, value);\n");
+                writer.append("            } catch (TypeConversionException e) {\n");
+                writer.append("                throw e;\n");
+                writer.append("            } catch (Exception e) {\n");
+                writer.append("                throw new TypeConversionException(value, type, e);\n");
+                writer.append("            }\n");
+                writer.append("        }\n");
+                writer.append("        protected abstract Object doConvert(Exchange exchange, Object value) throws Exception;\n");
+                writer.append("    };\n");
+                writer.append("\n");
+                writer.append("    private final DoubleMap<Class<?>, Class<?>, BaseTypeConverter> converters = new DoubleMap<>("  converters.size()  ");\n");
+                writer.append("\n");
+            }
+                    boolean allowNull = isAllowNull(from.getValue());
+            if (converters.size() > 0) {
+                if (converters.isIgnoreOnLoadError()) {
+                    writer.append("        try {\n");
+                    writer.append("            converters.forEach((k, v, c) -> registry.addTypeConverter(k, v, c));\n");
+                    writer.append("        } catch (Throwable e) {\n");
+                    writer.append("            // ignore on load error\n");
+                    writer.append("        }\n");
+                } else {
+                    writer.append("        converters.forEach((k, v, c) -> registry.addTypeConverter(k, v, c));\n");
+                }
+                boolean allowNull = isAllowNull(ee);
+                boolean canPromote = isFallbackCanPromote(ee);
+                if (allowNull) {
+                    writer.append("            @Override\n");
+                    writer.append("            public boolean allowNull() {\n");
+                    writer.append("                return ").append(Boolean.toString(allowNull)).append(";\n");
+                    writer.append("            }\n");
+                }

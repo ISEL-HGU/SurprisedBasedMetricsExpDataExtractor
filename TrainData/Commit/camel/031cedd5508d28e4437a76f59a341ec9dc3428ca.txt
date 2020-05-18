@@ -1,0 +1,1 @@
+    @UriParam(label = "producer", enums = "copyObject,deleteBucket,listBuckets,downloadLink")

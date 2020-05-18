@@ -1,0 +1,8 @@
+import org.apache.camel.CamelContext;
+import org.apache.camel.impl.DefaultComponent;
+public class CassandraComponent extends DefaultComponent {
+        this(null);
+    }
+    
+    public CassandraComponent(CamelContext context) {
+        super(context);

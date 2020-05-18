@@ -1,0 +1,24 @@
+    // 0 = text, 1 = enum, 2 = boolean, 3 = integer
+    private static final Pattern PATTERN = Pattern.compile("\"(.?)\"|\\[(.)\\]|(true|false)|(\\d)");
+                        // its text based
+                    if (value == null) {
+                        // not text then its maybe an enum?
+                        value = matcher.group(2);
+                        if (value != null) {
+                            // its an enum so strip out " and trim spaces after comma
+                            value = value.replaceAll("\"", "");
+                            value = value.replaceAll(", ", ",");
+                            value = value.trim();
+                        }
+                    }
+                    if (value == null) {
+                        // not text then its maybe a boolean?
+                        value = matcher.group(3);
+                    }
+                    if (value == null) {
+                        // not text then its maybe a integer?
+                        value = matcher.group(4);
+                    }
+                    if (value != null) {
+                        row.put(key, value);
+                    }

@@ -1,0 +1,17 @@
+import org.apache.camel.component.salesforce.SalesforceLoginConfig.Type;
+import org.apache.camel.impl.verifier.OptionsGroup;
+        //
+        // Validation rules are borrowed from SalesforceLoginConfig's validate
+        // method, which support 3 workflow:
+        //
+        // - OAuth Username/Password Flow
+        // - OAuth Refresh Token Flow:
+        // - OAuth JWT Flow
+        //
+            .errors(ResultErrorHelper.requiresAny(
+                parameters,
+                OptionsGroup.withName(Type.USERNAME_PASSWORD).options("clientId", "clientSecret", "userName", "password"),
+                OptionsGroup.withName(Type.REFRESH_TOKEN).options("clientId", "clientSecret", "refreshToken"),
+                OptionsGroup.withName(Type.JWT).options("clientId", "userName", "keystore")
+            )
+        );

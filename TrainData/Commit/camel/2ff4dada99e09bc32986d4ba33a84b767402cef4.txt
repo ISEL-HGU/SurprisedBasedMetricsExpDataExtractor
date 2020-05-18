@@ -1,0 +1,4 @@
+    public ExceptionPolicy(String id, String routeId, boolean useOriginalInMessage, 
+           boolean hasOutputs, Predicate handledPolicy, Predicate continuedPolicy, 
+           Predicate retryWhilePolicy, Processor onRedelivery, Processor onExceptionOccurred, 
+           String redeliveryPolicyRef, Map<RedeliveryOption, String> redeliveryPolicy, List<String> exceptions) {

@@ -1,0 +1,12 @@
+ * When setting the property then by default only public setter methods is supported, however you can
+ * prefix the name with #private# to allow using private/protected setters, eg to use the private setBrokerURL setter method:
+ * camel.component.jms.configuration.connectionFactory.#private#brokerURL=tcp://localhost:61616.
+ * <p/>
+
+            if (bindProperty(camelContext, target, key, value, nesting, deepNesting, fluentBuilder, reference, placeholder)) {
+                iter.remove();
+                rc = true;
+    @Deprecated
+    @Deprecated
+    @Deprecated
+    @Deprecated

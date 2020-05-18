@@ -1,0 +1,2 @@
+            String[] mirrors = new String[] {"http://maven.ibiblio.org/maven"};
+            String[] mirrorsRoot = new String[] {"http://maven.ibiblio.org/maven"};

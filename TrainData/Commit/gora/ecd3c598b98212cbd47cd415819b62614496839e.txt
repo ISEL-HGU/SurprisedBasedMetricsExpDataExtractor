@@ -1,0 +1,2 @@
+  private static final String AS_SERVER_IP = "gora.aerospikestore.server.ip";
+  private static final String AS_SERVER_PORT = "gora.aerospikestore.server.port";

@@ -1,0 +1,20 @@
+import org.apache.camel.util.StringHelper;
+ *     <li>reference new class - Values can refer to creating new beans by their class name by prefixing with #class, eg #class:com.foo.MyClassType.
+ *                               The class is created using a default no-arg constructor, however if you need to create the instance via a factory method
+ *                               then you specify the method as shown: #class:com.foo.MyClassType#myFactoryMethod</li>.
+                String factoryMethod = null;
+                if (className.indexOf('#') != -1) {
+                    factoryMethod = StringHelper.after(className, "#");
+                    className = StringHelper.before(className, "#");
+                }
+                if (factoryMethod != null) {
+                    value = context.getInjector().newInstance(type, factoryMethod);
+                } else {
+                    value = context.getInjector().newInstance(type);
+                }
+                    throw new IllegalStateException("Cannot create instance of class: "  className);
+                    throw new IllegalStateException("Cannot select single type: "  typeName  " as there are "  types.size()  " beans in the registry with this type");
+                    throw new IllegalStateException("Cannot select single type: "  typeName  " as there are no beans in the registry with this type");
+                        throw new IllegalStateException("Cannot select single type: "  parameterType  " as there are "  types.size()  " beans in the registry with this type");
+                        throw new IllegalStateException("Cannot select single type: "  parameterType  " as there are no beans in the registry with this type");
+                    throw new IllegalStateException("Cannot find setter method with name: "  name  " on class: "  target.getClass().getName()  " to use for autowiring");

@@ -1,0 +1,2 @@
+import com.amazonaws.regions.Regions;
+            configuration.setRegion(Regions.fromName(parts[3]).toString());

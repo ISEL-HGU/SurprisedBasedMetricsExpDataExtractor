@@ -1,0 +1,3 @@
+        if(tailTrackingStrategy == null) {
+            tailTrackingStrategy = MongoDBTailTrackingEnum.LITERAL;
+        }

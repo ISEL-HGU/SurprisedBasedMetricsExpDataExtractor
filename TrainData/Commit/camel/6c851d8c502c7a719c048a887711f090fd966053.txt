@@ -1,0 +1,18 @@
+import org.apache.camel.util.jsse.SSLContextParameters;
+    @UriParam(label = "security", description = "To configure security using SSLContextParameters."
+         " Important: Only one instance of org.apache.camel.util.jsse.SSLContextParameters is supported per HttpComponent."
+         " If you need to use 2 or more different instances, you need to define a new HttpComponent per instance you need.")
+    protected SSLContextParameters sslContextParameters;
+    public SSLContextParameters getSslContextParameters() {
+        return sslContextParameters;
+    }
+
+    /**
+     * To configure security using SSLContextParameters.
+     * Important: Only one instance of org.apache.camel.util.jsse.SSLContextParameters is supported per HttpComponent.
+     * If you need to use 2 or more different instances, you need to define a new HttpComponent per instance you need.
+     */
+    public void setSslContextParameters(SSLContextParameters sslContextParameters) {
+        this.sslContextParameters = sslContextParameters;
+    }
+

@@ -1,0 +1,1 @@
+        ignore.add("io.opentracing.contrib:opentracing-");

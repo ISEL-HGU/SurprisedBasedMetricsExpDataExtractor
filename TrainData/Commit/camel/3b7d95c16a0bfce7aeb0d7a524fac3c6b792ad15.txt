@@ -1,0 +1,7 @@
+    private Map<String, String> nsmap;
+        this.nsmap = nsmap;
+        String ret = reader.getNamespaceURI(prefix);
+        if (ret == null) {
+            ret = nsmap.get(prefix);
+        }
+        return ret;

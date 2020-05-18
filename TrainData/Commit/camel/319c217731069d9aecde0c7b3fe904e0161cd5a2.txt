@@ -1,0 +1,27 @@
+     * Sets whether date headers should be formatted according to the ISO 8601
+     * standard.
+     */
+    private Boolean formatDateHeadersToIso8601 = false;
+    /**
+    public Boolean getFormatDateHeadersToIso8601() {
+        return formatDateHeadersToIso8601;
+    }
+
+    public void setFormatDateHeadersToIso8601(Boolean formatDateHeadersToIso8601) {
+        this.formatDateHeadersToIso8601 = formatDateHeadersToIso8601;
+    }
+
+        /**
+         * Sets whether date headers should be formatted according to the ISO
+         * 8601 standard.
+         */
+        private Boolean formatDateHeadersToIso8601 = false;
+
+        public Boolean getFormatDateHeadersToIso8601() {
+            return formatDateHeadersToIso8601;
+        }
+
+        public void setFormatDateHeadersToIso8601(
+                Boolean formatDateHeadersToIso8601) {
+            this.formatDateHeadersToIso8601 = formatDateHeadersToIso8601;
+        }

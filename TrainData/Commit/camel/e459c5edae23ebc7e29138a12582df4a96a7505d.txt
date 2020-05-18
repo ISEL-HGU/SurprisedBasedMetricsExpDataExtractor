@@ -1,0 +1,2 @@
+    @UriParam(defaultValue = "true", description = "Sets whether to use resource content cache or not")
+    private boolean contentCache;

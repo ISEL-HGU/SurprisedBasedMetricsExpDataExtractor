@@ -1,0 +1,1 @@
+        String text = javaType.replaceAll("<.*>", "").replaceAll(".*[.]([^.])", "$1");

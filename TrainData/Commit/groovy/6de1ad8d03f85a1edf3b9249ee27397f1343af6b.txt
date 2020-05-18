@@ -1,0 +1,333 @@
+ *
+    /**
+     * Constructor
+     *
+     * @param theClass The class this is the metaclass dor
+     * @param add      The methods for this class
+     */
+        } else {
+     * Constructor that sets the methods to null
+     *
+     * @param theClass The class this is the metaclass dor
+     */
+     * @param add      The methods
+    public MetaClassImpl(MetaClassRegistry registry, final Class theClass, MetaMethod add[]) {
+        if (m != null) {
+     * @see MetaObjectProtocol#hasProperty(Object, String)
+     * Returns the class this object this is the metaclass of.
+            metaMethodIndex.copyMethodsToSuper();
+            connectMultimethods(superClasses, firstGroovySuper);
+            removeMultimethodsOverloadedWithPrivateMethods();
+            replaceWithMOPCalls(theCachedClass.mopMethods);
+        for (; iter.hasNext(); ) {
+                break;
+        for (; iter.hasNext(); ) {
+            return c.getNewMetaMethods();
+                    return;
+                } else {
+                        hasPrivate = true;
+                    e.methods = ((FastArray) o).copy();
+                    e.methods = o;
+                        return;
+                    } else {
+                            return;
+                } else {
+                        return;
+                    } else {
+                            return;
+                        while (distance > 0) {
+                if (idx > 0) {
+                    int eidx = mopName.indexOf("$", idx  1);
+                    if (eidx > 0) {
+                        return new String[]{
+                                mopName.substring(0, idx  1),
+                                mopName.substring(idx  1, eidx),
+                return new String[]{"", "0", mopName};
+        while (from > 0 && mopMethods[from - 1].getName().equals(mopName))
+            from--;
+        while (to < mopMethods.length - 1 && mopMethods[to  1].getName().equals(mopName))
+            to;
+            return ReflectionCache.OBJECT_CLASS;
+        for (; iter.hasNext(); ) {
+                firstGroovy = c;
+                break;
+            firstGroovy = theCachedClass;
+     * given name
+        else if (isCallToSuper) {
+            answer = entry.methodsForSuper;
+        } else {
+            answer = entry.methods;
+        }
+                } else
+                for (Iterator iter = used.iterator(); iter.hasNext(); ) {
+                        continue;
+     * given name
+     * Adds an instance method to this metaclass.
+     * Adds a static method to this metaclass.
+     * @param object     The object the method should be invoked on.
+     * @param arguments  The arguments to the invoked method as null, a Tuple, an array or a single argument of any type.
+     * @param instance   The object the method should be invoked on.
+     * @param arguments  The arguments to the invoked method.
+     * @param instance      The object the method should be invoked on.
+     * @param propertyName  The name of the property to invoke.
+     * @param isGetter      Wether the method is a getter
+        Class theClass = instance instanceof Class ? (Class) instance : instance.getClass();
+        while (superClass != null && superClass != ReflectionCache.OBJECT_CLASS) {
+            if (property != null) {
+                if (!isGetter) {
+                } else {
+        if (isGetter) {
+            if (method instanceof ClosureMetaMethod) {
+                return method.invoke(instance, new Object[]{propertyName});
+        } else {
+            if (method instanceof ClosureMetaMethod) {
+            if (shouldHandle && iie.getCause() instanceof MissingPropertyException) {
+            final MetaProperty metaProperty = InvokerHelper.getMetaClass(Class.class).hasProperty(instance, propertyName);
+            if (metaProperty != null)
+                if (isGetter)
+                    return metaProperty.getProperty(instance);
+                else {
+                    metaProperty.setProperty(instance, optionalValue);
+                    return null;
+                }
+                instanceKlazz = theClass;
+            if (method != null) {
+            if (method != null) {
+            method = findMethodInClassHierarchy(instanceKlazz, INVOKE_METHOD_METHOD, invokeMethodArgs, this);
+            if (method instanceof ClosureMetaMethod) {
+                    MissingMethodException mme = (MissingMethodException) iie.getCause();
+                            mme.getArguments(), mme.isStatic(), mme);
+                            mme.getArguments(), mme.isStatic(), mme);
+     * @param object            The object which the method was invoked on
+     * @param methodName        The name of the method
+     * @param sender            The java.lang.Class instance that invoked the method
+     * @param object            The object which the method was invoked on
+     * @param methodName        The name of the method
+     * @param isCallToSuper     Whether the method is a call to a super class method
+     * @param fromInsideClass   Whether the call was invoked from the inside or the outside of the class
+                if (method == null) invokeMissingMethod(object, methodName, arguments);
+                        if (last != null)
+                            return invokeMissingMethod(object, methodName, originalArguments, last, isCallToSuper);
+                            } catch (InvokerInvocationException iie) {
+                                } else
+                                    throw iie;
+                            } catch (InvokerInvocationException iie) {
+                                } else
+                                    throw iie;
+                        if (last != null)
+                            return invokeMissingMethod(object, methodName, originalArguments, last, isCallToSuper);
+        if (method == null) {
+            value = metaProperty.getProperty(object);
+                value = ((Map) object).get(methodName);
+                return null;
+    private MetaMethod getMethodWithCachingInternal(Class sender, CallSite site, Class[] params) {
+            return getMethodWithoutCaching(sender, site.getName(), params, false);
+            return null;
+            return cacheEntry.method;
+        cacheEntry = new MetaMethodIndex.CacheEntry(params, (MetaMethod) chooseMethod(e.name, methods, params));
+            return null;
+                MetaClassHelper.sameClasses(cacheEntry.params, arguments, e.methodsForSuper instanceof MetaMethod)) {
+            if (method != null) return method;
+        cacheEntry = new MetaMethodIndex.CacheEntry(classes, method.isAbstract() ? null : method);
+            return null;
+                MetaClassHelper.sameClasses(cacheEntry.params, arguments, methods instanceof MetaMethod)) {
+            if (method != null) return method;
+        cacheEntry = new MetaMethodIndex.CacheEntry(classes, (MetaMethod) chooseMethod(e.name, methods, classes));
+                    MetaClassHelper.sameClasses(cacheEntry.params, arguments, e.staticMethods instanceof MetaMethod)) {
+                return cacheEntry.method;
+            cacheEntry = new MetaMethodIndex.CacheEntry(classes, pickStaticMethod(methodName, classes));
+        } else
+            return pickStaticMethod(methodName, MetaClassHelper.convertToTypeArray(arguments));
+        if (!(methods instanceof FastArray) || !((FastArray) methods).isEmpty()) {
+            } catch (MethodSelectionException msex) {
+        if (numberOfConstructors == -1) {
+     * <p>
+     * <p>
+     *
+
+
+        public int getModifiers() {
+            return cc.getModifiers();
+        }
+
+        public String getName() {
+            return "<init>";
+        }
+
+        public Class getReturnType() {
+            return cc.getCachedClass().getTheClass();
+        }
+
+        public CachedClass getDeclaringClass() {
+            return cc.getCachedClass();
+        }
+
+
+        public CachedConstructor getCachedConstrcutor() {
+            return cc;
+        }
+
+        public boolean isBeanConstructor() {
+            return beanConstructor;
+        }
+     *
+                        theClass.getEnclosingClass() != null &&
+                        theClass.getEnclosingClass().isAssignableFrom(argClasses[0])) {
+        for (Iterator iter = map.entrySet().iterator(); iter.hasNext(); ) {
+                    return mc.getProperty(sender, object, name, useSuper, false);
+            for (Iterator iter = possibleGenericMethods.iterator(); iter.hasNext(); ) {
+            for (Iterator iter = possibleGenericMethods.iterator(); iter.hasNext(); ) {
+                    continue;
+            for (Iterator iter = possibleGenericMethods.iterator(); iter.hasNext(); ) {
+                    continue;
+        if (propertyMap == null) {
+        for (ComplexKeyHashMap.EntryIterator iter = propertyMap.getEntrySetIterator(); iter.hasNext(); ) {
+            MetaMethod element = (MetaMethod) methodOrList;
+            if (superInterfaces.size() > 1) {
+            if (interfaces.size() > 1) {
+        for (ComplexKeyHashMap.EntryIterator iter = propertyMap.getEntrySetIterator(); iter.hasNext(); ) {
+        for (ComplexKeyHashMap.EntryIterator iter = classPropertyIndex.getEntrySetIterator(); iter.hasNext(); ) {
+        for (Iterator interfaceIter = interfaces.iterator(); interfaceIter.hasNext(); ) {
+            for (Iterator classIter = superClasses.iterator(); classIter.hasNext(); ) {
+        for (ComplexKeyHashMap.EntryIterator iter = from.getEntrySetIterator(); iter.hasNext(); ) {
+                    for (MetaMethod m : methods) {
+                    isGetter ? propertyMethod : null,
+                    isGetter ? null : propertyMethod);
+            } else if (mbp.getSetter() == null || mbp.getSetter() == propertyMethod) {
+        if (newMp != mp) {
+                    field = ((MultipleSetterProperty) old).getField();
+    /**
+     * @param sender          The java.lang.Class instance that is mutating the property
+     * @param object          The Object which the property is being set on
+     * @param name            The name of the property
+     * @param newValue        The new value of the property to set
+     * @param useSuper        Whether the call is to a super class property
+            if (!(this.isMap && isPrivateOrPkgPrivate(field.getModifiers()))) {
+            return getMetaProperty(name, useStatic);
+     * @param sender      The class of the object that requested the attribute
+     * @param receiver    The instance
+     * @param useSuper    Whether to look-up on the super class or not
+     * @param sender          The class of the object that requested the attribute
+     * @param object          The instance the attribute is to be retrieved from
+     * @param attribute       The name of the attribute
+     * @param useSuper        Whether to look-up on the super class or not
+     * @param sender          The java.lang.Class instance that is mutating the property
+     * @param object          The Object which the property is being set on
+     * @param attribute       The name of the attribute,
+     * @param newValue        The new value of the attribute to set
+     * @param useSuper        Whether the call is to a super class property
+                } catch (Exception e) {
+            if (isGetPropertyMethod(metaMethod)) {
+            } else if (isInvokeMethod(metaMethod)) {
+            } else if (isSetPropertyMethod(metaMethod)) {
+        return SET_PROPERTY_METHOD.equals(metaMethod.getName()) && metaMethod.getParameterTypes().length == 2;
+            NumberMathModificationInfo.instance.checkIfStdMethod(method);
+     * null:  ignore method
+     * true:  replace
+        if (aMethodClass == categoryMethodClass) return Boolean.TRUE;
+        if (len == 0) {
+            if (match == Boolean.TRUE) {
+                // null == ignore (we have a better method already)
+            } else if (match == null) {
+            FastArray m = (FastArray) methods;
+        } else {
+     * @param methodOrList the possible methods to choose from
+     * @param arguments    the arguments
+            return ((GeneratedMetaMethod.Proxy) method).proxy();
+        if (methods == null) return null;
+                        matchingMethods = method;
+                    else if (matchingMethods instanceof ArrayList)
+                        ((ArrayList) matchingMethods).add(method);
+                    else {
+                        List arr = new ArrayList(4);
+                        arr.add(matchingMethods);
+                        arr.add(method);
+                        matchingMethods = arr;
+                    }
+            if (checkParametersCompatible && !MetaClassHelper.parametersAreCompatible(arguments, parameterTypes.getNativeParameterTypes()))
+                continue;
+                .append(".\nCannot resolve which method to invoke for ")
+                .append(InvokerHelper.toString(arguments))
+                .append(" due to overlapping prototypes between:");
+     * forbidden unless this method is called. This method
+     * time to complete. An example is the creation of the
+     * Reflector. It is suggested to synchronize this
+                if (metaMethod == null) continue;
+     * Retrieves the list of MetaMethods held by this class. This list includes MetaMethods added by groovy.lang.ExpandoMetaClass.
+     *
+     * @return A list of MetaMethods
+     */
+
+            Class[] params = MetaClassHelper.convertToTypeArray(args);
+                return PojoMetaMethodSite.createPojoMetaMethodSite(site, this, metaMethod, params, receiver, args);
+            Class[] params = MetaClassHelper.convertToTypeArray(args);
+                return StaticMetaMethodSite.createStaticMetaMethodSite(site, this, metaMethod, params, args);
+            Class[] params = MetaClassHelper.convertToTypeArray(args);
+                tempSite = new AbstractCallSite(site.getArray(), site.getIndex(), "doCall");
+                return PogoMetaMethodSite.createPogoMetaMethodSite(site, this, metaMethod, params, args);
+            Class[] params = MetaClassHelper.convertToTypeArray(args);
+            MetaMethod metaMethod = getMethodWithCachingInternal(sender, site, params);
+            if (metaMethod != null)
+                return PogoMetaMethodSite.createPogoMetaMethodSite(site, this, metaMethod, params, args);
+                return ConstructorSite.createConstructorSite(site, this, constructor, params, args);
+            } else {
+                        return new ConstructorSite.NoParamSite(site, this, constructor, params);
+                    if (enclosingClass.getName().equals(enclosingInstanceParamType)) {
+                            return new ConstructorSite.NoParamSiteInnerClass(site, this, constructor, params);
+     * Retrieves a list of additional MetaMethods held by this class
+     *
+     * @return A list of MetaMethods
+     */
+        MetaBeanProperty property = null;
+            return null;
+        if (metaClass instanceof MutableMetaClass) {
+            property = getMetaPropertyFromMutableMetaClass(propertyName, metaClass);
+            if (property == null) {
+                if (superClass != ReflectionCache.OBJECT_CLASS) {
+                if (property == null) {
+            if (metaProperty instanceof MetaBeanProperty)
+                return (MetaBeanProperty) metaProperty;
+            for (ClassInfo ci : ((MetaClassImpl) metaClass).theCachedClass.getHierarchy()) {
+                if (aClass instanceof MutableMetaClass && ((MutableMetaClass) aClass).isModified()) {
+                return null;
+        } else {
+            MetaClass superMetaClass = GroovySystem.getMetaClassRegistry().getMetaClass(superClass);
+            method = findMethodInClassHierarchy(instanceKlazz, methodName, arguments, superMetaClass);
+        } else {
+                method = infMethod;
+                method = mostSpecific(method, infMethod, instanceKlazz);
+                } else {
+                    method = m;
+                    method = mostSpecific(method, m, instanceKlazz);
+            return method;
+            return newMethod;
+            return method;
+                method = ownMethod;
+                method = mostSpecific(method, ownMethod, instanceKlazz);
+     * <p>Retrieves a property on the given object for the specified arguments.
+     * @param object   The Object which the property is being retrieved from
+
+     * <p>Sets a property on the given object for the specified arguments.
+     * @param object   The Object which the property is being retrieved from
+     * @param object    The object to get the attribute from
+     * @param object    The object to get the attribute from
+     * @param newValue  The new value of the attribute
+     * @param methodName the name of the method to pick
+     * @param arguments  the method arguments
+    public boolean hasCustomInvokeMethod() {
+        return invokeMethodMethod != null;
+    }
+    public boolean hasCustomStaticInvokeMethod() {
+        return false;
+    }
+        metaMethodIndex.clearCaches();
+                return ((FastArray) value).copy();
+                return value;
+                                                    Object delegate,
+                                                    Closure closure,
+                                                    String methodName,
+                                                    Class[] argClasses,
+                                                    Object[] originalArguments,
+                                                    Object owner) {
+            if (method != null)
+                return new Tuple2<>(ownerMetaClass.invokeMethod(owner, methodName, originalArguments), method);

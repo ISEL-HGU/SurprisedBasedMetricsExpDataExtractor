@@ -1,0 +1,18 @@
+import java.util.Optional;
+import org.apache.camel.component.extension.ComponentVerifierExtension;
+import org.apache.camel.component.extension.verifier.ResultBuilder;
+import org.apache.camel.component.extension.verifier.ResultErrorBuilder;
+
+        registerExtension(this::getComponentVerifierExtension);
+        return (scope, parameters) -> getExtension(ComponentVerifierExtension.class).orElseThrow(UnsupportedOperationException::new).verify(scope, parameters);
+    }
+
+    private ComponentVerifierExtension getComponentVerifierExtension() {
+            final Optional<ComponentVerifierExtension> extension = component.getExtension(ComponentVerifierExtension.class);
+            if (extension.isPresent()) {
+                return (ComponentVerifierExtension.Scope scope, Map<String, Object> map) -> {
+                        return ResultBuilder.withStatusAndScope(ComponentVerifierExtension.Result.Status.OK, scope)
+                    return extension.get().verify(scope, options);
+                    return ResultBuilder.withStatusAndScope(ComponentVerifierExtension.Result.Status.UNSUPPORTED, scope)
+                            ResultErrorBuilder.withCode(ComponentVerifierExtension.VerificationError.StandardCode.UNSUPPORTED)
+                return ResultBuilder.withStatusAndScope(ComponentVerifierExtension.Result.Status.OK, scope)

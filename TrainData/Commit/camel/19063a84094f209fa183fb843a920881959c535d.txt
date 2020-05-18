@@ -1,0 +1,1 @@
+                from("file:target/data/filestress?readLock=markerFile&maxMessagesPerPoll=25&move=backup")

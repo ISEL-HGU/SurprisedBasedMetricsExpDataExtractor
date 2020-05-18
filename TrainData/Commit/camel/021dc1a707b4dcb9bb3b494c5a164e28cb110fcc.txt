@@ -1,0 +1,8 @@
+        // remove excluded properties from parent as we dont want to inherit them again
+        if (parentData != null && parentData.get("properties") != null) {
+            Map map = (Map<String, Object>) parentData.get("properties");
+            for (String exclude : uriEndpoint.excludeProperties().split(",")) {
+                map.remove(exclude);
+            }
+        }
+

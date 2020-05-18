@@ -1,0 +1,15 @@
+     *
+     *
+     *
+     *
+     *
+     *
+
+            // some OS do not support dashes in keys, so replace with underscore
+            String normalizedKey = upperKey.replace('-', '_');
+
+            // and replace dots with underscores so keys like my.key are
+            // translated to MY_KEY
+            normalizedKey = normalizedKey.replace('.', '_');
+
+            value = System.getenv(normalizedKey);

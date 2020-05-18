@@ -1,0 +1,4 @@
+import org.apache.groovy.xml.extensions.XmlExtensions;
+        Iterator<Node> it = XmlExtensions.iterator(self);
+        Iterator<Node> iter = XmlExtensions.iterator(children(newNodes));
+        Iterator it = XmlExtensions.iterator(self);

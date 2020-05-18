@@ -1,0 +1,5 @@
+import java.util.Objects;
+		return isOverrideTableChange
+				|| !attribute.getName().equals(view.getAttributeName().getText())
+				|| (attribute.getType() == null && view.getTypeComboBox().getSelectedItem() != null)
+				|| !Objects.equals(attribute.getType(), view.getTypeComboBox().getSelectedItem());

@@ -1,0 +1,9 @@
+import static java.util.Comparator.comparing;
+
+            if (value != null) {
+        // only purge if allowed
+            log.trace("Purge task not allowed to run");
+        log.trace("Running purge task to see if any entries have been timed out");
+
+                expired.sort(comparing(TimeoutMapEntry::getExpireTime));
+    private static <K, V> V unwrap(TimeoutMapEntry<K, V> entry) {

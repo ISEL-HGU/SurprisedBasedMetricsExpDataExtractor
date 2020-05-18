@@ -1,0 +1,6 @@
+import java.util.concurrent.ExecutorService;
+
+
+    public ExecutorService createExecutor(){
+        return getCamelContext().getExecutorServiceManager().newSingleThreadExecutor(this, "${name}Consumer");
+    }

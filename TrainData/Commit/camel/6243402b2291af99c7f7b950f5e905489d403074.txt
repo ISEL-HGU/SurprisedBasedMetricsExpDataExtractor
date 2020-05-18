@@ -1,0 +1,12 @@
+            ProducerRecord rec = c.next();
+            if (log.isDebugEnabled()) {
+                log.debug("Sending message to topic: {}, partition: {}, key: {}", rec.topic(), rec.partition(), rec.key());
+            }
+            futures.add(kafkaProducer.send(rec));
+                ProducerRecord rec = c.next();
+                if (log.isDebugEnabled()) {
+                    log.debug("Sending message to topic: {}, partition: {}, key: {}", rec.topic(), rec.partition(), rec.key());
+                }
+                kafkaProducer.send(rec, cb);
+                log.trace("All messages sent, continue routing.");
+                        log.trace("All messages sent, continue routing.");

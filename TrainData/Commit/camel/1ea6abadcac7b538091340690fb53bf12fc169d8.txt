@@ -1,0 +1,6 @@
+import java.util.Collections;
+import org.xmlunit.builder.Input;
+import org.xmlunit.xpath.JAXPXPathEngine;
+        JAXPXPathEngine xpathEngine = new JAXPXPathEngine();
+        xpathEngine.setNamespaceContext(Collections.singletonMap("svrl", Constants.HTTP_PURL_OCLC_ORG_DSDL_SVRL));
+            return xpathEngine.evaluate(xpath, Input.fromString(xml).build());

@@ -1,0 +1,23 @@
+import java.io.ByteArrayOutputStream;
+import java.nio.ByteBuffer;
+import static javax.servlet.http.HttpServletResponse.SC_OK;
+
+import org.eclipse.jetty.client.util.InputStreamResponseListener;
+import org.eclipse.jetty.util.Callback;
+
+
+        InputStreamResponseListener responseListener = new InputStreamResponseListener() {
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+
+            @Override
+            public void onContent(Response response, ByteBuffer content, Callback callback) {
+                if (response.getStatus() != SC_OK) {
+                    LOG.warn("Response received {}: {}", response.getStatus(), response.getReason());
+                }
+                byte[] buffer = new byte[content.limit()];
+                content.get(buffer);
+                baos.write(buffer, 0, buffer.length);
+
+                callback.succeeded();
+            }
+                    onResponseComplete(result, baos.toByteArray(), null);

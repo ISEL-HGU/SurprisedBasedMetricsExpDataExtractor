@@ -1,0 +1,10 @@
+            String output = formatter.format(exchange);
+            if (maskingFormatter != null) {
+                output = maskingFormatter.format(output);
+            }
+            log.log(output, exception);
+            String output = formatter.format(exchange)  message;
+            if (maskingFormatter != null) {
+                output = maskingFormatter.format(output);
+            }
+            log.log(output);

@@ -1,0 +1,16 @@
+import java.util.Set;
+
+import com.networknt.schema.JsonSchema;
+import com.networknt.schema.ValidationMessage;
+     * @param errors   the validation errors
+    void handleErrors(Exchange exchange, JsonSchema schema, Set<ValidationMessage> errors) throws ValidationException;
+
+    /**
+     * Process a general error that happens during valdating
+     *
+     * @param exchange the exchange
+     * @param schema   the schema
+     * @param e        general error
+     * @throws ValidationException is thrown in case of validation errors
+     */
+    void handleErrors(Exchange exchange, JsonSchema schema, Exception e) throws ValidationException;

@@ -1,0 +1,10 @@
+        if (derefAliases.equals("always"))
+        else if (derefAliases.equals("finding"))
+        else if (derefAliases.equals("searching"))
+        else if (derefAliases.equals("never"))
+        
+        else {
+            logger.error("Invalid value given for ldap-dereference-aliases.");
+            logger.debug("Received {} but expected one of the following: always, finding, searching, never.", derefAliases);
+            throw new GuacamoleException("Invalid valid for ldap-dereference-aliases.");
+        }

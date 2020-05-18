@@ -1,0 +1,21 @@
+import org.apache.camel.FluentProducerTemplate;
+     * Default fluent producer template for the bootstrapped Camel context.
+     * Create the bean lazy as it should only be created if its in-use.
+     */
+    // We explicitly declare the destroyMethod to be "" as the Spring @Bean
+    // annotation defaults to AbstractBeanDefinition.INFER_METHOD otherwise
+    // and in that case Service::close (FluentProducerTemplate implements Service)
+    // would be used for bean destruction. And we want Camel to handle the
+    // lifecycle.
+    @Bean(destroyMethod = "")
+    @ConditionalOnMissingBean(FluentProducerTemplate.class)
+    @Lazy
+    FluentProducerTemplate fluentProducerTemplate(CamelContext camelContext,
+                                                 CamelConfigurationProperties config) throws Exception {
+        final FluentProducerTemplate fluentProducerTemplate = camelContext.createFluentProducerTemplate(config.getProducerTemplateCacheSize());
+        // we add this fluentProducerTemplate as a Service to CamelContext so that it performs proper lifecycle (start and stop)
+        camelContext.addService(fluentProducerTemplate);
+        return fluentProducerTemplate;
+    }
+
+    /**

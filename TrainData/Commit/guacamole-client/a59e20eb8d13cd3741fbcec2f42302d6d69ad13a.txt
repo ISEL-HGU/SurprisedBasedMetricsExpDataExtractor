@@ -1,0 +1,18 @@
+     * Whether this active connection may be connected to.
+     */
+    private final boolean connectable;
+
+    /**
+        this.connectable          = connection.isConnectable();
+
+    /***
+     * Returns whether this active connection may be connected to, just as a
+     * normal connection.
+     *
+     * @return
+     *     true if this active connection may be connected to, false otherwise.
+     */
+    public boolean isConnectable() {
+        return connectable;
+    }
+

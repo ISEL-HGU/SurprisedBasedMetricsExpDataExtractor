@@ -1,0 +1,3 @@
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+
+    @ConditionalOnMissingBean

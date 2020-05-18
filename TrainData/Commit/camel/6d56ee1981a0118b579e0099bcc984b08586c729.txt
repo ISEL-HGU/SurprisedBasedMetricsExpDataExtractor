@@ -1,0 +1,2 @@
+        getLoadBalancer().addProcessor(consumer.getAsyncProcessor());
+        getLoadBalancer().removeProcessor(consumer.getAsyncProcessor());

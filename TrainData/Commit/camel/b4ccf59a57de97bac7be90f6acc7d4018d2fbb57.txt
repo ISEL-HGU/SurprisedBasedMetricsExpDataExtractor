@@ -1,0 +1,9 @@
+                    String sql = "SELECT "  EXCHANGE  " FROM "  repositoryName  " WHERE "  ID  " = ?";
+                    ByteArrayOutputStream bis = new ByteArrayOutputStream();
+                    jdbcTemplate.query(sql, new Object[] {key}, new AbstractLobStreamingResultSetExtractor<Object>() {
+                        @Override
+                        protected void streamData(ResultSet rs) throws SQLException, IOException, DataAccessException {
+                            FileCopyUtils.copy(getLobHandler().getBlobAsBinaryStream(rs, EXCHANGE), bis);
+                        }
+                    });
+                    return codec.unmarshallExchange(camelContext, bis.toByteArray());

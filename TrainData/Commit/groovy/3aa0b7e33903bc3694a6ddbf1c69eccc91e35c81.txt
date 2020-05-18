@@ -1,0 +1,8 @@
+import java.security.AccessController;
+import java.security.PrivilegedAction;
+        final LoaderConfiguration lc = new LoaderConfiguration();
+        ClassLoader loader = AccessController.doPrivileged(new PrivilegedAction<RootLoader>() {
+            public RootLoader run() {
+                return new RootLoader(lc);
+            }
+        });

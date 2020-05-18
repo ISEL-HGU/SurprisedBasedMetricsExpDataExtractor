@@ -1,0 +1,2 @@
+import org.apache.camel.support.processor.MarshalProcessor;
+import org.apache.camel.support.processor.UnmarshalProcessor;

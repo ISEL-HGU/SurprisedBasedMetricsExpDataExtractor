@@ -1,0 +1,14 @@
+     * Set a client used for connection: all endpoints generated from the
+     * component will share this connection bean. The option is a
+     * com.mongodb.MongoClient type.
+     */
+    private String mongoConnection;
+    /**
+    public String getMongoConnection() {
+        return mongoConnection;
+    }
+
+    public void setMongoConnection(String mongoConnection) {
+        this.mongoConnection = mongoConnection;
+    }
+

@@ -1,0 +1,12 @@
+import java.util.HashMap;
+import java.util.Map;
+    @JmxManaged
+    private Map<String, String> table;
+
+    public Map<String, String> getTable() {
+        return table != null ? table : (table = new HashMap<String, String>() {{
+            put("key1", "value1");
+            put("key2", "value2");
+        }});
+    }
+

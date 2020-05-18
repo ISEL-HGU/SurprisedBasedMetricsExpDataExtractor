@@ -1,0 +1,15 @@
+        Stream<Exchange> values;
+            values = inflight.values().stream();
+            values = inflight.values().stream()
+                .filter(e -> fromRouteId.equals(e.getFromRouteId()));
+            // sort by duration and grab the first
+            values = values.sorted((e1, e2) -> {
+                long d1 = getExchangeDuration(e1);
+                long d2 = getExchangeDuration(e2);
+                // need the biggest number first
+                return -1 * Long.compare(d1, d2);
+            values = values.sorted(Comparator.comparing(Exchange::getExchangeId));
+        if (limit > 0) {
+            values = values.limit(limit);
+
+        List<InflightExchange> answer = values.map(InflightExchangeEntry::new).collect(Collectors.toList());

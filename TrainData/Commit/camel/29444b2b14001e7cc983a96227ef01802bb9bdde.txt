@@ -1,0 +1,14 @@
+import java.nio.charset.StandardCharsets;
+import com.google.api.services.gmail.model.MessagePart;
+        throw new UnsupportedOperationException("The camel google mail stream component doesn't support producer");
+        List<MessagePart> parts = mail.getPayload().getParts();
+        if (parts != null && parts.get(0).getBody().getData() != null) {
+                byte[] bodyBytes = Base64.decodeBase64(parts.get(0).getBody().getData().trim().toString()); // get
+                String body = new String(bodyBytes, StandardCharsets.UTF_8);
+            String headerName = header.getName();
+            if (("SUBJECT").equalsIgnoreCase(headerName)) {
+            if (("TO").equalsIgnoreCase(headerName)) {
+            if (("FROM").equalsIgnoreCase(headerName)) {
+            if (("CC").equalsIgnoreCase(headerName)) {
+            if (("BCC").equalsIgnoreCase(headerName)) {
+        return Splitter.on(',').splitToList(labels);

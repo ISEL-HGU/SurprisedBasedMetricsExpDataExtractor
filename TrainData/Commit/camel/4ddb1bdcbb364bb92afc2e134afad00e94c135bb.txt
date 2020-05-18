@@ -1,0 +1,1 @@
+                    boolean hit = context.adapt(ExtendedCamelContext.class).getBeanIntrospection().setProperty(context, context.getTypeConverter(), target, name, null, value, true, false, false);

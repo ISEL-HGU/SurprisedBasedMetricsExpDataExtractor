@@ -1,0 +1,13 @@
+import org.codehaus.groovy.util.ListHashMap;
+public class CompileUnit implements NodeMetaDataHandler {
+    private Map metaDataMap = null;
+
+    @Override
+    public ListHashMap getMetaDataMap() {
+        return (ListHashMap) metaDataMap;
+    }
+
+    @Override
+    public void setMetaDataMap(Map<?, ?> metaDataMap) {
+        this.metaDataMap = metaDataMap;
+    }

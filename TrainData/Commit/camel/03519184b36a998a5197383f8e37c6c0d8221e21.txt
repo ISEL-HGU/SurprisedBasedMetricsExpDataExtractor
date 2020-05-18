@@ -1,0 +1,25 @@
+        QName  partNamespaceOnDataFormat = getPartNamespace();
+        String partClassFromHeader = (String)exchange.getIn().getHeader(JaxbConstants.JAXB_PART_CLASS);
+        String partNamespaceFromHeader = (String)exchange.getIn().getHeader(JaxbConstants.JAXB_PART_NAMESPACE);
+        if ((partialClass != null || partClassFromHeader != null)
+                && (partNamespaceOnDataFormat != null || partNamespaceFromHeader != null)) {
+            if (partClassFromHeader != null) {
+                try {
+                    partialClass = camelContext.getClassResolver().resolveMandatoryClass(partClassFromHeader, Object.class);
+                } catch (ClassNotFoundException e) {
+                    throw new JAXBException(e);
+                }
+            }
+            if (partNamespaceFromHeader != null) {
+                partNamespaceOnDataFormat = QName.valueOf(partNamespaceFromHeader);
+            }
+            element = new JAXBElement<Object>(partNamespaceOnDataFormat, partialClass, graph);
+            String partClassFromHeader = (String)exchange.getIn().getHeader(JaxbConstants.JAXB_PART_CLASS);
+            if (partialClass != null || partClassFromHeader != null) {
+                if (partClassFromHeader != null) {
+                    try {
+                        partialClass = camelContext.getClassResolver().resolveMandatoryClass(partClassFromHeader, Object.class);
+                    } catch (ClassNotFoundException e) {
+                        throw new JAXBException(e);
+                    }
+                }

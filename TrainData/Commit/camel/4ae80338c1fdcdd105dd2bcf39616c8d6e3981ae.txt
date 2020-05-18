@@ -1,0 +1,1 @@
+        if (!c.isInterface() && c.getSuperclass() != null && c.getSuperclass() != Object.class) {

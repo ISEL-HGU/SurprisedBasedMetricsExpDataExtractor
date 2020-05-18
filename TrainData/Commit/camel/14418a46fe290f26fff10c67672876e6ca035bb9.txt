@@ -1,0 +1,30 @@
+import org.apache.camel.util.ResolverHelper;
+import org.apache.camel.util.ResourceHelper;
+
+                String name = config.getPrivateKeyFile();
+                // load from file system by default
+                if (!name.startsWith("classpath:")) {
+                    name = "file:"  name;
+                }
+                try {
+                    InputStream is = ResourceHelper.resolveMandatoryResourceAsInputStream(endpoint.getCamelContext(), name);
+                    byte[] data = endpoint.getCamelContext().getTypeConverter().mandatoryConvertTo(byte[].class, is);
+                    jsch.addIdentity("camel-jsch", data, null, pkfp != null ? pkfp.getBytes() : null);
+                } catch (Exception e) {
+                    throw new GenericFileOperationFailedException("Cannot load private keyfile: "  config.getPrivateKeyFile(), e);
+                }
+            // load file as input stream which can then load from classpath etc
+            if (ObjectHelper.isNotEmpty(knownHostsFile)) {
+                // load from file system by default
+                if (!knownHostsFile.startsWith("classpath:")) {
+                    knownHostsFile = "file:"  knownHostsFile;
+                }
+                try {
+                    InputStream is = ResourceHelper.resolveMandatoryResourceAsInputStream(endpoint.getCamelContext(), knownHostsFile);
+                    jsch.setKnownHosts(is);
+                } catch (Exception e) {
+                    throw new GenericFileOperationFailedException("Cannot load known host file: "  knownHostsFile, e);
+                }
+            } else {
+                jsch.setKnownHosts((String) null);
+            }

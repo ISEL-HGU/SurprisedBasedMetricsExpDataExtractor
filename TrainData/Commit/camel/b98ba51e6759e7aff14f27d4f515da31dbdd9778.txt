@@ -1,0 +1,16 @@
+import org.apache.camel.impl.DefaultProducer;
+public class GoogleBigQueryProducer extends DefaultProducer {
+    private Bigquery bigquery;
+    public GoogleBigQueryProducer(Bigquery bigquery, GoogleBigQueryEndpoint endpoint, GoogleBigQueryConfiguration configuration) {
+        this.bigquery = bigquery;
+            log.debug("The incoming message is either null or empty for exchange {}", exchange.getExchangeId());
+        Bigquery.Tabledata.InsertAll apiRequest = bigquery
+        if (log.isDebugEnabled()) {
+            log.trace("Sending {} messages to bigquery table {}, suffix, partition",
+                    apiRequestRows.size(), tableId, suffix, partitionDecorator);
+        }
+        if (log.isDebugEnabled()) {
+            log.trace("Sent {} messages to bigquery table {}, suffix, partition",
+                    apiRequestRows.size(), tableId, suffix, partitionDecorator);
+        }
+        log.debug("uploader thread/id: {} / {} . api call completed.", Thread.currentThread().getId(), exchangeId);

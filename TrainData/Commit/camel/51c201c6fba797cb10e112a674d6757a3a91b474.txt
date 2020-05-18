@@ -1,0 +1,1 @@
+        ottracer.init(camelContext);

@@ -1,0 +1,1 @@
+ * Factory to create the {@link Map} implementation to use for storing headers on {@link Message}.

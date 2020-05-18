@@ -1,0 +1,7 @@
+     * Validates and parses the given ID ticket, returning the username
+     * provided by the CAS server in the ticket.  If the
+     *     The username derived from the ticket.
+    public String validateTicket(String ticket, Credentials credentials) throws GuacamoleException {
+                credentials.setUsername(username);
+                    credentials.setPassword(clearPass);
+            return username;

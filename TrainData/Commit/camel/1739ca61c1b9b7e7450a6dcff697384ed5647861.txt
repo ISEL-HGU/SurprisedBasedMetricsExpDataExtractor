@@ -1,0 +1,5 @@
+import com.amazonaws.services.s3.S3ClientOptions;
+                clientBuilder = clientBuilder.withChunkedEncodingDisabled(configuration.isChunkedEncodingDisabled());
+                encClientBuilder = encClientBuilder.withChunkedEncodingDisabled(configuration.isChunkedEncodingDisabled());
+                clientBuilder = clientBuilder.withChunkedEncodingDisabled(configuration.isChunkedEncodingDisabled());
+                encClientBuilder = encClientBuilder.withChunkedEncodingDisabled(configuration.isChunkedEncodingDisabled());

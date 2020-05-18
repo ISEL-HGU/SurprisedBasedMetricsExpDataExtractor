@@ -1,0 +1,5 @@
+import static org.apache.camel.support.ObjectHelper.invokeMethodSafe;
+
+ * A selector-based producer which uses a header value to determine which processor
+                bind(handler.value(), e -> invokeMethodSafe(method, target, e.getIn()));
+                bind(handler.value(), e -> invokeMethodSafe(method, target, e));

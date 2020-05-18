@@ -1,0 +1,8 @@
+         * Whether to allow using StAX as the javax.xml.transform.Source. You
+         * can enable this if the XSLT library supports StAX such as the Saxon
+         * library (camel-saxon). The Xalan library (default in JVM) does not
+         * support StAXSource.
+         * Whether to allow using StAX as the javax.xml.transform.Source. You
+         * can enable this if the XSLT library supports StAX such as the Saxon
+         * library (camel-saxon). The Xalan library (default in JVM) does not
+         * support StAXSource.

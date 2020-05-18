@@ -1,0 +1,7 @@
+     * Returns a set of all readable user groups of which this user group is a
+     * member. If permission is granted for the current user to modify the
+     * membership of this user group, then the returned set will be mutable,
+     * and any such modifications should be made through changes to the
+     * returned set.
+     *     The set of all readable user groups of which this user group is a
+     *     member.

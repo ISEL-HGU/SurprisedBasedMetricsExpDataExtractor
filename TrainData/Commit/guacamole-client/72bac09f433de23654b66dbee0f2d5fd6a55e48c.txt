@@ -1,0 +1,10 @@
+import org.apache.guacamole.auth.jdbc.base.EntityMapper;
+     * Mapper for creating/deleting entities.
+     */
+    @Inject
+    private EntityMapper entityMapper;
+
+    /**
+        // Create base entity object, implicitly populating underlying entity ID
+        entityMapper.insert(model);
+

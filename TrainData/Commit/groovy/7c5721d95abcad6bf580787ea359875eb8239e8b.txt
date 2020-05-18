@@ -1,0 +1,3 @@
+        // let's compare their generics type
+        GenericsType[] agt = holderForA == null ? null : holderForA.getGenericsTypes();
+        GenericsType[] bgt = holderForB == null ? null : holderForB.getGenericsTypes();

@@ -1,0 +1,17 @@
+import org.apache.cayenne.exp.ExpressionFactory;
+
+    @Test
+    public void test2PkSelect() {
+        List<Object[]> results = ObjectSelect.columnQuery(Artist.class,
+                PropertyFactory.createSelf(Artist.class),
+                PropertyFactory
+                        .createBase(ExpressionFactory
+                                .dbPathExp("paintingArray.toArtist.ARTIST_ID"),
+                                Integer.class))
+                .where(Artist.ARTIST_ID_PK_PROPERTY.eq(1L))
+                .pageSize(1)
+                .select(context);
+        assertEquals(1, results.size());
+        assertEquals("artist1", ((Artist)results.get(0)[0]).getArtistName());
+        assertEquals(1, results.get(0)[1]);
+    }

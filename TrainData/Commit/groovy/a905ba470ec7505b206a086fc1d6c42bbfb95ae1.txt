@@ -1,0 +1,10 @@
+import org.codehaus.groovy.ast.expr.MapEntryExpression;
+import org.codehaus.groovy.ast.expr.MapExpression;
+    public static MapExpression mapX(List<MapEntryExpression> expressions) {
+        return new MapExpression(expressions);
+    }
+
+    public static MapEntryExpression entryX(Expression key, Expression value) {
+        return new MapEntryExpression(key, value);
+    }
+

@@ -1,0 +1,6 @@
+ b/camel-core/src/test/java/org/apache/camel/processor/ThrottlingException.java
+public class ThrottlingException extends RuntimeException {
+    public ThrottlingException() {
+    public ThrottlingException(String message) {
+    public ThrottlingException(String message, Throwable cause) {
+    public ThrottlingException(Throwable cause) {

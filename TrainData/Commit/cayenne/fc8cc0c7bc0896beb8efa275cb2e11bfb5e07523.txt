@@ -1,0 +1,25 @@
+import org.apache.cayenne.exp.parser.ASTDbPath;
+    /**
+     * Extracts prefix for this extractor from property.
+     * This will be just a db path for this property, if any exists.
+     */
+        Expression exp = property.getExpression();
+        int expressionType = exp.getType();
+        if(expressionType == Expression.FULL_OBJECT && exp.getOperandCount() > 0) {
+            Object op = exp.getOperand(0);
+            if(op instanceof Expression) {
+                exp = (Expression)op;
+        }
+        return dbPathOrDefault(exp, prefix);
+    }
+
+    private String dbPathOrDefault(Expression pathExp, String defaultPrefix) {
+        // normalize to db path first
+        if(pathExp.getType() == Expression.OBJ_PATH) {
+            pathExp = context.getMetadata().getObjEntity().translateToDbPath(pathExp);
+        if(pathExp.getType() != Expression.DB_PATH) {
+            return defaultPrefix;
+        }
+
+        return ((ASTDbPath)pathExp).getPath();
+            PathTranslationResult result = context.getPathTranslator().translatePath(context.getMetadata().getDbEntity(), prefix);

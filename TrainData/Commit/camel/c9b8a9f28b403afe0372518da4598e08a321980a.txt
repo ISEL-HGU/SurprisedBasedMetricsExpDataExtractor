@@ -1,0 +1,68 @@
+import org.apache.camel.RuntimeCamelException;
+import org.apache.camel.impl.DefaultCamelBeanPostProcessor;
+        // lets use Camel's bean post processor on any existing route builder classes
+        // so the instance has some support for dependency injection
+        // TODO: We should have this hidden behind an interface, so we can do bean post processing via camel-api
+        DefaultCamelBeanPostProcessor postProcessor = new DefaultCamelBeanPostProcessor(getCamelContext());
+        for (RouteBuilder routeBuilder : getRouteBuilders()) {
+            postProcessor.postProcessBeforeInitialization(routeBuilder, routeBuilder.getClass().getName());
+            postProcessor.postProcessAfterInitialization(routeBuilder, routeBuilder.getClass().getName());
+        }
+
+            for (Class<?> clazz : configurationClasses) {
+    public abstract class Option {
+        private String abbreviation;
+        private String fullName;
+        private String description;
+        protected Option(String abbreviation, String fullName, String description) {
+            this.abbreviation = "-"  abbreviation;
+            this.fullName = "-"  fullName;
+            this.description = description;
+        public boolean processOption(String arg, LinkedList<String> remainingArgs) {
+            if (arg.equalsIgnoreCase(abbreviation) || fullName.startsWith(arg)) {
+                doProcess(arg, remainingArgs);
+                return true;
+            }
+            return false;
+
+        public String getAbbreviation() {
+            return abbreviation;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public String getFullName() {
+            return fullName;
+        }
+
+        public String getInformation() {
+            return "  "  getAbbreviation()  " or "  getFullName()  " = "  getDescription();
+        }
+
+        protected abstract void doProcess(String arg, LinkedList<String> remainingArgs);
+    public abstract class ParameterOption extends Option {
+        private String parameterName;
+        protected ParameterOption(String abbreviation, String fullName, String description, String parameterName) {
+            super(abbreviation, fullName, description);
+            this.parameterName = parameterName;
+        }
+
+        protected void doProcess(String arg, LinkedList<String> remainingArgs) {
+            if (remainingArgs.isEmpty()) {
+                System.err.println("Expected fileName for ");
+                showOptions();
+                completed();
+            } else {
+                String parameter = remainingArgs.removeFirst();
+                doProcess(arg, parameter, remainingArgs);
+            }
+        }
+
+        public String getInformation() {
+            return "  "  getAbbreviation()  " or "  getFullName()  " <"  parameterName  "> = "  getDescription();
+        }
+
+        protected abstract void doProcess(String arg, String parameter, LinkedList<String> remainingArgs);
+    }

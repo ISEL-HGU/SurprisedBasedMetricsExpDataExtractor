@@ -1,0 +1,2 @@
+            logger.log("Invoked: "  invoked.get()  " times (overall) [Method: "  method  "]");
+            logger.log("Invoked: "  invoked.get()  " times (overall) [Method: "  method  ", Target: "  target  ", Arguments: "  obj  "]");

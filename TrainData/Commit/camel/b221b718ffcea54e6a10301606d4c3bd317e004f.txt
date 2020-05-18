@@ -1,0 +1,7 @@
+import com.amazonaws.services.kinesis.AmazonKinesis;
+        ddbStreamClient = configuration.getAmazonDynamoDbStreamsClient() != null ? configuration.getAmazonDynamoDbStreamsClient()
+            : createDdbStreamClient();
+    
+    public AmazonDynamoDBStreams getClient() {
+        return ddbStreamClient;
+    }

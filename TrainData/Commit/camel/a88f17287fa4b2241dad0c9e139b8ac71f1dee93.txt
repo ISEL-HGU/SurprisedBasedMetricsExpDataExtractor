@@ -1,0 +1,10 @@
+        TypeConverter converter = null;
+        if (registry instanceof TypeConverter) {
+            converter = (TypeConverter) registry;
+        } else if (exchange != null) {
+            converter = exchange.getContext().getTypeConverter();
+        }
+
+                return unmarshall(type, exchange, value, converter);
+                    return marshall(type, exchange, value, converter, null, prettyPrint);
+                        return marshall(type, exchange, value, converter, objectFactoryMethod, prettyPrint);

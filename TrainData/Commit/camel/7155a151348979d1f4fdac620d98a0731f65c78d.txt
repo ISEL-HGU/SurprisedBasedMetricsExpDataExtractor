@@ -1,0 +1,1 @@
+         * To configure an already instantiated cache to be used

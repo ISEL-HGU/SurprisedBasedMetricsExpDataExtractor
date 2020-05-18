@@ -1,0 +1,8 @@
+    private final Color ROLLOVER_BACKGROUND = new Color(223, 223, 223);
+
+    private JLabel lbl = new JLabel();
+    public Component getTableCellRendererComponent(JTable table, Object value,
+            boolean isSelected, boolean hasFocus, int row, int column) {
+        lbl.setText(((JLabel) value).getText());
+        lbl.setBorder(BorderFactory.createEmptyBorder());
+        lbl.setBackground(isSelected ? ROLLOVER_BACKGROUND : Color.WHITE);

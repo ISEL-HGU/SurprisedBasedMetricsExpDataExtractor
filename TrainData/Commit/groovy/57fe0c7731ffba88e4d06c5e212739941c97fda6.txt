@@ -1,0 +1,1 @@
+    private static final String RUNTIME_GROOVYDOC_PATTERN = "(?s)/[*][*]@\\s.*?[*]/";

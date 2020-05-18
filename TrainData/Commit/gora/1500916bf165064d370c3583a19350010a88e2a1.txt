@@ -1,0 +1,2 @@
+              writePolicy.timeoutDelay = getTimeoutValue(policyElement.getAttributeValue("timeout"));
+              readPolicy.timeoutDelay = getTimeoutValue(policyElement.getAttributeValue("timeout"));

@@ -1,0 +1,5 @@
+
+        // GROOVY-8995: Improve the performance of creating list
+        // answer.addAll(Arrays.asList(values));
+        Collections.addAll(answer, values);
+

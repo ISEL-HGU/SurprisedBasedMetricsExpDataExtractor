@@ -1,0 +1,7 @@
+import org.apache.camel.MultipleConsumersSupport;
+public class Jt400Endpoint extends ScheduledPollEndpoint implements MultipleConsumersSupport {
+    @Override
+    public boolean isMultipleConsumersSupported() {
+        return true;
+    }
+

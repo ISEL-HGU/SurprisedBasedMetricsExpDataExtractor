@@ -1,0 +1,1 @@
+            xml = xml.replaceFirst("<rest>", extra  "\n    <rest>");

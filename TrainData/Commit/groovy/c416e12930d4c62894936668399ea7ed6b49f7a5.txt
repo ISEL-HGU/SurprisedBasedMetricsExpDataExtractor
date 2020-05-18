@@ -1,0 +1,25 @@
+        if (fn == null) return;
+        if (fn.isPrivate() &&
+    /**
+     * Given a field node, checks if we are accessing or setting a public or protected field from an inner class.
+     */
+    private String checkOrMarkInnerFieldAccess(Expression source, FieldNode fn, boolean lhsOfAssignment, String delegationData) {
+        if (fn == null || fn.isStatic()) return delegationData;
+        ClassNode enclosingClassNode = typeCheckingContext.getEnclosingClassNode();
+        ClassNode declaringClass = fn.getDeclaringClass();
+        // private handled elsewhere
+        if ((fn.isPublic() || fn.isProtected()) &&
+                (declaringClass != enclosingClassNode || typeCheckingContext.getEnclosingClosure() != null) &&
+                declaringClass.getModule() == enclosingClassNode.getModule() && !lhsOfAssignment && enclosingClassNode.isDerivedFrom(declaringClass)) {
+            if (source instanceof PropertyExpression) {
+                PropertyExpression pe = (PropertyExpression) source;
+                // this and attributes handled elsewhere
+                if ("this".equals(pe.getPropertyAsString()) || source instanceof AttributeExpression) return delegationData;
+                pe.getObjectExpression().putNodeMetaData(StaticTypesMarker.IMPLICIT_RECEIVER, "owner");
+            }
+            return "owner";
+        }
+        return delegationData;
+    }
+
+        delegationData = checkOrMarkInnerFieldAccess(expressionToStoreOn, field, lhsOfAssignment, delegationData);

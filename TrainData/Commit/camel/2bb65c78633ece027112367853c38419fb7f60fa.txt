@@ -1,0 +1,14 @@
+     * Request exclusive access to the queue (meaning only this consumer can
+     * access the queue). This is useful when you want a long-lived shared queue
+     * to be temporarily accessible by just one consumer.
+     */
+    private Boolean exclusiveConsumer = false;
+    /**
+    public Boolean getExclusiveConsumer() {
+        return exclusiveConsumer;
+    }
+
+    public void setExclusiveConsumer(Boolean exclusiveConsumer) {
+        this.exclusiveConsumer = exclusiveConsumer;
+    }
+

@@ -1,0 +1,9 @@
+import java.util.Map;
+    public Map<String, String> getAttributes() {
+        return Collections.<String, String>emptyMap();
+    }
+
+    public void setAttributes(Map<String, String> attributes) {
+        //do nothing
+    }
+

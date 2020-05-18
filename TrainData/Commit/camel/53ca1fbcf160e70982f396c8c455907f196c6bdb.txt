@@ -1,0 +1,2 @@
+    @XmlElement(name = "correlationExpression")
+    private ExpressionSubElementDefinition correlationExpression;

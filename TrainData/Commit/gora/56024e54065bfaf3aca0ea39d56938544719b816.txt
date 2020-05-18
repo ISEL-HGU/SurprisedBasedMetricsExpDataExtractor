@@ -1,0 +1,86 @@
+import org.apache.gora.compiler.GoraCompiler;
+import org.apache.gora.compiler.utils.LicenseHeaders;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+// TODO: Auto-generated Javadoc
+ * The Class GoraBenchmarkUtils.
+  
+  /** The Constant AVRO_PATH. */
+  
+  /** The Constant AVRO_FILE. */
+  
+  /** The field prefix. */
+  
+  /** The Constant USER_ID_VALUE. */
+  
+  /** The Constant AVRO_FULL_PATH. */
+  
+  /** The Constant NULL. */
+  
+  /** The Constant RECORD. */
+  
+  /** The Constant NAMESPACE_VALUE. */
+  
+  /** The Constant NAMESPACE_KEY. */
+  
+  /** The Constant NAME_KEY. */
+  
+  /** The Constant MONGODB. */
+  
+  /** The Constant COUCHDB. */
+  
+  /** The Constant HBASE. */
+  
+  /** The Constant KEYCLASS. */
+  
+  /** The db mapping path. */
+  
+  /** The Constant MONGO_MAPPING_FILE. */
+  
+  /** The Constant HBASE_MAPPING_FILE. */
+  
+  /** The Constant COUCHDB_MAPPING_FILE. */
+  /** The Constant BEAN_DESTINATION_DIR. */
+  
+  /** The Constant DEFAULT_DATA_STORE_KEY. */
+  private static final String GORA_ROOT_ELEMENT = "gora-otd";
+  
+  private static final Logger LOG = LoggerFactory.getLogger(GoraBenchmarkUtils.class);
+  
+  
+  /**
+   * Checks if is field updatable.
+   *
+   * @param field the field
+   * @param values the values
+   * @return true, if is field updatable
+   */
+   * Generate avro schema based on the number of fields. supplied when running the benchmark. These files are json files
+   *
+   * @param numberOfFields the number of fields
+   * Generate database mapping file. Each database has its own mapping syntax. These files are xml files
+   *
+   * @param dbName the db name
+      Element rootNode = mappingDocument.createElement(GORA_ROOT_ELEMENT);
+   * Gets the input files.
+   *
+   * @return the input files
+   * Generate data beans.
+   * Generate JSON object.
+   *
+   * @param fileName the file name
+   * @return the JSON object
+   * Builds the mapping document.
+   *
+   * @param keys the keys
+   * @param db the db
+   * @param mappingDocument the mapping document
+   * @param rootNode the root node
+   * @param fullNameSpace the full name space
+   * @param jsonObject the json object
+  /**
+   * Gets the data store.
+   *
+   * @param p the p
+   * @return the data store
+   */

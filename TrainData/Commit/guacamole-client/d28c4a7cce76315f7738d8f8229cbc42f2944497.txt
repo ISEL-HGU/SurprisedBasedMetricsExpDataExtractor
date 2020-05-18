@@ -1,0 +1,12 @@
+            logger.warn("Authentication attempt ignored because the relevant "
+                     "authentication provider could not be loaded. Please "
+                     "check for errors earlier in the logs.");
+            logger.warn("Reauthentication attempt ignored because the relevant "
+                     "authentication provider could not be loaded. Please "
+                     "check for errors earlier in the logs.");
+            logger.warn("User data retrieval attempt ignored because the "
+                     "relevant authentication provider could not be loaded. "
+                     "Please check for errors earlier in the logs.");
+            logger.warn("User data refresh attempt ignored because the "
+                     "relevant authentication provider could not be loaded. "
+                     "Please check for errors earlier in the logs.");

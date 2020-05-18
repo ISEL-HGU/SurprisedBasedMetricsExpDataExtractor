@@ -1,0 +1,21 @@
+import java.util.Hashtable;
+import java.util.Map;
+import javax.naming.directory.InitialDirContext;
+import org.apache.camel.NoSuchBeanException;
+    protected DirContext getDirContext() throws NamingException {
+        // if its a Map/Hashtable then we create a new context per time
+
+        DirContext answer = null;
+        Object context = getEndpoint().getCamelContext().getRegistry().lookupByName(remaining);
+        if (context instanceof Hashtable) {
+            answer = new InitialDirContext((Hashtable<?, ?>) context);
+        } else if (context instanceof Map) {
+            Hashtable hash = new Hashtable((Map) context);
+            answer = new InitialDirContext(hash);
+        } else if (context instanceof DirContext) {
+            answer = (DirContext) context;
+        } else if (context != null) {
+            String msg = "Found bean: "  remaining  " in Registry of type: "  answer.getClass().getName()  " expected type was: "  DirContext.class.getName();
+            throw new NoSuchBeanException(msg);
+        }
+        return answer;

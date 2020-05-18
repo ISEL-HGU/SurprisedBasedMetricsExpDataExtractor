@@ -1,0 +1,3 @@
+                    if(!file.delete()) {
+                        logger.warn("Can't delete file "  file);
+                    }

@@ -1,0 +1,22 @@
+import org.apache.cayenne.unit.UnitDbAdapter;
+	@Inject
+	protected UnitDbAdapter unitDbAdapter;
+
+	public void testReturnGeneratedKeys() {
+		if(unitDbAdapter.supportsGeneratedKeys()) {
+			DataMap testDataMap = context.getEntityResolver().getDataMap("testmap");
+			String sql = "INSERT INTO GENERATED_COLUMN (NAME) VALUES ('Surikov')";
+			SQLTemplate q1 = new SQLTemplate(testDataMap, sql, true);
+			q1.setReturnGeneratedKeys(true);
+			List<DataRow> response = context.performQuery(q1);
+			assertEquals(1, response.size());
+
+			String sql1 = "INSERT INTO GENERATED_COLUMN (NAME) VALUES ('Test')";
+			SQLTemplate q2 = new SQLTemplate(testDataMap, sql1, true);
+			q2.setReturnGeneratedKeys(false);
+			List<DataRow> response1 = context.performQuery(q2);
+			assertEquals(0, response1.size());
+		}
+	}
+
+	@Test

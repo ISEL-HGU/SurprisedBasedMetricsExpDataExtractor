@@ -1,0 +1,3 @@
+import org.codehaus.groovy.reflection.ReflectionUtils;
+                        ReflectionUtils.trySetAccessible(constructor);
+                            ReflectionUtils.trySetAccessible(f);

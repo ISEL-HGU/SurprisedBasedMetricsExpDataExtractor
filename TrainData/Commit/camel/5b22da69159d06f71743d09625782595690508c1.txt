@@ -1,0 +1,8 @@
+import org.apache.camel.CamelContext;
+import org.apache.camel.spi.HeadersMapFactory;
+ * The implementation of the map can be configured by the {@link HeadersMapFactory} which can be set
+ * on the {@link CamelContext}. The default implementation uses the {@link org.apache.camel.util.CaseInsensitiveMap CaseInsensitiveMap}.
+        if (getExchange().getContext().getHeadersMapFactory().isInstanceOf(headers)) {
+            // create a new map
+            this.headers = getExchange().getContext().getHeadersMapFactory().fromMap(headers);
+        Map<String, Object> map = getExchange().getContext().getHeadersMapFactory().newMap();

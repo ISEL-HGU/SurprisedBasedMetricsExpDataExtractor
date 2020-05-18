@@ -1,0 +1,13 @@
+import java.util.Collections;
+import java.util.Set;
+    private Set<String> seenCacheNames = Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());
+        for (String name : seenCacheNames) {
+    @SuppressWarnings("unchecked")
+                cache = createCache(cacheName);
+            seenCacheNames.add(cacheName);
+    protected Cache createCache(String cacheName) {
+        return cacheManager.createCache(cacheName, configurationFactory.create(cacheName));
+    }
+
+        return cacheManager.getCache(name);
+        // no explicit cache group

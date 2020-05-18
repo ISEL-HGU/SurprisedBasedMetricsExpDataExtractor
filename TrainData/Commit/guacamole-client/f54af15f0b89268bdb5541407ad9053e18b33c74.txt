@@ -1,0 +1,3 @@
+            userSearchFilter.append("(");
+            userSearchFilter.append(escapingService.escapeLDAPSearchFilter(usernameAttribute));
+            userSearchFilter.append("=*)");

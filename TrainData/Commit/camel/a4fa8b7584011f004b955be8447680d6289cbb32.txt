@@ -1,0 +1,43 @@
+import java.io.IOError;
+import java.io.StringWriter;
+import java.io.Writer;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Objects;
+import org.sonatype.plexus.build.incremental.BuildContext;
+        Template template;
+            StringWriter writer = new StringWriter();
+            updateResource(null, outFile.toPath(), writer.toString());
+
+    public static void updateResource(BuildContext buildContext, Path out, String data) {
+        try {
+            if (data == null) {
+                if (Files.isRegularFile(out)) {
+                    Files.delete(out);
+                    refresh(buildContext, out);
+                }
+            } else {
+                if (Files.isRegularFile(out) && Files.isReadable(out)) {
+                    String content = new String(Files.readAllBytes(out), StandardCharsets.UTF_8);
+                    if (Objects.equals(content, data)) {
+                        return;
+                    }
+                }
+                Files.createDirectories(out.getParent());
+                try (Writer w = Files.newBufferedWriter(out, StandardCharsets.UTF_8)) {
+                    w.append(data);
+                }
+                refresh(buildContext, out);
+            }
+        } catch (IOException e) {
+            throw new IOError(e);
+        }
+    }
+
+    public static void refresh(BuildContext buildContext, Path file) {
+        if (buildContext != null) {
+            buildContext.refresh(file.toFile());
+        }
+    }
+

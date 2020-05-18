@@ -1,0 +1,3 @@
+    public EndpointRegistry<EndpointKey> getEndpointRegistry() {
+    public TransformerRegistry<TransformerKey> getTransformerRegistry() {
+    public ValidatorRegistry<ValidatorKey> getValidatorRegistry() {

@@ -1,0 +1,4 @@
+import java.io.File;
+            File targetFile = new File(targetDirectory  className  ".class").getCanonicalFile();
+            targetFile.getParentFile().mkdirs();
+            final FileOutputStream fileOutputStream = new FileOutputStream(targetFile);

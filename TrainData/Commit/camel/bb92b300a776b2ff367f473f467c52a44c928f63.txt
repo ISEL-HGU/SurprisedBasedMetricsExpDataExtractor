@@ -1,0 +1,2 @@
+                result = catalog.validateLanguagePredicate(null, "simple", detail.getSimple());
+                result = catalog.validateLanguagePredicate(null, "simple", detail.getSimple());

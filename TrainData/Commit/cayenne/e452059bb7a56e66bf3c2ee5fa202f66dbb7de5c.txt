@@ -1,0 +1,3 @@
+        if(table.getColumnModel().getColumns().hasMoreElements()) {
+            setUpPrefetchBox(table.getColumnModel().getColumn(2));
+        }

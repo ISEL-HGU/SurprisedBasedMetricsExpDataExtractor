@@ -1,0 +1,2 @@
+        exchange.getMessage().setHeader(FILE_NAME, newFilename);
+                    exchange.getMessage().setHeader(FILE_NAME, entry.getName());

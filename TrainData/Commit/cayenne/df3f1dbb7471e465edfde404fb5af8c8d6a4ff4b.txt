@@ -1,0 +1,31 @@
+    private DbImportView dbImportView;
+
+    ReverseEngineeringConfigPanel(ProjectController projectController, DbImportView dbImportView) {
+        this.dbImportView = dbImportView;
+                if(!dbImportView.isInitFromModel()) {
+                    projectController.setDirty(true);
+                }
+                if(!dbImportView.isInitFromModel()) {
+                    projectController.setDirty(true);
+                }
+            if(!dbImportView.isInitFromModel()) {
+                projectController.setDirty(true);
+            }
+            if(!dbImportView.isInitFromModel()) {
+                projectController.setDirty(true);
+            }
+            if(!dbImportView.isInitFromModel()) {
+                projectController.setDirty(true);
+            }
+            if(!dbImportView.isInitFromModel()) {
+                projectController.setDirty(true);
+            }
+            if(!dbImportView.isInitFromModel()) {
+                projectController.setDirty(true);
+            }
+            if(!dbImportView.isInitFromModel()) {
+                projectController.setDirty(true);
+            }
+            if(!dbImportView.isInitFromModel()) {
+                projectController.setDirty(true);
+            }

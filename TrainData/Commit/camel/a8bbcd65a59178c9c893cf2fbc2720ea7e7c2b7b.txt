@@ -1,0 +1,3 @@
+import org.apache.camel.util.IOHelper;
+            IOHelper.close(s3Object);
+                        IOHelper.close(s3Object);

@@ -1,0 +1,9 @@
+import org.apache.guacamole.GuacamoleException;
+import org.apache.guacamole.net.auth.Permissions;
+import org.apache.guacamole.net.auth.permission.ObjectPermissionSet;
+    @Override
+    protected ObjectPermissionSet getObjectPermissions(Permissions permissions)
+            throws GuacamoleException {
+        return permissions.getUserGroupPermissions();
+    }
+

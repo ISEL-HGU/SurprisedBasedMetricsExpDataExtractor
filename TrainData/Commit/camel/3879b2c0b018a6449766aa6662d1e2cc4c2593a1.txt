@@ -1,0 +1,5 @@
+                // This loop is intended to keep the consumer up and running as long as it's supposed to be, but allow it to bail if signaled.
+                // I'm using a do/while loop because the first time through we want to attempt it regardless of any other conditions... we
+                // only want to try AGAIN if the keepAlive is set.
+                do {
+                }while (running.get() || isStarting());

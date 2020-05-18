@@ -1,0 +1,1 @@
+@UriEndpoint(scheme = "as2", firstVersion = "2.22.0", title = "AS2", syntax = "as2:apiName/methodName", label = "AS2")

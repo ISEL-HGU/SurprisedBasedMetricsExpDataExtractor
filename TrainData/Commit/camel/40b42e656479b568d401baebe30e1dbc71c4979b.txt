@@ -1,0 +1,8 @@
+            public void onSubscribe(Subscription newSubscription) {
+                if (newSubscription == null) {
+                } else if (newSubscription == this.subscription) {
+                    throw new IllegalArgumentException("already subscribed to the subscription: "  newSubscription);
+
+                    newSubscription.cancel();
+                    this.subscription = newSubscription;
+                    subscriber.onSubscribe(newSubscription);

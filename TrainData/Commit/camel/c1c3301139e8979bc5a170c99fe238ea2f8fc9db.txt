@@ -1,0 +1,1 @@
+            publishVersion(getEndpoint().getAwsLambdaClient(), exchange);

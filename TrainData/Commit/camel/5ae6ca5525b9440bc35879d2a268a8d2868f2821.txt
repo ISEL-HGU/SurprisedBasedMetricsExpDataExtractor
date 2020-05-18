@@ -1,0 +1,4 @@
+import com.amazonaws.services.mq.model.DeploymentMode;
+            request.withDeploymentMode(DeploymentMode.fromValue(deploymentMode));
+        } else {
+            throw new IllegalArgumentException("Deployment Mode must be specified");

@@ -1,0 +1,1 @@
+                helperClassNode = ClassHelper.make(Class.forName(helperClassName, false, classLoader));

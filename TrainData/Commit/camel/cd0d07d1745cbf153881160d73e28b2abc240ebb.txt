@@ -1,0 +1,8 @@
+import org.apache.camel.spi.ExecutorServiceManager;
+    private final ExecutorServiceManager executorServiceManager;
+    protected void doStart() throws Exception {
+        super.doStart();
+        this.scheduledExecutorService = this.executorServiceManager.newSingleThreadScheduledExecutor(this, "ConsulEventConsumer");
+    }
+
+    @Override

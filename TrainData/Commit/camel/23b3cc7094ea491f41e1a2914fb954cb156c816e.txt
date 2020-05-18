@@ -1,0 +1,3 @@
+        exchange.setIn(getBinding().createSmppMessage(getCamelContext(), alertNotification));
+        exchange.setIn(getBinding().createSmppMessage(getCamelContext(), deliverSm));
+        exchange.setIn(getBinding().createSmppMessage(getCamelContext(), dataSm, smppMessageId));

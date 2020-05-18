@@ -1,0 +1,4 @@
+
+    public boolean supportsLongIn() {
+        return true;
+    }

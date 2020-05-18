@@ -1,0 +1,4 @@
+    static final String DOMAIN_TAG = "domain";
+
+            case DOMAIN_TAG:
+                return true;

@@ -1,0 +1,10 @@
+package org.apache.bigtop.itest.hive;
+  protected static final String URL = "bigtop.test.hive.jdbc.url";
+  protected static final String USER = "bigtop.test.hive.jdbc.user";
+  protected static final String PASSWD = "bigtop.test.hive.jdbc.password";
+  protected static final String LOCATION = "bigtop.test.hive.location";
+  protected static final String METASTORE_URL = "bigtop.test.hive.metastore.url";
+  protected static final String TEST_THRIFT = "bigtop.test.hive.thrift.test";
+  protected static final String TEST_HCATALOG = "bigtop.test.hive.hcatalog.test";
+  protected static final String HIVE_CONF_DIR = "bigtop.test.hive.conf.dir";
+  protected static final String HADOOP_CONF_DIR = "bigtop.test.hadoop.conf.dir";

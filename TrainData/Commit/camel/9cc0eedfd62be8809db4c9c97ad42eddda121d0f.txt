@@ -1,0 +1,107 @@
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+ * thrown and the threshold setting.
+ *
+ * (ie database down) then it will stop consuming new messages from the endpoint by stopping the consumer.
+ * The implementation is comparable to the Circuit Breaker pattern. After a set amount of time, it will move
+ * (2) call the {@link ThrottlingExceptionHalfOpenHandler}
+ * to determine if the processes that cause the route to be open are now available
+
+
+
+
+    private AtomicBoolean keepOpen = new AtomicBoolean(false);
+
+        this.keepOpen.set(false);
+
+    public ThrottlingExceptionRoutePolicy(int threshold, long failureWindow, long halfOpenAfter, List<Class<?>> handledExceptions, boolean keepOpen) {
+        this.throttledExceptions = handledExceptions;
+        this.failureWindow = failureWindow;
+        this.halfOpenAfter = halfOpenAfter;
+        this.failureThreshold = threshold;
+        this.keepOpen.set(keepOpen);
+    }
+
+
+    @Override
+    public void onStart(Route route) {
+        // if keepOpen then start w/ the circuit open
+        if (keepOpen.get()) {
+            openCircuit(route);
+        }
+    }
+
+        if (keepOpen.get()) {
+            if (state.get() != STATE_OPEN) {
+                LOG.debug("opening circuit b/c keepOpen is on");
+                openCircuit(route);
+            }
+        } else {
+            if (hasFailed(exchange)) {
+                // record the failure
+                failures.incrementAndGet();
+                lastFailure = System.currentTimeMillis();
+            }
+
+            // check for state change
+            calculateState(route);
+        }
+
+     * if the exchange has an exception that we are watching
+                // if no exceptions defined then always fail
+
+
+            if (!keepOpen.get()) {
+                long elapsedTimeSinceOpened = System.currentTimeMillis() - openedAt;
+                if (halfOpenAfter <= elapsedTimeSinceOpened) {
+                    LOG.debug("Checking an open circuit...");
+                    if (halfOpenHandler != null) {
+                        if (halfOpenHandler.isReadyToBeClosed()) {
+                            LOG.debug("Closing circuit...");
+                            closeCircuit(route);
+                        } else {
+                            LOG.debug("Opening circuit...");
+                            openCircuit(route);
+                        }
+                        LOG.debug("Half opening circuit...");
+                        halfOpenCircuit(route);
+                    log.debug("keeping circuit open (time not elapsed)...");
+            } else {
+                log.debug("keeping circuit open (keepOpen is true)...");
+                this.addHalfOpenTimer(route);
+            }
+
+
+        // failures exceed the threshold
+
+
+            this.addHalfOpenTimer(route);
+    protected void addHalfOpenTimer(Route route) {
+        halfOpenTimer = new Timer();
+        halfOpenTimer.schedule(new HalfOpenTask(route), halfOpenAfter);
+    }
+
+
+
+
+
+
+
+
+            calculateState(route);
+
+    public boolean getKeepOpen() {
+        return this.keepOpen.get();
+    }
+
+    public void setKeepOpen(boolean keepOpen) {
+        log.debug("keep open:"  keepOpen);
+        this.keepOpen.set(keepOpen);
+    }
+

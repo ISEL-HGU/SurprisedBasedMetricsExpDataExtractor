@@ -1,0 +1,3 @@
+    @Metadata(label = "security")
+    @Metadata(label = "security", secret = true)
+    @Metadata(label = "security", defaultValue = "false")

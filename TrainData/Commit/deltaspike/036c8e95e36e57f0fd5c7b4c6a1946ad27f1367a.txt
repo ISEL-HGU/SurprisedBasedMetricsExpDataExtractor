@@ -1,0 +1,23 @@
+    private static final String LABELED_ALTERNATIVES = "labeledAlternatives";
+    private static final String ACTIVE_ALTERNATIVE_LABEL_KEY = "activeAlternativeLabel";
+            String alternativeLabel = ConfigResolver.getPropertyValue(ACTIVE_ALTERNATIVE_LABEL_KEY);
+
+            String activeQualifierLabel = null;
+            if (alternativeLabel != null)
+            {
+                activeQualifierLabel = LABELED_ALTERNATIVES  "["  alternativeLabel  "].";
+            }
+
+                if (activeQualifierLabel != null && property.getKey().startsWith(activeQualifierLabel))
+                {
+                    String interfaceName = property.getKey().substring(activeQualifierLabel.length());
+                    String implementation = property.getValue();
+                    if (LOG.isLoggable(Level.FINE))
+                    {
+                        LOG.fine("Enabling labeled alternative for interface "
+                             interfaceName  ": "  implementation);
+                    }
+
+                    globalAlternatives.put(interfaceName, implementation);
+                }
+                else if (property.getKey().startsWith(GLOBAL_ALTERNATIVES))

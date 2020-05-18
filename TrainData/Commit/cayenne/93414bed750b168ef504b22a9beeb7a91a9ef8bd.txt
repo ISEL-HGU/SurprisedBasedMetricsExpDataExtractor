@@ -1,0 +1,10 @@
+    private JToolBar toolBar;
+
+        toolBar = new JToolBar();
+        if(entity.getDataMap().getMappedEntities(entity).isEmpty()) {
+            toolBar.getComponentAtIndex(1).setEnabled(false);
+            toolBar.getComponentAtIndex(7).setEnabled(false);
+        } else {
+            toolBar.getComponentAtIndex(1).setEnabled(true);
+            toolBar.getComponentAtIndex(7).setEnabled(true);
+        }

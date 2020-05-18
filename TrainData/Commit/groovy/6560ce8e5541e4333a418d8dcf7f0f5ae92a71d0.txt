@@ -1,0 +1,10 @@
+        outer:
+                        if (outerClass.equals(declaringClass)) {
+                            result.add(methodNode);
+                            continue outer;
+                        } else {
+                            if (methodNode.isPublic() || methodNode.isProtected()) {
+                                result.add(methodNode);
+                                continue outer;
+                            }
+                        }

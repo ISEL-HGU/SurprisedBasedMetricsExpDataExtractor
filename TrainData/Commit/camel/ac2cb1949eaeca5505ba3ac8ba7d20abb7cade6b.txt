@@ -1,0 +1,5 @@
+    @WriteOperation
+        if (this.isReadOnly()) {
+            throw new IllegalArgumentException("Read only: route dump is not permitted in read-only mode");
+        }
+

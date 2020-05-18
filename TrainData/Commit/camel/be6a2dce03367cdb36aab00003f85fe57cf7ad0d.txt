@@ -1,0 +1,7 @@
+        boolean useCustomizers = globalConfiguration.getCustomizer()
+                && componentConfiguration.getCustomizer().isEnabled();
+        if (useCustomizers && ObjectHelper.isNotEmpty(customizers)) {
+            for (ComponentCustomizer<ZooKeeperComponent> customizer : customizers) {
+                LOGGER.debug("Configure component {}, with customizer {}",
+                        component, customizer);
+                customizer.customize(component);

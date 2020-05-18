@@ -1,0 +1,37 @@
+    protected SendDynamicProcessor sendDynamicProcessor;
+                // set property which endpoint we send to and the producer that can do it
+                exchange.setProperty(Exchange.SLIP_PRODUCER, asyncProducer);
+                        // cleanup producer after usage
+                        exchange.removeProperty(Exchange.SLIP_PRODUCER);
+
+                        } catch (Throwable e) {
+
+    /**
+     * Creates the embedded processor to use when wrapping this routing slip in an error handler.
+     */
+    public AsyncProcessor newRoutingSlipProcessorForErrorHandler() {
+        return new RoutingSlipProcessor();
+    }
+
+    /**
+     * Embedded processor that routes to the routing slip that has been set via the
+     * exchange property {@link Exchange#SLIP_PRODUCER}.
+     */
+    private final class RoutingSlipProcessor implements AsyncProcessor {
+
+        @Override
+        public void process(Exchange exchange) throws Exception {
+            AsyncProcessorHelper.process(this, exchange);
+        }
+
+        @Override
+        public boolean process(Exchange exchange, AsyncCallback callback) {
+            AsyncProcessor producer = exchange.getProperty(Exchange.SLIP_PRODUCER, AsyncProcessor.class);
+            return producer.process(exchange, callback);
+        }
+
+        @Override
+        public String toString() {
+            return "RoutingSlipProcessor";
+        }
+    }

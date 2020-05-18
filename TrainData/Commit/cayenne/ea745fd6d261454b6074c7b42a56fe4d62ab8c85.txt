@@ -1,0 +1,2 @@
+            throw new NullPointerException("Persistent class can't be null.");
+            throw new NullPointerException("An attempt to register null object.");

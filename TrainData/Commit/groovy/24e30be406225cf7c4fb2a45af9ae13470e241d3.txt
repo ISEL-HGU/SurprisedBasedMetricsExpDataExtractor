@@ -1,0 +1,1 @@
+            text = IOGroovyMethods.getText(sourceUnit.getSource().getReader());

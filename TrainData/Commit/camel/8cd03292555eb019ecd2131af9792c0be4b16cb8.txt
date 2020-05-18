@@ -1,0 +1,13 @@
+     * If the zip file has more then one entry setting this option to true
+     * allows to get the iterator even if the directory is empty
+     */
+    private Boolean allowEmptyDirectory = false;
+    /**
+    public Boolean getAllowEmptyDirectory() {
+        return allowEmptyDirectory;
+    }
+
+    public void setAllowEmptyDirectory(Boolean allowEmptyDirectory) {
+        this.allowEmptyDirectory = allowEmptyDirectory;
+    }
+

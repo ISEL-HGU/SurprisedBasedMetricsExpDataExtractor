@@ -1,0 +1,1 @@
+        final int mod = methodNode.isPrivate() ? ACC_PRIVATE : ACC_PUBLIC | (methodNode.isFinal() ? ACC_FINAL : 0);

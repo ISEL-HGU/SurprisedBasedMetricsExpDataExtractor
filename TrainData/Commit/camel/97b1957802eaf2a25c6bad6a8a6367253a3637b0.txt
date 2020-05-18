@@ -1,0 +1,7 @@
+
+        return calendarId;
+    }
+    public void setCalendarId(String calendarId) {
+        this.calendarId = calendarId;
+    }
+    public boolean isConsumeFromNow() {

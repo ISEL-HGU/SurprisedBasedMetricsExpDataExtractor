@@ -1,0 +1,1 @@
+     * If an empty collection is found within the given collections, the result will be an empty list.

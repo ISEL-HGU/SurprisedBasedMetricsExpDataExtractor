@@ -1,0 +1,25 @@
+import java.sql.SQLException;
+import java.sql.Types;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.cayenne.testdo.inheritance_vertical.Iv1Root;
+import org.apache.cayenne.testdo.inheritance_vertical.Iv1Sub1;
+import org.apache.cayenne.testdo.inheritance_vertical.Iv2Sub1;
+import org.apache.cayenne.testdo.inheritance_vertical.Iv2X;
+import org.apache.cayenne.testdo.inheritance_vertical.IvConcrete;
+import org.apache.cayenne.testdo.inheritance_vertical.IvImpl;
+import org.apache.cayenne.testdo.inheritance_vertical.IvImplWithLock;
+import org.apache.cayenne.testdo.inheritance_vertical.IvOther;
+import org.apache.cayenne.testdo.inheritance_vertical.IvRoot;
+import org.apache.cayenne.testdo.inheritance_vertical.IvSub1;
+import org.apache.cayenne.testdo.inheritance_vertical.IvSub1Sub1;
+import org.apache.cayenne.testdo.inheritance_vertical.IvSub2;
+import org.apache.cayenne.testdo.inheritance_vertical.IvSub3;
+import static org.junit.Assert.*;
+	@Deprecated
+	@Deprecated
+	@Deprecated
+	@Deprecated

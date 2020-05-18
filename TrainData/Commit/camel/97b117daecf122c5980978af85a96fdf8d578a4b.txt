@@ -1,0 +1,20 @@
+import java.security.PrivateKey;
+            if (endpoint.getTruststore() != null) {
+                    // Configure the identity if the keystore parameter is specified
+                    if (endpoint.getKeystore() != null) {
+                        if (endpoint.getAlias() == null) {
+                            throw new IllegalStateException("An alias must be configured to use TLS");
+                        if (endpoint.getPassword() == null) {
+                            throw new IllegalStateException("A password must be configured to use TLS");
+                        }
+                        PrivateKey privateKey = 
+                            (PrivateKey)endpoint.getKeystore().getKey(endpoint.getAlias(), endpoint.getPassword());
+                        builder.setIdentity(privateKey, endpoint.getKeystore().getCertificateChain(endpoint.getAlias()));
+
+                    // Add all certificates from the truststore
+                    builder.setTrustStore(endpoint.getTrustedCerts());
+                } catch (GeneralSecurityException e) {
+                    throw new IllegalStateException("Error in configuring TLS", e);
+                if (endpoint.getConfiguredCipherSuites() != null) {
+                    builder.setSupportedCipherSuites(endpoint.getConfiguredCipherSuites());
+                }

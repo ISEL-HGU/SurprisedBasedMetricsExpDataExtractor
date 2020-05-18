@@ -1,0 +1,1 @@
+        return new SftpConsumer(this, processor, createRemoteFileOperations(), processStrategy != null ? processStrategy : createGenericFileStrategy());

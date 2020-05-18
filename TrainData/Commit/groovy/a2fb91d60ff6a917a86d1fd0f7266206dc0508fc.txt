@@ -1,0 +1,3 @@
+ *
+ * @deprecated use {@link org.apache.groovy.plugin.GroovyRunnerRegistry}
+@Deprecated

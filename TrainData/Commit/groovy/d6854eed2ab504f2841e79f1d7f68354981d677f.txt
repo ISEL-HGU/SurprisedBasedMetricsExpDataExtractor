@@ -1,0 +1,2 @@
+     * yaml authors, { Author author {@code ->}
+     * out {@code <<} yaml

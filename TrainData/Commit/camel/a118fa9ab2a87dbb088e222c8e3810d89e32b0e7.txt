@@ -1,0 +1,22 @@
+import org.apache.camel.catalog.CamelCatalog;
+
+    private Runnable onAddComponent;
+
+    public Runnable getOnAddComponent() {
+        return onAddComponent;
+    }
+
+    public void setOnAddComponent(Runnable onAddComponent) {
+        this.onAddComponent = onAddComponent;
+    }
+
+        File file = new File("target/test-classes/nexus-sample-result.xml");
+
+    @Override
+    protected void addComponent(NexusArtifactDto dto, CamelCatalog camelCatalog, String scheme, String javaType, String json) {
+        super.addComponent(dto, camelCatalog, scheme, javaType, json);
+
+        if (onAddComponent != null) {
+            onAddComponent.run();
+        }
+    }

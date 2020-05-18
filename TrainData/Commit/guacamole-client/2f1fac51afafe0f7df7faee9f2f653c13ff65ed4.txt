@@ -1,0 +1,34 @@
+import org.apache.directory.ldap.client.api.LdapConnection;
+import org.apache.directory.api.ldap.model.entry.Entry;
+import org.apache.directory.api.ldap.model.exception.LdapInvalidDnException;
+import org.apache.directory.api.ldap.model.exception.LdapInvalidAttributeValueException;
+import org.apache.directory.api.ldap.model.name.Dn;
+import org.apache.guacamole.auth.ldap.conf.ConfigurationService;
+import org.apache.guacamole.GuacamoleServerException;
+import org.apache.guacamole.auth.ldap.conf.LDAPGuacamoleProperties;
+    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+    public Map<String, User> getUsers(LdapConnection ldapConnection)
+        List<Entry> results = queryService.search(ldapConnection,
+            try {
+                String username = queryService.getIdentifier(entry, attributes);
+                if (username == null) {
+                    logger.warn("User \"{}\" is missing a username attribute "
+                             "and will be ignored.", entry.getDn().toString());
+                    return null;
+                }
+                
+                return new SimpleUser(username);
+            }
+            catch (LdapInvalidAttributeValueException e) {
+    public List<Dn> getUserDNs(LdapConnection ldapConnection,
+        List<Entry> results = queryService.search(ldapConnection,
+        List<Dn> userDNs = new ArrayList<>(results.size());
+        results.forEach(entry -> userDNs.add(entry.getDn()));
+    public Dn deriveUserDN(String username)
+        try {
+            return new Dn(usernameAttributes.get(0)  "="  username
+                 ","  confService.getUserBaseDN().toString());
+        }
+        catch (LdapInvalidDnException e) {
+            throw new GuacamoleServerException("Error trying to derive user DN.", e);
+        }

@@ -1,0 +1,8 @@
+import org.apache.camel.component.salesforce.api.dto.Attributes;
+    public With_Reference__c() {
+        Attributes attributes = new Attributes();
+        attributes.setType("With_Reference__c");
+        setAttributes(attributes);
+    }
+
+  

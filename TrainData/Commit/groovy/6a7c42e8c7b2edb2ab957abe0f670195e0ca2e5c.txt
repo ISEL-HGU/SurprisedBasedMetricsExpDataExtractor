@@ -1,0 +1,2 @@
+    private static final String ORG_W3C_DOM_NODE = "org.w3c.dom.Node";
+            customClasses.put(ORG_W3C_DOM_NODE, super.loadClass(ORG_W3C_DOM_NODE, false));

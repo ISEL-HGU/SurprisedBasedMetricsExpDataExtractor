@@ -1,0 +1,1 @@
+            resp.setHeader(CoAPConstants.COAP_RESPONSE_CODE, response.getCode().toString());

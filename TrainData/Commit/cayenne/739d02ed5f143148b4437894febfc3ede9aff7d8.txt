@@ -1,0 +1,68 @@
+import org.apache.cayenne.query.PrefetchProcessor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+	private static final Logger logger = LoggerFactory.getLogger(SelectTranslator.class);
+
+	JointPrefetchChecker jointPrefetchChecker = new JointPrefetchChecker();
+
+		checkLimitAndJointPrefetch();
+
+	 * Warn user in case query uses both limit and joint prefetch, as we don't support this combination.
+	 */
+	private void checkLimitAndJointPrefetch() {
+		if(queryMetadata.getFetchLimit() == 0 && queryMetadata.getFetchOffset() == 0) {
+			return;
+		}
+
+		if(!jointPrefetchChecker.haveJointNode(queryMetadata.getPrefetchTree())) {
+			return;
+		}
+
+		logger.warn("Query uses both limit and joint prefetch, this most probably will lead to incorrect result. " 
+				"Either use disjointById prefetch or get full result set.");
+	}
+
+	/**
+
+	private static class JointPrefetchChecker implements PrefetchProcessor {
+		private boolean haveJointNode;
+
+		public JointPrefetchChecker() {
+		}
+
+		public boolean haveJointNode(PrefetchTreeNode prefetchTree) {
+			haveJointNode = false;
+			prefetchTree.traverse(this);
+			return haveJointNode;
+		}
+
+		@Override
+        public boolean startPhantomPrefetch(PrefetchTreeNode node) {
+            return true;
+        }
+
+		@Override
+        public boolean startDisjointPrefetch(PrefetchTreeNode node) {
+            return true;
+        }
+
+		@Override
+        public boolean startDisjointByIdPrefetch(PrefetchTreeNode prefetchTreeNode) {
+            return true;
+        }
+
+		@Override
+        public boolean startJointPrefetch(PrefetchTreeNode node) {
+            haveJointNode = true;
+            return false;
+        }
+
+		@Override
+        public boolean startUnknownPrefetch(PrefetchTreeNode node) {
+            return true;
+        }
+
+		@Override
+        public void finishPrefetch(PrefetchTreeNode node) {
+        }
+	}

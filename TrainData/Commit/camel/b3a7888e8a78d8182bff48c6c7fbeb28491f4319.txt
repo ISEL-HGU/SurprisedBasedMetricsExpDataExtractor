@@ -1,0 +1,1 @@
+        if (!map.containsKey("httpBinding")) {

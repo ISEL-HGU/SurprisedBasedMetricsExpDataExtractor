@@ -1,0 +1,6 @@
+    public void configureAnnotationFromDefinition(AnnotationNode definition, AnnotationNode root) {
+        VMPlugin plugin = VMPluginFactory.getPlugin();
+        plugin.configureAnnotationNodeFromDefinition(definition, root);
+        VMPlugin plugin = VMPluginFactory.getPlugin();
+            plugin.configureAnnotationNodeFromDefinition(an, node);
+        plugin.configureAnnotationNodeFromDefinition(node, node);

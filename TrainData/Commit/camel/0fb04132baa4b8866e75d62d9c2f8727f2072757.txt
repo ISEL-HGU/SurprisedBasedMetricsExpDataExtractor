@@ -1,0 +1,2 @@
+import org.apache.camel.model.DefinitionPropertyPlaceholderConfigurable;
+public class ExpressionDefinition implements Expression, Predicate, OtherAttributesAware, ExpressionFactory, DefinitionPropertyPlaceholderConfigurable {

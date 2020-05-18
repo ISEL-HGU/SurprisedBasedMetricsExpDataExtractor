@@ -1,0 +1,3 @@
+        if (queryObject instanceof SearchRequest) {
+            return (SearchRequest) queryObject;
+        }

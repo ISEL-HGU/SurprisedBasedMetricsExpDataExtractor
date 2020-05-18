@@ -1,0 +1,2 @@
+     * DSTU2,DSTU2_HL7ORG,DSTU2_1,DSTU3,R4
+     * example application/xml for data formats marshalling to XML, or

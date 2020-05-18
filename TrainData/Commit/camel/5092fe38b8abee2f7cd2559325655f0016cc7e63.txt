@@ -1,0 +1,12 @@
+        if (getJavaMajorVersion() >= 9) {
+            command.add("--add-modules");
+            command.add("java.sql");
+        }
+    private static int getJavaMajorVersion() {
+        String javaSpecVersion = System.getProperty("java.specification.version");
+        if (javaSpecVersion.contains(".")) { //before jdk 9
+            return Integer.parseInt(javaSpecVersion.split("\\.")[1]);
+        } else {
+            return Integer.parseInt(javaSpecVersion);
+        }
+    }

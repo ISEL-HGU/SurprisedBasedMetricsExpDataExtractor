@@ -1,0 +1,6 @@
+    private static final ThreadLocal<Boolean> NO_START = new ThreadLocal<>();
+        if (b) {
+            NO_START.set(true);
+        } else {
+            NO_START.set(null);
+        }

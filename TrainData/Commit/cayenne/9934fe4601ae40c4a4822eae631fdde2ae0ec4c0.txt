@@ -1,0 +1,30 @@
+import org.apache.cayenne.Persistent;
+    public void addImportForPK(EntityUtils entityUtils) throws ClassNotFoundException {
+        DbEntity entity = entityUtils.objEntity.getDbEntity();
+        boolean needToCreatePK = false;
+
+            if(!entityUtils.declaresDbAttribute(attribute)) {
+                importUtils.addType(TypesMapping.getJavaBySqlType(attribute.getType()));
+                importUtils.addType(getPropertyTypeForAttribute(attribute));
+                needToCreatePK = true;
+            }
+        }
+
+        if(needToCreatePK) {
+            importUtils.addType(PropertyFactory.class.getName());
+            importUtils.addType(ExpressionFactory.class.getName());
+        if (relationship.getTargetEntityName() != null && relationship.getTargetEntity() != null) {
+        } else {
+            importUtils.addType(Persistent.class.getName());
+        if(TypesMapping.JAVA_BYTES.equals(attributeType)) {
+            return BaseProperty.class.getName();
+        }
+
+        String attributeType = relationship.getTargetEntity() == null
+                ? Persistent.class.getSimpleName()
+                : relationship.getTargetEntity().getClassName();
+        String entityType = importUtils.formatJavaType(relationship.getTargetEntity() == null
+                ? Persistent.class.getSimpleName()
+                : relationship.getTargetEntity().getClassName());
+        String attributeType = (relationship.getTargetEntityName() == null || relationship.getTargetEntity() == null)
+                ? Persistent.class.getSimpleName()

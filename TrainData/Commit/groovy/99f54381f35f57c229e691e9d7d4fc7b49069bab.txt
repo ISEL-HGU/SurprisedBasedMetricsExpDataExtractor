@@ -1,0 +1,2 @@
+        syntheticMethodNode.addAnnotation(new AnnotationNode(ClassHelper.make(groovy.transform.CompileStatic.class)));
+        syntheticMethodNode.addAnnotation(new AnnotationNode(ClassHelper.make(groovy.transform.CompileStatic.class)));

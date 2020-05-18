@@ -1,0 +1,18 @@
+import org.apache.cayenne.map.DbAttribute;
+
+    /**
+     * Overrides super implementation to correctly set up identity columns.
+     *
+     * @since 1.2
+     * @since 4.1 moved from SQLServerAdapter to SybaseAdapter as it supports this too
+     */
+    @Override
+    public void createTableAppendColumn(StringBuffer sqlBuffer, DbAttribute column) {
+
+        super.createTableAppendColumn(sqlBuffer, column);
+
+        if (column.isGenerated()) {
+            // current limitation - we don't allow to set identity parameters...
+            sqlBuffer.append(" IDENTITY (1, 1)");
+        }
+    }

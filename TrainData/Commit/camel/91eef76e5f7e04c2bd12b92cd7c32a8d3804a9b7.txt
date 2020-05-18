@@ -1,0 +1,10 @@
+import java.util.Set;
+
+import com.amazonaws.services.ecs.AmazonECS;
+        checkAndSetRegistryClient(configuration);
+    private void checkAndSetRegistryClient(ECSConfiguration configuration) {
+        Set<AmazonECS> clients = getCamelContext().getRegistry().findByType(AmazonECS.class);
+        if (clients.size() == 1) {
+            configuration.setEcsClient(clients.stream().findFirst().get());
+        }
+    }

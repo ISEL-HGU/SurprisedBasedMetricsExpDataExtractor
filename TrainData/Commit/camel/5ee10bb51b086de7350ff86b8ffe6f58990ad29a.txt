@@ -1,0 +1,25 @@
+
+    // transient state of headers and body which needs to be thread local scoped to be thread-safe
+    private final ThreadLocal<Map<String, Object>> headers = new ThreadLocal<>();
+    private final ThreadLocal<Object> body = new ThreadLocal<>();
+
+        Map<String, Object> map = headers.get();
+        if (map == null) {
+            map = new HashMap<>();
+            headers.set(map);
+        map.put(key, value);
+        headers.remove();
+        this.body.set(body);
+        Object b = type != null
+        this.body.set(b);
+
+        body.remove();
+        if (ObjectHelper.isNotEmpty(headers.get())) {
+            final Map<String, Object> headersCopy = new HashMap<>(headers.get());
+            final Object bodyCopy = body.get();
+            final Object bodyCopy = body.get();
+            ObjectHelper.ifNotEmpty(headers.get(), exchange.getIn().getHeaders()::putAll);
+            ObjectHelper.ifNotEmpty(body.get(), exchange.getIn()::setBody);
+        final Map<String, Object> headersCopy = ObjectHelper.isNotEmpty(this.headers.get()) ? new HashMap<>(this.headers.get()) : null;
+        final Object bodyCopy = this.body.get();
+        clearAll();

@@ -1,0 +1,9 @@
+                        .setDefault().setBody("return (Advanced"  consumerName  ") this;");
+                        .setDefault().setBody("return ("  consumerName  ") this;");
+                        .setDefault().setBody("return (Advanced"  producerName  ") this;");
+                        .setDefault().setBody("return ("  producerName  ") this;");
+                    .setDefault().setBody("return (Advanced"  builderName  ") this;");
+                    .setDefault().setBody("return ("  builderName  ") this;");
+                Method fluent = target.addMethod().setDefault().setName(option.getName())
+                    fluent = target.addMethod().setDefault().setName(option.getName())
+                .setDefault()

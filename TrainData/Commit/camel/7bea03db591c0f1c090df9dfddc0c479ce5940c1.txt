@@ -1,0 +1,13 @@
+import io.opentracing.propagation.TextMap;
+
+import org.apache.camel.opentracing.propagation.CamelHeadersExtractAdapter;
+import org.apache.camel.opentracing.propagation.CamelHeadersInjectAdapter;
+    @Override
+    public TextMap getExtractAdapter(final Map<String, Object> map) {
+    	return new CamelHeadersExtractAdapter(map);
+    }
+
+    @Override
+    public TextMap getInjectAdapter(final Map<String, Object> map) {
+    	return new CamelHeadersInjectAdapter(map);    	
+    }

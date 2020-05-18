@@ -1,0 +1,1 @@
+    /** This (<code>"indy"</code>) is the Optimization Option value for enabling <code>invokedynamic</code> compilation. */

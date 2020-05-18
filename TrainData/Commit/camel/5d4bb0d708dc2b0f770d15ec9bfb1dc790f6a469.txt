@@ -1,0 +1,2 @@
+                // no existing breadcrumb, so create a new one based on the exchange id
+                breadcrumbId = exchange.getExchangeId();

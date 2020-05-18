@@ -1,0 +1,3 @@
+            String[] mirrors = new String[] {"http://maven.ibiblio.org/maven"};
+            String[] mirrorsRoot = new String[] {"http://maven.ibiblio.org/maven"};
+                if (handler.isReachable(new URL(mirrors[i]), 500)) {

@@ -1,0 +1,2 @@
+import com.amazonaws.regions.Regions;
+            AmazonSimpleEmailService client = AmazonSimpleEmailServiceClientBuilder.standard().withCredentials(credentialsProvider).withRegion(Regions.valueOf(configuration.getRegion())).build();

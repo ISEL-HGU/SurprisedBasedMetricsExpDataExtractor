@@ -1,0 +1,14 @@
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.camel.impl.cloud.DefaultServiceDefinition;
+    private final Map<String, Object> serviceParameters;
+    public ServiceEndpoint(String uri, ServiceComponent component, ServiceRegistry serviceRegistry, Map<String, Object> serviceParameters, String delegateUri) {
+        // The service properties set on uri override parameter provided by a
+        // an endpoint of type DiscoverableService.
+        Map<String, Object> parameters = new HashMap<>();
+            parameters.putAll(((DiscoverableService)delegateEndpoint).getServiceProperties());
+        parameters.putAll(serviceParameters);
+        parameters.computeIfAbsent(ServiceDefinition.SERVICE_META_ID, k -> context.getUuidGenerator().generateUuid());
+
+        return DefaultServiceDefinition.builder().from(parameters).build();

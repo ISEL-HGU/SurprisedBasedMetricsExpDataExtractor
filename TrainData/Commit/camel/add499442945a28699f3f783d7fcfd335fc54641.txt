@@ -1,0 +1,2 @@
+        ServiceHelper.startService(processor);
+        ServiceHelper.stopService(processor);

@@ -1,0 +1,3 @@
+                    String customId = route.getAttributes().getNamedItem("customId") != null ? route.getAttributes().getNamedItem("customId").getNodeValue() : "false";
+                    // must be the target route and the route must be explicit assigned with that route id (not anonymous route)
+                    if ("true".equals(customId) && routeId.equals(id)) {

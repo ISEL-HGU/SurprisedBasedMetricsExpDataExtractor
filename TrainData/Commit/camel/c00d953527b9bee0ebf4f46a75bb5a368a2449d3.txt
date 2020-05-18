@@ -1,0 +1,3 @@
+        QName partNamespaceOnDataFormat = getPartNamespace();
+        String partClassFromHeader = exchange.getIn().getHeader(JaxbConstants.JAXB_PART_CLASS, String.class);
+        String partNamespaceFromHeader = exchange.getIn().getHeader(JaxbConstants.JAXB_PART_NAMESPACE, String.class);

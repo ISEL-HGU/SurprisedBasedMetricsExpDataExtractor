@@ -1,0 +1,9 @@
+import org.apache.camel.DelegateEndpoint;
+        Endpoint answer;
+            answer = doGetEndpointInjection(bean, propertyName, injectionPointName);
+            answer = doGetEndpointInjection(uri, injectionPointName, mandatory);
+        // it may be a delegate endpoint via ref component
+        if (answer instanceof DelegateEndpoint) {
+            answer = ((DelegateEndpoint) answer).getEndpoint();
+        }
+        return answer;

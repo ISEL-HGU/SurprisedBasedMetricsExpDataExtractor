@@ -1,0 +1,2 @@
+import org.apache.camel.reload.FileWatcherReloadStrategy;
+            camelContext.adapt(ExtendedCamelContext.class).setName(config.getName());

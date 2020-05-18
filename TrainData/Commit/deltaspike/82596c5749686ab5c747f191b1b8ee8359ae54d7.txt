@@ -1,0 +1,11 @@
+                Object defaultValue = null;
+
+                try
+                {
+                    defaultValue = annotationMethod.invoke(defaultAnnotation);
+                }
+                catch (NullPointerException e) //happens with primitive data-types without default values
+                {
+                    defaultValue = null;
+                }
+

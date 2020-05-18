@@ -1,0 +1,22 @@
+     * @deprecated use {@link #getEndpointRegistry()}
+    @Deprecated
+     * Sets a custom {@link RouteController} to use
+     * Gets the {@link RouteController}
+     * @return the route controller.
+     * Method to signal to {@link CamelContext} that the process to initialize setup routes is in progress.
+     *
+     * @param done <tt>false</tt> to start the process, call again with <tt>true</tt> to signal its done.
+     * @see #isSetupRoutes()
+     */
+    void setupRoutes(boolean done);
+
+    /**
+     * @deprecated not in use
+    @Deprecated
+     * Returns the package scanning class resolver
+     *
+     * @return the resolver
+     */
+    PackageScanClassResolver getPackageScanClassResolver();
+
+    /**

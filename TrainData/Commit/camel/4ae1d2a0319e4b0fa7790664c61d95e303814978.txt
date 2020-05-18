@@ -1,0 +1,10 @@
+import java.util.Set;
+
+import com.amazonaws.services.eks.AmazonEKS;
+        checkAndSetRegistryClient(configuration);
+    private void checkAndSetRegistryClient(EKSConfiguration configuration) {
+        Set<AmazonEKS> clients = getCamelContext().getRegistry().findByType(AmazonEKS.class);
+        if (clients.size() == 1) {
+            configuration.setEksClient(clients.stream().findFirst().get());
+        }
+    }

@@ -1,0 +1,14 @@
+import org.apache.cayenne.access.translator.DbAttributeBinding;
+import org.apache.cayenne.access.translator.ParameterBinding;
+import org.apache.cayenne.configuration.RuntimeProperties;
+import org.apache.cayenne.di.Inject;
+import org.apache.cayenne.map.DbAttribute;
+
+    private static final Pattern UNION_PATTERN = Pattern.compile(UNION, Pattern.CASE_INSENSITIVE);
+
+        if (UNION_PATTERN.matcher(sql).find()) {
+        String modified = UNION_PATTERN.matcher(sql)
+                .replaceAll(UNION);
+        String str = sql.toUpperCase();
+        int selectIndex = str.indexOf(SELECT);
+        int fromIndex = str.indexOf(FROM);

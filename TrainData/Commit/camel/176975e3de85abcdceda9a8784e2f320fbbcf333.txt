@@ -1,0 +1,8 @@
+        this.componentScheme = componentScheme != null ? baseScheme  "-"  componentScheme : baseScheme  "-"  componentName  "-component";
+        if (!catalog.findComponentNames().contains(this.componentScheme)) {
+            this.catalog.addComponent(this.componentScheme, this.model.getBaseJavaType(), catalog.componentJSonSchema(baseScheme));
+        String delegateUri = createEndpointUri(componentScheme, options);
+            log.info("Register component: {} (type: {}) with scheme: {}",
+                this.componentScheme
+            getCamelContext().removeComponent(this.componentScheme);
+            getCamelContext().addComponent(this.componentScheme, component);

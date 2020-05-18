@@ -1,0 +1,14 @@
+    protected static final String EXCHANGE = "exchange";
+    protected static final String ID = "id";
+    protected static final String BODY = "body";
+    protected int insertAndUpdateHelper(final CamelContext camelContext, final String key, final Exchange exchange, String sql, final boolean idComesFirst) throws Exception {
+        Integer updateCount = jdbcTemplate.execute(sql,
+        return updateCount == null ? 0 : updateCount;
+    public List<String> getHeadersToStoreAsText() {
+        return headersToStoreAsText;
+    }
+
+    public boolean isStoreBodyAsText() {
+        return storeBodyAsText;
+    }
+

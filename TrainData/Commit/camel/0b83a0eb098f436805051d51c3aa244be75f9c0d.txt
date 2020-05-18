@@ -1,0 +1,3 @@
+ b/connectors/examples/twitter-find-example/src/main/java/org/foo/TwitterFindRoute.java
+public class TwitterFindRoute extends RouteBuilder {
+        from("tw-find")

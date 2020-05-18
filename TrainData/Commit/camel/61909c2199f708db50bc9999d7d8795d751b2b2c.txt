@@ -1,0 +1,13 @@
+                log.error("Caught exception on "  getEndpointUri()  " due to: "  failure.getMessage(), failure);
+                fail(failure);
+                if (index < getReceivedExchanges().size()) {
+                    applyAssertionOn(MockEndpoint.this, index, assertExchangeReceived(index));
+                }
+                for (int i = 0; i < getReceivedExchanges().size(); i) {
+        if (message instanceof Throwable) {
+            Throwable cause = (Throwable) message;
+            String msg = "Caught exception on "  getEndpointUri()  " due to: "  cause.getMessage();
+            throw new AssertionError(msg, cause);
+        } else {
+            throw new AssertionError(getEndpointUri()  " "  message);
+        }

@@ -1,0 +1,2 @@
+ *     <li>keys with map</li> - Properties can lookup in Map's using map syntax, eg foo[bar] where foo is the name of the property that is a Map instance, and bar is the name of the key.</li>
+    // TODO: Add support for List in keys

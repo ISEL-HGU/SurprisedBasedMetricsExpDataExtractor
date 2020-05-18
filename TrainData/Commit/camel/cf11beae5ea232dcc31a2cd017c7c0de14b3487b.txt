@@ -1,0 +1,1 @@
+    @UriPath(description = "The search query, use the keywords AND, OR, - and () to narrow the search results.")

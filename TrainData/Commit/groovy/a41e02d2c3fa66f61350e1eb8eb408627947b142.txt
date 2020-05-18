@@ -1,0 +1,12 @@
+ * actual value objects can be bound to a JDBC statement.
+ * <p>
+ * James Strachan: The lovely name of this class was suggested by Jules Gosnell
+ * and was such a good idea, I couldn't resist :)
+            return new String[]{""};
+        } catch (MissingMethodException e) {
+        return plus(new GStringImpl(EMPTY_OBJECT_ARRAY, new String[]{that}));
+        } catch (IOException e) {
+        return Math.max((int) (initialCapacity * 1.2), 16);
+            builder.invokeMethod(YIELD, new Object[]{s[i]});
+                builder.invokeMethod(YIELD, new Object[]{values[i]});
+        return toString().getBytes(charset);

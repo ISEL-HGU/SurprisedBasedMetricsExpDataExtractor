@@ -1,0 +1,3 @@
+            SearchTermBuilder builderTemp = new SearchTermBuilder();
+            builderTemp = builderTemp.subject(text).body(SearchTermBuilder.Op.or, text);
+            builder = builder.and(builderTemp.build());

@@ -1,0 +1,21 @@
+import java.io.Closeable;
+import java.io.IOException;
+
+public interface Service extends Closeable {
+
+    /**
+     * Delegates to {@link Service#stop()} so it can be used in
+     * try-with-resources expression.
+     * 
+     * @throws IOException per contract of {@link Closeable} if
+     *             {@link Service#stop()} fails
+     */
+    default void close() throws IOException {
+        try {
+            stop();
+        } catch (RuntimeException e) {
+            throw e;
+        } catch (Exception e) {
+            throw new IOException(e);
+        }
+    }

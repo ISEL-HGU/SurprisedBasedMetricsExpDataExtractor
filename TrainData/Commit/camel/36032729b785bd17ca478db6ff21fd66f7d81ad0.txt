@@ -1,0 +1,3 @@
+        String basePath = getBasePath(path);
+            path = PathTemplate.create(path).getBase();
+        return URLUtils.normalizeSlashes(path);

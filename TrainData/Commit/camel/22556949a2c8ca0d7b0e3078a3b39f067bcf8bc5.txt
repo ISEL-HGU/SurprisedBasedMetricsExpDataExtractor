@@ -1,0 +1,5 @@
+                } else if (value instanceof Boolean) {
+                    MessageAttributeValue mav = new MessageAttributeValue();
+                    mav.setDataType("Number.Boolean");
+                    mav.withStringValue(((Boolean)value)?"1":"0");
+                    result.put(entry.getKey(), mav);

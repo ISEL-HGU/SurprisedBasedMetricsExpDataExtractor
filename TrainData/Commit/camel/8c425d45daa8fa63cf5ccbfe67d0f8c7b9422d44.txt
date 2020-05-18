@@ -1,0 +1,2 @@
+ * Represents an endpoint which is registered to a Service Registry such as
+ * Consul, Etcd.

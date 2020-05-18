@@ -1,0 +1,5 @@
+        for (Map.Entry<String, ClassNode> entry : referencedClasses.entrySet()) {            // generate a field node
+        for (Map.Entry<String, ClassNode> entry : referencedClasses.entrySet()) {
+            String staticFieldName = entry.getKey();
+            ClassNode cn = entry.getValue();
+            mv.visitLdcInsn(BytecodeHelper.getClassLoadingTypeDescription(cn));

@@ -1,0 +1,8 @@
+     * Executes doPollDirectory and on exception checks if it can be ignored by calling ignoreCannotRetrieveFile.
+     * @param absolutePath  the path of the directory to poll
+     * @param dirName       the name of the directory to poll
+     * @param fileList      current list of files gathered
+     * @param depth         the current depth of the directory
+            log.debug("Caught exception {}", e.getMessage());
+                log.trace("Ignoring file error {} for {}", e.getMessage(), absolutePath);
+                log.trace("Not ignoring file error {} for {}", e.getMessage(), absolutePath);

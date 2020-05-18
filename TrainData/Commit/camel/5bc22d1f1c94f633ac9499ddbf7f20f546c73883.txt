@@ -1,0 +1,4 @@
+import org.apache.camel.component.salesforce.api.dto.AbstractDescribedSObjectBase;
+import org.apache.camel.component.salesforce.api.dto.AbstractSObjectBase;
+// CHECKSTYLE:OFF
+// CHECKSTYLE:ON

@@ -1,0 +1,26 @@
+import com.amazonaws.services.s3.model.GetObjectRequest;
+import com.amazonaws.services.s3.model.S3Object;
+            case getObject:
+                getObject(getEndpoint().getS3Client(), exchange);
+                break;
+    private void getObject(AmazonS3 s3Client, Exchange exchange) {
+        String bucketName;
+        String sourceKey;
+        bucketName = exchange.getIn().getHeader(S3Constants.BUCKET_NAME, String.class);
+        if (ObjectHelper.isEmpty(bucketName)) {
+            bucketName = getConfiguration().getBucketName();
+        }
+        sourceKey = exchange.getIn().getHeader(S3Constants.KEY, String.class);
+        if (ObjectHelper.isEmpty(bucketName)) {
+            throw new IllegalArgumentException("Bucket Name must be specified for deleteObject Operation");
+        }
+        if (ObjectHelper.isEmpty(sourceKey)) {
+            throw new IllegalArgumentException("Source Key must be specified for deleteObject Operation");
+        }
+        GetObjectRequest req = new GetObjectRequest(bucketName, sourceKey);
+        S3Object res = s3Client.getObject(req);
+        
+        Message message = getMessageForResponse(exchange);
+        message.setBody(res.getObjectContent());
+    }
+    

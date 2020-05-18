@@ -1,0 +1,1 @@
+        return redisTemplate.opsForGeo().add(key, point, member);

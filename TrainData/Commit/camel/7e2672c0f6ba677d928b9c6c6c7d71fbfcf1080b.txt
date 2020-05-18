@@ -1,0 +1,2 @@
+     * Mock all endpoints.
+     * Mock all endpoints matching the given pattern.

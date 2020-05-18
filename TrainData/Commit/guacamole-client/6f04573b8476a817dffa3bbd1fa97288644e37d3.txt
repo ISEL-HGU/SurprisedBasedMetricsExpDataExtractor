@@ -1,0 +1,6 @@
+     * Validates and parses the given ID ticket, returning the AttributePrincipal
+     * derived from the parameters provided by the CAS server in the ticket.  If the
+     * ticket is invalid an exception is thrown.
+     *     The AttributePrincipal derived from parameters provided in the ticket.
+     *     If the ID ticket is not valid or guacamole.properties could
+     *     not be parsed.

@@ -1,0 +1,3 @@
+     * @throws InvalidAS2NameException - If <code>name</code> is invalid.
+     * @throws IOException - If failed to print request.
+     * @throws IOException - If failed to print message.

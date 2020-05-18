@@ -1,0 +1,10 @@
+import org.apache.camel.util.IOHelper;
+        this(camelContext, knownHostsResource, false);
+            IOHelper.close(knownHostsInputStream);
+    private PublicKey findKeyForServerToken(InputStream knownHostsInputStream, List<String> possibleTokens) {
+        String knowHostsLines = camelContext.getTypeConverter().convertTo(String.class, knownHostsInputStream);
+        if (knowHostsLines == null) {
+            log.warn("Could not read from the known_hosts file input stream");
+            return null;
+        }
+        for (String s : knowHostsLines.split("\n")) {

@@ -1,0 +1,7 @@
+                            Object instance = null;
+                                instance = context.getInjector().newInstance(parameterType);
+                            }
+                            if (instance != null) {
+                                org.apache.camel.support.ObjectHelper.invokeMethod(method, newTarget, instance);
+                                newTarget = instance;
+                                newClass = newTarget.getClass();

@@ -1,0 +1,13 @@
+
+      String mappingFile = DataStoreFactory.getMappingFile(properties, this,
+              DEFAULT_MAPPING_FILE);
+
+      // if there is no mapping.file property in gora.properties, then check
+      // configurations for mapping.file key
+      if (mappingFile.equals(DEFAULT_MAPPING_FILE)) {
+        mappingFile = getConf().get(PARSE_MAPPING_FILE_KEY, DEFAULT_MAPPING_FILE);
+      mapping = readMapping(mappingFile);
+  private HBaseMapping readMapping(String filename) throws IOException {
+      Document doc = builder.build(getClass().getClassLoader()
+              .getResourceAsStream(filename));
+              filename) ;

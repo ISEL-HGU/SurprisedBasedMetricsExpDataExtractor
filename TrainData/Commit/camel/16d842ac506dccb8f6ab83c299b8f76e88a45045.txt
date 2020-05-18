@@ -1,0 +1,7 @@
+    /**
+     * The build directory
+     */
+    @Parameter(readonly = true, defaultValue = "${project.build.directory}/")
+    protected File buildDir;
+
+        File[] files = new File(buildDir, "../src/main/java/org/apache/camel/main").listFiles(f ->

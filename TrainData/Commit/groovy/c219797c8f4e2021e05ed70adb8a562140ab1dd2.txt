@@ -1,0 +1,54 @@
+import static org.codehaus.groovy.ast.tools.GeneralUtils.args;
+import static org.codehaus.groovy.ast.tools.GeneralUtils.binX;
+import static org.codehaus.groovy.ast.tools.GeneralUtils.callX;
+import static org.codehaus.groovy.ast.tools.GeneralUtils.castX;
+import static org.codehaus.groovy.ast.tools.GeneralUtils.varX;
+        VariableExpression implicitThis = varX("this");
+            BinaryExpression reversedBinaryExpression = binX(rightExpression, expression.getOperation(), leftExpression);
+        VariableExpression ve = varX("%", setterInfo.receiverType);
+                ? binX(leftExpression, getOpWithoutEqual(expression), rightExpression)
+        MethodCallExpression call = callX(ve, setterInfo.name, newRightExpression);
+                    call = callX(ve, setterInfo.name, castX(type, newRightExpression));
+                adjustGenerics(lType, node);
+                    adjustGenerics(type, node);
+    private void adjustGenerics(ClassNode from, ClassNode to) {
+        GenericsType[] genericsTypes = from.getGenericsTypes();
+        if (genericsTypes == null) {
+            // case of: def foo = new HashMap<>()
+            genericsTypes = to.redirect().getGenericsTypes();
+        }
+        GenericsType[] copy = new GenericsType[genericsTypes.length];
+        for (int i = 0; i < genericsTypes.length; i) {
+            GenericsType genericsType = genericsTypes[i];
+            copy[i] = new GenericsType(
+                    wrapTypeIfNecessary(genericsType.getType()),
+                    genericsType.getUpperBounds(),
+                    genericsType.getLowerBound()
+            );
+        }
+        to.setGenericsTypes(copy);
+    }
+
+            ArgumentListExpression argList = args(((ListExpression) rightExpression).getExpressions());
+                ArgumentListExpression argList = args(rightExpression);
+                ClassNode[] argTypes = getArgumentTypes(argList);
+                checkGroovyStyleConstructor(leftRedirect, argTypes, rightExpression);
+                PropertyExpression pexp = new PropertyExpression(varX("_", receiverType), keyExpr.getText());
+        MethodCallExpression mce = callX(varX("_", testClass), "iterator", ArgumentListExpression.EMPTY_ARGUMENTS);
+        PropertyExpression subExp = new PropertyExpression(varX("{}", contentType), pexp.getPropertyAsString());
+        PropertyExpression subExp = new PropertyExpression(varX("{}", types[0].getType()), pexp.getPropertyAsString());
+                BinaryExpression bexp = binX(
+                    MethodNode node = findMethodOrFail(varX("_dummy_", exprType), exprType, name);
+                                varX("{target}", enclosingMethod.getReturnType()),
+                                varX("{source}", type)
+            expressions.add(0, varX("$self", receiver));
+        ArgumentListExpression newArgs = args(expressions);
+                    stInt = (Integer) evaluateExpression(castX(ClassHelper.Integer_TYPE,strategy), typeCheckingContext.source.getConfiguration());
+                MethodCallExpression subcall = callX(castX(componentType, EmptyExpression.INSTANCE), name, call.getArguments());
+            return checkCast(targetType.getComponentType(), varX("foo", expressionType.getComponentType()));
+            BinaryExpression newExpr = binX(expr.getLeftExpression(), expr.getOperation(), rightExpression);
+            return inferReturnTypeGenerics(left, method, args(rightExpression));
+            MethodCallExpression vcall = callX(varX("_hash_", containerType), "getAt", varX("_index_", indexType));
+            MethodCallExpression call = callX(be.getLeftExpression(), name, be.getRightExpression());
+            methods = extension.handleMissingMethod(receiver, name, args(be.getLeftExpression()), args, call);
+            VariableExpression vexp = varX("$foo", receiver);

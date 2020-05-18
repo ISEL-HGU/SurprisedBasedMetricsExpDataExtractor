@@ -1,0 +1,16 @@
+import static org.apache.groovy.parser.antlr4.GroovyLangParser.ABSTRACT;
+import static org.apache.groovy.parser.antlr4.GroovyLangParser.FINAL;
+import static org.apache.groovy.parser.antlr4.GroovyLangParser.NATIVE;
+import static org.apache.groovy.parser.antlr4.GroovyLangParser.STATIC;
+import static org.apache.groovy.parser.antlr4.GroovyLangParser.VOLATILE;
+        this.modifierNodeList = Collections.unmodifiableList(modifierNodeList);
+    public boolean containsAny(final int... modifierTypes) {
+        return modifierNodeList.stream().anyMatch(e -> {
+            for (int modifierType : modifierTypes) {
+                if (modifierType == e.getType()) {
+                    return true;
+                }
+            }
+
+            return false;
+        });

@@ -1,0 +1,2 @@
+        getMethod.setQueryString(new NameValuePair[] {new NameValuePair("access_key", component.getGeolocationAccessKey()), new NameValuePair("legacy", "1"),
+                                                      new NameValuePair("output", "json")});

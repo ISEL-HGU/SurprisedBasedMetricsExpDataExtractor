@@ -1,0 +1,1 @@
+            dom = XmlLineNumberParser.parseXml(new ByteArrayInputStream(xml.getBytes()), null, "camelContext,routeContext,routes", "http://camel.apache.org/schema/spring");

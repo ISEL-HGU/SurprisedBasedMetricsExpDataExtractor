@@ -1,0 +1,19 @@
+import java.util.Collections;
+import java.util.Set;
+     * The identifiers of any groups of which this user is a member, including
+     * groups inherited through membership in other groups.
+     */
+    private final Set<String> effectiveGroups;
+
+    /**
+     *
+     * @param effectiveGroups
+     *     The identifiers of any groups of which this user is a member,
+     *     including groups inherited through membership in other groups.
+            Credentials credentials, Set<String> effectiveGroups) {
+        this.effectiveGroups = Collections.unmodifiableSet(effectiveGroups);
+    public Set<String> getEffectiveUserGroups() {
+        return effectiveGroups;
+    }
+
+    @Override

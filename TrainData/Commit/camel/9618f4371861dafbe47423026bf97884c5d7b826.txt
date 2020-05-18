@@ -1,0 +1,1 @@
+            return new File("../camel-file/target/classes/org/apache/camel/component/file/file.json");

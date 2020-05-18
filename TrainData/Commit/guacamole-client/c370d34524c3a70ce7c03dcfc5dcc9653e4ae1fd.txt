@@ -1,0 +1,9 @@
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+            try {
+                MessageDigest.getInstance("MD4");
+            }
+            catch (NoSuchAlgorithmException e) {
+                Security.addProvider(new BouncyCastleProvider());
+            }

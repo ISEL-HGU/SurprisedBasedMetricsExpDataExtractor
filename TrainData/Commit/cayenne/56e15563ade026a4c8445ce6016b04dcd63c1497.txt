@@ -1,0 +1,21 @@
+import org.apache.cayenne.modeler.Application;
+import org.apache.cayenne.modeler.dialog.DbRelationshipDialog;
+
+	public RelationshipUndoableEdit(DbRelationship relationship) {
+		this.relationship = relationship;
+	}
+
+		new DbRelationshipDialog(Application.getInstance().getFrameController().getProjectController())
+				.modifyRaltionship(relationship)
+				.startUp();
+		new DbRelationshipDialog(Application.getInstance().getFrameController().getProjectController())
+				.modifyRaltionship(relationship)
+				.startUp();
+	@Override
+	public boolean isSignificant() {
+    	return true;
+	}
+
+	@Override
+	public boolean canUndo() {
+		return true;

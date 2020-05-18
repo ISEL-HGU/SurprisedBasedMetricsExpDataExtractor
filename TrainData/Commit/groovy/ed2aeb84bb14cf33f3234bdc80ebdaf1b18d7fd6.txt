@@ -1,0 +1,6 @@
+                protected MethodNode addMethod(ClassNode node, boolean shouldBeSynthetic, String name, int modifiers, ClassNode returnType, Parameter[] parameters, ClassNode[] exceptions, Statement code) {
+                    return doAddMethod(new MethodNode(name, modifiers, returnType, parameters, exceptions, code));
+                private MethodNode doAddMethod(MethodNode method) {
+                    if (propertyMethodsWithSigs.containsKey(sig)) return method;
+
+                    return method;

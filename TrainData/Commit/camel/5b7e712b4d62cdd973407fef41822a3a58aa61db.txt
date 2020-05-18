@@ -1,0 +1,11 @@
+import java.util.Set;
+import com.amazonaws.services.sqs.AmazonSQS;
+
+        checkAndSetRegistryClient(configuration);
+    
+    private void checkAndSetRegistryClient(SqsConfiguration configuration) {
+        Set<AmazonSQS> clients = getCamelContext().getRegistry().findByType(AmazonSQS.class);
+        if (clients.size() == 1) {
+            configuration.setAmazonSQSClient(clients.stream().findFirst().get());
+        }
+    }

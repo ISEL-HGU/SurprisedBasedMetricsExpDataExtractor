@@ -1,0 +1,3 @@
+        // configure the common/default options
+        DefaultConfigurationConfigurer.configure(camelContext, config);
+        // additional advanced configuration which is not configured using DefaultConfigurationProperties

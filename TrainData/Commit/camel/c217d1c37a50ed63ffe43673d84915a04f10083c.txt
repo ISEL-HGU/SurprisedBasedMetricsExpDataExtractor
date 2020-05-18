@@ -1,0 +1,8 @@
+    
+    @Override
+    public void doStop() throws Exception {
+        if (awsLambdaClient != null) {
+            awsLambdaClient.shutdown();
+        }
+        super.doStop();
+    }

@@ -1,0 +1,1 @@
+                .detail("aws_kinesis_firehose_exception_message", e.getMessage()).detail(VerificationError.ExceptionAttribute.EXCEPTION_CLASS, e.getClass().getName())

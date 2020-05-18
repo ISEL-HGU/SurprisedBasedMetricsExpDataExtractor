@@ -1,0 +1,4 @@
+
+        // TODO: "validator.validate()" creates an AutoAdapter (which checks for DB type), then  "DbImportAction.execute()"
+        //   does it again. We need to make AutoAdapter a DI singleton to avoid this extra operation
+

@@ -1,0 +1,10 @@
+    public static ClusteredRoutePolicy forNamespace(CamelContext camelContext, String namespace) throws Exception {
+        CamelCluster cluster = camelContext.hasService(CamelCluster.class);
+        if (cluster == null) {
+            throw new IllegalStateException("CamelCluster service not found");
+        }
+
+        return forNamespace(cluster, namespace);
+    }
+
+        return forView(cluster.getView(namespace));

@@ -1,0 +1,16 @@
+                                StaticMethodCallExpression mce = callX(helperClassNode, baseName  fieldNode.getName(), args(varX("this")));
+                                if (helperClassNode.hasPossibleStaticMethod(mce.getMethod(), mce.getArguments())) {
+                                    Statement stmt = stmt(assignX(varX(fieldNode.getName(), fieldNode.getType()), mce));
+                                    if (isStatic == 0) {
+                                        cNode.addObjectInitializerStatements(stmt);
+                                    } else {
+                                        List<Statement> staticStatements = new ArrayList<Statement>();
+                                        staticStatements.add(stmt);
+                                        cNode.addStaticInitializerStatements(staticStatements, true);
+                                    }
+            cNode.addObjectInitializerStatements(new ExpressionStatement(
+                    new MethodCallExpression(
+                            new ClassExpression(helperClassNode),
+                            Traits.INIT_METHOD,
+                            new ArgumentListExpression(new VariableExpression("this")))
+            ));

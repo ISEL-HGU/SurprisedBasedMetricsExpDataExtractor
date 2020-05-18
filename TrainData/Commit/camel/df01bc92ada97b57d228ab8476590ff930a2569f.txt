@@ -1,0 +1,17 @@
+        boolean isEolSet = false;
+        if (!"".equals(factory.getEndOfLine())) {
+            scanner.useDelimiter(factory.getEndOfLine());
+            isEolSet = true;
+        }
+            if (((isEolSet && scanner.hasNext()) || (!isEolSet && scanner.hasNextLine())) && factory.hasHeader()) {
+                String line = getNextNonEmptyLine(scanner, count, isEolSet);
+            String thisLine = getNextNonEmptyLine(scanner, count, isEolSet);
+                nextLine = getNextNonEmptyLine(scanner, count, isEolSet);
+                nextLine = getNextNonEmptyLine(scanner, count, isEolSet);
+    private String getNextNonEmptyLine(Scanner scanner, AtomicInteger count, boolean isEolSet) {
+        while (ObjectHelper.isEmpty(line) && ((isEolSet && scanner.hasNext()) || (!isEolSet && scanner.hasNextLine()))) {
+            if (!isEolSet) {
+                line = scanner.nextLine();
+            } else {
+                line = scanner.next();
+            }

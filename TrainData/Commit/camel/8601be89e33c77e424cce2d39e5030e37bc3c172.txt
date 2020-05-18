@@ -1,0 +1,12 @@
+import javax.xml.xpath.*;
+        XPathExpression parentVersion = xpath.compile("/project/parent/version");
+        setActualVersion(pom, parentVersion);
+
+        XPathExpression projectVersion = xpath.compile("/project/version");
+        setActualVersion(pom, projectVersion);
+
+        return pom;
+    }
+
+    private void setActualVersion(Document pom, XPathExpression path) throws XPathExpressionException {
+        Node node = (Node) path.evaluate(pom, XPathConstants.NODE);

@@ -1,0 +1,1 @@
+            // If connection weight is less than 1 this host is disabled and should not be used.

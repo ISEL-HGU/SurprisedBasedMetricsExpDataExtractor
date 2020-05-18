@@ -1,0 +1,90 @@
+import javax.tools.JavaFileObject;
+import javax.tools.StandardJavaFileManager;
+import javax.tools.ToolProvider;
+import java.nio.charset.Charset;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Set;
+import java.util.stream.Collectors;
+    private final boolean memStubEnabled;
+    private final Charset charset;
+        this.memStubEnabled = config.isMemStubEnabled();
+        this.charset = Charset.forName(config.getSourceEncoding());
+    }
+
+    private int doCompileWithJavac(CompilationUnit cu, String[] javacParameters, StringBuilderWriter javacOutput) throws ClassNotFoundException, InvocationTargetException, IllegalAccessException, NoSuchMethodException {
+        int javacReturnValue = 0;
+
+        Class javac = findJavac(cu);
+        Method method = null;
+        try {
+            method = javac.getMethod("compile", String[].class, PrintWriter.class);
+            PrintWriter writer = new PrintWriter(javacOutput);
+            Object ret = method.invoke(null, javacParameters, writer);
+            javacReturnValue = (Integer) ret;
+        } catch (NoSuchMethodException e) { }
+        if (method == null) {
+            method = javac.getMethod("compile", String[].class);
+            Object ret = method.invoke(null, new Object[]{javacParameters});
+            javacReturnValue = (Integer) ret;
+        }
+
+        return javacReturnValue;
+    }
+
+    private boolean doCompileWithSystemJavaCompiler(CompilationUnit cu, List<String> files, String[] javacParameters, StringBuilderWriter javacOutput) {
+        javax.tools.JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+        StandardJavaFileManager fileManager = compiler.getStandardFileManager(null, null, charset);
+
+        final Set<JavaFileObject> compilationUnitSet = cu.getJavaCompilationUnitSet(); // java stubs already added
+
+        // add java source files to compile
+        fileManager.getJavaFileObjectsFromFiles(
+                files.stream()
+                        .map(File::new)
+                        .collect(Collectors.toList())
+        ).forEach(compilationUnitSet::add);
+
+        javax.tools.JavaCompiler.CompilationTask compilationTask = compiler.getTask(
+                javacOutput,
+                fileManager,
+                null,
+                Arrays.asList(javacParameters),
+                Collections.emptyList(),
+                compilationUnitSet
+        );
+
+        return compilationTask.call();
+        compile(files, cu, memStubEnabled);
+    }
+
+    private void compile(List<String> files, CompilationUnit cu, boolean toCompileStubInMem) {
+        String[] javacParameters = makeParameters(files, cu.getClassLoader(), toCompileStubInMem);
+        StringBuilderWriter javacOutput = new StringBuilderWriter();;
+            if (toCompileStubInMem) {
+                try {
+                    boolean successful = doCompileWithSystemJavaCompiler(cu, files, javacParameters, javacOutput);
+                    if (!successful) {
+                        javacReturnValue = 1;
+                    }
+                } catch (IllegalArgumentException e) {
+                    javacReturnValue = 2; // any of the options are invalid
+                    cu.getErrorCollector().addFatalError(new ExceptionMessage(e, true, cu));
+                }
+            } else {
+                try {
+                    javacReturnValue = doCompileWithJavac(cu, javacParameters, javacOutput);
+                } catch (InvocationTargetException ite) {
+                    cu.getErrorCollector().addFatalError(new ExceptionMessage((Exception) ite.getCause(), true, cu));
+                }
+
+    private String[] makeParameters(List<String> files, GroovyClassLoader parentClassLoader, boolean toCompileStubInMem) {
+
+        if (!toCompileStubInMem) {
+            paras.add("-sourcepath");
+            paras.add(((File) options.get("stubDir")).getAbsolutePath());
+        }
+        if (!toCompileStubInMem) {
+            // files to compile
+            paras.addAll(files);
+        }

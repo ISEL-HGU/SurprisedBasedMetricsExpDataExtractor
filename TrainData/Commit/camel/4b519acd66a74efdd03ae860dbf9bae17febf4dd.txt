@@ -1,0 +1,11 @@
+    private boolean autoReconnect = true;
+    private String userName;
+    private String password;
+    private boolean resolveMqttConnectOptions = true;
+
+
+
+        paho.setHeader(PahoConstants.MQTT_QOS, mqttMessage.getQos());
+     *
+
+     * Client will automatically attempt to reconnect to the server if the connection is lost

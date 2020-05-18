@@ -1,0 +1,74 @@
+            boolean isNestedProperty = isNestedProperty(nestedTypes, javaClassSource);
+            if (isNestedProperty) {
+            // spring-boot auto configuration does not support complex types (unless they are enum, nested)
+            // and if so then we should use a String type so spring-boot and its tooling support that
+            // as Camel will be able to convert the string value into a lookup of the bean in the registry anyway
+            // and therefore there is no problem, eg camel.component.jdbc.data-source = myDataSource
+            // where the type would have been javax.sql.DataSource
+            boolean complex = isComplexType(option) && !isNestedProperty && Strings.isBlank(option.getEnums());
+            if (complex) {
+                // force to use a string type
+                type = "java.lang.String";
+            }
+
+                String desc = option.getDescription();
+                if (complex) {
+                    if (!desc.endsWith(".")) {
+                        desc = desc  ".";
+                    }
+                    desc = desc  " The option is a "  option.getJavaType()  " type.";
+                }
+                prop.getField().getJavaDoc().setFullText(desc);
+    private boolean isComplexType(ComponentOptionModel option) {
+        // all the object types are complex
+        return "object".equals(option.getType());
+    }
+
+    private boolean isComplexType(DataFormatOptionModel option) {
+        // all the object types are complex
+        return "object".equals(option.getType());
+    }
+
+    private boolean isComplexType(LanguageOptionModel option) {
+        // all the object types are complex
+        return "object".equals(option.getType());
+    }
+
+            // spring-boot auto configuration does not support complex types (unless they are enum, nested)
+            // and if so then we should use a String type so spring-boot and its tooling support that
+            // as Camel will be able to convert the string value into a lookup of the bean in the registry anyway
+            // and therefore there is no problem, eg camel.component.jdbc.data-source = myDataSource
+            // where the type would have been javax.sql.DataSource
+            boolean complex = isComplexType(option) && Strings.isBlank(option.getEnumValues());
+            if (complex) {
+                // force to use a string type
+                type = "java.lang.String";
+            }
+
+                String desc = option.getDescription();
+                if (complex) {
+                    if (!desc.endsWith(".")) {
+                        desc = desc  ".";
+                    }
+                    desc = desc  " The option is a "  option.getJavaType()  " type.";
+                }
+                prop.getField().getJavaDoc().setFullText(desc);
+            // spring-boot auto configuration does not support complex types (unless they are enum, nested)
+            // and if so then we should use a String type so spring-boot and its tooling support that
+            // as Camel will be able to convert the string value into a lookup of the bean in the registry anyway
+            // and therefore there is no problem, eg camel.component.jdbc.data-source = myDataSource
+            // where the type would have been javax.sql.DataSource
+            boolean complex = isComplexType(option) && Strings.isBlank(option.getEnumValues());
+            if (complex) {
+                // force to use a string type
+                type = "java.lang.String";
+            }
+
+                String desc = option.getDescription();
+                if (complex) {
+                    if (!desc.endsWith(".")) {
+                        desc = desc  ".";
+                    }
+                    desc = desc  " The option is a "  option.getJavaType()  " type.";
+                }
+                prop.getField().getJavaDoc().setFullText(desc);

@@ -1,0 +1,8 @@
+    @Override
+    @Override
+    @Override
+    @Override
+    @Override
+    public void bind(String id, Object bean) {
+        put(id, bean);
+    }

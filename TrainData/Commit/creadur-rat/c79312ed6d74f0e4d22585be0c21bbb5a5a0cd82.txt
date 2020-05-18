@@ -1,0 +1,2 @@
+    public static final String FIRST_LICENSE_LINE_SHORT = "Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements; and to You under the Apache License, Version 2.0.";
+                "", new String[]{FIRST_LICENSE_LINE, FIRST_LICENSE_LINE_SHORT, LICENSE_REFERENCE_LINE, });

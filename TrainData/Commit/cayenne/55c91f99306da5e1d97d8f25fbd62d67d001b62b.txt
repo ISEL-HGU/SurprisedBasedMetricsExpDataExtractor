@@ -1,0 +1,2 @@
+            if(reverseRelationship != null && !reverseRelationship.isToPK()) {
+                        "ObjRelationship '%s' has join not to PK. Cayenne doesn't allow this type of relationship",

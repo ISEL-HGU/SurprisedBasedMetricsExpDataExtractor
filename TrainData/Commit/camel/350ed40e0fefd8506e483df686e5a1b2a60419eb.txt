@@ -1,0 +1,14 @@
+    private int maxNumberOfHits;
+
+
+        }
+
+        exchange.getIn().setBody(hits);
+
+
+    public int getTotalHitsThreshold() {
+        return totalHitsThreshold;
+    }
+    public void setTotalHitsThreshold(int totalHitsThreshold) {
+        this.totalHitsThreshold = totalHitsThreshold;
+    }

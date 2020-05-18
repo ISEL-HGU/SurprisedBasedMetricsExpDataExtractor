@@ -1,0 +1,9 @@
+import org.apache.cayenne.swing.components.LimitedJTextField;
+        TableColumn lengthColumn = table.getColumnModel().getColumn(model.lengthColumnId());
+        LimitedJTextField limitedLengthField = new LimitedJTextField(10);
+        lengthColumn.setCellEditor(Application.getWidgetFactory().createCellEditor(limitedLengthField));
+
+        TableColumn scaleColumn = table.getColumnModel().getColumn(model.scaleColumnId());
+        LimitedJTextField limitedScaleField = new LimitedJTextField(10);
+        scaleColumn.setCellEditor(Application.getWidgetFactory().createCellEditor(limitedScaleField));
+

@@ -1,0 +1,1 @@
+        /* currently incompatible */ "camel-spark-rest",

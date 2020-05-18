@@ -1,0 +1,1 @@
+ *     <tt>property.xxx</tt> to use the Date object in the exchange property.

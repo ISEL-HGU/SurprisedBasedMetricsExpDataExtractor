@@ -1,0 +1,8 @@
+import org.apache.camel.support.jndi.JndiBeanRepository;
+ *
+ * @deprecated use {@link JndiBeanRepository} instead.
+@Deprecated
+public class JndiRegistry extends JndiBeanRepository implements Registry {
+        super();
+        super(environment);
+        super(context);

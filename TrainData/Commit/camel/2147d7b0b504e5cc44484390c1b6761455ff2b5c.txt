@@ -1,0 +1,6 @@
+        
+        if(getEndpoint().isIgnoreContentLengthHeader()) {
+            exchange.setProperty(Exchange.IGNORE_CONTENT_LENGTH_HEADER, Boolean.TRUE);
+        }
+                        if (exchange.getProperty(Exchange.IGNORE_CONTENT_LENGTH_HEADER, Boolean.FALSE, Boolean.class) ||
+                                ObjectHelper.isEmpty(length)) {

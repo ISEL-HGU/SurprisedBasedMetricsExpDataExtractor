@@ -1,0 +1,2 @@
+            blobBlocks = (List<BlobBlock>) object;
+            blockEntries = (List<BlockEntry>) object;

@@ -1,0 +1,9 @@
+import java.lang.reflect.Modifier;
+    /**
+     * Detect whether a given ClassNode is a inner class (non-static).
+     *
+     * @param currentClass the ClassNode of interest
+     * @return true if the given node is a (non-static) inner class, else false
+     */
+        return currentClass.redirect().getOuterClass() != null
+                && !Modifier.isStatic(currentClass.getModifiers());

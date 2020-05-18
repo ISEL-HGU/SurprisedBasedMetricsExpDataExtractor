@@ -1,0 +1,15 @@
+import org.apache.camel.util.ReferenceCount;
+    private final ReferenceCount refCount;
+        this.cacheManager = ObjectHelper.notNull(cacheManager, "cacheManager");
+        this.refCount = ReferenceCount.on(
+            managed ? cacheManager::init : () -> { },
+            managed ? cacheManager::close : () -> { }
+        );
+        refCount.retain();
+        refCount.release();
+                cache = Cache.class.cast(userCaches.computeIfAbsent(
+                ));
+
+    ReferenceCount getReferenceCount() {
+        return refCount;
+    }

@@ -1,0 +1,6 @@
+import org.apache.cxf.helpers.BaseNamespaceHandler;
+public class CxfNamespaceHandler extends BaseNamespaceHandler {
+        if ("http://camel.apache.org/schema/blueprint/cxf".equals(s)) {
+            return getClass().getClassLoader().getResource("schema/blueprint/camel-cxf.xsd");
+        }
+        return super.findCoreSchemaLocation(s);

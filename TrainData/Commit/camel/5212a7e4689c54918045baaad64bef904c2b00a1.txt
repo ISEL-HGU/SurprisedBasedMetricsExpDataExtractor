@@ -1,0 +1,34 @@
+import org.xml.sax.ErrorHandler;
+import org.xml.sax.SAXParseException;
+    private static final ErrorHandler DOCUMENT_BUILDER_LOGGING_ERROR_HANDLER = new DocumentBuilderLoggingErrorHandler();
+        DocumentBuilder builder = createDocumentBuilder(getDocumentBuilderFactory(exchange));
+        DocumentBuilder builder = createDocumentBuilder(getDocumentBuilderFactory(exchange));
+        DocumentBuilder documentBuilder = createDocumentBuilder(getDocumentBuilderFactory(exchange));
+        DocumentBuilder documentBuilder = createDocumentBuilder(getDocumentBuilderFactory(exchange));
+        DocumentBuilder documentBuilder = createDocumentBuilder(getDocumentBuilderFactory(exchange));
+        DocumentBuilder documentBuilder = createDocumentBuilder(getDocumentBuilderFactory(exchange));
+        return createDocumentBuilder(getDocumentBuilderFactory());
+    }
+
+    public DocumentBuilder createDocumentBuilder(DocumentBuilderFactory factory) throws ParserConfigurationException {
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        builder.setErrorHandler(DOCUMENT_BUILDER_LOGGING_ERROR_HANDLER);
+        return builder;
+
+    private static class DocumentBuilderLoggingErrorHandler implements ErrorHandler {
+
+        @Override
+        public void warning(SAXParseException exception) throws SAXException {
+            LOG.warn(exception.getMessage(), exception);
+        }
+
+        @Override
+        public void error(SAXParseException exception) throws SAXException {
+            LOG.error(exception.getMessage(), exception);
+        }
+
+        @Override
+        public void fatalError(SAXParseException exception) throws SAXException {
+            LOG.error(exception.getMessage(), exception);
+        }
+    }

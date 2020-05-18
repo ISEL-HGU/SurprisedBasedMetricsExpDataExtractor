@@ -1,0 +1,13 @@
+import com.github.benmanes.caffeine.cache.stats.StatsCounter;
+        /**
+         * Set a specific Stats Counter for the cache stats
+         */
+        private StatsCounter statsCounter;
+
+        public StatsCounter getStatsCounter() {
+            return statsCounter;
+        }
+
+        public void setStatsCounter(StatsCounter statsCounter) {
+            this.statsCounter = statsCounter;
+        }

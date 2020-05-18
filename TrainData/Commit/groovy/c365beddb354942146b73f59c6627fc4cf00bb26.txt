@@ -1,0 +1,6 @@
+            try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+                PrintWriter writer = new PrintWriter(System.out);
+                writer.flush();
+            try(BufferedReader reader = new BufferedReader(new FileReader(file))) {
+                PrintWriter writer = new PrintWriter(System.out);
+                writer.flush();

@@ -1,0 +1,9 @@
+@UriEndpoint(firstVersion = "2.22.0",
+             scheme = "google-mail-stream",
+             title = "Google Mail Stream",
+             syntax = "google-mail-stream:index",
+    public Exchange createExchange(ExchangePattern pattern, com.google.api.services.gmail.model.Message mail) {
+        Exchange exchange = super.createExchange(pattern);
+            byte[] bodyBytes = Base64.decodeBase64(parts.get(0).getBody().getData().trim());
+
+    private List<String> splitLabels(String labels) {

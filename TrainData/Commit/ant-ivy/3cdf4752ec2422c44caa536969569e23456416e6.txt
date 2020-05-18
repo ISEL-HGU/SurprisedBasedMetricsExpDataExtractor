@@ -1,0 +1,7 @@
+    /**
+     * The namespace URI which is used to refer to Maven (pom) specific elements within a
+     * Ivy module descriptor file (ivy.xml)
+     */
+    private static final String IVY_XML_MAVEN_NAMESPACE_URI = "http://ant.apache.org/ivy/maven";
+
+        ivyModuleDescriptor.addExtraAttributeNamespace("m", IVY_XML_MAVEN_NAMESPACE_URI);

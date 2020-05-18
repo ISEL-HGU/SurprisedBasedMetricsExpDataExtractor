@@ -1,0 +1,5 @@
+import org.apache.camel.CamelContext;
+        CamelContext camelContext = routeContext.getCamelContext();
+
+        return camelContext.getBeanProcessorFactory().createBeanProcessor(camelContext,
+                bean, beanType, beanClass, ref, method, isCacheBean());

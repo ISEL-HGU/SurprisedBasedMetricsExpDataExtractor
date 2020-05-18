@@ -1,0 +1,7 @@
+ * A factory of parser plugin instances.
+     * Creates the ANTLR 4 parser.
+     *
+     * Previously, created the ANTLR 2.7 parser, now throws an exception.
+     * @throws UnsupportedOperationException always
+    public static ParserPluginFactory antlr2() {
+        throw new UnsupportedOperationException("The Antlr2-based parser is no longer supported");

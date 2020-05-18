@@ -1,0 +1,10 @@
+import org.apache.camel.spring.boot.util.GroupCondition;
+    // *******************************
+    // Condition
+    // *******************************
+    public static class Condition extends GroupCondition {
+        public Condition() {
+            super(
+                "camel.cloud",
+                "camel.cloud.ribbon"
+            );

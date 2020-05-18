@@ -1,0 +1,6 @@
+            setProperty(expression, "useSaxon", true);
+            setProperty(expression, "logNamespaces", true);
+            setProperty(expression, "headerName", getHeaderName());
+            setProperty(predicate, "useSaxon", true);
+            setProperty(predicate, "logNamespaces", true);
+            setProperty(predicate, "headerName", getHeaderName());

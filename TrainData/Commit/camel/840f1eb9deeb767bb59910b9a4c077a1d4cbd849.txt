@@ -1,0 +1,11 @@
+    private CachedCxfPayload(CachedCxfPayload<T> orig, Exchange exchange) throws IOException {
+        super(orig.getHeaders(), new ArrayList<>(orig.getBodySources()), orig.getNsMap());
+        ListIterator<Source> li = getBodySources().listIterator();
+        while (li.hasNext()) {
+            Source source = li.next();
+            if (source instanceof StreamCache) {
+                li.set((Source) (((StreamCache) source)).copy(exchange));
+            }
+        }
+    }
+

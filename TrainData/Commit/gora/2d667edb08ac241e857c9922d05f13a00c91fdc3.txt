@@ -1,0 +1,95 @@
+import com.aerospike.client.query.RecordSet;
+import com.aerospike.client.query.Statement;
+import org.apache.gora.aerospike.query.AerospikeQuery;
+import org.apache.gora.aerospike.query.AerospikeQueryResult;
+import org.apache.gora.aerospike.query.AerospikeResultRecord;
+    // 'SendKey' property is enabled by default as the key is needed in query execution
+    policy.readPolicyDefault.sendKey = true;
+    policy.writePolicyDefault.sendKey = true;
+
+    aerospikeClient = new AerospikeClient(policy, aerospikeParameters.getHost(),
+  /**
+   * {@inheritDoc}
+   *
+   * @param query the query to execute.
+   * @return the query result
+   */
+
+    List<AerospikeResultRecord> resultRecords = new ArrayList<>();
+    String namespace = aerospikeParameters.getAerospikeMapping().getNamespace();
+    String set = aerospikeParameters.getAerospikeMapping().getSet();
+
+    // Query execution without any keys
+    if (query.getStartKey() == null && query.getEndKey() == null){
+
+      try (RecordSet recordSet = aerospikeClient.query(null, getStatement(namespace, set))) {
+        while (recordSet.next()) {
+          AerospikeResultRecord aerospikeRecord = new AerospikeResultRecord(recordSet.getKey(),
+                  recordSet.getRecord());
+          resultRecords.add(aerospikeRecord);
+        }
+      }
+    }
+
+    // Query execution for single key
+    else if (query.getKey()!= null) {
+      Key key = getAerospikeKey(query.getKey());
+      Record record = aerospikeClient.get(null, key);
+      if(record != null){
+        resultRecords.add(new AerospikeResultRecord(key, record));
+      }
+    }
+
+    // Query execution for key ranges
+    // ToDo: Implement for other scenarios
+    else if (query.getStartKey() != null && query.getEndKey() != null) {
+//      Key startKey = null, endKey = null;
+//      if (query.getStartKey() != null) {
+//        startKey = getAerospikeKey(query.getStartKey());
+//      }
+//      if (query.getEndKey() != null) {
+//        endKey = getAerospikeKey(query.getEndKey());
+//      }
+
+//      boolean isSpecifiedRange = false;
+//      try (RecordSet recordSet = aerospikeClient.query(null, getStatement(namespace, set))) {
+//        while (recordSet.next()) {
+//          Key key = recordSet.getKey();
+//          Record record = recordSet.getRecord();
+//
+//          if(key.userKey == getAerospikeKey(query.getStartKey()).userKey){
+//            isSpecifiedRange = true;
+//          }
+//          if(key.userKey == getAerospikeKey(query.getEndKey()).userKey){
+//            isSpecifiedRange = false;
+//          }
+//
+//          if(isSpecifiedRange){
+//            AerospikeResultRecord aerospikeRecord = new AerospikeResultRecord(key,record);
+//            resultRecords.add(aerospikeRecord);
+//          }
+//
+//        }
+      }
+
+    return new AerospikeQueryResult<>(this, query, resultRecords, getFieldsToQuery(null));
+  /**
+   * {@inheritDoc}
+   *
+   * @return the new query corresponding to aerospike
+   */
+    return new AerospikeQuery<>(this);
+   * Method to create a statement
+   *
+   * @param namespace the namespace
+   * @param set       the set
+   * @return the statement
+   */
+  private Statement getStatement(String namespace, String set){
+    Statement stmt = new Statement();
+    stmt.setNamespace(namespace);
+    stmt.setSetName(set);
+    return stmt;
+  }
+  /**
+  public T createPersistentInstance(Record record, String[] fields) {

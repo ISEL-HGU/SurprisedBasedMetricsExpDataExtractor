@@ -1,0 +1,2 @@
+            fromF("service:my-service:undertow:http://localhost:%d/path/to/service/1", SocketUtils.findAvailableTcpPort())
+            fromF("service:my-service:undertow:http://localhost:%d/path/to/service/2", SocketUtils.findAvailableTcpPort())

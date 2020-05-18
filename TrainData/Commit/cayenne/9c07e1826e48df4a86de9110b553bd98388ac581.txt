@@ -1,0 +1,6 @@
+    static final String JOINT_PREFETCH_SEMANTICS = "Joint";
+    static final String DISJOINT_PREFETCH_SEMANTICS = "Disjoint";
+    static final String DISJOINT_BY_ID_PREFETCH_SEMANTICS = "Disjoint by id";
+    static final String UNDEFINED_SEMANTICS = "Undefined semantics";
+        return new PrefetchModel(selectQuery.getPrefetchesMap(), selectQuery.getRoot());
+        selectQuery.addPrefetch(prefetch, PrefetchModel.getPrefetchType(DISJOINT_PREFETCH_SEMANTICS));

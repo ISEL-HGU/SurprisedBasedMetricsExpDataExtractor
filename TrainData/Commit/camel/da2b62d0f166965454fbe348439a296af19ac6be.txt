@@ -1,0 +1,8 @@
+    private final DelayQueue<ThrottlePermit> delayQueue = new DelayQueue<>();
+                     final ExecutorService asyncExecutor, final boolean shutdownAsyncExecutor, final boolean rejectExecution) {
+            calculateAndSetMaxRequestsPerPeriod(exchange);
+                    enqueuePermit(permit, exchange);
+                enqueuePermit(permit, exchange);
+    protected void enqueuePermit(final ThrottlePermit permit, final Exchange exchange) {
+        delayQueue.put(permit);
+    protected void calculateAndSetMaxRequestsPerPeriod(final Exchange exchange) throws Exception {

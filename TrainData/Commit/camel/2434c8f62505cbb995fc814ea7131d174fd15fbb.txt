@@ -1,0 +1,11 @@
+    // camel-jms supports this setting but it is not currently configurable in camel-rabbitmq
+    // camel-jms supports this setting but it is not currently configurable in camel-rabbitmq
+    // camel-jms supports this setting but it is not currently configurable in camel-rabbitmq
+    public RabbitMQEndpoint(String endpointUri, RabbitMQComponent component) {
+    public RabbitMQEndpoint(String endpointUri, RabbitMQComponent component, ConnectionFactory connectionFactory) {
+    @Deprecated
+     * @deprecated Use args instead e.g arg.queue.x-message-ttl=1000
+    @Deprecated
+    @Deprecated
+     * @deprecated Use args instead e.g arg.exchange.x-message-ttl=1000
+    @Deprecated

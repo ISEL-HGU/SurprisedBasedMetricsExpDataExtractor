@@ -1,0 +1,6 @@
+import org.apache.camel.model.InterceptDefinition;
+import org.apache.camel.model.InterceptSendToEndpointDefinition;
+                        CatchDefinition doCatch = (CatchDefinition) def;
+                        if (doCatch.getOnWhen() != null) {
+                            findLanguage(doCatch.getOnWhen().getExpression(), languages);
+                        }

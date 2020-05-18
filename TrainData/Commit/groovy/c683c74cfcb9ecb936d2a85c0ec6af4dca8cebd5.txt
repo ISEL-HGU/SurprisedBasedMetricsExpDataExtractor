@@ -1,0 +1,1 @@
+                modifiers |= !modifierManager.contains(STATIC) && (classNode.isInterface() || (isTrue(classNode, IS_INTERFACE_WITH_DEFAULT_METHODS) && !modifierManager.contains(DEFAULT))) ? Opcodes.ACC_ABSTRACT : 0;

@@ -1,0 +1,2 @@
+        // TODO consider moving initcode to <clinit> and remaking field final
+                Opcodes.ACC_PRIVATE | Opcodes.ACC_STATIC | Opcodes.ACC_SYNTHETIC,

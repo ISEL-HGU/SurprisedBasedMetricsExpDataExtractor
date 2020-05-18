@@ -1,0 +1,9 @@
+
+    @Deprecated
+    public GuacamoleTunnel connect(GuacamoleClientInformation info)
+            throws GuacamoleException {
+        throw new GuacamoleSecurityException("Permission denied.");
+    }
+
+    @Override
+        return connect(info);

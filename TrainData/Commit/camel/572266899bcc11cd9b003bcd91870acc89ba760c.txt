@@ -1,0 +1,9 @@
+        exchange.getIn().setHeaders(headers);
+        if (exchange.hasOut()) {
+            responseObserver.onNext(exchange.getOut().getBody());
+        } else {
+            responseObserver.onNext(exchange.getIn().getBody());
+        }
+        responseObserver.onCompleted();
+        exchange.getIn().setHeaders(headers);
+        exchange.getIn().setHeaders(headers);

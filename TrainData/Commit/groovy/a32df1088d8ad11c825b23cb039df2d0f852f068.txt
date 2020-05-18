@@ -1,0 +1,1 @@
+                    return Long.valueOf(value.longValue());

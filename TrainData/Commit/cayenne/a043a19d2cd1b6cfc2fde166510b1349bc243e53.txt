@@ -1,0 +1,3 @@
+	private List<Class<?>> resultColumnsTypes;
+	public List<Class<?>> getResultColumnsTypes() {
+	public void setResultColumnsTypes(List<Class<?>> resultColumnsTypes) {

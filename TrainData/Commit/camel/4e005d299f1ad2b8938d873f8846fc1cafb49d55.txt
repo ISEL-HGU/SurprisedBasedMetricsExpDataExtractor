@@ -1,0 +1,1 @@
+        syntax = "jetty:httpUri", label = "http", consumerOnly = true, lenientProperties = true,

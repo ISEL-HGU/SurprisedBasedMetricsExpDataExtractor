@@ -1,0 +1,2 @@
+        Collection<T> result = createSimilarCollection(left, Math.min(left.size(), right.size()));
+        Collection<T> pickFrom = new TreeSet<>(new NumberAwareComparator<>());

@@ -1,0 +1,13 @@
+import org.apache.camel.support.SynchronizationAdapter;
+        } else {
+            if (configuration.isAutocloseBody()) {
+                exchange.addOnCompletion(new SynchronizationAdapter() {
+                    @Override
+                    public void onDone(Exchange exchange) {
+                        try {
+                            s3Object.close();
+                        } catch (IOException e) {
+                        }
+                    }
+                });
+            }

@@ -1,0 +1,6 @@
+                long elapsed = history.getElapsed();
+                if (elapsed == 0 && history.getTime() > 0) {
+                    // still in progress, so lets compute it via the start time
+                    elapsed = System.currentTimeMillis() - history.getTime();
+                }
+                return elapsed;

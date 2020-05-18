@@ -1,0 +1,4 @@
+    private static final int DEFAULT_CACHE_THRESHOLD = 100;
+        int t = DEFAULT_CACHE_THRESHOLD;
+            // cache threshold should be at least DEFAULT_CACHE_THRESHOLD for better performance
+            t = t < DEFAULT_CACHE_THRESHOLD ? DEFAULT_CACHE_THRESHOLD : t;

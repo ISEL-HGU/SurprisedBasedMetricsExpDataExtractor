@@ -1,0 +1,2 @@
+        if (NUMBER_TYPES.containsKey(type.redirect()) && NUMBER_TYPES.containsKey(toBeAssignedTo.redirect())) {
+            return NUMBER_TYPES.get(type.redirect()) <= NUMBER_TYPES.get(toBeAssignedTo.redirect());

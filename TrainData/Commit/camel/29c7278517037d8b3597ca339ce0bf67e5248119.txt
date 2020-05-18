@@ -1,0 +1,2 @@
+        Map<String, ?> params;
+            params = exchange.getIn().getHeader(JpaConstants.JPA_PARAMETERS_HEADER, Map.class);

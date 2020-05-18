@@ -1,0 +1,33 @@
+import org.codehaus.groovy.ast.expr.ArgumentListExpression;
+    private final Map<ClassNode, ClassNode> possibleOuterClassNodeMap = new HashMap<>();
+        // GROOVY-8947: Fail to resolve non-static inner class outside of outer class
+        ClassNode possibleOuterClassNode = possibleOuterClassNodeMap.get(type);
+        if (null != possibleOuterClassNode) {
+            if (setRedirect(type, possibleOuterClassNode)) return true;
+        }
+
+        findPossibleOuterClassNodeForNonStaticInnerClassInstantiation(cce);
+
+    private void findPossibleOuterClassNodeForNonStaticInnerClassInstantiation(ConstructorCallExpression cce) {
+        // GROOVY-8947: Fail to resolve non-static inner class outside of outer class
+        // `new Computer().new Cpu(4)` will be parsed to `new Cpu(new Computer(), 4)`
+        // so non-static inner class instantiation expression's first argument is a constructor call of outer class
+        // but the first argument is constructor call can not be non-static inner class instantiation expression, e.g.
+        // `new HashSet(new ArrayList())`, so we add "possible" to the variable name
+        Expression argumentExpression = cce.getArguments();
+        if (argumentExpression instanceof ArgumentListExpression) {
+            ArgumentListExpression argumentListExpression = (ArgumentListExpression) argumentExpression;
+            List<Expression> expressionList = argumentListExpression.getExpressions();
+            if (!expressionList.isEmpty()) {
+                Expression firstExpression = expressionList.get(0);
+
+                if (firstExpression instanceof ConstructorCallExpression) {
+                    ConstructorCallExpression constructorCallExpression = (ConstructorCallExpression) firstExpression;
+                    ClassNode possibleOuterClassNode = constructorCallExpression.getType();
+                    possibleOuterClassNodeMap.put(cce.getType(), possibleOuterClassNode);
+                }
+            }
+        }
+    }
+
+

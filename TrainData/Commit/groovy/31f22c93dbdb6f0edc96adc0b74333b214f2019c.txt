@@ -1,0 +1,5 @@
+        if (startTokenIndex <= stopTokenIndex) {
+            return tokenList.subList(startTokenIndex, stopTokenIndex);
+        }
+
+        return Collections.emptyList();

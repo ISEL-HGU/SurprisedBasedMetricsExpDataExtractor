@@ -1,0 +1,6 @@
+    protected void doStop() throws Exception {
+        lumberjackServer.stop();
+        super.doStop();
+    }
+
+    @Override

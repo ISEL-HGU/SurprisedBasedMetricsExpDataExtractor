@@ -1,0 +1,6 @@
+import java.util.Objects;
+    @SuppressWarnings("unchecked")
+        int size = size();
+        if (size != that.size()) return false;
+        for (int i = 0; i < size; i) {
+        return Objects.hash(contents);

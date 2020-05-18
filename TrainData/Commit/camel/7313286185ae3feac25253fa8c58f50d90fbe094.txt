@@ -1,0 +1,18 @@
+import org.optaplanner.core.api.domain.solution.PlanningSolution;
+            executor = endpoint.getCamelContext().getExecutorServiceManager().newFixedThreadPool(this, endpoint.getEndpointUri(), configuration.getThreadPoolSize());
+    @SuppressWarnings("unchecked")
+        /*
+         * Keep for backward compatibility untill optaplanner version 8.0.0 not
+         * released After that the code '|| body instanceof Solution' need to be
+         * removed
+         */
+        if (body.getClass().isAnnotationPresent(PlanningSolution.class) || body instanceof Solution) {
+                final Solver<Object> solver = endpoint.getOrCreateSolver(solverId);
+                            solver.solve(body);
+                Solver<Object> solver = endpoint.getSolver(solverId);
+                solver.solve(body);
+            Solver<Object> solver = endpoint.getOrCreateSolver(solverId);
+            solver.addProblemFactChange((ProblemFactChange<Object>)body);
+                    Thread.sleep(OptaPlannerConstants.IS_EVERY_PROBLEM_FACT_CHANGE_DELAY);
+            Solver<Object> solver = endpoint.getSolver(solverId);
+    private void populateResult(Exchange exchange, Solver<Object> solver) {

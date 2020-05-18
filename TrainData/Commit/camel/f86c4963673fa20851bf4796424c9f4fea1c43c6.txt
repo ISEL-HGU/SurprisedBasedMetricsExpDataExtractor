@@ -1,0 +1,11 @@
+import org.apache.http.HttpResponse;
+    public static <T> T getEntity(HttpMessage message, Class<T> type) {
+        Args.notNull(message, "message");
+        Args.notNull(type, "type");
+        if (message instanceof HttpEntityEnclosingRequest) {
+            HttpEntity entity = ((HttpEntityEnclosingRequest)message).getEntity();
+        } else if (message instanceof HttpResponse) {
+            HttpEntity entity = ((HttpResponse)message).getEntity();
+            if (entity != null && type.isInstance(entity)) {
+                type.cast(entity);
+            }

@@ -1,0 +1,1 @@
+        return "MethodNode@"  hashCode()  "["  getDeclaringClass().getName()  "#"  getTypeDescriptor()  "]";

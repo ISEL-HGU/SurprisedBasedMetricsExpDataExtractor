@@ -1,0 +1,4 @@
+        parentClass.addImport("org.springframework.boot.context.properties.bind.Bindable");
+        parentClass.addImport("org.springframework.boot.context.properties.bind.Binder");
+            .append("String property = prefix.endsWith(\".\") ? prefix  \"enabled\" : prefix  \".enabled\";\n")
+            .append("return Binder.get(context.getEnvironment()).bind(property, Bindable.of(Boolean.class)).orElse(defaultValue);")

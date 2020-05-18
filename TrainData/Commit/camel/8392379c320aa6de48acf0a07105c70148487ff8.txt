@@ -1,0 +1,5 @@
+    private final Method getProtocolHandlersMethod;
+
+
+            getProtocolHandlersMethod = HttpClient.class.getMethod("getProtocolHandlers");
+        final Object protocolHandlers = getProtocolHandlersMethod.invoke(this);

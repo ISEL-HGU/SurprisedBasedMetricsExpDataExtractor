@@ -1,0 +1,56 @@
+    private With_External_Id__c_Lookup External__c_Lookup;
+    public With_External_Id__c_Lookup getExternal__c_Lookup() {
+        return this.External__c_Lookup;
+    public void setExternal__c(With_External_Id__c_Lookup External__c_Lookup) {
+        this.External__c_Lookup = External__c_Lookup;
+        description.setActivateable(false);
+        description.setCreateable(true);
+        description.setCustom(true);
+        description.setCustomSetting(false);
+        description.setDeletable(true);
+        description.setDeprecatedAndHidden(false);
+        description.setFeedEnabled(false);
+        description.setKeyPrefix("a04");
+        description.setLabel("With Reference");
+        description.setLayoutable(true);
+        description.setMergeable(false);
+        description.setMruEnabled(false);
+        description.setName("With_Reference__c");
+        description.setQueryable(true);
+
+        final List<RecordTypeInfo> recordTypeInfos1 = new ArrayList<>();
+        description.setRecordTypeInfos(recordTypeInfos1);
+
+        final RecordTypeInfo recordTypeInfo1 = new RecordTypeInfo();
+        recordTypeInfos1.add(recordTypeInfo1);
+
+        recordTypeInfo1.setAvailable(true);
+        recordTypeInfo1.setDefaultRecordTypeMapping(true);
+        recordTypeInfo1.setName("Master");
+        recordTypeInfo1.setRecordTypeId("012000000000000AAA");
+
+        final InfoUrls infoUrls1 = new InfoUrls();
+        infoUrls1.setLayout("/services/data/v42.0/sobjects/With_Reference__c/describe/layouts/012000000000000AAA");
+        recordTypeInfo1.setUrls(infoUrls1);
+
+
+        description.setReplicateable(true);
+        description.setRetrieveable(true);
+        description.setSearchLayoutable("false");
+        description.setSearchable(false);
+        description.setTriggerable(true);
+        description.setUndeletable(true);
+
+        final SObjectDescriptionUrls sObjectDescriptionUrls1 = new SObjectDescriptionUrls();
+        sObjectDescriptionUrls1.setApprovalLayouts("/services/data/v42.0/sobjects/With_Reference__c/describe/approvalLayouts");
+        sObjectDescriptionUrls1.setCompactLayouts("/services/data/v42.0/sobjects/With_Reference__c/describe/compactLayouts");
+        sObjectDescriptionUrls1.setDefaultValues("/services/data/v42.0/sobjects/With_Reference__c/defaultValues?recordTypeId&fields");
+        sObjectDescriptionUrls1.setDescribe("/services/data/v42.0/sobjects/With_Reference__c/describe");
+        sObjectDescriptionUrls1.setLayouts("/services/data/v42.0/sobjects/With_Reference__c/describe/layouts");
+        sObjectDescriptionUrls1.setQuickActions("/services/data/v42.0/sobjects/With_Reference__c/quickActions");
+        sObjectDescriptionUrls1.setRowTemplate("/services/data/v42.0/sobjects/With_Reference__c/{ID}");
+        sObjectDescriptionUrls1.setSobject("/services/data/v42.0/sobjects/With_Reference__c");
+        sObjectDescriptionUrls1.setUiDetailTemplate("https://eu11.salesforce.com/{ID}");
+        sObjectDescriptionUrls1.setUiEditTemplate("https://eu11.salesforce.com/{ID}/e");
+        sObjectDescriptionUrls1.setUiNewRecord("https://eu11.salesforce.com/a04/e");
+        description.setUrls(sObjectDescriptionUrls1);

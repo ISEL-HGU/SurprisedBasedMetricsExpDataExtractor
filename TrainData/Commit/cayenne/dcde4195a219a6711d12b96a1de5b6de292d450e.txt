@@ -1,0 +1,8 @@
+                // build path without last segment
+                StringBuilder path = new StringBuilder();
+                for(int i=0; i<relationship.getDbRelationships().size() - 1; i) {
+                    if(path.length() > 0) {
+                        path.append('.');
+                    }
+                    path.append(relationship.getDbRelationships().get(i).getName());
+                if(!parent.getContext().getObjectStore().hasFlattenedPath(nodeObjectId, path.toString())) {

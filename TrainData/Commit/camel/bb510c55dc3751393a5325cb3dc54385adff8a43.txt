@@ -1,0 +1,2 @@
+import org.influxdb.impl.InfluxDBImpl;
+        InfluxDB mockedDbConnection = mock(InfluxDBImpl.class);

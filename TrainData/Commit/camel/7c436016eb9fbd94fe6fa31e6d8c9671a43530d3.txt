@@ -1,0 +1,4 @@
+        if (ObjectHelper.isEmpty(configuration.getAmazonDynamoDbStreamsClient())) {
+            if (ddbStreamClient != null) {
+                ddbStreamClient.shutdown();
+            }

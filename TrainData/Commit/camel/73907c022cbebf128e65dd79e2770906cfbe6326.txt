@@ -1,0 +1,72 @@
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * To allow defining very easy jsonpath predicates using the syntax: left OP right
+ * <p/>
+ * The easy parser is only in use if the predicate do not start with the <tt>$</tt> sign which is used by jsonpath.
+ * The parser is intended for predicates only.
+ */
+    /**
+     * Parses the predicate
+     *
+     * @param predicate the predicate
+     * @return the parsed predicate or the original predicate if easy parser did not kick-in
+     */
+    public String parse(String predicate) {
+
+        if (predicate.startsWith("$")) {
+            return predicate;
+        if (!hasOperator(predicate)) {
+            return predicate;
+        String[] parts = tokens(predicate);
+                String before;
+                String after;
+                if (pos == -1) {
+                    before = "..*";
+                    after = prev;
+                } else {
+                    before = prev.substring(0, pos);
+                    after = prev.substring(pos  1);
+                }
+        return predicate;
+    }
+
+    /**
+     * Splits the predicate into: left OP right
+     *
+     * @param predicate the predicate
+     * @return the splitted parts
+     */
+    private static String[] tokens(String predicate) {
+        List<String> list = new ArrayList<>();
+
+        StringBuilder part = new StringBuilder();
+        for (int i = 0; i < predicate.length(); i) {
+
+            // is there a new operator
+            String s = predicate.substring(i);
+            String op = EasyPredicateOperators.getOperatorAtStart(s);
+            if (op != null) {
+                if (part.length() > 0) {
+                    list.add(part.toString());
+                    part.setLength(0);
+                }
+                list.add(op.trim());
+                // move i ahead
+                i = i  op.length()  1;
+            } else {
+                char ch = predicate.charAt(i);
+                part.append(ch);
+            }
+        }
+
+        // ant leftovers
+        if (part.length() > 0) {
+            list.add(part.toString());
+        }
+
+        return list.toArray(new String[list.size()]);

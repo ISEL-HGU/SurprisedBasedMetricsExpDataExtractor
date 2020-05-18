@@ -1,0 +1,3 @@
+        if (exchange.getIn().getHeader("setin") != null && exchange.getIn().getHeader("setin").equals("true")) {
+        } else {
+            exchange.getOut().setBody(doc);

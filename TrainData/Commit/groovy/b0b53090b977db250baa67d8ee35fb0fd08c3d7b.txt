@@ -1,0 +1,1 @@
+            if (oldClass == null || isSourceNewer(source, oldClass)) {

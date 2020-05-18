@@ -1,0 +1,14 @@
+            if (t == v) return t;
+
+        if (callback != null) {
+            if (variableState == VariableState.is_uninitialized) {
+            VariableState mergedIfElse;
+            mergedIfElse = ifValue != null && ifValue.isFinal
+                    && elseValue != null && elseValue.isFinal ? VariableState.is_final : VariableState.is_var;
+                } else if (ifValue != null || elseValue != null) {
+            if (afterFinallyState == VariableState.is_final
+                    && beforeTryCatchState != VariableState.is_final
+                    && afterTryCatchState.get(var) != beforeTryCatchState) {
+                getState().put(var, beforeTryCatchState == null ? VariableState.is_uninitialized : beforeTryCatchState);
+         *
+            return super.get(getTarget((Variable) key));

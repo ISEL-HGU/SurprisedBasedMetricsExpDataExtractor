@@ -1,0 +1,1 @@
+    private static final boolean DEFAULT_USER_REQUIRED = false;

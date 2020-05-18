@@ -1,0 +1,31 @@
+import com.amazonaws.services.sns.model.MessageAttributeValue;
+import com.amazonaws.services.sns.model.PublishRequest;
+import com.amazonaws.services.sns.model.PublishResult;
+import org.apache.camel.Endpoint;
+import org.apache.camel.Exchange;
+import org.apache.camel.Message;
+import org.apache.camel.impl.DefaultProducer;
+import org.apache.camel.spi.HeaderFilterStrategy;
+import org.apache.camel.util.URISupport;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
+
+
+
+
+
+    private Map<String, MessageAttributeValue> translateAttributes(Map<String, Object> headers, Exchange exchange) {
+        while (var5.hasNext()) {
+            Entry entry = (Entry) var5.next();
+            if (!headerFilterStrategy.applyFilterToCamelHeaders((String) entry.getKey(), entry.getValue(), exchange)) {
+                if (value instanceof String) {
+                    mav.withStringValue((String) value);
+                } else if (value instanceof ByteBuffer) {
+                    mav.withBinaryValue((ByteBuffer) value);
+
+
+
+
+

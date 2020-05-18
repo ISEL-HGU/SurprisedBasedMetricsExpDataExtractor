@@ -1,0 +1,11 @@
+import org.apache.camel.impl.converter.FastTypeConverterRegistry;
+    /*
+        // lets use the new fast type converter registry
+        FastTypeConverterRegistry answer = new FastTypeConverterRegistry();
+        // use backwards compatible mode
+        answer.setAnnotationScanning(true);
+        answer.setCamelContext(this);
+        setTypeConverterRegistry(answer);
+        return answer;
+     */
+

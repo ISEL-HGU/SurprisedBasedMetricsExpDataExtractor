@@ -1,0 +1,15 @@
+        if (shouldCallDelegate()) {
+            int[] lastResult = delegate.executeBatch();
+            processResult(lastResult);
+        }
+    private boolean shouldCallDelegate() {
+        if (batchCount > 0) {
+            return true;
+        } else if (results.isEmpty()) {
+            log.warning("Nothing has been added to batch. This might cause the JDBC driver to throw an exception.");
+            return true;
+        }
+        // Nothing added since last delegate execution. No need to call the delegate this time.
+        return false;
+    }
+

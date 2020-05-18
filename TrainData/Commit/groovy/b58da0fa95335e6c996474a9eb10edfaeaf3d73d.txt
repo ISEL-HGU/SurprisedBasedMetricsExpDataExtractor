@@ -1,0 +1,6 @@
+        final List<Expression> callArguments;
+        if (call.getArguments() instanceof TupleExpression) {
+            callArguments = ((TupleExpression) call.getArguments()).getExpressions();
+        } else {
+            callArguments = Collections.singletonList(call.getArguments());
+        }

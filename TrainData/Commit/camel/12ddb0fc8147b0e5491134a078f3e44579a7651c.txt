@@ -1,0 +1,47 @@
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Modifier;
+import java.util.HashMap;
+import java.util.Set;
+    private Map<String, Object> componentOptions;
+
+        // if we have component options then we need to create a new instance of the component
+        // which we then configure before it create the endpoint
+        if (componentOptions != null && !componentOptions.isEmpty()) {
+            String baseClassName = model.getBaseJavaType();
+            if (baseClassName != null) {
+                Class<?> type = Class.forName(baseClassName);
+                Constructor ctr = getPublicDefaultConstructor(type);
+                if (ctr != null) {
+                    // call default no-arg constructor
+                    Object base = ctr.newInstance();
+                    // configure component with extra options
+                    Map<String, Object> copy = new HashMap<>(componentOptions);
+                    IntrospectionSupport.setProperties(getCamelContext(), getCamelContext().getTypeConverter(), base, copy);
+
+                    if (base instanceof Component) {
+                        Component old = getCamelContext().removeComponent(scheme);
+                        // ensure component is started and stopped when Camel shutdown
+                        getCamelContext().addService(base, true, true);
+                        getCamelContext().addComponent(scheme, (Component) base);
+                    }
+                }
+            }
+        }
+
+    private static Constructor getPublicDefaultConstructor(Class<?> clazz) {
+        for (Constructor ctr : clazz.getConstructors()) {
+            if (Modifier.isPublic(ctr.getModifiers()) && ctr.getParameterCount() == 0) {
+                return ctr;
+            }
+        }
+        return null;
+    }
+
+    public Map<String, Object> getComponentOptions() {
+        return componentOptions;
+    }
+
+    public void setComponentOptions(Map<String, Object> baseComponentOptions) {
+        this.componentOptions = baseComponentOptions;
+    }
+

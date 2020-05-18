@@ -1,0 +1,3 @@
+                        // special for these as they are in sub dir
+                        } else if ("camel-olingo2".equals(dir.getName())) {
+                            target = new File(dir, "camel-olingo2-component/target/classes");

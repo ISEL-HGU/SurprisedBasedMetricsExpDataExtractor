@@ -1,0 +1,8 @@
+import static io.grpc.internal.GrpcAttributes.ATTR_LB_ADDR_AUTHORITY;
+
+ * JSON Web Token client credentials generator and injector
+public class JwtCallCredentials extends CallCredentials {
+    public void applyRequestMetadata(RequestInfo requestInfo, Executor executor, MetadataApplier metadataApplier) {
+        String authority = requestInfo.getTransportAttrs().get(ATTR_LB_ADDR_AUTHORITY);
+                    metadataApplier.apply(headers);
+                    metadataApplier.fail(Status.UNAUTHENTICATED.withCause(e));

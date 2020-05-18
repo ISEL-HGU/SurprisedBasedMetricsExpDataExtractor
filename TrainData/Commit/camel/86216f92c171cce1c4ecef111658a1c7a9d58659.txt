@@ -1,0 +1,21 @@
+        if (ObjectHelper.isEmpty(serviceName)) {
+            LOGGER.debug("Route {} has not enough information for service registration", route);
+        // try to get the service id from route properties
+        String serviceId = properties.get(ServiceDefinition.SERVICE_META_ID);
+        if (serviceId == null) {
+            // if not check if the route id is custom and use it
+            if (route.getRouteContext().getRoute().hasCustomIdAssigned()) {
+                serviceId = route.getId();
+            }
+        }
+        if (serviceId == null) {
+            // then get the id from the DiscoverableService
+            serviceId = properties.get(ServiceDefinition.SERVICE_META_ID);
+        }
+        if (serviceId == null) {
+            // finally auto generate the service id
+            serviceId = getCamelContext().getUuidGenerator().generateUuid();
+        }
+
+        final String serviceHost = properties.get(ServiceDefinition.SERVICE_META_HOST);
+        final String servicePort = properties.getOrDefault(ServiceDefinition.SERVICE_META_PORT, "-1");

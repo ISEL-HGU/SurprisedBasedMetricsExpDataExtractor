@@ -1,0 +1,188 @@
+import java.util.concurrent.atomic.AtomicInteger;
+import org.apache.camel.RuntimeCamelException;
+import org.apache.camel.spi.HasId;
+import org.apache.camel.spi.RouteContext;
+import org.apache.camel.util.ObjectHelper;
+    private final AtomicInteger routeCount;
+    private final Set<RouteHolder> routes;
+        this.routeCount = new AtomicInteger(0);
+        this.routes = new TreeSet<>();
+        final Optional<RouteHolder> route = routes.stream().filter(r -> r.getId().equals(routeId)).findFirst();
+        if (!route.isPresent()) {
+            // This route is unknown to this controller, apply default behaviour
+            // from super class.
+            super.startRoute(routeId);
+        } else {
+            doStartRoute(route.get(), true, r -> super.startRoute(routeId));
+        final Optional<RouteHolder> route = routes.stream().filter(r -> r.getId().equals(routeId)).findFirst();
+        if (!route.isPresent()) {
+            // This route is unknown to this controller, apply default behaviour
+            // from super class.
+            super.stopRoute(routeId);
+        } else {
+            doStopRoute(route.get(), true, r -> super.stopRoute(routeId));
+        final Optional<RouteHolder> route = routes.stream().filter(r -> r.getId().equals(routeId)).findFirst();
+        if (!route.isPresent()) {
+            // This route is unknown to this controller, apply default behaviour
+            // from super class.
+            super.stopRoute(routeId, timeout, timeUnit);
+        } else {
+            doStopRoute(route.get(), true, r -> super.stopRoute(r.getId(), timeout, timeUnit));
+        final Optional<RouteHolder> route = routes.stream().filter(r -> r.getId().equals(routeId)).findFirst();
+        if (!route.isPresent()) {
+            // This route is unknown to this controller, apply default behaviour
+            // from super class.
+            return super.stopRoute(routeId, timeout, timeUnit, abortAfterTimeout);
+        } else {
+            final AtomicBoolean result = new AtomicBoolean(false);
+
+            doStopRoute(route.get(), true, r -> result.set(super.stopRoute(r.getId(), timeout, timeUnit, abortAfterTimeout)));
+            return result.get();
+        final Optional<RouteHolder> route = routes.stream().filter(r -> r.getId().equals(routeId)).findFirst();
+        if (!route.isPresent()) {
+            // This route is unknown to this controller, apply default behaviour
+            // from super class.
+            super.suspendRoute(routeId);
+        } else {
+            doStopRoute(route.get(), true, r -> super.suspendRoute(r.getId()));
+        final Optional<RouteHolder> route = routes.stream().filter(r -> r.getId().equals(routeId)).findFirst();
+        if (!route.isPresent()) {
+            // This route is unknown to this controller, apply default behaviour
+            // from super class.
+            super.suspendRoute(routeId, timeout, timeUnit);
+        } else {
+            doStopRoute(route.get(), true, r -> super.suspendRoute(r.getId(), timeout, timeUnit));
+        final Optional<RouteHolder> route = routes.stream().filter(r -> r.getId().equals(routeId)).findFirst();
+        if (!route.isPresent()) {
+            // This route is unknown to this controller, apply default behaviour
+            // from super class.
+            super.resumeRoute(routeId);
+        } else {
+            doStartRoute(route.get(), true, r -> super.startRoute(routeId));
+    private void doStopRoute(RouteHolder route,  boolean checker, ThrowingConsumer<RouteHolder, Exception> consumer) throws Exception {
+            ServiceStatus status = route.getStatus();
+            route.getContext().setRouteController(null);
+    private void doStartRoute(RouteHolder route, boolean checker, ThrowingConsumer<RouteHolder, Exception> consumer) throws Exception {
+            ServiceStatus status = route.getStatus();
+                route.getContext().setRouteController(this);
+        final List<String> routeList;
+            routeList = routes.stream()
+                .filter(r -> r.getStatus() == ServiceStatus.Stopped)
+                .map(RouteHolder::getId)
+                .collect(Collectors.toList());
+        for (String route: routeList) {
+        if (!isRunAllowed()) {
+            return;
+        final List<String> routeList;
+
+        synchronized (lock) {
+            routeList = routes.stream()
+                .filter(r -> r.getStatus() == ServiceStatus.Started)
+                .map(RouteHolder::getId)
+                .collect(Collectors.toList());
+        }
+
+        for (String route: routeList) {
+        private final ConcurrentMap<RouteHolder, CompletableFuture<BackOffContext>> routes;
+        void start(RouteHolder route) {
+            route.getContext().setRouteController(SupervisingRouteController.this);
+                            doStartRoute(r, false, rx -> SupervisingRouteController.super.startRoute(rx.getId()));
+                                final ServiceStatus status = route.getStatus();
+                                    r.getContext().setRouteController(null);
+        boolean release(RouteHolder route) {
+        boolean isSupervising(RouteHolder route) {
+        Collection<RouteHolder> routes() {
+    // *********************************
+    //
+    // *********************************
+
+    private class RouteHolder implements HasId, Comparable<RouteHolder> {
+        private final int order;
+        private final Route route;
+
+        RouteHolder(Route route, int order) {
+            this.route = route;
+            this.order = order;
+        }
+
+        @Override
+        public String getId() {
+            return this.route.getId();
+        }
+
+        public Route get() {
+            return this.route;
+        }
+
+        public RouteContext getContext() {
+            return this.route.getRouteContext();
+        }
+
+        public RouteDefinition getDefinition() {
+            return this.route.getRouteContext().getRoute();
+        }
+
+        public ServiceStatus getStatus() {
+            return getContext().getCamelContext().getRouteStatus(getId());
+        }
+
+        public int getInitializationOrder() {
+            return order;
+        }
+
+        public int getStartupOrder() {
+            Integer order = getDefinition().getStartupOrder();
+            if (order == null) {
+                order = Integer.MAX_VALUE;
+            }
+
+            return order;
+        }
+
+        @Override
+        public int compareTo(RouteHolder o) {
+            int answer = Integer.compare(getStartupOrder(), o.getStartupOrder());
+            if (answer == 0) {
+                answer = Integer.compare(getInitializationOrder(), o.getInitializationOrder());
+            }
+
+            return answer;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
+
+            return this.route.equals(((RouteHolder)o).route);
+        }
+
+        @Override
+        public int hashCode() {
+            return route.hashCode();
+            RouteHolder holder = new RouteHolder(route, routeCount.incrementAndGet());
+            if (routes.add(holder)) {
+                holder.getContext().setRouteController(SupervisingRouteController.this);
+                holder.getDefinition().setAutoStartup("false");
+                if (contextStarted.get()) {
+                    LOGGER.debug("Context is started: attempt to start route {}", route.getId());
+                    try {
+                        SupervisingRouteController.this.doStartRoute(
+                            holder,
+                            true,
+                            r -> SupervisingRouteController.super.startRoute(r.getId())
+                        );
+                    } catch (Exception e) {
+                        throw new RuntimeCamelException(e);
+                    }
+                } else {
+                    LOGGER.debug("Context is not started: add route {} to stopped routes", holder.getId());
+            synchronized (lock) {
+                routes.removeIf(
+                    r -> ObjectHelper.equal(r.get(), route) || ObjectHelper.equal(r.getId(), route.getId())
+                );
+            }

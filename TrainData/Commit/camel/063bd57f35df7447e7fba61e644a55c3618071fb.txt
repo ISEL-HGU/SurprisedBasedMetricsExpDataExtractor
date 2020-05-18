@@ -1,0 +1,2 @@
+                        // use baseVersion so we can support SNAPSHOT versions that are based on a base version
+                        if (groupId.equals(artifact.getGroupId()) && artifactId.equals(artifact.getArtifactId()) && version.equals(artifact.getBaseVersion())) {

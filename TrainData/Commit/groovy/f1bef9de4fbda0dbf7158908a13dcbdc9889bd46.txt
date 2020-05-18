@@ -1,0 +1,5 @@
+                // List<A> list = new LinkedList()
+            if (isArrayOp(op)
+                    && !lType.isArray()
+                    && enclosingBinaryExpression != null
+            ) {

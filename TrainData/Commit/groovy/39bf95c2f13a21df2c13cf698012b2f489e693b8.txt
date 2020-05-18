@@ -1,0 +1,8 @@
+            type.setRedirect(gt.getType()); // FIXME lost the generics type info
+                        GenericsType originalGt = genericParameterNames.get(name);
+
+                        if (null == originalGt) {
+                            classNode.setRedirect(ClassHelper.OBJECT_TYPE);
+                        } else {
+                            classNode.setRedirect(originalGt.getType());
+                        }

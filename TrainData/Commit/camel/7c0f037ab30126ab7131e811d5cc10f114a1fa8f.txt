@@ -1,0 +1,87 @@
+import org.apache.camel.support.PatternHelper;
+import org.apache.camel.util.OrderedProperties;
+import org.apache.camel.util.StringHelper;
+    /**
+     * To exclude autowiring specific properties with these key names.
+     * You can also configure a single entry and separate the excludes with comma
+     */
+    @Parameter(property = "camel.exclude")
+    protected String[] exclude;
+
+    /**
+     * To include autowiring specific properties or component with these key names.
+     * You can also configure a single entry and separate the includes with comma
+     */
+    @Parameter(property = "camel.include")
+    protected String[] include;
+
+    /**
+     * To setup special mappings between known types as key=value pairs.
+     * You can also configure a single entry and separate the mappings with comma
+     */
+    @Parameter(property = "camel.mappings")
+    protected String[] mappings;
+
+        // load default mappings
+        Properties mappingProperties = loadDefaultMappings();
+        getLog().debug("Loaded default-mappings: "  mappingProperties);
+        // add extra mappings
+        if (this.mappings != null) {
+            for (String m : this.mappings) {
+                String key = StringHelper.before(m, "=");
+                String value = StringHelper.after(m, "=");
+                if (key != null && value != null) {
+                    mappingProperties.setProperty(key, value);
+                    getLog().debug("Added mapping: "  key  "="  value);
+                }
+            }
+        }
+        List<String> autowires = findAutowireComponentOptionsByClasspath(catalog, components, reflections, mappingProperties);
+    protected Properties loadDefaultMappings() throws MojoFailureException {
+        Properties mappings = new OrderedProperties();
+            InputStream is = AutowireMojo.class.getResourceAsStream("/default-mappings.properties");
+                mappings.load(is);
+            throw new MojoFailureException("Cannot load default-mappings.properties from classpath");
+        return mappings;
+                                                                   Reflections reflections, Properties mappingProperties) {
+                    if (!isValidPropertyName(componentName, name)) {
+                        getLog().debug("Skipping property name: "  name);
+                        continue;
+                    }
+                            Class best = chooseBestKnownType(clazz, classes, mappingProperties);
+            for (String k : known.split(";")) {
+    protected boolean isValidPropertyName(String componentName, String name) {
+        // we want to regard names as the same if they are using dash or not, and also to be case insensitive.
+        String prefix = "camel.component."  componentName  ".";
+        name = StringHelper.dashToCamelCase(name);
+
+        if (exclude != null) {
+            // works on components too
+            for (String pattern : exclude) {
+                pattern = StringHelper.dashToCamelCase(pattern);
+                if (PatternHelper.matchPattern(componentName, pattern)) {
+                    return false;
+                }
+                if (PatternHelper.matchPattern(name, pattern) || PatternHelper.matchPattern(prefix  name, pattern)) {
+                    return false;
+                }
+            }
+        }
+
+        if (include != null) {
+            for (String pattern : include) {
+                pattern = StringHelper.dashToCamelCase(pattern);
+                if (PatternHelper.matchPattern(componentName, pattern)) {
+                    return true;
+                }
+                if (PatternHelper.matchPattern(name, pattern) || PatternHelper.matchPattern(prefix  name, pattern)) {
+                    return true;
+                }
+            }
+            // we have include enabled and none matched so it should be false
+            return false;
+        }
+
+        return true;
+    }
+

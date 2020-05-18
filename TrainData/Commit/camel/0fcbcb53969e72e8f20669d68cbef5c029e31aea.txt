@@ -1,0 +1,2 @@
+        clientActivityListener.setDownload(true);
+        clientActivityListener.setDownload(false);

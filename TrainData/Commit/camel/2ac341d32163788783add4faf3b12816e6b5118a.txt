@@ -1,0 +1,3 @@
+            final Map<String, Object> apiProperties = configuration.getApiProperties();
+                response.setHeader(Exchange.CONTENT_TYPE, (String) apiProperties.getOrDefault("api.specification.contentType.json", "application/json"));
+                response.setHeader(Exchange.CONTENT_TYPE, (String) apiProperties.getOrDefault("api.specification.contentType.yaml", "text/yaml"));

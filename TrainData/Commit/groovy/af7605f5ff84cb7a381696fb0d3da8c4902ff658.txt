@@ -1,0 +1,6 @@
+        String fullPathName = groovyClassDoc != null ? groovyClassDoc.getFullPathName() : null;
+        boolean hasPackage = (fullPathName != null && fullPathName.lastIndexOf('/') > 0);
+        if (hasPackage) {
+            fullPathName = fullPathName.substring(0, fullPathName.lastIndexOf('/'));
+        }
+

@@ -1,0 +1,4 @@
+                    warning(processingEnv, "Cannot convert output directory resource URI to a file "  e);
+        String relativeName = packageName  "/"  fileName;
+            resource = filer.getResource(StandardLocation.CLASS_OUTPUT, "", relativeName);
+            return "Cannot load classpath resource: "  relativeName  " due: "  e.getMessage();

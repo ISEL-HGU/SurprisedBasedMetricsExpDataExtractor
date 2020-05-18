@@ -1,0 +1,1 @@
+                // since its a SAXSource it may not return an NodeList (for example if using Saxon)

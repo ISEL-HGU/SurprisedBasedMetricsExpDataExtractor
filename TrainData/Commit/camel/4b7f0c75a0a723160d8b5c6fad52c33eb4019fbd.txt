@@ -1,0 +1,8 @@
+import org.apache.camel.test.AvailablePortFinder;
+
+        this(AvailablePortFinder.getNextAvailable());
+        this.port = port;
+    public int getPort() {
+        return port;
+    }
+

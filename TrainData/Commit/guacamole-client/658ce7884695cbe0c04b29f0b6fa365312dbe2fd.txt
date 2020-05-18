@@ -1,0 +1,7 @@
+import org.apache.ibatis.session.SqlSession;
+
+    @Override
+    public boolean isRecursiveQuerySupported(SqlSession session) {
+        return true; // All versions of SQL Server support recursive queries through CTEs
+    }
+

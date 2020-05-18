@@ -1,0 +1,1 @@
+ * This component uses Spring JMS and supports JMS 1.1 and 2.0 API.

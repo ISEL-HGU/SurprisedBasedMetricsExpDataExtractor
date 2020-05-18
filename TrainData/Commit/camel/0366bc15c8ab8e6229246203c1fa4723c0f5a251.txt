@@ -1,0 +1,11 @@
+import org.apache.camel.Exchange;
+import org.apache.camel.spi.DataType;
+import org.apache.camel.spi.DataTypeAware;
+        Exchange answerXml = producer.send("direct:xml", ex -> {
+            ((DataTypeAware)ex.getIn()).setBody(orderXml, new DataType("xml:XMLOrder"));
+        });
+        LOG.info("---> Received '{}'", answerXml.getOut().getBody(String.class));
+        Exchange answerJson = producer.send("direct:json", ex -> {
+            ((DataTypeAware)ex.getIn()).setBody(orderJson, new DataType("json"));
+        });
+        LOG.info("---> Received '{}'", answerJson.getOut().getBody(String.class));

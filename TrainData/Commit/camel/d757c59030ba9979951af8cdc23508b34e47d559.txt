@@ -1,0 +1,1 @@
+        LOG.info("Server started. I'm listening on {}", port);

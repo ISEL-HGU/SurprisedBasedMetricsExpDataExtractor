@@ -1,0 +1,1 @@
+        ServiceStatus status = route.getCamelContext().getRouteController().getRouteStatus(route.getId());

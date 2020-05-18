@@ -1,0 +1,10 @@
+            addMemberIfFound(resolver, node, entry);
+    private static void addMemberIfFound(AsmReferenceResolver resolver, AnnotationNode node, Map.Entry<String, Object> entry) {
+        Expression value = annotationValueToExpression(entry.getValue(), resolver);
+        if (value != null) {
+            node.addMember(entry.getKey(), value);
+        }
+    }
+
+            ClassNode type = resolver.resolveClassNullable(Type.getType(((TypeWrapper) value).desc).getClassName());
+            return type != null ? new ClassExpression(type) : null;

@@ -1,0 +1,9 @@
+    public int defineTemporaryVariable(Variable var, boolean store) {
+            Label end = new Label();
+            mv.visitInsn(NOP);
+            mv.visitLabel(end);
+
+            Label newStart = new Label();
+
+            mv.visitInsn(NOP);
+            mv.visitLabel(newStart);

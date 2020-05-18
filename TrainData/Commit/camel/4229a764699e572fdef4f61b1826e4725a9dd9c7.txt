@@ -1,0 +1,7 @@
+                configure().setXmlRoutesReloadDirectory(parameter);
+        return mainConfigurationProperties.getXmlRoutesReloadDirectory();
+        mainConfigurationProperties.setXmlRoutesReloadDirectory(fileWatchDirectory);
+        return mainConfigurationProperties.isXmlRoutesReloadDirectoryRecursively();
+        mainConfigurationProperties.setXmlRoutesReloadDirectoryRecursively(fileWatchDirectoryRecursively);
+        if (mainConfigurationProperties.getXmlRoutesReloadDirectory() != null) {
+            ReloadStrategy reload = new FileWatcherReloadStrategy(mainConfigurationProperties.getXmlRoutesReloadDirectory(), mainConfigurationProperties.isXmlRoutesReloadDirectoryRecursively());

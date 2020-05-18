@@ -1,0 +1,2 @@
+            String body = MessageHelper.extractBodyForLogging(exchange.getMessage(), "", streams, streams);
+        String responseCode = exchange.getMessage().getHeader(Exchange.HTTP_RESPONSE_CODE, String.class);

@@ -1,0 +1,1 @@
+                File[] names = root.listFiles(pathname -> pathname.getName().equals("camel-core"));

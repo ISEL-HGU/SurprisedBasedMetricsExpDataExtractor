@@ -1,0 +1,6 @@
+import org.apache.groovy.util.SystemUtil;
+    private static final String GROOVY_CLEAR_LEXER_DFA_CACHE = "groovy.clear.lexer.dfa.cache";
+    private static final boolean TO_CLEAR_LEXER_DFA_CACHE;
+
+        TO_CLEAR_LEXER_DFA_CACHE = SystemUtil.getBooleanSafe(GROOVY_CLEAR_LEXER_DFA_CACHE);
+        this.atn = TO_CLEAR_LEXER_DFA_CACHE ? getAtnWrapper(this.ownerClass).checkAndClear() : GroovyLangLexer._ATN;

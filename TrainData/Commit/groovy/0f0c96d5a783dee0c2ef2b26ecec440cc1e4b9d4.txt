@@ -1,0 +1,2 @@
+    private <R> R doWithWriteLock(Action<K, V, R> action) {
+    private <R> R doWithReadLock(Action<K, V, R> action) {

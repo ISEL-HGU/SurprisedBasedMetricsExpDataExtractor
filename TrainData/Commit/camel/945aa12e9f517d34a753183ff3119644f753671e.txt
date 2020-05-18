@@ -1,0 +1,26 @@
+    @XmlAttribute @Metadata(defaultValue = "true", label = "consumer")
+    private Boolean useXForwardHeaders;
+
+    public Boolean getUseXForwardHeaders() {
+        return useXForwardHeaders;
+    }
+
+    /**
+     * Whether to use X-Forward headers for Host and related setting.
+     * <p/>
+     * The default value is true.
+     */
+    public void setUseXForwardHeaders(Boolean useXForwardHeaders) {
+        this.useXForwardHeaders = useXForwardHeaders;
+    }
+
+    /**
+     * To specify whether to use X-Forward headers for Host and related setting
+     */
+    public RestConfigurationDefinition useXForwardHeaders(boolean useXForwardHeaders) {
+        setUseXForwardHeaders(useXForwardHeaders);
+        return this;
+    }
+        if (useXForwardHeaders != null) {
+            answer.setUseXForwardHeaders(useXForwardHeaders);
+        }

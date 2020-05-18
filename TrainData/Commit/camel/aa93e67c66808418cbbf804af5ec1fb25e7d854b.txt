@@ -1,0 +1,10 @@
+import java.util.Set;
+import com.amazonaws.services.mq.AmazonMQ;
+
+        checkAndSetRegistryClient(configuration);
+    private void checkAndSetRegistryClient(MQConfiguration configuration) {
+        Set<AmazonMQ> clients = getCamelContext().getRegistry().findByType(AmazonMQ.class);
+        if (clients.size() == 1) {
+            configuration.setAmazonMqClient(clients.stream().findFirst().get());
+        }
+    }

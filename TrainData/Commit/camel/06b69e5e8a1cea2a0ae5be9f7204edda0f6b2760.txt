@@ -1,0 +1,3 @@
+    @Override
+                CloseFuture closeFuture = ioSession.closeNow();
+                closeFuture.awaitUninterruptibly(timeout, TimeUnit.MILLISECONDS);

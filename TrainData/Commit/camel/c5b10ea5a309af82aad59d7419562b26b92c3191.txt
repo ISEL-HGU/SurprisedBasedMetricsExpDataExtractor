@@ -1,0 +1,20 @@
+import org.apache.camel.Exchange;
+        Exception exception = null;
+            
+            Exchange exchange = getEndpoint().createExchange();
+            exchange.getIn().setBody(context);
+            try {
+                // send message to next processor in the route
+                getProcessor().process(exchange);
+            } finally {
+                // check if an exception occurred and was not handled
+                exception = exchange.getException();
+            }
+        } catch (Exception e) {
+            log.info("Failed to process AS2 message", e);
+            exception = e;
+        }
+        
+        if (exception != null) {
+            throw new HttpException("Failed to process AS2 message: "  exception.getMessage(), exception);
+        }

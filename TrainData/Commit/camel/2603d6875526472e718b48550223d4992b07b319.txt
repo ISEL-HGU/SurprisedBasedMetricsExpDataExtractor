@@ -1,0 +1,6 @@
+                // setup the WebSocketComponentServlet initial parameters
+
+
+
+            sslContextFactory.setEndpointIdentificationAlgorithm(null);
+            sslContextFactory.setEndpointIdentificationAlgorithm(null);

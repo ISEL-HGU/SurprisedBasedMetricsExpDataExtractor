@@ -1,0 +1,19 @@
+    @Deprecated
+    @UriParam(label = "consumer", defaultValue = "PUT")
+    private String command = "PUT";
+    public String getCommand() {
+        return operation.toString();
+    }
+
+    /**
+     * @deprecated @see @{link setOperation}
+     *
+     * The operation to perform.
+     */
+    public void setCommand(String command) {
+        if (command.startsWith(InfinispanConstants.OPERATION)) {
+            command = command.substring(InfinispanConstants.OPERATION.length()).toUpperCase();
+        }
+
+       setOperation(InfinispanOperation.valueOf(command));
+    }

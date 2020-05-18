@@ -1,0 +1,2 @@
+
+        from("jms:queue:cheese").to("log:cheese");

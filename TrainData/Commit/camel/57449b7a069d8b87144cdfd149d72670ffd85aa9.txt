@@ -1,0 +1,2 @@
+        Object value = exchange.getProperty(Exchange.INTERRUPTED);
+        return value != null && Boolean.TRUE == value;

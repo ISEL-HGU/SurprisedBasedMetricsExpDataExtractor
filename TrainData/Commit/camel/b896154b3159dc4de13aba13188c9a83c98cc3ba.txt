@@ -1,0 +1,3 @@
+        ScheduleKeyDeletionResult result = new ScheduleKeyDeletionResult();
+        result.withKeyId("test");
+        return result;

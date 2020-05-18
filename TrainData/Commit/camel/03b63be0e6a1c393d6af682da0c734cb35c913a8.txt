@@ -1,0 +1,33 @@
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import net.sf.saxon.value.BigDecimalValue;
+import net.sf.saxon.value.BooleanValue;
+import net.sf.saxon.value.DoubleValue;
+import net.sf.saxon.value.FloatValue;
+import net.sf.saxon.value.Int64Value;
+import net.sf.saxon.value.IntegerValue;
+import net.sf.saxon.value.NumericValue;
+import net.sf.saxon.value.StringValue;
+            getAsParameter(exchange.getIn().getBody())
+            getAsParameter(exchange)
+                getAsParameter(exchange.getOut().getBody())
+                        getAsParameter(entry.getValue())
+    @SuppressWarnings("unchecked")
+    protected Item getAsParameter(Object value) {
+        if (value instanceof String) {
+            return new StringValue((CharSequence) value);
+        } else if (value instanceof Boolean) {
+            return BooleanValue.get((Boolean) value);
+        } else if (value instanceof Long) {
+            return Int64Value.makeIntegerValue((Long) value);
+        } else if (value instanceof BigInteger) {
+            return Int64Value.makeIntegerValue((BigInteger) value);
+        } else if (value instanceof Double) {
+            return DoubleValue.makeDoubleValue((double) value);
+        } else if (value instanceof Float) {
+            return FloatValue.makeFloatValue((float) value);
+        } else {
+            return new ObjectValue(value);
+        }
+    }
+

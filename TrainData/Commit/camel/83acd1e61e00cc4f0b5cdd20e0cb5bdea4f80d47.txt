@@ -1,0 +1,3 @@
+import org.openmuc.jasn1.ber.ReverseByteArrayOutputStream;
+        paramOut[0] = OutputStream.class;
+        ReverseByteArrayOutputStream berOut = new ReverseByteArrayOutputStream(IOHelper.DEFAULT_BUFFER_SIZE / 256, true);

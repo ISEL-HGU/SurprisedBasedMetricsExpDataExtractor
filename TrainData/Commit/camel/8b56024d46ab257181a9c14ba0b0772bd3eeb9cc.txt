@@ -1,0 +1,5 @@
+import com.mongodb.client.model.FindOneAndUpdateOptions;
+import com.mongodb.client.model.ReturnDocument;
+        FindOneAndUpdateOptions options = new FindOneAndUpdateOptions()
+            .returnDocument(ReturnDocument.AFTER);
+        trackingObj = dbCol.findOneAndUpdate(trackingObj, updateObj, options);

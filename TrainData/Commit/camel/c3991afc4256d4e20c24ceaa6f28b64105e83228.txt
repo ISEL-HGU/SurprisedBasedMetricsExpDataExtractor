@@ -1,0 +1,9 @@
+    private String firstVersion;
+    public String getFirstVersion() {
+        return firstVersion;
+    }
+
+    public void setFirstVersion(String firstVersion) {
+        this.firstVersion = firstVersion;
+    }
+

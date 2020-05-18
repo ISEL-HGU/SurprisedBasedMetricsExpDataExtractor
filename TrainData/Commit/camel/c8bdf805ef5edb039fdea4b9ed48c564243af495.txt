@@ -1,0 +1,9 @@
+import java.util.ArrayDeque;
+import java.util.Collections;
+import java.util.Deque;
+        Deque<SimpleNode> stack = new ArrayDeque<>();
+        // must reverse as it was added from a stack that is reverse
+        Collections.reverse(nodes);
+        Deque<SimpleNode> stack = new ArrayDeque<>();
+        // must reverse as it was added from a stack that is reverse
+        Collections.reverse(nodes);

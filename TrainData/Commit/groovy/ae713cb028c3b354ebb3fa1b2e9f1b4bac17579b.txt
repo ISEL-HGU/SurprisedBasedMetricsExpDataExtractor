@@ -1,0 +1,14 @@
+        int size = ensureStackNotEmpty(stack);
+        stack.set(size - 1, type);
+    }
+
+    private int ensureStackNotEmpty(List<ClassNode> stack) {
+
+            if (size == 0) throw new ArrayIndexOutOfBoundsException("size==0");
+            System.err.println("index problem in "  controller.getSourceUnit().getName());
+
+        return size;
+
+            BytecodeHelper.store(mv, type, idx);
+        int size = ensureStackNotEmpty(stack);
+        return stack.get(size - 1);

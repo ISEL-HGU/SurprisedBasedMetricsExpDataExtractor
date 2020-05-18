@@ -1,0 +1,6 @@
+            Object annDefault = method.annotationDefault;
+            if (annDefault != null) {
+                if (annDefault instanceof TypeWrapper) {
+                    annDefault = resolver.resolveType(Type.getType(((TypeWrapper) annDefault).desc));
+                }
+                result.setCode(new ReturnStatement(new ConstantExpression(annDefault)));

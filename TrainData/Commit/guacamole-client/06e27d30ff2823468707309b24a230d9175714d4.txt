@@ -1,0 +1,6 @@
+     * The connection weight attribute used for weighted load balancing algorithms.
+     * Returns the weight of the connection used in applying weighted
+     * load balancing algorithms, or a default of 1 if the 
+     * attribute is undefined.
+     *     The weight of the connection used in applying weighted
+     *     load balancing algorithms.

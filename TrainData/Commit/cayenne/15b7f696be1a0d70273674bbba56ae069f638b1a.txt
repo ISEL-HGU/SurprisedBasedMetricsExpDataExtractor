@@ -1,0 +1,16 @@
+import org.apache.cayenne.configuration.server.PropertyDataSourceFactory;
+import org.apache.cayenne.configuration.server.ServerRuntimeBuilder;
+    static final String DATA_DOMAIN_NAME_PARAMETER = "data-domain-name";
+     * If you are using multiple configuration files (cayenne-*.xml) this allows you
+     * to specify a name for the data domain other than the default name "cayenne" 
+     * (see {@value ServerRuntimeBuilder}).
+     * A specific data domain name is useful if you are setting database connection info 
+     * using properties via {@link PropertyDataSourceFactory}.
+     * @return
+     */
+    public String getDataDomainName() {
+        String name = configuration.getInitParameter(DATA_DOMAIN_NAME_PARAMETER);
+        return name;
+    }
+    
+    /**

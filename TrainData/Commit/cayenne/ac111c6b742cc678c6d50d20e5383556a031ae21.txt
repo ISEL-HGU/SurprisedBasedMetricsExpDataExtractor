@@ -1,0 +1,13 @@
+import java.util.Objects;
+    public SybaseSniffer(@Inject AdhocObjectFactory objectFactory,
+                         @Inject PkGeneratorFactoryProvider pkGeneratorProvider) {
+        this.pkGeneratorProvider = Objects.requireNonNull(pkGeneratorProvider, "Null pkGeneratorProvider");
+        
+        if (adapter != null) {
+            PkGenerator pkGenerator = pkGeneratorProvider.get(adapter);
+            if (pkGenerator != null) {
+                adapter.setPkGenerator(pkGenerator);
+            }
+            return adapter;
+        } else {
+            return null;

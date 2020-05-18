@@ -1,0 +1,5 @@
+    
+    /**
+     * Indicate if the values must be escaped when quoting (optional)
+     */
+    boolean quotingEscaped() default false;

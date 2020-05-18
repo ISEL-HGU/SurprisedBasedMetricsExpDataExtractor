@@ -1,0 +1,2 @@
+import com.amazonaws.regions.Regions;
+            AmazonS3 client = AmazonS3ClientBuilder.standard().withCredentials(credentialsProvider).withRegion(Regions.valueOf(configuration.getRegion())).build();

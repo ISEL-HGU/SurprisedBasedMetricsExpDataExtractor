@@ -1,0 +1,2 @@
+import org.apache.groovy.internal.util.UnicodeConst;
+                return UnicodeConst.ZERO;

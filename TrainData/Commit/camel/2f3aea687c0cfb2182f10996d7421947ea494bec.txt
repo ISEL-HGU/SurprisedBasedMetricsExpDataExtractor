@@ -1,0 +1,1 @@
+        LOG.debug("About to run Kinesis to Cassandra integration...");

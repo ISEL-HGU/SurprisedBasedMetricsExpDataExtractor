@@ -1,0 +1,6 @@
+ * The google-calendar component provides access to Google Calendar in a
+ * streaming mod.
+         * Google Calendar application name. Example would be
+         * camel-google-calendar/1.0
+         * https://developers.google.com/calendar/api/auth/scopes for more info.
+         * The query to execute on calendar

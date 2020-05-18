@@ -1,0 +1,4 @@
+        GenericsType genericsType = genericParameterNames.get(typeName);
+        if (genericsType != null) {
+            type.setRedirect(genericsType.getType());
+            type.setGenericsTypes(new GenericsType[]{ genericsType });

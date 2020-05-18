@@ -1,0 +1,4 @@
+ b/extensions/guacamole-auth-openid/src/main/java/org/apache/guacamole/auth/openid/user/AuthenticatedUser.java
+package org.apache.guacamole.auth.openid.user;
+ * An openid-specific implementation of AuthenticatedUser, associating a
+ * username and particular set of credentials with the OpenID authentication

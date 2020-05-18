@@ -1,0 +1,2 @@
+            BoxUser user = new BoxUser(boxConnection, sourceUserId);
+            return user.transferContent(userId);

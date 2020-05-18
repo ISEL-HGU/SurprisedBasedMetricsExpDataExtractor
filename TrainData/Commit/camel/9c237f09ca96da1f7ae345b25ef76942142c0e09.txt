@@ -1,0 +1,4 @@
+import org.apache.camel.component.as2.api.AS2EncryptionAlgorithm;
+    public static OutputEncryptor createEncryptor(AS2EncryptionAlgorithm encryptionAlgorithm) throws HttpException {
+        Args.notNull(encryptionAlgorithm, "encryptionAlgorithmName");
+            return new JceCMSContentEncryptorBuilder(encryptionAlgorithm.getAlgorithmOID()).build();

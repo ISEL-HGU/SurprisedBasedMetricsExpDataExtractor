@@ -1,0 +1,44 @@
+import java.util.Map;
+
+        final Message message = exchange.getIn();
+        final String serviceName = applySimpleLanguage(name, exchange);
+        final String serviceUri = applySimpleLanguage(uri, exchange);
+        final String servicePath = applySimpleLanguage(contextPath, exchange);
+        final String serviceScheme = applySimpleLanguage(scheme, exchange);
+        message.setHeader(ServiceCallConstants.SERVICE_CALL_URI,serviceUri);
+        message.setHeader(ServiceCallConstants.SERVICE_CALL_CONTEXT_PATH, servicePath);
+        message.setHeader(ServiceCallConstants.SERVICE_CALL_SCHEME, serviceScheme);
+    private boolean execute(ServiceDefinition service, Exchange exchange, AsyncCallback callback) throws Exception {
+        final Message message = exchange.getIn();
+        final String host = service.getHost();
+        final int port = service.getPort();
+        final Map<String, String> meta = service.getMetadata();
+        message.setHeader(ServiceCallConstants.SERVICE_HOST, host);
+        message.setHeader(ServiceCallConstants.SERVICE_PORT, port > 0 ? port : null);
+        message.setHeader(ServiceCallConstants.SERVICE_NAME, service.getName());
+        message.setHeader(ServiceCallConstants.SERVICE_META, meta);
+
+        // If context path is not set on service call definition, reuse the one from
+        // ServiceDefinition, if any
+        message.getHeaders().compute(ServiceCallConstants.SERVICE_CALL_CONTEXT_PATH, (k, v) ->
+            v == null ? meta.get(ServiceDefinition.SERVICE_META_PATH) : v
+        );
+
+        // If port is not set on service call definition, reuse the one from
+        // ServiceDefinition, if any
+        message.getHeaders().compute(ServiceCallConstants.SERVICE_PORT, (k, v) ->
+            v == null ? meta.get(ServiceDefinition.SERVICE_META_PORT) : v
+        );
+
+    /**
+     * This function applies the simple language to the given expression.
+     *
+     * @param expression the expression
+     * @param exchange the exchange
+     * @return the computed expression
+     */
+    private String applySimpleLanguage(String expression, Exchange exchange) {
+        return SimpleLanguage.hasSimpleFunction(expression)
+            ? SimpleLanguage.simple(expression).evaluate(exchange, String.class)
+            : expression;
+    }

@@ -1,0 +1,20 @@
+import java.util.Optional;
+        final HttpClientConnectionManager localConnectionManager = createConnectionManager(parameters, sslContextParameters);
+    protected HttpClientConnectionManager createConnectionManager(final Map<String, Object> parameters,
+            final SSLContextParameters sslContextParameters) throws GeneralSecurityException, IOException {
+        if (clientConnectionManager != null) {
+            return clientConnectionManager;
+        }
+
+        final X509HostnameVerifier resolvedHostnameVerifier = resolveAndRemoveReferenceParameter(parameters, "x509HostnameVerifier", X509HostnameVerifier.class);
+        final X509HostnameVerifier hostnameVerifier = Optional.ofNullable(resolvedHostnameVerifier).orElse(x509HostnameVerifier);
+
+        // need to check the parameters of maxTotalConnections and connectionsPerRoute
+        final int maxTotalConnections = getAndRemoveParameter(parameters, "maxTotalConnections", int.class, 0);
+        final int connectionsPerRoute = getAndRemoveParameter(parameters, "connectionsPerRoute", int.class, 0);
+
+        final Registry<ConnectionSocketFactory> connectionRegistry = createConnectionRegistry(hostnameVerifier, sslContextParameters);
+
+        return createConnectionManager(connectionRegistry, maxTotalConnections, connectionsPerRoute);
+    }
+

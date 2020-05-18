@@ -1,0 +1,2 @@
+        Credentials credentials = new Credentials(user.getIdentifier(),
+                userPasswordUpdate.getOldPassword(), request);

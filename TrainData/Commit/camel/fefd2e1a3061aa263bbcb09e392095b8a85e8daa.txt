@@ -1,0 +1,5 @@
+            writer.append("    }\n");
+            writer.append("\n");
+            writer.append("    private void registerConverters() {\n");
+                    writer.append("            registerConverters();\n");
+                    writer.append("        registerConverters();\n");

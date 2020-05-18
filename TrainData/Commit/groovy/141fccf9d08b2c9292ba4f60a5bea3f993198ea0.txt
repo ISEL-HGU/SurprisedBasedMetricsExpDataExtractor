@@ -1,0 +1,12 @@
+import org.codehaus.groovy.ast.AnnotationNode;
+import java.lang.annotation.ElementType;
+    @Override
+    protected int getElementCode(ElementType value) {
+        switch (value) {
+            case TYPE_PARAMETER:
+                return AnnotationNode.TYPE_PARAMETER_TARGET;
+            case TYPE_USE:
+                return AnnotationNode.TYPE_USE_TARGET;
+        }
+        return super.getElementCode(value);
+    }

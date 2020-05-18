@@ -1,0 +1,5 @@
+                return;
+                return;
+                return updateBaseObjectId(id, (AbstractSObjectBase) object);
+    boolean updateBaseObjectId(final String id, final AbstractSObjectBase object) {
+        object.setId(id);

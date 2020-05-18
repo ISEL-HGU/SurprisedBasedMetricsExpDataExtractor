@@ -1,0 +1,2 @@
+        EXT2TYPE.put("xproj", Integer.valueOf(TYPE_XML));
+}

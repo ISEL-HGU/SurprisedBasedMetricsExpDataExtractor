@@ -1,0 +1,1 @@
+     * The attribute to observe for the monitor bean or consumer.

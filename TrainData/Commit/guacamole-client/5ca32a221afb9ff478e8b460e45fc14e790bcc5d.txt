@@ -1,0 +1,24 @@
+import java.util.Map;
+     * Arbitrary LDAP attributes specified in guacamole.properties
+     */
+     private Map<String, String> ldapAttrs;
+
+     /**
+      * Returns the lDAP attributes associated with this set of credentials.
+      * @return The LDAP attributes Map associated with this set of credentials,
+      *         or  null if no LDAP Attributes have been set.
+      */
+     public Map<String, String> getLDAPAttributes() {
+         return ldapAttrs;
+     }
+
+     /**
+      * Sets the LDAP attributes associated with this set of credentials.
+      * @param attributes The LDAP attributes to associate with this set of
+      *                   credentials.
+      */
+     public void setLDAPAttributes(Map<String, String> attributes) {
+         this.ldapAttrs = attributes;
+     }
+
+    /**

@@ -1,0 +1,5 @@
+            if (exp != null) {
+                Expression replacement = exp.getNodeMetaData(TraitASTTransformation.POST_TYPECHECKING_REPLACEMENT);
+                if (replacement!=null) {
+                    return replacement;
+                }

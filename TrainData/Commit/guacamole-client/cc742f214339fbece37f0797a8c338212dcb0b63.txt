@@ -1,0 +1,1 @@
+    public static final StringSetProperty SKIP_IF_UNAVAILABLE = new StringSetProperty() {

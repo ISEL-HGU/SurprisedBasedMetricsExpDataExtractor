@@ -1,0 +1,19 @@
+        if (name == null)
+            throw new GroovyRuntimeException("Module file hasn't set the module name using key ["  PropertiesModuleFactory.MODULE_NAME_KEY  "]");
+        if (version == null)
+            throw new GroovyRuntimeException("Module file hasn't set the module version using key ["  PropertiesModuleFactory.MODULE_VERSION_KEY  "]");
+        loadExtensionClass(loader, extensionClasses, instanceClasses, errors);
+        loadExtensionClass(loader, staticExtensionClasses, staticClasses, errors);
+                LOG.warning("Module ["  name  "] - Unable to load extension class ["  error  "]");
+    private static void loadExtensionClass(ClassLoader loader, String[] extensionClasses, List<Class> instanceClasses, List<String> errors) {
+        for (String extensionClass : extensionClasses) {
+            try {
+                extensionClass = extensionClass.trim();
+                if (extensionClass.length() > 0) {
+                    instanceClasses.add(loader.loadClass(extensionClass));
+                }
+            } catch (ClassNotFoundException | NoClassDefFoundError | UnsupportedClassVersionError e) {
+                errors.add(extensionClass);
+            }
+        }
+    }

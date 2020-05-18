@@ -1,0 +1,4 @@
+     * Classes to include when adding {@link NestedConfigurationProperty} annotations.
+    private static final Pattern INCLUDE_INNER_PATTERN = Pattern.compile("org\\.apache\\.camel\\..*");
+                && INCLUDE_INNER_PATTERN.matcher(type).matches()
+                if (INCLUDE_INNER_PATTERN.matcher(optionType).matches()

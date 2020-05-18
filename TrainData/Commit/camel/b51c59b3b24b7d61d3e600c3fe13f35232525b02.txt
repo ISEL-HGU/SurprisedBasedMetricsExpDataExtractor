@@ -1,0 +1,57 @@
+
+                .append(s)
+                .build();
+                .append(s)
+                .append(end)
+                .build();
+                .append(bytes)
+                .append(end).build();
+                .append(end).build();
+                .append(end).build();
+                .append(s).build();
+
+    public PayloadBuilder append(byte b) throws IOException {
+        builderStream.write(b);
+
+        return this;
+    }
+
+    public PayloadBuilder append(byte[] bytes) throws IOException {
+        builderStream.write(bytes);
+
+        return this;
+    }
+
+    public PayloadBuilder append(char... chars) throws IOException {
+        if (chars != null) {
+            for (char c : chars) {
+                builderStream.write(c);
+            }
+        }
+
+        return this;
+    }
+
+    public PayloadBuilder append(String... strings) throws IOException {
+        if (strings != null) {
+            for (String s : strings) {
+                builderStream.write(s.getBytes());
+            }
+        }
+
+        return this;
+    }
+
+    public PayloadBuilder append(byte[] payload, int startPosition, int length) throws IOException {
+        builderStream.write(payload, startPosition, length);
+
+        return this;
+    }
+
+    public byte[] build() {
+        byte[] answer = builderStream.toByteArray();
+
+        builderStream.reset();
+
+        return answer;
+    }

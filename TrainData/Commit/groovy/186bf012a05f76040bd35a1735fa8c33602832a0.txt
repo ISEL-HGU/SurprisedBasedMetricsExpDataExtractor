@@ -1,0 +1,4 @@
+                    // maybe we have C[k1:v1, k2:v2] -> should become (C)([k1:v1, k2:v2])
+                        ce.setCoerce(true);
+                CastExpression ce = new CastExpression(left.getType(), right);
+                ce.setCoerce(true);

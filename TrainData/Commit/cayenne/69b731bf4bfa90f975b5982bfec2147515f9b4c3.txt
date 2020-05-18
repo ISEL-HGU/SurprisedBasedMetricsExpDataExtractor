@@ -1,0 +1,1 @@
+    private static final String COPY_PATTERN = "copy of %s (%d)";

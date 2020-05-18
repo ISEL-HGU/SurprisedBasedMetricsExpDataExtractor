@@ -1,0 +1,6 @@
+import org.codehaus.groovy.vmplugin.VMPluginFactory;
+        String useClassValueDefault =
+				(VMPluginFactory.getPlugin().getVersion() >= 7 || "IBM J9 VM".equals(System.getProperty("java.vm.name")))
+						? "true" : "false";
+
+        USE_CLASSVALUE = Boolean.valueOf(System.getProperty("groovy.use.classvalue", useClassValueDefault));

@@ -1,0 +1,39 @@
+import java.util.Map;
+import java.util.Set;
+     * The prefix of the arbitrary attribute tokens.
+     */
+    public static final String ATTR_TOKEN_PREFIX = "GUAC_ATTR_";
+
+    /**
+     * the current username (GUAC_USERNAME), password (GUAC_PASSWORD), the
+     * server date and time (GUAC_DATE and GUAC_TIME respectively), and custom
+     * user attributes. If either the username or password are not set within
+     * the given user or their provided credentials, the corresponding token(s)
+     * will remain unset.
+        // Add custom attribute tokens
+        addAttributeTokens(filter, user.getAttributes());
+    }
+
+    /**
+     * Add attribute tokens to StandardTokens.  These are arbitrary
+     * key/value pairs that may be configured by the various authentication
+     * extensions.
+     *
+     * @param filter
+     *     The TokenFilter to add attribute tokens to.
+     *
+     * @param attributes
+     *     The map of key/value pairs to add tokens for.
+     */
+    public static void addAttributeTokens(TokenFilter filter,
+            Map<String, String> attributes) {
+
+        if (attributes != null) {
+            for (Map.Entry entry : attributes.entrySet()) {
+                String key = entry.getKey().toString();
+                String tokenName = ATTR_TOKEN_PREFIX  key.toUpperCase();
+                String tokenValue = entry.getValue().toString();
+                filter.setToken(tokenName, tokenValue);
+            }
+        }
+

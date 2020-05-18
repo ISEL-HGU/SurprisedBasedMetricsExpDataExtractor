@@ -1,0 +1,7 @@
+    protected String getJobName(Class<?> jobClass)
+    {
+        return jobClass.getName();
+    }
+
+    @Override
+        return JobAdapter.class;

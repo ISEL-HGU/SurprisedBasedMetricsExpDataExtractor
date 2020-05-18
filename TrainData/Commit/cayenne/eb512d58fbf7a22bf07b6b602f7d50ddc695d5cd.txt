@@ -1,0 +1,7 @@
+import org.apache.cayenne.access.types.LocalDateTimeValueType;
+import org.apache.cayenne.access.types.LocalDateValueType;
+import org.apache.cayenne.access.types.LocalTimeValueType;
+                .add(UUIDValueType.class)
+                .add(LocalDateValueType.class)
+                .add(LocalTimeValueType.class)
+                .add(LocalDateTimeValueType.class);

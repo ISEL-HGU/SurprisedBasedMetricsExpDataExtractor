@@ -1,0 +1,7 @@
+            Parameter[] params = makeRawTypes(safeNode.getParameters(), declaringClassForDistance, actualReceiverForDistance);
+    private static ClassNode findGenericsTypeByPlaceholderName(String placeholderName, Map<String, GenericsType> placeholderInfo) {
+        for (Map.Entry<String, GenericsType> entry : placeholderInfo.entrySet()) {
+            if (placeholderName.equals(entry.getKey())) {
+    private static Parameter[] makeRawTypes(Parameter[] params, ClassNode declaringClassForDistance, ClassNode actualReceiverForDistance) {
+        Map<String, GenericsType> placeholderInfo = GenericsUtils.extractPlaceholders(GenericsUtils.findParameterizedType(declaringClassForDistance, actualReceiverForDistance));
+            ClassNode actualType = findGenericsTypeByPlaceholderName(oldP.getType().getUnresolvedName(), placeholderInfo);

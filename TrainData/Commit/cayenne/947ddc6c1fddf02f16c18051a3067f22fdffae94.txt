@@ -1,0 +1,1 @@
+                if(!lastProjectsFiles.contains(file) && file.exists()) {

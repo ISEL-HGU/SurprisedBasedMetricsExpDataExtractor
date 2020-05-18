@@ -1,0 +1,12 @@
+    private static final String BIGINTEGER_STR = "BigInteger";
+    private static final String BIGDECIMAL_STR = "BigDecimal";
+
+    private ClassNode currentClass;
+    private boolean resolveFromDefaultImports(final ClassNode type, boolean testDefaultImports) {
+        final String typeName = type.getName();
+
+            for (String packagePrefix : DEFAULT_IMPORTS) {
+                ConstructedClassWithPackage tmp = new ConstructedClassWithPackage(packagePrefix, typeName);
+
+            if (BIGINTEGER_STR.equals(typeName)) {
+            } else if (BIGDECIMAL_STR.equals(typeName)) {

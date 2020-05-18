@@ -1,0 +1,5 @@
+        String[] configurationLocations = null;
+        if (configurationLocation != null) {
+        	configurationLocations = configurationLocation.split(",\\s*");
+        }
+                .addConfigs(configurationLocations)

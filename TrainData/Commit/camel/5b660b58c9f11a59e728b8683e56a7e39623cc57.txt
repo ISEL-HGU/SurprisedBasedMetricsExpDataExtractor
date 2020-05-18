@@ -1,0 +1,10 @@
+        createComponentConfigurationSourceInnerClass(javaClass, nestedTypes, model);
+
+        sortImports(javaClass);
+
+        String fileName = packageName.replaceAll("\\.", "\\/")  "/"  name  ".java";
+
+        writeSourceIfChanged(javaClass, fileName);
+    }
+
+    private void createComponentConfigurationSourceInnerClass(JavaClassSource javaClass, Set<JavaClassSource> nestedTypes, ComponentModel model) throws MojoFailureException {

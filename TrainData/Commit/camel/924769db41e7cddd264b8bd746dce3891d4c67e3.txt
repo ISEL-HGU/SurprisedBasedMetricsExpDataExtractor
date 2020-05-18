@@ -1,0 +1,3 @@
+ * <p/>
+ * Notice that beans in the fallback registry are not managed by the first-choice registry, so these beans
+ * may not support dependency injection and other features that the first-choice registry may offer.

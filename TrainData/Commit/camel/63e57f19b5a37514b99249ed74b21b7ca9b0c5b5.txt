@@ -1,0 +1,6 @@
+                // strip namespace prefix
+                int pos = qName.indexOf(':');
+                String lNane = pos > 0 ? qName.substring(pos  1) : qName;
+
+                        el = doc.createElementNS(forceNamespace, lNane);
+                        el = doc.createElement(lNane);

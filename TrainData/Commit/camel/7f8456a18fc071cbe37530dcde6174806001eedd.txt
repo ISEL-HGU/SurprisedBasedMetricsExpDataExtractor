@@ -1,0 +1,3 @@
+ * The caffeine-loadcache component is used for integration with Caffeine Load
+ * Cache.
+        private EvictionType evictionType = EvictionType.SIZE_BASED;

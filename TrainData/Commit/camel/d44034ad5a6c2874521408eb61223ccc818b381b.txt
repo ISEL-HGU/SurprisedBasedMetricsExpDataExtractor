@@ -1,0 +1,21 @@
+import io.fabric8.kubernetes.client.Watch;
+    private NodesConsumerTask nodesWatcher;
+        nodesWatcher = new NodesConsumerTask();
+        executor.submit(nodesWatcher);
+                if (nodesWatcher != null) {
+                	nodesWatcher.getWatch().close();
+                }
+                if (nodesWatcher != null) {
+                	nodesWatcher.getWatch().close();
+                }
+        private Watch watch;
+        
+            watch = w.watch(new Watcher<Node>() {
+        }
+       
+        public Watch getWatch() {
+            return watch;
+        }
+
+        public void setWatch(Watch watch) {
+            this.watch = watch;

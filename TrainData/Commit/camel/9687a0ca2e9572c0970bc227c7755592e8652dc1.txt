@@ -1,0 +1,35 @@
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+import org.apache.camel.util.KeyValueHolder;
+    private final ConcurrentMap<PreparedErrorHandler, AsyncProcessor> errorHandlers = new ConcurrentHashMap<PreparedErrorHandler, AsyncProcessor>();
+
+    /**
+     * Class that represents prepared fine grained error handlers when processing routingslip/dynamic-router exchanges
+     * <p/>
+     * This is similar to how multicast processor does.
+     */
+    static final class PreparedErrorHandler extends KeyValueHolder<String, Processor> {
+
+        PreparedErrorHandler(String key, Processor value) {
+            super(key, value);
+        }
+
+    }
+            // create key for cache
+            final PreparedErrorHandler key = new PreparedErrorHandler(endpoint.getEndpointUri(), processor);
+
+            // lookup cached first to reuse and preserve memory
+            answer = errorHandlers.get(key);
+            if (answer != null) {
+                log.trace("Using existing error handler for: {}", processor);
+                return answer;
+            }
+
+                // add to cache
+                errorHandlers.putIfAbsent(key, answer);
+
+                       } catch (Throwable e) {
+        ServiceHelper.stopAndShutdownServices(producerCache, errorHandlers);
+
+        // only clear error handlers when shutting down
+        errorHandlers.clear();

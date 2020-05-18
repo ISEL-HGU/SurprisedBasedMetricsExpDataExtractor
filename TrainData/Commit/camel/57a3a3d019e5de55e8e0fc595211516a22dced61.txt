@@ -1,0 +1,13 @@
+     * To use an specific hostname for the API documentation (eg swagger) This
+     * can be used to override the generated host with this configured hostname
+     */
+    private String apiHost;
+    /**
+    public String getApiHost() {
+        return apiHost;
+    }
+
+    public void setApiHost(String apiHost) {
+        this.apiHost = apiHost;
+    }
+

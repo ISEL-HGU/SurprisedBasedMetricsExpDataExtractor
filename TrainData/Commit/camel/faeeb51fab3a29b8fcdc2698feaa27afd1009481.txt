@@ -1,0 +1,24 @@
+import org.apache.camel.Exchange;
+import org.apache.camel.Expression;
+import org.apache.camel.support.DefaultExchange;
+
+            // if the name has dot's then its an OGNL expressions (so lets use simple language to walk down this ognl path)
+            boolean ognl = name.contains(".");
+            if (ognl) {
+                Language method = context.resolveLanguage("simple");
+                String path = name.substring(0, name.lastIndexOf('.'));
+                Expression exp = method.createExpression("${body."  path  "}");
+                Exchange dummy = new DefaultExchange(context);
+                dummy.getMessage().setBody(target);
+                Object newTarget = exp.evaluate(dummy, Object.class);
+                if (newTarget != null) {
+                    target = newTarget;
+                    name = name.substring(name.lastIndexOf('.')  1);
+                }
+            }
+
+
+
+            LOG.debug("Setting property {} on {} with value {}", name, target, stringValue);
+                hit = IntrospectionSupport.setProperty(context, context.getTypeConverter(), target, name, null, stringValue, true);
+                    hit = IntrospectionSupport.setProperty(context, context.getTypeConverter(), target, name, null, stringValue, true);

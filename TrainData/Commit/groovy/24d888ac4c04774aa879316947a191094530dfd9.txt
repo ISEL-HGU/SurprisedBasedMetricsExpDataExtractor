@@ -1,0 +1,2 @@
+     * Get the type of array elements by the dimension
+    public static Class elementType(Class clazz, int dim) {

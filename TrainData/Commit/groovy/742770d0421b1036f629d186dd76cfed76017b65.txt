@@ -1,0 +1,1 @@
+        for (ClassNode enclosingClassNode = currentClass; ClassHelper.OBJECT_TYPE != enclosingClassNode && null != enclosingClassNode; enclosingClassNode = enclosingClassNode.getSuperClass()) {

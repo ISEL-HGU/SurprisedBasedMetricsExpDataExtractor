@@ -1,0 +1,1 @@
+            int length = valueStr != null ? valueStr.length() : 0;

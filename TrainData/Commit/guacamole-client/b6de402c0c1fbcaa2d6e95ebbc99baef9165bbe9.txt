@@ -1,0 +1,37 @@
+import java.util.Collection;
+    private ArbitraryAttributeMap arbitraryAttributes =
+            new ArbitraryAttributeMap();
+    public ArbitraryAttributeMap getArbitraryAttributeMap() {
+     * Returns whether at least one arbitrary attribute name/value pair has
+     * been associated with this object.
+     *
+     * @return
+     *     true if this object has at least one arbitrary attribute set, false
+     *     otherwise.
+     */
+    public boolean hasArbitraryAttributes() {
+        return !arbitraryAttributes.isEmpty();
+    }
+
+    /**
+     * Returns a Collection view of the equivalent attribute model objects
+     * which make up the map of arbitrary attribute name/value pairs returned
+     * by getArbitraryAttributeMap(). Additions and removals on the returned
+     * Collection directly affect the attribute map.
+     *
+     * @return
+     *      A Collection view of the map returned by
+     *      getArbitraryAttributeMap().
+     */
+    public Collection<ArbitraryAttributeModel> getArbitraryAttributes() {
+        return arbitraryAttributes.toModelCollection();
+    }
+
+    /**
+     * Replaces all arbitrary attributes associated with this object with the
+     * attribute name/value pairs within the given collection of model objects.
+     *     The Collection of model objects containing the attribute name/value
+     *     pairs which should replace all currently-stored arbitrary attributes,
+     *     if any.
+    public void setArbitraryAttributes(Collection<ArbitraryAttributeModel> arbitraryAttributes) {
+        this.arbitraryAttributes = ArbitraryAttributeMap.fromModelCollection(arbitraryAttributes);

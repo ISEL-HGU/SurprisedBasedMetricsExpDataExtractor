@@ -1,0 +1,5 @@
+        
+        Object queueMaxPriority = queueArgs.get(RabbitMQConstants.RABBITMQ_QUEUE_MAX_PRIORITY_KEY);
+        if (queueMaxPriority instanceof String) {
+            queueArgs.put(RabbitMQConstants.RABBITMQ_QUEUE_MAX_PRIORITY_KEY, Integer.parseInt((String) queueMaxPriority));
+        }

@@ -1,0 +1,4 @@
+        SOAPMessage soapMessageRequest = null;
+            soapMessageRequest = saajSoap.getSaajMessage();
+            if (soapMessageRequest != null) {
+                MimeHeaders mimeHeaders = soapMessageRequest.getMimeHeaders();

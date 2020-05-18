@@ -1,0 +1,2 @@
+                .module("camel-cache")
+                .resource("components/cache-ehcache.xml", "ehcache.xml")

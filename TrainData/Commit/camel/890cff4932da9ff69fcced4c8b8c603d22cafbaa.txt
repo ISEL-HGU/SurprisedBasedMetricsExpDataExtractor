@@ -1,0 +1,1 @@
+            } else if (mapper.canSerialize(type) && !Enum.class.isAssignableFrom(type)) {

@@ -1,0 +1,6 @@
+            synchronized (this.headers) {
+                this.headers.addAll(Arrays.asList(headers));   
+            }
+                synchronized (headers) {
+                    headers.add(convertToMandatoryType(exchange, String.class, key));
+                }

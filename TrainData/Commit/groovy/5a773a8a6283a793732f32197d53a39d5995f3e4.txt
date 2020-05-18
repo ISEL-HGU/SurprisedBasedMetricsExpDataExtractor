@@ -1,0 +1,8 @@
+				if (isLengthOdd(_1)) {
+				if (isLengthOdd(_1)) {
+								if (isLengthOdd(_1)) {
+				if (isLengthOdd(_1)) {
+	private static boolean isLengthOdd(String str) {
+		return null != str && str.length() % 2 == 1;
+	}
+

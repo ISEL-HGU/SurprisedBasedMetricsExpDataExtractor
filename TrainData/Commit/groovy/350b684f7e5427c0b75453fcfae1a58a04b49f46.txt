@@ -1,0 +1,12 @@
+    private static final String GROOVY_ANTLR4_OPT = "groovy.antlr4";
+
+     *
+     * The antlr4 parser Parrot is enabled by default
+     *
+    private ParserVersion parserVersion = ParserVersion.V_4;
+            String groovyAntlr4Opt = System.getProperty(GROOVY_ANTLR4_OPT);
+
+            this.parserVersion =
+                    null == groovyAntlr4Opt || Boolean.valueOf(groovyAntlr4Opt)
+                            ? ParserVersion.V_4
+                            : ParserVersion.V_2;

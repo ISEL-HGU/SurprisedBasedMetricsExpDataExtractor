@@ -1,0 +1,4 @@
+                    // may contain yet another placeholder
+                    if (resolved.contains("${")) {
+                        resolved = resolveVersion(project, resolved);
+                    }

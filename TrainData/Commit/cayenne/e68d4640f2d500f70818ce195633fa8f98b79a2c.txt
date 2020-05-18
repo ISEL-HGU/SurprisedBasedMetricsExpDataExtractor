@@ -1,0 +1,9 @@
+import java.util.Collections;
+	 * @since 4.0 renamed to {@link #addCallback(LifecycleEvent, Class, String)}.
+						Set<Class<?>> types = new HashSet<>();
+						// TODO: ignoring entity subclasses?
+						// whenever we add those, take into account "exlcudeSuperclassListeners" flag
+						Collections.addAll(types, entities);
+			entities = new HashSet<>();
+				// a given annotation and register it once
+				// which is not possible with annotations anyways

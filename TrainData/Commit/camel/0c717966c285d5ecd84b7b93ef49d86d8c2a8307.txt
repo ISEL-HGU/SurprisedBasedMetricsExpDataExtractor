@@ -1,0 +1,15 @@
+                if (header.getName().equalsIgnoreCase(AS2Header.CONTENT_TYPE)) {
+                }
+                else if (header.getName().equalsIgnoreCase(AS2Header.CONTENT_TRANSFER_ENCODING)) {
+                if (header.getName().equalsIgnoreCase(AS2Header.CONTENT_TYPE)) {
+                }
+                else if (header.getName().equalsIgnoreCase(AS2Header.CONTENT_TRANSFER_ENCODING)) {
+                if (header.getName().equalsIgnoreCase(AS2Header.CONTENT_TYPE)) {
+                }
+                else if (header.getName().equalsIgnoreCase(AS2Header.CONTENT_TRANSFER_ENCODING)) {
+                if (header.getName().equalsIgnoreCase(AS2Header.CONTENT_TYPE)) {
+                }
+                else if (header.getName().equalsIgnoreCase(AS2Header.CONTENT_TRANSFER_ENCODING)) {
+                if (header.getName().equalsIgnoreCase(AS2Header.CONTENT_TYPE)) {
+                }
+                else if (header.getName().equalsIgnoreCase(AS2Header.CONTENT_TRANSFER_ENCODING)) {

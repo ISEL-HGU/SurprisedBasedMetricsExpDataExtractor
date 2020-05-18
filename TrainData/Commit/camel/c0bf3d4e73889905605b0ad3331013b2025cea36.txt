@@ -1,0 +1,5 @@
+    @Override
+    public Exchange aggregate(Exchange oldExchange, Exchange newExchange, Exchange inputExchange) {
+        return ObjectHelper.notNull(strategy, "AggregationStrategy").aggregate(oldExchange, newExchange, inputExchange);
+    }
+

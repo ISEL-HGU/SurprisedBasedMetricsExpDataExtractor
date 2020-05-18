@@ -1,0 +1,14 @@
+import org.apache.camel.util.EndpointHelper;
+                    String filter = configurationProperties.getJavaRoutesFilter();
+                    if (!"false".equals(filter)) {
+                        String name = routesBuilder.getClass().getSimpleName();
+                        boolean result = "*".equals(filter) || EndpointHelper.matchPattern(name, filter);
+                        LOG.debug("Java RoutesBuilder: {} apply filter: {} -> {}", name, filter, result);
+                        if (result) {
+                            try {
+                                LOG.debug("Injecting following route into the CamelContext: {}", routesBuilder);
+                                camelContext.addRoutes(routesBuilder);
+                            } catch (Exception e) {
+                                throw new CamelSpringBootInitializationException(e);
+                            }
+                        }

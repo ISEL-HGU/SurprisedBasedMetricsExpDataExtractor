@@ -1,0 +1,10 @@
+            if (boolean.class == type || Boolean.class == type) {
+        private final int hashCode;
+
+            // pre calculate hashcode
+            int hash = toType.hashCode();
+            if (fromType != null) {
+                hash *= 37  fromType.hashCode();
+            }
+            hashCode = hash;
+            return hashCode;

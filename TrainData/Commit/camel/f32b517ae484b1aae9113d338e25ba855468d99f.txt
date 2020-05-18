@@ -1,0 +1,1 @@
+@UriEndpoint(firstVersion = "1.2.0", scheme = "jetty", extendsScheme = "http", title = "Jetty",

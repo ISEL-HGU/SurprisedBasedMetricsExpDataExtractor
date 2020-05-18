@@ -1,0 +1,9 @@
+import javax.tools.Diagnostic.Kind;
+            validateSchemaName(scheme, classElement);
+    private void validateSchemaName(final String schemaName, final TypeElement classElement) {
+        // our schema name has to be in lowercase
+        if (!schemaName.equals(schemaName.toLowerCase())) {
+            processingEnv.getMessager().printMessage(Kind.ERROR, String.format("Schema name '%s' in '%s' must be lowercase!", schemaName, classElement.getQualifiedName()));
+        }
+    }
+

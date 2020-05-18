@@ -1,0 +1,10 @@
+                String trimmedLine;
+
+                // if separator is a tab, don't trim any leading whitespaces (could be empty values separated by tabs)
+                if (separator.equals("\t")) {
+                    // trim only trailing whitespaces
+                    trimmedLine = line.replaceAll("\\s$", "");
+                } else {
+                    trimmedLine = line.trim();
+                }
+

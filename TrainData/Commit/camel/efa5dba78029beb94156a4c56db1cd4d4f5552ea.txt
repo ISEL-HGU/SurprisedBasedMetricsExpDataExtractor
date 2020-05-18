@@ -1,0 +1,18 @@
+     * Sets whether the route should automatically start when Camel starts.
+     * <p/>
+     * Default is <tt>true</tt> to always start up.
+     *
+     * @param autoStartup whether to start up automatically.
+     */
+    void setAutoStartup(Boolean autoStartup);
+
+    /**
+     * Gets whether the route should automatically start when Camel starts.
+     * <p/>
+     * Default is <tt>true</tt> to always start up.
+     *
+     * @return <tt>true</tt> if route should automatically start
+     */
+    Boolean isAutoStartup();
+
+    /**

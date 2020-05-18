@@ -1,0 +1,11 @@
+import com.amazonaws.client.builder.AwsClientBuilder.EndpointConfiguration;
+        AmazonSimpleDBClientBuilder clientBuilder = null;
+                clientBuilder = AmazonSimpleDBClientBuilder.standard().withClientConfiguration(clientConfiguration).withCredentials(credentialsProvider);
+                clientBuilder = AmazonSimpleDBClientBuilder.standard().withCredentials(credentialsProvider);
+                clientBuilder = AmazonSimpleDBClientBuilder.standard();
+                clientBuilder = AmazonSimpleDBClientBuilder.standard().withClientConfiguration(clientConfiguration);
+        if (ObjectHelper.isNotEmpty(configuration.getAmazonSdbEndpoint()) && ObjectHelper.isNotEmpty(configuration.getRegion())) {
+            EndpointConfiguration endpointConfiguration = new EndpointConfiguration(configuration.getAmazonSdbEndpoint(), configuration.getRegion());
+            clientBuilder = clientBuilder.withEndpointConfiguration(endpointConfiguration);
+        }
+        client = clientBuilder.build();

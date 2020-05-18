@@ -1,0 +1,8 @@
+import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.services.sqs.AmazonSQSClientBuilder;
+            AWSCredentialsProvider credentialsProvider = new AWSStaticCredentialsProvider(credentials);
+                client = AmazonSQSClientBuilder.standard().withClientConfiguration(clientConfiguration).withCredentials(credentialsProvider).build();
+                client = AmazonSQSClientBuilder.standard().withCredentials(credentialsProvider).build();
+                client = AmazonSQSClientBuilder.standard().build();
+                client = AmazonSQSClientBuilder.standard().withClientConfiguration(clientConfiguration).build();

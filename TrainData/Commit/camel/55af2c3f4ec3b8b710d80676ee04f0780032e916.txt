@@ -1,0 +1,3 @@
+            copy.sort(OrderedComparator.get());
+            copy.sort(OrderedComparator.get());
+            copy.sort(OrderedComparator.get());

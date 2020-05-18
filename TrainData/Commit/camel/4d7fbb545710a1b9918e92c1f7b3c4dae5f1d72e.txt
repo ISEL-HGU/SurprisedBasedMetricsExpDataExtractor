@@ -1,0 +1,18 @@
+import org.apache.camel.util.ObjectHelper;
+    AtomixClusterView(AtomixClusterService cluster, String namespace, Atomix atomix) {
+            group.election().onElection(term -> fireLeadershipChangedEvent(asCamelClusterMember(term.leader())));
+
+            LOGGER.debug("Listen join events");
+            group.onJoin(member -> fireMemberAddedEvent(asCamelClusterMember(member)));
+
+            LOGGER.debug("Listen leave events");
+            group.onLeave(member -> fireMemberRemovedEvent(asCamelClusterMember(member)));
+            return member.equals(group.election().term().leader());
+                String id = getClusterService().getId();
+                if (ObjectHelper.isNotEmpty(id)) {
+                    LOGGER.debug("Joining group: {}, with id: {}", group, id);
+                    member = group.join(id).join();
+                } else {
+                    LOGGER.debug("Joining group: {} ", group);
+                    member = group.join().join();
+                }

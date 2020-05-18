@@ -1,0 +1,2 @@
+     * List of field and/or property names to include within the constructor. The order of inclusion
+     * is determined by the order in which the names are specified.

@@ -1,0 +1,4 @@
+public interface ConnectionRecordSet extends ActivityRecordSet<ConnectionRecord> {
+    @Override
+    @Override
+    @Override

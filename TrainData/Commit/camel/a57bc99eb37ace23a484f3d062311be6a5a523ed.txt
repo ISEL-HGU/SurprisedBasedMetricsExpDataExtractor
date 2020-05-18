@@ -1,0 +1,16 @@
+    private final DataType inputDataType;
+    private final DataType outputDataType;
+    public DefaultConnectorEndpoint(String endpointUri, ConnectorComponent component, Endpoint endpoint,
+                                    DataType inputDataType, DataType outputDataType) {
+        this.inputDataType = inputDataType;
+        this.outputDataType = outputDataType;
+    @ManagedAttribute(description = "Input data type")
+    public DataType getInputDataType() {
+        return inputDataType;
+    }
+
+    @ManagedAttribute(description = "Output data type")
+    public DataType getOutputDataType() {
+        return outputDataType;
+    }
+

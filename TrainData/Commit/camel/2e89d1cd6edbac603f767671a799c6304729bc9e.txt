@@ -1,0 +1,16 @@
+    
+    @UriParam
+    private String mdnMessageTemplate;
+
+    public String getMdnMessageTemplate() {
+        return mdnMessageTemplate;
+    }
+
+    /**
+     * The template used to format MDN message
+     */
+    public void setMdnMessageTemplate(String mdnMessageTemplate) {
+        this.mdnMessageTemplate = mdnMessageTemplate;
+    }
+    
+    

@@ -1,0 +1,8 @@
+    private static final String JDK9_CLASSNAME_CHECK = "java.lang.Module";
+
+    private static final String JDK9_PLUGIN_NAME = "org.codehaus.groovy.vmplugin.v9.Java9";
+        VMPlugin target = createPlugin(JDK9_CLASSNAME_CHECK, JDK9_PLUGIN_NAME);
+            target = createPlugin(JDK8_CLASSNAME_CHECK, JDK8_PLUGIN_NAME);
+            if (target == null) {
+                target = new Java7();
+            }

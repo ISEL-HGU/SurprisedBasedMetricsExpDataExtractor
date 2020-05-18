@@ -1,0 +1,25 @@
+        } else if (relationship.getSourceEntity().getAttribute(relationship.getName()) != null) {
+            // check if there are attributes having the same name
+        } else {
+            } else if (helper.invalidDataObjectProperty(relationship.getName())) {
+        } else {
+            } else {
+                DbEntity expectedSrc = relationship.getSourceEntity().getDbEntity();
+                DbEntity expectedTarget = relationship.getTargetEntity().getDbEntity();
+        ObjEntity entity = relationship.getSourceEntity();
+    private void checkForDuplicates(ObjRelationship  relationship, ValidationResult validationResult) {
+            ObjEntity entity = relationship.getSourceEntity();
+            for (ObjRelationship comparisonRelationship : entity.getRelationships()) {
+                if (relationship != comparisonRelationship) {
+                    String comparisonDbRelationshipPath =
+                               comparisonRelationship.getTargetEntityName() 
+                               "." 
+                               comparisonRelationship.getDbRelationshipPath();
+                    if (dbRelationshipPath.equals(comparisonDbRelationshipPath)) {
+                        addFailure(validationResult,
+                                   relationship,
+                                   "ObjEntity '%s' contains a duplicate ObjRelationship mapping ('%s' -> '%s')",
+                                   entity.getName(),
+                                   relationship.getName(),
+                                   dbRelationshipPath);
+                        return; // Duplicate found, stop.

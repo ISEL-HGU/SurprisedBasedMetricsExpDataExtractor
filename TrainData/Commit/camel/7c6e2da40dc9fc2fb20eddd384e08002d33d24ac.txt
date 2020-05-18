@@ -1,0 +1,2 @@
+        if (className != null ? !className.equals(that.className) : that.className != null) {
+        result = 31 * result  (className != null ? className.hashCode() : 0);

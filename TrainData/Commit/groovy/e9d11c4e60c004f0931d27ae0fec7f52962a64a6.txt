@@ -1,0 +1,2 @@
+interface ProtectionStorage<K, V> {
+    void touch(K key, V value);

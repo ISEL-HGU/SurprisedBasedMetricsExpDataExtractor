@@ -1,0 +1,36 @@
+import com.amazonaws.regions.Region;
+import com.amazonaws.services.lambda.AWSLambda;
+import com.amazonaws.services.lambda.model.DeleteFunctionConcurrencyRequest;
+import com.amazonaws.services.lambda.model.DeleteFunctionConcurrencyResult;
+import com.amazonaws.services.lambda.model.PutFunctionConcurrencyRequest;
+import com.amazonaws.services.lambda.model.PutFunctionConcurrencyResult;
+public class AmazonLambdaClientMock implements AWSLambda {
+        super();
+
+    @Override
+    public void setEndpoint(String endpoint) {   
+    }
+
+    @Override
+    public void setRegion(Region region) {
+    }
+
+    @Override
+    public DeleteFunctionConcurrencyResult deleteFunctionConcurrency(DeleteFunctionConcurrencyRequest deleteFunctionConcurrencyRequest) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public InvokeAsyncResult invokeAsync(InvokeAsyncRequest invokeAsyncRequest) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public PutFunctionConcurrencyResult putFunctionConcurrency(PutFunctionConcurrencyRequest putFunctionConcurrencyRequest) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void shutdown() {
+        throw new UnsupportedOperationException();        
+    }

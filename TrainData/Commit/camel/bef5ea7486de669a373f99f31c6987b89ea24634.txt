@@ -1,0 +1,5 @@
+ b/components/camel-grape/src/main/java/org/apache/camel/component/grape/PatchesRepository.java
+package org.apache.camel.component.grape;
+import java.util.List;
+
+public interface PatchesRepository {

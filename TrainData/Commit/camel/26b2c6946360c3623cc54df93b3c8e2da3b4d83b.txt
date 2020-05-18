@@ -1,0 +1,19 @@
+import org.apache.camel.TimeoutMap.Listener.Type;
+        map = new DefaultTimeoutMap<>(scheduledExecutorService, timeoutChecker);
+        map.addListener(this::onEviction);
+    private void onEviction(Type type, String key, NettyCamelState value) {
+        if (type != Type.Evict) {
+            return;
+        timeoutLogger.log("Timeout of correlation id: "  key);
+        workerPool.submit(() -> {
+            Exchange exchange = value.getExchange();
+            AsyncCallback callback = value.getCallback();
+            if (exchange != null && callback != null) {
+                Object timeoutBody = getTimeoutResponse(key, exchange.getMessage().getBody());
+                if (timeoutBody != null) {
+                    exchange.getMessage().setBody(timeoutBody);
+                } else {
+                    exchange.setException(new ExchangeTimedOutException(exchange, timeout));
+                callback.done(false);
+            }
+        });

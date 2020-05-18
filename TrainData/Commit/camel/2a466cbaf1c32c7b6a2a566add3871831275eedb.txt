@@ -1,0 +1,13 @@
+     * Set the UserTokenPolicy used when
+     */
+    private SecurityPolicy usernameSecurityPolicyUri;
+    /**
+    public SecurityPolicy getUsernameSecurityPolicyUri() {
+        return usernameSecurityPolicyUri;
+    }
+
+    public void setUsernameSecurityPolicyUri(
+            SecurityPolicy usernameSecurityPolicyUri) {
+        this.usernameSecurityPolicyUri = usernameSecurityPolicyUri;
+    }
+

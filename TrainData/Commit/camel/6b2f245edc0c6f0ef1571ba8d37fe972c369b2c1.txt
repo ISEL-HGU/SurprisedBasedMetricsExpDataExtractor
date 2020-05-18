@@ -1,0 +1,32 @@
+ * @version
+
+    }
+
+
+
+
+
+
+                return "bodyExpression ("  bodyType  ")";
+                return "bodyExpression ("  bodyType  ")";
+
+
+
+        return BeanLanguage.bean(bean, methodName);
+                            .mandatoryConvertTo(PropertiesComponent.class, component);
+                                 " in CamelContext to support property placeholders in expressions");
+                            .mandatoryConvertTo(PropertiesComponent.class, component);
+        KeyedOgnlExpressionAdapter(String ognl, String toStringValue,
+
+            String key = methods.get(0);
+            String keySuffix = "";
+            // if ognl starts with a key inside brackets (eg: [foo.bar])
+            // remove starting and ending brackets from key
+            if (key.startsWith("[") && key.endsWith("]")) {
+                key = StringHelper.removeLeadingAndEndingQuotes(key.substring(1, key.length() - 1));
+                keySuffix = StringHelper.after(methods.get(0), key);
+            }
+            key = OgnlHelper.removeOperators(key);
+
+            String remainder = ObjectHelper.after(ognl, key  keySuffix);
+    }

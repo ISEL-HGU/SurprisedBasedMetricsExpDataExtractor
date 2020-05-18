@@ -1,0 +1,22 @@
+import io.fabric8.kubernetes.client.Watch;
+    private ReplicationControllersConsumerTask rcWatcher;
+        rcWatcher = new ReplicationControllersConsumerTask();
+        executor.submit(rcWatcher);       
+                if (rcWatcher != null) {
+                    rcWatcher.getWatch().close();
+                }
+                if (rcWatcher != null) {
+                    rcWatcher.getWatch().close();
+                }
+        
+        private Watch watch;
+        
+            watch = w.watch(new Watcher<ReplicationController>() {
+        
+        public Watch getWatch() {
+            return watch;
+        }
+
+        public void setWatch(Watch watch) {
+            this.watch = watch;
+        } 

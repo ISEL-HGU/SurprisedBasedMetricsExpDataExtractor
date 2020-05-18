@@ -1,0 +1,8 @@
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import java.util.Collection;
+import java.util.Map;
+
+        Collection<Module> modules = configAdapter.createModules();
+                .addModule(binder ->
+                        ROPServerModule.contributeROPBridgeProperties(binder).putAll(eventBridgeParameters))

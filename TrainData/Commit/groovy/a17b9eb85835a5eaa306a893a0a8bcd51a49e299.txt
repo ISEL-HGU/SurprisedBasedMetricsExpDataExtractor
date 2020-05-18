@@ -1,0 +1,9 @@
+
+        if (conditionExpression instanceof BinaryExpression) {
+            BinaryExpression binaryExpression = (BinaryExpression) conditionExpression;
+
+            if (binaryExpression.getOperation().getType() == Types.ASSIGN) {
+                throw createParsingFailedException("Assignment expression is not allowed in the assert statement", conditionExpression);
+            }
+        }
+

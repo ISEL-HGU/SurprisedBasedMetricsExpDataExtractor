@@ -1,0 +1,48 @@
+@relation ace-weka.filters.unsupervised.instance.NonSparseToSparse
+
+@attribute 'Modify Lines' numeric
+@attribute 'Add Lines' numeric
+@attribute 'Delete Lines' numeric
+@attribute 'Distribution modified Lines' numeric
+@attribute numOfBIC numeric
+@attribute AuthorID {' jawi@apache.org'}
+@attribute fileAge numeric
+@attribute SumOfSourceRevision numeric
+@attribute SumOfDeveloper numeric
+@attribute CommitHour numeric
+@attribute CommitDate {Wednesday,Tuesday}
+@attribute AGE numeric
+@attribute numOfSubsystems numeric
+@attribute numOfDirectories numeric
+@attribute numOfFiles numeric
+@attribute NUC numeric
+@attribute developerExperience numeric
+@attribute REXP numeric
+@attribute LT numeric
+@attribute Key {1aa4d1d137cd4c2df7a0f190ffe00e00e00db13a-org.apache.ace.gogo-src-org-apache-ace-gogo-repo-RepoCommands.java,d51bd89524b286e0333524e1b79400449153b4d2-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-LoginWindow.java,3f878e4e99c003a92f20f4698b40bba5b719f67b-org.apache.ace.deployment-src-org-apache-ace-deployment-provider-DeploymentProvider.java,3f878e4e99c003a92f20f4698b40bba5b719f67b-org.apache.ace.deployment-src-org-apache-ace-deployment-provider-repositorybased-RepositoryBasedProvider.java,0b7bcfe0f33bf23c6a4518cb04072834ea229c38-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-Activator.java,fad81b499115118244a82e9aef319ad392333b2b-org.apache.ace.obr-src-org-apache-ace-obr-servlet-BundleServlet.java,fa3439be12c0f1469390ccc41731dfe34aaa645e-org.apache.ace.useradmin.ui-src-org-apache-ace-useradmin-ui-osgi-Activator.java,fa3439be12c0f1469390ccc41731dfe34aaa645e-org.apache.ace.verifier-src-org-apache-ace-deployment-verifier-ui-ACEVerifierExtension.java,0b7bcfe0f33bf23c6a4518cb04072834ea229c38-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-VaadinClient.java,fa3439be12c0f1469390ccc41731dfe34aaa645e-org.apache.ace.target.mgmt.ui-src-org-apache-ace-target-management-ui-TargetManagementExtension.java,fad81b499115118244a82e9aef319ad392333b2b-org.apache.ace.obr-src-org-apache-ace-obr-storage-BundleStore.java,fa3439be12c0f1469390ccc41731dfe34aaa645e-org.apache.ace.tageditor-src-org-apache-ace-tageditor-ACETagEditorExtension.java,fa3439be12c0f1469390ccc41731dfe34aaa645e-org.apache.ace.log.server.ui-src-org-apache-ace-log-server-ui-LogViewerExtension.java,1aa4d1d137cd4c2df7a0f190ffe00e00e00db13a-org.apache.ace.gogo-src-org-apache-ace-gogo-Activator.java,d51bd89524b286e0333524e1b79400449153b4d2-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-component-MainActionToolbar.java,fad81b499115118244a82e9aef319ad392333b2b-org.apache.ace.obr-src-org-apache-ace-obr-storage-file-BundleFileStore.java,3f878e4e99c003a92f20f4698b40bba5b719f67b-org.apache.ace.deployment-src-org-apache-ace-deployment-provider-repositorybased-Activator.java,3f878e4e99c003a92f20f4698b40bba5b719f67b-org.apache.ace.deployment.itest-src-org-apache-ace-it-deployment-provider-filebased-FileBasedProvider.java,fad81b499115118244a82e9aef319ad392333b2b-org.apache.ace.obr-test-org-apache-ace-obr-servlet-MockBundleStore.java,3f878e4e99c003a92f20f4698b40bba5b719f67b-org.apache.ace.deployment.itest-src-org-apache-ace-it-deployment-provider-filebased-Activator.java,d51bd89524b286e0333524e1b79400449153b4d2-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-component-StatusLine.java,0b7bcfe0f33bf23c6a4518cb04072834ea229c38-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-EditWindow.java,d51bd89524b286e0333524e1b79400449153b4d2-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-VaadinClient.java,fad81b499115118244a82e9aef319ad392333b2b-org.apache.ace.obr-src-org-apache-ace-obr-servlet-Activator.java}
+
+@data
+{0 16,1 0.090323,2 0.012903,3 1,7 1,8 1,9 12,12 1,13 2,14 2,15 0.5,16 1,17 1,18 155}
+{0 13,1 0.045977,2 0.028736,3 4,7 1,8 1,9 13,12 1,13 2,14 4,15 0.25,16 2,17 2,18 174,19 d51bd89524b286e0333524e1b79400449153b4d2-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-LoginWindow.java}
+{0 62,1 0.460526,2 0.355263,3 1,7 1,8 1,9 11,10 Tuesday,12 2,13 3,14 4,15 0.25,16 6,17 6,18 76,19 3f878e4e99c003a92f20f4698b40bba5b719f67b-org.apache.ace.deployment-src-org-apache-ace-deployment-provider-DeploymentProvider.java}
+{0 39,1 0.043233,2 0.030075,3 14,7 1,8 1,9 11,10 Tuesday,12 2,13 3,14 4,15 0.25,16 6,17 6,18 532,19 3f878e4e99c003a92f20f4698b40bba5b719f67b-org.apache.ace.deployment-src-org-apache-ace-deployment-provider-repositorybased-RepositoryBasedProvider.java}
+{0 122,1 0.896226,2 0.254717,3 4,7 1,8 1,9 13,12 1,13 1,14 3,15 0.666667,16 3,17 3,18 106,19 0b7bcfe0f33bf23c6a4518cb04072834ea229c38-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-Activator.java}
+{0 158,1 0.320896,2 0.268657,3 9,7 1,8 1,9 13,12 1,13 4,14 5,15 0.2,16 5,17 5,18 268,19 fad81b499115118244a82e9aef319ad392333b2b-org.apache.ace.obr-src-org-apache-ace-obr-servlet-BundleServlet.java}
+{0 81,1 0.358491,2 0.40566,3 2,7 1,8 1,9 13,12 5,13 5,14 5,15 0.2,16 4,17 4,18 106,19 fa3439be12c0f1469390ccc41731dfe34aaa645e-org.apache.ace.useradmin.ui-src-org-apache-ace-useradmin-ui-osgi-Activator.java}
+{0 35,1 0.030806,2 0.052133,3 6,7 1,8 1,9 13,12 5,13 5,14 5,15 0.2,16 4,17 4,18 422,19 fa3439be12c0f1469390ccc41731dfe34aaa645e-org.apache.ace.verifier-src-org-apache-ace-deployment-verifier-ui-ACEVerifierExtension.java}
+{0 6,1 0.000792,2 0.003962,3 1,6 6,7 2,8 1,9 13,11 6,12 1,13 1,14 3,15 0.666667,16 3,17 3,18 1262,19 0b7bcfe0f33bf23c6a4518cb04072834ea229c38-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-VaadinClient.java}
+{0 13,1 0.035398,2 0.079646,3 1,7 1,8 1,9 13,12 5,13 5,14 5,15 0.2,16 4,17 4,18 113,19 fa3439be12c0f1469390ccc41731dfe34aaa645e-org.apache.ace.target.mgmt.ui-src-org-apache-ace-target-management-ui-TargetManagementExtension.java}
+{0 60,1 0.655738,2 0.327869,7 1,8 1,9 13,12 1,13 4,14 5,15 0.2,16 5,17 5,18 61,19 fad81b499115118244a82e9aef319ad392333b2b-org.apache.ace.obr-src-org-apache-ace-obr-storage-BundleStore.java}
+{0 13,1 0.013699,2 0.075342,3 2,7 1,8 1,9 13,12 5,13 5,14 5,15 0.2,16 4,17 4,18 146,19 fa3439be12c0f1469390ccc41731dfe34aaa645e-org.apache.ace.tageditor-src-org-apache-ace-tageditor-ACETagEditorExtension.java}
+{0 14,1 0.018315,2 0.032967,3 4,7 1,8 1,9 13,12 5,13 5,14 5,15 0.2,16 4,17 4,18 273,19 fa3439be12c0f1469390ccc41731dfe34aaa645e-org.apache.ace.log.server.ui-src-org-apache-ace-log-server-ui-LogViewerExtension.java}
+{0 9,1 0.05,2 0.04,3 2,7 1,8 1,9 12,12 1,13 2,14 2,15 0.5,16 1,17 1,18 100,19 1aa4d1d137cd4c2df7a0f190ffe00e00e00db13a-org.apache.ace.gogo-src-org-apache-ace-gogo-Activator.java}
+{0 34,1 0.048458,2 0.026432,3 8,7 1,8 1,9 13,12 1,13 2,14 4,15 0.25,16 2,17 2,18 454,19 d51bd89524b286e0333524e1b79400449153b4d2-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-component-MainActionToolbar.java}
+{0 30,1 0.044944,2 0.022472,3 12,7 1,8 1,9 13,12 1,13 4,14 5,15 0.2,16 5,17 5,18 445,19 fad81b499115118244a82e9aef319ad392333b2b-org.apache.ace.obr-src-org-apache-ace-obr-storage-file-BundleFileStore.java}
+{0 21,1 0.212766,2 0.234043,3 1,7 1,8 1,9 11,10 Tuesday,12 2,13 3,14 4,15 0.25,16 6,17 6,18 47,19 3f878e4e99c003a92f20f4698b40bba5b719f67b-org.apache.ace.deployment-src-org-apache-ace-deployment-provider-repositorybased-Activator.java}
+{0 21,1 0.031325,2 0.019277,3 7,7 1,8 1,9 11,10 Tuesday,12 2,13 3,14 4,15 0.25,16 6,17 6,18 415,19 3f878e4e99c003a92f20f4698b40bba5b719f67b-org.apache.ace.deployment.itest-src-org-apache-ace-it-deployment-provider-filebased-FileBasedProvider.java}
+{0 8,1 0.121212,7 1,8 1,9 13,12 1,13 4,14 5,15 0.2,16 5,17 5,18 66,19 fad81b499115118244a82e9aef319ad392333b2b-org.apache.ace.obr-test-org-apache-ace-obr-servlet-MockBundleStore.java}
+{0 16,1 0.212766,2 0.12766,3 1,7 1,8 1,9 11,10 Tuesday,12 2,13 3,14 4,15 0.25,16 6,17 6,18 47,19 3f878e4e99c003a92f20f4698b40bba5b719f67b-org.apache.ace.deployment.itest-src-org-apache-ace-it-deployment-provider-filebased-Activator.java}
+{0 34,1 0.174603,2 0.095238,3 2,7 1,8 1,9 13,12 1,13 2,14 4,15 0.25,16 2,17 2,18 126,19 d51bd89524b286e0333524e1b79400449153b4d2-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-component-StatusLine.java}
+{0 20,1 0.067416,2 0.044944,3 5,7 1,8 1,9 13,12 1,13 1,14 3,15 0.666667,16 3,17 3,18 178,19 0b7bcfe0f33bf23c6a4518cb04072834ea229c38-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-EditWindow.java}
+{0 39,1 0.017502,2 0.013524,3 12,7 1,8 1,9 13,12 1,13 2,14 4,15 0.25,16 2,17 2,18 1257,19 d51bd89524b286e0333524e1b79400449153b4d2-org.apache.ace.webui.vaadin-src-org-apache-ace-webui-vaadin-VaadinClient.java}
+{0 8,1 0.132075,2 0.018868,7 1,8 1,9 13,12 1,13 4,14 5,15 0.2,16 5,17 5,18 53,19 fad81b499115118244a82e9aef319ad392333b2b-org.apache.ace.obr-src-org-apache-ace-obr-servlet-Activator.java}

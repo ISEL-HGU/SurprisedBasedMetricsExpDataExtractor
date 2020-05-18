@@ -1,0 +1,99 @@
+import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import org.apache.camel.util.CamelContextHelper;
+import org.apache.camel.util.LRUCache;
+import org.apache.camel.util.LRUCacheFactory;
+import org.apache.camel.util.ServiceHelper;
+    // (throttling grouping) defaulted as 1 because there will be only one queue which is similar to implementation
+    // when there is no grouping for throttling
+    private static final Integer NO_CORRELATION_QUEUE_ID = new Integer(1);
+    private Expression correlationExpression;
+    // below 2 fields added for (throttling grouping)
+    private Map<Integer, DelayQueue<ThrottlePermit>> delayQueueCache;
+    private ExecutorService delayQueueCacheExecutorService;
+    
+                     final ExecutorService asyncExecutor, final boolean shutdownAsyncExecutor, final boolean rejectExecution, Expression correlation) {
+        this.correlationExpression = correlation;
+            calculateAndSetMaxRequestsPerPeriod(exchange, doneSync);
+            DelayQueue<ThrottlePermit> delayQueue = locateDelayQueue(exchange, doneSync);
+                    enqueuePermit(permit, exchange, doneSync);
+                enqueuePermit(permit, exchange, doneSync);
+    private DelayQueue<ThrottlePermit> locateDelayQueue(final Exchange exchange, final boolean doneSync) throws InterruptedException, ExecutionException {
+        Integer key;
+        CompletableFuture<DelayQueue<ThrottlePermit>> futureDelayQueue = new CompletableFuture<>();
+        
+        if (correlationExpression != null) {
+            key = correlationExpression.evaluate(exchange, Integer.class);
+        } else {
+            key = NO_CORRELATION_QUEUE_ID;
+        }
+        
+        if (!doneSync) {
+            delayQueueCacheExecutorService.submit(() -> {
+                futureDelayQueue.complete(findDelayQueue(key));
+            });
+        }
+            
+        return (!doneSync) ? futureDelayQueue.get() : findDelayQueue(key);
+    }
+
+    private DelayQueue<ThrottlePermit> findDelayQueue(Integer key) {
+        DelayQueue<ThrottlePermit> currentDelayQueue = delayQueueCache.get(key);
+        if (currentDelayQueue == null) {
+            currentDelayQueue = new DelayQueue<>();
+            delayQueueCache.put(key, currentDelayQueue);
+        }
+        return currentDelayQueue;
+    }
+
+     * @throws ExecutionException 
+     * @throws InterruptedException 
+    protected void enqueuePermit(final ThrottlePermit permit, final Exchange exchange, final boolean doneSync) throws InterruptedException, ExecutionException {
+        locateDelayQueue(exchange, doneSync).put(permit);
+    protected void calculateAndSetMaxRequestsPerPeriod(final Exchange exchange, final boolean doneSync) throws Exception {
+                    // get the queue from the cache
+                    DelayQueue<ThrottlePermit> delayQueue = locateDelayQueue(exchange, doneSync);
+    @SuppressWarnings("unchecked")
+        if (camelContext != null) {
+            int maxSize = CamelContextHelper.getMaximumSimpleCacheSize(camelContext);
+            if (maxSize > 0) {
+                delayQueueCache = LRUCacheFactory.newLRUCache(16, maxSize, false);
+                log.debug("DelayQueues cache size: {}", maxSize);
+            } else {
+                delayQueueCache = LRUCacheFactory.newLRUCache(100);
+                log.debug("Defaulting DelayQueues cache size: {}", 100);
+            }
+        }
+        if (delayQueueCache != null) {
+            ServiceHelper.startService(delayQueueCache);
+        }
+        if (delayQueueCacheExecutorService == null) {
+            String name = getClass().getSimpleName()  "-DelayQueueLocatorTask";
+            delayQueueCacheExecutorService = createDelayQueueCacheExecutorService(name);
+        }
+    
+    /**
+     * Strategy to create the thread pool for locating right DelayQueue from the case as a background task
+     *
+     * @param name  the suggested name for the background thread
+     * @return the thread pool
+     */
+    protected synchronized ExecutorService createDelayQueueCacheExecutorService(String name) {
+        // use a cached thread pool so we each on-the-fly task has a dedicated thread to process completions as they come in
+        return camelContext.getExecutorServiceManager().newCachedThreadPool(this, name);
+    }
+    @SuppressWarnings("rawtypes")
+        if (delayQueueCacheExecutorService != null) {
+            camelContext.getExecutorServiceManager().shutdownNow(delayQueueCacheExecutorService);
+        }
+        if (delayQueueCache != null) {
+            ServiceHelper.stopService(delayQueueCache);
+            if (log.isDebugEnabled()) {
+                if (delayQueueCache instanceof LRUCache) {
+                    log.debug("Clearing deleay queues cache[size={}, hits={}, misses={}, evicted={}]",
+                            delayQueueCache.size(), ((LRUCache) delayQueueCache).getHits(), ((LRUCache) delayQueueCache).getMisses(), ((LRUCache) delayQueueCache).getEvicted());
+                }
+            }
+            delayQueueCache.clear();
+        }

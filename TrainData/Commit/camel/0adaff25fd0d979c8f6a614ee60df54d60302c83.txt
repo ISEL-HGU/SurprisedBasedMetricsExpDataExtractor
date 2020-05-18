@@ -1,0 +1,12 @@
+    private final List<EventObject> events = new ArrayList<>();
+    public List<EventObject> getEvents() {
+            events.add(event);
+    protected void doStart() throws Exception {
+        // noop
+    }
+
+    protected void doStop() throws Exception {
+        // noop
+    }
+
+}

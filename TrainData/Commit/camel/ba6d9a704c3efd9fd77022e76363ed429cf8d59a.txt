@@ -1,0 +1,90 @@
+import java.io.InputStream;
+    public void execute() throws MojoExecutionException {
+    private void executeComponent() throws MojoExecutionException {
+        List<String> componentNames = listDescriptorNamesOfType("component");
+                String json = loadJsonFrom(jsonFiles, "component", componentName);
+                    ComponentModel model = generateComponentModel(json);
+                    String options = evaluateTemplate("component-options.mvel", model);
+                    updated |= updateOptionsIn(file, "component", options);
+                    options = evaluateTemplate("endpoint-options.mvel", model);
+                    updated |= updateOptionsIn(file, "endpoint", options);
+    private void executeDataFormat() throws MojoExecutionException {
+        List<String> dataFormatNames = listDescriptorNamesOfType("dataformat");
+                String json = loadJsonFrom(jsonFiles, "dataformat", dataFormatName);
+                    String options = evaluateTemplate("dataformat-options.mvel", model);
+                    updated |= updateOptionsIn(file, "dataformat", options);
+
+        return name;
+    private void executeLanguage() throws MojoExecutionException {
+        List<String> languageNames = listDescriptorNamesOfType("language");
+                String json = loadJsonFrom(jsonFiles, "language", languageName);
+                    LanguageModel model = generateLanguageModel(json);
+                    String options = evaluateTemplate("language-options.mvel", model);
+                    updated |= updateOptionsIn(file, "language", options);
+    private void executeEips() throws MojoExecutionException {
+                    String title = model.getTitle();
+                    String options = evaluateTemplate("eip-options.mvel", model);
+                    updated |= updateOptionsIn(file, "eip", options);
+
+        return title;
+    private static boolean updateLink(File file, String link) throws MojoExecutionException {
+        try (InputStream fileStream = new FileInputStream(file)) {
+            String text = loadText(fileStream);
+    private static boolean updateTitles(File file, String title) throws MojoExecutionException {
+        try (InputStream fileStream = new FileInputStream(file)) {
+            String text = loadText(fileStream);
+    private static boolean updateAvailableFrom(final File file, final String firstVersion) throws MojoExecutionException {
+        String version = firstVersion;
+            version = parts[0]  "."  parts[1];
+        try (InputStream fileStream = new FileInputStream(file)) {
+            String text = loadText(fileStream);
+                String newLine = "*Available as of Camel version "  version  "*";
+                String newLine = "*Available as of Camel version "  version  "*";
+    private boolean updateOptionsIn(final File file, final String kind, final String changed) throws MojoExecutionException {
+        final String updated = changed.trim();
+        try (InputStream fileStream = new FileInputStream(file)) {
+            String text = loadText(fileStream);
+            String existing = StringHelper.between(text, "// "  kind  " options: START", "// "  kind  " options: END");
+                if (existing.equals(updated)) {
+                String before = StringHelper.before(text, "// "  kind   " options: START");
+                String after = StringHelper.after(text, "// "  kind  " options: END");
+                text = before  "// "  kind  " options: START\n"  updated  "\n// "  kind  " options: END"  after;
+                writeText(file, text);
+                return true;
+            }
+
+            getLog().warn("Cannot find markers in file "  file);
+            getLog().warn("Add the following markers");
+            getLog().warn("\t// "  kind  " options: START");
+            getLog().warn("\t// "  kind  " options: END");
+            if (isFailFast()) {
+                throw new MojoExecutionException("Failed build due failFast=true");
+            }
+        } catch (IOException e) {
+    private static String loadJsonFrom(Set<File> jsonFiles, String kind, String name) {
+        for (File file : jsonFiles) {
+            if (file.getName().equals(name  ".json")) {
+                try (InputStream fileStream = new FileInputStream(file)) {
+                    String json = loadText(fileStream);
+                    boolean isRequestedKind = json.contains("\"kind\": \""  kind  "\"");
+                    if (isRequestedKind) {
+                } catch (IOException ignored) {
+                    // ignored
+
+    private static String loadEipJson(File file) {
+        try (InputStream fileStream = new FileInputStream(file)) {
+            String json = loadText(fileStream);
+        } catch (IOException ignored) {
+    private static ComponentModel generateComponentModel(String json) {
+    private LanguageModel generateLanguageModel(String json) {
+    private static String evaluateTemplate(final String templateName, final Object model) throws MojoExecutionException {
+        try (InputStream templateStream = UpdateReadmeMojo.class.getClassLoader().getResourceAsStream(templateName)) {
+            String template = loadText(templateStream);
+            return (String) TemplateRuntime.eval(template, model);
+        } catch (IOException e) {
+            throw new MojoExecutionException("Error processing mvel template `"  templateName  "`", e);
+    private List<String> listDescriptorNamesOfType(final String type) {
+        List<String> names = new ArrayList<>();
+        f = new File(f, "META-INF/services/org/apache/camel/"  type);
+                        names.add(name);
+        return names;

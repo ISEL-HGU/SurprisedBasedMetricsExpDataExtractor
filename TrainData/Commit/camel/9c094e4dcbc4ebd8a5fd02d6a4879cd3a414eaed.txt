@@ -1,0 +1,12 @@
+import org.apache.camel.StreamCache;
+        // if the value is StreamCache then ensure its readable before doing conversions
+        // by resetting it (this is also what StreamCachingAdvice does)
+        if (value instanceof StreamCache) {
+            ((StreamCache) value).reset();
+        }
+
+                // if the value is both an InputStream and StreamCache then ensure its readable
+                // before doing conversions by resetting it (this is also what StreamCachingAdvice does)
+                if (value instanceof StreamCache) {
+                    ((StreamCache) value).reset();
+                }

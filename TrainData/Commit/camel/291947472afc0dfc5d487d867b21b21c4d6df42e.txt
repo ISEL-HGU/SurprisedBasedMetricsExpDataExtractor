@@ -1,0 +1,13 @@
+    private String configurationClass;
+    private String configurationField;
+                           boolean enumType, Set<String> enums, String configurationClass, String nestedFieldName) {
+        this.configurationClass = configurationClass;
+        this.configurationField = nestedFieldName;
+    public String getConfigurationClass() {
+        return configurationClass;
+    }
+
+    public String getConfigurationField() {
+        return configurationField;
+    }
+

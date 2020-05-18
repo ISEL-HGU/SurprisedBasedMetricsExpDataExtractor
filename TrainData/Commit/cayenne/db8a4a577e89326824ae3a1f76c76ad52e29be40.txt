@@ -1,0 +1,14 @@
+import org.apache.cayenne.dba.DbAdapter;
+import org.apache.cayenne.di.Inject;
+    @Inject
+    DbAdapter adapter;
+
+        if(adapter.supportsCatalogsOnReverseEngineering()) {
+            artist.setCatalog(catalog);
+        }
+        if(adapter.supportsCatalogsOnReverseEngineering()) {
+            gallery.setCatalog(catalog);
+        }
+        if(adapter.supportsCatalogsOnReverseEngineering()) {
+            painting.setCatalog(catalog);
+        }

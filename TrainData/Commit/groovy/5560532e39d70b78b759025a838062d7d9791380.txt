@@ -1,0 +1,24 @@
+        //
+        // Source file encoding
+        //
+        //
+             *  this happens
+        return JDK8;
+     * Sets the joint compilation options for this configuration.
+     * Sets the optimization options for this configuration.
+     * No entry or a true for that entry means to enable that optimization,
+     * a false means the optimization is disabled.
+
+    /**
+     * Check whether invoke dynamic enabled
+     * @return the result
+     */
+    public boolean isIndyEnabled() {
+        Boolean indyEnabled = this.getOptimizationOptions().get(INVOKEDYNAMIC);
+
+        if (null == indyEnabled) {
+            return false;
+        }
+
+        return indyEnabled;
+    }

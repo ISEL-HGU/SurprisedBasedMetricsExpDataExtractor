@@ -1,0 +1,8 @@
+import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.AWSStaticCredentialsProvider;
+import com.amazonaws.services.simpleemail.AmazonSimpleEmailServiceClientBuilder;
+            AWSCredentialsProvider credentialsProvider = new AWSStaticCredentialsProvider(credentials);
+                client = AmazonSimpleEmailServiceClientBuilder.standard().withClientConfiguration(clientConfiguration).withCredentials(credentialsProvider).build();
+                client = AmazonSimpleEmailServiceClientBuilder.standard().withCredentials(credentialsProvider).build();
+                client = AmazonSimpleEmailServiceClientBuilder.standard().build();
+                client = AmazonSimpleEmailServiceClientBuilder.standard().withClientConfiguration(clientConfiguration).build();

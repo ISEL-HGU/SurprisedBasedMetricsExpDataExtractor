@@ -1,0 +1,14 @@
+import org.apache.camel.RuntimeCamelException;
+public class KubernetesConfiguration implements Cloneable {
+    // ****************************************
+    // Copy
+    // ****************************************
+
+    public KubernetesConfiguration copy() {
+        try {
+            return (KubernetesConfiguration) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeCamelException(e);
+        }
+    }
+

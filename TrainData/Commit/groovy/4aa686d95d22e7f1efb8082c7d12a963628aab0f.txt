@@ -1,0 +1,2 @@
+import java.io.Serializable;
+public class ClosureComparator<T> implements Comparator<T>, Serializable {

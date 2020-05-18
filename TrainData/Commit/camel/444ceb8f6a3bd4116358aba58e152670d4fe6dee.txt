@@ -1,0 +1,5 @@
+    @Override
+    public boolean isDisabled() {
+        return !log.isInfoEnabled();
+    }
+

@@ -1,0 +1,3 @@
+                // Simply reading the line in with the File stream doesn't get us around the fact
+                // that this character is still present in the data set, and we don't wish for it
+                // to be present when storing the actual data in the model.

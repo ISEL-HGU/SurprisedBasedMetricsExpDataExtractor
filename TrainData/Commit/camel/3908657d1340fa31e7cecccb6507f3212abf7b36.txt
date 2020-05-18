@@ -1,0 +1,19 @@
+    static String getChannelName(final String topicName) {
+        final StringBuilder channelName = new StringBuilder();
+        if (topicName.charAt(0) != '/') {
+            channelName.append('/');
+        }
+
+        if (topicName.indexOf('/', 1) > 0) {
+            channelName.append(topicName);
+        } else {
+            channelName.append("topic/");
+            channelName.append(topicName);
+        }
+
+        final int typeIdx = channelName.indexOf("/", 1);
+        if ("event".equals(channelName.substring(1, typeIdx)) && !topicName.endsWith("__e")) {
+            channelName.append("__e");
+        }
+
+        return channelName.toString();

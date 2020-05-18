@@ -1,0 +1,4 @@
+     *
+     * @deprecated since 4.0, "refresh all" query will drop all cache contents
+     * @see org.apache.cayenne.cache.QueryCache#clear()
+    @Deprecated

@@ -1,0 +1,25 @@
+import org.apache.deltaspike.core.api.provider.BeanProvider;
+import org.apache.deltaspike.core.util.ProxyUtils;
+import org.apache.deltaspike.scheduler.spi.SchedulerControl;
+import javax.enterprise.inject.spi.*;
+    public <X> void validateJobs(@Observes AfterBeanDiscovery afterBeanDiscovery, BeanManager beanManager)
+    }
+
+    public <X> void scheduleJobs(@Observes AfterDeploymentValidation afterDeploymentValidation, BeanManager beanManager)
+    {
+        if (!this.isActivated)
+        {
+            return;
+        }
+
+        SchedulerControl schedulerControl = BeanProvider.getContextualReference(SchedulerControl.class, true);
+        if (schedulerControl != null && !schedulerControl.isSchedulerEnabled())
+        {
+            LOG.info("Scheduler has been disabled by "  ProxyUtils.getUnproxiedClass(schedulerControl.getClass()));
+            return;
+        }
+
+        initScheduler(afterDeploymentValidation);
+                afterDeploymentValidation.addDeploymentProblem(
+    private void initScheduler(AfterDeploymentValidation afterDeploymentValidation)
+                afterDeploymentValidation.addDeploymentProblem(t);

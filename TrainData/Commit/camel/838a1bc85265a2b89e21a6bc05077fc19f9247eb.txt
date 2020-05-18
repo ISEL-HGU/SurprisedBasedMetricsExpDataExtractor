@@ -1,0 +1,13 @@
+        /**
+         * Define if Force Global Bucket Access enabled is true or false
+         */
+        private Boolean forceGlobalBucketAccessEnabled = false;
+
+        public Boolean getForceGlobalBucketAccessEnabled() {
+            return forceGlobalBucketAccessEnabled;
+        }
+
+        public void setForceGlobalBucketAccessEnabled(
+                Boolean forceGlobalBucketAccessEnabled) {
+            this.forceGlobalBucketAccessEnabled = forceGlobalBucketAccessEnabled;
+        }

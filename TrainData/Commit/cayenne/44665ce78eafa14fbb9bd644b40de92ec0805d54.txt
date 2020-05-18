@@ -1,0 +1,24 @@
+        } else if (relationship.getJoins().isEmpty()) {
+        } else {
+                } else if (join.getSource() == null) {
+                } else if (join.getTarget() == null) {
+        } else if (relationship.getSourceEntity().getAttribute(relationship.getName()) != null) {
+            // check if there are attributes having the same name
+        } else {
+            String invalidChars = helper.invalidCharsInDbPathComponent(relationship.getName());
+            DbEntity entity = relationship.getSourceEntity();
+            for (DbRelationship comparisonRelationship : entity.getRelationships()) {
+                if (relationship != comparisonRelationship) {
+                    String comparisonDbRelationshipPath =
+                               comparisonRelationship.getTargetEntityName() 
+                               "." 
+                               getJoins(comparisonRelationship);
+                    if (dbRelationshipPath.equals(comparisonDbRelationshipPath)) {
+                        addFailure(validationResult,
+                                   relationship,
+                                   "DbEntity '%s' contains a duplicate DbRelationship mapping ('%s' -> '%s')",
+                                   entity.getName(),
+                                   relationship.getName(),
+                                   dbRelationshipPath);
+                        return; // Duplicate found, stop.
+            joins.add("[source="  join.getSourceName()  ",target="  join.getTargetName()  "]");

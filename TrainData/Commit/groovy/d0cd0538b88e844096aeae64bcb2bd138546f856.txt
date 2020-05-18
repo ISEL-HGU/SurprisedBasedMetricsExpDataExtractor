@@ -1,0 +1,39 @@
+                    Object result = invokeMethod(method, delegate, closure, methodName, argClasses, originalArguments, owner);
+                    if (InvokeMethodResult.NONE != result) {
+                        return result;
+
+                    Object r = invokeMethod(method, delegate, closure, methodName, argClasses, originalArguments, owner);
+                    if (InvokeMethodResult.NONE != r) {
+                        return r;
+
+            /* todo these special cases should be special MetaClasses maybe */
+        /* todo these special cases should be special MetaClasses maybe */
+     * @param propertyDescriptors the property descriptors
+                    /*
+     * @param arguments the arguments
+
+    private Object invokeMethod(MetaMethod method,
+                                Object delegate,
+                                Closure closure,
+                                String methodName,
+                                Class[] argClasses,
+                                Object[] originalArguments,
+                                Object owner) {
+        if (method == null && delegate != closure && delegate != null) {
+            MetaClass delegateMetaClass = lookupObjectMetaClass(delegate);
+            method = delegateMetaClass.pickMethod(methodName, argClasses);
+            if (method != null)
+                return delegateMetaClass.invokeMethod(delegate, methodName, originalArguments);
+        }
+        if (method == null && owner != closure) {
+            MetaClass ownerMetaClass = lookupObjectMetaClass(owner);
+            method = ownerMetaClass.pickMethod(methodName, argClasses);
+            if (method != null) return ownerMetaClass.invokeMethod(owner, methodName, originalArguments);
+        }
+
+        return InvokeMethodResult.NONE;
+    }
+
+    private enum InvokeMethodResult {
+        NONE
+    }

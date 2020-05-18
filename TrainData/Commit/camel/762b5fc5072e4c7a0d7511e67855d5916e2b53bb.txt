@@ -1,0 +1,8 @@
+import org.apache.camel.CamelContext;
+ * A simple example router from Cafe Demo.
+ *
+ * Notice how this RouteBuilder extends {@link EndpointRouteBuilder} which provides the support
+ * for Camel Endpoint DSL.
+        CamelContext camelContext = new DefaultCamelContext();
+        // add additional routes using inlined RouteBuilder
+        // where we can access the Camel Endpoint DSL from this class

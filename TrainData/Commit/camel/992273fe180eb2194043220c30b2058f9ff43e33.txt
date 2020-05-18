@@ -1,0 +1,32 @@
+ *     <li>autowire by type - Values can refer to singleton beans by auto wiring by setting the value to #autowire</li>
+     * This will discover all the properties on the target, and automatic bind the properties that are null by
+     * looking up in the registry to see if there is a single instance of the same type as the property.
+     * This is used for convention over configuration to automatic configure resources such as DataSource, Amazon Logins and
+     * so on.
+     *
+     * @param camelContext  the camel context
+     * @param target        the target object
+     * @return              true if one ore more properties was auto wired
+     */
+    public static boolean autowireSingletonPropertiesFromRegistry(CamelContext camelContext, Object target) {
+        // TODO: implement me
+        return false;
+    }
+
+    /**
+            Class<?> newClass = target.getClass();
+                    // TODO: you may have setter  fluent builder at the same time, so grab setter first, and fallback to fluent builder afterwards
+            } else if (value.toString().equals("#autowire")) {
+                // we should get the type from the setter
+                // TODO: you may have setter  fluent builder at the same time, so grab setter first, and fallback to fluent builder afterwards
+                Set<Method> newSetters = findSetterMethods(target.getClass(), name, true);
+                if (newSetters.size() == 1) {
+                    Method method = newSetters.iterator().next();
+                    Class<?> parameterType = method.getParameterTypes()[0];
+                    if (parameterType != null) {
+                        Set<?> types = context.getRegistry().findByType(parameterType);
+                        if (types.size() == 1) {
+                            value = types.iterator().next();
+                        }
+                    }
+                }

@@ -1,0 +1,2 @@
+                Expression oldProperties = ExpressionBuilder.exchangePropertiesExpression();
+                Expression newProperties = ExpressionBuilder.exchangePropertiesExpression();

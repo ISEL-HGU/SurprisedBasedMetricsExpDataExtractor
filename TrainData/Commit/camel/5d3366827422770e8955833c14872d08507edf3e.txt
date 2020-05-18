@@ -1,0 +1,21 @@
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import org.apache.camel.dataformat.bindy.annotation.OneToMany;
+
+            OneToMany oneToManyField = field.getAnnotation(OneToMany.class);
+
+            if (oneToManyField != null) {
+                if (LOG.isDebugEnabled()) {
+                    LOG.debug("Class (OneToMany) linked: {}, Field: {}", field.getType(), field);
+                }
+
+                Type listType = field.getGenericType();
+                Type type = ((ParameterizedType) listType).getActualTypeArguments()[0];
+                Class clazz = (Class<?>)type;
+
+                models.add(clazz);
+                modelClassNames.add(clazz.getName());
+
+                loadModels(clazz);
+            }
+

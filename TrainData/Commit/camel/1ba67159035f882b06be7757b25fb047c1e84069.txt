@@ -1,0 +1,7 @@
+
+    @Override
+    protected void doInit() throws Exception {
+        super.doInit();
+        initCamelContext();
+    }
+

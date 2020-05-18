@@ -1,0 +1,15 @@
+    /**
+     * @return a list of properties which will be used before any locations are resolved (can't be null).
+     */
+        if (initialProperties == null) {
+            initialProperties = new Properties();
+        }
+
+    /**
+     * @return a list of properties that take precedence and will use first, if a property exist (can't be null).
+     */
+        if (overrideProperties == null) {
+            overrideProperties = new Properties();
+        }
+
+

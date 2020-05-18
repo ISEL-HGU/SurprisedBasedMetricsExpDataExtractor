@@ -1,0 +1,7 @@
+ * Factory for creating JMX {@link ManagementStrategy}.
+        // must add management lifecycle strategy as first choice
+        if (!camelContext.getLifecycleStrategies().isEmpty()) {
+            // camel-spring/camel-blueprint may re-initialize JMX during startup, so remove any previous
+            camelContext.getLifecycleStrategies().removeIf(s -> s instanceof JmxManagementLifecycleStrategy);
+        }
+        camelContext.getLifecycleStrategies().add(0, lifecycle);

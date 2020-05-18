@@ -1,0 +1,2 @@
+    private static final String VALUE = "value";
+    private static final String RUNTIME_GROOVYDOC_PATTERN = "(?s)/[*][*]\\s(\\s[*]\\s*)*@Groovydoc\\b.?[*]/";

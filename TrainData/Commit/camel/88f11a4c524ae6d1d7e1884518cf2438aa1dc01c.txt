@@ -1,0 +1,1 @@
+            Message responseMessage = exchange.hasOut() ? exchange.getOut() : exchange.getIn();

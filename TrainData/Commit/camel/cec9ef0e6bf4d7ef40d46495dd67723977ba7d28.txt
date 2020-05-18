@@ -1,0 +1,57 @@
+import java.util.Objects;
+                Logger log = LoggerFactory.getLogger(XRayTracer.class);
+                log.trace("Adding segment decorator {}", d.getComponent());
+            log.info("No tracing strategy available. Defaulting to no-op strategy");
+        log.debug("Starting XRay tracer");
+        log.debug("XRay tracer stopped");
+                log.debug("Initializing XRay tracer");
+                    log.debug("Ignoring route with ID {}", routeId);
+    protected Entity getTraceEntityFromExchange(Exchange exchange) {
+        Entity entity = exchange.getIn().getHeader(XRAY_TRACE_ENTITY, Entity.class);
+        if (entity == null) {
+            entity = (Entity) exchange.getProperty(CURRENT_SEGMENT);
+        }
+        return entity;
+    }
+
+                Entity entity = getTraceEntityFromExchange(ese.getExchange());
+                if (entity != null) {
+                    AWSXRay.setTraceEntity(entity);
+                    name = sanitizeName(name);
+                        Subsegment subsegment = AWSXRay.beginSubsegment(name);
+                        log.trace("Creating new subsegment with ID {} and name {} (parent {}, references: {})",
+                                subsegment.getId(), subsegment.getName(),
+                                subsegment.getParentSegment().getId(), subsegment.getParentSegment().getReferenceCount());
+                        ese.getExchange().setProperty(CURRENT_SEGMENT, subsegment);
+                Entity entity = getTraceEntityFromExchange(ese.getExchange());
+                if (entity instanceof Subsegment) {
+                    AWSXRay.setTraceEntity(entity);
+                    SegmentDecorator sd = getSegmentDecorator(ese.getEndpoint());
+                        Subsegment subsegment = (Subsegment) entity;
+                        log.trace("Setting trace entity for exchange {} to {}", ese.getExchange(), subsegment.getParent());
+                        ese.getExchange().setProperty(CURRENT_SEGMENT, subsegment.getParent());
+                        log.warn("Ignoring close of subsegment "  entity.getName()
+            Entity entity = getTraceEntityFromExchange(exchange);
+            boolean createSegment = (entity == null || !Objects.equals(entity.getName(), routeId));
+
+            AWSXRay.setTraceEntity(entity);
+            if (createSegment) {
+                segment.setParent(entity);
+                log.trace("Created new XRay segment {} with name {}", segment.getId(), segment.getName());
+                String segmentName = entity.getId();
+                    log.trace("Creating new subsegment with ID {} and name {} (parent {}, references: {})",
+                            subsegment.getId(), subsegment.getName(),
+                            subsegment.getParentSegment().getId(), subsegment.getParentSegment().getReferenceCount());
+                    exchange.setProperty(CURRENT_SEGMENT, subsegment);
+            Entity entity = getTraceEntityFromExchange(exchange);
+            AWSXRay.setTraceEntity(entity);
+                sd.post(entity, exchange, route.getEndpoint());
+                entity.close();
+                log.trace("Closing down (sub)segment {} with name {} (parent {}, references: {})",
+                        entity.getId(), entity.getName(),
+                        entity.getParentSegment().getId(), entity.getParentSegment().getReferenceCount());
+                exchange.setProperty(CURRENT_SEGMENT, entity.getParent());
+            } catch (Exception e) {
+                log.warn("Error closing entity");
+            } finally {
+                AWSXRay.setTraceEntity(null);

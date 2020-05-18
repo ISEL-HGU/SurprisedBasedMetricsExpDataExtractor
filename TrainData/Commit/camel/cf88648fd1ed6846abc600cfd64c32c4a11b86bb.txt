@@ -1,0 +1,28 @@
+import org.apache.camel.DelegateProcessor;
+import org.apache.camel.Endpoint;
+import org.apache.camel.Processor;
+import org.apache.camel.Producer;
+public final class LazyStartProducer extends DefaultAsyncProducer implements DelegateProcessor {
+    private AsyncProducer delegate;
+    public LazyStartProducer(Endpoint endpoint) {
+        super(endpoint);
+        try {
+            if (delegate == null) {
+                synchronized (lock) {
+                    if (delegate == null) {
+                        delegate = AsyncProcessorConverterHelper.convert(getEndpoint().createProducer());
+                    }
+                }
+            if (!ServiceHelper.isStarted(delegate)) {
+                ServiceHelper.startService(delegate);
+            }
+        } catch (Throwable e) {
+            exchange.setException(e);
+            return true;
+        return getEndpoint().isSingleton();
+        // noop as we dont want to start the delegate but its started on the first message processed
+
+    @Override
+    public Processor getProcessor() {
+        return delegate;
+    }

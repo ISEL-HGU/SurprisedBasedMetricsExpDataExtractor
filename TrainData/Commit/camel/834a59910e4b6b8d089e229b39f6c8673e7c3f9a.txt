@@ -1,0 +1,12 @@
+     * Whether to lookup and use default Jackson ObjectMapper from the registry.
+     */
+    private Boolean useDefaultObjectMapper = true;
+    /**
+    public Boolean getUseDefaultObjectMapper() {
+        return useDefaultObjectMapper;
+    }
+
+    public void setUseDefaultObjectMapper(Boolean useDefaultObjectMapper) {
+        this.useDefaultObjectMapper = useDefaultObjectMapper;
+    }
+

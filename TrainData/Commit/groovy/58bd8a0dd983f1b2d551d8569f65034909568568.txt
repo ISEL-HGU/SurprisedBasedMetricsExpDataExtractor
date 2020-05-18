@@ -1,0 +1,4 @@
+        StringBuilder normalizedTextBuffer = new StringBuilder();
+            normalizedTextBuffer.append(lineText);
+            textOffsets.add(normalizedTextBuffer.length());
+        normalizedText = normalizedTextBuffer.toString();

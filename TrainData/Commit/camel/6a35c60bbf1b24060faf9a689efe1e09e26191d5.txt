@@ -1,0 +1,40 @@
+import java.util.concurrent.ConcurrentMap;
+import javax.net.ssl.SSLContext;
+
+import org.apache.camel.CamelContext;
+import org.apache.camel.util.jsse.SSLContextParameters;
+import org.restlet.data.Parameter;
+import org.restlet.engine.ssl.SslContextFactory;
+    private static final class PredefinedSslContextFactory extends SslContextFactory {
+        private final SSLContext sslContext;
+
+        private PredefinedSslContextFactory(SSLContext sslContext) {
+            this.sslContext = sslContext;
+        }
+
+        @Override
+        public void init(Series<Parameter> parameters) {
+            // nop
+        }
+
+        @Override
+        public SSLContext createSslContext() throws Exception {
+            return sslContext;
+        }
+    }
+
+        final Context context = new Context();
+        final Series<Parameter> parameters = context.getParameters();
+        parameters.add("socketTimeout", String.valueOf(endpoint.getSocketTimeout()));
+        parameters.add("socketConnectTimeoutMs", String.valueOf(endpoint.getSocketTimeout()));
+            parameters.add("maxConnectionsPerHost", String.valueOf(component.getMaxConnectionsPerHost()));
+            parameters.add("maxTotalConnections", String.valueOf(component.getMaxTotalConnections()));
+        final ConcurrentMap<String, Object> attributes = context.getAttributes();
+        final CamelContext camelContext = endpoint.getCamelContext();
+        final SSLContextParameters sslContextParameters = endpoint.getSslContextParameters();
+        if (sslContextParameters != null) {
+            final SSLContext sslContext = sslContextParameters.createSSLContext(camelContext);
+            attributes.put("sslContextFactory", new PredefinedSslContextFactory(sslContext));
+        }
+
+        client.setContext(context);

@@ -1,0 +1,6 @@
+import org.apache.camel.spring.boot.util.ConditionalOnCamelContextAndAutoConfigurationBeans;
+@Conditional({ConditionalOnCamelContextAndAutoConfigurationBeans.class,
+        ZooKeeperComponentAutoConfiguration.GroupConditions.class})
+public class ZooKeeperComponentAutoConfiguration {
+    static class GroupConditions extends GroupCondition {
+        public GroupConditions() {

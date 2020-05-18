@@ -1,0 +1,6 @@
+        // cannot add as routes yet as when using Java DSL with rest we need to initialize this specially
+        camelContext.addRestDefinitions(getRestCollection().getRests(), false);
+        // add rest as routes and have them prepared as well via routeCollection.route method
+        getRestCollection().getRests()
+            .forEach(rest -> rest.asRouteDefinition(getContext())
+                .forEach(route -> getRouteCollection().route(route)));

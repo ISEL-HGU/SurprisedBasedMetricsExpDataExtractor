@@ -1,0 +1,4 @@
+import org.apache.cayenne.configuration.DataChannelDescriptorLoader;
+                                 @Inject MergerTokenFactoryProvider mergerTokenFactoryProvider,
+                                 @Inject DataChannelDescriptorLoader dataChannelDescriptorLoader) {
+        super(logger, projectSaver, dataSourceFactory, adapterFactory, mapLoader, mergerTokenFactoryProvider, dataChannelDescriptorLoader);

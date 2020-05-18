@@ -1,0 +1,1 @@
+        Assert.notNull(camelContext, "camelContext must not be null");

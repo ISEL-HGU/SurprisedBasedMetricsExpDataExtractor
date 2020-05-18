@@ -1,0 +1,8 @@
+import java.util.HashMap;
+import java.util.Map;
+
+    private Map<String, HystrixConfigurationCommon> configurations = new HashMap<>();
+
+    public Map<String, HystrixConfigurationCommon> getConfigurations() {
+        return configurations;
+    }

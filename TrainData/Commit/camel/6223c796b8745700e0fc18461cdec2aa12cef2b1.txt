@@ -1,0 +1,1 @@
+@ConditionalOnProperty(value = "camel.springboot.type-conversion", matchIfMissing = true)

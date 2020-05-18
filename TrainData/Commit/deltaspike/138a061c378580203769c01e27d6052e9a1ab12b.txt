@@ -1,0 +1,9 @@
+        if (projectStage != null)
+        {
+            LOG.info("change project-stage from "  projectStage  " to "  ps);
+        }
+        else
+        {
+            LOG.info("change project-stage to "  ps);
+        }
+

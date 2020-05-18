@@ -1,0 +1,19 @@
+            } else if ("end".equals(name) || "endParent".equals(name) || "endRest".equals(name)
+                if (parent.getParent() != null) {
+                    parent = parent.getParent();
+                }
+            } else if ("endChoice".equals(name)) {
+                // we are in a choice block so parent should be the first choice up the parent tree
+                while (!"from".equals(parent.getName()) && !"choice".equals(parent.getName())) {
+                    if (parent.getParent() != null) {
+                        parent = parent.getParent();
+                    } else {
+                        break;
+                    }
+                }
+                while (!"from".equals(parent.getName()) && !"choice".equals(parent.getName())) {
+                    if (parent.getParent() != null) {
+                        parent = parent.getParent();
+                    } else {
+                        break;
+                    }

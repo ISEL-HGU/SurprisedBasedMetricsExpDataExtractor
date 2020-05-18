@@ -1,0 +1,5 @@
+import java.util.Objects;
+        ExtendedType<E> extendedType;
+        ValueObjectType<T, E> valueObjectType;
+            this.extendedType = Objects.requireNonNull(extendedType);
+            this.valueObjectType = Objects.requireNonNull(valueObjectType);

@@ -1,0 +1,2 @@
+@UriEndpoint(firstVersion = "2.21.0", scheme = "elasticsearch5-rest", title = "Elastichsearch5 Rest",
+    private final ElasticsearchConfiguration configuration;

@@ -1,0 +1,5 @@
+import org.apache.deltaspike.jpa.api.entitymanager.EntityManagerResolver;
+        EntityManagerResolver unmanagedResolver = entityManagerMetadata.getUnmanagedResolver();
+        if (unmanagedResolver != null)
+            ref.setEntityManagerResolver(unmanagedResolver);
+            ref.setEntityManager(unmanagedResolver.resolveEntityManager());

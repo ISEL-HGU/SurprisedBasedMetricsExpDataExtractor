@@ -1,0 +1,30 @@
+     * @see #drop(String, int)
+        return drop(self.toString(), num);
+    }
+
+    /**
+     * A String variant of the equivalent CharSequence method.
+     *
+     * @param self the original String
+     * @param num the number of characters to drop from this String
+     * @return a String consisting of all characters except the first <code>num</code> ones,
+     *         or else an empty String, if the String has less than <code>num</code> characters.
+     * @see #drop(CharSequence, int)
+     * @since 2.5.5
+     */
+    public static String drop(String self, int num) {
+        return (String) drop((CharSequence) self, num);
+        return take(self.toString(), num);
+    }
+
+    /**
+     * A String variant of the equivalent CharSequence method.
+     *
+     * @param self the original String
+     * @param num  the number of chars to take from this String
+     * @return a String consisting of the first <code>num</code> chars,
+     *         or else the whole String if it has less then <code>num</code> elements.
+     * @since 2.5.5
+     */
+    public static String take(String self, int num) {
+        return (String) take((CharSequence) self, num);

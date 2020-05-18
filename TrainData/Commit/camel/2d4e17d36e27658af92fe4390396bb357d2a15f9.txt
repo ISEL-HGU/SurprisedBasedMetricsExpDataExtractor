@@ -1,0 +1,1 @@
+            processingEnv.getMessager().printMessage(Kind.WARNING, String.format("Mixed case schema name in '%s' with value '%s' has been deprecated. Please use lowercase only!", classElement.getQualifiedName(), schemaName));

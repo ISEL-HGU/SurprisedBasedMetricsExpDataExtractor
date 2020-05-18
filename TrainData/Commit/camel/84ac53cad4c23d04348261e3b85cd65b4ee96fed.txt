@@ -1,0 +1,13 @@
+        /**
+         * Take into account the lastUpdate of the last event polled as start
+         * date for the next poll
+         */
+        private Boolean considerLastUpdate = false;
+
+        public Boolean getConsiderLastUpdate() {
+            return considerLastUpdate;
+        }
+
+        public void setConsiderLastUpdate(Boolean considerLastUpdate) {
+            this.considerLastUpdate = considerLastUpdate;
+        }

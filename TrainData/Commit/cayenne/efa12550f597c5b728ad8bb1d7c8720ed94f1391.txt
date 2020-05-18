@@ -1,0 +1,11 @@
+    private boolean needsResultSetMapping;
+    MockQueryWrapperBuilder withNeedsResultSetMapping(boolean needsResultSetMapping) {
+        this.needsResultSetMapping = needsResultSetMapping;
+        return this;
+    }
+
+
+            @Override
+            public boolean needsResultSetMapping() {
+                return needsResultSetMapping;
+            }

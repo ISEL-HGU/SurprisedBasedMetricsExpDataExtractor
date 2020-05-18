@@ -1,0 +1,15 @@
+import java.util.Collection;
+        // noop
+    /**
+     * Creates a registry that uses the given {@link BeanRepository} as first choice bean repository to lookup beans.
+     * Will fallback and use {@link SimpleRegistry} as internal registry if the beans cannot be found in the first
+     * choice bean repository.
+     *
+     * @param repositories the first choice repositories such as Spring, JNDI, OSGi etc.
+     */
+    public DefaultRegistry(Collection<BeanRepository> repositories) {
+        if (repositories != null) {
+            this.repositories = new ArrayList<>(repositories);
+        }
+    }
+

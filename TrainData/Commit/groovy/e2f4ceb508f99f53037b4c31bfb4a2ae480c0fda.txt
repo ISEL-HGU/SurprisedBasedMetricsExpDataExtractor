@@ -1,0 +1,12 @@
+import groovy.transform.options.PropertyHandler;
+            final PropertyHandler handler = PropertyHandler.createPropertyHandler(this, classLoader, cNode);
+                Statement propInit = handler.createPropInit(xform, anno, cNode, pNode, null);
+                if (propInit != null) {
+                    body.addStatement(propInit);
+                }
+            Statement propInit = handler.createPropInit(xform, anno, cNode, pNode, null);
+            if (propInit != null) {
+                body.addStatement(propInit);
+            }
+                addSpecialMapConstructors(cNode, message, false);
+    public static void addSpecialMapConstructors(ClassNode cNode, String message, boolean addNoArg) {

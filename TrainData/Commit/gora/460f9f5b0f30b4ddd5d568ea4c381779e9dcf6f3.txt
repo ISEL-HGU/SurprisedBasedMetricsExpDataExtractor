@@ -1,0 +1,13 @@
+import org.apache.gora.query.impl.PartitionQueryImpl;
+   * {@inheritDoc}
+   * As the Aerospike does not support query key ranges as at the moment, only the single partition
+   * is retrieved with this method.
+   *
+   * @param query the query to execute.
+   * @return the list of partitions, one partion at the list as at the moment
+    List<PartitionQuery<K, T>> partitions = new ArrayList<>();
+    PartitionQueryImpl<K, T> partitionQuery = new PartitionQueryImpl<>(
+            query);
+    partitionQuery.setConf(getConf());
+    partitions.add(partitionQuery);
+    return partitions;

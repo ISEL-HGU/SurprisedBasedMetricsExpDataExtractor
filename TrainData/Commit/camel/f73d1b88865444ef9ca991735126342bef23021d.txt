@@ -1,0 +1,4 @@
+import org.apache.camel.util.IOHelper;
+    private static final Logger LOG = LoggerFactory.getLogger(DropboxAPIFacade.class);
+            IOHelper.close(inputStream);
+            IOHelper.close(is);

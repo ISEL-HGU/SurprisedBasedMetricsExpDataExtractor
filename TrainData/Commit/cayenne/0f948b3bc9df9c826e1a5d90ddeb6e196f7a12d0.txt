@@ -1,0 +1,6 @@
+        if (targetEntity != null) {
+            imported.setTargetEntityName(targetEntity);
+        if (entity == null) {
+            return null;
+        }
+

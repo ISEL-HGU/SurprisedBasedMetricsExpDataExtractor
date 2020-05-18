@@ -1,0 +1,29 @@
+        SHA1("HmacSHA1", 20),
+        SHA256("HmacSHA256", 32),
+        SHA512("HmacSHA512", 64);
+         * The recommended length of keys generated for TOTP in this mode, in
+         * bytes. Keys are recommended to be the same length as the hash
+         * involved.
+         */
+        private final int recommendedKeyLength;
+
+        /**
+         *
+         * @param recommendedKeyLength
+         *     The recommended length of keys generated for TOTP in this mode,
+         *     in bytes.
+        private Mode(String algorithmName, int recommendedKeyLength) {
+            this.recommendedKeyLength = recommendedKeyLength;
+        /**
+         * Returns the recommended length of keys generated for TOTP in this
+         * mode, in bytes. Keys are recommended to be the same length as the
+         * hash involved.
+         *
+         * @return
+         *     The recommended length of keys generated for TOTP in this mode,
+         *     in bytes.
+         */
+        public int getRecommendedKeyLength() {
+            return recommendedKeyLength;
+        }
+

@@ -1,0 +1,15 @@
+import static org.apache.camel.component.hazelcast.HazelcastConstants.HAZELCAST_CONFIGU_PARAM;
+import static org.apache.camel.component.hazelcast.HazelcastConstants.HAZELCAST_CONFIGU_URI_PARAM;
+        HazelcastInstance hzInstance;
+        if (ObjectHelper.equal(hazelcastMode, HazelcastConstants.HAZELCAST_NODE_MODE)) {
+        } else {
+            hzInstance = getOrCreateHzClientInstance(getCamelContext(), parameters);
+        }
+        return hazelcastMode;
+    }
+    public void setHazelcastMode(String hazelcastMode) {
+        this.hazelcastMode = hazelcastMode;
+    }
+    private HazelcastInstance getOrCreateHzInstance(CamelContext context, Map<String, Object> parameters) throws Exception {
+
+    private HazelcastInstance getOrCreateHzClientInstance(CamelContext context, Map<String, Object> parameters) throws Exception {

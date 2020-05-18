@@ -1,0 +1,7 @@
+ * This can be used to perform any custom work when the entire {@link CamelContext} has been initialized and <b>almost</b>
+ * started. This callback is invoked twice during starting the Camel routes, once before the route consumers are started,
+ * and once again after the route consumer has just been started. This is by design to allow Camel components
+ * to react accordingly and for example to register custom startup listeners during starting consumers.
+ * <p/>
+ * If you want to have only one callback after the route consumers has been fully started then use the {@link ExtendedStartupListener} instead.
+ * <p/>

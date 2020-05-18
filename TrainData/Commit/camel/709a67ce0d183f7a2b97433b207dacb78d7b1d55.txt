@@ -1,0 +1,26 @@
+    @UriPath(label="producer", description = "The YQL query to be sent.")
+    @UriParam(label="producer", enums = "json,xml", defaultValue = "json", description = "The expected format. Can only be json or xml.")
+    @UriParam(label="producer", defaultValue = "false", description = "If true, the option will be included in the HTTP request to YQL and the response will contain some diagnostics data.")
+    @UriParam(label="producer", description = "If specified, the option will be included in the HTTP request to YQL. If the format is json, then the response will contain a JSONP callback method. "
+             "If the format is xml, then the response will contain a JSONP-X callback method. More information: https://developer.yahoo.com/yql/guide/response.html")
+    @UriParam(label = "producer", defaultValue = "true", description = "Option to disable throwing the YqlHttpException in case of failed responses from the remote server. "
+             "This allows you to get all responses regardless of the HTTP status code.")
+    private boolean throwExceptionOnFailure = true;
+
+     * The YQL query to be sent.
+     * The expected format. Can only be json or xml.
+     * If true, the option will be included in the HTTP request to YQL and the response will contain some diagnostics data.
+     * If specified, the option will be included in the HTTP request to YQL. If the format is json, then the response will contain a JSONP callback method.
+     * If the format is xml, then the response will contain a JSONP-X callback method. More information: https://developer.yahoo.com/yql/guide/response.html
+
+    public boolean isThrowExceptionOnFailure() {
+        return throwExceptionOnFailure;
+    }
+
+    /**
+     * Option to disable throwing the YqlHttpException in case of failed responses from the remote server.
+     * This allows you to get all responses regardless of the HTTP status code.
+     */
+    public void setThrowExceptionOnFailure(final boolean throwExceptionOnFailure) {
+        this.throwExceptionOnFailure = throwExceptionOnFailure;
+    }

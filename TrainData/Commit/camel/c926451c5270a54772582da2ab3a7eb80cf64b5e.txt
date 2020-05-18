@@ -1,0 +1,2 @@
+            type = findFactory("reactive-executor", context);
+                LOG.debug("Found ReactiveExecutor: {} via: {}{}", type.getName(), factoryFinder.getResourcePath(), "reactive-executor");

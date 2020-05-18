@@ -1,0 +1,10 @@
+import org.apache.cayenne.access.LegacyDataDomainFlushActionFactory;
+import org.apache.cayenne.access.flush.DataDomainFlushActionFactory;
+import org.apache.cayenne.access.flush.DefaultDataDomainFlushActionFactory;
+import org.apache.cayenne.access.flush.operation.DbRowOpSorter;
+import org.apache.cayenne.access.flush.operation.DefaultDbRowOpSorter;
+        // a default DBAdapterFactory used to load custom and automatic DbAdapters
+        // binding AshwoodEntitySorter without scope, as this is a stateful object and is
+
+        binder.bind(DataDomainFlushActionFactory.class).to(DefaultDataDomainFlushActionFactory.class);
+        binder.bind(DbRowOpSorter.class).to(DefaultDbRowOpSorter.class);

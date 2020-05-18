@@ -1,0 +1,3 @@
+    public static CharSequence toCharSequence(final URI value) {
+        return value.toString();
+    public static URI toUri(final CharSequence value) {

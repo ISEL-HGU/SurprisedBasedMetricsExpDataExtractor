@@ -1,0 +1,9 @@
+     * Return an existing method if one exists or else create a new method and mark it as {@code @Generated}.
+        MethodNode existing = cNode.getDeclaredMethod(name, parameters);
+        if (existing != null) return existing;
+        MethodNode result = new MethodNode(name, modifiers, returnType, parameters, exceptions, code);
+        addGeneratedMethod(cNode, result);
+     * Add a method and mark it as {@code @Generated}.
+     * Add an inner class that is marked as {@code @Generated}.
+     * Add a method that is marked as {@code @Generated}.
+     * Add a method that is marked as {@code @Generated}.

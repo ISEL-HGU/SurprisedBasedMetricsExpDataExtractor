@@ -1,0 +1,3 @@
+     * the extraction process. The list of supported parameters can be found a
+     * href=
+     * https://github.com/apache/any23/blob/master/api/src/main/resources/default-configuration.propertieshere. If not provided, a default configuration is used.

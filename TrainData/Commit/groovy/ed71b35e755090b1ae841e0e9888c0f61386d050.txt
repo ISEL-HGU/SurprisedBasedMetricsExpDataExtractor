@@ -1,0 +1,1 @@
+            ClassNode parameterizedType = GenericsUtils.findParameterizedTypeFromCache(fieldNode.getDeclaringClass(), typeCheckingContext.getEnclosingClassNode());

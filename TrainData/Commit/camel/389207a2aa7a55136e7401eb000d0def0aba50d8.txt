@@ -1,0 +1,10 @@
+import org.apache.camel.CamelContext;
+import org.apache.camel.impl.DefaultComponent;
+public class DropboxComponent extends DefaultComponent {
+    
+    	this(null);
+    }
+
+    public DropboxComponent(CamelContext context) {
+        super(context);
+        registerExtension(new DropboxComponentVerifierExtension());        

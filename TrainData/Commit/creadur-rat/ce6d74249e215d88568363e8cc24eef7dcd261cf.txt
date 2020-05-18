@@ -1,0 +1,7 @@
+    private static final String RAT_REPORT = "rat-report";
+    private static final String TIMESTAMP = "timestamp";
+    private static final String LICENSE_APPROVAL_PREDICATE = "license-approval";
+    private static final String LICENSE_FAMILY_PREDICATE = "license-family";
+    private static final String HEADER_SAMPLE_PREDICATE = "header-sample";
+    private static final String HEADER_TYPE_PREDICATE = "header-type";
+    private static final String FILE_TYPE_PREDICATE = "type";

@@ -1,0 +1,14 @@
+import java.util.Collections;
+    /**
+     * Gets the bean repositories.
+     *
+     * @return the bean repositories, or <tt>null</tt> if none are in use.
+     */
+    public List<BeanRepository> getRepositories() {
+        if (repositories == null) {
+            return null;
+        } else {
+            return Collections.unmodifiableList(repositories);
+        }
+    }
+

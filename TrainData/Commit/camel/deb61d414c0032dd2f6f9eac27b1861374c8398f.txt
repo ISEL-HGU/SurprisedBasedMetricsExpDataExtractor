@@ -1,0 +1,17 @@
+ * @version
+    @Override
+    @Override
+    @Override
+    @Override
+    @Override
+        if (body != null && camelContext != null && camelContext.isUseDataType()) {
+    @Override
+    @Override
+    @Override
+    @Override
+    @Override
+    @Override
+    @Override
+    @Override
+    @Override
+    @Override

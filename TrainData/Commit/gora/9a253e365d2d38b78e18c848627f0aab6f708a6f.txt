@@ -1,0 +1,2 @@
+      while (!buffer.isEmpty()) {
+        Mutation m = buffer.poll();

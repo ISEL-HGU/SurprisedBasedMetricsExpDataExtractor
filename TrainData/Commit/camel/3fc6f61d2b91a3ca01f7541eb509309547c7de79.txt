@@ -1,0 +1,10 @@
+// TODO: ComponentPropertyConfigurerGenerator and EndpointPropertyConfigurerGenerator can be merged to one
+
+            w.write("import org.apache.camel.spi.GeneratedPropertyConfigurer;\n");
+            w.write("public class "  cn  " extends PropertyConfigurerSupport implements GeneratedPropertyConfigurer {\n");
+            w.write("    @Override\n");
+            w.write("    public boolean configure(CamelContext camelContext, Object endpoint, String name, Object value) {\n");
+            w.write("        switch (name) {\n");
+                w.write(String.format("        case \"%s\": %s; return true;\n", option.getName(), setterLambda));
+            w.write("            default: return false;\n");
+            w.write("        }\n");

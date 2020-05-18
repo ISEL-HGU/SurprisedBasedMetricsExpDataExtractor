@@ -1,0 +1,6 @@
+    private String keyOrTrustStoreParametersRef;
+    public String getKeyOrTrustStoreParametersRef() {
+        return keyOrTrustStoreParametersRef;
+    public void setKeyOrTrustStoreParametersRef(
+            String keyOrTrustStoreParametersRef) {
+        this.keyOrTrustStoreParametersRef = keyOrTrustStoreParametersRef;

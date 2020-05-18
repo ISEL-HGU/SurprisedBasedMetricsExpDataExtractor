@@ -1,0 +1,3 @@
+                for (Object e : smap.entrySet()) {
+                    Map.Entry entry = (Map.Entry) e;
+                    answer.put(entry.getKey(), entry.getValue());

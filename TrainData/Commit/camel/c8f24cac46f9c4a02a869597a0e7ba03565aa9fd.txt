@@ -1,0 +1,22 @@
+    public TcpSocketConsumerRunnable(MllpTcpServerConsumer consumer, Socket clientSocket, MllpSocketBuffer mllpBuffer) {
+        if (mllpBuffer == null) {
+            this.mllpBuffer = new MllpSocketBuffer(consumer.getEndpoint());
+        } else {
+            this.mllpBuffer = mllpBuffer;
+        }
+                exchange.setException(ex);
+            byte[] hl7MessageBytes = null;
+            if (mllpBuffer.hasCompleteEnvelope()) {
+                // If we got a complete message on the validation read, process it
+                hl7MessageBytes = mllpBuffer.toMllpPayload();
+                mllpBuffer.reset();
+                processMessage(hl7MessageBytes);
+            }
+
+                        log.debug("No data received - ignoring timeout");
+                        new MllpInvalidMessageException("Timeout receiving complete message payload", mllpBuffer.toByteArrayAndReset(), timeoutEx);
+                        consumer.handleException(new MllpInvalidMessageException("Timeout receiving complete message payload", mllpBuffer.toByteArrayAndReset(), timeoutEx));
+                    mllpBuffer.resetSocket(clientSocket);
+                        consumer.handleException(new MllpReceiveException("Exception encountered reading payload", mllpBuffer.toByteArrayAndReset(), mllpSocketEx));
+
+            mllpBuffer.resetSocket(clientSocket);

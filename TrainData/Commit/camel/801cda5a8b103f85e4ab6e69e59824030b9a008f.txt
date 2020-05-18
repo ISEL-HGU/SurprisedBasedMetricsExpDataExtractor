@@ -1,0 +1,2 @@
+    public void configure(CamelContext context) {
+    public void beforeStart(MainSupport main) {

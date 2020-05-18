@@ -1,0 +1,15 @@
+        StringBuilder text = new StringBuilder(ctx.GStringEnd().getText());
+        text.insert(0, beginQuotation);
+        return this.parseStringLiteral(text.toString());
+        StringBuilder text = new StringBuilder(e.getText());
+        text.deleteCharAt(text.length() - 1);  // remove the tailing $
+        text.insert(0, beginQuotation).append(QUOTATION_MAP.get(beginQuotation));
+        return this.parseStringLiteral(text.toString());
+        StringBuilder text = new StringBuilder(ctx.GStringBegin().getText());
+        text.deleteCharAt(text.length() - 1);  // remove the tailing $
+        text.append(QUOTATION_MAP.get(beginQuotation));
+        return this.parseStringLiteral(text.toString());
+        } else if (text.startsWith(DQ_STR)) {
+            return DQ_STR;
+        } else if (text.startsWith(DOLLAR_SLASH_STR)) {
+            return DOLLAR_SLASH_STR;

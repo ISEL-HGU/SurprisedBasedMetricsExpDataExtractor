@@ -1,0 +1,14 @@
+import javax.enterprise.context.ContextNotActiveException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+    private static final Logger logger = Logger.getLogger(InvocationMonitorInterceptor.class.getName());
+
+        try
+        {
+            requestInvocationCounter.count(ic.getTarget().getClass().getName(), ic.getMethod().getName(), end - start);
+        }
+        catch (ContextNotActiveException cnae)
+        {
+            logger.log(Level.FINE, "could not monitor invocatino to {} due to RequestContext not being active",
+                ic.getMethod().toString());
+        }

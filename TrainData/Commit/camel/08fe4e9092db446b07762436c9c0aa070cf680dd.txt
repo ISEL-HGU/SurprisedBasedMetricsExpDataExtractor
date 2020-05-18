@@ -1,0 +1,68 @@
+import java.io.BufferedReader;
+import java.util.Objects;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+            AtomicInteger count = new AtomicInteger(0);
+
+            // Use a Stream to stream a file across.
+            try (Stream<String> lines = new BufferedReader(in).lines()) {
+                int linesToSkip = 0;
+
+                // If the first line of the CSV file contains columns name, then we
+                // skip this line
+                if (factory.getSkipFirstLine()) {
+                    linesToSkip = 1;
+                }
+
+                // Consume the lines in the file via a consumer method, passing in state as necessary.
+                // If the internals of the consumer fail, we unrap the checked exception upstream.
+                try {
+                    lines.skip(linesToSkip)
+                            .forEachOrdered(consumeFile(factory, models, separator, quote, count));
+                } catch (WrappedException e) {
+                    throw e.getWrappedException();
+                }
+
+                // BigIntegerFormatFactory if models list is empty or not
+                // If this is the case (correspond to an empty stream, ...)
+                if (models.size() == 0) {
+                    throw new java.lang.IllegalArgumentException("No records have been defined in the CSV");
+                } else {
+                    return extractUnmarshalResult(models);
+        } finally {
+            if (in != null) {
+                IOHelper.close(in, "in", LOG);
+            }
+        }
+
+    }
+
+    private Consumer<String> consumeFile(BindyCsvFactory factory, List<Map<String, Object>> models,
+                                         String separator, String quote, AtomicInteger count) {
+        return line -> {
+            try {
+                // Trim the line coming in to remove any trailing whitespace
+                String trimmedLine = line.trim();
+                count.incrementAndGet();
+                Map<String, Object> model;
+
+
+                Matcher matcher = pattern.matcher(trimmedLine);
+
+
+                String[] tokens = pattern.split(trimmedLine, factory.getAutospanLine() ? factory.getMaxpos() : -1);
+
+
+                if (result.isEmpty()) {
+                    throw new IllegalArgumentException("No records have been defined in the CSV");
+
+                    factory.bind(getCamelContext(), result, model, count.get());
+
+
+
+            } catch (Exception e) {
+                throw new WrappedException(e);
+        };

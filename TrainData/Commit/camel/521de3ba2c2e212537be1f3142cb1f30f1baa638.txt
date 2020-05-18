@@ -1,0 +1,8 @@
+         * multiple times. The http producer will by default cache the response
+         * body stream. If setting this option to true, then the producers will
+         * not cache the response body stream but use the response stream as-is
+         * as the message body.
+         * multiple times. The http producer will by default cache the response
+         * body stream. If setting this option to true, then the producers will
+         * not cache the response body stream but use the response stream as-is
+         * as the message body.

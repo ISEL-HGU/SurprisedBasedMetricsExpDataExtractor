@@ -1,0 +1,8 @@
+import com.amazonaws.services.mq.model.ConfigurationId;
+        UpdateBrokerResult result = new UpdateBrokerResult();
+        ConfigurationId cId = new ConfigurationId();
+        cId.setId("1");
+        cId.setRevision(12);
+        result.setBrokerId("1");
+        result.setConfiguration(cId);
+        return result;

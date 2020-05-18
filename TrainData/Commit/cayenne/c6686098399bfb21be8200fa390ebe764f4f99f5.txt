@@ -1,0 +1,16 @@
+    protected boolean isReverse;
+        this.excludedTokens = new HashSet<>();
+        this.selectableTokensList = new ArrayList<>();
+        List<MergerToken> t = new ArrayList<>(selectableTokensList);
+        } else {
+        } else if (unselectedCount == 0) {
+        } else {
+        // Repaint, so that "Operation" column updates properly
+        } else {
+    public boolean isReverse() {
+        return isReverse;
+    }
+
+
+        isReverse = true;
+

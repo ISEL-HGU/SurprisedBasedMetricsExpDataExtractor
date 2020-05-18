@@ -1,0 +1,10 @@
+import org.apache.camel.processor.aggregate.DelegateAggregationStrategy;
+        AggregationStrategy strategy = getAggregationStrategy();
+
+        if (strategy instanceof DelegateAggregationStrategy) {
+            strategy = ((DelegateAggregationStrategy) strategy).getDelegate();
+        }
+            AggregationStrategy clone = original.newInstance(exchange);
+            if (isShareUnitOfWork()) {
+                clone = new ShareUnitOfWorkAggregationStrategy(clone);
+            }

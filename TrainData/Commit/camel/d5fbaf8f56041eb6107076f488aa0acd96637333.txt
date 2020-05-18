@@ -1,0 +1,32 @@
+import org.apache.camel.ExtendedCamelContext;
+                    bindToRegistry(field, bind.value(), bean, beanName, bind.beanPostProcess());
+            bindToRegistry(method, bind.value(), bean, beanName, bind.beanPostProcess());
+            bindToRegistry(clazz, ann.value(), bean, beanName, ann.beanPostProcess());
+                    bindToRegistry(clazz, ann.value(), null, null, ann.beanPostProcess());
+    private void bindToRegistry(Class<?> clazz, String name, Object bean, String beanName, boolean beanPostProcess) {
+        if (beanPostProcess) {
+            try {
+                camelContext.adapt(ExtendedCamelContext.class).getBeanPostProcessor().postProcessBeforeInitialization(bean, beanName);
+                camelContext.adapt(ExtendedCamelContext.class).getBeanPostProcessor().postProcessAfterInitialization(bean, beanName);
+            } catch (Exception e) {
+                throw RuntimeCamelException.wrapRuntimeException(e);
+            }
+        }
+    private void bindToRegistry(Field field, String name, Object bean, String beanName, boolean beanPostProcess) {
+            if (beanPostProcess) {
+                try {
+                    camelContext.adapt(ExtendedCamelContext.class).getBeanPostProcessor().postProcessBeforeInitialization(value, beanName);
+                    camelContext.adapt(ExtendedCamelContext.class).getBeanPostProcessor().postProcessAfterInitialization(value, beanName);
+                } catch (Exception e) {
+                    throw RuntimeCamelException.wrapRuntimeException(e);
+                }
+            }
+    private void bindToRegistry(Method method, String name, Object bean, String beanName, boolean beanPostProcess) {
+            if (beanPostProcess) {
+                try {
+                    camelContext.adapt(ExtendedCamelContext.class).getBeanPostProcessor().postProcessBeforeInitialization(value, beanName);
+                    camelContext.adapt(ExtendedCamelContext.class).getBeanPostProcessor().postProcessAfterInitialization(value, beanName);
+                } catch (Exception e) {
+                    throw RuntimeCamelException.wrapRuntimeException(e);
+                }
+            }

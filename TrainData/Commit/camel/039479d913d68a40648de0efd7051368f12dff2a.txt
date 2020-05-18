@@ -1,0 +1,5 @@
+        endpoint.setContentTypeResolver(contentTypeResolver);
+        setEndpointHeaderFilterStrategy(endpoint);
+        setProperties(endpoint.getConfiguration(), parameters);
+        setProperties(endpoint, parameters);
+

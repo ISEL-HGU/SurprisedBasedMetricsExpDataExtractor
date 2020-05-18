@@ -1,0 +1,1 @@
+        /* deprecated (and not working perfectly) -> */ "camel-swagger", "camel-ibatis",

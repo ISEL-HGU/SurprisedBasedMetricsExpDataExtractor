@@ -1,0 +1,4 @@
+
+    public boolean supportsNullComparision() {
+        return true;
+    }

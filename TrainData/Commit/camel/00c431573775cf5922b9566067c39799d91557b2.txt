@@ -1,0 +1,4 @@
+        if (ObjectHelper.isEmpty(configuration.getAmazonEc2Client())) {
+            if (ec2Client != null) {
+                ec2Client.shutdown();
+            }

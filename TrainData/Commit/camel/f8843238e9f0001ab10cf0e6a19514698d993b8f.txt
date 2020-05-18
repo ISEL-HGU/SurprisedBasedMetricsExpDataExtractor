@@ -1,0 +1,12 @@
+         * kerberos nodes (contains pairs of kerberos principals and encrypted
+         * keys (which are derived from the Kerberos password)).
+         * srv11.example.com:8021,srv12.example.com:8021) - see kerb5.conf file
+         * (https://web.mit.edu/kerberos/krb5-1.12/doc/admin/conf_files/krb5_conf.html).
+         * kerberos nodes (contains pairs of kerberos principals and encrypted
+         * keys (which are derived from the Kerberos password)).
+         * srv11.example.com:8021,srv12.example.com:8021) - see kerb5.conf file
+         * (https://web.mit.edu/kerberos/krb5-1.12/doc/admin/conf_files/krb5_conf.html).
+         * kerberos nodes (contains pairs of kerberos principals and encrypted
+         * keys (which are derived from the Kerberos password)).
+         * srv11.example.com:8021,srv12.example.com:8021) - see kerb5.conf file
+         * (https://web.mit.edu/kerberos/krb5-1.12/doc/admin/conf_files/krb5_conf.html).

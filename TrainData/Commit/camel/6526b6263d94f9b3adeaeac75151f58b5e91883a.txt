@@ -1,0 +1,8 @@
+import java.io.StringReader;
+                    int line = findLineNumber(clazz.toUnformattedString(), pos);
+                        int line = findLineNumber(clazz.toUnformattedString(), result.getPosition());
+                    int line = findLineNumber(clazz.toUnformattedString(), result.getPosition());
+                    int line = findLineNumber(clazz.toUnformattedString(), result.getPosition());
+                    int line = findLineNumber(clazz.toUnformattedString(), result.getPosition());
+    private static int findLineNumber(String content, int position) {
+            try (BufferedReader br = new BufferedReader(new StringReader(content))) {

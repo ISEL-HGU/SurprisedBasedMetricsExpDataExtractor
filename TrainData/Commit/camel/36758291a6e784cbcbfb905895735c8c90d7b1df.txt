@@ -1,0 +1,3 @@
+        if (value instanceof Stream) {
+            return ((Stream) value).iterator();
+        }

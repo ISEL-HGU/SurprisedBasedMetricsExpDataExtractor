@@ -1,0 +1,1 @@
+    public static URL getLocation(Class self) {

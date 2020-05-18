@@ -1,0 +1,1 @@
+    cachingProvider.close();

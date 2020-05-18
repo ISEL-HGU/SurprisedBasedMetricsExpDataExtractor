@@ -1,0 +1,3 @@
+    private static final Pattern SYNTAX_DASH_PATTERN = Pattern.compile("([\\w.-])");
+            String[] tokens = SYNTAX_DASH_PATTERN.split(syntax);
+            Matcher matcher2 = SYNTAX_DASH_PATTERN.matcher(syntax);

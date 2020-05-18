@@ -1,0 +1,1 @@
+                    oldExt = oldModel.getVendorExtensions().get("x-className") != null;

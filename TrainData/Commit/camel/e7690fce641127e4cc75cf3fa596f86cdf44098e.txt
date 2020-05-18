@@ -1,0 +1,28 @@
+            injectAsCollection(exchange, picked, collectionType);
+    private void injectAsCollection(Exchange oldExchange, E picked, Class<? extends Collection> collectionType) {
+        Collection<E> col = injector.getValueAsCollection(oldExchange, collectionType);
+        public abstract Collection<E> getValueAsCollection(Exchange exchange, Class<? extends Collection> type);
+        public Collection<E> getValueAsCollection(Exchange exchange, Class<? extends Collection> type) {
+            Object value = exchange.getProperty(propertyName);
+            if (value == null) {
+                // empty so create a new collection to host this
+                return exchange.getContext().getInjector().newInstance(type);
+            } else {
+                return exchange.getProperty(propertyName, type);
+            }
+        public Collection<E> getValueAsCollection(Exchange exchange, Class<? extends Collection> type) {
+            Object value = exchange.getIn().getHeader(headerName);
+            if (value == null) {
+                // empty so create a new collection to host this
+                return exchange.getContext().getInjector().newInstance(type);
+            } else {
+                return exchange.getIn().getHeader(headerName, type);
+            }
+        public Collection<E> getValueAsCollection(Exchange exchange, Class<? extends Collection> type) {
+            Object value = exchange.getIn().getBody();
+            if (value == null) {
+                // empty so create a new collection to host this
+                return exchange.getContext().getInjector().newInstance(type);
+            } else {
+                return exchange.getIn().getBody(type);
+            }

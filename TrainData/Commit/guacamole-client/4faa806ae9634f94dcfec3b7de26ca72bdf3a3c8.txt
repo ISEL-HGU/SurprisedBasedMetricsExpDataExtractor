@@ -1,0 +1,2 @@
+        if (request != null) {
+            if (username != null) {

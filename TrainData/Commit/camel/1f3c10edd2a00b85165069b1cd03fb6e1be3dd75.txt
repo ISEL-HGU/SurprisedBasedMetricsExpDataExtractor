@@ -1,0 +1,4 @@
+    private Boolean useGlobalSslContextParameters = false;
+        return useGlobalSslContextParameters;
+            Boolean useGlobalSslContextParameters) {
+        this.useGlobalSslContextParameters = useGlobalSslContextParameters;

@@ -1,0 +1,3 @@
+                            BundleTypeConverterLoader fallBackBundleTypeConverterLoader =
+                                new BundleTypeConverterLoader(bundle, url3 != null);
+                            resolvers.add(fallBackBundleTypeConverterLoader);

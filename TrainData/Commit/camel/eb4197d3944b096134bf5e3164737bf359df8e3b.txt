@@ -1,0 +1,11 @@
+    private boolean deprecated;
+    public SpringBootData(String name, String javaType, String description, String sourceType, String defaultValue, boolean deprecated) {
+        this.deprecated = deprecated;
+
+    public boolean isDeprecated() {
+        return deprecated;
+    }
+
+    public void setDeprecated(boolean deprecated) {
+        this.deprecated = deprecated;
+    }

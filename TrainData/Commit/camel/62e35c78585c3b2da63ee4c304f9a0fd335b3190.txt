@@ -1,0 +1,17 @@
+import java.util.HashMap;
+    /**
+     * Will inspect the target for properties.
+     * <p/>
+     * Notice a property must have both a getter/setter method to be included.
+     * Notice all <tt>null</tt> values won't be included.
+     *
+     * @param target         the target bean
+     * @return the map with found properties
+     */
+    public static Map<String, Object> getNonNullProperties(Object target) {
+        Map<String, Object> properties = new HashMap<>();
+
+        getProperties(target, properties, null, false);
+
+        return properties;
+    }

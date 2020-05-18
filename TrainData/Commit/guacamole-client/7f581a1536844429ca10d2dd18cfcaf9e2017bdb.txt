@@ -1,0 +1,6 @@
+ b/extensions/guacamole-auth-radius/src/main/java/org/apache/guacamole/auth/radius/conf/RadiusGuacamoleProperties.java
+package org.apache.guacamole.auth.radius.conf;
+    public static final RadiusAuthenticationProtocolProperty RADIUS_AUTH_PROTOCOL =
+            new RadiusAuthenticationProtocolProperty() {
+    public static final RadiusAuthenticationProtocolProperty RADIUS_EAP_TTLS_INNER_PROTOCOL =
+            new RadiusAuthenticationProtocolProperty() {

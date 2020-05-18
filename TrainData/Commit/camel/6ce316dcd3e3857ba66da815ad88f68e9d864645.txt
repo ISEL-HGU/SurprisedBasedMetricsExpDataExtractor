@@ -1,0 +1,2 @@
+    protected void addMethod(final Object pojo, final Method method, final Endpoint endpoint, String predicate) throws Exception {
+        Processor answer = endpoint.getCamelContext().getBeanProcessorFactory().createBeanProcessor(endpoint.getCamelContext(), pojo, method);

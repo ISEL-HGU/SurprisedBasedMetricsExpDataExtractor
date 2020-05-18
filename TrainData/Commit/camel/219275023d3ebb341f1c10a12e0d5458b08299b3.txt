@@ -1,0 +1,39 @@
+        private boolean ignoreOnLoadError;
+        boolean isIgnoreOnLoadError() {
+            return ignoreOnLoadError;
+        }
+
+        void setIgnoreOnLoadError(boolean ignoreOnLoadError) {
+            this.ignoreOnLoadError = ignoreOnLoadError;
+        }
+
+        boolean ignoreOnLoadError = false;
+                    ignoreOnLoadError = isIgnoreOnLoadError(element);
+                if (converters.containsKey(currentClass)) {
+                    converters.get(currentClass).setIgnoreOnLoadError(ignoreOnLoadError);
+                }
+        ignoreOnLoadError = false;
+                    ignoreOnLoadError = isIgnoreOnLoadError(element);
+                if (converters.containsKey(currentClass)) {
+                    converters.get(currentClass).setIgnoreOnLoadError(ignoreOnLoadError);
+                }
+    private static boolean isIgnoreOnLoadError(Element element) {
+        for (AnnotationMirror ann : element.getAnnotationMirrors()) {
+            for (Map.Entry<? extends ExecutableElement, ? extends AnnotationValue> entry : ann.getElementValues().entrySet()) {
+                if ("ignoreOnLoadError".equals(entry.getKey().getSimpleName().toString())) {
+                    return (Boolean) entry.getValue().getValue();
+                }
+            }
+        }
+        return false;
+    }
+
+            if (converters.isIgnoreOnLoadError()) {
+                writer.append("        try {\n");
+                writer.append("            converters.forEach((k, v, c) -> registry.addTypeConverter(k, v, c));\n");
+                writer.append("        } catch (Throwable e) {\n");
+                writer.append("            // ignore on load error\n");
+                writer.append("        }\n");
+            } else {
+                writer.append("        converters.forEach((k, v, c) -> registry.addTypeConverter(k, v, c));\n");
+            }

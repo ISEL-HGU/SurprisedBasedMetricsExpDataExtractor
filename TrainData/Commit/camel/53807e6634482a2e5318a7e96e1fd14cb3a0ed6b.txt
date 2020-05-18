@@ -1,0 +1,13 @@
+     * When unmarshalling should a single instance be unwrapped and returned
+     * instead of wrapped in a java.util.List.
+     */
+    private Boolean unwrapSingleInstance = true;
+    /**
+    public Boolean getUnwrapSingleInstance() {
+        return unwrapSingleInstance;
+    }
+
+    public void setUnwrapSingleInstance(Boolean unwrapSingleInstance) {
+        this.unwrapSingleInstance = unwrapSingleInstance;
+    }
+

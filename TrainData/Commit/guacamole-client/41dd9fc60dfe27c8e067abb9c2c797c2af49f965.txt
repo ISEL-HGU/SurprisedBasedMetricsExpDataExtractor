@@ -1,0 +1,10 @@
+                String stateString = request.getParameter(RadiusStateField.PARAMETER_NAME);
+                if (stateString == null) {
+                    logger.error("Could not retrieve RADIUS state.");
+                    logger.debug("Received null value while retrieving RADIUS state parameter.");
+                    throws new GuacamoleInvalidCredentialsException("Authentication error.", CredentialsInfo.USERNAME_PASSWORD);
+                }
+
+                byte[] stateBytes = DatatypeConverter.parseHexBinary(stateString);
+                                                              challengeResponse,
+                                                              stateBytes);

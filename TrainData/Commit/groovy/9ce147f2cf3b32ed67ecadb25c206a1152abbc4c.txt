@@ -1,0 +1,4 @@
+import static org.apache.groovy.ast.tools.AnnotatedNodeUtils.markAsGenerated;
+        markAsGenerated(classNode, method);
+        ConstructorNode genConstructor = node.addConstructor(ctor.getModifiers(), newParams, ctor.getExceptions(), code);
+        markAsGenerated(node, genConstructor);

@@ -1,0 +1,3 @@
+import org.apache.guacamole.properties.FileGuacamoleProperty;
+    public static final FileGuacamoleProperty RADIUS_CA_FILE = new FileGuacamoleProperty() {
+    public static final FileGuacamoleProperty RADIUS_KEY_FILE = new FileGuacamoleProperty() {

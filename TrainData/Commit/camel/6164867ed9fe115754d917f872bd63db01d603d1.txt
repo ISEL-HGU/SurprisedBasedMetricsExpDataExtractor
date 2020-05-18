@@ -1,0 +1,4 @@
+        Object lockOnSync = this;
+            lockOnSync = key;
+
+                        throttleRate = newThrottle;

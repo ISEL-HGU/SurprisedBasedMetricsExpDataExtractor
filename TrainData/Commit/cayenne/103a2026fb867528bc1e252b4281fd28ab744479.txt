@@ -1,0 +1,6 @@
+            if(attributes.isEmpty()) {
+                attributes = "{}";
+            } else {
+                attributes = "{"  attributes.substring(0, attributes.length() - COMMA_SEPARATOR_LENGTH)  "}";
+            }
+        return getTokenValue(relationship);

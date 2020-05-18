@@ -1,0 +1,27 @@
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+        String configurationName = name.replace("ComponentAutoConfiguration", "ComponentConfiguration");
+
+        javaClass.addAnnotation(Conditional.class).setLiteralValue(
+            "{ ConditionalOnCamelContextAndAutoConfigurationBeans.class, "  name  ".GroupConditions.class }");
+        javaClass.addImport("org.apache.camel.spring.boot.util.ConditionalOnCamelContextAndAutoConfigurationBeans");
+                .setName("GroupConditions")
+                .setPackagePrivate()
+                    .setName("GroupConditions")
+        String configurationName = name.replace("DataFormatAutoConfiguration", "DataFormatConfiguration");
+        javaClass.addAnnotation(Conditional.class).setLiteralValue(
+            "{ ConditionalOnCamelContextAndAutoConfigurationBeans.class, "  name  ".GroupConditions.class }");
+        javaClass.addImport("org.apache.camel.spring.boot.util.ConditionalOnCamelContextAndAutoConfigurationBeans");
+                .setName("GroupConditions")
+                .setPackagePrivate()
+                    .setName("GroupConditions")
+        String configurationName = name.replace("LanguageAutoConfiguration", "LanguageConfiguration");
+
+        javaClass.addAnnotation(Conditional.class).setLiteralValue(
+            "{ ConditionalOnCamelContextAndAutoConfigurationBeans.class, "  name  ".GroupConditions.class }");
+        javaClass.addImport(ConfigurableBeanFactory.class);
+        javaClass.addImport("org.apache.camel.spring.boot.util.ConditionalOnCamelContextAndAutoConfigurationBeans");
+                .setName("GroupConditions")
+                .setPackagePrivate()
+                    .setName("GroupConditions")
+        method.addAnnotation(Scope.class).setLiteralValue("ConfigurableBeanFactory.SCOPE_PROTOTYPE");
+        sb.append("    @Override\n");

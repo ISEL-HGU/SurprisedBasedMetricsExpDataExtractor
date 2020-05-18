@@ -1,0 +1,4 @@
+            throw new APIException(
+                Response.Status.fromStatusCode(e.getStatus().getHttpStatusCode()),
+                e
+            );

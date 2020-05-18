@@ -1,0 +1,1 @@
+     * Whether to enable auto configuration of the sips component. This is

@@ -1,0 +1,12 @@
+        /**
+         * Setting the autocreation of the queue
+         */
+        private Boolean autoCreateQueue = false;
+
+        public Boolean getAutoCreateQueue() {
+            return autoCreateQueue;
+        }
+
+        public void setAutoCreateQueue(Boolean autoCreateQueue) {
+            this.autoCreateQueue = autoCreateQueue;
+        }

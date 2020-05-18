@@ -1,0 +1,3 @@
+    private final List<String> _endProgress = new ArrayList<>();
+    private final List<String> _logs = new ArrayList<>();
+    private final List<String> _rawLogs = new ArrayList<>();

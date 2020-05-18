@@ -1,0 +1,14 @@
+            remainder = ifStartsWithReturnRemainder("sysenv:", function);
+        }
+        if (remainder == null) {
+        if (remainder == null) {
+            remainder = ifStartsWithReturnRemainder("env:", function);
+        }
+            // remove leading character (dot, colon or ?)
+            if (remainder.startsWith(".") || remainder.startsWith(":") || remainder.startsWith("?")) {
+            remainder = ifStartsWithReturnRemainder("out.header:", function);
+        }
+        if (remainder == null) {
+        if (remainder == null) {
+            remainder = ifStartsWithReturnRemainder("out.headers:", function);
+        }

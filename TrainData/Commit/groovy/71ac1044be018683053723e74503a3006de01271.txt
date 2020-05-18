@@ -1,0 +1,3 @@
+import static org.codehaus.groovy.ast.tools.GeneralUtils.localVarX;
+        VariableExpression primaryExcX = localVarX(primaryExcName, ClassHelper.make(Throwable.class));
+                                primaryExcX,

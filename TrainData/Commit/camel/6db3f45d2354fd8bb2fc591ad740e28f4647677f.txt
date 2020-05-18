@@ -1,0 +1,23 @@
+        String endpointScheme = this.component;
+        if (endpointScheme == null) {
+                endpointScheme = conf.getComponent();
+        if (endpointScheme == null) {
+                endpointScheme = conf.getComponent();
+            }
+        }
+
+        // The uri is used to tweak the uri.
+        // The uri configured on EIP takes precedence vs configured on configuration.
+        String endpointUri = this.uri;
+        if (endpointUri == null) {
+            ServiceCallConfigurationDefinition conf = retrieveConfig(camelContext);
+            if (conf != null) {
+                endpointUri = conf.getUri();
+            }
+        }
+        if (endpointUri == null) {
+            ServiceCallConfigurationDefinition conf = retrieveDefaultConfig(camelContext);
+            if (conf != null) {
+                endpointUri = conf.getUri();
+            ObjectHelper.applyIfNotEmpty(endpointScheme, camelContext::resolvePropertyPlaceholders, () -> ServiceCallConstants.DEFAULT_COMPONENT),
+            ObjectHelper.applyIfNotEmpty(endpointUri, camelContext::resolvePropertyPlaceholders, () -> null),

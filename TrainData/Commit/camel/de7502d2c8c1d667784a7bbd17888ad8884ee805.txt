@@ -1,0 +1,14 @@
+
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
+
+        this.api = JAXRSClientFactory.create(RestBotAPI.BOT_API_DEFAULT_URL, RestBotAPI.class, Collections.singletonList(providerByCustomObjectMapper()));
+        api.sendMessage(authorizationToken, message);
+    
+    private JacksonJsonProvider providerByCustomObjectMapper() {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.setSerializationInclusion(Include.NON_NULL);
+        return new JacksonJsonProvider(mapper);
+    }    
+}

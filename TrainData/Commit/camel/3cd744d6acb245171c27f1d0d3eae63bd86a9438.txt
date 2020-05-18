@@ -1,0 +1,14 @@
+import org.apache.camel.CamelContext;
+    public IrcMessage(CamelContext camelContext) {
+        super(camelContext);
+    public IrcMessage(CamelContext camelContext, String messageType, IRCUser user, String message) {
+        super(camelContext);
+    public IrcMessage(CamelContext camelContext, String messageType, String target, IRCUser user, String message) {
+        super(camelContext);
+    public IrcMessage(CamelContext camelContext, String messageType, String target, IRCUser user, String whoWasKickedNick, String message) {
+        super(camelContext);
+    public IrcMessage(CamelContext camelContext, String messageType, String target, IRCUser user) {
+        super(camelContext);
+    public IrcMessage(CamelContext camelContext, String messageType, int num, String value, String message) {
+        super(camelContext);
+        return new IrcMessage(getCamelContext());

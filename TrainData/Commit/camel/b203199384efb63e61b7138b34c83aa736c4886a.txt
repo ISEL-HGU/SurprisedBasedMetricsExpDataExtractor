@@ -1,0 +1,6 @@
+import org.apache.camel.component.atomix.AtomixConfiguration;
+import org.apache.camel.component.atomix.AtomixConfigurationAware;
+import org.apache.camel.ha.CamelClusterService;
+    AtomixClusterView(CamelClusterService cluster, String namespace, Atomix atomix) {
+            final AtomixConfigurationAware service = AtomixConfigurationAware.class.cast(getClusterService());
+            final AtomixConfiguration<?> configuration = service.getConfiguration();

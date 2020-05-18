@@ -1,0 +1,33 @@
+        try {
+            DataType to = contract.getInputType();
+            if (to != null) {
+                DataTypeAware target = (DataTypeAware) exchange.getIn();
+                DataType from = target.getDataType();
+                if (!to.equals(from)) {
+                    LOG.debug("Looking for transformer for INPUT: from='{}', to='{}'", from, to);
+                    doTransform(exchange.getIn(), from, to);
+                    target.setDataType(to);
+                }
+                if (contract.isValidateInput()) {
+                    doValidate(exchange.getIn(), to);
+                }
+        } catch (Exception e) {
+            exchange.setException(e);
+
+        try {
+            DataType to = contract.getOutputType();
+            if (to != null) {
+                DataTypeAware typeAwareTarget = (DataTypeAware)target;
+                DataType from = typeAwareTarget.getDataType();
+                if (!to.equals(from)) {
+                    LOG.debug("Looking for transformer for OUTPUT: from='{}', to='{}'", from, to);
+                    doTransform(target, from, to);
+                    typeAwareTarget.setDataType(to);
+                }
+                if (contract.isValidateOutput()) {
+                    doValidate(target, to);
+                }
+        } catch (Exception e) {
+            exchange.setException(e);
+
+

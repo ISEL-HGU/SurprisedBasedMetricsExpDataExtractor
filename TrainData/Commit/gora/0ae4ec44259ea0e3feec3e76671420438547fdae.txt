@@ -1,0 +1,14 @@
+   * @throws GoraException
+   * @throws ClassNotFoundException - Exception thrown when does not exists a suitable metadata analyzer class
+  public static DataStoreMetadataAnalyzer createAnalyzer(Configuration configuration) throws GoraException, ClassNotFoundException {
+   * @throws GoraException
+   * @throws ClassNotFoundException - Exception thrown when does not exists a suitable metadata analyzer class
+  public static DataStoreMetadataAnalyzer createAnalyzer(Configuration configuration, Properties properties) throws GoraException, ClassNotFoundException {    
+   * @throws GoraException
+   * @throws ClassNotFoundException - Exception thrown when does not exists a suitable metadata analyzer class
+  public static DataStoreMetadataAnalyzer createAnalyzer(String metadataAnalyzerClassName, Configuration configuration) throws GoraException, ClassNotFoundException {
+   * @throws GoraException
+   * @throws ClassNotFoundException - Exception thrown when does not exists a suitable metadata analyzer class
+  public static DataStoreMetadataAnalyzer createAnalyzer(String metadataAnalyzerClassName, Configuration configuration, Properties properties) throws GoraException, ClassNotFoundException {
+    } catch (ClassNotFoundException e) {
+      throw e ;

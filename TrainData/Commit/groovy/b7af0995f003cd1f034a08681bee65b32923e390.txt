@@ -1,0 +1,8 @@
+import org.antlr.v4.runtime.CharStreams;
+import java.io.IOException;
+import java.io.Reader;
+
+    public GroovyLangLexer(Reader reader) throws IOException {
+        this(CharStreams.fromReader(reader));
+    }
+

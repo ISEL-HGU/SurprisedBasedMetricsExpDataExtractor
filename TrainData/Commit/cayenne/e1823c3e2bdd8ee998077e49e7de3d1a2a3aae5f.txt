@@ -1,0 +1,2 @@
+        } else {
+        return super.getPopupHeightForRowCount(Math.min(maxRowCount, list.getModel().getSize()));

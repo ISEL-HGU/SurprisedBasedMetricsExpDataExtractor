@@ -1,0 +1,55 @@
+import java.lang.invoke.MethodHandle;
+import java.lang.invoke.MethodType;
+import java.util.stream.Collectors;
+
+import static java.lang.invoke.MethodHandles.publicLookup;
+                        final boolean isArray = param.getDataType().equalsIgnoreCase("array");
+                        final List<String> allowableValues = param.getAllowableValues();
+                        final boolean hasAllowableValues = allowableValues != null && !allowableValues.isEmpty();
+                            if (isArray) {
+                                        defineItems(serializableParameter, allowableValues, new StringProperty(), String.class);
+                                        defineItems(serializableParameter, allowableValues, new IntegerProperty(), Integer.class);
+                                        defineItems(serializableParameter, allowableValues, new LongProperty(), Long.class);
+                                        defineItems(serializableParameter, allowableValues, new FloatProperty(), Float.class);
+                                        defineItems(serializableParameter, allowableValues, new DoubleProperty(), Double.class);
+                                        defineItems(serializableParameter, allowableValues, new BooleanProperty(), Boolean.class);
+                        if (hasAllowableValues && !isArray) {
+                            serializableParameter.setEnum(allowableValues);
+    private static void defineItems(final SerializableParameter serializableParameter,
+        final List<String> allowableValues, final Property items, final Class<?> type) {
+        serializableParameter.setItems(items);
+        if (allowableValues != null && !allowableValues.isEmpty()) {
+            if (String.class.equals(type)) {
+                ((StringProperty) items).setEnum(allowableValues);
+            } else {
+                convertAndSetItemsEnum(items, allowableValues, type);
+            }
+        }
+    }
+
+    private static void convertAndSetItemsEnum(final Property items, final List<String> allowableValues, final Class<?> type) {
+        try {
+            final MethodHandle valueOf = publicLookup().findStatic(type, "valueOf", MethodType.methodType(type, String.class));
+            final MethodHandle setEnum = publicLookup().bind(items, "setEnum",
+                MethodType.methodType(void.class, List.class));
+            final List<?> values = allowableValues.stream().map(v -> {
+                try {
+                    return valueOf.invoke(v);
+                } catch (Throwable e) {
+                    if (e instanceof RuntimeException) {
+                        throw (RuntimeException) e;
+                    }
+
+                    throw new IllegalStateException(e);
+                }
+            }).collect(Collectors.toList());
+            setEnum.invoke(values);
+        } catch (Throwable e) {
+            if (e instanceof RuntimeException) {
+                throw (RuntimeException) e;
+            }
+
+            throw new IllegalStateException(e);
+        }
+    }
+

@@ -1,0 +1,12 @@
+     * Name of header to use as input instead of the message body
+     */
+    private String headerName;
+    /**
+    public String getHeaderName() {
+        return headerName;
+    }
+
+    public void setHeaderName(String headerName) {
+        this.headerName = headerName;
+    }
+

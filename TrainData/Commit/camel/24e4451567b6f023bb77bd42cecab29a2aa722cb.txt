@@ -1,0 +1,4 @@
+
+        if (ObjectHelper.isEmpty(operation)) {
+            throw new IllegalArgumentException("Operation must be specified");
+        }

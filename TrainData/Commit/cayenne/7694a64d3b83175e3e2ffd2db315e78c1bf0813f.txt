@@ -1,0 +1,6 @@
+        String[] queries = modified.split(UNION);
+        for (ParameterBinding b : bindings) {
+            } else if (b.getValue() == null) {
+                value = b.getValue().getClass().getName() 
+                        "@" 
+                        System.identityHashCode(b.getValue());

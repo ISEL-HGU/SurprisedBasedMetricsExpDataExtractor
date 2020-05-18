@@ -1,0 +1,7 @@
+                    msg = "\n\t\t\targument["i"] = ";
+                    if (arguments[i] == null) {
+                        msg = "null";
+                    } else {
+                        msg = arguments[i].getClass().getName()
+                            "@"Integer.toHexString(System.identityHashCode(arguments[i]));
+                    }

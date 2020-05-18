@@ -1,0 +1,4 @@
+            // because there is not probeContentType option 
+            // in other file based components, false may be passed
+            // as the second argument.
+            super.populateHeaders(message, false);

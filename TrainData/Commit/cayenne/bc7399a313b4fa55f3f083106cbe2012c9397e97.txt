@@ -1,0 +1,118 @@
+import java.util.AbstractMap;
+import java.util.AbstractSet;
+import java.util.Iterator;
+ * Though this implementation try to follow general {@link Map} contract (including equals() and hashCode())
+ * it is not intended for general usage.
+ * There is no HardReferenceMap as simple HashMap can be used for that.
+ * This map doesn't guaranties that value will be there even right after put(), as GC can remove it at any time.
+ * <p>
+ * This implementation supports proper serialization, concrete classes should use {@link #writeObjectInternal(ObjectOutputStream)}
+ * and {@link #readObjectInternal(ObjectInputStream)} methods to support it too.
+ * <p>
+ * @param <K> key type
+ * @param <V> value type
+ * @param <R> reference type that will be used to store values
+ *
+ * @see WeakValueMap implementation that uses WeakReference to store values
+ * @see SoftValueMap implementation that uses SoftReference to store values
+abstract class ReferenceMap<K, V, R extends Reference<V>> extends AbstractMap<K, V> implements Serializable {
+
+    /*
+     * Implementation notes:
+     *  - internally data stored in HashMap thus this class and all implementations are not thread safe;
+     *  - to track references that were cleared ReferenceQueue is used;
+     *  - this map stores not only direct key => ref map but also a reverse ref => key to be able
+     *  effectively clear data that was removed by GC;
+     *  - this map is abstract, all that required for the concrete implementation is
+     *  to define newReference(Object) method;
+     *  - all accessors/modifiers should call checkReferenceQueue() to clear all stale data
+     */
+    /**
+     * This is a main data storage used for most operations
+     */
+    /**
+     * This is aux storage to faster remove cleared references
+     */
+    /**
+     * This is a lazily created set of entries that is essentially a view to actual data
+     */
+    protected transient Set<Entry<K, V>> entrySet;
+
+        // this can be optimized by creating view instead of new heavyweight collection
+        Collection<R> referenceValues = map.values();
+        Collection<V> values = new ArrayList<>(referenceValues.size());
+        for(R v : referenceValues) {
+                values.add(v.get());
+        checkReferenceQueue();
+        // lazily create entry set view
+        Set<Entry<K, V>> es = entrySet;
+        if(es == null) {
+            entrySet = es = new ReferenceEntrySet();
+        }
+        return es;
+     * Cleanup all references collected by GC so far
+        map.forEach((k, v) -> reverseMap.put(v, k));
+    }
+
+    /**
+     * View over {@link #map} entry set
+     */
+    class ReferenceEntrySet extends AbstractSet<Entry<K, V>> {
+
+        @Override
+        public Iterator<Entry<K, V>> iterator() {
+            return new ReferenceEntryIterator();
+        }
+
+        @Override
+        public int size() {
+            return map.size();
+        }
+    }
+
+    /**
+     * Iterator used by entrySet. Wrapper around {@link #map} iterator
+     */
+    class ReferenceEntryIterator implements Iterator<Entry<K, V>> {
+
+        Iterator<Entry<K, R>> internalIterator;
+
+        ReferenceEntryIterator() {
+            internalIterator = map.entrySet().iterator();
+        }
+
+        @Override
+        public boolean hasNext() {
+            return internalIterator.hasNext();
+        }
+
+        @Override
+        public Entry<K, V> next() {
+            return new ReferenceEntry(internalIterator.next());
+        }
+    }
+
+    /**
+     * View over {@link Map.Entry} that transparently resolves Reference
+     */
+    class ReferenceEntry extends SimpleEntry<K, V> {
+
+        private static final long serialVersionUID = -1795136249842496011L;
+
+        Entry<K, R> refEntry;
+
+        public ReferenceEntry(Entry<K, R> refEntry) {
+            super(refEntry.getKey(), refEntry.getValue() != null ? refEntry.getValue().get() : null);
+            this.refEntry = refEntry;
+        }
+
+        @Override
+        public V setValue(V value) {
+            R newRef = newReference(value);
+            R oldRef = refEntry.setValue(newRef);
+            reverseMap.put(newRef, reverseMap.remove(oldRef));
+            if(oldRef != null) {
+                return oldRef.get();
+            }
+            return null;
+        }

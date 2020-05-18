@@ -1,0 +1,5 @@
+    public int getQueryTimeout() {
+        return QueryMetadata.QUERY_TIMEOUT_DEFAULT;
+    }
+
+    @Override

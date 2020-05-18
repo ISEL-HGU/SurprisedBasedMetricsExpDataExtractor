@@ -1,0 +1,20 @@
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
+import org.apache.camel.Exchange;
+
+    
+    @Autowired
+    private Environment env;
+    
+    @Value("${camel.component.servlet.mapping.context-path}")
+    private String contextPath;
+        
+            .port(env.getProperty("server.port", "8080"))
+            .contextPath(contextPath.substring(0, contextPath.length() - 2))
+                .to("direct:update-user");
+        
+        from("direct:update-user")
+            .to("bean:userService?method=updateUser")
+            .setHeader(Exchange.HTTP_RESPONSE_CODE, constant(204))
+            .setBody(constant(""));

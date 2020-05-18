@@ -1,0 +1,73 @@
+import java.security.PublicKey;
+import org.eclipse.californium.scandium.dtls.rpkstore.TrustedRpkStore;
+
+    @UriParam
+    private PrivateKey privateKey;
+
+    @UriParam
+    private PublicKey publicKey;
+
+    @UriParam
+    private TrustedRpkStore trustedRpkStore;
+
+
+    /**
+     * Get the TrustedRpkStore to use to determine trust in raw public keys.
+     */
+    public TrustedRpkStore getTrustedRpkStore() {
+        return trustedRpkStore;
+    }
+
+    /**
+     * Set the TrustedRpkStore to use to determine trust in raw public keys.
+     */
+    public void setTrustedRpkStore(TrustedRpkStore trustedRpkStore) {
+        this.trustedRpkStore = trustedRpkStore;
+    }
+     * Get the configured private key for use with Raw Public Key.
+     */
+    public PrivateKey getPrivateKey() {
+        return privateKey;
+    }
+
+    /**
+     * Set the configured private key for use with Raw Public Key.
+     */
+    public void setPrivateKey(PrivateKey privateKey) {
+        this.privateKey = privateKey;
+    }
+
+    /**
+     * Get the configured public key for use with Raw Public Key.
+     */
+    public PublicKey getPublicKey() {
+        return publicKey;
+    }
+
+    /**
+     * Set the configured public key for use with Raw Public Key.
+     */
+    public void setPublicKey(PublicKey publicKey) {
+        this.publicKey = publicKey;
+    }
+
+    /**
+            if (trustedRpkStore == null && getTruststore() == null) {
+            if (privateKey == null && getKeystore() == null) {
+                throw new IllegalStateException("A keystore or private key must be configured to use TLS");
+            if (privateKey != null && publicKey == null) {
+                throw new IllegalStateException("A public key must be configured to use a Raw Public Key with TLS");
+            }
+            if (privateKey == null && getAlias() == null) {
+            if (privateKey == null && getPassword() == null) {
+            // Configure the identity if the keystore or privateKey parameter is specified
+            } else if (privateKey != null) {
+                builder.setIdentity(privateKey, publicKey);
+
+            Certificate[] certs = getTrustedCerts();
+            if (certs.length > 0) {
+                builder.setTrustStore(certs);
+            }
+            if (trustedRpkStore != null) {
+                builder.setRpkTrustStore(trustedRpkStore);
+            }

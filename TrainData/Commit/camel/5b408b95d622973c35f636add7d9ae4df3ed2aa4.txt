@@ -1,0 +1,2 @@
+        if (twitter == null 
+            && (ObjectHelper.isEmpty(consumerKey) || ObjectHelper.isEmpty(consumerSecret) || ObjectHelper.isEmpty(accessToken) ||  ObjectHelper.isEmpty(accessTokenSecret))) {

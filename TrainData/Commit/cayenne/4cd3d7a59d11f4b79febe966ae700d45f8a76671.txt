@@ -1,0 +1,5 @@
+	/**
+	 * Since 4.1 is unused.
+	 */
+	@Deprecated
+		return null;

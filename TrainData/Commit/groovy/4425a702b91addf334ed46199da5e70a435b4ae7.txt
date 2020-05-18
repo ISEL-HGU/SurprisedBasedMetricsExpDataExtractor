@@ -1,0 +1,2 @@
+    private static final Expression INVOKERHELPER_RECEIVER = new ClassExpression(INVOKERHELPER_CLASSNODE);
+                            INVOKERHELPER_RECEIVER,

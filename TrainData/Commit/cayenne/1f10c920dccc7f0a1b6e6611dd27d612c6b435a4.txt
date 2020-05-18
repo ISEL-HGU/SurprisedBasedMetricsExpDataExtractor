@@ -1,0 +1,35 @@
+    protected Node[] children;
+
+    protected int childrenCount;
+        if(children.length <= childrenCount) {
+            // expand  copy with empty slot at index
+            Node[] newChildren = new Node[children.length  4];
+            System.arraycopy(children, 0, newChildren, 0, index);
+            System.arraycopy(children, index, newChildren, index  1, (childrenCount - index));
+            children = newChildren;
+        } else {
+            // move tail after index on one position
+            System.arraycopy(children, index, children, index  1, (childrenCount - index));
+        }
+        children[index] = node;
+        childrenCount;
+            children = new Node[4];
+        } else if(children.length <= childrenCount) {
+            Node[] newChildren = new Node[children.length  4];
+            System.arraycopy(children, 0, newChildren, 0, children.length);
+            children = newChildren;
+        children[childrenCount] = node;
+        return children[idx];
+        return childrenCount;
+        children[idx].setParent(null);
+        children[idx] = node;
+
+        for(int i=0; i<childrenCount; i) {
+            boolean hasMore = i < (childrenCount - 1);
+            if(!visitor.onChildNodeStart(this, children[i], i, hasMore)) {
+            children[i].visit(visitor);
+            visitor.onChildNodeEnd(this, children[i], i, hasMore);
+            node.children = new Node[childrenCount];
+            node.childrenCount = childrenCount;
+            for(int i=0; i<childrenCount; i) {
+                node.children[i] = children[i].deepCopy();

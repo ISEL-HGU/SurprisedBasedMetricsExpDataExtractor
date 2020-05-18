@@ -1,0 +1,7 @@
+        // Populate model object with data from entity and permission
+        // Create permission set for requested entity
+     *     when determining the permissions effectively granted to the entity.
+     *     If no groups are given, only permissions directly granted to the
+     *     entity will be used.
+     *     entity, false otherwise.
+        // User cannot read this entity's permissions

@@ -1,0 +1,2 @@
+import org.apache.guacamole.net.auth.ActivityRecordSet;
+        ActivityRecordSet<ConnectionRecord> history = userContext.getConnectionHistory();

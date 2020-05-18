@@ -1,0 +1,20 @@
+ b/cayenne-cache-invalidation/src/test/java/org/apache/cayenne/lifecycle/unit/CacheInvalidationCase.java
+import org.apache.cayenne.di.Binder;
+public abstract class CacheInvalidationCase {
+	protected TableHelper e2;
+
+
+		this.e2 = new TableHelper(dbHelper, "E2").setColumns("ID");
+		this.e2.deleteAll();
+	}
+
+	protected abstract Module buildInvalidationModule();
+
+	protected Module buildCustomModule() {
+		return new Module() {
+			@Override
+			public void configure(Binder binder) {
+			}
+		};
+				.addModule(buildInvalidationModule())
+				.addModule(buildCustomModule())

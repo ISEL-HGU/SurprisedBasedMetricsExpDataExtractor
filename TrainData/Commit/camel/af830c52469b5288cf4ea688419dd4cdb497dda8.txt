@@ -1,0 +1,11 @@
+        Map<String, MessageAttributeValue> result = new HashMap<String, MessageAttributeValue>();
+        HeaderFilterStrategy headerFilterStrategy = getEndpoint().getHeaderFilterStrategy();
+        for (Entry<String, Object> entry : headers.entrySet()) {
+            // only put the message header which is not filtered into the message attribute
+            if (!headerFilterStrategy.applyFilterToCamelHeaders(entry.getKey(), entry.getValue(), exchange)) {
+                    MessageAttributeValue mav = new MessageAttributeValue();
+                    mav.withStringValue((String)value);
+                    MessageAttributeValue mav = new MessageAttributeValue();
+                    mav.withBinaryValue((ByteBuffer)value);
+                    // cannot translate the message header to message attribute value
+                    LOG.warn("Cannot put the message header key={}, value={} into Sns MessageAttribute", entry.getKey(), entry.getValue());

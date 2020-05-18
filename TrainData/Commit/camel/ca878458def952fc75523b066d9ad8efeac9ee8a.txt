@@ -1,0 +1,10 @@
+    private boolean blueprint;
+
+    public RestDslXmlGenerator withBlueprint() {
+        this.blueprint = true;
+        return this;
+    }
+
+        if (blueprint) {
+            xml = xml.replace("http://camel.apache.org/schema/spring", "http://camel.apache.org/schema/blueprint");
+        }

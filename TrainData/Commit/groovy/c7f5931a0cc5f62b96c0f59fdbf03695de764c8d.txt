@@ -1,0 +1,6 @@
+
+    private static final GroovydocManager INSTANCE = new GroovydocManager();
+    private GroovydocManager() {}
+
+    public static GroovydocManager getInstance() {
+        return INSTANCE;

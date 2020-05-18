@@ -1,0 +1,2 @@
+ * Represents an endpoint which only becomes active when the CamelClusterView
+ * has the leadership.

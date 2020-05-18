@@ -1,0 +1,10 @@
+    private long completionTimeoutCheckerInterval = 1000;
+    public long getCompletionTimeoutCheckerInterval() {
+        return completionTimeoutCheckerInterval;
+    }
+
+    public void setCompletionTimeoutCheckerInterval(long completionTimeoutCheckerInterval) {
+        this.completionTimeoutCheckerInterval = completionTimeoutCheckerInterval;
+    }
+
+            timeoutMap = new AggregationTimeoutMap(getTimeoutCheckerExecutorService(), getCompletionTimeoutCheckerInterval());

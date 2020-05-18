@@ -1,0 +1,12 @@
+    private static final String VALID_CHARS = ".,-='/\\!&%():;#";
+            if (line.startsWith("**")) {
+                continue;
+            }
+            // remove leading javadoc *
+            if (line.startsWith("*")) {
+                line = line.substring(1);
+                line = line.trim();
+            }
+
+            // use #? to remove leading # in case its a local reference
+            line = line.replaceAll("\\{\\@\\w\\s#?([\\w.#(\\d,)])\\}", "$1");

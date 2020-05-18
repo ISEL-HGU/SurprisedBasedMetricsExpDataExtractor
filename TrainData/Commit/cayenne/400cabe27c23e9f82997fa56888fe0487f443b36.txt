@@ -1,0 +1,2 @@
+            logger.warn("Found several dbimport configs. DataMap dbimport config was skipped. " 
+                    "Configuration selected from build file");

@@ -1,0 +1,3 @@
+        clearBody();
+        clearHeaders();
+        return this;

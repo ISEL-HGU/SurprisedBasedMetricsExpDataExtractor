@@ -1,0 +1,4 @@
+                List<?> pojoMessageList = message.getContent(List.class);  
+                if (pojoMessageList != null && !pojoMessageList.isEmpty()) {
+                    answer = pojoMessageList;
+                }

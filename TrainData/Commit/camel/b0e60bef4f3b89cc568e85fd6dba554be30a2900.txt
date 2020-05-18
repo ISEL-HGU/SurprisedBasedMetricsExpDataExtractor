@@ -1,0 +1,8 @@
+import java.util.stream.Stream;
+     * Creates an iterator over the value if the value is a {@link Stream}, collection, an
+     * Creates an iterator over the value if the value is a {@link Stream}, collection, an
+     * Creates an iterator over the value if the value is a {@link Stream}, collection, an
+     * Creates an iterator over the value if the value is a {@link Stream}, collection, an
+        if (value instanceof Stream) {
+            return ((Stream) value).iterator();
+        }

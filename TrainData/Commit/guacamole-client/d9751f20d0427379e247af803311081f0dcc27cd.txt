@@ -1,0 +1,4 @@
+     * @param directory
+     *     The ConnectionDirectory object associated with this REST endpoint
+    public QuickConnectREST(QuickConnectDirectory directory)
+        this.directory = directory;

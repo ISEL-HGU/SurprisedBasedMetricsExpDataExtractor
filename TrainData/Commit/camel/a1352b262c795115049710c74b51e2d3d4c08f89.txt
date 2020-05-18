@@ -1,0 +1,4 @@
+        this.groupListener.setZooKeeperUrl(endpoint.getComponent().getZooKeeperUrl());
+        this.groupListener.setZooKeeperPassword(endpoint.getComponent().getZooKeeperPassword());
+        this.groupListener.setCurator(endpoint.getComponent().getCurator());
+        this.groupListener.setMaximumConnectionTimeout(endpoint.getComponent().getMaximumConnectionTimeout());

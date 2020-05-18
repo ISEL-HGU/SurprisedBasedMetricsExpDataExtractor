@@ -1,0 +1,2 @@
+import org.apache.cxf.service.model.EndpointInfo;
+        server.getEndpoint().getEndpointInfo().setProperty("serviceClass", cxfEndpoint.getServiceClass());

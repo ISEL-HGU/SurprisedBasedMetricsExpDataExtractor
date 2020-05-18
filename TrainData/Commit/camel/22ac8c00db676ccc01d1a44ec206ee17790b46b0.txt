@@ -1,0 +1,1 @@
+                if (cause != null) {

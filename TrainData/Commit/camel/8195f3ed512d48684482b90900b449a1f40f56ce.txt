@@ -1,0 +1,6 @@
+            synchronized (this) {
+                if (terminated) {
+                    // just ignore the request
+                    return;
+                }
+            flushCycle();

@@ -1,0 +1,35 @@
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.file.FileSystems;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+import java.util.Properties;
+import java.util.Set;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.apache.lucene.document.DoublePoint;
+import org.apache.lucene.document.FloatPoint;
+import org.apache.lucene.document.IntPoint;
+import org.apache.lucene.document.LongPoint;
+          Properties properties) throws GoraException {
+          final Schema.Field field,
+          final String sf,
+          final Document doc) throws IOException {
+          final Schema.Field field,
+          final Schema fieldSchema,
+          final String sf) throws IOException {
+          final Schema fieldSchema,
+          final Object value) {
+      if (key instanceof Integer) {
+        doc.add(new IntPoint(mapping.getPrimaryKey(), ((Integer) key).intValue()));
+      } else if (key instanceof Long) {
+        doc.add(new LongPoint(mapping.getPrimaryKey(), ((Long) key).longValue()));
+      } else if (key instanceof Float) {
+        doc.add(new FloatPoint(mapping.getPrimaryKey(), ((Float) key).floatValue()));
+      } else if (key instanceof Double) {
+        doc.add(new DoublePoint(mapping.getPrimaryKey(), ((Double) key).doubleValue()));
+      } else {
+        doc.add(new StringField(mapping.getPrimaryKey(), key.toString(), Store.YES));
+      }

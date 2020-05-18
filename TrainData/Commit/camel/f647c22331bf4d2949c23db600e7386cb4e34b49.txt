@@ -1,0 +1,5 @@
+    private Map<String, List<String>> jarCache;
+        if (jarCache == null) {
+            // use a JAR cache to speed up scanning JARs, but let it be soft referenced so it can claim the data when memory is needed
+            jarCache = new LRUSoftCache<String, List<String>>(1000);
+        }

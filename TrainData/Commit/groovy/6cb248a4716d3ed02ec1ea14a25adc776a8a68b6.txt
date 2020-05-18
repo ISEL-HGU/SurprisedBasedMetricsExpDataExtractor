@@ -1,0 +1,4 @@
+    public static long getTimestamp(Class<?> clazz) {
+        if (oldMethod.getGenericsTypes() != null)
+            genericsSpec = addMethodGenerics(oldMethod, genericsSpec);
+

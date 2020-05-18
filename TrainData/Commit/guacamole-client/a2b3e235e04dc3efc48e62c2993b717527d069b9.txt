@@ -1,0 +1,9 @@
+public class TokenName {
+    private TokenName() {}
+     * Each returned token name will be prefixed with the string value provided
+     * string, but will itself not be transformed.
+     * Generate the name of a parameter token from the given string, with no
+     * added prefix, such that the token name will simply be the transformed
+     * version of the string. See
+     * {@link #canonicalize(java.lang.String, java.lang.String)}
+     * 

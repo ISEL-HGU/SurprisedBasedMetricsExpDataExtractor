@@ -1,0 +1,5 @@
+        if (value != null) {
+            // if we have a value then convert it
+            return CamelContextHelper.mandatoryConvertTo(getCamelContext(), type, value);
+        } else {
+        return CamelContextHelper.mandatoryConvertTo(getCamelContext(), type, value);

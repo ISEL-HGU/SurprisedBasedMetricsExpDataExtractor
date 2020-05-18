@@ -1,0 +1,64 @@
+import org.apache.guacamole.form.TextField;
+     * The name of the attribute which holds the user's full name, if known.
+     */
+    public static final String FULL_NAME_ATTRIBUTE_NAME = "full-name";
+
+    /**
+     * The name of the attribute which holds the user's email address, if
+     * known.
+     */
+    public static final String EMAIL_ADDRESS_ATTRIBUTE_NAME = "email-address";
+
+    /**
+     * All attributes related to user profile information, within a logical
+     * form.
+     */
+    public static final Form PROFILE = new Form("profile", Arrays.<Field>asList(
+        new TextField(FULL_NAME_ATTRIBUTE_NAME),
+        new TextField(EMAIL_ADDRESS_ATTRIBUTE_NAME)
+    ));
+
+    /**
+        PROFILE,
+     * Stores all unrestricted (unprivileged) attributes within the given Map,
+     * pulling the values of those attributes from the underlying user model.
+     * If no value is yet defined for an attribute, that attribute will be set
+     * to null.
+     *
+     * @param attributes
+     *     The Map to store all unrestricted attributes within.
+     */
+    private void putUnrestrictedAttributes(Map<String, String> attributes) {
+
+        // Set full name attribute
+        attributes.put(FULL_NAME_ATTRIBUTE_NAME, "Testy McTesterson"); // TODO
+
+        // Set email address attribute
+        attributes.put(EMAIL_ADDRESS_ATTRIBUTE_NAME, "test@test.test"); // TODO
+
+    }
+
+    /**
+    /**
+     * Stores all unrestricted (unprivileged) attributes within the underlying
+     * user model, pulling the values of those attributes from the given Map.
+     *
+     * @param attributes
+     *     The Map to pull all unrestricted attributes from.
+     */
+    private void setUnrestrictedAttributes(Map<String, String> attributes) {
+
+        // Translate full name attribute
+        logger.info("FULL NAME: \"{}\"", attributes.get(FULL_NAME_ATTRIBUTE_NAME)); // TODO
+
+        // Translate email address attribute
+        logger.info("EMAIL ADDRESS: \"{}\"", attributes.get(EMAIL_ADDRESS_ATTRIBUTE_NAME)); // TODO
+
+    }
+
+        // Always include unrestricted attributes
+        putUnrestrictedAttributes(attributes);
+
+        // Always assign unrestricted attributes
+        setUnrestrictedAttributes(attributes);
+

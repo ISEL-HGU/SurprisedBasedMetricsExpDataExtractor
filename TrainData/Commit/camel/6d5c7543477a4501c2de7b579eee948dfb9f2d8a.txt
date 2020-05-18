@@ -1,0 +1,4 @@
+        if (ObjectHelper.isEmpty(configuration.getAwsLambdaClient())) {
+            if (awsLambdaClient != null) {
+                awsLambdaClient.shutdown();
+            }

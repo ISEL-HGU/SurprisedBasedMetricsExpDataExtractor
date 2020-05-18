@@ -1,0 +1,1 @@
+public class FileSendDynamicAware extends GenericFileSendDynamicAware {

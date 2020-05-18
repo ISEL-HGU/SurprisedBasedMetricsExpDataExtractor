@@ -1,0 +1,9 @@
+        catch (GuacamoleClientException e) {
+            logger.warn("HTTP tunnel request rejected: {}", e.getMessage());
+            sendError(response, e.getStatus().getGuacamoleStatusCode(),
+                    e.getStatus().getHttpStatusCode(), e.getMessage());
+        }
+            logger.error("HTTP tunnel request failed: {}", e.getMessage());
+            logger.debug("Internal error in HTTP tunnel.", e);
+            sendError(response, e.getStatus().getGuacamoleStatusCode(),
+                    e.getStatus().getHttpStatusCode(), "Internal server error.");

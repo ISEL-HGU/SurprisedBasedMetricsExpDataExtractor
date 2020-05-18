@@ -1,0 +1,2 @@
+import com.amazonaws.services.mq.AbstractAmazonMQ;
+public class AmazonMQClientMock extends AbstractAmazonMQ {

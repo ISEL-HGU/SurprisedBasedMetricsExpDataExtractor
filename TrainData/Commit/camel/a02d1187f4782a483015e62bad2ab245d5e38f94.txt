@@ -1,0 +1,2 @@
+import org.apache.camel.support.DefaultScheduledPollConsumerScheduler;
+import org.apache.camel.support.ScheduledPollEndpoint;

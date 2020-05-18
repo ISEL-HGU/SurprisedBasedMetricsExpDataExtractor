@@ -1,0 +1,2 @@
+        String radiusState = DatatypeConverter.printHexBinary(stateAttr.getValue().getBytes());
+                byte[] stateBytes = DatatypeConverter.parseHexBinary(request.getParameter(RadiusStateField.PARAMETER_NAME));

@@ -1,0 +1,10 @@
+     * Initialize the field with the state returned by the RADIUS server.
+     *
+     * @param radiusState
+     *     The state returned by the RADIUS server.
+    /**
+     * Get the state provided by the RADIUS server.
+     *
+     * @return
+     *     The state provided by the RADIUS server.
+     */

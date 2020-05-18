@@ -1,0 +1,11 @@
+import com.amazonaws.services.sqs.model.ListQueuesRequest;
+    
+    @Override
+    public ListQueuesResult listQueues(ListQueuesRequest request) {
+        ListQueuesResult result = new ListQueuesResult();
+        List<String> queues = new ArrayList<String>();
+        queues.add("queue1");
+        queues.add("queue2");
+        result.setQueueUrls(queues);
+        return result;
+    }

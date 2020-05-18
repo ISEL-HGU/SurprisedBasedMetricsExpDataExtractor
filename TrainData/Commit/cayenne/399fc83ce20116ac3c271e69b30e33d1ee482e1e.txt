@@ -1,0 +1,3 @@
+import org.apache.cayenne.swing.components.LimitedTextField;
+        LimitedTextField limitedLengthField = new LimitedTextField(10);
+        LimitedTextField limitedScaleField = new LimitedTextField(10);

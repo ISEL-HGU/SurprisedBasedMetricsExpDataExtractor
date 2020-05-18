@@ -1,0 +1,1 @@
+            boolean availableFrom = lines[2].trim().contains("Available as of") || lines[2].trim().contains("Available in");

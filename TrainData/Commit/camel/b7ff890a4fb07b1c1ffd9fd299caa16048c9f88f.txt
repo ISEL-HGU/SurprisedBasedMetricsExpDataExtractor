@@ -1,0 +1,59 @@
+        log.info("Starting Kafka consumer on topic: {} with breakOnFirstError: {}", endpoint.getConfiguration().getTopic(), endpoint.getConfiguration().isBreakOnFirstError());
+            boolean started = ((ServiceSupport)repo).isStarted();
+            // pre-initialize task during startup so if there is any error we
+            // have it thrown asap
+                        // re-initialize on re-connect so we have a fresh
+                        // consumer
+                // doRun keeps running until we either shutdown or is told to
+                // re-connect
+                // Kafka uses reflection for loading authentication settings,
+                // use its classloader
+                // this may throw an exception if something is wrong with kafka
+                // consumer
+            // allow to re-connect thread in case we use that to retry failed
+            // messages
+                    // This poll to ensures we have an assigned partition
+                    // otherwise seek won't work
+                    for (TopicPartition topicPartition : (Set<TopicPartition>)consumer.assignment()) {
+                            // The state contains the last read offset so you
+                            // need to seek from the next one
+                            // If the init poll has returned some data of a
+                            // currently unknown topic/partition in the state
+                            // then resume from their offset in order to avoid
+                            // losing data
+                        // This poll to ensures we have an assigned partition
+                        // otherwise seek won't work
+                        // This poll to ensures we have an assigned partition
+                        // otherwise seek won't work
+                                    log.trace("Partition = {}, offset = {}, key = {}, value = {}", record.partition(), record.offset(), record.key(), record.value());
+                                // if not auto commit then we have additional
+                                // information on the exchange
+                                    // allow Camel users to access the Kafka
+                                    // consumer API to be able to do for example
+                                    // manual commits
+                                                                                                                                 offsetRepository, partition, record.offset());
+                                    // processing failed due to an unhandled
+                                    // exception, what should we do
+                                        // we are failing and we should break
+                                        // out
+                                        log.warn("Error during processing {} from topic: {}. Will seek consumer to offset: {} and re-connect and start polling again.", exchange,
+                                                 topicName, partitionLastOffset);
+                                        // force commit so we resume on next
+                                        // poll where we failed
+                                        // will handle/log the exception and
+                                        // then continue to next
+                                    // lastOffsetProcessed would be used by
+                                    // Consumer re-balance listener to preserve
+                                    // offset state upon partition revoke
+                                // all records processed from partition so
+                                // commit them
+                // some kind of error in kafka, it may happen during
+                // unsubscribing or during normal processing
+            // As advised in the KAFKA-1894 ticket, calling this wakeup method
+            // breaks the infinite loop
+            for (TopicPartition partition : partitions) {
+                    offset = -1L;
+                        // The state contains the last read offset so you need
+                        // to seek from the next one
+        StreamSupport.stream(record.headers().spliterator(), false).filter(header -> shouldBeFiltered(header, exchange, headerFilterStrategy))
+            .forEach(header -> exchange.getIn().setHeader(header.key(), headerDeserializer.deserialize(header.key(), header.value())));

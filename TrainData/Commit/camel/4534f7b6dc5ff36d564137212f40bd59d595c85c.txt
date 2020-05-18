@@ -1,0 +1,7 @@
+/**
+ * Factory to create {@link CMISSessionFacade} instances.
+ */
+public interface CMISSessionFacadeFactory {
+    /**
+     * Creates a new instance of CMISSessionFacade
+     */

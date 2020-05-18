@@ -1,0 +1,1 @@
+        from("quartz:foo?cron={{myCron}}")

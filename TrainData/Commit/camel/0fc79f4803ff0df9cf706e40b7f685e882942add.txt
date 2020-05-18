@@ -1,0 +1,107 @@
+import java.net.InetSocketAddress;
+import java.net.Proxy;
+import java.net.SocketAddress;
+import org.jsoup.Connection;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.nodes.FormElement;
+import org.jsoup.select.Elements;
+ *
+
+            //prepare proxy parameter
+            final Proxy proxy;
+            final Map<String, Object> httpParams = configuration.getHttpParams();
+            if (httpParams != null && httpParams.get("http.route.default-proxy") != null) {
+                final HttpHost proxyHost = (HttpHost) httpParams.get("http.route.default-proxy");
+                final Boolean socksProxy = (Boolean) httpParams.get("http.route.socks-proxy");
+                SocketAddress proxyAddr = new InetSocketAddress(proxyHost.getHostName(), proxyHost.getPort());
+                if (socksProxy != null && socksProxy) {
+                    proxy = new Proxy(Proxy.Type.SOCKS, proxyAddr);
+                } else {
+                    proxy = new Proxy(Proxy.Type.HTTP, proxyAddr);
+                }
+            } else {
+                proxy = null;
+            }
+            final String authorizeUrl = authorizationUrl(configuration.getClientId(), csrfToken);
+            //load loginPage
+            final Connection.Response loginPageResponse = addProxy(Jsoup.connect(authorizeUrl), proxy).method(Connection.Method.GET).execute();
+            final Document loginPage = loginPageResponse.parse();
+
+            validatePage(loginPage);
+
+            //fill login form
+            final FormElement loginForm = (FormElement)loginPage.select("form[name=login_form]").first();
+
+            final Element loginField = loginForm.select("input[name=login]").first();
+            loginField.val(configuration.getUserName());
+
+            final Element passwordField = loginForm.select("input[name=password]").first();
+            passwordField.val(configuration.getUserPassword());
+
+            //submit loginPage
+            final Map<String, String> cookies = new HashMap();
+            cookies.putAll(loginPageResponse.cookies());
+
+            Connection.Response response = addProxy(loginForm.submit(), proxy)
+                    .cookies(cookies)
+                    .execute();
+            cookies.putAll(response.cookies());
+
+            final Document consentPage = response.parse();
+
+            //possible invalid credentials error
+            validatePage(consentPage);
+
+            final FormElement consentForm = (FormElement)consentPage.select("form[name=consent_form]").first();
+
+            //remove reject input
+            consentForm.elements().removeIf(e -> e.attr("name").equals("consent_reject"));
+            //parse request_token from javascript from head, it is the first script in the header
+            final String requestTokenScript = consentPage.select("script").first().html();
+            final Matcher m = Pattern.compile("var\\srequest_token\\s=\\s'([^'].)'.*").matcher(requestTokenScript);
+            if (m.find()) {
+                final String requestToken = m.group(1);
+                response = addProxy(consentForm.submit(), proxy)
+                        .data("request_token", requestToken)
+                        .followRedirects(false)
+                        .cookies(cookies)
+                        .execute();
+            } else {
+                throw new IllegalArgumentException("Error authorizing application: Can not parse request token.");
+            final String location = response.header("Location");
+            final Matcher matcher = QUERY_PARAM_PATTERN.matcher(new URL(location).getQuery());
+    /**
+     * Validation of page:
+     * - detects invalid credentials error
+     * - detects wrong clientId error
+     */
+    private static void validatePage(Document page) {
+        Elements errorDivs = page.select("div[class*=error_message");
+        String errorMessage = null;
+        if (!errorDivs.isEmpty()) {
+            errorMessage = errorDivs.first().text().replaceAll("\\s", " ")
+                    .replaceAll(" Show Error Details", ":").trim();
+        } else {
+            errorDivs = page.select("div[class*=message]");
+            if (!errorDivs.isEmpty()) {
+                errorMessage = errorDivs.first().text();
+            }
+        }
+
+        if (!errorDivs.isEmpty()) {
+            throw new IllegalArgumentException("Error authorizing application: "  errorMessage);
+        }
+    }
+
+    /**
+     * Helper method to add proxy into JSoup connection
+     */
+    private static Connection addProxy(Connection connection, Proxy proxy) {
+        if (proxy != null) {
+            return connection.proxy(proxy);
+        }
+        return  connection;
+    }
+

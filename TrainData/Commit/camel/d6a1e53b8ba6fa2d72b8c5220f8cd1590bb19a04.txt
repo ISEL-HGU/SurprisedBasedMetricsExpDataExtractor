@@ -1,0 +1,2 @@
+        from("twitter-mention")
+            .log("I was mentioned by ${body}");

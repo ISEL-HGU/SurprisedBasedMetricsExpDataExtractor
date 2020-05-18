@@ -1,0 +1,23 @@
+import org.apache.camel.Message;
+import org.apache.camel.support.ExchangeHelper;
+import org.xnio.IoUtils;
+                                    ByteBuffer body) {
+        super(exchange, callback, endpoint, request, body);
+        this.bodyStream = null;
+    }
+
+    UndertowStreamingClientCallback(Exchange exchange, AsyncCallback callback,
+                                    UndertowEndpoint endpoint, ClientRequest request,
+    protected void finish(Message result) {
+        boolean close = true;
+        if (result != null && result.getBody() instanceof InputStream) {
+            // no connection closing as streaming continues downstream
+            close = false;
+        }
+        finish(result, close);
+        if (bodyStream == null) {
+            super.writeRequest(clientExchange);
+            return;
+        }
+
+        // send request stream

@@ -1,0 +1,1 @@
+        return new TransformedFuture<T>(self, transform);

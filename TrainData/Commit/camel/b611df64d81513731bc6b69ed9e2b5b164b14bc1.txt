@@ -1,0 +1,1 @@
+     * except for the ones matching one or more <tt>excludePatterns</tt>

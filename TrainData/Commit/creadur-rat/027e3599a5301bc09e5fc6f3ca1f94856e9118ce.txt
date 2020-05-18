@@ -1,0 +1,2 @@
+            .unmodifiableList(Arrays.asList(".checkstyle",
+                    ".classpath",//

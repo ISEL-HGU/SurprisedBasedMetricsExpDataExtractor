@@ -1,0 +1,4 @@
+      LOG.info("Declared Pig fields: "  String.join(",", pigFieldSchemasNames));
+      throw new IOException("Expected a field called \"key\", but not found.");
+    LOG.trace("    checking against UNION");
+        LOG.trace("    union component {}", unionElementSchema.getType().getName()) ;

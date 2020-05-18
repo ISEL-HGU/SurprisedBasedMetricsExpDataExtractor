@@ -1,0 +1,2 @@
+import java.util.Arrays;
+                    throw new GenericFileOperationFailedException("Cannot load private key bytes: "  Arrays.toString(config.getPrivateKeyBytes()), e);

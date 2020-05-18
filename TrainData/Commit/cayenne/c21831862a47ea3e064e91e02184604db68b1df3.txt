@@ -1,0 +1,22 @@
+    private TableHelper tPrimitives;
+
+        tPrimitives = new TableHelper(dbHelper, "PRIMITIVES_TEST");
+        int sum = ObjectSelect.query(PrimitivesTestEntity.class)
+                .sum(PrimitivesTestEntity.INT_COLUMN)
+        int avg = ObjectSelect.query(PrimitivesTestEntity.class)
+                .avg(PrimitivesTestEntity.INT_COLUMN)
+    @Test
+    public void testOrderByCount() throws Exception {
+        tPrimitives.insert(21, true, 210);
+        List<Object[]> res = ObjectSelect
+                .columnQuery(PrimitivesTestEntity.class, PrimitivesTestEntity.BOOLEAN_COLUMN, PrimitivesTestEntity.INT_COLUMN.count())
+                .orderBy(PrimitivesTestEntity.INT_COLUMN.count().asc())
+                .select(context);
+        assertEquals(2, res.size());
+
+        assertEquals(false, res.get(0)[0]);
+        assertEquals(true, res.get(1)[0]);
+
+        assertEquals(10L, res.get(0)[1]);
+        assertEquals(11L, res.get(1)[1]);
+    }

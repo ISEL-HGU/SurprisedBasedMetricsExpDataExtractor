@@ -1,0 +1,8 @@
+    static {
+        // "static constructor"
+        bundle = getBundle();
+    }
+
+        if ( bundle == null ) {
+            return bundle.getString(key);
+}

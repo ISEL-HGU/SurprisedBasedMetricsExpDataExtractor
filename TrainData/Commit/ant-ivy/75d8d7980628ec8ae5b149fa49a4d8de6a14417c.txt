@@ -1,0 +1,24 @@
+import java.nio.file.NoSuchFileException;
+    /**
+     * This is the same as calling {@link #copy(File, File, CopyProgressListener, boolean)} with
+     * {@code overwrite} param as {@code true}
+     *
+     * @param src  The source to copy
+     * @param dest The destination
+     * @param l    A {@link CopyProgressListener}. Can be null
+     * @return Returns true if the file was copied. Else returns false
+     * @throws IOException If any exception occurs during the copy operation
+     */
+        // check if it's the same file (the src and the dest). if they are the same, skip the copy
+        try {
+            if (Files.isSameFile(src.toPath(), dest.toPath())) {
+                Message.verbose("Skipping copy of file "  src  " to "  dest  " since they are the same file");
+                // we consider the file as copied if overwrite is true
+                return overwrite;
+            }
+        } catch (NoSuchFileException nsfe) {
+            // ignore and move on and attempt the copy
+        } catch (IOException ioe) {
+            // log and move on and attempt the copy
+            Message.verbose("Could not determine if "  src  " and dest "  dest  " are the same file", ioe);
+        }

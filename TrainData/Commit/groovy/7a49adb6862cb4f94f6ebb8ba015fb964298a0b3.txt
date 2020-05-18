@@ -1,0 +1,5 @@
+                // Increment the count for each groovy src we found
+                // TODO support config.getScriptExtensions()?
+                if (includeName.endsWith(config.getDefaultScriptExtension())) {
+        // TODO support config.getScriptExtensions()?
+        return includeName.endsWith(config.getDefaultScriptExtension()) || includeName.endsWith(".java");

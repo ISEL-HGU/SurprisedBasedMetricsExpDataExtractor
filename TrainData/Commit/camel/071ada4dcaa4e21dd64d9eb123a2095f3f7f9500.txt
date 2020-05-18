@@ -1,0 +1,7 @@
+        if (connection != null) {
+            // In connect(), in the connection.connect() callback, onFailure() doesn't seem to ever be called, so forcing the disconnect here.
+            // Without this, the fusesource MQTT client seems to be holding the old connection object, and connection contention can ensue.
+            connection.disconnect(null);
+        }
+    	
+            public void onFailure(Throwable value) {  // this doesn't appear to ever be called

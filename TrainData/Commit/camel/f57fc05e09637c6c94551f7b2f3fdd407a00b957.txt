@@ -1,0 +1,2 @@
+        httpcon.setConnectTimeout(60000);
+        httpcon.setReadTimeout(60000);

@@ -1,0 +1,4 @@
+ *
+ * The EntityManagerFactoryProducer will in turn use the
+ * {@link org.apache.deltaspike.jpa.spi.entitymanager.PersistenceConfigurationProvider}
+ * to pick up the properties to be used for creating the {@code }EntityManagerFactory}.

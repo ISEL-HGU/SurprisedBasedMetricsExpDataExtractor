@@ -1,0 +1,4 @@
+        if (format != PayloadFormat.JSON) {
+            throw new IllegalArgumentException("Using XML format for the Limits API, to use it set the `format` endpoint property to JSON");
+        }
+

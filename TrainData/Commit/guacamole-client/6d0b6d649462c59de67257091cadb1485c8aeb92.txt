@@ -1,0 +1,4 @@
+     * to the directory, and return a Map containing a single key,
+     * identifier, and the identifier of the new connection.
+     *     A Map containing a single key, identifier, and the
+     *     identifier of the new connection.

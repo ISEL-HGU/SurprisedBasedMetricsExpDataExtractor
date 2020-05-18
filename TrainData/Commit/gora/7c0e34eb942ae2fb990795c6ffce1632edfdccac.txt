@@ -1,0 +1,4 @@
+      boolean keyClassMatches = false;
+          keyClassMatches = true;
+      if(!keyClassMatches)
+        LOG.error("KeyClass in gora-hbase-mapping is not the same as the one in the databean.");

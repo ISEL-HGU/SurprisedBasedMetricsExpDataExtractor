@@ -1,0 +1,27 @@
+import org.apache.guacamole.auth.ldap.group.UserGroupService;
+import org.apache.guacamole.net.auth.UserGroup;
+     * Service for retrieving user groups.
+     */
+    @Inject
+    private UserGroupService userGroupService;
+
+    /**
+     * Directory containing all UserGroup objects accessible to the user
+     * associated with this UserContext.
+     */
+    private Directory<UserGroup> userGroupDirectory;
+
+    /**
+        userDirectory = new SimpleDirectory<>(
+        // Query all accessible user groups
+        userGroupDirectory = new SimpleDirectory<>(
+            userGroupService.getUserGroups(ldapConnection)
+        );
+
+        connectionDirectory = new SimpleDirectory<>(
+            userGroupDirectory.getIdentifiers(),
+    public Directory<UserGroup> getUserGroupDirectory() throws GuacamoleException {
+        return userGroupDirectory;
+    }
+
+    @Override

@@ -1,0 +1,4 @@
+    public WineComponent(String componentScheme) {
+        super("wine", componentScheme, "org.foo.connector.WineComponent");
+    }
+

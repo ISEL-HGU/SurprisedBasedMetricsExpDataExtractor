@@ -1,0 +1,5 @@
+/*
+ *      http://www.apache.org/licenses/LICENSE-2.0
+    private static final Logger LOG = LoggerFactory.getLogger(NewCommentsRoute.class);
+        LOG.info(" >>>>>>>>>>>>>>>>>>>>> jira example - retrieve only new comments");
+                    LOG.info("new jira comment id: {} - by: {}: {}", comment.getId(), comment.getAuthor().getDisplayName(),

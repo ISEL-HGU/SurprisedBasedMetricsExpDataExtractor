@@ -1,0 +1,3 @@
+ * <p/>
+ * Use {@link LRUCacheFactory} to create a new instance (do not use the constructor).
+ * @see LRUCacheFactory

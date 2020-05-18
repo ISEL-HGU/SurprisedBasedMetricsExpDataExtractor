@@ -1,0 +1,14 @@
+         * Expose the kafka sasl.jaas.config parameter Example:
+         * org.apache.kafka.common.security.plain.PlainLoginModule required
+         * username=\"USERNAME\" password=\"PASSWORD\";
+         */
+        private String saslJaasConfig;
+        /**
+        public String getSaslJaasConfig() {
+            return saslJaasConfig;
+        }
+
+        public void setSaslJaasConfig(String saslJaasConfig) {
+            this.saslJaasConfig = saslJaasConfig;
+        }
+

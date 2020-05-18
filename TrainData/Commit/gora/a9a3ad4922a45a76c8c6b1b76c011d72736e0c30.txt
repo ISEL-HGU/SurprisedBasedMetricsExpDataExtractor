@@ -1,0 +1,19 @@
+import org.apache.avro.Schema;
+import org.apache.gora.persistency.impl.BeanFactoryImpl;
+  private Schema persistentSchema;
+
+  private String serializationType;
+  public String getSerializationType() {
+    return serializationType;
+  }
+
+      if (this.beanFactory == null) {
+        this.beanFactory = new BeanFactoryImpl<>(keyClass, persistentClass);
+      }
+      if (PersistentBase.class.isAssignableFrom(persistentClass)) {
+        persistentSchema = ((PersistentBase) this.beanFactory.getCachedPersistent()).getSchema();
+      } else {
+        persistentSchema = null;
+      }
+      serializationType = properties.getProperty(CassandraStoreParameters.CASSANDRA_SERIALIZATION_TYPE);
+      cassandraSerializer = CassandraSerializer.getSerializer(cassandraClient, serializationType, this, mapping, persistentSchema);

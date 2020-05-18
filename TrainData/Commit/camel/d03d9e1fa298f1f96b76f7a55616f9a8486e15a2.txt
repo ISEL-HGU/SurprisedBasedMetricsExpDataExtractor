@@ -1,0 +1,2 @@
+     * To integrate with the Soroush chat bot. Creates a builder to build
+     * endpoints for the Soroush component.

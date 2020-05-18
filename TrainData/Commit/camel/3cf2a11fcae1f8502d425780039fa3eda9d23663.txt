@@ -1,0 +1,8 @@
+        int counter = 0;
+        int persistRecords = endpoint.getPersistRecords();
+        boolean persistRegularly = persistRecords > 0;
+                if (persistRegularly && counter % persistRecords == 0) {
+                    tailTracking.persistToStore();
+                }
+            final String increasingFieldName = tailTracking.getIncreasingFieldName();
+            BasicDBObject queryObj = endpoint.getTailTrackingStrategy().createQuery(lastVal, increasingFieldName);

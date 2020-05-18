@@ -1,0 +1,4 @@
+                name = StringHelper.before(methodName, "(");
+                if (StringHelper.betweenOuterPair(methodName, '(', ')') == null) {
+        if (methodInfo == null && methodMap.size() >= 2) {
+            // only try to choose if there is at least 2 methods

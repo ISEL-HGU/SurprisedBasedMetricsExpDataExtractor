@@ -1,0 +1,45 @@
+@relation bigtop-weka.filters.unsupervised.instance.NonSparseToSparse
+
+@attribute 'Modify Lines' numeric
+@attribute 'Add Lines' numeric
+@attribute 'Delete Lines' numeric
+@attribute 'Distribution modified Lines' numeric
+@attribute numOfBIC numeric
+@attribute AuthorID {' rvs@apache.org',' jun.he@arm.com',' rddesai@us.ibm.com',' alanfgates@gmail.com'}
+@attribute fileAge numeric
+@attribute SumOfSourceRevision numeric
+@attribute SumOfDeveloper numeric
+@attribute CommitHour numeric
+@attribute CommitDate {Wednesday,Thursday}
+@attribute AGE numeric
+@attribute numOfSubsystems numeric
+@attribute numOfDirectories numeric
+@attribute numOfFiles numeric
+@attribute NUC numeric
+@attribute developerExperience numeric
+@attribute REXP numeric
+@attribute LT numeric
+@attribute Key {0f51fb32531daa6c0b66e6bbd8fc9813023019ba-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hadoop-ApiExaminer.java,c66106b631af67525ee88e4ad60b7cf97384a279-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-JdbcConnector.java,0f51fb32531daa6c0b66e6bbd8fc9813023019ba-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hive-HCatalogMR.java,5ff983d466523a9264da55c0955b514a25013e5e-bigtop-test-framework-src-main-groovy-org-apache-bigtop-itest-junit-OrderedParameterized.java,5e342c45364ec97f5e3530769a1cc8bdbcf69bb0-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-JdbcConnector.java,0f51fb32531daa6c0b66e6bbd8fc9813023019ba-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-JdbcConnector.java,c66106b631af67525ee88e4ad60b7cf97384a279-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hadoop-ApiExaminer.java,a05d3813f67979f74c0494fb118f98a0264266dc-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hive-HCatalogMR.java,a05d3813f67979f74c0494fb118f98a0264266dc-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-HiveHelper.java,dcd9cb20ae680df0bd9a1ce62391fefb6b1c35fb-bigtop-tests-spec-tests-runtime-src-main-java-org-odpi-specs-runtime-hive-HCatalogMR.java,5e342c45364ec97f5e3530769a1cc8bdbcf69bb0-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-HiveHelper.java,5e342c45364ec97f5e3530769a1cc8bdbcf69bb0-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hadoop-ApiExaminer.java,5e342c45364ec97f5e3530769a1cc8bdbcf69bb0-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hive-HCatalogMR.java,5ff983d466523a9264da55c0955b514a25013e5e-bigtop-test-framework-src-main-groovy-org-apache-bigtop-itest-junit-Ordered.java,77e0d6e01f3e43f4a7e51a588b2261780c587ae2-bigtop-tests-spec-tests-runtime-src-main-java-org-odpi-specs-runtime-hadoop-ApiExaminer.java,a05d3813f67979f74c0494fb118f98a0264266dc-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-JdbcConnector.java,4f19c159fafc67e3475a300ec9323d5eab03c748-bigtop-tests-spec-tests-runtime-src-main-java-org-odpi-specs-runtime-hadoop-ApiExaminer.java,a05d3813f67979f74c0494fb118f98a0264266dc-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hadoop-ApiExaminer.java,0f51fb32531daa6c0b66e6bbd8fc9813023019ba-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-HiveHelper.java,c66106b631af67525ee88e4ad60b7cf97384a279-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-HiveHelper.java,c66106b631af67525ee88e4ad60b7cf97384a279-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hive-HCatalogMR.java}
+
+@data
+{0 2,1 0.002045,2 0.002045,7 3,8 1,9 9,12 1,13 3,14 4,15 0.25,16 3,17 3,18 489}
+{0 8,1 0.050633,2 0.050633,3 1,7 2,8 1,9 9,12 1,13 3,14 4,15 0.25,16 2,17 2,18 79,19 c66106b631af67525ee88e4ad60b7cf97384a279-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-JdbcConnector.java}
+{0 8,1 0.029197,2 0.029197,3 2,7 3,8 1,9 9,12 1,13 3,14 4,15 0.25,16 3,17 3,18 137,19 0f51fb32531daa6c0b66e6bbd8fc9813023019ba-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hive-HCatalogMR.java}
+{0 6,1 0.016043,2 0.016043,3 1,5 ' jun.he@arm.com',7 1,8 1,9 19,12 1,13 1,14 2,15 0.5,16 1,17 1,18 187,19 5ff983d466523a9264da55c0955b514a25013e5e-bigtop-test-framework-src-main-groovy-org-apache-bigtop-itest-junit-OrderedParameterized.java}
+{7 1,8 1,9 8,12 1,13 3,14 4,15 0.25,16 1,17 1,18 79,19 5e342c45364ec97f5e3530769a1cc8bdbcf69bb0-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-JdbcConnector.java}
+{0 20,1 0.126582,2 0.126582,3 1,7 3,8 1,9 9,12 1,13 3,14 4,15 0.25,16 3,17 3,18 79,19 0f51fb32531daa6c0b66e6bbd8fc9813023019ba-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-JdbcConnector.java}
+{0 18,1 0.02268,2 0.014433,7 2,8 1,9 9,12 1,13 3,14 4,15 0.25,16 2,17 2,18 485,19 c66106b631af67525ee88e4ad60b7cf97384a279-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hadoop-ApiExaminer.java}
+{0 173,1 0.635036,2 0.627737,7 4,8 1,9 9,12 1,13 3,14 4,15 0.25,16 4,17 4,18 137,19 a05d3813f67979f74c0494fb118f98a0264266dc-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hive-HCatalogMR.java}
+{0 158,1 0.652893,2 0.652893,7 4,8 1,9 9,12 1,13 3,14 4,15 0.25,16 4,17 4,18 121,19 a05d3813f67979f74c0494fb118f98a0264266dc-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-HiveHelper.java}
+{0 21,1 0.126984,2 0.039683,5 ' rddesai@us.ibm.com',7 1,8 1,9 16,10 Thursday,12 1,13 1,14 1,15 1,16 1,17 1,18 126,19 dcd9cb20ae680df0bd9a1ce62391fefb6b1c35fb-bigtop-tests-spec-tests-runtime-src-main-java-org-odpi-specs-runtime-hive-HCatalogMR.java}
+{7 1,8 1,9 8,12 1,13 3,14 4,15 0.25,16 1,17 1,18 121,19 5e342c45364ec97f5e3530769a1cc8bdbcf69bb0-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-HiveHelper.java}
+{7 1,8 1,9 8,12 1,13 3,14 4,15 0.25,16 1,17 1,18 485,19 5e342c45364ec97f5e3530769a1cc8bdbcf69bb0-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hadoop-ApiExaminer.java}
+{7 1,8 1,9 8,12 1,13 3,14 4,15 0.25,16 1,17 1,18 137,19 5e342c45364ec97f5e3530769a1cc8bdbcf69bb0-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hive-HCatalogMR.java}
+{0 2,1 0.012048,2 0.012048,5 ' jun.he@arm.com',7 1,8 1,9 19,12 1,13 1,14 2,15 0.5,16 1,17 1,18 83,19 5ff983d466523a9264da55c0955b514a25013e5e-bigtop-test-framework-src-main-groovy-org-apache-bigtop-itest-junit-Ordered.java}
+{0 19,1 0.006024,2 0.032129,3 1,5 ' alanfgates@gmail.com',6 1,7 2,8 1,9 16,10 Thursday,11 1,12 1,13 1,14 1,15 1,16 2,17 2,18 498,19 77e0d6e01f3e43f4a7e51a588b2261780c587ae2-bigtop-tests-spec-tests-runtime-src-main-java-org-odpi-specs-runtime-hadoop-ApiExaminer.java}
+{0 82,1 0.518987,2 0.518987,7 4,8 1,9 9,12 1,13 3,14 4,15 0.25,16 4,17 4,18 79,19 a05d3813f67979f74c0494fb118f98a0264266dc-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-JdbcConnector.java}
+{0 8,1 0.001984,2 0.013889,3 1,5 ' alanfgates@gmail.com',7 1,8 1,9 16,12 1,13 1,14 1,15 1,16 1,17 1,18 504,19 4f19c159fafc67e3475a300ec9323d5eab03c748-bigtop-tests-spec-tests-runtime-src-main-java-org-odpi-specs-runtime-hadoop-ApiExaminer.java}
+{0 802,1 0.822086,2 0.817996,7 4,8 1,9 9,12 1,13 3,14 4,15 0.25,16 4,17 4,18 489,19 a05d3813f67979f74c0494fb118f98a0264266dc-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hadoop-ApiExaminer.java}
+{0 2,1 0.008264,2 0.008264,7 3,8 1,9 9,12 1,13 3,14 4,15 0.25,16 3,17 3,18 121,19 0f51fb32531daa6c0b66e6bbd8fc9813023019ba-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-HiveHelper.java}
+{0 8,1 0.033058,2 0.033058,3 1,7 2,8 1,9 9,12 1,13 3,14 4,15 0.25,16 2,17 2,18 121,19 c66106b631af67525ee88e4ad60b7cf97384a279-bigtop-tests-smoke-tests-odpi-runtime-src-test-java-org-odpi-specs-runtime-hive-HiveHelper.java}
+{0 8,1 0.029197,2 0.029197,3 1,7 2,8 1,9 9,12 1,13 3,14 4,15 0.25,16 2,17 2,18 137,19 c66106b631af67525ee88e4ad60b7cf97384a279-bigtop-tests-smoke-tests-odpi-runtime-src-main-java-org-odpi-specs-runtime-hive-HCatalogMR.java}

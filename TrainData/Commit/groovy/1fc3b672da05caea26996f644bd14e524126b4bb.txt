@@ -1,0 +1,20 @@
+        if (rightExpression instanceof MethodCallExpression || rightExpression instanceof ConstructorCallExpression || rightExpression instanceof VariableExpression) {
+            ClassNode inferredType = getType(rightExpression);
+            cn = null == inferredType ? rightExpression.getType() : inferredType;
+        for (int i = 0, n = TUPLE_CLASSES.length; i < n; i) {
+            Class tcn = TUPLE_CLASSES[i];
+            if (tcn.equals(cn.getTypeClass())) {
+                ListExpression listExpression = new ListExpression();
+                GenericsType[] genericsTypes = cn.getGenericsTypes();
+                for (int j = 0; j < i; j) {
+                    // the index of element in tuple starts with 1
+                    MethodCallExpression mce = new MethodCallExpression(rightExpression, "getV"  (j  1), ArgumentListExpression.EMPTY_ARGUMENTS);
+                    ClassNode elementType = null != genericsTypes ? genericsTypes[j].getType() : ClassHelper.OBJECT_TYPE;
+                    mce.setType(elementType);
+                    storeType(mce, elementType);
+                    listExpression.addExpression(mce);
+
+                listExpression.setSourcePosition(rightExpression);
+
+                return listExpression;
+

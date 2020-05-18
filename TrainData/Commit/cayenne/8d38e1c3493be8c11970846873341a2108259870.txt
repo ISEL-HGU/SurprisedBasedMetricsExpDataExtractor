@@ -1,0 +1,11 @@
+import org.apache.cayenne.configuration.server.*;
+import org.apache.cayenne.dba.sqlserver.SQLServerPkGenerator;
+import org.apache.cayenne.dba.sybase.SybasePkGenerator;
+import static org.apache.cayenne.dba.DbVersion.MS_SQL_2008;
+import static org.apache.cayenne.dba.DbVersion.MS_SQL_2012;
+
+        ServerModule.contributePkGenerators(binder)
+                .put(String.valueOf(MS_SQL_2008), SybasePkGenerator.class)
+                .put(String.valueOf(MS_SQL_2012), SQLServerPkGenerator.class);
+
+        binder.bind(PkGeneratorFactory.class).to(DefaultPkGeneratorFactory.class);

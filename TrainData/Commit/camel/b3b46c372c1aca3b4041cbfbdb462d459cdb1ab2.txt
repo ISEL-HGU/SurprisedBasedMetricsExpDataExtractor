@@ -1,0 +1,18 @@
+     * The access token secret
+     */
+    private String accessTokenSecret;
+    /**
+     * The consumer secret
+    private String consumerSecret;
+    public String getAccessTokenSecret() {
+        return accessTokenSecret;
+    }
+
+    public void setAccessTokenSecret(String accessTokenSecret) {
+        this.accessTokenSecret = accessTokenSecret;
+    }
+
+    public String getConsumerSecret() {
+        return consumerSecret;
+    public void setConsumerSecret(String consumerSecret) {
+        this.consumerSecret = consumerSecret;

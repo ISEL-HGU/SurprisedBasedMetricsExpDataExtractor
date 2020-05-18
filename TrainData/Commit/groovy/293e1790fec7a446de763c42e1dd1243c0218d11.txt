@@ -1,0 +1,4 @@
+            throw new GroovyRuntimeException(
+                    "replaceNode() can only be used to replace a single element, " 
+                    "but was applied to "  self.getLength()  " elements."
+            );

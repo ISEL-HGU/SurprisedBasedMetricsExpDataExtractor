@@ -1,0 +1,39 @@
+        Object key = endpoint.getConfiguration().getKey() != null
+        final Object messageKey = key != null
+            ? getMessageKey(exchange, key, endpoint.getConfiguration().getKeySerializerClass()) : null;
+
+        // is the message body a list or something that contains multiple values
+                    // must convert each entry of the iterator into the value according to the serializer
+                    Object next = msgList.next();
+                    Object value = getMessageValue(exchange, next, endpoint.getConfiguration().getSerializerClass());
+
+                        return new ProducerRecord(msgTopic, partitionKey, key, value);
+                        return new ProducerRecord(msgTopic, key, value);
+                    return new ProducerRecord(msgTopic, value);
+
+        // must convert each entry of the iterator into the value according to the serializer
+        Object value = getMessageValue(exchange, msg, endpoint.getConfiguration().getSerializerClass());
+
+            record = new ProducerRecord(topic, partitionKey, key, value);
+            record = new ProducerRecord(topic, key, value);
+            record = new ProducerRecord(topic, value);
+    protected Object getMessageKey(Exchange exchange, Object key, String keySerializer) {
+        Object answer = key;
+        if (KafkaConstants.KAFKA_DEFAULT_DESERIALIZER.equals(keySerializer)) {
+            // its string based so ensure key is string as well
+            answer = exchange.getContext().getTypeConverter().tryConvertTo(String.class, exchange, key);
+        }
+        // TODO: other serializers
+        return answer;
+    }
+
+    protected Object getMessageValue(Exchange exchange, Object value, String valueSerializer) {
+        Object answer = value;
+        if (KafkaConstants.KAFKA_DEFAULT_DESERIALIZER.equals(valueSerializer)) {
+            // its string based so ensure value is string as well
+            answer = exchange.getContext().getTypeConverter().tryConvertTo(String.class, exchange, value);
+        }
+        // TODO: other serializers
+        return answer;
+    }
+

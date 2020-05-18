@@ -1,0 +1,13 @@
+            boolean registerEndpointIdsFromRoute = false;
+
+                registerEndpointIdsFromRoute = "true".equalsIgnoreCase(factoryBean.getRegisterEndpointIdsFromRoute());
+            if (registerEndpointIdsFromRoute) {
+                // register as endpoint defined indirectly in the routes by from/to types having id explicit set
+                LOG.debug("Registering endpoint with ids defined in Camel routes");
+                registerEndpointsWithIdsDefinedInFromOrToTypes(element, parserContext, contextId, binder);
+            }
+            // skip underscore as they are internal naming and should not be registered
+            if (id.startsWith("_")) {
+                LOG.debug("Skip registering endpoint starting with underscore: {}", id);
+                return;
+            }

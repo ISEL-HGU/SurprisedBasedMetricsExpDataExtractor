@@ -1,0 +1,5 @@
+import org.apache.camel.CatalogCamelContext;
+        return context.adapt(CatalogCamelContext.class).explainEndpointJson(uri, allOptions);
+        return context.adapt(CatalogCamelContext.class).explainEipJson(nameOrId, allOptions);
+        Map<String, Properties> components = context.adapt(CatalogCamelContext.class).findComponents();
+            String json = context.adapt(CatalogCamelContext.class).getComponentParameterJsonSchema(name);

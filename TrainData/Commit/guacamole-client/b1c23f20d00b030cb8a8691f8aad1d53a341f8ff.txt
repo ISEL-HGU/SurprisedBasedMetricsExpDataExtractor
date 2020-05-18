@@ -1,0 +1,8 @@
+     * Service for tracking whether TOTP codes have been used.
+     */
+    @Inject
+    private CodeUsageTrackingService codeService;
+
+    /**
+            if ((code.equals(totp.generate()) || code.equals(totp.previous()))
+                    && codeService.useCode(username, code)) {

@@ -1,0 +1,32 @@
+extends DataStoreBase<K, T> implements FileBackedDataStore<K, T> {
+
+          Properties properties) {
+  public void setInputPath(String inputPath) {
+  public void setOutputPath(String outputPath) {
+  public String getInputPath() {
+  public String getOutputPath() {
+  public void setInputStream(InputStream inputStream) {
+  public void setOutputStream(OutputStream outputStream) {
+  public InputStream getInputStream() {
+  /** 
+   * Opens an InputStream for the input Hadoop path
+   * @return an open {@link java.io.InputStream}
+   * @throws IOException if there is an error obtaining the FileSystem or/from 
+   * the path
+  /** 
+   * Opens an OutputStream for the output Hadoop path
+   * @return an open {@link java.io.OutputStream}
+
+   * @param query the {@link org.apache.gora.query.Query} to execute
+   * @return a {@link org.apache.gora.query.Result}
+   * @throws IOException if there is an error during query exeuction
+          throws IOException;
+   * @param query the {@link org.apache.gora.query.impl.FileSplitPartitionQuery} to execute
+   * @return a {@link org.apache.gora.query.Result}
+   * @throws IOException if there is an error during query exeuction
+          throws IOException;
+            "file backed data stores");
+    IOUtils.closeStream(inputStream);
+    IOUtils.closeStream(outputStream);
+    inputStream = null;
+    outputStream = null;

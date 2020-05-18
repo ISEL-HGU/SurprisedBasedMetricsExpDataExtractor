@@ -1,0 +1,5 @@
+import org.apache.cayenne.query.ObjectSelect;
+import org.apache.cayenne.testdo.testmap.Artist;
+    public void testHasExceptions1() {
+    public void testHasExceptions2() {
+        observer.nextQueryException(ObjectSelect.query(Artist.class), new Exception());

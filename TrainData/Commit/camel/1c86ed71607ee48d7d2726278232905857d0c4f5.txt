@@ -1,0 +1,8 @@
+import org.apache.camel.util.LRUCache;
+    // use caches to avoid re-parsing the same expressions over and over again
+    private final LRUCache<String, Expression> cacheExpression;
+    private final CompositeNodes block;
+    public SimpleFunctionStart(SimpleToken token, LRUCache<String, Expression> cacheExpression) {
+        this.cacheExpression = cacheExpression;
+        SimpleFunctionExpression function = new SimpleFunctionExpression(this.getToken(), cacheExpression);
+                SimpleFunctionExpression function = new SimpleFunctionExpression(token, cacheExpression);

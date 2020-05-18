@@ -1,0 +1,1 @@
+            throw new GroovyBugError("The lookup for "  name  " caused a failed compilation. There should not have been any compilation from this call.", cfe);
