@@ -37,13 +37,43 @@ import org.eclipse.jgit.treewalk.CanonicalTreeParser;
 import org.eclipse.jgit.treewalk.TreeWalk;
 import org.eclipse.jgit.util.io.DisabledOutputStream;
 
+import edu.handong.csee.isel.JavaASTParser;
 import edu.handong.csee.isel.metric.metadata.DeveloperExperienceInfo;
+
+import org.eclipse.jdt.core.dom.Comment;
+
 //import edu.handong.csee.isel.weka.stringtovector.CommitInfo;
 //import edu.handong.csee.isel.weka.stringtovector.CommitKey;
 //import edu.handong.csee.isel.weka.stringtovector.WekaParser;
 
 public class Utils {
 
+	public static String removeComments(String code) {
+
+		JavaASTParser codeAST = new JavaASTParser(code);
+		@SuppressWarnings("unchecked")
+		List<Comment> lstComments = codeAST.cUnit.getCommentList();
+		for (Comment comment : lstComments) {
+			code = replaceCommentsWithWS(code, comment.getStartPosition(), comment.getLength());
+		}
+
+		return code;
+	}
+
+	private static String replaceCommentsWithWS(String code, int startPosition, int length) {
+
+		String pre = code.substring(0, startPosition);
+		String post = code.substring(startPosition + length, code.length());
+
+		String comments = code.substring(startPosition, startPosition + length);
+
+		comments = comments.replaceAll("\\S", " ");
+
+		code = pre + comments + post;
+
+		return code;
+	}
+	
 	public static String getStringDateTimeFromCommit(RevCommit commit) {	
 		
 		SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

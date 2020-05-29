@@ -162,7 +162,11 @@ public class CommitCollector {
 						formatter.format(entry);
 
 						String diffContent = byteStream.toString(); // 한 소스파일의 diff를 diffContent에 저장
-						metricParser.parsePatchContents(metaDataInfo, commitHash, diffContent, dataMode, trainingDataPath); // Here
+
+						String removedCommentsFileSource = Utils.removeComments(fileSource);
+
+						metricParser.parsePatchContents(metaDataInfo, commitHash, diffContent, dataMode, trainingDataPath, removedCommentsFileSource, key);  ////////////////////
+
 						metricParser.parseSourceInfo(metaDataInfo, sourceFileInfo, sourcePath, authorId, isBugCommit, commitTime, commitHash, commitUnitInfo, fileSource);
 						metricParser.parseCommitUnitInfo(commitUnitInfo, sourcePath, key);
 

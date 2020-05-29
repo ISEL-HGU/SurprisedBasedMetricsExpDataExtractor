@@ -22,7 +22,7 @@ import edu.handong.csee.isel.metric.metadata.Utils;
 
 public class MetricParser {
 	public void parsePatchContents(final MetaDataInfo metaDataInfo, final String commitHash, final String diffContent,
-			final String dataMode, final String trainingDataPath) {
+			final String dataMode, final String trainingDataPath, String removedCommentsFileSource, String key) {
 
 		int numOfDeleteLines = 0; // metricVariable.getNumOfDeleteLines();
 		int numOfAddLines = 0; // metricVariable.getNumOfAddLines();
@@ -30,6 +30,8 @@ public class MetricParser {
 
 		final List<String> diffLines = Arrays.asList(diffContent.split("\\n"));
 		final ArrayList<String> OneCommitAddedLines = new ArrayList<>(); // for making DP training dataset
+		final ArrayList<String> RemovedCommentsOneCommitAddedLines = new ArrayList<>(); // for making DP training dataset
+
 		for (int i = 5; i < diffLines.size(); i++) {
 			String line = diffLines.get(i);
 			if (line.startsWith("-"))
@@ -37,32 +39,44 @@ public class MetricParser {
 			else if (line.startsWith("+")) {
 				numOfAddLines++;
 				String removePlusCharLine = line.replaceAll("\\+", "");
-				if (dataMode.equals("1")) {
-					// LM - total all added line of all commit
-					CommitCollector.AllCommitsAddedLines.add(removePlusCharLine);
-				} else if (dataMode.equals("2")) {
-					// DP - per each commit
-					OneCommitAddedLines.add(removePlusCharLine);
-				}
-
-			} else if (line.startsWith("@@"))
+				removePlusCharLine = removePlusCharLine.trim();
+				if(!removePlusCharLine.equals("*") && !removePlusCharLine.equals("")) OneCommitAddedLines.add(removePlusCharLine);
+			} 
+			else if (line.startsWith("@@"))
 				distributionOfModifiedLines++;
 		}
-		// save one commit's added lines
-		if (dataMode.equals("2")) {
-
+		// if(OneCommitAddedLines.size() == 0) 
+		// Save one commit added lines
+		if (dataMode.equals("2")) { // DP mode
 			BufferedWriter writer;
 			try {
-				final String DP_EachCommitTxtFilePath = trainingDataPath + File.separator + commitHash + ".txt";
-				writer = new BufferedWriter(new FileWriter(DP_EachCommitTxtFilePath));
+				final String DP_EachCommitTxtFilePath = trainingDataPath + File.separator + key + ".txt";
+				
+				
 				for (final String line : OneCommitAddedLines) {
-					writer.write(line + System.lineSeparator());
+					if (removedCommentsFileSource.contains(line)) // 이게 제대로 되는건가? 주석이 제거된 커밋에 속한 라인만 저장이 되게 한 건데...
+						RemovedCommentsOneCommitAddedLines.add(line); 
 				}
-				writer.close();
+				if(RemovedCommentsOneCommitAddedLines.size() != 0){
+					writer = new BufferedWriter(new FileWriter(DP_EachCommitTxtFilePath));
+					for(String line : RemovedCommentsOneCommitAddedLines){
+						writer.write(line + System.lineSeparator());
+					}
+					writer.close();
+				}
+				else{
+					// System.out.println(key + " This commit has only comments");
+				} // This commit has only comments, so we do not consider our dataset
 			} catch (final IOException e) {
 				e.printStackTrace();
 			}
 
+		} 
+		else if (dataMode.equals("1")) { // LM mode
+			for (final String line : OneCommitAddedLines) {
+				if (removedCommentsFileSource.contains(line))
+					CommitCollector.AllCommitsAddedLines.add(line);
+			}
 		}
 
 		metaDataInfo.setNumOfModifyLines(numOfDeleteLines + numOfAddLines);
