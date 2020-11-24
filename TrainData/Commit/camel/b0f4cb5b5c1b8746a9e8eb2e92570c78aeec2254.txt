@@ -1,2 +1,0 @@
-    private static final Pattern SYNTAX_PATTERN = Pattern.compile("([\\w.])");
-            String[] tokens = syntax.split("[\\w.]");

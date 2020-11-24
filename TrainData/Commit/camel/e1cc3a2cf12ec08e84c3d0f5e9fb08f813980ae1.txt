@@ -1,1 +1,0 @@
-@Generated("org.apache.camel.maven.packaging.SpringBootAutoConfigurationMojo")

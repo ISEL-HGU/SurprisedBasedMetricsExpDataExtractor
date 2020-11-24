@@ -1,2 +1,0 @@
-        // (false => we handle the lifecycle of the dataFormat)
-        getCamelContext().addService(dataFormat, false, true);

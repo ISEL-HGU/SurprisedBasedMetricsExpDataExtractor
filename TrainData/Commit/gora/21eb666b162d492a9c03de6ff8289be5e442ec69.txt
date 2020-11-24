@@ -1,8 +1,0 @@
-  public static final ConcurrentHashMap<Schema, SpecificDatumReader<?>> readerMap =
-  public static final ConcurrentHashMap<Schema, SpecificDatumWriter<?>> writerMap =
-    case MAP:
-      // String schemaId = schema.getType().equals(Schema.Type.UNION) ? String.valueOf(schema.hashCode()) : schema.getFullName();
-      SpecificDatumReader<?> reader = readerMap.get(schema);
-        if((localReader=readerMap.putIfAbsent(schema, reader))!=null) {
-    case MAP:
-        writerMap.put(schema,writer);

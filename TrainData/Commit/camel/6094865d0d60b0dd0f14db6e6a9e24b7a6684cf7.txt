@@ -1,3 +1,0 @@
-            break;
-        callback.done(false);
-        return false;

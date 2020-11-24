@@ -1,6 +1,0 @@
-import java.util.LinkedHashMap;
-                 map = new LinkedHashMap<Object, List<MethodNode>>();
-            r.fieldIndex = new LinkedHashMap<>();
-            r.fieldIndex = new LinkedHashMap<String,FieldNode> ();
-            r.fieldIndex = new LinkedHashMap<String,FieldNode> ();
-                transformInstances.put(phase, new LinkedHashMap<Class <? extends ASTTransformation>, Set<ASTNode>>());

@@ -1,2 +1,0 @@
-        getEndpoint().updateLastConnectionActivityTicks();
-            mllpBuffer.resetSocket(socket);

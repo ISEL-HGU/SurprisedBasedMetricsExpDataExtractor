@@ -1,3 +1,0 @@
-import org.apache.camel.component.sql.stored.template.ast.*;
-                  if ((0x3ff200000000000L & l) != 0L)
-                  if ((0x3ff200000000000L & l) == 0L)

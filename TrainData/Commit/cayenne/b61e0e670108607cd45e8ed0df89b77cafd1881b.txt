@@ -1,4 +1,0 @@
-    default Optional<Embeddable> getEmbeddable() {
-        return Optional.empty();
-    }
-

@@ -1,9 +1,0 @@
-        private String queueUrl;
-        public String getQueueUrl() {
-            return queueUrl;
-        }
-
-        public void setQueueUrl(String queueUrl) {
-            this.queueUrl = queueUrl;
-        }
-

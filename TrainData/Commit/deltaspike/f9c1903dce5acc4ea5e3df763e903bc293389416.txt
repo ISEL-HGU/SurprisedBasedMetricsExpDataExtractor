@@ -1,6 +1,0 @@
-        SchedulerControl schedulerControl = BeanProvider.getContextualReference(SchedulerControl.class, true);
-        if (schedulerControl != null && !schedulerControl.isSchedulerEnabled())
-        {
-            return;
-        }
-

@@ -1,3 +1,0 @@
-    public DynamicAwareEntry prepare(Exchange exchange, String uri, String originalUri) throws Exception {
-        return new DynamicAwareEntry(uri, originalUri, properties, lenient);
-        String u = entry.getUri();

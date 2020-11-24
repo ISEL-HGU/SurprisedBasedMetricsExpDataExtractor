@@ -1,2 +1,0 @@
-     * If enabled then Jackson CBOR is allowed to attempt to use the
-     * CamelCBORUnmarshalType header during the unmarshalling.

@@ -1,2 +1,0 @@
-                return ((Closure) tagMap.get(name)).call(this, this.pendingNamespaces, this.namespaces, this.namespaceSpecificTags, prefix, attrs, body, this.out);
-                return defaultTagClosure.call(name, this, this.pendingNamespaces, this.namespaces, this.namespaceSpecificTags, prefix, attrs, body, this.out);

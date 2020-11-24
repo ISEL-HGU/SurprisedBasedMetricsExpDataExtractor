@@ -1,3 +1,0 @@
-            .to(mynetty)
-            .to("mock:foo"
-                 "?retainFirst=1");

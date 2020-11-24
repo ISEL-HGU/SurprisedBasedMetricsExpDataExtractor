@@ -1,3 +1,0 @@
-    public static final StringGuacamoleProperty
-            SQLSERVER_DRIVER = new StringGuacamoleProperty() {
-        public String getName() { return "sqlserver-driver"; }

@@ -1,3 +1,0 @@
-    public static final String PARAMETER_NAME = "guac-radius-challenge-response";
-    public RadiusChallengeResponseField(String replyMsg) {
-        super(PARAMETER_NAME, RADIUS_FIELD_TYPE);

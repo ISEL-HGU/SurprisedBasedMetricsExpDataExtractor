@@ -1,1 +1,0 @@
-            throw new NullPointerException("Null bean.");

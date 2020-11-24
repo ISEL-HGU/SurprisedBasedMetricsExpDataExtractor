@@ -1,2 +1,0 @@
-import static org.junit.jupiter.api.Assertions.assertFalse;
-            assertFalse(diff.hasDifferences(), aMessage  ":\n"  diff.toString());

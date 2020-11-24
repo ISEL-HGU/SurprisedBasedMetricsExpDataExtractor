@@ -1,4 +1,0 @@
-        final ValidatorMapping<A> primaryMapping = primaryDelegate.doGetValidatorMapping(constraintType);
-            return primaryMapping;
-        if (primaryMapping == null || annotationBehavior == AnnotationBehavior.EXCLUDE) {
-        return ValidatorMapping.merge(Arrays.asList(primaryMapping, secondaryMapping),

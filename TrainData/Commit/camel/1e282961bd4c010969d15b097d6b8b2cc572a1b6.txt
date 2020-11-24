@@ -1,1 +1,0 @@
-        camelContext.setLoadTypeConverters(config.isLoadTypeConverters());

@@ -1,5 +1,0 @@
-import org.apache.camel.AsyncProcessor;
-import org.apache.camel.util.AsyncProcessorConverterHelper;
-    private final AsyncProcessor logger;
-        this.logger = AsyncProcessorConverterHelper.convert(logger);
-        return logger.process(exchange, callback);

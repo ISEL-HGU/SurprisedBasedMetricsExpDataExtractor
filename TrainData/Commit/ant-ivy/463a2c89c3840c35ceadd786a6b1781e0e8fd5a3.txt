@@ -1,1 +1,0 @@
-     * @return <code>String</code> representing a well formed VFS resource identifier

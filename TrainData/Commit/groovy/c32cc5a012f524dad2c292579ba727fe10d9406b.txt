@@ -1,5 +1,0 @@
-                        stmt(useSetters && !field.isFinal()
-                                ? callThisX(getSetterName("set", fieldName), varX(parameter))
-                                : assignX(fieldX(field), varX(parameter))
-                        ),
-                        returnS(varX("this")))

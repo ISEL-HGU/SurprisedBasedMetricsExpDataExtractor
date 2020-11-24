@@ -1,4 +1,0 @@
-    @UriParam(label = "common,advanced")
-    @UriParam(label = "common,advanced", defaultValue = "false")
-    @UriParam(label = "producer,advanced", defaultValue = "false")
-    @UriParam(label = "producer,advanced")

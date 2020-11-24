@@ -1,1 +1,0 @@
-        SessionHandler sh = new SessionHandler();

@@ -1,2 +1,0 @@
-import org.apache.camel.component.reactive.streams.ReactiveStreamsComponent;
-    private ReactiveStreamsBackpressureStrategy backpressureStrategy = ReactiveStreamsBackpressureStrategy.BUFFER;

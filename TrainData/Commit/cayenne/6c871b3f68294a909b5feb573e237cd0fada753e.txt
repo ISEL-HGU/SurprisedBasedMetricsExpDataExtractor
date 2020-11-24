@@ -1,7 +1,0 @@
-        assertEquals("INSERT INTO "  entity.getName()  " (DESCRIPTION, INT_COLUMN_NOTNULL, INT_COLUMN_NULL, LOCKING_TEST_ID, NAME) VALUES (?, ?, ?, ?, ?)",
-            assertEquals("INSERT INTO "  charStart  entity.getName()  charEnd
-                     " ("  charStart  "DESCRIPTION"  charEnd  ", "
-                     charStart  "INT_COLUMN_NOTNULL"  charEnd  ", "
-                     charStart  "INT_COLUMN_NULL"  charEnd  ", "
-                     charStart  "LOCKING_TEST_ID"  charEnd  ", "
-                     charStart  "NAME"  charEnd  ") VALUES (?, ?, ?, ?, ?)", generatedSql);

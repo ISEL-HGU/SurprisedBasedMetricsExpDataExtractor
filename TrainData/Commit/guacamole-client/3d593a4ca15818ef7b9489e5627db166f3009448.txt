@@ -1,6 +1,0 @@
-
-        // Set the remote address
-        this.remoteAddress = request.getRemoteAddr();
-
-
-

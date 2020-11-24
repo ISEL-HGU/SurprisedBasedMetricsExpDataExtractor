@@ -1,2 +1,0 @@
-import org.codehaus.groovy.control.CompilerConfiguration;
-            this.encoding = CompilerConfiguration.DEFAULT_SOURCE_ENCODING;

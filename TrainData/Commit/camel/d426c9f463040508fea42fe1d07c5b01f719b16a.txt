@@ -1,3 +1,0 @@
-import com.amazonaws.services.simpleemail.AbstractAmazonSimpleEmailService;
-public class AmazonSESClientMock extends AbstractAmazonSimpleEmailService {
-        super();

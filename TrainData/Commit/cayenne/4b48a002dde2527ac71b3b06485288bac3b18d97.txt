@@ -1,3 +1,0 @@
-		if(Types.DOUBLE == type || Types.REAL == type){
-			return false;
-		}

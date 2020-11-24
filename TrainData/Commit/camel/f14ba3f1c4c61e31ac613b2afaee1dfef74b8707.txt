@@ -1,2 +1,0 @@
-import org.apache.camel.spi.annotations.ConstantProvider;
-@ConstantProvider("org.apache.camel.ExchangeConstantProvider")

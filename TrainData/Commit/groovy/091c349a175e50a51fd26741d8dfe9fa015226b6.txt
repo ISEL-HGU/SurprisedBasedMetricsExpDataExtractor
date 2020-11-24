@@ -1,2 +1,0 @@
-    private List<MethodNode> filterMethodsByVisibility(List<MethodNode> methodNodeList) {
-        return StaticTypeCheckingSupport.filterMethodsByVisibility(methodNodeList, typeCheckingContext.getEnclosingClassNode());

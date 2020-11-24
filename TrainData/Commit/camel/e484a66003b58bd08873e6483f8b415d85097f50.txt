@@ -1,5 +1,0 @@
-        // skip all converter classes from core as we just want to use the optimized TypeConverterLoader files
-                && !converterClasses.containsKey("org.apache.camel.converter.jaxp.DomConverter")
-                && !converterClasses.containsKey("org.apache.camel.converter.jaxp.XmlConverter")
-                && !converterClasses.containsKey("org.apache.camel.util.xml.StreamSourceConverter")
-                && !converterClasses.containsKey("org.apache.camel.converter.stream.StreamCacheConverter")) {

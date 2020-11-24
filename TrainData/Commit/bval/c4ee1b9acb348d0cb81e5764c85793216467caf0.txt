@@ -1,1 +1,0 @@
-        return String.format("%s-%d", BValInterceptor.class.getSimpleName(), hashCode());

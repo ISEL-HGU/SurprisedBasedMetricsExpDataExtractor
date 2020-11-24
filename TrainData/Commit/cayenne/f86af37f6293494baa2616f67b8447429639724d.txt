@@ -1,7 +1,0 @@
-    protected SQLTemplatePrefetchTab prefetchTab;
-
-        this.prefetchTab = new SQLTemplatePrefetchTab(mediator);
-        addTab("Prefetches", prefetchTab);
-            case 2:
-                prefetchTab.initFromModel();
-                break;

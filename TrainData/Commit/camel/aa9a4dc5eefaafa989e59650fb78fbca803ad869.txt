@@ -1,1 +1,0 @@
-            from("netty:tcp://localhost:4444?sync=true&encoders=#myEncoder&decoders=#myDecoder")

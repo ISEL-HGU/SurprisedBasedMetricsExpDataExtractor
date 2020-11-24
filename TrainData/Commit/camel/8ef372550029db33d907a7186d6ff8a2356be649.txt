@@ -1,2 +1,0 @@
-import hu.akarnokd.rxjava2.processors.MulticastProcessor;
-        this.publisher = MulticastProcessor.create(1); // Buffered downstream if needed

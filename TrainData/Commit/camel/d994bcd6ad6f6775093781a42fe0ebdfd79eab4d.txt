@@ -1,1 +1,0 @@
-        this.queueView = WeakRef.create(() -> client.acquireQueue(uri, Object.class, Object.class, endpoint.getConfiguration().getClusterName()));

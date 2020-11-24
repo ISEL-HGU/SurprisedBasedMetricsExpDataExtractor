@@ -1,2 +1,0 @@
-        final ClassLoader tccl = Thread.currentThread().getContextClassLoader();
-            Thread.currentThread().setContextClassLoader(tccl);

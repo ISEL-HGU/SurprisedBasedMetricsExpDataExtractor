@@ -1,5 +1,0 @@
-import com.impossibl.postgres.jdbc.PGDriver;
-
-import org.apache.camel.spi.ClassResolver;
-            ClassResolver classResolver = getCamelContext().getClassResolver();
-            classResolver.resolveMandatoryClass(PGDriver.class.getName(), PgEventComponent.class.getClassLoader());

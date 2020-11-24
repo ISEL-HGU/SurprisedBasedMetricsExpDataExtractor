@@ -1,9 +1,0 @@
-                            // filter classes (must not be interfaces, must be public, must not be abstract, must be top level) and also a valid autowire class
-                                    c -> !c.isInterface()
-                                            && Modifier.isPublic(c.getModifiers())
-                                            && !Modifier.isAbstract(c.getModifiers())
-                                            && c.getEnclosingClass() == null
-                                            && isValidAutowireClass(c))
-                    getLog().info("\t\t"  c.getName());
-        if (exclude != null && exclude.length > 0) {
-        if (include != null && include.length > 0) {

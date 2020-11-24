@@ -1,3 +1,0 @@
-import org.apache.groovy.util.SystemUtil;
-    private static final boolean PARAMETERIZED_TYPE_CACHE_ENABLED =
-            TRUE_STR.equals(SystemUtil.getSystemPropertySafe("groovy.enable.parameterized.type.cache", TRUE_STR));

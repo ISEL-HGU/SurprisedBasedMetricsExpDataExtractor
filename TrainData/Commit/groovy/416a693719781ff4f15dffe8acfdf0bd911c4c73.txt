@@ -1,5 +1,0 @@
-interface Reducable {
-    class InterfaceContext {}
-}
-
-public class Reducer extends BaseReducer implements Reducable {

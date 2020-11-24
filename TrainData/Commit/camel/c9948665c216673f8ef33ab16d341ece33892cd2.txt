@@ -1,7 +1,0 @@
-            // ensure value is escaped
-            String value = escapeJson(newValue.toString());
-            answer.put(rowEntry.getKey().toString(), value);
-    private static String escapeJson(String value) {
-        return Jsoner.escape(value);
-    }
-

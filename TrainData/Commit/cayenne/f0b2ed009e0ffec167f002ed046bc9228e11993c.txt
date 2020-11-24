@@ -1,1 +1,0 @@
-	@Test//(expected = ValidationException.class) // other2 is not mandatory for now

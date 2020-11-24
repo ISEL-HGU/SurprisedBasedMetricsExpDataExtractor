@@ -1,2 +1,0 @@
-        } catch (HeuristicMixedException | HeuristicRollbackException | RollbackException | SystemException e) {
-        } catch (Exception | Error e) {

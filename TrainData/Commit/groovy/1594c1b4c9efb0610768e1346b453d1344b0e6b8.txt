@@ -1,8 +1,0 @@
-import org.codehaus.groovy.ast.ClassHelper;
-
-            if (superClass == null) {
-                if (ClassHelper.isPrimitiveType(type)) {
-                    superClass = ClassHelper.getNextSuperClass(ClassHelper.getWrapper(type), target);
-                }
-            }
-

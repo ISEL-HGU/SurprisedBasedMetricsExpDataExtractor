@@ -1,7 +1,0 @@
-    // HPA
-    String LIST_HPA = "listHPA";
-    String LIST_HPA_BY_LABELS_OPERATION = "listHPAByLabels";
-    String GET_HPA_OPERATION = "getHPA";
-    String CREATE_HPA_OPERATION = "createHPA";
-    String DELETE_HPA_OPERATION = "deleteHPA";
-    

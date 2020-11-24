@@ -1,2 +1,0 @@
-    // `java.util` is used much frequently than other two java packages(`java.io` and `java.net`), so place java.util before the two packages
-    public static final String[] DEFAULT_IMPORTS = {"java.lang.", "java.util.", "java.io.", "java.net.", "groovy.lang.", "groovy.util."};

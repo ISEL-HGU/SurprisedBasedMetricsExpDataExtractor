@@ -1,2 +1,0 @@
-            File guacHome = guacEnv.getGuacamoleHome();
-            String innerProtocol = confService.getRadiusEAPTTLSInnerProtocol();

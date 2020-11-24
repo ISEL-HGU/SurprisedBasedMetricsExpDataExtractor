@@ -1,4 +1,0 @@
-    /** This (<code>"9"</code>) is the value for targetBytecode to compile for a JDK 9. **/
-    public static final String JDK9 = "9";
-            JDK8, Opcodes.V1_8,
-            JDK9, Opcodes.V9

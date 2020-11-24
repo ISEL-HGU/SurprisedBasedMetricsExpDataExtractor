@@ -1,2 +1,0 @@
- b/platforms/spring-boot/components-starter/camel-zookeeper-starter/src/main/java/org/apache/camel/component/zookeeper/cluster/springboot/ZooKeeperClusterServiceConfiguration.java
-package org.apache.camel.component.zookeeper.cluster.springboot;

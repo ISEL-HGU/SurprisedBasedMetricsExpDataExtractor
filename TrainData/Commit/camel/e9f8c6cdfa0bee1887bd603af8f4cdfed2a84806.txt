@@ -1,5 +1,0 @@
-
-            ClassLoader apcl = getCamelContext().getApplicationContextClassLoader();
-            if (apcl != null) {
-                theme.setJarContext(apcl);
-            }

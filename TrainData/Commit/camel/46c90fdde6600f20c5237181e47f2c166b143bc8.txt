@@ -1,2 +1,0 @@
-import com.amazonaws.regions.Regions;
-            AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard().withCredentials(credentialsProvider).withRegion(Regions.valueOf(configuration.getRegion())).build();

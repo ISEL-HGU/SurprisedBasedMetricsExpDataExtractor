@@ -1,4 +1,0 @@
-        doc.add(new IntPoint(mapping.getPrimaryKey(), (Integer) key));
-        doc.add(new LongPoint(mapping.getPrimaryKey(), (Long) key));
-        doc.add(new FloatPoint(mapping.getPrimaryKey(), (Float) key));
-        doc.add(new DoublePoint(mapping.getPrimaryKey(), (Double) key));

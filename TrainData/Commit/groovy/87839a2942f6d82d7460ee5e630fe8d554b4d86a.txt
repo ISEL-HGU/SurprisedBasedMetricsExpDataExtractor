@@ -1,1 +1,0 @@
-        return Modifier.isPublic(modifiers) || Modifier.isProtected(modifiers);

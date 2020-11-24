@@ -1,6 +1,0 @@
-
-    public HeaderSelectorProducer(Endpoint endpoint, String header, Supplier<String> defaultHeaderValueSupplier) {
-        this(endpoint, () -> header, defaultHeaderValueSupplier, null);
-    }
-
-        String action = exchange.getIn().getHeader(header, String.class);

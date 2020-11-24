@@ -1,8 +1,0 @@
-    default boolean isSchedulerEnabled()
-    {
-        return true;
-    }
-    default boolean vetoJobExecution(Class<?> jobClass)
-    {
-        return false;
-    }

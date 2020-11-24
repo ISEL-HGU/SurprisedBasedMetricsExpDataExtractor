@@ -1,3 +1,0 @@
-                            String namespacePrefix = reader.getNamespacePrefix(i);
-                            String namespaceURI = reader.getNamespaceURI(i);
-                            writer.writeNamespace(namespacePrefix == null ? "" : namespacePrefix, namespaceURI == null ? "" : namespaceURI);

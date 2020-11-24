@@ -1,6 +1,0 @@
-        s3Client = configuration.getAmazonS3Client() != null ? configuration.getAmazonS3Client() : S3ClientFactory.getAWSS3Client(configuration, getMaxConnections()).getS3Client();
-            // creates the new bucket because it doesn't exist yet
-            CreateBucketRequest createBucketRequest = new CreateBucketRequest(getConfiguration().getBucketName());
-            LOG.trace("Creating bucket [{}] in region [{}] with request [{}]...", configuration.getBucketName(), configuration.getRegion(), createBucketRequest);
-            s3Client.createBucket(createBucketRequest);
-            LOG.trace("Bucket created");

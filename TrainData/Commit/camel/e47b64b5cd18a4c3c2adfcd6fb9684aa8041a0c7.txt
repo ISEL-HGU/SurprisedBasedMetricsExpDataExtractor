@@ -1,3 +1,0 @@
-import org.apache.camel.support.ScriptHelper;
-                exp = ScriptHelper.resolveOptionalExternalScript(camelContext, exp);
-                exp = ScriptHelper.resolveOptionalExternalScript(camelContext, exp);

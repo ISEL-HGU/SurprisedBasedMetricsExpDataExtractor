@@ -1,4 +1,0 @@
-    /**
-     * Define if you don't want to resolve the MQTT Connect Options from registry
-     * @param resolveMqttConnectOptions
-     */

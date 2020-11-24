@@ -1,2 +1,0 @@
-import org.apache.camel.util.StringHelper;
-        String[] values = StringHelper.splitOnCharacter(text, ":", 2);

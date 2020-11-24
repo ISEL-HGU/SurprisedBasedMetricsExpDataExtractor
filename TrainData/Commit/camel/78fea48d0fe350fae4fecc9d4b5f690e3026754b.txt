@@ -1,2 +1,0 @@
-            // registerEndpointsWithIdsDefinedInFromOrToTypes(element, parserContext, contextId, binder);
-    @Deprecated

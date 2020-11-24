@@ -1,2 +1,0 @@
-            key = getConfiguration().getKeyName();
-            throw new IllegalArgumentException("AWS S3 Key header missing.");

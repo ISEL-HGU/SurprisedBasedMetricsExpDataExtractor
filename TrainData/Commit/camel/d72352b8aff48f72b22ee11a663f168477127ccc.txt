@@ -1,2 +1,0 @@
-        from("timer:trigger?period=500").streamCaching()
-                // see application.properties how hystrix is configured

@@ -1,4 +1,0 @@
-public class EmbeddedBrokerSupport extends EmbeddedJMS {
-    
-    public EmbeddedBrokerSupport(ActiveMQJAASSecurityManager securityManager) throws Exception {
-    public void close() throws Exception {

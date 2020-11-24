@@ -1,4 +1,0 @@
-import java.util.function.Supplier;
-    static Supplier<Charset> defaultCharset = Charset::defaultCharset;
-
-            final Charset defaultStreamCharset = defaultCharset.get();

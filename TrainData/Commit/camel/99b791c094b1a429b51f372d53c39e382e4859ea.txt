@@ -1,1 +1,0 @@
-             " Notice if the option bridgeErrorHandler is enabled then this option is not in use."

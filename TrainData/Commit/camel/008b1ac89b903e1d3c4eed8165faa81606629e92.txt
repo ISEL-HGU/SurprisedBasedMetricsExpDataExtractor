@@ -1,4 +1,0 @@
-    public static Endpoint getEndpointInjection(CamelContext camelContext, String uri, String injectionPointName, boolean mandatory) {
-            if (mandatory) {
-                endpoint = mandatoryLookup(camelContext, injectionPointName, Endpoint.class);
-                endpoint = lookup(camelContext, injectionPointName, Endpoint.class);

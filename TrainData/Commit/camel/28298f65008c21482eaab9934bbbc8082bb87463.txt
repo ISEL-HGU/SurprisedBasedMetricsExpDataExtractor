@@ -1,5 +1,0 @@
-public final class HdfsKerberosConfigurationFactory {
-    private HdfsKerberosConfigurationFactory() {
-        // factory class
-    }
-

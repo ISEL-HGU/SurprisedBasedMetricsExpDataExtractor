@@ -1,6 +1,0 @@
-import org.apache.camel.util.ObjectHelper;
-    	if (ObjectHelper.isNotEmpty(getEndpoint().getEvents())) {
-            if (!getEndpoint().getEvents().contains(fileEvent.getEventType())) {
-                return false;
-            }
-    	}

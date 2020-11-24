@@ -1,4 +1,0 @@
- b/src/main/org/codehaus/groovy/runtime/memoize/CommonCache.java
-public class CommonCache<K, V> implements EvictableCache<K, V> {
-    public CommonCache() {
-    public CommonCache(Map<K, V> map) {

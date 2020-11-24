@@ -1,2 +1,0 @@
- *     <li>autowire by type - Values can refer to singleton beans by auto wiring by setting the value to #autowired</li>
-            } else if (value.toString().equals("#autowired")) {

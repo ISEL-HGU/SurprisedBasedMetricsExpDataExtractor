@@ -1,2 +1,0 @@
-            if (continuation.isResumed()) {
-                if (!continuation.isPending()) {

@@ -1,1 +1,0 @@
-@UriEndpoint(firstVersion = "2.18.0", scheme = "lumberjack", title = "Lumberjack", syntax = "lumberjack:host:port", consumerOnly = true, consumerClass = LumberjackConsumer.class, label = "log")

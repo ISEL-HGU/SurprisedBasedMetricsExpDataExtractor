@@ -1,2 +1,0 @@
-import org.apache.camel.component.bean.BeanExpressionProcessor;
-            BeanExpressionProcessor processor = new BeanExpressionProcessor(beanHolder);

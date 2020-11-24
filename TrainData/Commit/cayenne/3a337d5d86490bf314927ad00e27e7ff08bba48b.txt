@@ -1,2 +1,0 @@
-        parentPanel.getResolve().removeActionListener(getResolver());
-        parentPanel.getResolve().addActionListener(getResolver());

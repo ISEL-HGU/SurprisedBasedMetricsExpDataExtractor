@@ -1,6 +1,0 @@
-        String deprecatedText = null;
-                deprecatedText = row.get(Constants.DEPRECATED_ATTRIBUTE_NAME);
-        if ("true".equals(deprecatedText)) {
-            descriptionText = "Deprecated: "  descriptionText;
-        }
-

@@ -1,7 +1,0 @@
-import org.apache.camel.component.as2.api.AS2SignatureAlgorithm;
-         * The algorithm used to sign EDI message.
-        private AS2SignatureAlgorithm signingAlgorithm;
-        public AS2SignatureAlgorithm getSigningAlgorithm() {
-            return signingAlgorithm;
-        public void setSigningAlgorithm(AS2SignatureAlgorithm signingAlgorithm) {
-            this.signingAlgorithm = signingAlgorithm;

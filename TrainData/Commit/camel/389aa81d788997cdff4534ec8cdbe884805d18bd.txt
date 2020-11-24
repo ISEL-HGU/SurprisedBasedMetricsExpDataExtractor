@@ -1,5 +1,0 @@
- b/components/camel-as2/camel-as2-api/src/main/java/org/apache/camel/component/as2/api/util/AS2Utils.java
-package org.apache.camel.component.as2.api.util;
-import org.apache.camel.component.as2.api.InvalidAS2NameException;
-public final class AS2Utils {
-    private AS2Utils() {

@@ -1,2 +1,0 @@
-     * Gets whether access to the original message from Camel's error handler,
-     * or from {@link org.apache.camel.spi.UnitOfWork#getOriginalInMessage()} is allowed.

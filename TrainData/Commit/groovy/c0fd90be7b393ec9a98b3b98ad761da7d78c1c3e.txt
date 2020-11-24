@@ -1,2 +1,0 @@
-import static org.codehaus.groovy.ast.tools.GeneralUtils.localVarX;
-        final Expression result = localVarX("_result");

@@ -1,2 +1,0 @@
-                // Start the service and add it to the Camel context to expose managed attributes
-                getCamelContext().addService(service, true, true);

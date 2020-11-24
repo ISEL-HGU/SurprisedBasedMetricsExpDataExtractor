@@ -1,2 +1,0 @@
-        // Automatically translate GuacamoleExceptions for REST methods
-        bind(RESTExceptionMapper.class);

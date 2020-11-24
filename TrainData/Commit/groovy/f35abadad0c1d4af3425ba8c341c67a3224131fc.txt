@@ -1,2 +1,0 @@
-            return num > 0 && delegate.hasNext();
-        if (num <= 0 || !self.iterator().hasNext()) {

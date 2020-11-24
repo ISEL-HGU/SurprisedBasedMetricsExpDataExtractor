@@ -1,8 +1,0 @@
-import java.lang.ref.SoftReference;
-import java.lang.ref.WeakReference;
-                K key = entry.getKey();
-                V value = entry.getValue();
-                if (null == value
-                        || (value instanceof SoftReference && null == ((SoftReference) value).get())
-                        || (value instanceof WeakReference && null == ((WeakReference) value).get())) {
-                    keys.add(key);

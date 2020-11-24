@@ -1,5 +1,0 @@
-        String beforeAsXml = ModelHelper.dumpModelAsXml(camelContext, this);
-
-        String afterAsXml = ModelHelper.dumpModelAsXml(camelContext, merged);
-        log.info("Adviced route before/after as XML:\n{}\n{}", beforeAsXml, afterAsXml);
-

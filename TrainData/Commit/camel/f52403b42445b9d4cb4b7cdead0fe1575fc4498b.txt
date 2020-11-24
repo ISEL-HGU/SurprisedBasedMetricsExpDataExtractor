@@ -1,4 +1,0 @@
-        final String sendTo = exchange.getIn().getHeader(IrcConstants.IRC_SEND_TO, String.class);
-            } else if (sendTo != null) {
-                log.debug("Sending to: {} message: {}", sendTo, msg);
-                connection.doPrivmsg(sendTo, msg);

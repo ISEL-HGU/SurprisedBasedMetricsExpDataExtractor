@@ -1,8 +1,0 @@
-        if (zipFile.exists() && !zipFile.delete()) { //Delete, because ZipFileSystem needs to create file on its own (with correct END bytes in the file)
-            throw new IOException("Cannot delete file "  zipFile);
-        Map<String, Object> env = new HashMap<>();
-        env.put("create", Boolean.TRUE.toString()); //Intentionally String, it is implemented this way in ZipFileSystem
-        Map<String, Object> env = new HashMap<>();
-        env.put("useTempFile", this.useTempFile); //Intentionally boolean, it is implemented this way in ZipFileSystem
-        Map<String, Object> env = new HashMap<>();
-        env.put("useTempFile", this.useTempFile); //Intentionally boolean, it is implemented this way in ZipFileSystem

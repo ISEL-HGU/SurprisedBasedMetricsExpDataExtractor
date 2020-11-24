@@ -1,2 +1,0 @@
-     * The AWS EKS default configuration
-     * The region in which EKS client needs to work

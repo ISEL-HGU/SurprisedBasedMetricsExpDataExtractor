@@ -1,2 +1,0 @@
-import org.apache.cxf.common.util.StringUtils;
-            if (StringUtils.isEmpty(resource.getName())) {

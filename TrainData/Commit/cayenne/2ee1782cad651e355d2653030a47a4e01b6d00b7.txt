@@ -1,9 +1,0 @@
-import org.apache.cayenne.modeler.editor.AdditionalTabController;
-import javax.swing.*;
-public class CgenTabController extends AdditionalTabController {
-    public void runGenerators(Set<DataMap> dataMaps) {
-            ((CgenTab)view).showEmptyMessage();
-                ((CgenTab)view).showErrorMessage(e.getMessage());
-            ((CgenTab)view).showSuccessMessage();
-    public CgenConfiguration createConfiguration(DataMap dataMap) {
-    public void showConfig(DataMap dataMap) {

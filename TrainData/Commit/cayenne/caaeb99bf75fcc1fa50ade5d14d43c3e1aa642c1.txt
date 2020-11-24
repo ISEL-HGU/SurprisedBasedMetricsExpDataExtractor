@@ -1,6 +1,0 @@
-        GraphRegistry registry = metaData.get(channelDescriptor, GraphRegistry.class);
-        if (registry == null) {
-            return null;
-        }
-
-                .attribute("href", channelDescriptor.getName()  GraphExtension.GRAPH_SUFFIX)

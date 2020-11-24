@@ -1,5 +1,0 @@
-         * We recommend extending the {@link TimeoutCorrelationManagerSupport}
-         * when you build custom correlation managers. This provides support for
-         * timeout and other complexities you otherwise would need to implement
-         * as well.
-         * <p/>

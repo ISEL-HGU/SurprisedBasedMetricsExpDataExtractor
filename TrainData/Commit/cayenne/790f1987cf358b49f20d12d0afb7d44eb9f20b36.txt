@@ -1,7 +1,0 @@
-import java.time.temporal.ChronoField;
-		// round up seconds fraction
-		// reason: on MySQL field should be defined as TIMESTAMP(fractionSecondsPrecision) to support it
-		LocalDateTime localDateTime = LocalDateTime.now().with(ChronoField.NANO_OF_SECOND, 0);
-		// round up seconds fraction
-		// reason: on MySQL field should be defined as TIMESTAMP(fractionSecondsPrecision) to support it
-		LocalDateTime localDateTime = LocalDateTime.now().with(ChronoField.NANO_OF_SECOND, 0);

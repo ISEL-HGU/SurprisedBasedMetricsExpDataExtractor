@@ -1,2 +1,0 @@
- * Handles generation of code for the {@code @Newify} AST transform.
-            transformed.setSafe(mce.isSafe());

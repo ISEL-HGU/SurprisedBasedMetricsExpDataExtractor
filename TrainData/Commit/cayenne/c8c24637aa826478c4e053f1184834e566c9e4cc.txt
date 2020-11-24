@@ -1,2 +1,0 @@
-import org.apache.cayenne.query.ObjectSelect;
-        ObjectSelect.query(Employee.class).select(context1);

@@ -1,2 +1,0 @@
-@UriEndpoint(firstVersion = "2.6.0", scheme = "paxlogging", title = "OSGi PAX Logging", syntax = "paxlogging:appender",
-    consumerOnly = true, consumerClass = PaxLoggingConsumer.class, label = "monitoring")

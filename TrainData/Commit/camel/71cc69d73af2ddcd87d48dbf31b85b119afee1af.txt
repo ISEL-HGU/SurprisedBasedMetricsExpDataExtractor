@@ -1,3 +1,0 @@
-            if (dbObject != null) {
-                gfsFile.setMetaData(dbObject);
-            }

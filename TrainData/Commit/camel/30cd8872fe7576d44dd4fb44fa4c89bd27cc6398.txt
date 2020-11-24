@@ -1,2 +1,0 @@
- * The jooq component enables you to store and retrieve entities from databases
- * using JOOQ.

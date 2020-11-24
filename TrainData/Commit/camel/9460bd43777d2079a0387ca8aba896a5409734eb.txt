@@ -1,8 +1,0 @@
-        PermissionSets,
-     * Usage of permission sets.
-     */
-    public Usage getPermissionSets() {
-        return forOperation(Operation.PermissionSets);
-    }
-
-    /**

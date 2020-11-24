@@ -1,1 +1,0 @@
-        public StreamingJsonDelegate(Writer w, boolean first, JsonGenerator generator) {

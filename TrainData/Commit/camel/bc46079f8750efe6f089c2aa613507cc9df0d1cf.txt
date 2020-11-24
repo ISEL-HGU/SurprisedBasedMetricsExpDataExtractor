@@ -1,1 +1,0 @@
-        properties.setProperty("offsets.topic.replication.factor", String.valueOf(1));

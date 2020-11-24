@@ -1,1 +1,0 @@
-        PropertyBindingSupport.build().bind(getCamelContext(), endpointConfiguration, componentProperties);

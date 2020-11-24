@@ -1,9 +1,0 @@
-import org.apache.camel.CamelContext;
-    public static Object constructGrpcAsyncStub(String packageName, String serviceName, Channel channel, final CamelContext context) {
-        return constructGrpcStubClass(packageName, serviceName, GrpcConstants.GRPC_SERVICE_ASYNC_STUB_METHOD, channel, context);
-    public static Object constructGrpcBlockingStub(String packageName, String serviceName, Channel channel, final CamelContext context) {
-        return constructGrpcStubClass(packageName, serviceName, GrpcConstants.GRPC_SERVICE_SYNC_STUB_METHOD, channel, context);
-    private static Object constructGrpcStubClass(String packageName, String serviceName, String stubMethod, Channel channel, final CamelContext context) {
-            Class grpcServiceClass = context.getClassResolver().resolveMandatoryClass(serviceClassName);
-    public static Class constructGrpcImplBaseClass(String packageName, String serviceName, final CamelContext context) {
-            grpcServerImpl = context.getClassResolver().resolveMandatoryClass(serverBaseImpl);

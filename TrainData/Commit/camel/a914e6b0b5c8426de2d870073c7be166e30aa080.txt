@@ -1,2 +1,0 @@
- * The gRPC component allows to call and expose remote procedures via HTTP/2
- * with protobuf dataformat

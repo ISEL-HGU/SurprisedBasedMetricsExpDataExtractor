@@ -1,7 +1,0 @@
-                throw new IllegalArgumentException("Parameter 'groupMembershipId' can not be null");
-     * @param groupMembershipId
-    public BoxGroupMembership.Info getGroupMembershipInfo(String groupMembershipId) {
-            LOG.debug("Getting info for groupMemebership(id={})", groupMembershipId);
-            if (groupMembershipId == null) {
-                throw new IllegalArgumentException("Parameter 'groupMembershipId' can not be null");
-            BoxGroupMembership group = new BoxGroupMembership(boxConnection, groupMembershipId);

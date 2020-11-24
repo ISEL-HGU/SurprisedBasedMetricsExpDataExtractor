@@ -1,3 +1,0 @@
-//CHECKSTYLE:OFF
-public class MySpringBootApplication {
-//CHECKSTYLE:ON

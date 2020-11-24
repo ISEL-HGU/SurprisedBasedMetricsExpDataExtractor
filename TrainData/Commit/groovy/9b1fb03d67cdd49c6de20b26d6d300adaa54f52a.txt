@@ -1,1 +1,0 @@
-    protected StringBuilder surrogatePair = new StringBuilder(2);

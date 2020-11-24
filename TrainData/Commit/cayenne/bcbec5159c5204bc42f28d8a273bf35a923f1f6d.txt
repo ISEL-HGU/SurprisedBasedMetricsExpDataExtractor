@@ -1,7 +1,0 @@
-
-    /**
-     * @since 4.1
-     */
-     * (see {@link ServerRuntimeBuilder}).
-     * @since 4.1
-        return configuration.getInitParameter(DATA_DOMAIN_NAME_PARAMETER);

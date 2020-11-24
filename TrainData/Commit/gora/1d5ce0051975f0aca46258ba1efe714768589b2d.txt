@@ -1,1 +1,0 @@
-      throw new RuntimeException("Unsupported persistent class, couldn't able to find the Avro schema.");

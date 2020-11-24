@@ -1,2 +1,0 @@
-         * Milliseconds before the next poll.
-         * Milliseconds before the next poll.

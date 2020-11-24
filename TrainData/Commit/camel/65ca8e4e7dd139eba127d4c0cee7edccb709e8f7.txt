@@ -1,5 +1,0 @@
-
-    @Override
-    public String toString() {
-        return "Pojo{"  "id="  id  ", name='"  name  '\''  '}';
-    }

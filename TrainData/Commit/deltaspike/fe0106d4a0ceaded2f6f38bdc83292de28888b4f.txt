@@ -1,3 +1,0 @@
-    private final Class<?> nodeId;
-    public FolderConfigNode(Class<?> nodeId, ViewConfigNode parent, Set<Annotation> nodeMetaData)
-    public Class<?> getSource()

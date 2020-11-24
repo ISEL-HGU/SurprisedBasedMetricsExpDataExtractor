@@ -1,5 +1,0 @@
-    private final StringSetProperty SKIP_IF_UNAVAILABLE = new StringSetProperty() {
-            return "skip-if-unavailable";
-            return environment.getProperty(SKIP_IF_UNAVAILABLE, Collections.<String>emptySet());
-            logger.warn("The list of authentication providers specified via the \"{}\" property could not be parsed: {}", SKIP_IF_UNAVAILABLE.getName(), e.getMessage());
-            logger.debug("Unable to parse \"{}\" property.", SKIP_IF_UNAVAILABLE.getName(), e);

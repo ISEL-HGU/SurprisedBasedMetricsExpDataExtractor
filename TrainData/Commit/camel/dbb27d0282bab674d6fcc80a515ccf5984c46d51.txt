@@ -1,1 +1,0 @@
-        return URI.create(endpoint.getEndpointUri().substring(getComponent().length()  1)).getPath();

@@ -1,2 +1,0 @@
-import static org.osgi.framework.wiring.BundleRevision.PACKAGE_NAMESPACE;
-

@@ -1,1 +1,0 @@
-        LOG.debug("Finding all components using class resolver: {}", resolver);

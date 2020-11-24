@@ -1,8 +1,0 @@
-     * @param guacamoleException
-     *     The exception that caused this error.
-            GuacamoleException guacamoleException)
-                response.addHeader("Guacamole-Status-Code", Integer.toString(guacamoleException.getStatus().getGuacamoleStatusCode()));
-                response.addHeader("Guacamole-Error-Message", guacamoleException.getMessage());
-                response.sendError(guacamoleException.getHttpStatusCode());
-            sendError(response, e);
-            sendError(response, e);

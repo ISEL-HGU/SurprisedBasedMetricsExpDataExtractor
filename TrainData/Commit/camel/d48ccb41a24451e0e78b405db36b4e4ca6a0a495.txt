@@ -1,1 +1,0 @@
-        if (parenthesisBracketCnt > 0 && last != null) {

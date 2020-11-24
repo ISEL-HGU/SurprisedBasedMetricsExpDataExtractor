@@ -1,6 +1,0 @@
-import static org.codehaus.groovy.ast.tools.GenericsUtils.toGenericTypesString;
-
-        if (genericsTypes == null)
-            return "";
-
-        return toGenericTypesString(genericsTypes);

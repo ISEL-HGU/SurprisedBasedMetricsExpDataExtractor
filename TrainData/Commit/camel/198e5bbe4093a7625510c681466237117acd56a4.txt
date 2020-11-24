@@ -1,3 +1,0 @@
- b/platforms/spring-boot/components-starter/camel-mongodb-starter/src/main/java/org/apache/camel/component/mongodb3/springboot/MongoDbComponentConfiguration.java
-@ConfigurationProperties(prefix = "camel.component.mongodb")
-     * Whether to enable auto configuration of the mongodb component. This is

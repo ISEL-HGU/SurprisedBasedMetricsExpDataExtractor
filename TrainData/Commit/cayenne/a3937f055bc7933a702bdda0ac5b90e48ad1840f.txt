@@ -1,7 +1,0 @@
-import org.apache.cayenne.configuration.Constants;
-import org.apache.cayenne.configuration.server.ServerModule;
-            ServerModule.contributeProperties(binder)
-                    // Use soft references instead of default weak.
-                    // Should remove problems with random-failing tests (those that are GC-sensitive).
-                    .put(Constants.SERVER_OBJECT_RETAIN_STRATEGY_PROPERTY, "soft");
-

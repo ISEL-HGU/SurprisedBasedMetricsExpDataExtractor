@@ -1,1 +1,0 @@
-    private Set<SystemPermission> permissions = Collections.emptySet();

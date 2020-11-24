@@ -1,4 +1,0 @@
-                final URL url = settings.getRelativeUrlResolver().getURL(descriptorURL, location);
-                if (!url.getProtocol().equals("file")) {
-                    throw new IOException("Resolved location "  url  ", of parent module descriptor, is not a file");
-                file = new File(url.getPath());

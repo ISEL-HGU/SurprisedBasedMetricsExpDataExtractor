@@ -1,8 +1,0 @@
-import java.util.Collections;
-import java.util.List;
-import org.apache.guacamole.net.auth.ActivityRecord;
-    @Override
-    public List<? extends ActivityRecord> getHistory() throws GuacamoleException {
-        return Collections.<ActivityRecord>emptyList();
-    }
-

@@ -1,6 +1,0 @@
-
-            try (Reader r = reader) {
-                char[] chars = new char[8192];
-                for (int i; (i = r.read(chars)) != -1; ) {
-                    out.write(chars, 0, i);
-                }

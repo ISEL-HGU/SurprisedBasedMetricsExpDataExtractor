@@ -1,1 +1,0 @@
-            final String strZipEntryName = strAbsPath.substring(rootDir.getPath().length()  1);

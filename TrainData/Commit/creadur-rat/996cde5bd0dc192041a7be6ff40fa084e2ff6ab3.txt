@@ -1,4 +1,0 @@
-import java.util.Arrays;
-                    final FilenameFilter filter = parseExclusions(Arrays.asList(excludes));
-    static FilenameFilter parseExclusions(List<String> excludes) throws IOException {
-    private static void printUsage(Options opts) {

@@ -1,1 +1,0 @@
-                                String resetMessage = String.format("Connection idle time %d exceeded idleTimeout %d", idleTime, consumer.getConfiguration().getIdleTimeout());

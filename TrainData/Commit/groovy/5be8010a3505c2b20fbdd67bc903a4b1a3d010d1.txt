@@ -1,2 +1,0 @@
-        } else if (target.isPrivate() || ((receiver instanceof VariableExpression && ((VariableExpression) receiver).isSuperExpression()))) {
-            opcode = INVOKESPECIAL;

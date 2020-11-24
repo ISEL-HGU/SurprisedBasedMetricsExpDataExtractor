@@ -1,4 +1,0 @@
-    // Fix query limit natively from Aerospike client
-    int totalSize = resultRecords.size();
-    int intLimit = (int) this.limit;
-    return intLimit > 0 && totalSize > intLimit ? intLimit : totalSize;

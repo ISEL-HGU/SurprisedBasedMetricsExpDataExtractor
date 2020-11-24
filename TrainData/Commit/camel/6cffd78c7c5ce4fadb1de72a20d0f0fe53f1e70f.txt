@@ -1,3 +1,0 @@
-import java.util.Collections;
-    private final Map<String, Lock> locks = Collections.synchronizedMap(LRUCacheFactory.newLRUCache(100));
-        Lock lock = locks.computeIfAbsent(target, f -> new ReentrantLock());

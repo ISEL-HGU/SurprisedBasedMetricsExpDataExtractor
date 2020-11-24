@@ -1,2 +1,0 @@
- b/tooling/apt/src/main/java/org/apache/camel/tools/apt/SpringAnnotationProcessorHelper.java
-public class SpringAnnotationProcessorHelper {

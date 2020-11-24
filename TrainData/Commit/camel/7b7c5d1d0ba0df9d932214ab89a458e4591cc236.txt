@@ -1,4 +1,0 @@
-        category = "Camel",
-                action = @WidAction(title = "Send payload to a Camel endpoint")),
-        icon = "InOutCamelConnector.png"
-    )

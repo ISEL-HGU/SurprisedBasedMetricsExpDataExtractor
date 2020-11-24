@@ -1,8 +1,0 @@
-    
-    @Override
-    public void doStop() throws Exception {
-        if (kmsClient != null) {
-            kmsClient.shutdown();
-        }
-        super.doStop();
-    }

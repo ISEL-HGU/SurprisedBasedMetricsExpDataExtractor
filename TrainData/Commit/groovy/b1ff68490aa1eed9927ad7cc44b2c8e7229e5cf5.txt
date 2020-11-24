@@ -1,6 +1,0 @@
-        int slashyType = getSlashyType(text);
-    private int getSlashyType(String text) {
-        return text.startsWith("/") ? StringUtils.SLASHY :
-                    text.startsWith("$/") ? StringUtils.DOLLAR_SLASHY : StringUtils.NONE_SLASHY;
-    }
-        final int slashyType = getSlashyType(begin);

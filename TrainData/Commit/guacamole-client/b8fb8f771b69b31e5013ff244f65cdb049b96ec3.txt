@@ -1,1 +1,0 @@
- * An HTTP header implementation of AuthenticatedUser, associating a

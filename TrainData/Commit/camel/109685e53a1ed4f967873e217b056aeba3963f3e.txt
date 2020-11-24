@@ -1,6 +1,0 @@
-
-    // TODO: Move these to mainConfigurationProperties (delegate)
-    protected String fileWatchDirectory;
-    protected boolean fileWatchDirectoryRecursively;
-    // TODO: Make it possible to configure MainConfigurationProperties from application.properties via camel.main.xxx
-    protected final MainConfigurationProperties mainConfigurationProperties = new MainConfigurationProperties();

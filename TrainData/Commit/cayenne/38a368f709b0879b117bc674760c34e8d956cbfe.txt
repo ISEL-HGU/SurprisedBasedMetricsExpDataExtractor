@@ -1,1 +1,0 @@
-		int flag = (ignoreCase) ? Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE : 0;

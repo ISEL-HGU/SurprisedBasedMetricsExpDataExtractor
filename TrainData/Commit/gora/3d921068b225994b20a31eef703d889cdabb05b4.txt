@@ -1,7 +1,0 @@
-      return deserializer.deserialize(obj);
-    int i;
-    int i;
-      return (T) DefaultStringifier.load(conf, dataKey, ClassLoadingUtils.loadClass(className));
-    } catch (IOException | ClassNotFoundException ex) {
-      if (count < BUFFER_SIZE)
-        break;

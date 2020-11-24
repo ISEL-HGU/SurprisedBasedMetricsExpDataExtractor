@@ -1,9 +1,0 @@
-                configure().setDurationMaxSeconds(Integer.parseInt(parameter));
-    public int getDuration() {
-        return mainConfigurationProperties.getDurationMaxSeconds();
-    public void setDuration(int duration) {
-        mainConfigurationProperties.setDurationMaxSeconds(duration);
-                long sec = mainConfigurationProperties.getDurationMaxSeconds();
-                if (sec > 0) {
-                    LOG.info("Waiting for: {} seconds", sec);
-                    latch.await(sec, TimeUnit.SECONDS);

@@ -1,2 +1,0 @@
-/**
-            context.getRouteStatus("consumer-route"), equalTo(ServiceStatus.Started));

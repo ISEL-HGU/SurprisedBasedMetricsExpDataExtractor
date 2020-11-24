@@ -1,6 +1,0 @@
-            .id("undertow2")
-            .log("From undertow 2...");
-
-        from("undertow:http://localhost:9013")
-            .id("undertow3")
-            .log("From undertow 3...");

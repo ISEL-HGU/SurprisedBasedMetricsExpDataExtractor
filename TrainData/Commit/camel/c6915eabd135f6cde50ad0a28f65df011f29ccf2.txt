@@ -1,4 +1,0 @@
-            boolean hasComponentOptions = model.getComponentOptions().stream().anyMatch(o -> !o.getName().equals("resolvePropertyPlaceholders"));
-            boolean hasConnectorOptions = !model.getConnectorOptions().isEmpty();
-            if (hasComponentOptions || hasConnectorOptions) {
-                createConnectorAutoConfigurationSource(pkg, hasComponentOptions || hasConnectorOptions, javaType, connectorScheme);

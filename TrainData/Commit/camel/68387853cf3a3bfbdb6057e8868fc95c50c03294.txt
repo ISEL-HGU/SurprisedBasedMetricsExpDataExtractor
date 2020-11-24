@@ -1,7 +1,0 @@
-    @Deprecated
-        return newMessageHistory(routeId, namedNode, date.getTime());
-    }
-
-    @Override
-    public MessageHistory newMessageHistory(String routeId, NamedNode namedNode, long timestamp) {
-        return new MetricsMessageHistory(routeId, namedNode, timer, timestamp);

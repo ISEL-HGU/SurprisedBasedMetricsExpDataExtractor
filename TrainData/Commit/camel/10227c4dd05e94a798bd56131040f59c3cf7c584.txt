@@ -1,3 +1,0 @@
-                    log.warn("Unable to obtain a RabbitMQ channel. Will try again. Caused by: "  e.getMessage()  ". Stacktrace logged at DEBUG logging level.");
-                    // include stacktrace in DEBUG logging
-                    log.debug(e.getMessage(), e);

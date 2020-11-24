@@ -1,3 +1,0 @@
-                final StringBuffer buildNumber = new StringBuffer();
-                            buildNumber.append(getText());
-                    rev = timestamp.toString()  "-"  buildNumber.toString();

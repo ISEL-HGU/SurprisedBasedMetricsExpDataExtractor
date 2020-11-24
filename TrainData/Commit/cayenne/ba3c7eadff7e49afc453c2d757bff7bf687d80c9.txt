@@ -1,2 +1,0 @@
- b/eventbridges/cayenne-xmpp/src/main/java/org/apache/cayenne/event/XMPPBridgeProvider.java
-    @Inject(XMPPModule.XMPP_BRIDGE_PROPERTIES_MAP)

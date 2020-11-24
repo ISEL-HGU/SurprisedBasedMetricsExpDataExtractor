@@ -1,1 +1,0 @@
-        case GitOperation.SHOW_BRANCHES_OPERATION:

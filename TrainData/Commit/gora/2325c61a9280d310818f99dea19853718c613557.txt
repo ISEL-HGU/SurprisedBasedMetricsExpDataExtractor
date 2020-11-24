@@ -1,5 +1,0 @@
-    try {
-      flush();
-    } catch (Exception ex) {
-      LOG.error("Error occurred while flushing data to OrientDB : ", ex);
-    }

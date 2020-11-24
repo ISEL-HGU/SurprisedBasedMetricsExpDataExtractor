@@ -1,2 +1,0 @@
-import static org.apache.camel.support.ObjectHelper.invokeMethodSafe;
-                    Object value = invokeMethodSafe(method, target, null);

@@ -1,3 +1,0 @@
-            float eta = _eta.eta(_numStep);
-            float reg = _reg.regularize(oldWeight, delta);
-            float newWeight = oldWeight - eta * reg;

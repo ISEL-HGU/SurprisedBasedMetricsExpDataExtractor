@@ -1,1 +1,0 @@
-                        packagePrefixSet = new HashSet<>(2);

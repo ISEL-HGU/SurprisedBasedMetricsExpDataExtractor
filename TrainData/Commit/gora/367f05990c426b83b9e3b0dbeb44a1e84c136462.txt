@@ -1,7 +1,0 @@
-      boolean keyClassMatches = false;
-          keyClassMatches = true;
-          LOG.debug("Keyclass and nameclass match.");
-      if (!keyClassMatches) {
-        throw new GoraException("gora-kudu-mapping does not include the name and keyClass in the databean.");
-      }
-    } catch (IOException | JDOMException e) {

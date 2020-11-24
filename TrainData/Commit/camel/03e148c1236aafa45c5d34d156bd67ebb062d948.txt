@@ -1,4 +1,0 @@
-        if (getHost() == null && uri.getHost() != null) {
-            setHost(uri.getHost());
-        }
-        if (getPort() == DEFAULT_SSH_PORT && uriPort != -1) {

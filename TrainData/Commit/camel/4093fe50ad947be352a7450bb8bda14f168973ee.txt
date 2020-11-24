@@ -1,3 +1,0 @@
-            if (factoryBean.getProperties() == null) {
-                factoryBean.setProperties(new HashMap<String, Object>());
-            }

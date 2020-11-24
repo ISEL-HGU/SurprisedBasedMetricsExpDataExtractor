@@ -1,5 +1,0 @@
-import org.apache.camel.util.ObjectHelper;
-        if (ObjectHelper.isEmpty(configuration.getAmazonS3Client())) {
-            if (s3Client != null) {
-                s3Client.shutdown();
-            }

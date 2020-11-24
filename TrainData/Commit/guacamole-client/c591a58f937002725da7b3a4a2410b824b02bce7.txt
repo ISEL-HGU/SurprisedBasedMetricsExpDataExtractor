@@ -1,1 +1,0 @@
-            String ticket = request.getParameter(CASTicketField.PARAMETER_NAME);

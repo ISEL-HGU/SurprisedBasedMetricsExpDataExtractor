@@ -1,2 +1,0 @@
-                            ConstantExpression result = new ConstantExpression(Numbers.parseInteger(SUB_STR  integerLiteralText));
-            num = Numbers.parseInteger(text);

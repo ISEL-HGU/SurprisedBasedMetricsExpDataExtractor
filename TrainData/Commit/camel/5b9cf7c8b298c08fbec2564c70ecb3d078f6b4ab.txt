@@ -1,8 +1,0 @@
-import org.apache.camel.api.management.ManagedAttribute;
-import org.apache.camel.api.management.ManagedResource;
-@ManagedResource(description = "Managed ReactiveStreamsEndpoint")
-    @ManagedAttribute(description = "Name of the stream channel used by the endpoint to exchange messages")
-    @ManagedAttribute(description = "Maximum number of exchanges concurrently being processed by Camel")
-    @ManagedAttribute(description = "Number of threads used to process exchanges in the Camel route")
-    @ManagedAttribute(description = "Determines if onComplete events should be pushed to the Camel route")
-    @ManagedAttribute(description = "Determines if onError events should be pushed to the Camel route")

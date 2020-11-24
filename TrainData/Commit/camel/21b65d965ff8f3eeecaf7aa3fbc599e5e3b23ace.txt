@@ -1,5 +1,0 @@
-        return forView(cluster.createView(namespace));
-        ClusteredRoutePolicy policy = new ClusteredRoutePolicy(view);
-        policy.setCamelContext(view.getCamelContext());
-
-        return policy;

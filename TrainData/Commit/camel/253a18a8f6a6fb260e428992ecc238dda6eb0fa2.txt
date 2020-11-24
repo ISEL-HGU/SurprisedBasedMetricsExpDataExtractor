@@ -1,1 +1,0 @@
-            BasicDBObject query = exchange.getIn().getBody(BasicDBObject.class);

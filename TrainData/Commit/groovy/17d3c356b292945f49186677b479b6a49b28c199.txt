@@ -1,1 +1,0 @@
-            if (!parameter.hasInitialExpression()) continue; // GROOVY-8728 make idempotent

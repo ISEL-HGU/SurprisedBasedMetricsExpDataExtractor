@@ -1,6 +1,0 @@
-    @UriParam(label = "consumer,advanced", defaultValue = "true")
-    private boolean extendedMode = true;
-        confBuilder.setTweetModeExtended(isExtendedMode());
-     * Used for enabling full text from twitter (eg receive tweets that contains more than 140 characters).
-        this.extendedMode = extendedMode;
-    public boolean isExtendedMode() {

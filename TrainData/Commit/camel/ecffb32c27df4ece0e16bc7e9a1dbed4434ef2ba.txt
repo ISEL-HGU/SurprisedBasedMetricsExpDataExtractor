@@ -1,3 +1,0 @@
-import org.apache.camel.model.Model;
-        RouteDefinition route = context.getExtension(Model.class).getRouteDefinition(routeId);
-        List<RestDefinition> rests = context.getExtension(Model.class).getRestDefinitions();

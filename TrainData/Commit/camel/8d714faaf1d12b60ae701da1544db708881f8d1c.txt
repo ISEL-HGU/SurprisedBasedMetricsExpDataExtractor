@@ -1,1 +1,0 @@
-     * To use a specific key for claim check id (for dynamic keys use simple language syntax as the key).

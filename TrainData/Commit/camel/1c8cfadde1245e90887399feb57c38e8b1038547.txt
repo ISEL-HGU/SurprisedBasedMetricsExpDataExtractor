@@ -1,3 +1,0 @@
-import java.util.Map;
-        } else if (value instanceof Map) {
-            return ((Map)value).entrySet();

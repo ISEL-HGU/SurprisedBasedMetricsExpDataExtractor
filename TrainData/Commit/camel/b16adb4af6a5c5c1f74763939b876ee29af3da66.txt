@@ -1,1 +1,0 @@
-public class FlexibleAggregationStrategy<E> implements AggregationStrategy {

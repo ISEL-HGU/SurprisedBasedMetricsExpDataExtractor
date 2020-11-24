@@ -1,4 +1,0 @@
-import io.opentracing.tag.Tags;
-
-        span.setTag(Tags.DB_TYPE.getKey(), "sql");
-            span.setTag(Tags.DB_STATEMENT.getKey(), (String) sqlquery);

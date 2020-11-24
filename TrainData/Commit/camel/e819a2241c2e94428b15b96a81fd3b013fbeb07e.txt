@@ -1,2 +1,0 @@
-        // optimised to not include runtimeEndpointRegistry unless startServices its enabled or JMX statistics is in extended mode
-            if (runtimeEndpointRegistry instanceof EventNotifier && getManagementStrategy() != null) {

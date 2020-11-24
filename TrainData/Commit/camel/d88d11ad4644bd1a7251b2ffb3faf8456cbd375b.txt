@@ -1,6 +1,0 @@
-        String namespaceName = exchange.getIn().getHeader(KubernetesConstants.KUBERNETES_NAMESPACE_NAME, String.class);
-        if(namespaceName != null) {
-            configMap = getEndpoint().getKubernetesClient().configMaps().inNamespace(namespaceName).withName(cfMapName).get();
-        } else {
-            configMap = getEndpoint().getKubernetesClient().configMaps().withName(cfMapName).get();
-        }

@@ -1,7 +1,0 @@
-import org.apache.guacamole.net.auth.Credentials;
-     * The name of the client hostname token added via addStandardTokens().
-    public static final String CLIENT_HOSTNAME_TOKEN = "GUAC_CLIENT_HOSTNAME";
-     * The name of the client address token added via addStandardTokens().
-    public static final String CLIENT_ADDRESS_TOKEN = "GUAC_CLIENT_ADDRESS";
-            filter.setToken(CLIENT_HOSTNAME_TOKEN, request.getRemoteHost());
-            filter.setToken(CLIENT_ADDRESS_TOKEN, request.getRemoteAddr());

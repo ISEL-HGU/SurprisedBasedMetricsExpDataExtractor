@@ -1,9 +1,0 @@
-        QueryRequest query = new QueryRequest()
-                .withScanIndexForward(determineScanIndexForward());
-        
-        // Check if we have set an Index Name
-        if(exchange.getIn().getHeader(DdbConstants.INDEX_NAME, String.class) != null) {
-            query.withIndexName(exchange.getIn().getHeader(DdbConstants.INDEX_NAME, String.class));
-        }
-        
-        QueryResult result = ddbClient.query(query);

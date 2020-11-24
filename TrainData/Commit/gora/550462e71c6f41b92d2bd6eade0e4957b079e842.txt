@@ -1,3 +1,0 @@
-  public void updateRow(byte[] keyRaw, Mutation put, Mutation delete) throws IOException {
-          tableInstance.put((Put) put);
-          tableInstance.delete((Delete) delete);

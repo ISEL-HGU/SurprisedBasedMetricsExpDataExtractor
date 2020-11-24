@@ -1,1 +1,0 @@
-    Swagger loadSwaggerModel(CamelContext camelContext, String apiDoc) throws Exception {

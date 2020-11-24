@@ -1,3 +1,0 @@
-        JMXEndpoint ep = getEndpoint();
-        } else {
-            throw new IllegalArgumentException("Unsupported monitortype: "  ep.getMonitorType());

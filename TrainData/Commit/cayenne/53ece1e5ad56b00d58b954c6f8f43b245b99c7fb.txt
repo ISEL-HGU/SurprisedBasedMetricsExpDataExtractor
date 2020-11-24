@@ -1,2 +1,0 @@
-import org.apache.cayenne.access.types.CharacterValueType;
-                .add(CharacterValueType.class);

@@ -1,1 +1,0 @@
-            throw new CayenneRuntimeException("Component does not define action events: %s", component);

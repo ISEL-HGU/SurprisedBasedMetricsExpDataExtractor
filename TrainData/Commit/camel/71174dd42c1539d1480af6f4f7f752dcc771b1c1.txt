@@ -1,2 +1,0 @@
-    @Metadata(description = "URL of the Salesforce instance used after authentication, by default received from"
-         " the component. You would generally set this to the (default) false and authenticate early and be immediately"

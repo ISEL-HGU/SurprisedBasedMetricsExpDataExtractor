@@ -1,5 +1,0 @@
-import javax.naming.ConfigurationException;
-
-      if (!keyClassMatches) {
-        throw new ConfigurationException("Gora-hbase-mapping does not include the name and keyClass in the databean.");
-      }

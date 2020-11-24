@@ -1,5 +1,0 @@
-        for (ModuleDescriptor md : mds) {
-                    pattern,
-                    DefaultArtifact.newIvyArtifact(md.getModuleRevisionId(),
-                            md.getPublicationDate())));
-                XmlModuleDescriptorWriter.write(md, ivyFile);

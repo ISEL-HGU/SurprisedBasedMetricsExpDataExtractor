@@ -1,2 +1,0 @@
-        List<DirectMessage> directMessages =  getTwitter().getDirectMessages(endpoint.getProperties().getCount());
-            getTwitter().getDirectMessages(endpoint.getProperties().getCount())

@@ -1,1 +1,0 @@
-    private static final EvictableCache<ClassLoader, Map<String, List<MethodNode>>> CACHE = new ConcurrentCommonCache<ClassLoader, Map<String, List<MethodNode>>>(new WeakHashMap<ClassLoader, Map<String, List<MethodNode>>>());

@@ -1,1 +1,0 @@
-                Expression result = EmptyExpression.INSTANCE;

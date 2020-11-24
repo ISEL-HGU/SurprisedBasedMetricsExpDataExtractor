@@ -1,3 +1,0 @@
-        if (type.getDataFormat() != null) {
-            return type.getDataFormat();
-        }

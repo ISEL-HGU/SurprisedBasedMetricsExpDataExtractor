@@ -1,1 +1,0 @@
-     * The region in which ECS client needs to work

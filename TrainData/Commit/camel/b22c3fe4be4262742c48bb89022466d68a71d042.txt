@@ -1,8 +1,0 @@
-import org.apache.camel.spi.ExecutorServiceManager;
-        // ExecutorServiceManager
-        final ExecutorServiceManager executorServiceManager = getSingleBeanOfType(applicationContext, ExecutorServiceManager.class);
-        if (executorServiceManager != null) {
-            LOG.info("Using custom ExecutorServiceManager: {}", executorServiceManager);
-            camelContext.setExecutorServiceManager(executorServiceManager);
-        }
-

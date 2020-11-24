@@ -1,2 +1,0 @@
- * Provides functionality required by Healthcare providers to communicate with
- * other systems using the MLLP protocol.

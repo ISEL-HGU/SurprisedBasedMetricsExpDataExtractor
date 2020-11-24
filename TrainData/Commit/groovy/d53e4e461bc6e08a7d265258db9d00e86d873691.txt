@@ -1,1 +1,0 @@
-        if ((oldMethod.getModifiers() & ACC_FINAL) != 0) {

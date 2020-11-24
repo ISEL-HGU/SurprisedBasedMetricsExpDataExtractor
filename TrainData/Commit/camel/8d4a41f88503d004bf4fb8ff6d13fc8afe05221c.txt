@@ -1,1 +1,0 @@
-        File file = new File("target/test-classes/nexus-sample-component-result.xml");

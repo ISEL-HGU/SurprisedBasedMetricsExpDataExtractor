@@ -1,3 +1,0 @@
-
-    private static final String[] EMPTY_STRING_ARRAY = new String[0];
-        super.visit(V1_5, ACC_PUBLIC, proxyName, signature, BytecodeHelper.getClassInternalName(superClass), interfacesSet.toArray(EMPTY_STRING_ARRAY));

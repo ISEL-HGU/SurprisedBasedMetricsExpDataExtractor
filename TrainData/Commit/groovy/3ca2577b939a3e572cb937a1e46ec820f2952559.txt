@@ -1,4 +1,0 @@
-    public static final ProxyGenerator INSTANCE = new ProxyGenerator(); // TODO should we make ProxyGenerator singleton?
-    private static final String GROOVY_ADAPTER_CACHE_DEFAULT_SIZE_OPT = "groovy.adapter.cache.default.size";
-    private static final Integer GROOVY_ADAPTER_CACHE_DEFAULT_SIZE = Integer.getInteger(GROOVY_ADAPTER_CACHE_DEFAULT_SIZE_OPT, 16);
-    private final LRUCache adapterCache = new LRUCache(GROOVY_ADAPTER_CACHE_DEFAULT_SIZE);

@@ -1,2 +1,0 @@
-    public static final String CAMEL_YQL_HTTP_STATUS = "CamelYqlHttpStatus";
-    public static final String CAMEL_YQL_HTTP_REQUEST = "CamelYqlHttpRequest";

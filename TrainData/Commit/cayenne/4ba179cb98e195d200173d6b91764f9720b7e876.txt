@@ -1,2 +1,0 @@
-                model.setUpdatedValueAt(dbAttributePath, row, DB_ATTRIBUTE_PATH_COLUMN);
-                model.getAttribute(row).getValue().setDbAttributePath(dbAttributePath);

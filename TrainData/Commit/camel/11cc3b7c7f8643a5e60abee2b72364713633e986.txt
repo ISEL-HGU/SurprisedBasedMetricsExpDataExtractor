@@ -1,1 +1,0 @@
-            pipeline.addLast("streamer", new CustomChunkedWriteHandler());

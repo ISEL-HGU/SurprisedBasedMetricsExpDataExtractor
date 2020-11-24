@@ -1,5 +1,0 @@
-    public CamelSpringBootApplicationController(final ApplicationContext applicationContext, final CamelContext context) {
-
-            { this.camelContext = context; }
-
-                return context;

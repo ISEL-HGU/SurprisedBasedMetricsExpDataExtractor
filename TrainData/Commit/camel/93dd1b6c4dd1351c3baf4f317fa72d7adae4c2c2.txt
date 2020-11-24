@@ -1,3 +1,0 @@
-        log.trace("Creating connection");
-        log.trace("Creating channel");
-        log.debug("Using temporary queue name: {}", result.getQueue());

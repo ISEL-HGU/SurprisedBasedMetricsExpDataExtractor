@@ -1,5 +1,0 @@
-    private long eventDate;
-        this.eventDate = System.currentTimeMillis();
-        this();
-        this();
-    public long getEventDate() {

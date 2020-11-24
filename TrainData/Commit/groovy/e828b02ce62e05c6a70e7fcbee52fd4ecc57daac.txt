@@ -1,1 +1,0 @@
-    private static class DeclarationListStatement extends Statement {

@@ -1,5 +1,0 @@
-        // notifiers using the management strategy before the CamelContext has been started
-
-        // Call all registered trackers with this context
-        // Note, this may use a partially constructed object
-        CamelContextTracker.notifyContextDestroyed(this);

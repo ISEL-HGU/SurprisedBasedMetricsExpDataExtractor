@@ -1,4 +1,0 @@
-    private final List<Listener> boundListeners =
-                boundListeners.size(), providerClass.getName());
-        boundListeners.addAll(ListenerFactory.createListeners(providerClass));
-        return Collections.unmodifiableList(boundListeners);

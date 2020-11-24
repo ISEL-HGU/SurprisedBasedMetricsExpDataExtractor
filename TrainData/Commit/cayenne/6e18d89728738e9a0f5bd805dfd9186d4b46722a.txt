@@ -1,2 +1,0 @@
-            String logString = String.format("    %-20s", "Nothing to import");
-            resultDialog.addRowToOutput(logString, targetMap);

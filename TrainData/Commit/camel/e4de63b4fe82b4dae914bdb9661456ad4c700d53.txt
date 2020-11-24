@@ -1,8 +1,0 @@
-    protected class CloseProducerCallback implements ReleaseProducerCallback {
-        public void release(MessageProducerResources producer) throws Exception {
-            producer.getMessageProducer().close();
-        }
-            final MessageProducerResources producer;
-            final ReleaseProducerCallback releaseProducerCallback;
-                    releaseProducerCallback = new CloseProducerCallback();
-                                sendMessage(exchange, callback, producer, releaseProducerCallback);

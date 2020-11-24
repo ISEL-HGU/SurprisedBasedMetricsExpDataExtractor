@@ -1,1 +1,0 @@
-     * The secret key to pass to the Atmos client (should be base64 encoded)

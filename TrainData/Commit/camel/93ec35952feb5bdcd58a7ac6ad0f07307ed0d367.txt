@@ -1,2 +1,0 @@
-                if ("java.lang.String".equals(option.getJavaType())) {
-                if ("java.lang.String".equals(option.getJavaType())) {

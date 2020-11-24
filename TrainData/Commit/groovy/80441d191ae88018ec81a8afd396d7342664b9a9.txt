@@ -1,3 +1,0 @@
-import groovy.lang.GroovyRuntimeException;
-            ClassNode parsedNode = Antlr4Utils.parse("DummyNode<"  option  ">", compilationUnit.getConfiguration());
-        } catch (GroovyRuntimeException e) {

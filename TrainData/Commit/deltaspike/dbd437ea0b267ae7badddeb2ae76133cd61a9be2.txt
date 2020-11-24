@@ -1,4 +1,0 @@
-import org.apache.deltaspike.core.util.ClassUtils;
-        if (ClassUtils.returns(methodMetadata.getMethod(), QueryResult.class))
-        if (ClassUtils.returns(methodMetadata.getMethod(), List.class))
-            return new ExecuteUpdateQueryProcessor(ClassUtils.returns(methodMetadata.getMethod(), Void.TYPE));

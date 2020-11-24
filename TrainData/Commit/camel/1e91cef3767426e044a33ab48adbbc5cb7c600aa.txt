@@ -1,3 +1,0 @@
-        
-        String uncompressedContentString = new String(uncompressedContent);
-            String contentString = new String(content);

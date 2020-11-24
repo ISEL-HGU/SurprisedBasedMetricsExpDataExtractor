@@ -1,2 +1,0 @@
-import javax.annotation.concurrent.ThreadSafe;
-@ThreadSafe

@@ -1,2 +1,0 @@
-import org.apache.camel.Service;
-public interface DataFormat extends Service {

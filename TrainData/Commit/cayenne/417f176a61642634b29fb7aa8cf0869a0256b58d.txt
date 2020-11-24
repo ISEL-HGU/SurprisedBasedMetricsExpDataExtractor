@@ -1,4 +1,0 @@
-import org.apache.cayenne.modeler.util.DbAttributePathComboBoxRenderer;
-import javax.swing.JOptionPane;
-import java.util.Collection;
-                    setForeground(isSelected ? new Color(0xCECECE) : Color.GRAY);

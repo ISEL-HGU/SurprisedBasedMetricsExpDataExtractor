@@ -1,7 +1,0 @@
-    private long deliveryAttemptInterval = 1000L;
-
-    public void setDeliveryAttemptInterval(long deliveryAttemptInterval) {
-        this.deliveryAttemptInterval = deliveryAttemptInterval;
-    }
-
-                        deliveryRequestCondition.await(deliveryAttemptInterval, TimeUnit.MILLISECONDS);

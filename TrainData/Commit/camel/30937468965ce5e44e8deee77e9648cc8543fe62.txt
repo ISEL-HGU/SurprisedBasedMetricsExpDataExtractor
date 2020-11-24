@@ -1,9 +1,0 @@
-    private String shortError;
-    public String getShortError() {
-        return shortError;
-    }
-
-    public void setShortError(String shortError) {
-        this.shortError = shortError;
-    }
-

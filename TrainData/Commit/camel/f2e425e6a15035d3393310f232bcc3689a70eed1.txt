@@ -1,5 +1,0 @@
-                    Message inMessage = cxfExchange.getInMessage();
-                    if (inMessage != null) {
-                        Map<String, List<String>> cxfHeaders = CastUtils.cast((Map<?, ?>)inMessage.get(Message.PROTOCOL_HEADERS));
-                        endpoint.getCookieHandler().storeCookies(camelExchange, endpoint.getRequestUri(camelExchange), cxfHeaders);
-                    }

@@ -1,2 +1,0 @@
- b/examples/camel-example-spring-boot-activemq/src/main/java/sample/camel/SampleAutowiredAmqRoute.java
-            .setBody(constant("Hello from Camel"))

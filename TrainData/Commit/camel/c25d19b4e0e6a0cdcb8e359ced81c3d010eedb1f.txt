@@ -1,1 +1,0 @@
-                    .anyMatch(Files::isRegularFile)) {

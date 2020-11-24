@@ -1,7 +1,0 @@
-                    .removeHeaders("CamelHttp*")
-                            .convertBodyTo(String.class)
-                            .log("service-1 : ${body}")
-                            .serviceCall("service-2")
-                            .convertBodyTo(String.class)
-                            .log("service-2 : ${body}");
-}

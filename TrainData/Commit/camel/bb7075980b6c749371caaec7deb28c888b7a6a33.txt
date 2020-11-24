@@ -1,5 +1,0 @@
-            Iterator<?> it = ObjectHelper.createIterator(values, ",", true);
-                Iterator<?> it = ObjectHelper.createIterator(values, ",", true);
-            String body;
-        HttpResponse response;
-            final Iterator<?> it = ObjectHelper.createIterator(value, null, true);

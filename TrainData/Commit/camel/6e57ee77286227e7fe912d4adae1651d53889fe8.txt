@@ -1,7 +1,0 @@
-    @Override
-    protected void doStop() throws Exception {
-        Collection<Topic> topics = toTopics(redisConfiguration.getChannels());
-        redisConfiguration.getListenerContainer().removeMessageListener(this, topics);
-        super.doStop();
-    }
-

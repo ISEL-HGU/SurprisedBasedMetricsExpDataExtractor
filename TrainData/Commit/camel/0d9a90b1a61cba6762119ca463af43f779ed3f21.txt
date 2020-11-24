@@ -1,3 +1,0 @@
-        // perform common tasks
-        super.execute();
-        List<String> autowires = findAutowireComponentOptionsByClasspath(catalog, camelComponentsOnClasspath, reflections, mappingProperties);

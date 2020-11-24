@@ -1,1 +1,0 @@
-        return new DissectedPath(File.separator, pathToDissect);

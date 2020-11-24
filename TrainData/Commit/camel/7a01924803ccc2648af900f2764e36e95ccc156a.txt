@@ -1,1 +1,0 @@
-                } else if (command.startsWith("property.") || command.startsWith("exchangeProperty.")) {

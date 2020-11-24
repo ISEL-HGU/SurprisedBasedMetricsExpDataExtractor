@@ -1,7 +1,0 @@
-            LOG.info("Using properties from classpath:application.properties");
-        // gathers the properties (key=value) that was auto-configured
-        if (mainConfigurationProperties.isAutoConfigurationLogSummary() && !autoConfiguredProperties.isEmpty()) {
-                String prefix = dot == -1 ? "" : key.substring(0, dot  1);
-                String prefix = dot == -1 ? "" : key.substring(0, dot  1);
-                String prefix = dot == -1 ? "" : key.substring(0, dot  1);
-            String optionKey = pok.getKey().substring(pok.getOptionPrefix().length());

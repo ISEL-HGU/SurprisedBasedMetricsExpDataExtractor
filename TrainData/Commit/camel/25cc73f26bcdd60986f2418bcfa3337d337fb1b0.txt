@@ -1,9 +1,0 @@
-    private long pollTimeout = 2000;
-    /**
-     * Sets the poll timeout in millis. The default value is 2000.
-     */
-    public void setPollTimeout(long pollTimeout) {
-        this.pollTimeout = pollTimeout;
-    }
-
-                    key = watcher.poll(pollTimeout, TimeUnit.MILLISECONDS);

@@ -1,2 +1,0 @@
-                LOG.debug("Cannot load "  JACKSON_JSON_ADAPTER  " from classpath to enable JacksonJsonAdapter due "
-                     e.getMessage()  ". JacksonJsonAdapter is not enabled.", e);

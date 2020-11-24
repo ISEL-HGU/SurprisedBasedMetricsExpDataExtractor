@@ -1,1 +1,0 @@
-     * The possible values are: sync, async, or none. And sync is the default value.

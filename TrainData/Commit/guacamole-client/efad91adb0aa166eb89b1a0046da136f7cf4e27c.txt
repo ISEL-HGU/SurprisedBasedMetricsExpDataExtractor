@@ -1,9 +1,0 @@
-        if (radiusClient == null)
-        if (username == null || username.isEmpty()) {
-        if (password == null || password.isEmpty()) {
-        if (radAuth == null)
-        if (radiusClient == null)
-        if (username == null || username.isEmpty()) {
-        if (state == null || state.isEmpty()) {
-        if (response == null || response.isEmpty()) {
-        if (radAuth == null)

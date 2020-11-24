@@ -1,1 +1,0 @@
-            boolean original = reh.isUseOriginalMessagePolicy() || reh.isUseOriginalBodyPolicy();

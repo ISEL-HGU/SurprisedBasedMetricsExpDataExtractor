@@ -1,3 +1,0 @@
-            default:
-                throw new RuntimeException(
-                        "No "  QueryBuilder.class.getName()  " avialable for type: "  repositoryMethodType);

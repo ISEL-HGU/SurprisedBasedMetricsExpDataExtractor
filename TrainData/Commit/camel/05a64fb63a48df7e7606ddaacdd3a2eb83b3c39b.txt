@@ -1,1 +1,0 @@
- * <b>Important: </b> This SPI is not intended to be used by Camel end users - do NOT use this.

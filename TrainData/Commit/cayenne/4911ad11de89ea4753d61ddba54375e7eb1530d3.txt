@@ -1,2 +1,0 @@
-        byte[] output = new byte[input.length - inputOffset];
-        System.arraycopy(input, inputOffset, output, 0, input.length - inputOffset);

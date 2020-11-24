@@ -1,3 +1,0 @@
-import org.apache.camel.impl.DefaultProducerCache;
-import org.apache.camel.spi.ProducerCache;
-        this.producerCache = new DefaultProducerCache(this, sourceEndpoint.getCamelContext(), -1);

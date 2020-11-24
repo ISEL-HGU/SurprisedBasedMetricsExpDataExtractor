@@ -1,3 +1,0 @@
-        if (timestamp != null) {
-            elapsed = System.currentTimeMillis() - timestamp.getTime();
-        }

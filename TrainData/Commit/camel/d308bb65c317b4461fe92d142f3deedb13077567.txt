@@ -1,2 +1,0 @@
-    @UriParam(defaultValue = "60")
-    private int maxReconnectAttempts = Options.DEFAULT_MAX_RECONNECT;

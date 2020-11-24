@@ -1,4 +1,0 @@
-        if (ObjectHelper.isEmpty(configuration.getAmazonSESClient())) {
-            if (sesClient != null) {
-                sesClient.shutdown();
-            }

@@ -1,4 +1,0 @@
-    private static class MBeanFeatureInfoSorter<T extends MBeanFeatureInfo> implements Comparator<T>
-    {
-        public int compare(final T o1, final T o2)
-        {

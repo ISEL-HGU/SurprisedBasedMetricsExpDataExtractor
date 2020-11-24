@@ -1,3 +1,0 @@
-import java.util.Locale;
-            final String headerNameLowercase = headerName.toLowerCase(Locale.US);
-            if (headerNameLowercase.startsWith("sforce") || headerNameLowercase.startsWith("x-sfdc")) {

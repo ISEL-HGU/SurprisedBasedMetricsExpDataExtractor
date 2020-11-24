@@ -1,3 +1,0 @@
- b/gora-core/src/examples/java/org/apache/gora/examples/generated/EmployeeInt.java
-package org.apache.gora.examples.generated;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"EmployeeInt\",\"namespace\":\"org.apache.gora.examples.generated\",\"fields\":[{\"name\":\"ssn\",\"type\":\"int\",\"default\":0}],\"default\":null}");

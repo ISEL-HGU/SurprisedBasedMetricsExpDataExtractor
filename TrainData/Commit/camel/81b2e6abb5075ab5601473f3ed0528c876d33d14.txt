@@ -1,5 +1,0 @@
-        if (exchange.getPattern().isOutCapable()) {
-            exchange.getOut().setBody(doc);
-        } else {
-            exchange.getIn().setBody(doc);
-        }

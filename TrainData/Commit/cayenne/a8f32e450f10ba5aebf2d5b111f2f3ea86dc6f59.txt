@@ -1,3 +1,0 @@
-                "java.time.LocalDateTime",
-                "java.time.Duration",
-                "java.time.Period"

@@ -1,6 +1,0 @@
-            OutputStream outputStream = outMessage.getContent(OutputStream.class);
-            if (outputStream instanceof CachedOutputStream) {
-                camelExchange.getOut().setBody(((CachedOutputStream)outputStream).getInputStream());
-                } else {
-                    camelExchange.getOut().setBody(outputStream);
-            }

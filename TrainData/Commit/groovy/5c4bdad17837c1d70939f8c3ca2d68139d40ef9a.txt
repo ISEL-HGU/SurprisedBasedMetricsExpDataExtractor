@@ -1,9 +1,0 @@
-    private static final String DFA_CACHE_THRESHOLD_OPT = "groovy.antlr4.cache.threshold";
-    private static final int DEFAULT_DFA_CACHE_THRESHOLD = 100;
-    private static final int MIN_DFA_CACHE_THRESHOLD = 50;
-    private static final int DFA_CACHE_THRESHOLD;
-        int t = DEFAULT_DFA_CACHE_THRESHOLD;
-            t = Integer.parseInt(System.getProperty(DFA_CACHE_THRESHOLD_OPT));
-            t = t < MIN_DFA_CACHE_THRESHOLD ? MIN_DFA_CACHE_THRESHOLD : t;
-        DFA_CACHE_THRESHOLD = t;
-            if (0 != counter.incrementAndGet() % DFA_CACHE_THRESHOLD) {

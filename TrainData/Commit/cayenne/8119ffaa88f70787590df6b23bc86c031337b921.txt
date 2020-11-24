@@ -1,3 +1,0 @@
-import org.apache.cayenne.gen.xml.CgenExtension;
-                .add(DbImportExtension.class)
-                .add(CgenExtension.class);

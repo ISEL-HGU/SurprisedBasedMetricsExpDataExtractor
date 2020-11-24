@@ -1,2 +1,0 @@
-    public static final String CLIENT_HOST_TOKEN = "GUAC_REMHOST";
-    public static final String CLIENT_IP_TOKEN = "GUAC_REMIP";

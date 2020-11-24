@@ -1,2 +1,0 @@
-                LOG.debug("Successfully loaded class: {}", fileSystems.get(key));
-                LOG.debug("Successfully got uri: {} from FileSystem Object", uri);

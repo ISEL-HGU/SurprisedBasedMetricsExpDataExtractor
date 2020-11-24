@@ -1,3 +1,0 @@
-import org.jboss.shrinkwrap.resolver.api.maven.PomEquippedResolveStage;
-            PomEquippedResolveStage pom = resolver(config).loadPomFromFile("pom.xml");
-            List<MavenResolvedArtifact> resolved = Arrays.asList(pom.importCompileAndRuntimeDependencies().resolve().withoutTransitivity().asResolvedArtifact());

@@ -1,2 +1,0 @@
-            ClassNode[] boundNodes = parameterBounds.toArray(ClassNode.EMPTY_ARRAY);
-        return typeParameters.toArray(GenericsType.EMPTY_ARRAY);

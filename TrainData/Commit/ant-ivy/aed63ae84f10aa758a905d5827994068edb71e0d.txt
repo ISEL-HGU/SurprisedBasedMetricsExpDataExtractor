@@ -1,1 +1,0 @@
-                    getRequestingPrompt(), getRequestingScheme(), getRequestingURL(), getRequestorType());

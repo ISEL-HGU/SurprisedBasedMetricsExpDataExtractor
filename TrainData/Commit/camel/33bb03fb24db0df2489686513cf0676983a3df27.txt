@@ -1,3 +1,0 @@
-import org.apache.camel.util.ObjectHelper;
-        if (!ObjectHelper.isEmpty(configuration.getHost()) && !ObjectHelper.isEmpty(configuration.getPort())) {
-        } else if (!ObjectHelper.isEmpty(configuration.getTarget())) {

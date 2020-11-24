@@ -1,5 +1,0 @@
-        // inject CamelContext
-        if (consumer instanceof CamelContextAware) {
-            ((CamelContextAware) consumer).setCamelContext(getCamelContext());
-        }
-

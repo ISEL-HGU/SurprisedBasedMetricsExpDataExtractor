@@ -1,3 +1,0 @@
-        if (properties.getDeliveryMode() != null) {
-            exchange.getIn().setHeader(RabbitMQConstants.DELIVERY_MODE, properties.getDeliveryMode());
-        }

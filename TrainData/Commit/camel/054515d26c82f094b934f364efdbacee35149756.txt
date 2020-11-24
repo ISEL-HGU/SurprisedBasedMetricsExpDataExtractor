@@ -1,3 +1,0 @@
- b/examples/camel-example-loan-broker-jms/src/main/java/org/apache/camel/loanbroker/bank/BankProcessor.java
-package org.apache.camel.loanbroker.bank;
-import org.apache.camel.loanbroker.Constants;

@@ -1,3 +1,0 @@
-import com.amazonaws.services.sqs.AbstractAmazonSQS;
-public class AmazonSQSClientMock extends AbstractAmazonSQS {
-        super();

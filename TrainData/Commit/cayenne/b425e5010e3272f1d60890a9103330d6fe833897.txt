@@ -1,3 +1,0 @@
-import java.util.function.Function;
-        public Function<Persistent, Collection<CacheGroupDescriptor>> canHandle(Class<? extends Persistent> type) {
-            return p -> Collections.singleton(new CacheGroupDescriptor("g1"));

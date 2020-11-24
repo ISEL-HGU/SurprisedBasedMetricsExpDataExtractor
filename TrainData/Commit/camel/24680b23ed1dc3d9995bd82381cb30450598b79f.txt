@@ -1,7 +1,0 @@
-
-    private Map<String, String> passwords =
-
-        passwords.put("alice", "password");
-        passwords.put("bob", "password");
-     * Here, we attempt to get the password from the private
-

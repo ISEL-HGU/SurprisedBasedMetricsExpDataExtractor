@@ -1,1 +1,0 @@
- * Can also be used from {@link groovy.ant.AntBuilder} to allow the build file to be scripted in Groovy.

@@ -1,8 +1,0 @@
-        TypeElement parent = findTypeElement(processingEnv, roundEnv, "org.apache.camel.spi.PropertyPlaceholderConfigurer");
-            w.write("import org.apache.camel.spi.PropertyPlaceholderConfigurer;\n");
-            w.write("public class "  cn  " implements PropertyPlaceholderConfigurer {\n");
-            w.write("import org.apache.camel.spi.PropertyPlaceholderConfigurer;\n");
-            w.write("    private static final Map<Class, Function<Object, PropertyPlaceholderConfigurer>> MAP;\n");
-            w.write("        Map<Class, Function<Object, PropertyPlaceholderConfigurer>> map = new HashMap<>("  propertyPlaceholderDefinitions.size()  ");\n");
-            w.write("    public static Optional<PropertyPlaceholderConfigurer> provider(Object definition) {\n");
-            w.write("        Function<Object, PropertyPlaceholderConfigurer> func = MAP.get(definition.getClass());\n");

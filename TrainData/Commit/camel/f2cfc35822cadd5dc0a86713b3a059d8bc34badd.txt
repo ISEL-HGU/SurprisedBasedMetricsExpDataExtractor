@@ -1,8 +1,0 @@
-    private TwitterSorter() {
-    }
-
-    /**
-     * Sorts the tweets by {@link Status#getId()}.
-     */
-    public static List<Exchange> sortByStatusId(List<Exchange> exchanges) {
-                return Long.compare(s1.getId(), s2.getId());

@@ -1,3 +1,0 @@
-        do {
-                    ConstructedClassWithPackage tmp = new ConstructedClassWithPackage(aliasedNode.getPackageName()  ".", className);
-        } while (index != -1);

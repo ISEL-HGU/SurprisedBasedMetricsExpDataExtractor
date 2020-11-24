@@ -1,1 +1,0 @@
- * Based on the implementation of the Javac task in Apache Ant.

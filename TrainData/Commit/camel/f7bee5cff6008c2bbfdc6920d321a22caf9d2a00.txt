@@ -1,3 +1,0 @@
-        List<CamelContext> camelContexts = new ArrayList<>();
-        List<Map<String, String>> answer = new ArrayList<>();
-            Map<String, String> row = new LinkedHashMap<>();

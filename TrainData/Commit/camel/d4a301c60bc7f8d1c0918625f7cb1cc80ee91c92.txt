@@ -1,2 +1,0 @@
-import org.apache.camel.language.xpath.DefaultNamespaceContext;
-import org.apache.camel.language.xpath.XPathBuilder;

@@ -1,5 +1,0 @@
-     * is not found. The returned type class depends on whether we have temporary type information available (due to
-            // GROOVY-6921: We must force a call to getType in order to update closure shared variable whose
-            // types are inferred thanks to closure parameter type inference
-        // may use this visitor without the annotation being explicitly set
-                    // a type inference has been made on a variable whose type was defined in an instanceof block

@@ -1,4 +1,0 @@
-        transformer()
-            .from("xml:MyRequest")
-            .to("xml:MyResponse")
-            .withUri("xslt:transform.xsl");

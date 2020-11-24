@@ -1,2 +1,0 @@
- b/components/camel-spring-cloud/src/test/java/org/apache/camel/spring/cloud/CamelCloudServiceCallRoutesAutoConfiguration.java
-public class CamelCloudServiceCallRoutesAutoConfiguration {

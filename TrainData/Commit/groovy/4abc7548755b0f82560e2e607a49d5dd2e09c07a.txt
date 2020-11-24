@@ -1,2 +1,0 @@
-import static org.objectweb.asm.Opcodes.ACC_FINAL;
-        ClassNode lambdaWrapperClassNode = getOrAddLambdaClass(expression, ACC_PUBLIC | ACC_FINAL | (isInterface ? ACC_STATIC : 0) | ACC_SYNTHETIC, abstractMethodNode);

@@ -1,6 +1,0 @@
-import org.apache.camel.util.ObjectHelper;
-                    // If the field value is empty, populate it with the default value
-                    if (ObjectHelper.isNotEmpty(datafield.defaultValue()) && ObjectHelper.isEmpty(value)) {
-                        value = datafield.defaultValue();
-                    }
-

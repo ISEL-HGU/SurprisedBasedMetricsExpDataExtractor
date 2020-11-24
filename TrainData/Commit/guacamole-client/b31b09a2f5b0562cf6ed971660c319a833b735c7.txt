@@ -1,2 +1,0 @@
-        return new QuickConnectUserContext(this,
-                authenticatedUser.getIdentifier());

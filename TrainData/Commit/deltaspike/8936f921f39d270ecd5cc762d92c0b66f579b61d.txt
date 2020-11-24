@@ -1,6 +1,0 @@
-    private volatile Boolean securityModuleActivated;
-        if (this.securityModuleActivated != null)
-        {
-            return;
-        }
-

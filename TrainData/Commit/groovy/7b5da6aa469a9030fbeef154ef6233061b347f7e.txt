@@ -1,7 +1,0 @@
- *     and (lastName < ? or lastName > ?)
- *     and age < ? and age > ? and firstName != ?
- * {@code
- *     findAll{ it.lastName < 'Zulu' || it.lastName > 'Alpha' }.
- *     findAll{ it.age < 99 }.
- *     sort{ it.firstName }.
- *     reverse().

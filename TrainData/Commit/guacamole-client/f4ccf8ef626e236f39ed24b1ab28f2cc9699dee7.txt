@@ -1,5 +1,0 @@
-        // If user is an admin, everything is accessible
-        if (user.getUser().isAdministrator())
-            return identifiers;
-        // Otherwise, return explicitly-retrievable identifiers only if allowed
-        if (canReadPermissions(user, targetEntity))

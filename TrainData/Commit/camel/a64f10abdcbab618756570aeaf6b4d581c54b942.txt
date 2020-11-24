@@ -1,8 +1,0 @@
-import org.apache.camel.InvalidPayloadException;
-    public void process(Exchange exchange) throws InvalidPayloadException {
-        File file = exchange.getIn().getMandatoryBody(File.class);
-        JiraRestClient client = ((JiraEndpoint) getEndpoint()).getClient();
-        IssueRestClient issueClient = client.getIssueClient();
-        Issue issue = issueClient.getIssue(issueKey).claim();
-        URI attachmentsUri = issue.getAttachmentsUri();
-        issueClient.addAttachments(attachmentsUri, file);

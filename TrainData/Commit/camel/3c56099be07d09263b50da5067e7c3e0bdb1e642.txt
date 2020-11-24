@@ -1,3 +1,0 @@
-            // also look in camel-jaxp
-            target = new File(coreDir, "../camel-jaxp/target/classes");
-            findLanguageFilesRecursive(target, jsonFiles, languageFiles, new CamelLanguagesFileFilter());

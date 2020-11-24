@@ -1,9 +1,0 @@
-    public static final IntegerGuacamoleProperty
-            POSTGRESQL_DEFAULT_CONNECTION_WEIGHT =
-            new IntegerGuacamoleProperty() {
-
-        @Override
-        public String getName() { return "postgresql-default-connection-weight"; }
-
-    };
-

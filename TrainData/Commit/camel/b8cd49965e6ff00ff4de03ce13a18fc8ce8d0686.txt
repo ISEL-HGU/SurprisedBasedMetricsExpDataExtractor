@@ -1,9 +1,0 @@
-import java.util.Iterator;
-import java.util.stream.Stream;
-import org.apache.camel.support.InputStreamIterator;
-    public static InputStream toInputStream(Stream stream, Exchange exchange) {
-        Iterator it = stream.iterator();
-        return new InputStreamIterator(exchange.getContext().getTypeConverter(), it);
-    }
-
-    @Converter

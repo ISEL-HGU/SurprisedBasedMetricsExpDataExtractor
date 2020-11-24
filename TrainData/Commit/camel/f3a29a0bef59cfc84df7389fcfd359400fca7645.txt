@@ -1,4 +1,0 @@
-    String SERVICE_META_PREFIX = "service.";
-
-    String SERVICE_META_ID = "service.id";
-    String SERVICE_META_NAME = "service.name";

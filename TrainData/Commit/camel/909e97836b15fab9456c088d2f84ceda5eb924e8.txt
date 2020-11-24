@@ -1,8 +1,0 @@
- * JsonApi data format is used for marshal and unmarshal Json API object.
- * 
-    /**
-     * The classes to take into account for the marshalling
-     */
-    /**
-     * The classes to take into account while unmarshalling
-     */

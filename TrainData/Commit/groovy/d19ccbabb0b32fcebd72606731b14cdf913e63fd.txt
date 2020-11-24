@@ -1,4 +1,0 @@
-                StringBuilder outBuffer = new StringBuilder(64);
-                outBuffer.append(controller.getClassNode().toString()).append("#").append(node.getName());
-                outBuffer.append(" with signature ").append(node.getTypeDescriptor());
-                outBuffer.append(" in ").append(sourceFile).append(":").append(node.getLineNumber());

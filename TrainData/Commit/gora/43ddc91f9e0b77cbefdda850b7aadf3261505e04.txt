@@ -1,5 +1,0 @@
-  /**
-   * Key to hold a mapping loaded from memory, instead from filesystem like
-   * the one at PARSE_MAPPING_FILE_KEY
-   */
-   * ["type"], but the column gets deleted if value==null (so value read after

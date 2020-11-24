@@ -1,1 +1,0 @@
-                                  StateRepository<String, String> offsetRepository, TopicPartition partition, long recordOffset);

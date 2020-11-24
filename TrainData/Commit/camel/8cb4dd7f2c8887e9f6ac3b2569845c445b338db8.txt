@@ -1,3 +1,0 @@
-        ShardIteratorType iteratorType = getEndpoint().getConfiguration().getIteratorType();
-                    new ListStreamsRequest().withTableName(getEndpoint().getConfiguration().getTableName())
-        return getEndpoint().getConfiguration().getClient();

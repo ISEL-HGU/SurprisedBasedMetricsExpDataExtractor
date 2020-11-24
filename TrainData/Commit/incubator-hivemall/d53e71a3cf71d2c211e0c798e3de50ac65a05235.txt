@@ -1,5 +1,0 @@
-        // if there is no TP or no FP, it's meaningless for this metric (i.e., AUC=0.5)
-        if (nPairs == 0) {
-            return 0.5d;
-        }
-

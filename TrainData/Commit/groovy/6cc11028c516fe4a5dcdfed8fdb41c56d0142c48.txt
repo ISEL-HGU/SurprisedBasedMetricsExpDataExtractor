@@ -1,2 +1,0 @@
-import org.apache.groovy.parser.antlr4.internal.atnmanager.ParserAtnManager;
-        this.setInterpreter(new ParserATNSimulator(this, ParserAtnManager.INSTANCE.getATN()));

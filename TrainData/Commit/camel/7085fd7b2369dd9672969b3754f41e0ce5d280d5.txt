@@ -1,1 +1,0 @@
-                        String nsPrefix = nullToEmpty(streamReader.getNamespacePrefix(i));

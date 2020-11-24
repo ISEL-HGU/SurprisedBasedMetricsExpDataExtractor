@@ -1,6 +1,0 @@
-        final Expression expr = definition.getExpression().createExpression(routeContext);
-        return exchange -> {
-            Object body = expr.evaluate(exchange, Object.class);
-            exchange.getMessage().setFault(true);
-            exchange.getMessage().setBody(body);
-        };

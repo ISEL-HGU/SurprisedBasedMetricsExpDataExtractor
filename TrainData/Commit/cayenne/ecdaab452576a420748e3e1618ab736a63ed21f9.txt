@@ -1,3 +1,0 @@
-        BuildResult result = runner.forwardOutput().build();
-
-        String generatedDirectoryPath = projectDir.getAbsolutePath()  "/src/main/java/org/example/cayenne/persistent/";

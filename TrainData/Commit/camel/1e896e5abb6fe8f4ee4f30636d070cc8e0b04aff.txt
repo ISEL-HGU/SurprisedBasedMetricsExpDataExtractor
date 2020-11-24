@@ -1,4 +1,0 @@
-
-                        
-                        InputStreamEntity entity = new InputStreamEntity(is, -1);
-                        

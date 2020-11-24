@@ -1,1 +1,0 @@
-                    mllpBuffer.resetSocket(socket);

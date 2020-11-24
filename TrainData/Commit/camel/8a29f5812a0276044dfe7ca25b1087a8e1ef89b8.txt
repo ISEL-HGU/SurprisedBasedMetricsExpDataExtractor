@@ -1,3 +1,0 @@
-    private boolean startingDirectoryMustExist;
-    private boolean startingDirectoryMustHaveAccess;
-    private boolean directoryMustExist;

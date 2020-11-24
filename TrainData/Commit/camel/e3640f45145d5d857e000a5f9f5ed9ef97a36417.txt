@@ -1,9 +1,0 @@
-        ignore.add("io.dropwizard.metrics:metrics-json"); // PR to spring-boot
-        ignore.add("io.dropwizard.metrics:metrics-jvm"); // PR to spring-boot
-        ignore.add("org.apache.solr:solr-solrj"); // PR to spring-boot
-        ignore.add("org.eclipse.jetty.websocket:websocket-api"); // PR to spring-boot
-        ignore.add("org.infinispan");
-        ignore.add("org.jboss.logging");
-        ignore.add("org.jboss.marshalling");
-        ignore.add("org.slf4j:slf4j-ext"); // PR to spring-boot
-        ignore.add("net.java.dev.jna:jna-platform"); // PR to spring-boot

@@ -1,2 +1,0 @@
-        // load from local file instead
-        return "file:target/localrepo/"  dto.getArtifactId()  "-"  dto.getVersion()  ".jar";

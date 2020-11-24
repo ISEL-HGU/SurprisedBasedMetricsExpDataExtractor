@@ -1,4 +1,0 @@
-import java.util.HashMap;
-            Map<String, Object> properties = new HashMap<>(1);
-            properties.put(key, value);
-            return doBindProperties(camelContext, target, properties, optionPrefix, ignoreCase, removeParameters, mandatory,

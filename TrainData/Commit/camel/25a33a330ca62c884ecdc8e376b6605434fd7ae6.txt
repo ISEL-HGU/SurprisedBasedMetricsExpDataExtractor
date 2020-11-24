@@ -1,1 +1,0 @@
-                int repeatSeconds = Double.valueOf(visibilityTimeout.doubleValue() * 1.5).intValue();

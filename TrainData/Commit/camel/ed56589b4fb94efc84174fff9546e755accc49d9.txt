@@ -1,4 +1,0 @@
-     * To use a custom thread pool (ScheduledExecutorService) by the throttler.
-     * @param executorService  the custom thread pool (must be scheduled)
-     * To use a custom thread pool (ScheduledExecutorService) by the throttler.
-     * @param executorServiceRef the reference id of the thread pool (must be scheduled)

@@ -1,5 +1,0 @@
-        GetUserResult result = new GetUserResult();
-        User user = new User();
-        user.setUserName("test");
-        result.setUser(user);
-        return result;

@@ -1,2 +1,0 @@
-import org.apache.camel.util.URISupport;
-    private static final Pattern PATTERN = Pattern.compile("\\{([\\w\\.]*)\\}");

@@ -1,4 +1,0 @@
-        if (authProtocol == RadiusAuthenticationProtocol.MSCHAPv1 
-                    || authProtocol == RadiusAuthenticationProtocol.MSCHAPv2
-                    || innerProtocol == RadiusAuthenticationProtocol.MSCHAPv1 
-                    || innerProtocol == RadiusAuthenticationProtocol.MSCHAPv2) {

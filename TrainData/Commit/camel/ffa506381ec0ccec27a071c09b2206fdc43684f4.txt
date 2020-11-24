@@ -1,3 +1,0 @@
-     * Global option to enable/disable extended Camel health checks, default is false.
-     * Configuration of health checks
-         * Option for this health check.

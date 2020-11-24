@@ -1,5 +1,0 @@
-                                Boolean deprecated, String deprecationNote, Boolean secret, String group, String label, boolean enumType, Set<String> enums,
-        if (!Strings.isNullOrEmpty(deprecationNote)) {
-            sb.append(", \"deprecationNote\": ");
-            sb.append(Strings.doubleQuote(deprecationNote));
-        }

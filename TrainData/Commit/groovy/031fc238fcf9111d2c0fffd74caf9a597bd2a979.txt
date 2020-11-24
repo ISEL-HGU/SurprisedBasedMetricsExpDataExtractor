@@ -1,2 +1,0 @@
- * handle the "super" method calls within a trait.
-                if (type != null && Traits.isTrait(type) && !(type instanceof UnionTypeClassNode)) {

@@ -1,6 +1,0 @@
-            ReaderSource readerSource = sourceUnit.getSource();
-            if (null != readerSource && null != readerSource.getReader()) {
-                this.readerSource = readerSource;
-            } else {
-                this.readerSource = new StringReaderSource(IOGroovyMethods.getText(reader), sourceUnit.getConfiguration());
-            }

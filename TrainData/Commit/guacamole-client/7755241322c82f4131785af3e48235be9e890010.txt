@@ -1,1 +1,0 @@
-        if (driver != null && !(driver.equals(SQLSERVER_DRIVER_JTDS) ||

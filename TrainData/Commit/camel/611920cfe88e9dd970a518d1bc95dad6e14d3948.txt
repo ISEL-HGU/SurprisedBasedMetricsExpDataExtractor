@@ -1,1 +1,0 @@
-                .withName(rcName).scale(replicasNumber, false);

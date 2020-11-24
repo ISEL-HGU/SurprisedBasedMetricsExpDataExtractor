@@ -1,7 +1,0 @@
-import org.apache.camel.component.infinispan.InfinispanComponent;
-import org.apache.camel.component.infinispan.InfinispanOperation;
-        private InfinispanOperation operation = InfinispanOperation.PUT;
-        public InfinispanOperation getOperation() {
-            return operation;
-        public void setOperation(InfinispanOperation operation) {
-            this.operation = operation;

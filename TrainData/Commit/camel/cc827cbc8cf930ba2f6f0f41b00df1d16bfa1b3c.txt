@@ -1,2 +1,0 @@
- b/components/camel-xslt/src/main/java/org/apache/camel/component/xslt/XsltAggregationStrategy.java
-package org.apache.camel.component.xslt;

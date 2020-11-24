@@ -1,1 +1,0 @@
-                    updateResource(null, file.toPath(), text);

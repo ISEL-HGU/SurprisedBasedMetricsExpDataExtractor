@@ -1,1 +1,0 @@
-    key = (K) resultRecords.get((int) this.offset).getKey().userKey.getObject();

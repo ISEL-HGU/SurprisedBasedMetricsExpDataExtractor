@@ -1,1 +1,0 @@
-        return POST_JDK5;

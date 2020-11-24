@@ -1,2 +1,0 @@
-import groovy.lang.Tuple2;
-                .min((t1, t2) -> Integer.compare(t2.getV2(), t1.getV2())).map(Tuple2::getV1).orElse(null);

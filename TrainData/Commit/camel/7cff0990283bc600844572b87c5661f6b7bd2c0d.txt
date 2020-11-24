@@ -1,1 +1,0 @@
-@ConditionalOnProperty("examples.others.rest")

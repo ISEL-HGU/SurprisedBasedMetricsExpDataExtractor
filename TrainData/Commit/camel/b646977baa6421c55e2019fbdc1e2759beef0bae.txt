@@ -1,4 +1,0 @@
-            String methodName = exchange.getIn().getHeader(Exchange.BEAN_METHOD_NAME, String.class);
-            if (methodName != null) {
-                exchange.getIn().removeHeader(Exchange.BEAN_METHOD_NAME);
-            }

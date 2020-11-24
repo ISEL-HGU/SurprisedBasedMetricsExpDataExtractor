@@ -1,4 +1,0 @@
-        if (ObjectHelper.isEmpty(configuration.getAmazonSNSClient())) {
-            if (snsClient != null) {
-                snsClient.shutdown();
-            }

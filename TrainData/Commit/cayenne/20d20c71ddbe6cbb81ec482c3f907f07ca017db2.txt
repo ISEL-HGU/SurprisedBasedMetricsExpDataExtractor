@@ -1,7 +1,0 @@
-                            return id.getIdSnapshot().get(dbAttrPair.getTargetName());
-                    }
-                }
-            }
-        }
-		if (descriptor.isMaster() && usingOptimisticLocking) {
-				if (attribute.isUsedForLocking() && !attribute.isFlattened()) {

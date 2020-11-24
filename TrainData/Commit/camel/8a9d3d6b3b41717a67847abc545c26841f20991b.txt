@@ -1,2 +1,0 @@
-            if (ObjectHelper.isEmpty(exchange.getIn().getBody())
-                && (ObjectHelper.isEmpty(exchange.getIn().getHeader(LambdaConstants.S3_BUCKET)) && ObjectHelper.isEmpty(exchange.getIn().getHeader(LambdaConstants.S3_KEY)))) {

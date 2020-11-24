@@ -1,2 +1,0 @@
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-@XmlJavaTypeAdapter(value = TimeUnitAdapter.class)

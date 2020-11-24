@@ -1,3 +1,0 @@
-        scrollPane.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
-        painter = new UnderlineHighlighterForText.UnderlineHighlightPainter(Color.red);
-                Image img = ModelerUtil.buildIcon("icon-error.png").getImage();

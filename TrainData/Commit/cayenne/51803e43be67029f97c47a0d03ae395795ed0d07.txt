@@ -1,4 +1,0 @@
-                cgenConfiguration.setSuperTemplate(Application.getInstance().getCodeTemplateManager().getTemplatePath(item,
-                        cgenConfiguration.getDataMap().getConfigurationSource()));
-                cgenConfiguration.setTemplate(Application.getInstance().getCodeTemplateManager().getTemplatePath(item,
-                        cgenConfiguration.getDataMap().getConfigurationSource()));

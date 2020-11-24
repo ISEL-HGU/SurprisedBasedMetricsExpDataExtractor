@@ -1,4 +1,0 @@
-import org.apache.camel.util.ObjectHelper;
-            if (dummy.getException() != null) {
-                throw ObjectHelper.wrapRuntimeCamelException(dummy.getException());
-            }

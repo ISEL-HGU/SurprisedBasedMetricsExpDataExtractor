@@ -1,1 +1,0 @@
- * Constants used in Camel AWS KMS module

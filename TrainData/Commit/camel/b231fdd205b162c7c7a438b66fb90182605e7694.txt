@@ -1,1 +1,0 @@
-            ecsProducerToString = "ECSProducer["  URISupport.sanitizeUri(getEndpoint().getEndpointUri())  "]";

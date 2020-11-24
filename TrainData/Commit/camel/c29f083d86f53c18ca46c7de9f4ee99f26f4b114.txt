@@ -1,9 +1,0 @@
-    private final IrcConfiguration configuration;
-        this.configuration = endpoint.getConfiguration();
-        log.debug("Sleeping for {} seconds before sending commands.", configuration.getCommandTimeout() / 1000);
-        // sleep for a few seconds as the server sometimes takes a moment to fully connect, print banners, etc after connection established
-        try {
-            Thread.sleep(configuration.getCommandTimeout());
-        } catch (InterruptedException ex) {
-            // ignore
-        }

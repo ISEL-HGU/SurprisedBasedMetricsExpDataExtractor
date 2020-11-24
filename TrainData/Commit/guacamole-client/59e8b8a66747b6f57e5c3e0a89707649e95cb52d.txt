@@ -1,8 +1,0 @@
-/**
- * A form used to prompt the user for additional information when
- * the RADIUS server sends a challenge back to the user with a reply
- * message.
- */
-    /**
-     * Get the value of the replyMsg field.
-     */

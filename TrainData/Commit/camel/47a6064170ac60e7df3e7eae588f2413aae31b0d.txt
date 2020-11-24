@@ -1,9 +1,0 @@
-    private static final String SPRING_BOOT_CLASSIC_LIB_ROOT = "lib/";
-    private static final String SPRING_BOOT_BOOT_INF_LIB_ROOT = "BOOT-INF/lib/";
-    private static final String SPRING_BOOT_BOOT_INF_CLASSES_ROOT = "BOOT-INF/classes/";
-                    } else if (inspectNestedJars && !entry.isDirectory() && isSpringBootNestedJar(name)) {
-            log.warn("Cannot search jar file '"  urlPath  " due to an IOException: "  ioe.getMessage()  ". This exception is ignored.", ioe);
-    private boolean isSpringBootNestedJar(String name) {
-        return name.endsWith(".jar") && (name.startsWith(SPRING_BOOT_CLASSIC_LIB_ROOT) || name.startsWith(SPRING_BOOT_BOOT_INF_LIB_ROOT));
-        if (name.startsWith(SPRING_BOOT_BOOT_INF_CLASSES_ROOT)) {
-            name = name.substring(SPRING_BOOT_BOOT_INF_CLASSES_ROOT.length());

@@ -1,2 +1,0 @@
-import com.amazonaws.services.lambda.AbstractAWSLambda;
-public class AmazonLambdaClientMock extends AbstractAWSLambda {

@@ -1,1 +1,0 @@
-    public abstract GenericFileConsumer<T> createConsumer(Processor processor) throws Exception;

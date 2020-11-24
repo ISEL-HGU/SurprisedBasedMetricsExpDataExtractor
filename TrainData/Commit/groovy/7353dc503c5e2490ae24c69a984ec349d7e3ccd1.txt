@@ -1,8 +1,0 @@
-
-            super(outer.getName()  "$"  replacePoints(inner), Opcodes.ACC_PUBLIC, ClassHelper.OBJECT_TYPE);
-
-            if (redirect() != this) return super.hasPackageName();
-
-            if (redirect() != this) {
-        while (-1 != name.lastIndexOf('.')) {
-        return cce.transformExpression(this);

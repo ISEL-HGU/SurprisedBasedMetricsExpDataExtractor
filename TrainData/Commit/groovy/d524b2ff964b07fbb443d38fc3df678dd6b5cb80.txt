@@ -1,4 +1,0 @@
-    static final MetaMethod[] EMPTY = MetaMethod.EMPTY_ARRAY;
-        return arr.toArray(MetaMethod.EMPTY_ARRAY);
-            final MetaMethod[] metaMethods = arr.toArray(MetaMethod.EMPTY_ARRAY);
-        classInfo.newMetaMethods = res.toArray(MetaMethod.EMPTY_ARRAY);

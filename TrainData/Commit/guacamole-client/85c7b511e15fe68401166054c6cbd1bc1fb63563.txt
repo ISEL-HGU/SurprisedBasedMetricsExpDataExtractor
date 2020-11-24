@@ -1,6 +1,0 @@
-        
-        if (activeConnection != null && 
-                (user.getUser().isAdministrator() 
-                || user.getIdentifier().equals(activeConnection.getUsername()))) {
-        else
-            throw new GuacamoleSecurityException("Permission denied.");

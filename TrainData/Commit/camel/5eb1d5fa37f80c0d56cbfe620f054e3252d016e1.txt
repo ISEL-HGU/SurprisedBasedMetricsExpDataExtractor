@@ -1,3 +1,0 @@
-    	WsConsumer consumer = new WsConsumer(this, processor);
-    	configureConsumer(consumer);
-    	return consumer;

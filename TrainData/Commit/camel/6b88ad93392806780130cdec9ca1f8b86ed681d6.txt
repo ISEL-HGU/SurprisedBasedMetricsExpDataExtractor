@@ -1,9 +1,0 @@
-
-        String resourceUri = remaining;
-        if (ResourceHelper.isHttpUri(resourceUri)) {
-            // if its a http uri, then append additional parameters as they are part of the uri
-            resourceUri = ResourceHelper.appendParameters(resourceUri, parameters);
-        }
-        LOG.debug("{} using schema resource: {}", this, resourceUri);
-        endpoint.setResourceUri(resourceUri);
-

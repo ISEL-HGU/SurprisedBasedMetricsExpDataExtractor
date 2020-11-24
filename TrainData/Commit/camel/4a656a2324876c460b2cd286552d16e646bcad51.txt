@@ -1,2 +1,0 @@
-     * is longer than the limit, the log message is clipped. Use -1 to have unlimited length.
-     * Use for example 1000 to log at most 1000 characters.

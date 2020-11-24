@@ -1,5 +1,0 @@
-                char prev = sb.charAt(sb.length() - 1);
-                if (!Character.isUpperCase(prev)) {
-                    // append space if previous is not upper
-                    sb.append(' ');
-                }

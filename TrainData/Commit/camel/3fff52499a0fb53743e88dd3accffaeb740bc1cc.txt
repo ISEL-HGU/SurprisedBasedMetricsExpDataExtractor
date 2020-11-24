@@ -1,3 +1,0 @@
- * Google BigQuery data warehouse for analytics.
- * 
-@UriEndpoint(firstVersion = "2.20.0", scheme = "bigquery", title = "BigQuery", syntax = "bigquery:projectId:datasetId:tableName", label = "cloud,messaging", producerOnly = true)

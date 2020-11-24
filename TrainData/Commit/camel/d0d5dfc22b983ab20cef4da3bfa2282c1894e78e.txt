@@ -1,3 +1,0 @@
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import static org.apache.camel.util.UnsafeUriCharactersEncoder.encodeHttpURI;

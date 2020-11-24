@@ -1,2 +1,0 @@
-        } else if (operation == ElasticsearchOperation.Ping) {
-            message.setBody(restHighLevelClient.ping());

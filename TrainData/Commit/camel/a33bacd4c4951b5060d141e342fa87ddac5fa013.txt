@@ -1,7 +1,0 @@
-         * mapped to {username}. For more details on the format please see a
-         * href=\#security_authz\ security authorization and acls. Multiple
-         * values can be separated by comma
-         * For the valid values see a href=
-         * http://www.iana.org/assignments/sasl-
-         * mechanisms/sasl-mechanisms.xhtmlhttp
-         * ://www.iana.org/assignments/sasl-mechanisms/sasl-mechanisms.xhtml

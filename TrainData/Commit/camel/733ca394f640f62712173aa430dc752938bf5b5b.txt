@@ -1,2 +1,0 @@
-import java.io.IOException;
-    private synchronized CoapClient getClient(Exchange exchange) throws IOException {

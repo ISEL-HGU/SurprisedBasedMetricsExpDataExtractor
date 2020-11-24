@@ -1,6 +1,0 @@
-        /**
-         * Set to true if you want to use raw JSON rather than converting to
-         * POJOs.
-         */
-         * you could append "?olderThan=2912″ to your request to get the 20
-         * you can make a request with the parameter "?newerThan=3516″ to ensure

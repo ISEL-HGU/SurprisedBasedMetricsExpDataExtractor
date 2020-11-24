@@ -1,6 +1,0 @@
-
-	public static String trimQuotations(String text, int quotationLength) {
-		int length = text.length();
-
-		return length == quotationLength * 2 ? "" : text.substring(quotationLength, length - quotationLength);
-	}

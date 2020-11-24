@@ -1,2 +1,0 @@
-import org.apache.camel.spring.boot.CamelAutoConfiguration;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;

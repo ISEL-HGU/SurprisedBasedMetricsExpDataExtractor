@@ -1,2 +1,0 @@
-    @ManagedAttribute(description = "The time to live (seconds)")
-    @ManagedAttribute(description = "The lock delay (seconds)")

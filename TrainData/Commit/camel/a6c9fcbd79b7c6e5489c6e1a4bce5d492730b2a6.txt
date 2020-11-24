@@ -1,5 +1,0 @@
-    @XmlAttribute(name = "depends-on") @Metadata(displayName = "Depends On")
-    @XmlAttribute @Metadata(displayName = "Use MDC Logging")
-    @XmlAttribute @Metadata(displayName = "MDC Logging Keys Pattern")
-    @XmlElement(name = "jmxAgent", type = CamelJMXAgentDefinition.class) @Metadata(displayName = "JMX Agent")
-     * Configuration of JMX Agent.

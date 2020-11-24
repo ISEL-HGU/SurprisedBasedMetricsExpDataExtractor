@@ -1,2 +1,0 @@
-     * @deprecated not in use, and not available in XML DSL
-    @Deprecated

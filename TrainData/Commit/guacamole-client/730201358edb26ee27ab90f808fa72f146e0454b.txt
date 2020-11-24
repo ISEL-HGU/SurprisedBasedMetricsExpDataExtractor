@@ -1,9 +1,0 @@
-import org.apache.guacamole.auth.quickconnect.QuickConnectException;
-                throw new QuickConnectException("URI must be absolute.",
-                        "QUICKCONNECT.ERROR_NOT_ABSOLUTE_URI");
-            throw new QuickConnectException("Invalid URI Syntax",
-                    "QUICKCONNECT.ERROR_INVALID_URI");
-            throw new QuickConnectException("No protocol specified.",
-                    "QUICKCONNECT.ERROR_NO_PROTOCOL");
-            throw new QuickConnectException("No host specified.",
-                    "QUICKCONNECT.ERROR_NO_HOST");

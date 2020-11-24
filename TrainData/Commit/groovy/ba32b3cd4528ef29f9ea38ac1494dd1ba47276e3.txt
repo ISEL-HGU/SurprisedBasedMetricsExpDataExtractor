@@ -1,4 +1,0 @@
-    /** This (<code>"13"</code>) is the value for targetBytecode to compile for a JDK 13. **/
-    public static final String JDK13 = "13";
-            JDK12, Opcodes.V12,
-            JDK13, Opcodes.V13

@@ -1,2 +1,0 @@
- b/camel-core/src/main/java/org/apache/camel/support/dump/MessageDump.java
-package org.apache.camel.support.dump;

@@ -1,2 +1,0 @@
-import org.apache.camel.impl.ScheduledPollEndpoint;
-public class SlackEndpoint extends ScheduledPollEndpoint {

@@ -1,2 +1,0 @@
-    public CamelClusterService atomixClusterService() {
-    public CamelClusterService atomixClusterClientService() {

@@ -1,1 +1,0 @@
-            answer.put("HeadersMapFactory", answer.get("headersMapFactoryClassName"));

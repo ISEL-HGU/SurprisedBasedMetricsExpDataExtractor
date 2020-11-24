@@ -1,2 +1,0 @@
- b/examples/camel-example-pojo-messaging/src/main/java/org/apache/camel/example/pojo/SendFileRecordsToQueueBean.java
-package org.apache.camel.example.pojo;

@@ -1,2 +1,0 @@
-            // phase operations for this transform class have already been added before, so remove from current scan cycle
-            transformNames.entrySet().removeIf(entry -> !context.getGlobalTransformNames().add(entry.getKey()));

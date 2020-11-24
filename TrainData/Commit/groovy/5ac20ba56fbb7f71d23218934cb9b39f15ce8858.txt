@@ -1,4 +1,0 @@
-import static org.apache.groovy.ast.tools.MethodNodeUtils.methodDescriptorWithoutReturnType;
-            result.put(methodDescriptorWithoutReturnType(mn), mn);
-                        String td = methodDescriptorWithoutReturnType(found);
-                            String td = methodDescriptorWithoutReturnType(found);

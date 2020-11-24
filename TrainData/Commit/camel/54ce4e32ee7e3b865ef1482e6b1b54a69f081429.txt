@@ -1,1 +1,0 @@
-    private JsonLibrary library = JsonLibrary.Jackson;

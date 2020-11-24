@@ -1,3 +1,0 @@
-        // need to clear the lifecycle strategy as CamelContext will default enable JMX, and
-        // to turn this off we need no JMX lifecycle strategy to exists (at this time there is only this one)
-        camelContext.getLifecycleStrategies().clear();

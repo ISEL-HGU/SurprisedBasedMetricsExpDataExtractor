@@ -1,9 +1,0 @@
-        if (isCovariant(oneRT, twoRT)) {
-        } else if (isCovariant(twoRT, oneRT)) {
-    private static boolean isCovariant(ClassNode left, ClassNode right) {
-        if (left.isArray() && right.isArray()) {
-            return isCovariant(left.getComponentType(), right.getComponentType());
-        }
-        return left.isDerivedFrom(right) || left.implementsInterface(right);
-    }
-

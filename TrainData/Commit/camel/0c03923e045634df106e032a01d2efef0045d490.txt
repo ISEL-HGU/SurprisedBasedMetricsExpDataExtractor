@@ -1,1 +1,0 @@
-        } else if (ObjectHelper.isNotEmpty(getConfiguration().getConsulClient())) {

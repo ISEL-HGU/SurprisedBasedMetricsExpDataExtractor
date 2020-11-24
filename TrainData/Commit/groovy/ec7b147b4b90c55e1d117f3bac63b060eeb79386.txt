@@ -1,3 +1,0 @@
-import org.codehaus.groovy.runtime.memoize.UnlimitedConcurrentCache;
-    private static final EvictableCache<String, Set<String>> DEFAULT_IMPORT_CLASS_AND_PACKAGES_CACHE = new UnlimitedConcurrentCache<>();
-                    Set<String> packagePrefixSet = DEFAULT_IMPORT_CLASS_AND_PACKAGES_CACHE.getAndPut(typeName, new UnlimitedConcurrentCache.ValueProvider<String, Set<String>>() {

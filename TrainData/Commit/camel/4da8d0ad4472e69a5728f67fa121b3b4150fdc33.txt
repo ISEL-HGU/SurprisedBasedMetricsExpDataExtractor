@@ -1,8 +1,0 @@
-import java.io.UnsupportedEncodingException;
-import java.net.URISyntaxException;
-    private static String buildUri(RestletEndpoint endpoint, Exchange exchange) throws Exception {
-        // include any query parameters if needed
-        if (endpoint.getQueryParameters() != null) {
-            uri = URISupport.appendParametersToURI(uri, endpoint.getQueryParameters());
-        }
-        LOG.trace("Substituting '{value}' placeholders in uri: {}", uri);

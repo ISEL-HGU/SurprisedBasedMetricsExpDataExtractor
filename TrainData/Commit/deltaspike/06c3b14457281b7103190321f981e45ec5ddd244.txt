@@ -1,5 +1,0 @@
-        if (projectStage == null)
-        else if (!projectStage.equals(ps))
-        {
-            LOG.info("change project-stage from "  projectStage  " to "  ps);
-        }

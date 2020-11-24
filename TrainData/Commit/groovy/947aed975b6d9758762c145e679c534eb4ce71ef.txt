@@ -1,4 +1,0 @@
-            if (!(obj instanceof MopKey)) {
-                return false;
-            }
-

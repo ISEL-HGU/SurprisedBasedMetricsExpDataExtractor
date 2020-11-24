@@ -1,4 +1,0 @@
-            if (accessedVariable instanceof Parameter) {
-                ((Parameter) accessedVariable).putNodeMetaData(StaticTypesMarker.INFERRED_TYPE, cn);
-            }
-                return getType((Parameter) variable);

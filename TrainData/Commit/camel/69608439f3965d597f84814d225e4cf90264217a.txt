@@ -1,6 +1,0 @@
-import org.apache.camel.impl.DefaultComponent;
-public class SdbComponent extends DefaultComponent {
-        this(null);
-        super(context);
-        
-        registerExtension(new SdbComponentVerifierExtension());

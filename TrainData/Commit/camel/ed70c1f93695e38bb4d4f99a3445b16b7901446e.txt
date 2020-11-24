@@ -1,9 +1,0 @@
-        // check if directory is a path
-        boolean isPath = Math.max(directory.lastIndexOf("/"), directory.lastIndexOf("\\")) != -1;
-
-        } else if (isPath) {
-                // dir path is relative to the root path
-                path = new File(directory);
-        } else {
-            // dir is a child of the root path
-            path = new File(endpoint.getFile(), directory);

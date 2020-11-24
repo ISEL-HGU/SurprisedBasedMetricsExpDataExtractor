@@ -1,3 +1,0 @@
-    private Map<String, ScheduledFuture<?>> inFlight = new LinkedHashMap<>();
-                ScheduledFuture<?> task = scheduler.schedule(new Runnable() {
-            ScheduledFuture<?> inFlightTask = inFlight.get(receiptHandle);

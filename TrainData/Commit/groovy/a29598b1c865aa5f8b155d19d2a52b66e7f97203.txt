@@ -1,3 +1,0 @@
-            if (unsupportedTupleAttribute(tupleCons, "useSetters")) return;
-    @Deprecated
-    @Deprecated

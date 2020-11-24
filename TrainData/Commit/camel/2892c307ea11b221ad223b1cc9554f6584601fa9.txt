@@ -1,1 +1,0 @@
-    public GenericContainer container = new GenericContainer("consul:1.5.1")

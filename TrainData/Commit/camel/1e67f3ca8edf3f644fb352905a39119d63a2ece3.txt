@@ -1,4 +1,0 @@
-import java.util.HashMap;
-        return new HashMap<>();
-        return new HashMap<>(map);
-        return map instanceof HashMap;

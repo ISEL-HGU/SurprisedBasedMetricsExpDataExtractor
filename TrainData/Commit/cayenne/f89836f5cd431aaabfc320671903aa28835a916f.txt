@@ -1,1 +1,0 @@
-    private static final String PROGRESS_PANEL_LAYOUT = "fill:160dlu:grow, 60dlu, fill:160dlu:grow";

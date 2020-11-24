@@ -1,4 +1,0 @@
-        if (ObjectHelper.isEmpty(configuration.getAmazonDDBClient())) {
-            if (ddbClient != null) {
-                ddbClient.shutdown();
-            }

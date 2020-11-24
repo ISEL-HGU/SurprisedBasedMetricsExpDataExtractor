@@ -1,3 +1,0 @@
-                final Set<ValidationElement> validationElements =
-                    detectedValidationElements.values().stream().flatMap(Collection::stream)
-                        .collect(Collectors.toCollection(() -> EnumSet.noneOf(ValidationElement.class)));

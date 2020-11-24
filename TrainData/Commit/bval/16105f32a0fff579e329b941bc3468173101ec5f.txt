@@ -1,2 +1,0 @@
-        if (Validate.notNull(elementKind, "elementKind") == ElementKind.CONTAINER_ELEMENT) {
-        switch (elementKind) {

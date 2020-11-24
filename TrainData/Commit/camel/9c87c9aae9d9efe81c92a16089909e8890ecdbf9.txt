@@ -1,2 +1,0 @@
-            SendTransferResponse response = endpoint.getApiClient()
-                                            .sendTransfer(seed, endpoint.getSecurityLevel(), endpoint.getDepth(), endpoint.getMinWeightMagnitude(), transfers, null, null, false, true, null);

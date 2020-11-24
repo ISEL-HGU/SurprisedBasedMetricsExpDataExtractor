@@ -1,3 +1,0 @@
- * GrpcUtils helpers are working with dynamic methods via Camel and 
- * Java reflection utilities
-                throw new IllegalArgumentException("gRPC service method not found: "  serviceClassName  "."  stubMethod);

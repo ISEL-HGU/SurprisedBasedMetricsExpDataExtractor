@@ -1,3 +1,0 @@
-    @FunctionalInterface
-    public interface ProgressCallback {
-        void call(ProcessingUnit context, int phase) throws CompilationFailedException;

@@ -1,2 +1,0 @@
-        for (Resource r : rc) {
-            return new InputStreamReader(in);

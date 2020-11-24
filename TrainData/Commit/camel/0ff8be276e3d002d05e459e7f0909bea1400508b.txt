@@ -1,6 +1,0 @@
-import org.apache.camel.runtimecatalog.JSonSchemaResolver;
-        JSonSchemaResolver jsonSchemaResolver = getBeanForType(JSonSchemaResolver.class);
-        if (jsonSchemaResolver != null) {
-            LOG.info("Using custom JSonSchemaResolver: {}", jsonSchemaResolver);
-            getContext().getRuntimeCamelCatalog().setJSonSchemaResolver(jsonSchemaResolver);
-        }

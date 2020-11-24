@@ -1,3 +1,0 @@
-        
-        // Get the ExceptionMapper that will rewrite exceptions into JSON.
-        bind(GuacamoleExceptionMapper.class);

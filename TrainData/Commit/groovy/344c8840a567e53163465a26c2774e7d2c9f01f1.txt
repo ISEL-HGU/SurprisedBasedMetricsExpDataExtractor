@@ -1,2 +1,0 @@
-                        BytecodeHelper.convertPrimitiveToBoolean(controller.getMethodVisitor(), top);
-                        controller.getOperandStack().replace(ClassHelper.boolean_TYPE);

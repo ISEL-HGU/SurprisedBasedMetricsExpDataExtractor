@@ -1,2 +1,0 @@
-            boundAuthorizerMethodProxy = new InjectableMethod(
-                boundAuthorizerMethod, foundBoundAuthorizerBean, beanManager);

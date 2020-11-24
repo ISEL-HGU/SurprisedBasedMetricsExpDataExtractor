@@ -1,7 +1,0 @@
-    /*
-     * For  PMD HideUtilityClassConstructorCheck
-     */
-    private void noop() {
-
-    }
-

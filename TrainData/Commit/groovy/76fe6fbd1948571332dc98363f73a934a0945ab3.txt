@@ -1,2 +1,0 @@
-
-            return Opcodes.V1_8;

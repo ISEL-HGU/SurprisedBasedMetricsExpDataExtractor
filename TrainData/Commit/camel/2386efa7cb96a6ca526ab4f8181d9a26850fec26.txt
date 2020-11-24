@@ -1,3 +1,0 @@
-            answer.setProperties(safeCopyProperties(exchange.getProperties()));
-    private static Map<String, Object> safeCopyProperties(Map<String, Object> properties) {
-        Map<String, Object> answer = new HashMap<>(properties);

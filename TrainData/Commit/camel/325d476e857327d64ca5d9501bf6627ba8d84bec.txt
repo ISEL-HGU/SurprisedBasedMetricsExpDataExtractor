@@ -1,3 +1,0 @@
-    public Optional<CamelClusterMember> getLeader() {
-            fireLeadershipChangedEvent(getLeader());
-            fireLeadershipChangedEvent(getLeader());

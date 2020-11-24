@@ -1,5 +1,0 @@
-import java.util.Locale;
-            // REST_HTTP_URI with HTTP_PATH resulting in incorrect URIs
-            // the method should be in upper case 
-            String upper = method.toUpperCase(Locale.US);
-            inMessage.setHeader(Exchange.HTTP_METHOD, upper);

@@ -1,3 +1,0 @@
-        if (property == null || type == null) {
-            return super.getMessageWithoutLocationText();
-        }

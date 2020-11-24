@@ -1,2 +1,0 @@
-import org.apache.camel.util.ObjectHelper;
-        if (ObjectHelper.isNotEmpty(userName) && ObjectHelper.isNotEmpty(password)) {

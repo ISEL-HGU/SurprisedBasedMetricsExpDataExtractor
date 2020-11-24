@@ -1,2 +1,0 @@
-import org.apache.camel.util.URISupport;
-        span.setTag("camel.uri", URISupport.sanitizeUri(endpoint.getEndpointUri()));

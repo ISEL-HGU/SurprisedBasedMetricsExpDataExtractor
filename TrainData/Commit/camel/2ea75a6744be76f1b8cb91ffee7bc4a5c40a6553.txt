@@ -1,2 +1,0 @@
- b/platforms/spring-boot/components-starter/camel-any23-starter/src/main/java/org/apache/camel/dataformat/any23/springboot/Any23DataFormatConfiguration.java
-public class Any23DataFormatConfiguration

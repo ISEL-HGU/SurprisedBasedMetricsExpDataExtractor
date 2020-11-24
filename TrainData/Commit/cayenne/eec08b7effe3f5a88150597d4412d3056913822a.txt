@@ -1,4 +1,0 @@
-                } catch (Exception e) {
-                    String message = String.format("Error instantiating custom DI module '%s' by filter '%s': %s",
-                                    moduleName, getClass().getName(), e.getMessage());
-            return Collections.emptyMap();

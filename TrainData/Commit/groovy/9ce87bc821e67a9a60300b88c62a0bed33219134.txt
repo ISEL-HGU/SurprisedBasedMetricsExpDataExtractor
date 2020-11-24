@@ -1,3 +1,0 @@
-
-        if (parentLoader instanceof GroovyClassLoader
-            && ((GroovyClassLoader) parentLoader).getCompilerConfiguration() == config) {

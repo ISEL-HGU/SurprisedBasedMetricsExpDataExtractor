@@ -1,2 +1,0 @@
-        DeleteAccessKeyResult res = new DeleteAccessKeyResult();
-        return res;

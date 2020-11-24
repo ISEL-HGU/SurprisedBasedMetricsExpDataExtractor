@@ -1,1 +1,0 @@
-    private Query createJpaQuery(CdiQueryInvocationContext context)

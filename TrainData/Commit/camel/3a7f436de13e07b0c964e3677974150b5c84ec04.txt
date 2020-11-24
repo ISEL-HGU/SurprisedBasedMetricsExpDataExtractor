@@ -1,2 +1,0 @@
-        // we need to check beanHolder is Processor is support, to avoid the bean cached issue
-        if (allowProcessor(explicitMethodName, beanInfo) && beanHolder.supportProcessor()) {

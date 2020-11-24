@@ -1,7 +1,0 @@
-import org.apache.camel.Route;
-        Route route = camelContext.getRoute(routeId);
-        if (route != null) {
-            return new MicrometerMessageHistory(getMeterRegistry(), route, namedNode, getNamingStrategy(), timestamp);
-        } else {
-            return null;
-        }

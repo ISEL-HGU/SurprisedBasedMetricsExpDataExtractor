@@ -1,2 +1,0 @@
-        int size = tupleArguments == null ? -1 : tupleArguments.getExpressions().size();
-        if (size < 1) {

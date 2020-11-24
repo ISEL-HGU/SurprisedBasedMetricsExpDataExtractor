@@ -1,5 +1,0 @@
-            for (Map.Entry<String, String> attribute : macroRecord.getAttributes().entrySet()) {
-                conf.setAttribute(attribute.getKey(), replaceParam(attribute.getValue(), attValues));
-            for (Map.Entry<Class<?>, Method> method : typeMethods.entrySet()) {
-                if (method.getKey().isAssignableFrom(type)) {
-                    return method.getValue();

@@ -1,5 +1,0 @@
-    /**
-     * Whether to skip this option
-     */
-    boolean skip() default false;
-

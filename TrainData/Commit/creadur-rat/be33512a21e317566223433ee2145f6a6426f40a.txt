@@ -1,1 +1,0 @@
-     * Based on https://www.apache.org/dev/svn-eol-style.txt

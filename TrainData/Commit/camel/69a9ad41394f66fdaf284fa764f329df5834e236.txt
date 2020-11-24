@@ -1,8 +1,0 @@
-import org.apache.camel.component.as2.api.AS2EncryptionAlgorithm;
-         * The algorithm used to encrypt EDI message.
-        private AS2EncryptionAlgorithm encryptingAlgorithm;
-        public AS2EncryptionAlgorithm getEncryptingAlgorithm() {
-            return encryptingAlgorithm;
-        public void setEncryptingAlgorithm(
-                AS2EncryptionAlgorithm encryptingAlgorithm) {
-            this.encryptingAlgorithm = encryptingAlgorithm;

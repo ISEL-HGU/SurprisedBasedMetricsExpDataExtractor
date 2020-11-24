@@ -1,4 +1,0 @@
-			this.values = c.toArray(new Object[0]);
-		if(values == null) {
-			return;
-		}

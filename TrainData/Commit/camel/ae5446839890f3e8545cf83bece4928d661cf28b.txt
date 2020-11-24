@@ -1,1 +1,0 @@
- * The Flexible Aggregation Strategy is a highly customizable, fluently configurable aggregation strategy. It allows you to quickly whip up an {@link AggregationStrategy} that is capable of performing the most typical aggregation duties, 

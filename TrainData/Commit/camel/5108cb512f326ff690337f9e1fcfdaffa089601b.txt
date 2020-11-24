@@ -1,5 +1,0 @@
-    public synchronized ReactiveStreamsConsumer getConsumer() {
-        return consumer;
-    }
-
-            LOG.warn("There is another active subscription: cancelled");

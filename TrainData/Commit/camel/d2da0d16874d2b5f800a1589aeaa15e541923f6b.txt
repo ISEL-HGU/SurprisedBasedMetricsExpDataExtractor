@@ -1,7 +1,0 @@
-import org.apache.camel.component.aws.ddb.DdbComponentVerifierExtension;
-import org.apache.camel.impl.DefaultComponent;
-public class DdbStreamComponent extends DefaultComponent {
-        this(null);
-        super(context);
-        
-        registerExtension(new DdbComponentVerifierExtension());

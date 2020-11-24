@@ -1,6 +1,0 @@
-    private volatile AsyncProducer delegate;
-        if (delegate != null) {
-            return delegate.isSingleton();
-        } else {
-            return getEndpoint().isSingleton();
-        }

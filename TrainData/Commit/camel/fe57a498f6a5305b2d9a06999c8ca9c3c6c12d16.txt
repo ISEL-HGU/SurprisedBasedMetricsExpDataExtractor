@@ -1,8 +1,0 @@
-        String goMessageHistoryHeaeder = exchange.getContext().getGlobalOption(Exchange.MESSAGE_HISTORY_HEADER_FORMAT);
-        sb.append(String.format(
-                         goMessageHistoryHeaeder == null ? MESSAGE_HISTORY_HEADER : goMessageHistoryHeaeder,
-                         "RouteId", "ProcessorId", "Processor", "Elapsed (ms)"));
-        String goMessageHistoryOutput = exchange.getContext().getGlobalOption(Exchange.MESSAGE_HISTORY_OUTPUT_FORMAT);
-        sb.append(String.format(
-                        goMessageHistoryOutput == null ? MESSAGE_HISTORY_OUTPUT : goMessageHistoryOutput,
-                        routeId, id, label, elapsed));

@@ -1,6 +1,0 @@
-import java.util.Collections;
-            if (userEntry == null)
-                return null;
-
-            if (attrSet == null)
-                return null;

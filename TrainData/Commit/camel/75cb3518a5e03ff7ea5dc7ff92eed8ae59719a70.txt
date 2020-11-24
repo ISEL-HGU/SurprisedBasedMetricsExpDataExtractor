@@ -1,2 +1,0 @@
-    @UriParam(defaultValue = "is:unread")
-    @UriParam(defaultValue = "10")

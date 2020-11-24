@@ -1,7 +1,0 @@
-    /**
-     * Converters the simple search term builder to search term.
-     *
-     * This should not be a @Converter method
-     */
-     * Converts from comma separated list of sort terms to SortTerm obj array.
-     * This should not be a @Converter method

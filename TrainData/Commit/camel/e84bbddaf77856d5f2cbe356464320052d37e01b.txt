@@ -1,8 +1,0 @@
-import com.squareup.javapoet.ClassName;
-        TypeSpec.Builder builder = TypeSpec.classBuilder(classNameToUse).superclass(RouteBuilder.class)
-            .addJavadoc("Generated from Swagger specification by Camel REST DSL generator.\n");
-        if (springComponent) {
-            final AnnotationSpec.Builder springAnnotation = AnnotationSpec.builder(ClassName.bestGuess("org.springframework.stereotype.Component"));
-            builder.addAnnotation(springAnnotation.build());
-        }
-        TypeSpec generatedRouteBuilder = builder.build();

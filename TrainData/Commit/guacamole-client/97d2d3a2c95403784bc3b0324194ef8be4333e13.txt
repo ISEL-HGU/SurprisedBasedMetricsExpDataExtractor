@@ -1,8 +1,0 @@
-     *     A GuacamoleConfiguration generated using the information
-     *     provided by the user in the URI.
-     *     If an error occurs parsing the URI.
-        // Parse the provided String into a URI object.
-        // Check for protocol and set it, or throw an error if not present
-        // Check for provided host, or throw an error if not present
-    private static Map<String, String> parseQueryString(String queryStr)
-    private static void parseUserInfo(String userInfo, 

@@ -1,2 +1,0 @@
-            ErrorHandlerFactory refBuilder = ErrorHandlerBuilderRef.lookupErrorHandlerFactory(routeContext, builderRef.getRef(), false);
-                    refBuilder = ErrorHandlerBuilderRef.lookupErrorHandlerFactory(routeContext, builderRef.getRef(), false);

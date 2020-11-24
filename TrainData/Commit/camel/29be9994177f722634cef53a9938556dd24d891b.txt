@@ -1,6 +1,0 @@
-        // need to check first as put will update the entry lifetime so it can not expire its cache lifespan
-        if (getCache().containsKey(key)) {
-            // there is already an entry so return false
-            return false;
-        }
-        

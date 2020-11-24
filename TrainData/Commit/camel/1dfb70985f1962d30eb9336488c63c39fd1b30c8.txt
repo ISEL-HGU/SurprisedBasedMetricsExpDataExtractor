@@ -1,2 +1,0 @@
-     * Creates an endpoint uri in XML style from the information in the json schema
-     * Creates an endpoint uri in XML style from the information from the properties

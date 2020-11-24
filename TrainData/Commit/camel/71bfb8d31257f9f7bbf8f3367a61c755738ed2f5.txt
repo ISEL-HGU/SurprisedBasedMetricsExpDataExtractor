@@ -1,2 +1,0 @@
- b/tooling/meta-annotations/src/main/java/org/apache/camel/meta/Experimental.java
-package org.apache.camel.meta;

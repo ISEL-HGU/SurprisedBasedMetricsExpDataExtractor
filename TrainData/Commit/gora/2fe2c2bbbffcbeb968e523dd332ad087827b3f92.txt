@@ -1,4 +1,0 @@
-      throw new RuntimeException("Error while initializing Cassandra store: " e.getMessage(),e);
-      throw new RuntimeException("Error while instantiating a key: " ex.getMessage(),ex);
-      throw new RuntimeException("Error while instantiating a persistent: " ex.getMessage(),ex);
-    return cassandraSerializer.deleteByQuery(query);

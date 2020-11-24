@@ -1,6 +1,0 @@
-import java.io.InputStream;
-
-
-        InputStream inputStream = inputMessage.getBody(InputStream.class);
-        return new ZipIterator(exchange, inputStream);
-

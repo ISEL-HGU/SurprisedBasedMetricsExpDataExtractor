@@ -1,2 +1,0 @@
-    private static final Class[] EMPTY_INTERFACE_ARRAY = new Class[0];
-        Class[] intfs = interfaces != null ? interfaces.toArray(new Class[interfaces.size()]) : EMPTY_INTERFACE_ARRAY;

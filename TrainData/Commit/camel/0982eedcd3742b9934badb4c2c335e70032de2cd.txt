@@ -1,3 +1,0 @@
-@UriEndpoint(firstVersion = "2.19.0", scheme = "couchbase", title = "Couchbase", syntax = "couchbase:protocol:hostname:port", consumerClass = CouchbaseConsumer.class, label = "database,nosql")
-    @UriPath(defaultValue = "8091")
-

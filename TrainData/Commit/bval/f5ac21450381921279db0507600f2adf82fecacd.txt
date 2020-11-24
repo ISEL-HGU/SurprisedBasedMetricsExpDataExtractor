@@ -1,2 +1,0 @@
-        // skip core JDK; skip null/empty hierarchy builders, mapping others to BeanDelegate
-        hierarchy.forEachRemaining(t -> Optional.of(t).filter(clazz -> !clazz.getName().startsWith("java."))

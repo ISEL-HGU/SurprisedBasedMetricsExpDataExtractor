@@ -1,5 +1,0 @@
-import org.apache.cayenne.configuration.DataMapLoader;
-import org.apache.cayenne.resource.URLResource;
-            DataMap dataMap = loadDataMap(injector);
-    private DataMap loadDataMap(Injector injector) throws Exception {
-        return injector.getInstance(DataMapLoader.class).load(new URLResource(map.toURI().toURL()));

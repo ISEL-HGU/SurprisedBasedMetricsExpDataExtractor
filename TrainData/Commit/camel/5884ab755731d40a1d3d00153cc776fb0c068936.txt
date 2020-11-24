@@ -1,4 +1,0 @@
-            mllpBuffer.readFrom(clientSocket, Math.min(500, consumer.getConfiguration().getReceiveTimeout()), consumer.getConfiguration().getReadTimeout());
-                log.info("Ignoring out-of-band data on initial read [{} bytes]: {}", mllpBuffer.size(), mllpBuffer.toPrintFriendlyStringAndReset());
-                log.warn("Exception encountered receiving complete initial message [{} bytes]: {}", mllpBuffer.size(), mllpBuffer.toPrintFriendlyStringAndReset());
-                log.warn("Timeout receiving complete initial message on read [{} bytes]: {}", mllpBuffer.size(), mllpBuffer.toPrintFriendlyStringAndReset());

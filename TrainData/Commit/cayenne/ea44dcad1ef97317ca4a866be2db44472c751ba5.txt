@@ -1,2 +1,0 @@
- * Though this implementation tries to follow general {@link Map} contract (including equals() and hashCode())
- * This map doesn't guarantee that value will be there even right after put(), as GC can remove it at any time.

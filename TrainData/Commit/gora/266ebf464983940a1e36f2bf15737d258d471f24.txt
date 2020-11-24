@@ -1,2 +1,0 @@
-    String serializationType;
-      cassandraSerializer = CassandraSerializer.getSerializer(cassandraClient, serializationType, this, mapping);

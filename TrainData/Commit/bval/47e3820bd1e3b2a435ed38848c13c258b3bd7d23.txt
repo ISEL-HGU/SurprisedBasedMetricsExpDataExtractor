@@ -1,2 +1,0 @@
-            // we can't filter the getters since they can be validated, todo: read the config to know if we need or not
-            return Stream.of(declaredMethods).collect(

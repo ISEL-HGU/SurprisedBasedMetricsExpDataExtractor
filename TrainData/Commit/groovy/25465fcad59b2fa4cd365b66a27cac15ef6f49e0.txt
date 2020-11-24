@@ -1,9 +1,0 @@
-            if (node != null) {
-                assertNodeType(SLIST, node);
-                code = statementList(node);
-            } else {
-        } else if (node != null) {
-            if (classNode != null && classNode.isAnnotationDefinition()) {
-                code = statement(node);
-                hasAnnotationDefault = true;
-            } else {

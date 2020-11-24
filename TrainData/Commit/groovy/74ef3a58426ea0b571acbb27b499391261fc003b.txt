@@ -1,3 +1,0 @@
-                    || (right.getClass() != Object.class && right.getClass().isAssignableFrom(left.getClass()) //GROOVY-4046
-                    || right instanceof Comparable) // GROOVY-7954
-            ) {

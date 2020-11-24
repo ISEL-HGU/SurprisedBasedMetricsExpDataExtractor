@@ -1,4 +1,0 @@
-        private String serviceStatus;
-                this.serviceStatus = ((StatefulService) route).getStatus().name();
-        public String getServiceStatus() {
-            return serviceStatus;

@@ -1,2 +1,0 @@
-        List<Pair> answer = new ArrayList<>();
-            rawPairs = new ArrayList<>();

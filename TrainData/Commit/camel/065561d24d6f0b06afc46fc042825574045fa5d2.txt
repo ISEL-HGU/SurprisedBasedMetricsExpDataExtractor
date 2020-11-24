@@ -1,3 +1,0 @@
-/**
- * Basic JSon parser to read the Camel component JSon schema files.
- */

@@ -1,8 +1,0 @@
-public class JobRunnableAdapter extends AbstractJobAdapter<Runnable>
-    @Override
-    protected Class<Runnable> getJobBaseClass()
-    {
-        return Runnable.class;
-    }
-    public void execute(Runnable job, JobExecutionContext context) throws JobExecutionException
-        job.run();

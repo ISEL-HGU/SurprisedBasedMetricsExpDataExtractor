@@ -1,3 +1,0 @@
-import java.util.Map;
-                final Iterator<Map.Entry<String, String>> iterator = entrySet().iterator();
-                        Map.Entry<String, String> entry = iterator.next();

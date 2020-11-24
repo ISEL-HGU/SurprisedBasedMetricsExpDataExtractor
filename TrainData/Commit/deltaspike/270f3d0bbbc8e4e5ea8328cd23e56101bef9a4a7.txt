@@ -1,9 +1,0 @@
-import java.util.Vector;
-        if (propertyFileName != null && propertyFileName.contains("://"))
-        {
-            // the given string is actually already an URL
-            Vector<URL> propertyFileUrls = new Vector<URL>();
-            propertyFileUrls.add(new URL(propertyFileName));
-            return propertyFileUrls.elements();
-        }
-

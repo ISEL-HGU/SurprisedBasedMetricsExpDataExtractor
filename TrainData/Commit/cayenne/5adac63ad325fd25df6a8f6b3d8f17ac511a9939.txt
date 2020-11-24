@@ -1,4 +1,0 @@
-        output = fixupDom(document, output);
-    private String fixupDom(Document document, String output) {
-        jsoupDoc.select("div#preamble").remove();
-

@@ -1,2 +1,0 @@
-        } else if ((targetType.getModifiers()& Opcodes.ACC_FINAL)==0 && expressionType.isInterface()) {
-            return true;

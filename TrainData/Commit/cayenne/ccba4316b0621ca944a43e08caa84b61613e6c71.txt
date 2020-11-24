@@ -1,2 +1,0 @@
-        gradleArguments.add("--info");
-                .forwardOutput()

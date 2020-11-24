@@ -1,5 +1,0 @@
-      // In HBase the end key is exclusive, so we add a trail zero to make it inclusive
-      // as the Gora's query interface declares.
-      byte[] endKey = toBytes(query.getEndKey());
-      byte[] inclusiveEndKey = Arrays.copyOf(endKey, endKey.length1);
-      scan.setStopRow(inclusiveEndKey);

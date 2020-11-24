@@ -1,4 +1,0 @@
-        if (baseDir.getName().equals("camel-jaxp")) {
-            return true;
-        }
-

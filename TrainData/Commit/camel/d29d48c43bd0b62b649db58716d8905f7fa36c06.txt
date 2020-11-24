@@ -1,3 +1,0 @@
-            File fp = new File(p);
-                return FileSystems.newFileSystem(URI.create("jar:"  fp.toURI().toString()), env).getPath("/");
-                return FileSystems.getFileSystem(URI.create("jar:"  fp.toURI().toString())).getPath("/");

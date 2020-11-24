@@ -1,6 +1,0 @@
-         * The transactions/uncle index position in the block.
-        private BigInteger index;
-        public BigInteger getIndex() {
-            return index;
-        public void setIndex(BigInteger index) {
-            this.index = index;

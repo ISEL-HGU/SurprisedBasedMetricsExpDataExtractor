@@ -1,2 +1,0 @@
-                // CAMEL-12204: disabled for compatibility with JAX-RS 2.0
-                //.executorService(sagaService.getExecutorService())

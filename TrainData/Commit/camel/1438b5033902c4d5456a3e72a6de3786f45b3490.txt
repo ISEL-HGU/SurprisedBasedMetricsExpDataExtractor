@@ -1,4 +1,0 @@
-                String className = value.toString().substring(7);
-                    if (value == null) {
-                        throw new IllegalArgumentException("Cannot create instance of class: "  className);
-                    }

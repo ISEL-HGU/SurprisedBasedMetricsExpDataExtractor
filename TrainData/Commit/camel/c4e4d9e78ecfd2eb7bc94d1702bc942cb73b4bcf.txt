@@ -1,2 +1,0 @@
-     * Sets whether stream caching is enabled or not (deprecated use stream-caching-enabled instead).
-     * To turn on MDC logging (deprecated use use-mdc-logging instead)

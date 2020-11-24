@@ -1,6 +1,0 @@
-                Class<?> optionClass;
-    private Class<?> loadClass(ClassLoader projectClassLoader, String loadClassName) throws MojoFailureException {
-        Class<?> optionClass;
-        final List<?> classpathElements;
-        for (Iterator<?> it = classpathElements.iterator(); it.hasNext(); i) {
-    private static void sortImports(Importer<JavaClassSource> importer) {

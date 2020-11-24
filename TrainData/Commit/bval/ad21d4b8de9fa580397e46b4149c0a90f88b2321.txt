@@ -1,1 +1,0 @@
-        final URL schemaUrl = Reflection.loaderFromClassOrThread(SchemaManager.class).getResource(resource);

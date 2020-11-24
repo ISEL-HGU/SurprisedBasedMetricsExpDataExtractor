@@ -1,9 +1,0 @@
-        for (Parameter parameter : parameters) {
-            if (parameter.hasInitialExpression()) {
-                throw createParsingFailedException("Cannot specify default value for method parameter '"  parameter.getName()  " = "  parameter.getInitialExpression().getText()  "' inside an interface", parameter);
-        }
-            for (Parameter parameter : methodNode.getParameters()) {
-                parameter.setInStaticContext(true);
-            }
-
-        classNode.addAnnotations(this.visitAnnotationsOpt(ctx.annotationsOpt()));

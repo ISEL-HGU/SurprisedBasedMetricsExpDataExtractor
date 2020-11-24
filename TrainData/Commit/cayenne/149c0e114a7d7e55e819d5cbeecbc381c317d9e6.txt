@@ -1,2 +1,0 @@
-			EntityIdCoder coder = codersByEntity.get(query.getEntityName());
-			List<DataObject> objects = query.select(context);

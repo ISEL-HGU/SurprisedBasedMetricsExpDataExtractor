@@ -1,3 +1,0 @@
-import org.apache.guacamole.net.auth.credentials.GuacamoleInsufficientCredentialsException;
-        throw new GuacamoleInsufficientCredentialsException(
-            "LOGIN.INFO_CAS_REDIRECT_PENDING",

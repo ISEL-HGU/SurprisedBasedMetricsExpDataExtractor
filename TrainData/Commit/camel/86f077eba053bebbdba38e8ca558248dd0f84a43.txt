@@ -1,4 +1,0 @@
-        if (ObjectHelper.isEmpty(configuration.getAmazonSQSClient())) {
-            if (client != null) {
-                client.shutdown();
-            }

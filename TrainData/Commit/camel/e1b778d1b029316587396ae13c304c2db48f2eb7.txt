@@ -1,6 +1,0 @@
-import org.apache.camel.impl.engine.DefaultReactiveExecutor;
-import org.apache.camel.spi.ReactiveExecutor;
-
-    protected ReactiveExecutor createReactiveExecutor() {
-        return new DefaultReactiveExecutor();
-    }

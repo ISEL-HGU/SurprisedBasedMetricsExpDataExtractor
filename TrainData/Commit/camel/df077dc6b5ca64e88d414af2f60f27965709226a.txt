@@ -1,1 +1,0 @@
-                if (line.startsWith("^^^") || line.startsWith("~~~") || line.startsWith("")) {

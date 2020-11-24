@@ -1,5 +1,0 @@
-    private JsonSchemaReader schemaReader;
-    public JsonValidatingProcessor(JsonSchemaReader schemaReader) {
-        this.schemaReader = schemaReader;
-        Schema schema = null;
-                schema = this.schemaReader.getSchema();

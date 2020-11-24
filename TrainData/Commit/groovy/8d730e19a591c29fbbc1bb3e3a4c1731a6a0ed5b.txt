@@ -1,2 +1,0 @@
-    private static final String DOCGEN_BASEDIR = "org/apache/groovy/docgenerator/";
-            DOCGEN_BASEDIR    "groovy.ico",

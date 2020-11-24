@@ -1,2 +1,0 @@
-    private static final Logger LOG = LoggerFactory.getLogger(CamelSpringBootExecutionListener.class);
-

@@ -1,7 +1,0 @@
-        final String location;
-        try {
-            location = this.getIvyFileInCache(mrid).toURI().toURL().toExternalForm();
-        } catch (MalformedURLException e) {
-            throw new RuntimeException("Failed to determine artifact origin for "  mrid);
-        }
-        return new ArtifactOrigin(DefaultArtifact.newIvyArtifact(mrid, null), false, location);

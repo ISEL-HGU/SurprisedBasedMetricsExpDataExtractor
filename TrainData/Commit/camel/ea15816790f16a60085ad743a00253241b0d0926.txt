@@ -1,5 +1,0 @@
-    public void doStop() throws Exception {
-        if (client != null) {
-            client.shutdown();
-        }
-        super.doStop();

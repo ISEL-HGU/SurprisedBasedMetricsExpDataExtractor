@@ -1,1 +1,0 @@
-        if (exchange.getIn().getHeader(DdbConstants.INDEX_NAME, String.class) != null) {

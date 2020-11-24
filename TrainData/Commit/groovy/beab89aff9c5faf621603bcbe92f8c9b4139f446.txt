@@ -1,2 +1,0 @@
- * @deprecated replaced by {@link ManagedConcurrentLinkedQueue}
-@Deprecated

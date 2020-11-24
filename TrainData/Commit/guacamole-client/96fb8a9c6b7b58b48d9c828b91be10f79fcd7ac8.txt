@@ -1,2 +1,0 @@
- b/extensions/guacamole-auth-header/src/main/java/org/apache/guacamole/auth/header/user/AuthenticatedUser.java
-package org.apache.guacamole.auth.header.user;

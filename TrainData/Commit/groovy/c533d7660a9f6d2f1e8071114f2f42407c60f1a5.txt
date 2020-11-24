@@ -1,6 +1,0 @@
-            MetaMethod transformedMetaMethod = CallSiteHelper.transformMetaMethod(this, method, MetaClassHelper.convertToTypeArray(arguments), MetaClassImpl.class);
-            return transformedMetaMethod.doMethodInvoke(object, arguments);
-        // executing the setter method
-
-            MetaMethod transformedMetaMethod = CallSiteHelper.transformMetaMethod(this, method, MetaClassHelper.convertToTypeArray(arguments), MetaClassImpl.class);
-            transformedMetaMethod.doMethodInvoke(object, arguments);

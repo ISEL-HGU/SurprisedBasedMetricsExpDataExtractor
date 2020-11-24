@@ -1,7 +1,0 @@
- * More details about such ranges in Maven, can be found
- * {@link https://cwiki.apache.org/confluence/display/MAVENOLD/DependencyMediationandConflictResolution#DependencyMediationandConflictResolution-DependencyVersionRanges here}
-        return parsedRange != null && parsedRange.accepts(javaVersion);
-        return parsedRange != null && parsedRange.accepts(valToCompare);
-            return value != null
-                    && (this.lowerBound == null || (this.lowerInclusive ? value.isGreaterThanOrEqual(lowerBound) : value.isGreaterThan(lowerBound)))
-                    && (this.upperBound == null || (this.upperInclusive ? value.isLessThanOrEqual(upperBound) : value.isLessThan(upperBound)));

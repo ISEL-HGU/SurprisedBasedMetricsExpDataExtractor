@@ -1,2 +1,0 @@
-import org.apache.camel.CamelContext;
-    public ManagedSuspendableRoute(CamelContext context, Route route) {

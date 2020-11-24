@@ -1,6 +1,0 @@
-    public TarIterator(Message inputMessage, InputStream inputStream) {
-        return allowEmptyDirectory;
-    }
-    public void setAllowEmptyDirectory(boolean allowEmptyDirectory) {
-        this.allowEmptyDirectory = allowEmptyDirectory;
-    }

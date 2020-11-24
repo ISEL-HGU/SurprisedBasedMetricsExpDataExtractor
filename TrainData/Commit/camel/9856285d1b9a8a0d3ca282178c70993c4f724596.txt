@@ -1,2 +1,0 @@
-        if (cachedBoxClient == null && configuration != null) {
-            cachedBoxClient = BoxClientHelper.createBoxClient(configuration);

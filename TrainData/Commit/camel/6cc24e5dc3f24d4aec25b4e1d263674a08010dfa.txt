@@ -1,1 +1,0 @@
-        MyBean myBean = new MyBean(hello, "Bye");

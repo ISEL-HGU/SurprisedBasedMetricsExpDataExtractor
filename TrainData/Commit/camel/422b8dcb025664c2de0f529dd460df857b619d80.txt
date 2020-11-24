@@ -1,5 +1,0 @@
-import static org.apache.camel.component.olingo4.api.impl.Olingo4Helper.getContentTypeHeader;
-                } else if (property.hasCollectionValue()) {
-                    response = (T)property.getCollectionValue();
-                    } else if (functionProperty.hasCollectionValue()) {
-                        response = (T)functionProperty.getCollectionValue();

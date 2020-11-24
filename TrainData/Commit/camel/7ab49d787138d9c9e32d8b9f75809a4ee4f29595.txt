@@ -1,4 +1,0 @@
-import org.apache.camel.support.service.ServiceSupport;
-public class InfinispanManager extends ServiceSupport {
-    public void doStart() throws Exception {
-    public void doStop() throws Exception {

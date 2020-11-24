@@ -1,2 +1,0 @@
-        this.download(src, dest, l, null);
-        this.upload(src, dest, l, null);

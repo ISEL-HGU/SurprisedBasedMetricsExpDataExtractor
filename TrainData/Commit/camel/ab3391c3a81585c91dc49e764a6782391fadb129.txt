@@ -1,3 +1,0 @@
-    private MongoClient mongoConnection;
-    public MongoClient getMongoConnection() {
-    public void setMongoConnection(MongoClient mongoConnection) {

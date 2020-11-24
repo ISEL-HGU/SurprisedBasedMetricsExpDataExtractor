@@ -1,7 +1,0 @@
-        if (transactionTemplate.getPropagationBehavior() != TransactionDefinition.PROPAGATION_REQUIRES_NEW 
-            && exchange.getUnitOfWork() != null 
-            && exchange.getUnitOfWork().isTransactedBy(transactionKey)) {
-            if (exchange.getUnitOfWork() != null) {
-            }
-            if (exchange.getUnitOfWork() != null) {
-            }

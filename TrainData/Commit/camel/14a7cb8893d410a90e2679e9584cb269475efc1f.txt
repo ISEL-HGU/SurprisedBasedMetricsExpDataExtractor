@@ -1,5 +1,0 @@
-        currentShutdownTaskFuture = getExecutorService().submit(new ShutdownTask(context, routesOrdered, timeout, timeUnit, suspendOnly, abortAfterTimeout, timeoutOccurred, isLogInflightExchangesOnTimeout()));
-        private final boolean logInflightExchangesOnTimeout;
-                            boolean suspendOnly, boolean abortAfterTimeout, AtomicBoolean timeoutOccurred, boolean logInflightExchangesOnTimeout) {
-            this.logInflightExchangesOnTimeout = logInflightExchangesOnTimeout;
-                        logInflightExchanges(context, routes, logInflightExchangesOnTimeout);

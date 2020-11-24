@@ -1,5 +1,0 @@
-import org.apache.camel.spi.AsEndpointUri;
-    public RouteDefinition from(@AsEndpointUri String uri) {
-    public RouteDefinition from(@AsEndpointUri String... uris) {
-    public InterceptFromDefinition interceptFrom(@AsEndpointUri final String uri) {
-    public InterceptSendToEndpointDefinition interceptSendToEndpoint(@AsEndpointUri final String uri) {

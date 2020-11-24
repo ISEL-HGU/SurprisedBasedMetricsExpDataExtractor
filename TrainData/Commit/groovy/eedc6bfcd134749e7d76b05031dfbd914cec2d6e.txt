@@ -1,9 +1,0 @@
-     * @see #with(Object, Closure)
-    public static <T,U> T identity(
-            @DelegatesTo.Target("self") U self,
-            @DelegatesTo(value=DelegatesTo.Target.class,
-                    target="self",
-                    strategy=Closure.DELEGATE_FIRST)
-            @ClosureParams(FirstParam.class)
-                    Closure<T> closure) {
-     * self reference. For example, the following method calls to the append()

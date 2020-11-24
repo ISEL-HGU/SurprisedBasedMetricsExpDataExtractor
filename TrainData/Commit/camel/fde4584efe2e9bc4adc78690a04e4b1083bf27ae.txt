@@ -1,1 +1,0 @@
-            updateRequest.doc((String) document, XContentFactory.xContent((String) document));

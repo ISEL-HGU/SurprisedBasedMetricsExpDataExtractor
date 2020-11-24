@@ -1,4 +1,0 @@
-		context.performNonSelectingQuery(q1);
-		// TODO: new template render doesn't throw expetion in this case
-		/*
-		*/

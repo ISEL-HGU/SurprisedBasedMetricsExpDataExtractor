@@ -1,4 +1,0 @@
-    GeneratorController getCustomModeController() {
-        return controllers.get(ADVANCED_MODE);
-    }
-

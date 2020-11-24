@@ -1,9 +1,0 @@
-    protected final OptimisedTypeConverter optimisedTypeConverter = new OptimisedTypeConverter();
-            if (boolean.class == type) {
-        // use the optimised core converter first
-        Object result = optimisedTypeConverter.convertTo(type, exchange, value);
-        if (result != null) {
-            log.trace("Using optimised converter to convert: {} -> {}", type, value.getClass());
-            return result;
-        }
-

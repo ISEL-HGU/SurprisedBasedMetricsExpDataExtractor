@@ -1,3 +1,0 @@
-        boolean startsWithSlash = false;
-        } else if (text.startsWith("'") || text.startsWith("\"") || (startsWithSlash = text.startsWith("/"))) {
-            if (startsWithSlash) { // the slashy string can span rows, so we have to remove CR for it

@@ -1,4 +1,0 @@
-        mock.expectedHeaderReceived(Exchange.INTERCEPTED_ENDPOINT, "seda://foo");
-        assertTrue(exchange.getFromEndpoint().getEndpointUri().startsWith("file://target/intercept"));
-                interceptSendToEndpoint("seda:foo").to("mock:foo");
-                    .to("seda:foo");

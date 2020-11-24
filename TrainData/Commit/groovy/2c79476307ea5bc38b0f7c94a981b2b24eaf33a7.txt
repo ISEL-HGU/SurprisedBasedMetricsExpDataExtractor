@@ -1,7 +1,0 @@
-import static org.codehaus.groovy.syntax.Types.COMPARE_IDENTICAL;
-import static org.codehaus.groovy.syntax.Types.COMPARE_NOT_IDENTICAL;
-        if (op == COMPARE_NOT_IDENTICAL || op == COMPARE_IDENTICAL) {
-            return boolean_TYPE;
-        }
-
-                // because of type inference, we must perform an additional check if the right expression

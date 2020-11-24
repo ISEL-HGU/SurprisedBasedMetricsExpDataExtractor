@@ -1,4 +1,0 @@
-    private static final String DIALOG_TITLE = "Db Import Result";
-        if(dbLoadResultDialog == null) {
-            dbLoadResultDialog = new DbLoadResultDialog(DIALOG_TITLE);
-        }

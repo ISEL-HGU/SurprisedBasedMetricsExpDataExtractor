@@ -1,2 +1,0 @@
- b/cayenne-velocity/src/main/java/org/apache/cayenne/velocity/VelocitySQLTemplateProcessor.java
-import org.apache.cayenne.template.SQLTemplateRenderingUtils;

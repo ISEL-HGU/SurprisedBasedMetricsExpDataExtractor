@@ -1,1 +1,0 @@
-        GetMethod getMethod = new GetMethod("https://freegeoip.io/json/");

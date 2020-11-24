@@ -1,9 +1,0 @@
-import static org.apache.camel.component.microprofile.metrics.MicroProfileMetricsHelper.findMetric;
-        return metricRegistry -> {
-            Tag[] tagArray = tags.toArray(new Tag[0]);
-            SimpleGauge existing = findMetric(metricRegistry, metadata.getName(), SimpleGauge.class, tags);
-            if (existing == null) {
-                return metricRegistry.register(metadata, new SimpleGauge(), tagArray);
-            }
-            return existing;
-        };

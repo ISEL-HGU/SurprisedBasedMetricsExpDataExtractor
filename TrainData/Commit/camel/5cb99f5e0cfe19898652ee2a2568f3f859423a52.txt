@@ -1,5 +1,0 @@
-            for (Object o : c) {
-                String object = (String) o;
-        DeleteMessageResult result = amazonSQS.deleteMessage(request);
-        ListQueuesResult result = amazonSQS.listQueues(request);
-                    mav.withStringValue(value.toString());

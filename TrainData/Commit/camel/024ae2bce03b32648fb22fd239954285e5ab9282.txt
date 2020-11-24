@@ -1,5 +1,0 @@
-import org.apache.camel.spi.BeanProxyFactory;
-    protected BeanProxyFactory createBeanProxyFactory() {
-        return new BeanProxyFactoryResolver().resolve(this);
-    }
-

@@ -1,9 +1,0 @@
-import org.apache.camel.CamelContext;
-import org.apache.camel.ExtendedCamelContext;
-import org.apache.camel.spi.BeanIntrospection;
-import org.apache.camel.support.ObjectHelper;
-                                             CamelContext camelContext,
-            Class<?> clazz = camelContext.getClassResolver().resolveClass("org.apache.camel.component.zookeepermaster.group.internal.osgi.OsgiManagedGroupFactory");
-                Object instance = ObjectHelper.newInstance(clazz);
-                BeanIntrospection beanIntrospection = camelContext.adapt(ExtendedCamelContext.class).getBeanIntrospection();
-                beanIntrospection.setProperty(camelContext, instance, "classLoader", loader);

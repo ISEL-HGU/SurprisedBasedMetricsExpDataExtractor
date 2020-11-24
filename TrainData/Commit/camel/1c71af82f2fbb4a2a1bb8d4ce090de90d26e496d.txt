@@ -1,2 +1,0 @@
-            String prefix = nsPrefix.equals("xmlns") ? nsPrefix : "xmlns:"  nsPrefix;
-            documentElement.setAttribute(prefix, namespaces.get(nsPrefix));

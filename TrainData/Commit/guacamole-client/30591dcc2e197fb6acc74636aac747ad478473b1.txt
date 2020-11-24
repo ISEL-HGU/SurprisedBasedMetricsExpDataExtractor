@@ -1,5 +1,0 @@
-import org.apache.guacamole.form.PasswordField;
-    
-    private static final String CHALLENGE_RESPONSE_PARAM = "radisuChallenge";
-        Field radiusResponseField = new PasswordField(CHALLENGE_RESPONSE_PARAM);
-        String challengeResponse = request.getParameter(CHALLENGE_RESPONSE_PARAM);

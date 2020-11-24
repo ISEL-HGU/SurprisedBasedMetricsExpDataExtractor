@@ -1,2 +1,0 @@
-                    LOG.debug("Database {} doesn't exist. Creating it...", dataBaseName);
-                    connection.createDatabase(dataBaseName);

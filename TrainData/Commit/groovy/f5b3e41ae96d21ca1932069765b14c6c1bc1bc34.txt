@@ -1,1 +1,0 @@
-     * TODO In order to distinguish GenericsType with same name(See GROOVY-8409), we should add a property to keep the declaring class full name.

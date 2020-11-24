@@ -1,3 +1,0 @@
-        private Long defaultReplayId;
-        public Long getDefaultReplayId() {
-        public void setDefaultReplayId(Long defaultReplayId) {

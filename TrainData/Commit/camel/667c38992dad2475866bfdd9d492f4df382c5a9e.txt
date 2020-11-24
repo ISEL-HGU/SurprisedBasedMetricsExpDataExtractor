@@ -1,6 +1,0 @@
-                    if (ese.getExchange().getProperties().containsKey(MANAGED_SPAN_PROPERTY)) {
-                        parent = (SpanManager.ManagedSpan)
-                                ese.getExchange().getProperty(MANAGED_SPAN_PROPERTY);
-                    }
-                exchange.setProperty(MANAGED_SPAN_PROPERTY, spanManager.activate(span));
-                    exchange.setProperty(MANAGED_SPAN_PROPERTY, null);

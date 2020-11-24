@@ -1,1 +1,0 @@
-            if (java.util.List.class.getName().equals(collectionType) || java.util.Collection.class.getName().equals(collectionType)) {

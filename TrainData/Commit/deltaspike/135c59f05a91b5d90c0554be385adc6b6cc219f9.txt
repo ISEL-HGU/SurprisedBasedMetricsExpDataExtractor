@@ -1,2 +1,0 @@
-     * @return if {@code true} a Map will be converted to a TabularData with a CompositeData entry,
-     *         if {@code false} the map will be returned directly.

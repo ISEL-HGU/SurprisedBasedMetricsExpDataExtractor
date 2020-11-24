@@ -1,2 +1,0 @@
-            // add the support: snmp walk (use snmp4j GET_NEXT)
-            return new SnmpProducer(this, this.type);

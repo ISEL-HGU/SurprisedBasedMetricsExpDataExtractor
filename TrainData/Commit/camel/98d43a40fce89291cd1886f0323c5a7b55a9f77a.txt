@@ -1,2 +1,0 @@
-        DeleteUserResult res = new DeleteUserResult();
-        return res;

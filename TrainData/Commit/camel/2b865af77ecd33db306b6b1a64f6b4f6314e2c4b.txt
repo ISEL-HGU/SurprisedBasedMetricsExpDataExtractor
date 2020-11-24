@@ -1,2 +1,0 @@
-import org.apache.camel.model.dataformat.GrokDataFormat;
-        map.put(GrokDataFormat.class, GrokDataFormatReifier::new);

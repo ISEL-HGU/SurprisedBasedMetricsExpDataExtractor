@@ -1,2 +1,0 @@
-                if (radix==10 && (value.compareTo(MAX_INTEGER) > 0 || value.compareTo(MIN_INTEGER) < 0) ) {
-                if (radix==10 && (value.compareTo(MAX_LONG) > 0 || value.compareTo(MIN_LONG) < 0) ) {

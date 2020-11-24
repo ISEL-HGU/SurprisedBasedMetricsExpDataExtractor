@@ -1,4 +1,0 @@
-    /**
-     * Default Existing File Move Strategy
-     * @return the default implementation for sftp component
-     */

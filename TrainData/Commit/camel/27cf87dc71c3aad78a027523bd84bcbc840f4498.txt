@@ -1,3 +1,0 @@
-        Object drainToCollection = null;
-            drainToCollection = headers.get(HazelcastConstants.DRAIN_TO_COLLECTION);
-            this.drainTo((Collection) drainToCollection, exchange);

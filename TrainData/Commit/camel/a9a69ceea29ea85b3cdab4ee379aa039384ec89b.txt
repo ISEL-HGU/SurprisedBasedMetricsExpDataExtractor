@@ -1,4 +1,0 @@
-import org.apache.camel.ExtendedCamelContext;
-import org.apache.camel.spi.BeanIntrospection;
-                BeanIntrospection beanIntrospection = getEndpoint().getCamelContext().adapt(ExtendedCamelContext.class).getBeanIntrospection();
-                beanIntrospection.setProperty(getEndpoint().getCamelContext(), mail, "peek", true);

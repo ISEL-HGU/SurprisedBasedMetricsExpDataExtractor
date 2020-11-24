@@ -1,5 +1,0 @@
-        private Boolean chunkedEncodingDisabled = false;
-        public Boolean getChunkedEncodingDisabled() {
-            return chunkedEncodingDisabled;
-        public void setChunkedEncodingDisabled(Boolean chunkedEncodingDisabled) {
-            this.chunkedEncodingDisabled = chunkedEncodingDisabled;

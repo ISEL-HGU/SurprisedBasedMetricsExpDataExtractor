@@ -1,3 +1,0 @@
-    
-        return encodeHttpURI(s);
-        return encodeHttpURI(s, checkRaw);

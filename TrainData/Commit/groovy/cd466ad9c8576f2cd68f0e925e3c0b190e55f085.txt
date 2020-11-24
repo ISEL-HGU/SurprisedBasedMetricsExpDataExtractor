@@ -1,3 +1,0 @@
-    public ConstructorCallExpression popEnclosingConstructorCall() {
-    public ConstructorCallExpression getEnclosingConstructorCall() {
-    public List<ConstructorCallExpression> getEnclosingConstructorCalls() {

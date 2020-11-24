@@ -1,3 +1,0 @@
-            if (LOG.isDebugEnabled()) {
-                LOG.debug("Exchange published to {} subscriptions for the stream {}: {}", subs.size(), name, data.getItem());
-            }

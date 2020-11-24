@@ -1,9 +1,0 @@
-            String key = endpoint.getEndpointUri();
-            boolean cached = consumers.containsKey(key);
-            if (!singleton || !cached) {
-                    // stop and shutdown non-singleton/non-cached consumers as we should not leak resources
-                    if (!singleton) {
-                        LOG.debug("Released PollingConsumer: {} is stopped as consumer is not singleton", endpoint);
-                    } else {
-                        LOG.debug("Released PollingConsumer: {} is stopped as consumer cache is full", endpoint);
-                    }

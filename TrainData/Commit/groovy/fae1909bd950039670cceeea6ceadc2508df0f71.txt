@@ -1,4 +1,0 @@
-    private static final MetaClass[] EMPTY_METACLASS_ARRAY = new MetaClass[0];
-    private static final MetaClassRegistryChangeEventListener[] EMPTY_METACLASSREGISTRYCHANGEEVENTLISTENER_ARRAY = new MetaClassRegistryChangeEventListener[0];
-            return ret.toArray(EMPTY_METACLASSREGISTRYCHANGEEVENTLISTENER_ARRAY);
-        final MetaClass[] refs = metaClassInfo.toArray(EMPTY_METACLASS_ARRAY);

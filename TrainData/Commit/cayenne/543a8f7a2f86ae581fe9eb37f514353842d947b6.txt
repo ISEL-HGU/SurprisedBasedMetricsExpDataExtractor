@@ -1,2 +1,0 @@
-    static ListBuilder<CommitLogListener> contributeListeners(Binder binder) {
-     * Starts an extension module builder to add listeners and/or other customizations for {@link CommitLogModule}.

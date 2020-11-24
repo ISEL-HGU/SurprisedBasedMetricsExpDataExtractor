@@ -1,2 +1,0 @@
-import org.apache.camel.spi.Metadata;
-import org.apache.camel.support.ResourceHelper;

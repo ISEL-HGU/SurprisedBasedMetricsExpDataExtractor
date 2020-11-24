@@ -1,6 +1,0 @@
-            if (selectedElement.isIncludeColumn() || selectedElement.isExcludeColumn()) {
-                DbImportTreeNode node = targetTree.findNode(targetTree.getRootNode(), (DbImportTreeNode) selectedElement.getParent(), 0);
-                if(node != null && node.isExcludeTable()) {
-                    return false;
-                }
-            }

@@ -1,9 +1,0 @@
-                // This can happen the very first time we check the existence
-                // or some iterators may return true for hasNext() but then null in next()
-                    doDone(result.get(), true);
-                // some iterators may return true for hasNext() but then null in next()
-                if (pair == null && !hasNext) {
-                    doDone(result.get(), true);
-                    return;
-                }
-                Exchange exchange = pair.getExchange();

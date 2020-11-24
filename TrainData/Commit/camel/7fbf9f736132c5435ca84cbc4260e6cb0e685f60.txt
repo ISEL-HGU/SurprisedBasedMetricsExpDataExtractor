@@ -1,1 +1,0 @@
-    static final Version VERSION = new Version(1, 0, 5, "", "io.micrometer", "micrometer-core");

@@ -1,2 +1,0 @@
-            writeConverters(key, "Loader", value);
-                    writer.append(fqn).append("Loader\n");

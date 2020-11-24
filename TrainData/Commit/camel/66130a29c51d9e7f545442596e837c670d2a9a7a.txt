@@ -1,1 +1,0 @@
-        StompEndpoint endpoint = new StompEndpoint(uri, this, config, remaining);

@@ -1,3 +1,0 @@
-        writer.write("dswh.init('");
-        writer.writeText(windowId, null);
-        writer.write("','"

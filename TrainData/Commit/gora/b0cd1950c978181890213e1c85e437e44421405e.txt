@@ -1,3 +1,0 @@
-      while (!buffer.isEmpty()) {
-        Mutation m = buffer.poll();
-    bufMutator.flush();

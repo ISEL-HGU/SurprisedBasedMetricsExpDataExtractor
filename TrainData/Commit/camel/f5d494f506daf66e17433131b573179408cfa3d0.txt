@@ -1,5 +1,0 @@
-  protected DataFormat doCreateDataFormat(CamelContext camelContext) {
-    return super.doCreateDataFormat(camelContext);
-  }
-
-  @Override

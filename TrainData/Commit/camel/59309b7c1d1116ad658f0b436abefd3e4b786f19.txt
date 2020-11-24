@@ -1,6 +1,0 @@
-import static org.apache.camel.tools.apt.PropertyPlaceholderGenerator.generatePropertyPlaceholderDefinitionsHelper;
-            generatePropertyPlaceholderDefinitionsHelper(processingEnv, roundEnv, propertyPlaceholderDefinitions);
-        PropertyPlaceholderGenerator.generatePropertyPlaceholderProviderSource(processingEnv, parent, def, fqnDef, cn, fqn, options);
-            PropertyPlaceholderGenerator.generatePropertyPlaceholderProviderSource(processingEnv, parent, def, fqnDef, cn, fqn, options);
-    public static final class EipModel {
-    public static final class EipOption {

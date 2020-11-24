@@ -1,4 +1,0 @@
-    public RibbonServiceDefinition(String name, String host, int port, ServiceHealth health) {
-        this(name, host, port, null, health);
-    public RibbonServiceDefinition(String name, String host, int port, Map<String, String> meta, ServiceHealth health) {
-        this.health = health;

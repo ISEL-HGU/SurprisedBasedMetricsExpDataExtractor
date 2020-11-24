@@ -1,1 +1,0 @@
-        Writer buffer = new StringBuilderWriter(calcInitialCapacity());

@@ -1,1 +1,0 @@
-                LOG.warn("Connection to XMPP server failed. Will try to reconnect later again.", e);

@@ -1,2 +1,0 @@
-    
-    String RESPONSE_HTTP_HEADERS = "responseHttpHeaders";

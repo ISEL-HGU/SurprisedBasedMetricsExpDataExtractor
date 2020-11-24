@@ -1,3 +1,0 @@
-        ignore.add("org.infinispan");
-        ignore.add("org.jboss.logging");
-        ignore.add("org.jboss.marshalling");

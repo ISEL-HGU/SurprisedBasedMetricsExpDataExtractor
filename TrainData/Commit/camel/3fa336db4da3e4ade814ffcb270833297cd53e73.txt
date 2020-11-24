@@ -1,2 +1,0 @@
-        int size = properties.size();
-        rc = properties.size() != size;

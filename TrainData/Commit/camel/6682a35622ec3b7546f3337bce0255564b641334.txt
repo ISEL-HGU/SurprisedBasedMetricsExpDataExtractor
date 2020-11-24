@@ -1,7 +1,0 @@
-import org.apache.zookeeper.KeeperException;
-        } catch (KeeperException.NoNodeException e) {
-            LOGGER.debug("Failed to get get master because node '{}' does not yet exist (error: '{}')", configuration.getBasePath(), e.getMessage());
-            return Optional.empty();
-        } catch (KeeperException.NoNodeException e) {
-            LOGGER.debug("Failed to get members because node '{}' does not yet exist (error: '{}')", configuration.getBasePath(), e.getMessage());
-            return Collections.emptyList();

@@ -1,4 +1,0 @@
-import org.apache.deltaspike.core.api.provider.BeanManagerProvider;
-        // add spec expected attributes
-        unitProperties.put("javax.persistence.bean.manager", BeanManagerProvider.getInstance().getBeanManager());
-

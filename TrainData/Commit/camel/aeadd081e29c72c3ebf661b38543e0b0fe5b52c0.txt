@@ -1,1 +1,0 @@
-        if (configuration.getTopicArn() == null && configuration.isAutoCreateTopic()) {

@@ -1,8 +1,0 @@
-        if (definition.getCompletionFromBatchConsumer() != null && definition.getCompletionFromBatchConsumer()
-                && definition.getDiscardOnAggregationFailure() != null && definition.getDiscardOnAggregationFailure()) {
-            throw new IllegalArgumentException("Cannot use both completionFromBatchConsumer and discardOnAggregationFailure on: "  definition);
-        }
-
-        if (definition.getDiscardOnAggregationFailure() != null) {
-            answer.setDiscardOnAggregationFailure(definition.getDiscardOnAggregationFailure());
-        }

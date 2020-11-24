@@ -1,8 +1,0 @@
-
-import org.apache.camel.BindToRegistry;
-    @BindToRegistry("customClient")
-    private CustomClient client = new CustomClient();
-    
-    @BindToRegistry("customClientFactory")
-    private CustomClientFactory clientFactory = new CustomClientFactory();
-    

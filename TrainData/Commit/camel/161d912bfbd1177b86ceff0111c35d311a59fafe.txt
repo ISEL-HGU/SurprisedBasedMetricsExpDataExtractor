@@ -1,5 +1,0 @@
-import org.apache.camel.util.IntrospectionSupport;
-        IntrospectionSupport.getProperties(configuration, parameters, null,
-                false);
-                IntrospectionSupport.getProperties(entry.getValue(),
-                        parameters, null, false);

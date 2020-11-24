@@ -1,1 +1,0 @@
-        out.println(stringEscape.unescapeJava("\tLog Mask: "  row.get("logMask")));

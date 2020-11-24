@@ -1,2 +1,0 @@
-import org.apache.gora.flink.PersistentType;
-    Persistent, java.io.Externalizable, PersistentType {

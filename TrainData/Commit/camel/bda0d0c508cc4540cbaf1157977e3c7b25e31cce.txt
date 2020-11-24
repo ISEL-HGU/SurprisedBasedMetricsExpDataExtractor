@@ -1,3 +1,0 @@
-import com.amazonaws.services.simpledb.AbstractAmazonSimpleDB;
-public class AmazonSDBClientMock extends AbstractAmazonSimpleDB {
-        super();

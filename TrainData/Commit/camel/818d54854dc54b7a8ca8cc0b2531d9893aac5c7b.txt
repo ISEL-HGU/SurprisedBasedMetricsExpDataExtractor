@@ -1,5 +1,0 @@
-            // set that as the hdfs configuration's classloader
-            conf.setClassLoader(cl);
-                LOG.debug("Successfully loaded class: {}", fileSystems.get(key) );
-                LOG.debug("Successfully got uri: {} from FileSystem Object", uri );
-            LOG.debug(e.getMessage(), e);

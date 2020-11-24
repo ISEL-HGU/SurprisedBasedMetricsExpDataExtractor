@@ -1,8 +1,0 @@
-                    jdbcTemplate.execute(getTableExistsString());
-                            jdbcTemplate.execute(getCreateString());
-                            log.info("table created with query '{}'", getCreateString());
-                                    getCreateString(), e.getMessage());
-        return jdbcTemplate.queryForObject(getQueryString(), Integer.class, processorName, key);
-        return jdbcTemplate.update(getInsertString(), processorName, key, new Timestamp(System.currentTimeMillis()));
-        return jdbcTemplate.update(getDeleteString(), processorName, key);
-        return jdbcTemplate.update(getClearString(), processorName);

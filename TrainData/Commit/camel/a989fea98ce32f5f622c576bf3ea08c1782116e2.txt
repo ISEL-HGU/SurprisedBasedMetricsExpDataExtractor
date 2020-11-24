@@ -1,5 +1,0 @@
-     * If the zip file has more then one entry, the setting this option to true,
-     * allows to work with the splitter EIP, to split the data using an iterator
-     * If the zip file has more then one entry, setting this option to true,
-     * If the file name contains path elements, setting this option to true,
-     * example application/xml for data formats marshalling to XML, or

@@ -1,5 +1,0 @@
-    public static HttpSSLPostProcessor cacheAutoConfigurationValidatorPostProcessor(CamelContext context, HttpComponentConfiguration config) {
-    private void dummy() {
-        // checkstyle issue
-    }
-

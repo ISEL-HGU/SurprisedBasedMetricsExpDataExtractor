@@ -1,2 +1,0 @@
-                CatchStatement answer = new CatchStatement(catchParameter, statement(node.getNextSibling()));
-                    CatchStatement answer = new CatchStatement(catchParameter, statement(node.getNextSibling()));

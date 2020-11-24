@@ -1,5 +1,0 @@
-    @UriParam(label = "consumer,advanced",
-    private String handlers;
-
-    public String getHandlers() {
-    public void setHandlers(String handlers) {

@@ -1,4 +1,0 @@
-        if (matchOnUriPrefix && requestPath.toLowerCase(Locale.ENGLISH).startsWith(consumerPath.toLowerCase(Locale.ENGLISH))) {
-        
-        if (requestPath.equalsIgnoreCase(consumerPath)) {
-        

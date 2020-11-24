@@ -1,5 +1,0 @@
-import io.undertow.Handlers;
-        // allow for HTTP 1.1 continue
-        return Handlers.httpContinueRead(
-                // wrap with EagerFormParsingHandler to enable undertow form parsers
-                new EagerFormParsingHandler().setNext(this));

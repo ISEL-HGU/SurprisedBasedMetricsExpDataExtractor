@@ -1,3 +1,0 @@
-            if (body == null) {
-                return new Object[0];
-            }

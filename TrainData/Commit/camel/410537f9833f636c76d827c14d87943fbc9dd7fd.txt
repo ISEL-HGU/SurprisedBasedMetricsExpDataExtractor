@@ -1,9 +1,0 @@
-        // is it a getXXX method
-        if (name.startsWith("get") && name.length() >= 4 && Character.isUpperCase(name.charAt(3))) {
-            return params.length == 0 && !type.equals(Void.TYPE);
-        if (name.startsWith("is") && name.length() >= 3 && Character.isUpperCase(name.charAt(2))) {
-        return false;
-        // is it a getXXX method
-        if (name.startsWith("set") && name.length() >= 4 && Character.isUpperCase(name.charAt(3))) {
-            return params.length == 1 && (type.equals(Void.TYPE) || (allowBuilderPattern && method.getDeclaringClass().isAssignableFrom(type)));
-        return false;

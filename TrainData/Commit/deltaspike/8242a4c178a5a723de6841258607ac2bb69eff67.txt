@@ -1,8 +1,0 @@
-        ConfigSource[] configSources = getConfigProvider().getConfig().getConfigSources();
-        for (int i = configSources.length; i > 0; i--)
-            String value = configSources[i - 1].getPropertyValue(key);
-
-        ConfigSource[] configSources = getConfigProvider().getConfig().getConfigSources();
-        for (int i = configSources.length; i > 0; i--)
-            ConfigSource configSource = configSources[i - 1];
-

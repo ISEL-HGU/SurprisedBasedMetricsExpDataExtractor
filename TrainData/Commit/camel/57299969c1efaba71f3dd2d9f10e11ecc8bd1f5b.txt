@@ -1,2 +1,0 @@
-import org.apache.camel.impl.DefaultComponent;
-public class NagiosComponent extends DefaultComponent {

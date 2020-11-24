@@ -1,1 +1,0 @@
-    INFERRED_FUNCTION_INTERFACE_TYPE // used to store the function interface type information on an expression

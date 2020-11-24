@@ -1,4 +1,0 @@
-        PublishVersionResult res = new PublishVersionResult();
-        res.setFunctionName(publishVersionRequest.getFunctionName());
-        res.setDescription(publishVersionRequest.getDescription());
-        return res;

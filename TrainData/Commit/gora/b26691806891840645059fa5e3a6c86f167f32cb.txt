@@ -1,8 +1,0 @@
-    // Set the credentials for servers with restricted access
-    if (aerospikeParameters.getUsername() != null) {
-      policy.user = aerospikeParameters.getUsername();
-    }
-    if (aerospikeParameters.getPassword() != null) {
-      policy.password = aerospikeParameters.getPassword();
-    }
-

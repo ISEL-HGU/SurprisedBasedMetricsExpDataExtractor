@@ -1,8 +1,0 @@
-import com.amazonaws.auth.AWSCredentialsProvider;
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
-import com.amazonaws.services.simpledb.AmazonSimpleDBClientBuilder;
-            AWSCredentialsProvider credentialsProvider = new AWSStaticCredentialsProvider(credentials);
-                client = AmazonSimpleDBClientBuilder.standard().withClientConfiguration(clientConfiguration).withCredentials(credentialsProvider).build();
-                client = AmazonSimpleDBClientBuilder.standard().withCredentials(credentialsProvider).build();
-                client = AmazonSimpleDBClientBuilder.standard().build();
-                client = AmazonSimpleDBClientBuilder.standard().withClientConfiguration(clientConfiguration).build();

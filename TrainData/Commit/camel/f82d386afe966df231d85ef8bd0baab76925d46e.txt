@@ -1,4 +1,0 @@
-            Boolean quoting = factory.getQuoting();
-                if(quoting) {
-                    result = unquoteTokens(result, separators, quote);
-                }

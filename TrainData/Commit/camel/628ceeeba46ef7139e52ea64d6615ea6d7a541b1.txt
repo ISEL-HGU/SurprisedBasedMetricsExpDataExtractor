@@ -1,2 +1,0 @@
-import java.util.stream.Collectors;
-        return getGlobalOptions().stream().collect(Collectors.toMap(o -> o.getKey(), o -> o.getValue(), (o1, o2) -> o2));

@@ -1,5 +1,0 @@
-import com.datastax.driver.core.policies.ErrorAwarePolicy;
-    public final String errorAwarePolicy = "ErrorAwarePolicy";
-        case errorAwarePolicy:
-            loadBalancingPolicy = ErrorAwarePolicy.builder(new RoundRobinPolicy()).build();
-            break;

@@ -1,2 +1,0 @@
-import java.util.Stack;
-        final Stack<Element> elementStack = new Stack<Element>();

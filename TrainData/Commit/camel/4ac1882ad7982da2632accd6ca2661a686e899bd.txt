@@ -1,2 +1,0 @@
-    protected static final String SERVICE_URI_PROPERTY = "serviceUri";
-        endpointPropertyNames.add(SERVICE_URI_PROPERTY);

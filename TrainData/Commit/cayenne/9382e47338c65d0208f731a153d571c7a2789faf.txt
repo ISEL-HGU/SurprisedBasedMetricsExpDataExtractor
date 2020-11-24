@@ -1,4 +1,0 @@
-        // See CAY-2382
-        synchronized (getObjectStore()) {
-            out.defaultWriteObject();
-        }

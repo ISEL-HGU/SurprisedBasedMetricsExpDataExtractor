@@ -1,1 +1,0 @@
-            volume.setSize(in.getHeader(DigitalOceanHeaders.VOLUME_SIZE_GIGABYTES, Integer.class));

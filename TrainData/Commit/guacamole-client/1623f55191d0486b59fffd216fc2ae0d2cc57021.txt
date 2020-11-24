@@ -1,7 +1,0 @@
-import com.google.common.collect.Sets;
-    
-    @Override
-    public Set<String> getEffectiveUserGroups() {
-        return Sets.union(user.getEffectiveUserGroups(),
-                super.getEffectiveUserGroups());
-    }

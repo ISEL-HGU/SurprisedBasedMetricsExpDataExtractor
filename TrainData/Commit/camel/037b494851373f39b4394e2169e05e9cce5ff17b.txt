@@ -1,1 +1,0 @@
-     * HttpService to register with. Get this with osgi:reference in the blueprint file

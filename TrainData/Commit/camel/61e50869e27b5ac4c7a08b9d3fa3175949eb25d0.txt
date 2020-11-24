@@ -1,9 +1,0 @@
- b/components/camel-spring-cloud/src/main/java/org/apache/camel/spring/cloud/CamelSpringCloudLoadBalancerAutoConfiguration.java
-import org.apache.camel.spring.boot.cloud.CamelCloudAutoConfiguration;
-import org.apache.camel.spring.boot.cloud.CamelCloudConfigurationProperties;
-import org.apache.camel.spring.boot.cloud.CamelCloudServiceDiscovery;
-import org.apache.camel.spring.boot.cloud.CamelCloudServiceDiscoveryAutoConfiguration;
-@Conditional(CamelSpringCloudLoadBalancerAutoConfiguration.LoadBalancerCondition.class)
-public class CamelSpringCloudLoadBalancerAutoConfiguration {
-        return new CamelSpringCloudLoadBalancer(loadBalancerClient);
-        return new CamelSpringCloudDiscoveryClient("service-discovery-client", serviceDiscovery);

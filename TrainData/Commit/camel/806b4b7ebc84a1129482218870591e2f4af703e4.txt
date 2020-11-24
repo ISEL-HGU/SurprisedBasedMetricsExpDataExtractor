@@ -1,2 +1,0 @@
-import org.apache.camel.util.ObjectHelper;
-import org.apache.camel.util.StringHelper;

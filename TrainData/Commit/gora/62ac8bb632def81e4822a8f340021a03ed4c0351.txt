@@ -1,3 +1,0 @@
- * Custom Serializer extends TypeSerializer written to serialize and deserialize Gora data beans.
- *
- * @param <T> Persistent record type.

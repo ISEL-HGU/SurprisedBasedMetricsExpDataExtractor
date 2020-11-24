@@ -1,6 +1,0 @@
-                if (configuration.isUseXForwardHeaders()) {
-                    setupXForwardedHeaders(swagger, headers);
-                }
-                if (configuration.isUseXForwardHeaders()) {
-                    setupXForwardedHeaders(swagger, headers);
-                }

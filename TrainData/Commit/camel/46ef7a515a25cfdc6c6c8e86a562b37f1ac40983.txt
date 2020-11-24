@@ -1,9 +1,0 @@
-            String id = getDestinationAsString(jmsMessage.getJMSDestination());
-            if(id != null) {
-                id = jmsMessage.getJMSMessageID();
-            }
-            else {
-                id = super.createMessageId();
-            }
-        String result = null;
-        } else if (destination instanceof Queue) {

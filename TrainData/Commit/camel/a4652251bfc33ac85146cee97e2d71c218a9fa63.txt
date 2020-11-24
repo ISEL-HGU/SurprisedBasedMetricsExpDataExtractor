@@ -1,3 +1,0 @@
-    private final String operation;
-    private final String fault;
-    private final int code;

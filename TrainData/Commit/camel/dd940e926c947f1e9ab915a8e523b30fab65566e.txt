@@ -1,2 +1,0 @@
-import javax.annotation.Generated;
-@Generated(value = "org.apache.camel.maven.packaging.SpringBootAutoConfigurationMojo", date = "2017-04-19T08:03:41.545Z")

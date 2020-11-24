@@ -1,4 +1,0 @@
-import org.apache.cayenne.query.ObjectSelect;
-        List<?> parents = ObjectSelect.query(ReflexiveAndToOne.class, ReflexiveAndToOne.CHILDREN.contains(o2)).select(context);
-        parents = ObjectSelect.query(ReflexiveAndToOne.class, ReflexiveAndToOne.CHILDREN.contains(o1)).select(context);
-        List<ReflexiveAndToOne> children = ObjectSelect.query(ReflexiveAndToOne.class, ReflexiveAndToOne.TO_PARENT.eq(o1)).select(context);

@@ -1,2 +1,0 @@
-                try (InputStream inStream = new BufferedInputStream(new FileInputStream(reportFile));
-                     OutputStream outStream = new BufferedOutputStream(new FileOutputStream(outFile))) {

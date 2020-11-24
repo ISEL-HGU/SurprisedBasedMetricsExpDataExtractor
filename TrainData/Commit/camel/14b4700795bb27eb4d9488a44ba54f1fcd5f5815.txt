@@ -1,8 +1,0 @@
- b/tests/camel-itest-cdi/src/main/java/org/apache/camel/itest/cdi/MyRoutes.java
-import javax.enterprise.context.ApplicationScoped;
-@ApplicationScoped
-public class MyRoutes extends RouteBuilder {
-    private static final Logger LOG = LoggerFactory.getLogger(MyRoutes.class);
-    @Uri(value = "seda:a")
-    @EndpointInject(value = "mock:b")
-    @Uri(value = "seda:a")

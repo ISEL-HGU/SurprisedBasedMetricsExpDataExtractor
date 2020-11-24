@@ -1,6 +1,0 @@
-                if (weightA == null)
-                    weightA = 0;
-                if (weightB == null)
-                    weightB = 0;
-            // If connection weight is zero or negative, this host is disabled and should not be used.
-            if (connection.getConnectionWeight() < 1)

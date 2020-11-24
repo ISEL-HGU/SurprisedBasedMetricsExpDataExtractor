@@ -1,3 +1,0 @@
-import org.apache.cayenne.access.DataDomain;
-        boolean refresh = relationshipOwner.getObjectContext().getChannel() instanceof DataDomain;
-                new RelationshipQuery(relationshipOwner.getObjectId(), relationshipName, refresh));

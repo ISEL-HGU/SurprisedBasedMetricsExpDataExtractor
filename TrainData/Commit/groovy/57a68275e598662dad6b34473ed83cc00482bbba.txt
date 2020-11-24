@@ -1,9 +1,0 @@
-            addJavaOrGroovySource(new File(path));
-            addJavaOrGroovySource(file);
-    private void addJavaOrGroovySource(File file) {
-        if (file.getName().endsWith(".java"))
-            addJavaSource(file);
-        else
-            addSource(file);
-    }
-

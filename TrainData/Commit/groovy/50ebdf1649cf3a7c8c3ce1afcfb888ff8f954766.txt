@@ -1,5 +1,0 @@
-    private static final int SIG_ARRAY_LENGTH = 255;
-    private static String [] sig = new String [SIG_ARRAY_LENGTH];
-        if (numberOfArguments >= SIG_ARRAY_LENGTH) {
-                      "The max number of arguments is %s, actual got %s",
-                        SIG_ARRAY_LENGTH, numberOfArguments));

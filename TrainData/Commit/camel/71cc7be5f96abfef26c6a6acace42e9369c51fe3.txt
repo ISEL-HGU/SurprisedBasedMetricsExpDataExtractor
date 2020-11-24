@@ -1,6 +1,0 @@
-                    .process(e -> {
-                        throw new RuntimeCamelException("This is a forced exception to have health check monitor this failure (route=foo)"); 
-                    .process(e -> {
-                        throw new RuntimeCamelException("This is a forced exception to have health check monitor this failure (route=bar)");
-                    .process(e -> {
-                        Thread.sleep(1200);

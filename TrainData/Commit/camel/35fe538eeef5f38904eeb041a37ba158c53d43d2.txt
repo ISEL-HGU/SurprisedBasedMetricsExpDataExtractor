@@ -1,1 +1,0 @@
-                    if (responseContentType != null && ODATA_MIME_TYPE.matcher(responseContentType.getMimeType()).matches()) {

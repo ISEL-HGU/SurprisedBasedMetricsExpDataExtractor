@@ -1,3 +1,0 @@
-import java.io.Serializable;
-
-public abstract class _Embeddable1 implements Serializable {

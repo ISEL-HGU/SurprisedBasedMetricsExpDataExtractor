@@ -1,2 +1,0 @@
-import org.apache.camel.support.processor.DefaultMaskingFormatter;
-            MaskingFormatter formatter = routeContext.getCamelContext().getRegistry().lookupByNameAndType(MaskingFormatter.CUSTOM_LOG_MASK_REF, MaskingFormatter.class);

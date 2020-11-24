@@ -1,9 +1,0 @@
-            // Pull TLS configuration parameters from guacamole.properties
-            LocalEnvironment guacEnv = new LocalEnvironment();
-            String guacHome = guacEnv.getGuacamoleHome();
-            String caFile = confService.getRadiusCAFile();
-            String caPassword = confService.getRadiusCAPassword();
-            String keyFile = confService.getRadiusKeyFile();
-            String keyPassword = confService.getRadiusKeyPassword();
-            String innerProtocol = confService.getRadiusEAPTTLSInnerProtocol();
-

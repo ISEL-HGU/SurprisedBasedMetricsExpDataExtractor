@@ -1,2 +1,0 @@
-            throw new IOException(e.getMessage(), e);
-            throw new RuntimeException("SmppConnectionFactory: "  e.getMessage(), e);

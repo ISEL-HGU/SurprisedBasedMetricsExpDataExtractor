@@ -1,2 +1,0 @@
-import org.apache.cayenne.configuration.ConfigurationNode;
-        ConfigurationNode[] multiplyObjects = controller.getCurrentPaths();

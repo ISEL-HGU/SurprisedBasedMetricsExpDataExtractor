@@ -1,5 +1,0 @@
-        List<IHeaderMatcher> matchers = new ArrayList<IHeaderMatcher>(
-        (addDefaultLicenseMatchers ? Defaults.DEFAULT_MATCHERS.size() : 0)  licenseMatchers.size());
-            matchers.addAll(Defaults.DEFAULT_MATCHERS);
-            matchers.addAll(licenseMatchers);
-            matchers = new ArrayList<IHeaderMatcher>(licenseMatchers);

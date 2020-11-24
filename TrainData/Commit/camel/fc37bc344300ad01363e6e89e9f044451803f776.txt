@@ -1,2 +1,0 @@
- * Validates the payload of a message using NetworkNT JSON Schema library.
-     * To use a custom schema loader allowing for adding custom format validation. The default implementation will create a schema loader with draft v4 support.

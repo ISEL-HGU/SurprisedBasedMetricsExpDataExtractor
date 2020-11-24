@@ -1,2 +1,0 @@
-import org.apache.cayenne.log.Slf4jJdbcEventLogger;
-        binder.bind(JdbcEventLogger.class).to(Slf4jJdbcEventLogger.class);

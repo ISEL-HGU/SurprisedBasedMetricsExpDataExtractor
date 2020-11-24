@@ -1,7 +1,0 @@
-            List<? extends Expression> declarationExpressionList = declarationListStatement.getDeclarationExpressions();
-            return ClassNode.EMPTY_ARRAY;
-                    empties = Expression.EMPTY_ARRAY;
-            return GenericsType.EMPTY_ARRAY;
-        return null != insideParenLevel && insideParenLevel > 0;
-            return new Pair<>(token.getLine(), token.getCharPositionInLine()  1  token.getText().length());
-            return new Pair<>(token.getLine()  newLineCnt, stopTextLength - stopText.lastIndexOf('\n'));

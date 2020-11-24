@@ -1,2 +1,0 @@
-            throw new GroovyRuntimeException(
-                    "replaceNode() can only be used to replace a single node, but was applied to "  size()  " nodes");

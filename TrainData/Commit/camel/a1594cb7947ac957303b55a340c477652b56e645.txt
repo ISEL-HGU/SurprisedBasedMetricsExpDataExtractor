@@ -1,2 +1,0 @@
-        // TODO: Like ProcessorDefinitionHelper we want to avoid reflection
-

@@ -1,3 +1,0 @@
-    private final DefaultStyledDocument styledDocument;
-    private final StyleContext styleContext;
-    private final Style defaultStyle;

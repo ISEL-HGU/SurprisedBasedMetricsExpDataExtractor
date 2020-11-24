@@ -1,5 +1,0 @@
-                URL url = settings.getRelativeUrlResolver().getURL(descriptorURL, location);
-                try {
-                    file = new File(new URI(url.toExternalForm()));
-                } catch (URISyntaxException e) {
-                    file = new File(url.getPath());

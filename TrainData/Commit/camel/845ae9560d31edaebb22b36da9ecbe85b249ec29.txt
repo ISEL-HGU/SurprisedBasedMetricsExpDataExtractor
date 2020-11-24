@@ -1,3 +1,0 @@
-        if ("camel-as2".equals(artifactId)) {
-            return "camel-as2/camel-as2-component/src/main/docs";
-        } else if ("camel-box".equals(artifactId)) {

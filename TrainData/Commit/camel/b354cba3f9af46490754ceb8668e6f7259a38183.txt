@@ -1,2 +1,0 @@
- b/components/camel-spring-boot/src/main/java/org/apache/camel/spring/boot/SupervisingRouteControllerConfiguration.java
-package org.apache.camel.spring.boot;

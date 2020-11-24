@@ -1,5 +1,0 @@
-                final String[] dadConfs = depArtifact.getConfigurations();
-                if (dadConfs != null && dadConfs.length > 0) {
-                    if (!Arrays.asList(dadConfs).equals(Arrays.asList(md.getConfigurationsNames()))) {
-                        out.print(listToPrefixedString(dadConfs, " conf=\""));
-                    }

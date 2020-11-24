@@ -1,4 +1,0 @@
-    private static volatile ProjectStage projectStage;
-        ProjectStageProducer newProjectStageProducer = new ProjectStageProducer();
-        newProjectStageProducer.initProjectStage();
-        projectStageProducer = newProjectStageProducer;

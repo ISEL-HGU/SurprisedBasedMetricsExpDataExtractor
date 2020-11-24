@@ -1,8 +1,0 @@
-    
-    @Override
-    public void doStop() throws Exception {
-        if (kinesisFirehoseClient != null) {
-            kinesisFirehoseClient.shutdown();
-        }
-        super.doStop();
-    }

@@ -1,2 +1,0 @@
-    @UriParam(label = "advanced,tcp,timeout", defaultValue = "5000")
-    int readTimeout = 5000;

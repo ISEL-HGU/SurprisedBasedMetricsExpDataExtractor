@@ -1,1 +1,0 @@
-        Permissions effective = userContext.self().getEffectivePermissions();

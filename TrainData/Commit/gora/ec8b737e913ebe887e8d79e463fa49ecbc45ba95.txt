@@ -1,1 +1,0 @@
-   * Gets the job, initializes the localJobConf (the actual used to create a datastore)

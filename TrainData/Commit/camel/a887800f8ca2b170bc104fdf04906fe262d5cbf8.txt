@@ -1,3 +1,0 @@
-        // noop as we do a manual on-demand poll with GenericFilePollingConsumer
-        // noop as we do a manual on-demand poll with GenericFilePollingConsumer
-        // noop as we do a manual on-demand poll with GenericFilePollingConsumer

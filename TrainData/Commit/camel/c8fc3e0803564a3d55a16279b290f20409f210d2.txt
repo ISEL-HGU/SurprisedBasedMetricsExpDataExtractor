@@ -1,2 +1,0 @@
-    public void marshal(Exchange exchange, Object inputObject, OutputStream stream) throws IOException {
-    public Object unmarshal(Exchange exchange, InputStream stream) throws IOException {

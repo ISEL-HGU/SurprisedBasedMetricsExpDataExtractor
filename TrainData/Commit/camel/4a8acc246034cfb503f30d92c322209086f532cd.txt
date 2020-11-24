@@ -1,1 +1,0 @@
-    title = "IEC 60870 Server", consumerClass = ServerConsumer.class, label = "iot")

@@ -1,3 +1,0 @@
-import org.apache.cayenne.configuration.xml.XMLReaderProvider;
-import org.xml.sax.XMLReader;
-        binder.bind(XMLReader.class).toProviderInstance(new XMLReaderProvider(true)).withoutScope();

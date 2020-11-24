@@ -1,3 +1,0 @@
-        // the endpoint must be started before creating the consumer
-        ServiceHelper.startService(endpoint);
-

@@ -1,7 +1,0 @@
-    private ZkUtils zkUtils = null;
-        return zkUtils;
-    	zkUtils = ZkUtils.apply(
-    			zkConnection,
-                30000,
-                30000,
-                false);

@@ -1,4 +1,0 @@
-
-    public DropboxException(String message, Throwable cause) {
-        super(message, cause);
-    }

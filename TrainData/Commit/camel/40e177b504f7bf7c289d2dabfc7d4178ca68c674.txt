@@ -1,2 +1,0 @@
-                builder.addPropertyValue("serviceCallConfigurations", factoryBean.getServiceCallConfigurations());
-                builder.addPropertyValue("hystrixConfigurations", factoryBean.getHystrixConfigurations());

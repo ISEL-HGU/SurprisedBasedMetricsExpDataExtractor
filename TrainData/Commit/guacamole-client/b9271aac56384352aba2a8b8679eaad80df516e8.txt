@@ -1,7 +1,0 @@
-     * as configured with guacamole.properties.  The default
-     * behavior if not explicityly defined is to never 
-     * dereference them.
-     *     An integer value that maps to the JLDAP constants
-     *     for dereferencing - 0 is DEREF_NEVER, 1 is DEREF_SEARCHING,
-     *     2 is DEREF_FINDING, and 3 is DEREF_ALWAYS - as configured
-     *     in guacamole.properties.

@@ -1,3 +1,0 @@
-        parseUri(remaining, endpoint);
-    private void parseUri(String remaining, HipchatEndpoint endpoint) throws Exception {
-        String uri = URISupport.normalizeUri(remaining);

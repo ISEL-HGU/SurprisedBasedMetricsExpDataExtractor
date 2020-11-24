@@ -1,4 +1,0 @@
-    @Consume("direct:startBeanExpression")
-    @Consume("direct:startConstantExpression")
-    @Consume("direct:startHeaderExpression")
-    @Consume("direct:startMany")

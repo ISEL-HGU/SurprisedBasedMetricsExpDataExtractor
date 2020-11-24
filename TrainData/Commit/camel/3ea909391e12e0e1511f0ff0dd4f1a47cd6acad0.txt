@@ -1,3 +1,0 @@
-import org.apache.olingo.server.api.uri.UriResourceFunction;
-                UriResourceFunction uriResourceFunction = (UriResourceFunction)listResource.get(listResource.size() - 1);
-        } catch (Exception e) {

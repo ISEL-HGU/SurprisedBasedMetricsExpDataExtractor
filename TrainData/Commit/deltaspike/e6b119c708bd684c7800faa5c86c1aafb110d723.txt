@@ -1,3 +1,0 @@
-    @Inject
-    private EntityManager validEntityManager; //just needed, because we only flush in case of multiple entity-managers
-

@@ -1,3 +1,0 @@
-import org.apache.camel.support.PropertyBindingSupport;
-        
-        PropertyBindingSupport.bindProperties(endpoint.getCamelContext(), facade, copy);

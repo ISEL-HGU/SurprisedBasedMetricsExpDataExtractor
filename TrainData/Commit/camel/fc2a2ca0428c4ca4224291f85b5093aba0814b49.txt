@@ -1,8 +1,0 @@
-import com.amazonaws.auth.AWSCredentialsProvider;
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
-            AWSCredentialsProvider credentialsProvider = new AWSStaticCredentialsProvider(credentials);
-                client = AmazonDynamoDBClientBuilder.standard().withClientConfiguration(clientConfiguration).withCredentials(credentialsProvider).build();
-                client = AmazonDynamoDBClientBuilder.standard().withCredentials(credentialsProvider).build();
-                client = AmazonDynamoDBClientBuilder.standard().build();
-                client = AmazonDynamoDBClientBuilder.standard().withClientConfiguration(clientConfiguration).build();

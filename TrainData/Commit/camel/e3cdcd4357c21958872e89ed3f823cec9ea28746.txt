@@ -1,5 +1,0 @@
-import io.swagger.util.Json;
-        ObjectMapper mapper;
-
-                mapper = Json.mapper();
-                mapper = Yaml.mapper();

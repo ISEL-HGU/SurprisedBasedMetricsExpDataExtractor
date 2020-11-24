@@ -1,1 +1,0 @@
-@ConfigurationProperties(prefix = "camel.component.zookeeper.cluster.service")

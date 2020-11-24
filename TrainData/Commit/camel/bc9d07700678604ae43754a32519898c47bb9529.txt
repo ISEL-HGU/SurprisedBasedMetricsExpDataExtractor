@@ -1,7 +1,0 @@
-    @UriPath(label = "producer", description = "The operation to use", enums = "getVersions,getResources,"
-         "getGlobalObjects,getBasicInfo,getDescription,getSObject,createSObject,updateSObject,deleteSObject,"
-         "getSObjectWithId,upsertSObject,deleteSObjectWithId,getBlobField,query,queryMore,queryAll,search,apexCall,"
-         "recent,createJob,getJob,closeJob,abortJob,createBatch,getBatch,getAllBatches,getRequest,getResults,"
-         "createBatchQuery,getQueryResultIds,getQueryResult,getRecentReports,getReportDescription,executeSyncReport,"
-         "executeAsyncReport,getReportInstances,getReportResults,limits,approval,approvals,composite-tree,"
-         "composite-batch")

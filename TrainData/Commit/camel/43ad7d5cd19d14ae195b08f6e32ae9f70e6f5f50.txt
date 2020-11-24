@@ -1,2 +1,0 @@
-        RemoveUserFromGroupResult res = new RemoveUserFromGroupResult();
-        return res;

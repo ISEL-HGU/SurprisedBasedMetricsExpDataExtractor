@@ -1,6 +1,0 @@
-    protected final UndertowEndpoint endpoint;
-
-    protected final Exchange exchange;
-
-    protected final ClientRequest request;
-

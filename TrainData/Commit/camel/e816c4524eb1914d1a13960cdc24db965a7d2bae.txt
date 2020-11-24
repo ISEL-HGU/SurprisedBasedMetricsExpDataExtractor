@@ -1,6 +1,0 @@
-            if (multiline) {
-                return String.format("  %s: ", label);
-            } else {
-                return String.format(", %s: ", label);
-            }
-        } else if (style == OutputStyle.Tab) {

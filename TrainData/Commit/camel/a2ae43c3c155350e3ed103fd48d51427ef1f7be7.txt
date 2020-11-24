@@ -1,9 +1,0 @@
-            Document dom = XmlLineNumberParser.parseXml(is, text -> {
-                try {
-                    String after = getContext().resolvePropertyPlaceholders(text);
-                    if (!changed.get()) {
-                        changed.set(!text.equals(after));
-                    return after;
-                } catch (Exception e) {
-                    // ignore
-                    return text;

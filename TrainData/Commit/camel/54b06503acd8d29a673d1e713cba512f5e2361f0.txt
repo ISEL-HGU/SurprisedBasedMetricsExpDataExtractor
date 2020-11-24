@@ -1,4 +1,0 @@
-    private static final Pattern CURLY_BRACKET_ESCAPE = Pattern.compile("(\\{[a-zA-Z0-9]?)\\}");
-
-        final String escapedCurlyBrackets = CURLY_BRACKET_ESCAPE.matcher(escapedDollars).replaceAll("\\\\$1\\\\}");
-        final String escapedUrls = URL_ESCAPE.matcher(escapedCurlyBrackets).replaceAll("\\\\$1");

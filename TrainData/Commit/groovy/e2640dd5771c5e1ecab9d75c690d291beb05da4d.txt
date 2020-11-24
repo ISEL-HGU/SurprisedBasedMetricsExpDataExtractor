@@ -1,3 +1,0 @@
-                    return intValue();
-                    return longValue();
-        return parseIntFromTo(buffer, startIndex, endIndex);

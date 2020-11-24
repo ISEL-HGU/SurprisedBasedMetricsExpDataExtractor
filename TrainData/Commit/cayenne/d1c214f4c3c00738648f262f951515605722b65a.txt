@@ -1,8 +1,0 @@
-		if (name == null || name.length() == 0) {
-		}
-		if (aString == null || aString.length() == 0) {
-		}
-		if (className == null || className.length() == 0) {
-		}
-		if ((-1 == lastDot) || ((className.length() - 1) == lastDot)) {
-		}

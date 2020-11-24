@@ -1,8 +1,0 @@
-        return ctx;
-    }
-
-    /**
-     * Apply additional configuration to the context
-     */
-    protected void configure(SpringCamelContext ctx) {
-            configure(context);

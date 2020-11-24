@@ -1,8 +1,0 @@
-import org.apache.cxf.ext.logging.AbstractLoggingInterceptor;
-  
-            try {
-                return super.processResult(message, exchange, oi, resContext);
-            } catch (IllegalEmptyResponseException ex) {
-                //Camel does not strickly enforce returning a value when a value is required from the WSDL/contract
-                //Thus, we'll capture the exception raised and return a null
-                return null;

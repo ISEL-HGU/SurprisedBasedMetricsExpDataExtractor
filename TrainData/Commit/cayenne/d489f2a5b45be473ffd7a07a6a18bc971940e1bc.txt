@@ -1,1 +1,0 @@
-    public ClassGenerationAction getGenerator() {

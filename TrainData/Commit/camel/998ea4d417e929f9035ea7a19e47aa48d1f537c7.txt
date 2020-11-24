@@ -1,3 +1,0 @@
-            // need to use reflection to avoid a build error even when the
-            // sample source is not available
-            Class<?> clz = Class.forName("org.apache.olingo.sample.annotation.util.AnnotationSampleDataGenerator");

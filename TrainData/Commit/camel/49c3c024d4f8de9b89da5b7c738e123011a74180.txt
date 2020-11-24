@@ -1,4 +1,0 @@
-        String syntax = "";
-        if (originalSyntax.contains(":")) {
-            originalSyntax = after(originalSyntax, ":");
-        }

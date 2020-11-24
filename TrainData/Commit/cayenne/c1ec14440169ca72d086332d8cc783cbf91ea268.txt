@@ -1,4 +1,0 @@
-import org.apache.cayenne.modeler.graph.extension.GraphExtension;
-        ProjectModule.contributeExtensions(binder)
-                .add(InfoExtension.class)
-                .add(GraphExtension.class);

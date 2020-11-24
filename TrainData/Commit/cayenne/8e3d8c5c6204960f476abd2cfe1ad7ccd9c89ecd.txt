@@ -1,4 +1,0 @@
-import javax.swing.UIManager;
-import java.awt.Color;
-    private static final Color SELECTION_COLOR = UIManager.getColor("Table.selectionBackground");
-        this.selectionBackground = SELECTION_COLOR;

@@ -1,1 +1,0 @@
-        delegate.subList(fromIndex, toIndex  1).clear();

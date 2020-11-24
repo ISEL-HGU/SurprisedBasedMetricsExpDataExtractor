@@ -1,2 +1,0 @@
-        EmbeddedCacheService(Cache<String, String> cache) {
-        RemoteCacheService(RemoteCache<String, String> cache) {

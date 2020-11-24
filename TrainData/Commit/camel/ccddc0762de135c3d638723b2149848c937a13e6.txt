@@ -1,8 +1,0 @@
-        if (getNsqConfiguration().getSslContextParameters() != null) {
-            SslContext sslContext = new JdkSslContext(getNsqConfiguration().getSslContextParameters().createSSLContext(getCamelContext()), true, null);
-            nsqConfig.setSslContext(sslContext);
-
-        }
-        if (configuration.getMessageTimeout() > 0) {
-            nsqConfig.setMsgTimeout((int) configuration.getMessageTimeout());
-        }

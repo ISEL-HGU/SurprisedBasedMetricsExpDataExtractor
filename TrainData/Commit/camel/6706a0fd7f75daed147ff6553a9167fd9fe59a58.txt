@@ -1,7 +1,0 @@
- * <p>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p>
-
-    // SSLContext should not be part of the equals/hashCode contract
-        UndertowHostKey targetKey = (UndertowHostKey) target;
-        return answer;

@@ -1,1 +1,0 @@
-                    cellModel.setValueType(getCamelContext().getClassResolver().resolveClass(valueType));

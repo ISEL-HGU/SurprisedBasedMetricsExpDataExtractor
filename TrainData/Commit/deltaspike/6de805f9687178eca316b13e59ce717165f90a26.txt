@@ -1,2 +1,0 @@
- * &#064;InjectableResource(location="myfile.properties")
- * &#064;InjectableResource(location="config.xml")

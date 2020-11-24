@@ -1,1 +1,0 @@
-                queueUrl = "https://sqs."  configuration.getRegion()  "."  host  "/"

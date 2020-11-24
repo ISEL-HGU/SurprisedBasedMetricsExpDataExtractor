@@ -1,3 +1,0 @@
-        if (hasCustomIdAssigned()) {
-            throw new IllegalArgumentException("You can only set routeId one time per route.");
-        }

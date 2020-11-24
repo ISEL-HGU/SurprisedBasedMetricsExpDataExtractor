@@ -1,2 +1,0 @@
- * For uploading downloading and managing files folders groups collaborations
- * etc on box DOT com.

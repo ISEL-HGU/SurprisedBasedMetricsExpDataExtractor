@@ -1,3 +1,0 @@
-        if (result != null && result != ConstraintTarget.IMPLICIT) {
-                Exceptions.raise(IllegalStateException::new, "Unknown %s %s", ConstraintTarget.class.getSimpleName(),
-                    result);

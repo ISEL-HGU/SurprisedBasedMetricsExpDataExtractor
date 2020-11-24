@@ -1,9 +1,0 @@
-
-    protected CamelContext camelContext;
-    public CamelContext getCamelContext() {
-        return camelContext;
-        if (camelContext != null) {
-    protected abstract CamelContext createCamelContext();
-    protected void initCamelContext() throws Exception {
-        camelContext = createCamelContext();
-        postProcessCamelContext(camelContext);

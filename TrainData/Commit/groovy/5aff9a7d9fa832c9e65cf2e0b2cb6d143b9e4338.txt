@@ -1,2 +1,0 @@
-//            inferMethodReferenceType(call, receiver, argumentList);
-

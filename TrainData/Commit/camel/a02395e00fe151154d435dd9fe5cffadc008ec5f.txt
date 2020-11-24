@@ -1,7 +1,0 @@
-import org.apache.camel.component.olingo2.internal.Olingo2Constants;
-    private static final String RESPONSE_HTTP_HEADERS = "responseHttpHeaders";
-
-            public void onResponse(Object response, Map<String, String> responseHeaders) {
-                
-                // Add http response headers
-                exchange.getOut().setHeader(Olingo2Constants.PROPERTY_PREFIX  RESPONSE_HTTP_HEADERS, responseHeaders);

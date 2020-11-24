@@ -1,0 +1,94 @@
+usage: BugPatchCollector [-b] [-c <BIC csv file path>] [-d <data mode>]
+       [-e <End date>] [-g] [-h] -i <URI or URL> [-j <Jira project URL>]
+       [-k <Project Key>] [-l <Find coincident commit with label>] [-m
+       <Min lines of patch>] -o <directory> [-p <training data path>] [-s
+       <Start date>] [-t] [-x <Max lines of patch>]
+Collecting bug-patch program
+ -b,--bugIntroducingChange                                     If you want
+                                                               to get bug
+                                                               introducing
+                                                               changes,
+                                                               add this
+                                                               option
+ -c,--BugIntroducingChange csv file path <BIC csv file path>   Path of csv
+                                                               file
+ -d,--datamode <data mode>                                     data mode
+                                                               1: language
+                                                               model
+                                                               training
+                                                               dataset 2:
+                                                               defect
+                                                               prediction
+                                                               train and
+                                                               test
+                                                               dataset
+ -e,--endDate <End date>                                       end date
+ -g,--github                                                   When
+                                                               searching
+                                                               fix-commit,
+                                                               use
+                                                               GitHub-issu
+                                                               es with
+                                                               label name
+ -h,--help                                                     Help
+ -i,--input <URI or URL>                                       input type:
+                                                               URL(https:/
+                                                               /github.com
+                                                               /user/proje
+                                                               ct_name
+ -j,--jiraURL <Jira project URL>                               Jira issues
+                                                               URL
+                                                               (example:
+                                                               issues.apac
+                                                               he.org)
+ -k,--jiraProject <Project Key>                                Jira
+                                                               project
+                                                               key. you
+                                                               can get
+                                                               more
+                                                               information
+                                                               s:
+                                                               https://git
+                                                               hub.com/HGU
+                                                               ISEL/BugPat
+                                                               chCollector
+                                                               /issues/18
+ -l,--label <Find coincident commit with label>                Set a bug
+                                                               label of
+                                                               github
+                                                               (default:
+                                                               'bug')
+ -m,--min <Min lines of patch>                                 Set a Min
+                                                               lines of
+                                                               each result
+                                                               patch. This
+                                                               Option need
+                                                               to be used
+                                                               with 'x'
+                                                               Option.
+                                                               (default:
+                                                               0)
+ -o,--result <directory>                                       directory
+                                                               will have
+                                                               result file
+ -p,--pathOfTrainingSet <training data path>                   training
+                                                               data path
+ -s,--startDate <Start date>                                   start date
+ -t,--metric                                                   collect
+                                                               metrics
+                                                               from all
+                                                               changes
+ -x,--max <Max lines of patch>                                 Set a Max
+                                                               lines of
+                                                               each result
+                                                               patch. Only
+                                                               count '+++'
+                                                               and '---'
+                                                               lines. must
+                                                               used with
+                                                               '-m'.
+                                                               (default:
+                                                               500)
+
+Please report issues at
+https://github.com/HGUISEL/BugPatchCollector/issues

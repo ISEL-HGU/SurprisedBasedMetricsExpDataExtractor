@@ -1,4 +1,0 @@
-        if (ObjectHelper.isEmpty(configuration.getAmazonKinesisFirehoseClient())) {
-            if (kinesisFirehoseClient != null) {
-                kinesisFirehoseClient.shutdown();
-            }

@@ -1,1 +1,0 @@
-        HttpsJwks jwks = new HttpsJwks(confService.getJWKSEndpoint().toString());

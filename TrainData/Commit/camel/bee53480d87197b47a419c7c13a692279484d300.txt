@@ -1,2 +1,0 @@
-            Boolean removeQuotes = factory.getRemoveQuotes();
-                if(removeQuotes) {

@@ -1,6 +1,0 @@
-import org.apache.camel.util.concurrent.ThreadHelper;
-            String threadName = ThreadHelper.resolveThreadName(null, "CamelHangupInterceptor");
-
-            Thread task = new HangupInterceptor(this);
-            task.setName(threadName);
-            Runtime.getRuntime().addShutdownHook(task);

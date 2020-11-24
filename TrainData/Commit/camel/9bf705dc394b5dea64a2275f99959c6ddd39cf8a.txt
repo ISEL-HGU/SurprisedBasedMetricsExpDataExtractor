@@ -1,1 +1,0 @@
-            .to("wine:Wine?amount=3")

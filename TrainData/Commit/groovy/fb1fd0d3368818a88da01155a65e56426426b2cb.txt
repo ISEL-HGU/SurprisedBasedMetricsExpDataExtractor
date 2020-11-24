@@ -1,2 +1,0 @@
-            if (accessedVariable != exp && accessedVariable instanceof VariableExpression) {
-            if (variable != vexp && variable instanceof VariableExpression) {

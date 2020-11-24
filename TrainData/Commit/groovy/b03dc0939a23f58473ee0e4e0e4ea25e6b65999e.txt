@@ -1,1 +1,0 @@
-        @Option(names = {"-pr", "--enable-preview"}, description = "Enable preview Java features (JEP 12) (jdk12 only) - must be after classpath but before other arguments")

@@ -1,4 +1,0 @@
-import org.apache.ivy.util.DateUtil;
-    @Deprecated
-    public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat(
-            DateUtil.DATE_FORMAT_PATTERN);

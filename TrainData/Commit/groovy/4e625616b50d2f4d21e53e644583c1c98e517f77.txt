@@ -1,5 +1,0 @@
-        @Option(names = {"--compile-static"}, description = "Use CompileStatic")
-        @Option(names = {"--type-checked"}, description = "Use TypeChecked")
-            if (!transformations.isEmpty()) {
-                processConfigScriptText(buildConfigScriptText(transformations), configuration);
-            }

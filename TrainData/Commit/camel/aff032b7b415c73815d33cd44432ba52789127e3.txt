@@ -1,2 +1,0 @@
-    Map<String, MessageAttributeValue> translateAttributes(Map<String, Object> headers, Exchange exchange) {
-                if (value instanceof String && !((String)value).isEmpty()) {

@@ -1,6 +1,0 @@
-            pos = end  1;
-        if (pos < uriTemplate.length()) {
-            resolved.append(uriTemplate.substring(pos));
-        }
-
-        } catch (final Exception e) {

@@ -1,4 +1,0 @@
-    public void setMaxConcurrentConsumers(int maxConcurrentConsumers) {
-        configuration.setMaxConcurrentConsumers(maxConcurrentConsumers);
-    }
-

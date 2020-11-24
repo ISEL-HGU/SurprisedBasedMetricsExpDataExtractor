@@ -1,5 +1,0 @@
-    private static final AtomicBoolean INIT = new AtomicBoolean();
-    /**
-     * Warm-up the LRUCache to startup Apache Camel faster.
-     */
-        if (INIT.compareAndSet(false, true)) {

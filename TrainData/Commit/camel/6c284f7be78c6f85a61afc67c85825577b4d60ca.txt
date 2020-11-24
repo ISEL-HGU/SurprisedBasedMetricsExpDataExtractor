@@ -1,8 +1,0 @@
-    /**
-     * ServiceCall EIP default configuration
-     */
-     * ServiceCall EIP configurations
-    /**
-     * Hystrix EIP default configuration
-     */
-     * Hystrix EIP configurations

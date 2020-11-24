@@ -1,3 +1,0 @@
- b/extensions/guacamole-auth-ldap/src/main/java/org/apache/guacamole/auth/ldap/user/LDAPUserContext.java
-public class LDAPUserContext extends AbstractUserContext {
-    private final Logger logger = LoggerFactory.getLogger(LDAPUserContext.class);

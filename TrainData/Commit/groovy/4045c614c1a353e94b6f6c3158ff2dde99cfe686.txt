@@ -1,6 +1,0 @@
-import org.codehaus.groovy.runtime.DefaultGroovyMethods;
-                        if (statementList.stream().noneMatch(DefaultGroovyMethods::asBoolean)) {
-                                .filter(DefaultGroovyMethods::asBoolean)
-            this.visitElementValuePairs(ctx.elementValuePairs()).forEach((key, value) -> annotationElementValues.add(new Pair<>(key, value)));
-    BlockStatement createBlockStatement(Statement... statements) {
-    CompilationFailedException createParsingFailedException(String msg, ASTNode node) {

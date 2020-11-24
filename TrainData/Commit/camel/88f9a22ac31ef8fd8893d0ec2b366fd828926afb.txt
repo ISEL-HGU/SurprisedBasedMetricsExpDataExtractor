@@ -1,2 +1,0 @@
- b/core/camel-support/src/main/java/org/apache/camel/support/language/NamespacePrefix.java
-package org.apache.camel.support.language;

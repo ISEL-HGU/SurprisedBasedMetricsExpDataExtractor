@@ -1,2 +1,0 @@
-     * which will be added to the CamelCatalog.
-    Set<String> addArtifactToCatalog(CamelCatalog camelCatalog,

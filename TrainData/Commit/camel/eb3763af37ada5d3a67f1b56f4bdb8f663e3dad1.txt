@@ -1,1 +1,0 @@
-     * Name of com.mongodb.MongoClient to use.

@@ -1,5 +1,0 @@
-import org.apache.cayenne.util.Util;
-        List<String> currentNodeChildren = new ArrayList<>(getChildren(getCurrentNode(pathString), pathString));
-            previousEmbeddedLevel = Util.countMatches(pathString, ".");
-        int currentEmbeddedLevel = Util.countMatches(pathString, ".");
-            List<String> currentNodeChildren = new ArrayList<>(getChildren(getCurrentNode(pathString), pathString));

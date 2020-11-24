@@ -1,6 +1,0 @@
-            if (4 == ctx.ct) { // trait
-                if (isAbstractMethod && hasMethodBody) {
-                    throw createParsingFailedException("Abstract method should not have method body", ctx);
-                }
-            }
-

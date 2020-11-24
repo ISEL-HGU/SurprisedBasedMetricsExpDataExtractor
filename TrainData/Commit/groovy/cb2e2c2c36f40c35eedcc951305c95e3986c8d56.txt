@@ -1,1 +1,0 @@
-        // now try with flow type instead of declaration type

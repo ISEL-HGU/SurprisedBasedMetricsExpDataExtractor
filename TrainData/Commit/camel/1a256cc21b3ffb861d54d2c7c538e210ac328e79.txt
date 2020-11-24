@@ -1,1 +1,0 @@
-    private static final String VALID_CHARS = ".,-='/\\!&%():;";

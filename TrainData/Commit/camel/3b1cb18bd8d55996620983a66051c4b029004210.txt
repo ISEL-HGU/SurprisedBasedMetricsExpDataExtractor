@@ -1,3 +1,0 @@
-        if (!getRouteContext().isAutoStartup()) {
-            return false;
-        }

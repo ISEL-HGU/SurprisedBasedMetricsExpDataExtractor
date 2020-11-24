@@ -1,1 +1,0 @@
-            LOG.info("Current leader has changed from {} to {}. Sending notifications...", this.currentLeader, newLeader);

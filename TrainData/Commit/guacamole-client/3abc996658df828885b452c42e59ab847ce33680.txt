@@ -1,5 +1,0 @@
-//import org.apache.guacamole.auth.ldap.user.AuthenticatedUser;
-            // Add custom attribute tokens
-            Map<String, String> attrs = ( (org.apache.guacamole.auth.ldap.user.AuthenticatedUser) user).getAttributes();
-            StandardTokens.addAttributeTokens(tokenFilter, attrs);
-

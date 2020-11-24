@@ -1,3 +1,0 @@
-         * To define a proxy host when instantiating the IAM client
-         * To define a proxy port when instantiating the IAM client
-         * The region in which IAM client needs to work

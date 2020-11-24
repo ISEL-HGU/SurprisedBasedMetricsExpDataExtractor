@@ -1,3 +1,0 @@
-    private HeadersMapFactory headersMapFactory = new DefaultHeadersMapFactory();
-        // use resolver to find the headers map factory to be used
-        headersMapFactory = new HeadersMapFactoryResolver().resolve(this);

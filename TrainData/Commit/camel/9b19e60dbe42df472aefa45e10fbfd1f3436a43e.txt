@@ -1,3 +1,0 @@
- * An example of a Camel Processor for generating HL7 Acknowledgements.
-            throw new Hl7AcknowledgementGenerationException("Failed to find the end of the MSH Segment while attempting to generate response", hl7MessageBytes);
-            throw new Hl7AcknowledgementGenerationException("Insufficient number of fields in MSH to generate a response - 8 are required but "

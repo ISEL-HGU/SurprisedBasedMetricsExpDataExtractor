@@ -1,6 +1,0 @@
-
-        // only run in examples directory where the main readme.adoc file is located
-        if (!dir.getName().equals("examples")) {
-            return;
-        }
-

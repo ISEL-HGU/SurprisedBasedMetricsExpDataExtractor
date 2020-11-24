@@ -1,3 +1,0 @@
-    private ZooKeeperClusteredRoutePolicyMain() {        
-    }
-        final String id = UUID.randomUUID().toString();

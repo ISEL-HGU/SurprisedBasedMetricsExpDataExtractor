@@ -1,7 +1,0 @@
-
-    private final CloseableHttpClient httpClient;
-
-    public YqlClient(final CloseableHttpClient httpClient){
-        this.httpClient = httpClient;
-    }
-        try (final CloseableHttpResponse response = httpClient.execute(httpget)) {

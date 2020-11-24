@@ -1,3 +1,0 @@
-            List<Method> methods = new ArrayList<>();
-            methods.addAll(Arrays.asList(type.getDeclaredMethods()));
-            methods.addAll(Arrays.asList(type.getMethods()));

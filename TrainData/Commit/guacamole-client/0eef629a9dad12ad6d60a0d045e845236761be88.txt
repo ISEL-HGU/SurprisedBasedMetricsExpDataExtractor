@@ -1,4 +1,0 @@
-     * database. Note that this function will not enforce any additional
-     * account restrictions, including explicitly disabled accounts,
-     * scheduling, and password expiration. It is the responsibility of the
-     * caller to enforce such restrictions, if desired.

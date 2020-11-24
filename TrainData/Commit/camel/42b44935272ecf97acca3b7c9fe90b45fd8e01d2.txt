@@ -1,6 +1,0 @@
-        private Long olderThan = -1L;
-        private Long newerThan = -1L;
-        public Long getOlderThan() {
-        public void setOlderThan(Long olderThan) {
-        public Long getNewerThan() {
-        public void setNewerThan(Long newerThan) {

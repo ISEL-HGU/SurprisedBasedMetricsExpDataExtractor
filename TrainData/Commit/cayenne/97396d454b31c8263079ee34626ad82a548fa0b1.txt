@@ -1,2 +1,0 @@
-    public void notConfiguredTaskFailure() throws Exception {
-    public void emptyDbTaskSuccess() throws Exception {

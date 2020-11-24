@@ -1,5 +1,0 @@
-import org.apache.camel.util.StopWatch;
-        StopWatch watch = new StopWatch();
-
-        
-        LOG.debug("afterPropertiesSet() took {} millis", watch.stop());

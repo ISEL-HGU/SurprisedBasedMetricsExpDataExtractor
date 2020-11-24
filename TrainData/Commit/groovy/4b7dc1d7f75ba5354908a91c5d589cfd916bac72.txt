@@ -1,3 +1,0 @@
-    private final int source;
-    private final int line;
-    private final int column;

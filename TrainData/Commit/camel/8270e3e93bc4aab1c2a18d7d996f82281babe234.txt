@@ -1,2 +1,0 @@
-            .fromType("xml:MyRequest")
-            .toType("xml:MyResponse")

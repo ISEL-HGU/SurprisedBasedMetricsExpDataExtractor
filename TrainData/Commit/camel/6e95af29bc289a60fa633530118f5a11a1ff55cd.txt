@@ -1,6 +1,0 @@
-            LOG.debug("Using known hosts uri: {}", sftpConfig.getKnownHostsUri());
-            LOG.debug("Using known hosts information from byte array");
-        if (ObjectHelper.isNotEmpty(knownHostsFile)) {
-            LOG.debug("Using known hosts information from file: {}", knownHostsFile);
-            jsch.setKnownHosts(knownHostsFile);
-        }

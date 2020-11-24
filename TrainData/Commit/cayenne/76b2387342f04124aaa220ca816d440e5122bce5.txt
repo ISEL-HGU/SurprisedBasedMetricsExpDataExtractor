@@ -1,1 +1,0 @@
-        table.setCatalog(catalogName != null ? catalogName : catalog.name);

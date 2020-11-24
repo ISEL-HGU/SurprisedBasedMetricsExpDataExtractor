@@ -1,1 +1,0 @@
-        return tokenList; // should never reach here. If unexpected error occurred, it's better to render all tokens

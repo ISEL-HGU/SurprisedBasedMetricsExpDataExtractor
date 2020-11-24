@@ -1,1 +1,0 @@
-        if (event instanceof ContextRefreshedEvent && ((ContextRefreshedEvent) event).getApplicationContext().getId().equals(this.applicationContext.getId())) {

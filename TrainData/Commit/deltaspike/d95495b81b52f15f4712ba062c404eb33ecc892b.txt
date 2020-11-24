@@ -1,4 +1,0 @@
-            Bean<?> foundBoundAuthorizerBean = beanManager.resolve(beans);
-            if (foundBoundAuthorizerBean == null)
-            boundAuthorizerMethodProxy = new InjectableMethod(boundAuthorizerMethod, foundBoundAuthorizerBean, beanManager);
-            boundAuthorizerBean = foundBoundAuthorizerBean;

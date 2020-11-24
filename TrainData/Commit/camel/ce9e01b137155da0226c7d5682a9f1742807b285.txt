@@ -1,4 +1,0 @@
-        if (ObjectHelper.isEmpty(configuration.getAmazonCwClient())) {
-            if (cloudWatchClient != null) {
-                cloudWatchClient.shutdown();
-            }

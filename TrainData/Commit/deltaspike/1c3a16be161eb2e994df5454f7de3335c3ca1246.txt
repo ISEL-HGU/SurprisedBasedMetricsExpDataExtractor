@@ -1,4 +1,0 @@
-import javax.interceptor.InterceptorBinding;
-                boolean requiresProxy = anno.annotationType().getAnnotation(InterceptorBinding.class) != null;
-                interceptorRules.add(new AnnotationRule(match, anno, requiresProxy));
-                    if (rule.requiresProxy() && !ClassUtils.isProxyableClass(at.getJavaClass()))

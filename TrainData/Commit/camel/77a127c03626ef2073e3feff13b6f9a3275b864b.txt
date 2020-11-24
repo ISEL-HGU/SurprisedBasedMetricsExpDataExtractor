@@ -1,2 +1,0 @@
-        ObjectHelper.notNull(definition.getName(), "propertyName", this);
-        Expression nameExpr = ExpressionBuilder.parseSimpleOrFallbackToConstantExpression(definition.getName(), routeContext.getCamelContext());

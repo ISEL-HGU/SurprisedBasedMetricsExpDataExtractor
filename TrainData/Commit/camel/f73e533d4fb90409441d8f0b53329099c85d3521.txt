@@ -1,4 +1,0 @@
-
-        if ((configuration.getIteratorType().equals(ShardIteratorType.AFTER_SEQUENCE_NUMBER) || configuration.getIteratorType().equals(ShardIteratorType.AT_SEQUENCE_NUMBER))
-            && configuration.getSequenceNumber().isEmpty()) {
-

@@ -1,9 +1,0 @@
-        if (null == functionalInterfaceType || !ClassHelper.isFunctionalInterface(redirect)) {
-            // if the parameter type is not real FunctionInterface or failed to be inferred, generate the default bytecode, which is actually a method closure
-            super.writeMethodReferenceExpression(methodReferenceExpression);
-            return;
-        }
-
-                isClassExpr = true;
-            if (!isClassExpr) {
-                mrExpr.visit(controller.getAcg());

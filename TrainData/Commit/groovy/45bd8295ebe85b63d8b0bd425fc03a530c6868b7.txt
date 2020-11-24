@@ -1,7 +1,0 @@
-    private void validateMethodDeclaration(MethodDeclarationContext ctx, MethodNode methodNode, ModifierManager modifierManager, ClassNode classNode) {
-        /*
-        */
-        if (isAbstractMethod && hasMethodBody) {
-            throw createParsingFailedException("Abstract method should not have method body", ctx);
-        }
-

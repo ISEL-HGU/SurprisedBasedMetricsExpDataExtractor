@@ -1,4 +1,0 @@
-        V value = null;
-        final int weight = 1; // weigher.weightOf(key, value);
-        final WeightedValue<V> weightedValue = new WeightedValue<V>(value, weight);
-        node = new Node<K, V>(key, weightedValue);

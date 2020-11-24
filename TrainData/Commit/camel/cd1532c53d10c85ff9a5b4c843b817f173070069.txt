@@ -1,5 +1,0 @@
-     * Reports the time taken (does not stop the stop watch)
-     * @deprecated use {@link #taken()}
-    @Deprecated
-     * @return time in millis, or <tt>0</tt> if not started yet.
-        if (start > 0) {

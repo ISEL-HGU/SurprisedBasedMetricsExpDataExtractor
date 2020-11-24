@@ -1,4 +1,0 @@
-import org.apache.camel.reifier.errorhandler.ErrorHandlerReifier;
-            ErrorHandlerFactory refBuilder = ErrorHandlerReifier.lookupErrorHandlerFactory(routeContext, builderRef.getRef(), false);
-                if (!builderRef.getRef().equals(ErrorHandlerReifier.DEFAULT_ERROR_HANDLER_BUILDER)) {
-                    refBuilder = ErrorHandlerReifier.lookupErrorHandlerFactory(routeContext, builderRef.getRef(), false);

@@ -1,2 +1,0 @@
-        ServiceReference reference = bundleContext.getServiceReference(serviceType.getName());
-        ServiceReference reference = bundleContext.getServiceReference(serviceType.getName());

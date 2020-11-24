@@ -1,4 +1,0 @@
-import org.apache.camel.util.UnsafeUriCharactersEncoder;
-import static org.apache.camel.util.UnsafeUriCharactersEncoder.encodeHttpURI;
-
-        StatusLine statusLine = post(encodeHttpURI(urlPath), jsonParam);

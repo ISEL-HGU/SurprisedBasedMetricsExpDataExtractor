@@ -1,5 +1,0 @@
-            .append("/"  cfg.getQueueName());
-        
-        int visibilityTimeout = cfg.getMessageVisibilityDelay();
-        visibilityTimeout = visibilityTimeout != 0 ? visibilityTimeout : 30;
-        CloudQueueMessage message = client.retrieveMessage(visibilityTimeout,

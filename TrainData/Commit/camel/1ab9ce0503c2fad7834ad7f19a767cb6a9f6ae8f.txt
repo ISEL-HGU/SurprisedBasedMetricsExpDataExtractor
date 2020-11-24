@@ -1,3 +1,0 @@
-     * URL of the Confluent schema registry servers to use. 
-     * The format is host1:port1,host2:port2. 
-     * This is known as schema.registry.url in the Confluent documentation.

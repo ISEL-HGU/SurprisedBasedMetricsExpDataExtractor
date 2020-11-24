@@ -1,1 +1,0 @@
-                if (!model.getV(ej, iField, vji)) {

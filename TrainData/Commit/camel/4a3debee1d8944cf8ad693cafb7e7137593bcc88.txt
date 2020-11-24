@@ -1,4 +1,0 @@
-        long now = System.currentTimeMillis();
-        long now = System.currentTimeMillis();
-            sb.append(String.format(" startTimestamp=\"%s\"", dateAsString(startTimestamp.getTime())));
-            sb.append(String.format(" resetTimestamp=\"%s\"", dateAsString(resetTimestamp.getTime())));

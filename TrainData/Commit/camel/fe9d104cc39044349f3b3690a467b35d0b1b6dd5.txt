@@ -1,3 +1,0 @@
-        String pattern = (String) dto.get("pattern");
-        String producerOnly = "To".equalsIgnoreCase(pattern) ? "true" : null;
-        String consumerOnly = "From".equalsIgnoreCase(pattern) ? "true" : null;

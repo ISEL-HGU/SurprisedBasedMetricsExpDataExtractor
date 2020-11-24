@@ -1,2 +1,0 @@
-            if (e.hash == h && cls == e.cls && Objects.equals(e.name, name) )
-            if (e.hash == h && cls == e.cls && Objects.equals(e.name, name) )

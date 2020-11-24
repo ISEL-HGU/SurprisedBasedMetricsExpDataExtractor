@@ -1,4 +1,0 @@
-    public RestDefinition bindingMode(String mode) {
-        return bindingMode(RestBindingMode.valueOf(mode.toLowerCase()));
-    }
-

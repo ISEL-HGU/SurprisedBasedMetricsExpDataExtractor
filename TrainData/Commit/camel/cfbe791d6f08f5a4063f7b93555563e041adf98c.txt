@@ -1,2 +1,0 @@
-        answer.setPredicate(true);
-        answer.setPredicate(false);

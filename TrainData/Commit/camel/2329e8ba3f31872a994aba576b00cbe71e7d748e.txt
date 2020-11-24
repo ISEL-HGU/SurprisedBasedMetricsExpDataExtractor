@@ -1,6 +1,0 @@
-                        null, channel, EventType.ONCLOSE);
-    void sendEventNotificationIfNeeded(String connectionKey, WebSocketHttpExchange transportExchange, WebSocketChannel channel, EventType eventType) {
-                        consumer.sendEventNotification(connectionKey, transportExchange, channel, eventType);
-                        consumer.sendMessage(connectionKey, channel, outMsg);
-                    consumer.sendMessage(connectionKey, channel, outMsg);
-            sendEventNotificationIfNeeded(connectionKey, exchange, channel, EventType.ONOPEN);

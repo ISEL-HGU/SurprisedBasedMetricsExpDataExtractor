@@ -1,4 +1,0 @@
-				return new ScalarRowReader<>(descriptor, (ScalarResultSegment) segment);
-			return new IdRowReader<>(descriptor, queryMetadata, resultMetadata, postProcessorFactory.get());
-			return new IdRowReader<>(descriptor, queryMetadata, null, postProcessorFactory.get());
-				Collection<ColumnOverride> overrides = columnOverrides.computeIfAbsent(entity.getName(), k -> new ArrayList<>(3));

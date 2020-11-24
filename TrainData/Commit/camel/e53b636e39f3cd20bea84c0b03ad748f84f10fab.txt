@@ -1,1 +1,0 @@
-        this.start = System.currentTimeMillis();

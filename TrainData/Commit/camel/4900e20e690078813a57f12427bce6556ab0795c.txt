@@ -1,2 +1,0 @@
-import static org.apache.camel.catalog.URISupport.isEmpty;
-

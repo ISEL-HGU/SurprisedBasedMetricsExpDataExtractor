@@ -1,2 +1,0 @@
-    private final class HighLevelClient extends RestHighLevelClient {
-            super(restClient, (client) -> { }, Collections.emptyList());

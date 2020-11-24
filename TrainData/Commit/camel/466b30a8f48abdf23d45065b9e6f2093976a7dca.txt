@@ -1,2 +1,0 @@
-import org.apache.cxf.jaxrs.utils.AnnotationUtils;
-            method = AnnotationUtils.getAnnotatedMethod(method.getDeclaringClass(), method);

@@ -1,9 +1,0 @@
-      throw new RuntimeException("Error while initializing Cassandra store: "  e.getMessage(), e);
-      throw new RuntimeException("Error while instantiating a key: "  ex.getMessage(), ex);
-      throw new RuntimeException("Error while instantiating a persistent: "  ex.getMessage(), ex);
-    return (Result<K, T>) cassandraSerializer.execute(this, query);
-  public boolean updateByQuery(Query<K, T> query) {
-    return cassandraSerializer.updateByQuery(query);
-    Query<K, T> query = new CassandraQuery(this);
-    List<PartitionQuery<K, T>> partitions = new ArrayList<>();
-    // ignore since caching has been disabled

@@ -1,9 +1,0 @@
-import javax.swing.KeyStroke;
-import java.awt.Toolkit;
-            if(content instanceof DataMap) {
-                currentObject = getProjectController().getProject().getRootNode();
-            }
-
-                    (currentObject instanceof DataMap && content instanceof DataMap)
-                    ||
-

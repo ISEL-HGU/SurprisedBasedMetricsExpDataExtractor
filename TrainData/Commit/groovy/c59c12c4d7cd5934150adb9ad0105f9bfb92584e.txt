@@ -1,3 +1,0 @@
-import groovy.transform.Generated;
-    private static final ClassNode GENERATED_TYPE = ClassHelper.make(Generated.class);
-            if (mNode.getAnnotations(GENERATED_TYPE).size() > 0) continue;

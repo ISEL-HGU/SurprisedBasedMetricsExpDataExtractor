@@ -1,1 +1,0 @@
-            .log("Tweet id ${body.id} mention: ${body}")

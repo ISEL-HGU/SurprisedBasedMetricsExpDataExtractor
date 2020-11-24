@@ -1,3 +1,0 @@
- * <b>Only</b> methods below should be used:
- *   <li>entrySet - To return a set of all the entries (as key/value pairs)</li>
- * Notice that if the JVM reclaims memory, the content of this cache may be garbage collected without any

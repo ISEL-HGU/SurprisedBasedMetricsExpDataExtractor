@@ -1,5 +1,0 @@
-import org.codehaus.groovy.ast.tools.GeneralUtils;
-        Parameter[] originalParameters = abstractMethodNode.getParameters();
-
-        // We MUST clone the parameters to avoid impacting the original parameter type of SAM
-        Parameter[] parameters = GeneralUtils.cloneParams(originalParameters);

@@ -1,4 +1,0 @@
-public final class Application2Server {
-    private Application2Server() {
-    }
-

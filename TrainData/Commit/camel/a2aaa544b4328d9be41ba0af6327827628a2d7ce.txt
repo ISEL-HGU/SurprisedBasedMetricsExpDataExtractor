@@ -1,8 +1,0 @@
-import org.apache.camel.catalog.DefaultRuntimeCamelCatalog;
-import org.apache.camel.catalog.RuntimeCamelCatalog;
-    private final RuntimeCamelCatalog runtimeCamelCatalog = new DefaultRuntimeCamelCatalog(this, true);
-    @Override
-    public RuntimeCamelCatalog getRuntimeCamelCatalog() {
-        return runtimeCamelCatalog;
-    }
-

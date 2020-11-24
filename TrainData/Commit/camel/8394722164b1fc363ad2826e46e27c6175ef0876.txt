@@ -1,9 +1,0 @@
-        boolean bound;
-        if (target != null && name != null) {
-            try {
-                bound = setProperty(camelContext, target, name, value, true, ignoreCase, true, true, true, true, true, true);
-            } catch (Exception e) {
-                throw new PropertyBindingException(target, name, e);
-            if (!bound) {
-                throw new PropertyBindingException(target, name);
-            }

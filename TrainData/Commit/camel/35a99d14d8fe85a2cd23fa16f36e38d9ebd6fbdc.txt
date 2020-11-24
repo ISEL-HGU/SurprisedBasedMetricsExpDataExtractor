@@ -1,2 +1,0 @@
- b/components/camel-fhir/camel-fhir-component/src/test/java/org/apache/camel/component/fhir/PatientProcessor.java
-        exchange.getIn().setBody(patient);

@@ -1,1 +1,0 @@
-    @ManagedAttribute(description = "Last activity time")

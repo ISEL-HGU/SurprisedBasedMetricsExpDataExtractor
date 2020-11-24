@@ -1,2 +1,0 @@
-import java.util.HashMap;
-            final Map<String, Object> apiProperties = configuration.getApiProperties() != null ? configuration.getApiProperties() : new HashMap<>();

@@ -1,3 +1,0 @@
-    /**
-     * A series of global options as key value pairs
-     */

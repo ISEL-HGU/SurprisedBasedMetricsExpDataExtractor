@@ -1,2 +1,0 @@
-                inferred = infer(parameter);
-    private static ClassNode infer(Variable variable) {

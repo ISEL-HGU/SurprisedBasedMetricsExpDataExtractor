@@ -1,5 +1,0 @@
-     *      Credentials that authenticate the user.
-     *      The tunnel that was connected.
-     *     If thrown by a listener or if any listener vetoes the connected tunnel.
-     *      Credentials that authenticate the user.
-     *      The tunnel that was connected.

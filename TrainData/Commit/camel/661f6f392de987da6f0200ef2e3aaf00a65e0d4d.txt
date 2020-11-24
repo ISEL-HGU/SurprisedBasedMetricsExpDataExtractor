@@ -1,3 +1,0 @@
-import org.apache.camel.util.ExchangeHelper;
-            Exchange resultExchange = ExchangeHelper.createCopy(exchange, true);
-        Exchange resultExchange = ExchangeHelper.createCopy(exchange, true);

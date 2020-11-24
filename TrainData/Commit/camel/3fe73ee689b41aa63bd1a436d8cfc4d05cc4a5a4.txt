@@ -1,2 +1,0 @@
-
-            try (InputStream inputStream = getProjectClassLoader().getResourceAsStream(javaDocPath)) {

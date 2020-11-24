@@ -1,6 +1,0 @@
-        if(request.getHeader("X-Guacamole-Client-Hostname") != null && request.getHeader("X-Guacamole-Client-Hostname") != "") {
-        } else if(request.getHeader("X-Forwarded-For") != null && request.getHeader("X-Forwarded-For") != "") {
-        } else if(request.getRemoteHost() != null && request.getRemoteHost() != "") {
-        if(request.getHeader("X-Guacamole-Client-IP") != null && request.getHeader("X-Guacamole-Client-IP") != "") {
-        } else if(request.getHeader("X-Forwarded-For") != null && request.getHeader("X-Forwarded-For") != "") {
-        } else if(request.getRemoteHost() != null && request.getRemoteAddr() != "") {

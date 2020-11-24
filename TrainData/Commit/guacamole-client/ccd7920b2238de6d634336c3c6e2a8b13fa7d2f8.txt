@@ -1,7 +1,0 @@
-import com.google.inject.Provider;
-     * Provider for RelatedObjectSets containing the users that are members of
-     * this user group.
-    private Provider<UserGroupMemberUserSet> memberUserSetProvider;
-        UserGroupMemberUserSet memberUserSet = memberUserSetProvider.get();
-        memberUserSet.init(getCurrentUser(), this);
-        return memberUserSet;

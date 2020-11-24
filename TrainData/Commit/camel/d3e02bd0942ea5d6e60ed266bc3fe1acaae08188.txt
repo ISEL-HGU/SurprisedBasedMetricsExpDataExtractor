@@ -1,1 +1,0 @@
-        if (component.getLongPollingTransportProperties() != null) {

@@ -1,1 +1,0 @@
-        super(CompilerConfiguration.ASM_API_VERSION, new ClassWriter(0));

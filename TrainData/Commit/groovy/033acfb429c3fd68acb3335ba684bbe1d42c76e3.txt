@@ -1,6 +1,0 @@
-        result.add(Calendar.DATE, 1);
-        result.add(Calendar.DATE, -1);
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.DATE, days);
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.DATE, days);

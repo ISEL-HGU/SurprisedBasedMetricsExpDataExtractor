@@ -1,2 +1,0 @@
-     * @throws IllegalArgumentException is thrown if illegal argument or type conversion not possible
-    public static Boolean parseBoolean(CamelContext camelContext, String text) {

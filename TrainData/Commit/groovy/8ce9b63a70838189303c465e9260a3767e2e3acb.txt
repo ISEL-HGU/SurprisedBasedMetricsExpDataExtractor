@@ -1,3 +1,0 @@
-        boolean b1 = bool1;
-        boolean b2 = bool2;
-            int result = compareRowsByColumn(row1, row2, column);

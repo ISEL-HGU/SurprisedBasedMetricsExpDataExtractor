@@ -1,1 +1,0 @@
-            eksProducerToString = "EKSProducer["  URISupport.sanitizeUri(getEndpoint().getEndpointUri())  "]";

@@ -1,6 +1,0 @@
-
-            // skip based on some known names
-            if ("basicPropertyBinding".equals(key)) {
-                continue;
-            }
-            Class<?> type = getGetterType(camelContext, target, key, false);

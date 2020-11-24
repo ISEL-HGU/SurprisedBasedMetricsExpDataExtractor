@@ -1,3 +1,0 @@
-import static org.apache.groovy.ast.tools.ExpressionUtils.transformInlineConstants;
-
-        return transformInlineConstants(val, returnType);

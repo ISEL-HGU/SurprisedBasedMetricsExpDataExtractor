@@ -1,8 +1,0 @@
-import org.apache.groovy.util.Maps;
-    private static Map<Character, Character> STANDARD_ESCAPES = Maps.of(
-			'b', '\b',
-			't', '\t',
-			'n', '\n',
-			'f', '\f',
-			'r', '\r'
-	);

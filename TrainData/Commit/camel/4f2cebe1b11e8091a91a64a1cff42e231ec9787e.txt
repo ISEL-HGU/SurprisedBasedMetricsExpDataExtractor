@@ -1,8 +1,0 @@
-            // the response from a predicate should be set on OUT
-            Message out = exchange.getOut();
-            out.copyFrom(exchange.getIn());
-            out.setBody(answer);
-            // the response from a expression should be set on OUT
-            Message out = exchange.getOut();
-            out.copyFrom(exchange.getIn());
-            out.setBody(answer);

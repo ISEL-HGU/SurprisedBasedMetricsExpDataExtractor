@@ -1,5 +1,0 @@
-            // skip all @UriPath parameters as the endpoint DSL is for query parameters
-            if ("path".equals(option.getKind())) {
-                continue;
-            }
-

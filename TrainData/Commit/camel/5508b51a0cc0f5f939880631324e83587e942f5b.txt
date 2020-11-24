@@ -1,2 +1,0 @@
-                LOG.debug("Writing point {}", p.lineProtocol());
-                LOG.debug("Writing BatchPoints {}", batchPoints.lineProtocol());

@@ -1,2 +1,0 @@
-    private static final String LDAP_ATTRIBUTE_TOKEN_PREFIX = "LDAP_";
-     * with "LDAP_".

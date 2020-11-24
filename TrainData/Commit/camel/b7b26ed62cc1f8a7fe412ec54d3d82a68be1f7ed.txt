@@ -1,2 +1,0 @@
-        RemoteRepository apacheSnapshots = new RemoteRepository.Builder("apache-snapshots", "default", "http://repository.apache.org/snapshots/").build();
-        ArtifactDescriptorRequest dReq = new ArtifactDescriptorRequest(camelSpringBootParent, Arrays.asList(localRepoDist, mavenCentral, apacheSnapshots), null);

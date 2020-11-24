@@ -1,5 +1,0 @@
-        boolean implementsGeneratedClosureOrGeneratedLambdaInterface = classNode.implementsAnyInterfaces(ClassHelper.GENERATED_CLOSURE_Type, ClassHelper.GENERATED_LAMBDA_TYPE);
-        boolean isStaticCompileNode = classNode.getNodeMetaData(StaticCompilationMetadataKeys.STATIC_COMPILE_NODE) != null;
-        isInStaticallyCheckedMethod =
-                mn != null && (StaticCompilationVisitor.isStaticallyCompiled(node)
-                                || implementsGeneratedClosureOrGeneratedLambdaInterface && isStaticCompileNode);

@@ -1,3 +1,0 @@
-                clazz = finder.findClass(componentName);
-                clazz = finder.findClass(dataFormatName);
-                clazz = finder.findClass(languageName);

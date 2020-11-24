@@ -1,3 +1,0 @@
-        if (remainder == null) {
-            remainder = ifStartsWithReturnRemainder("env.", function);
-        }

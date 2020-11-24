@@ -1,6 +1,0 @@
-import org.apache.camel.util.StringHelper;
-            for (String bp : pc.getLocations()) {
-                String resolver = StringHelper.before(bp, ":");
-                String path = StringHelper.after(bp, ":");
-                if ("blueprint".equals(resolver)) {
-                    ids.add(path);

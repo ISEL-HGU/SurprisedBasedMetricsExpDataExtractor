@@ -1,1 +1,0 @@
- * The aws-kinesis component is for consuming and producing records from Amazon Kinesis Streams.

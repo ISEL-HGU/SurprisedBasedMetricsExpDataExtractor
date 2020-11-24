@@ -1,4 +1,0 @@
-import org.eclipse.jetty.security.*;
-        UserStore userStore = new UserStore();
-        userStore.addUser(username, Credential.getCredential(password), new String[]{"cayenne-service-user"});
-        loginService.setUserStore(userStore);

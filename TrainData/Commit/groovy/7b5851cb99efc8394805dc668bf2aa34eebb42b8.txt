@@ -1,5 +1,0 @@
-        if (receiverType.isEnum()) {
-            mv.visitFieldInsn(GETSTATIC, BytecodeHelper.getClassInternalName(receiverType), methodName, BytecodeHelper.getTypeDescription(receiverType));
-            controller.getOperandStack().push(receiverType);
-            return;
-        }

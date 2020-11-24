@@ -1,5 +1,0 @@
- * Stores the RADIUS challenge message and expected credentials in a single
- * object.
-     * Creates a new GuacamoleRadiusChallenge object with the provided
-     * Returns the challenge message provided by the RADIUS server.
-     * Returns the credentials required to satisfy the RADIUS challenge.

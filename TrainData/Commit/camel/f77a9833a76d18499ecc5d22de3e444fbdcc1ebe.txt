@@ -1,3 +1,0 @@
-import org.apache.camel.support.JSonSchemaHelper;
-        List<Map<String, String>> rows = JSonSchemaHelper.parseJsonSchema(Constants.MODEL_ATTRIBUTE_NAME, PackageHelper.fileToString(jsonFile), false);
-        List<Map<String, String>> rows = JSonSchemaHelper.parseJsonSchema(Constants.PROPERTIES_ATTRIBUTE_NAME, PackageHelper.fileToString(jsonFile), true);

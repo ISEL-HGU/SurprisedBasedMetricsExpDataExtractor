@@ -1,1 +1,0 @@
- * The asterisk component is used to interact with Asterisk PBX Server.

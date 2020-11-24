@@ -1,9 +1,0 @@
-
-    /**
-     * a get() without any name blew up with a failure.
-     * See BVAL-157
-     */
-    public int get() {
-        return 42;
-    }
-

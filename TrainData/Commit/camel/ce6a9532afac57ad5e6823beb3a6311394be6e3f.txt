@@ -1,3 +1,0 @@
-        if (is == null) {
-            is = MavenVersionManager.class.getClassLoader().getResourceAsStream(name);
-        }

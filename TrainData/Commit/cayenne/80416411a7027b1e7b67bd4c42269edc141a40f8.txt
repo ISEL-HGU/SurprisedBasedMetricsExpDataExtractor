@@ -1,4 +1,0 @@
-import org.apache.cayenne.configuration.rop.server.ROPServerModule;
-import org.apache.cayenne.configuration.web.WebConfiguration;
-import org.apache.cayenne.configuration.web.WebUtil;
-

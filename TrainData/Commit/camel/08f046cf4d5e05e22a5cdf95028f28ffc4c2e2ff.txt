@@ -1,3 +1,0 @@
-        payload.exchangeId = exchange.getExchangeId();
-        payload.exchangeId = exchange.getExchangeId();
-        exchange.setExchangeId(payload.exchangeId);

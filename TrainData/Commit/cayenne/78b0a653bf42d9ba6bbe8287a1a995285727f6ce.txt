@@ -1,3 +1,0 @@
-  * @since 4.1
-	 * @param nextOrderings the sort ordering to add
-	 * @return this

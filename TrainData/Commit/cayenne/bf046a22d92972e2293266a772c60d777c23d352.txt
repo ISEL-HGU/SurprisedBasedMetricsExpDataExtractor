@@ -1,1 +1,0 @@
-	 * Returns zero as PK caching is not supported by FrontBaseAdapter.

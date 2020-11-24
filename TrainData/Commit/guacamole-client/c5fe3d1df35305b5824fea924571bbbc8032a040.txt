@@ -1,4 +1,0 @@
-            // Build a filter using the configured or default user search filter
-            // to find all user objects in the LDAP tree
-            userSearchFilter.append("("  escapingService.escapeLDAPSearchFilter(usernameAttribute)  "=*)");
-        // and with the configured or default search filter

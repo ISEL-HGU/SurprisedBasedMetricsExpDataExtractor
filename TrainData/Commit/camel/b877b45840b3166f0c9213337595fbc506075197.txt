@@ -1,4 +1,0 @@
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
-    private static final String[] PETS = new String[]{"Snoopy", "Fido", "Tony the Tiger"};

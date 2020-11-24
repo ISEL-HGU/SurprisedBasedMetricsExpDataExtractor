@@ -1,2 +1,0 @@
-    public static final String REMHOST_TOKEN = "GUAC_CLIENT_HOSTNAME";
-    public static final String REMIP_TOKEN = "GUAC_CLIENT_ADDRESS";

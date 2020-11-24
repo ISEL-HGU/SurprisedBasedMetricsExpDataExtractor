@@ -1,8 +1,0 @@
-            byte[] bodyBytes = Base64.decodeBase64(parts.get(0).getBody().getData().trim().toString()); // get                                                                                                                       // body
-            String body = new String(bodyBytes, StandardCharsets.UTF_8);
-            message.setBody(body);
-            if ("SUBJECT".equalsIgnoreCase(headerName)) {
-            if ("TO".equalsIgnoreCase(headerName)) {
-            if ("FROM".equalsIgnoreCase(headerName)) {
-            if ("CC".equalsIgnoreCase(headerName)) {
-            if ("BCC".equalsIgnoreCase(headerName)) {

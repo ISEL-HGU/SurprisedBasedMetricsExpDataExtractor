@@ -1,2 +1,0 @@
-    protected void ifNotException(Throwable ex, Exchange exchange, boolean handleCompletion, CamelSagaCoordinator coordinator,
-                                  CamelSagaCoordinator previousCoordinator, AsyncCallback callback, Runnable code) {

@@ -1,8 +1,0 @@
-import java.nio.charset.StandardCharsets;
-                passphrase = sftpConfig.getPrivateKeyPassphrase().getBytes(StandardCharsets.UTF_8);
-                passphrase = sftpConfig.getPrivateKeyPassphrase().getBytes(StandardCharsets.UTF_8);
-
-            List files = channel.ls(path);
-            List files = channel.ls(directory);
-            List files = channel.ls(name);
-                    throw new RuntimeCamelException(message, e);

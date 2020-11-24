@@ -1,2 +1,0 @@
-            getLog().info(excludes.length  " explicit excludes (use -debug for more details).");
-                getLog().debug("Exclude: "  exclude);

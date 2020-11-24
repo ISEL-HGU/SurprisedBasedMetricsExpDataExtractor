@@ -1,6 +1,0 @@
-public class DefaultCamelCatalog extends AbstractCamelCatalog implements CamelCatalog {
-        this(false);
-        setJSonSchemaResolver(new CamelCatalogJSonSchemaResolver(this, extraComponents, extraComponentsJSonSchema, extraDataFormats, extraDataFormatsJSonSchema));
-            answer = getJSonSchemaResolver().getModelJSonSchema(name);
-            answer = getJSonSchemaResolver().getComponentJSonSchema(name);
-            answer = getJSonSchemaResolver().getDataFormatJSonSchema(name);

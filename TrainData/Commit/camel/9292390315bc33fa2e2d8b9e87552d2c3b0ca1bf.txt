@@ -1,4 +1,0 @@
-            // force shutting down routes as they may otherwise cause shutdown to hang
-            if (shutdownStrategy != null) {
-                shutdownStrategy.shutdownForced(this, getRouteStartupOrder());
-            }

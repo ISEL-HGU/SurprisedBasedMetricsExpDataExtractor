@@ -1,7 +1,0 @@
-        if (model == String.class) {
-            // If the model is a String, let's just serialize it as
-            // a json string
-            return mapper.writeValueAsString(node);
-        }
-
-        final Object result;

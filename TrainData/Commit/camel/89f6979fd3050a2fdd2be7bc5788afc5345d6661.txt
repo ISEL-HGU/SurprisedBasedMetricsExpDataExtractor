@@ -1,2 +1,0 @@
-     * Do mind that when writing the file Camel may have to read the message content into memory to be able to
-     * convert the data into the configured charset, so do not use this if you have big messages.

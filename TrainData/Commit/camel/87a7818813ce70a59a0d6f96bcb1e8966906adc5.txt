@@ -1,1 +1,0 @@
-     * Whether to enable auto configuration of the mail component. This is

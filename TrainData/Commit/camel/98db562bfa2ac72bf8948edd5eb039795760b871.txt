@@ -1,1 +1,0 @@
-        DataFormat dataFormat = DataFormatDefinition.getDataFormat(routeContext.getCamelContext(), definition.getDataFormatType(), null);

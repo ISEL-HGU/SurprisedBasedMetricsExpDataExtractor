@@ -1,3 +1,0 @@
-    
-    public abstract long countByName(String name);
-    

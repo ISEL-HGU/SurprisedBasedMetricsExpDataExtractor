@@ -1,5 +1,0 @@
- * Keeps track of HttpConsumers and CamelServlets and
- * The {@link DefaultHttpRegistry} can then be configured to listen
- * to service changes.
- * See /examples/camel-example-servlet-httpregistry-blueprint
-}

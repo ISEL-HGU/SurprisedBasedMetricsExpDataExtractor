@@ -1,2 +1,0 @@
-        // Set timezone if provided
-        if (timezone != null && !timezone.isEmpty())

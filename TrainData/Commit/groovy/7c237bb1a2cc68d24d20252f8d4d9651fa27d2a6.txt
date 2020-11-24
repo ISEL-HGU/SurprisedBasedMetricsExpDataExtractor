@@ -1,3 +1,0 @@
-                !(ASSIGN == tokenType3 || (LT == tokenType2 || LBRACK == tokenType2))
-                    && !(BuiltInPrimitiveType == tokenType || MODIFIER_SET.contains(tokenType))
-                    && Character.isLowerCase(token.getText().codePointAt(0));

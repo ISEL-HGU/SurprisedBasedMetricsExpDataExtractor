@@ -1,5 +1,0 @@
-    public BoxGroupMembership updateGroupMembershipInfo(String groupMembershipId, BoxGroupMembership.Info info) {
-            LOG.debug("Updating info for groupMembership(id="  groupMembershipId  ")");
-            if (groupMembershipId == null) {
-                throw new IllegalArgumentException("Parameter 'groupMembershipId' can not be null");
-            BoxGroupMembership groupMembership = new BoxGroupMembership(boxConnection, groupMembershipId);

@@ -1,2 +1,0 @@
-        if (oneRT.isDerivedFrom(twoRT) || oneRT.implementsInterface(twoRT)) {
-        } else if (twoRT.isDerivedFrom(oneRT) || twoRT.implementsInterface(oneRT)) {

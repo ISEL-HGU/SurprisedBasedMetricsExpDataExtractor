@@ -1,2 +1,0 @@
-        try (Reader reader = source.getReader()) {
-        } catch (IOException e) {

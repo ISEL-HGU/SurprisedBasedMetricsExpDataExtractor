@@ -1,8 +1,0 @@
-
-        
-        } else if (serverType == TestServerType.USE_CLOUD) {            
-        log.info("Started Https Test Server: "  solrHttpsRunner.getBaseUrl());        
-        solrHttpsServer = new HttpSolrClient.Builder("https://localhost:  httpsPort  /solr").build();
-        
-        solrServer = new HttpSolrClient.Builder("http://localhost:  port  /solr").build();
-            cloudFixture.solrClient.deleteByQuery("*:*");            

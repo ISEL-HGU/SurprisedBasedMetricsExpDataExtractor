@@ -1,1 +1,0 @@
-    public static class CommonsLoggingStrategy extends LogASTTransformation.AbstractLoggingStrategyV2 {

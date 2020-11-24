@@ -1,5 +1,0 @@
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-    private static final Logger LOG = LoggerFactory.getLogger(DefaultCompositeApiClient.class);
-
-            LOG.warn("Unable to read response from the Composite API", e);

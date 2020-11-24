@@ -1,8 +1,0 @@
-import org.apache.camel.language.simple.SimpleLanguage;
-                    // if key is a nested simple expression then re-evaluate that again
-                    if (SimpleLanguage.hasSimpleFunction(key)) {
-                        key = SimpleLanguage.expression(key).evaluate(exchange, String.class);
-                    }
-                    if (key != null) {
-                        result = lookupResult(resultExchange, key, result, nullSafe, ognlPath, holder.getBean());
-                    }

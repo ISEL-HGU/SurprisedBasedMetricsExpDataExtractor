@@ -1,4 +1,0 @@
-    @UriParam(label = "consumer,advanced")
-    @Deprecated
-    @Deprecated
-    @Deprecated

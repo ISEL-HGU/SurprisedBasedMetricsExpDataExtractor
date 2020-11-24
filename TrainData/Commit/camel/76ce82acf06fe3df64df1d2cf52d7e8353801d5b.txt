@@ -1,2 +1,0 @@
- * @deprecated favor not using non-singleton services
-@Deprecated

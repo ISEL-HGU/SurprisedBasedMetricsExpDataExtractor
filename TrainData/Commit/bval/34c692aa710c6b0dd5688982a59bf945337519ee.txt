@@ -1,2 +1,0 @@
-        // filter; map; skip empty hierarchy builders, mapping others to BeanDelegate
-        return delegates.size() == 1 ? delegates.get(0) : delegates.stream().collect(compose());

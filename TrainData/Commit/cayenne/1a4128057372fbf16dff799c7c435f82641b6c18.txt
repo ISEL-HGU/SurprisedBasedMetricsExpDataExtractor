@@ -1,7 +1,0 @@
-import java.sql.Types;
-import java.util.List;
-
-import org.apache.cayenne.query.ObjectSelect;
-import org.apache.cayenne.testdo.testmap.Painting;
-        ObjectSelect query = ObjectSelect.query(Painting.class)
-                .where(qual);

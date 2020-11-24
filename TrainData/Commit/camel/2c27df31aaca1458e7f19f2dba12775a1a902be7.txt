@@ -1,9 +1,0 @@
-        byte[] encoded = encode(data.getBytes(charset), encoding);
-        return new String(encoded, charset);
-        byte[] decoded = decode(data.getBytes(charset), encoding);
-        return new String(decoded, charset);
-        entity.writeTo(out);
-    public static String printEntity(HttpEntity entity) throws IOException {
-        try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            printEntity(ps, entity);
-        }

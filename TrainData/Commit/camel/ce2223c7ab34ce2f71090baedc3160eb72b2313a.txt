@@ -1,3 +1,0 @@
-    protected CamelContext camelContext;
-    protected List<BeanRepository> repositories;
-    protected final Registry simple = new SimpleRegistry();

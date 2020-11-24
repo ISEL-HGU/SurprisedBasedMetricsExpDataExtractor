@@ -1,9 +1,0 @@
-import org.codehaus.groovy.runtime.DefaultGroovyMethods;
-    private static final String MAIN_PREFIX = "main is", LOAD_PREFIX = "load", GRAB_PREFIX = "grab", PROP_PREFIX = "property", CONFIGSCRIPT_PREFIX = "configscript";
-    private final List<String> configScripts = new ArrayList<String>();
-            } else if (line.startsWith(CONFIGSCRIPT_PREFIX)) {
-                String script = line.substring(CONFIGSCRIPT_PREFIX.length()).trim();
-                configScripts.add(assignProperties(script));
-        if (!configScripts.isEmpty()) {
-            System.setProperty("groovy.starter.configscripts", DefaultGroovyMethods.join((Iterable)configScripts, ","));
-        }

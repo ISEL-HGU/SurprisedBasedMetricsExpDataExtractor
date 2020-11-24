@@ -1,4 +1,0 @@
-    public TokenizerExpression(String token) {
-        this.token = token;
-    }
-

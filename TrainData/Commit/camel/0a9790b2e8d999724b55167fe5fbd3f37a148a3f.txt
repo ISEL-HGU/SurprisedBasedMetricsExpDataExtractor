@@ -1,2 +1,0 @@
- b/components/camel-consul/src/main/java/org/apache/camel/component/consul/endpoint/ConsulStatusProducer.java
-package org.apache.camel.component.consul.endpoint;

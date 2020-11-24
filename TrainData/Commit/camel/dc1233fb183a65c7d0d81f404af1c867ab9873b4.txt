@@ -1,4 +1,0 @@
-    @UriParam(label = "common", defaultValue = "")
-    private String systemType = "";
-    @UriParam(label = "producer", defaultValue = "", enums = "CMT,CPT,VMN,VMA,WAP,USSD")
-    private String serviceType = "";

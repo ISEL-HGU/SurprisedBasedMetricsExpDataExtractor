@@ -1,4 +1,0 @@
-            answer = unwrap(answer);
-            return unwrap(getContext().lookup(name));
-                instance = unwrap(instance);
-                instance = unwrap(instance);

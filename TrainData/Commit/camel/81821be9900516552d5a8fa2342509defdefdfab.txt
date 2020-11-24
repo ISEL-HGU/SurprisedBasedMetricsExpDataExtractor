@@ -1,2 +1,0 @@
-                    LOG.debug("Skipping optional parameter with tag {} because it was not recognized", optPara.tag);
-                LOG.debug("Skipping optional parameter with tag {} due to {}", optPara.tag, e.getMessage());

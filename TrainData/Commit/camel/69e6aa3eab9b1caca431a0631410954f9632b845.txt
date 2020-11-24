@@ -1,1 +1,0 @@
-                answer = (T)fm.invoke(null);

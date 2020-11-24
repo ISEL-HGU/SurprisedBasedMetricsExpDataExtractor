@@ -1,2 +1,0 @@
-    private List<String> methods = new ArrayList<>();
-    private Map<String, String> methodText = new HashMap<>();

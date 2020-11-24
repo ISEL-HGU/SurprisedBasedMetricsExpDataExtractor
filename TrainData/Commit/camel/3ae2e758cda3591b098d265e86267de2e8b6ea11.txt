@@ -1,2 +1,0 @@
-            Message responseMessage = exchange.hasOut() ? exchange.getOut(Message.class) : exchange.getIn(Message.class);
-            processHeaderAndAttachments(responseMessage, response);

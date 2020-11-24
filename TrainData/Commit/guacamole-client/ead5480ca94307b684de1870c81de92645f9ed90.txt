@@ -1,3 +1,0 @@
-        // If we don't have a radiusClient object, yet, don't go any further.
-        if (radiusClient == null) {
-        if (radAuth == null)

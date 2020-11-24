@@ -1,1 +1,0 @@
-        "camel-http-common", "camel-jetty", "camel-jetty-common"

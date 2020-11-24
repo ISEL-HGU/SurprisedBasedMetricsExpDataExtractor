@@ -1,1 +1,0 @@
-    private static final Log LOG = LogFactory.getLog(BPRMatrixFactorizationUDTF.class);

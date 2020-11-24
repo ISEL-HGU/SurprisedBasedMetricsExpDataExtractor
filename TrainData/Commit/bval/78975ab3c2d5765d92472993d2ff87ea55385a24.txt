@@ -1,1 +1,0 @@
-        return value != null && value.length() > 0 && !value.chars().allMatch(Character::isWhitespace);

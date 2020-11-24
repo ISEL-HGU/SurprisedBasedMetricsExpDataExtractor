@@ -1,4 +1,0 @@
-import org.apache.maven.repository.RepositorySystem;
-    private RepositorySystem repositorySystem;
-    private Collection<Artifact> getAllDependencies() {
-            Artifact art = repositorySystem.createDependencyArtifact(dependency);

@@ -1,6 +1,0 @@
-import org.apache.camel.impl.DefaultComponent;
-public class EC2Component extends DefaultComponent {
-        this(null);
-        super(context);
-        
-        registerExtension(new EC2ComponentVerifierExtension());

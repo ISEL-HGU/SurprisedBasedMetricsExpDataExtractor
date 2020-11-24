@@ -1,3 +1,0 @@
-import java.util.LinkedList;
-            // LinkedHashMap hides its tail...
-            new LinkedList<>(categories.values()).getLast().add(option);

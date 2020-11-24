@@ -1,8 +1,0 @@
-    
-    @Override
-    public void doStop() throws Exception {
-        if (sesClient != null) {
-            sesClient.shutdown();
-        }
-        super.doStop();
-    }

@@ -1,4 +1,0 @@
-     * import groovy.xml.slurpersupport.*
-     * import groovy.xml.XmlSlurper
-     * import groovy.xml.slurpersupport.*
-     * import groovy.xml.XmlSlurper

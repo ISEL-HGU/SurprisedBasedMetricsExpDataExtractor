@@ -1,3 +1,0 @@
-        StringBuilder retval = new StringBuilder();
-            retval.append(retval.length() == 0 ? "" : " ").append(channel.getName());
-        return retval.toString();

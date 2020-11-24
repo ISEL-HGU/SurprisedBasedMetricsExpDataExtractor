@@ -1,7 +1,0 @@
-     * Return the major version component of the protocol version.
-     *     The integer major version component.
-     * Return the minor version component of the protocol version.
-     *     The integer minor version component.
-     * Return the patch version component of the protocol version.
-     * 
-     *     The integer patch version component.

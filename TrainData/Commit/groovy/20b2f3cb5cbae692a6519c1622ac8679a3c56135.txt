@@ -1,5 +1,0 @@
-import org.codehaus.groovy.classgen.asm.util.TypeUtil;
-        return TypeUtil.autoboxType(type);
-      return klazz.isArray();
-        // FIXME no implementation?
-        return ClassInfo.getClassInfo(klazz).getCachedClass();

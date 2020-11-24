@@ -1,3 +1,0 @@
-        List<Pair<Integer>> rawPairs;
-            rawPairs = URISupport.scanRaw(s);
-                    if (isHexDigit(next) && isHexDigit(next2) && !URISupport.isRaw(i, rawPairs)) {

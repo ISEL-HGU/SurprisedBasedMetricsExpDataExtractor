@@ -1,4 +1,0 @@
-import org.apache.camel.util.ObjectHelper;
-        if (ObjectHelper.isNotEmpty(remaining)) {
-            configuration.updatePathConfig(remaining, this.getAuthorizationToken());
-        }

@@ -1,2 +1,0 @@
-    @UriParam(label = "sign", javaType = "java.lang.String", 
-              description = "Signer information: reference to bean(s) which implements org.apache.camel.component.crypto.cms.api.SignerInfo. Multiple values can be separated by comma")

@@ -1,6 +1,0 @@
-            processClassVariable(expression);
-    private void processClassVariable(VariableExpression expression) {
-            mv.visitLdcInsn(expression.getName());
-            PropertyExpression pexp = new PropertyExpression(new VariableExpression("this"), expression.getName());
-            pexp.getObjectExpression().setSourcePosition(expression);
-            pexp.getProperty().setSourcePosition(expression);

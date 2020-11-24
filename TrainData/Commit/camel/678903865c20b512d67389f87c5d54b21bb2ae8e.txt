@@ -1,4 +1,0 @@
-import org.apache.camel.support.processor.CamelLogProcessor;
-import org.apache.camel.support.processor.DefaultExchangeFormatter;
-import org.apache.camel.support.processor.DefaultMaskingFormatter;
-import org.apache.camel.support.service.ServiceHelper;

@@ -1,6 +1,0 @@
-import org.apache.camel.spi.TransformerRegistry;
-import org.apache.camel.spi.ValidatorRegistry;
-        } else if (service instanceof TransformerRegistry) {
-            answer = new ManagedTransformerRegistry(context, (TransformerRegistry)service);
-        } else if (service instanceof ValidatorRegistry) {
-            answer = new ManagedValidatorRegistry(context, (ValidatorRegistry)service);

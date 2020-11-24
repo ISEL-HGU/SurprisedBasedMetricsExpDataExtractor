@@ -1,8 +1,0 @@
-        name = "xgboost_predict",
-        value = "_FUNC_(string rowid, string[] features, string model_id, array<byte> pred_model [, string options]) "
-                 "- Returns a prediction result as (string rowid, float predicted)")
-    public void forwardPredicted(final List<LabeledPointWithRowId> testData,
-        assert (predicted.length == testData.size());
-        for (int i = 0; i < testData.size(); i) {
-            assert (predicted[i].length == 1);
-            forward(new Object[] {rowId, p});

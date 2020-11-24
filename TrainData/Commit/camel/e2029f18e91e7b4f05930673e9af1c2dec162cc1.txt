@@ -1,2 +1,0 @@
-        RebootBrokerResult result = new RebootBrokerResult();
-        return result;

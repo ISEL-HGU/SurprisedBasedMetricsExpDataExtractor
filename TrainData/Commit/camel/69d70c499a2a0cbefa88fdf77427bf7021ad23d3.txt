@@ -1,2 +1,0 @@
-import com.amazonaws.regions.Regions;
-            AmazonSimpleDB client = AmazonSimpleDBClientBuilder.standard().withCredentials(credentialsProvider).withRegion(Regions.valueOf(configuration.getRegion())).build();

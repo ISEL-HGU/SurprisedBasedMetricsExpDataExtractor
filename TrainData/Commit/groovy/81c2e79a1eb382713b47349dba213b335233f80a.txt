@@ -1,4 +1,0 @@
-    /**
-     * {@inheritDoc}
-    @Override
-    public synchronized void initialize() {

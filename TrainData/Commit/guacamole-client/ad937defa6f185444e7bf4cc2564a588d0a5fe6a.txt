@@ -1,1 +1,0 @@
-                if (isAdmin || (targetEntity.isUser() && targetEntity.getIdentifier().equals(record.getUsername())))

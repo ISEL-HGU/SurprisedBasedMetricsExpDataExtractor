@@ -1,1 +1,0 @@
-                Connection.TRANSACTION_SERIALIZABLE,

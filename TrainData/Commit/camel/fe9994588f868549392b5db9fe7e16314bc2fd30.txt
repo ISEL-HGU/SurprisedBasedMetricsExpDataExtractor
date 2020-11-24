@@ -1,9 +1,0 @@
-import java.lang.reflect.InvocationTargetException;
-import org.apache.camel.CamelContext;
-    private TransportClient createClient() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        final CamelContext camelContext = getEndpoint().getCamelContext();
-        final Class<?> clazz = camelContext.getClassResolver().resolveClass("org.elasticsearch.xpack.client.PreBuiltXPackTransportClient");
-        if (clazz != null) {
-            LOG.debug("XPack Client was found on the classpath");
-        } else {
-            LOG.debug("XPack Client was not found on the classpath, using the standard client");

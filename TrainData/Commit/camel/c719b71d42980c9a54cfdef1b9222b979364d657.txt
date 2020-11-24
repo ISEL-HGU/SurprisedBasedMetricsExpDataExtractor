@@ -1,5 +1,0 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
-        private final Deque<String> stack;
-            this.stack = new ArrayDeque<>();
-        public Deque<String> getStack() {

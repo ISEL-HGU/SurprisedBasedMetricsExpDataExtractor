@@ -1,3 +1,0 @@
-        if (configuration.getAmazonSWClient() == null && (configuration.getAccessKey() == null || configuration.getSecretKey() == null)) {
-            throw new IllegalArgumentException("AmazonSWClient or accessKey and secretKey must be specified.");
-        }

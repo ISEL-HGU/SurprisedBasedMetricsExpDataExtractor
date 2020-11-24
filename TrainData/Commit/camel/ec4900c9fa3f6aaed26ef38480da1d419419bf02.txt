@@ -1,2 +1,0 @@
- b/tooling/spi-annotations/src/main/java/org/apache/camel/spi/annotations/SubServiceFactory.java
-public @interface SubServiceFactory {

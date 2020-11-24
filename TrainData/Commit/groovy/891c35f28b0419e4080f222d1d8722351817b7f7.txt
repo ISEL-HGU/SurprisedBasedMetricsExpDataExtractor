@@ -1,9 +1,0 @@
-            if (shouldTransform(de)) {
-    private boolean shouldTransform(DeclarationExpression exp) {
-        return exp == candidate || auto || hasClassesToNewify();
-    }
-
-    private boolean hasClassesToNewify() {
-        return classesToNewify != null && !classesToNewify.getExpressions().isEmpty();
-    }
-

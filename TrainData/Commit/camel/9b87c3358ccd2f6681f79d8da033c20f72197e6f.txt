@@ -1,7 +1,0 @@
-    private void drainServiceUsage(ServiceReference<?> serviceReference, AtomicLong serviceUsageCount) {
-            while (serviceUsageCount.decrementAndGet() >= 0) {
-
-    private void incrementServiceUsage(ServiceReference<?> sr) {
-            this.serviceReferenceUsageMap.merge(sr, new AtomicLong(1),
-                (existingServiceUsageCount, newServiceUsageCount) -> {
-                    existingServiceUsageCount.getAndAdd(newServiceUsageCount.get());

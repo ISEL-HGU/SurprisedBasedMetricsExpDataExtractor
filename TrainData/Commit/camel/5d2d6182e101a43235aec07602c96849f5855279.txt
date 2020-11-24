@@ -1,3 +1,0 @@
-
-        // TODO : switch to TLSv1.3 when we fully upgrade to JDK11
-        private String sslProtocol = "TLSv1.2";

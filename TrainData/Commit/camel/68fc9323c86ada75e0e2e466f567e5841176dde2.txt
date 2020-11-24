@@ -1,8 +1,0 @@
-    protected void doStart() throws Exception {
-        log.debug("Starting producer: {}", this);
-        if (producer == null) {
-            createProducer();
-        }
-    }
-
-    @Override

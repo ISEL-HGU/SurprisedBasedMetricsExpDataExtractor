@@ -1,2 +1,0 @@
-public class MethodNode extends AnnotatedNode implements Opcodes, GroovydocHolder<MethodNode> {
-    public MethodNode getInstance() {

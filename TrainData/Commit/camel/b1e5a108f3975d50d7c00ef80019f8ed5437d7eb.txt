@@ -1,1 +1,0 @@
-                        .detail("salesforce_code", error.getErrorCode())

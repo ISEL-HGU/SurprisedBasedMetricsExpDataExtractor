@@ -1,3 +1,0 @@
- * <p>
- *    public static Map&lt;String, Object[]&gt; generateTests() {
- *      HashMap&lt;String, Object[]&gt; res = new HashMap();

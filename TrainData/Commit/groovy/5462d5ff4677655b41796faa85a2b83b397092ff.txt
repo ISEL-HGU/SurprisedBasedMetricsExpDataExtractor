@@ -1,6 +1,0 @@
-        } else if (asBoolean(ctx.standardLambdaExpression())) {
-            expression = this.visitStandardLambdaExpression(ctx.standardLambdaExpression());
-        if (asBoolean(ctx.standardLambdaExpression())) {
-            return this.configureAST(this.visitStandardLambdaExpression(ctx.standardLambdaExpression()), ctx);
-        return this.configureAST(this.visitStandardLambdaExpression(ctx.standardLambdaExpression()), ctx);
-    public LambdaExpression visitStandardLambdaExpression(StandardLambdaExpressionContext ctx) {

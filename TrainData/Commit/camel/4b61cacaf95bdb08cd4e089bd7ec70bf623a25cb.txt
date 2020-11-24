@@ -1,6 +1,0 @@
-    @UriParam(label = "producer")
-    @UriParam(label = "producer", secret = true)
-    @UriParam(label = "producer", secret = true)
-    @UriParam(label = "producer")
-    @UriParam(label = "producer")
-    @UriParam(label = "producer")

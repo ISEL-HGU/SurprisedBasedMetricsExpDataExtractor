@@ -1,2 +1,0 @@
-import org.apache.ibatis.session.SqlSession;
-    public boolean isRecursiveQuerySupported(SqlSession session) {

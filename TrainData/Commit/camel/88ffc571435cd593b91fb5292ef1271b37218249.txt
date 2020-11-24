@@ -1,1 +1,0 @@
-            || "intercept".equals(key) || "interceptFrom".equals(key) || "interceptSendToEndpoint".equals(key);

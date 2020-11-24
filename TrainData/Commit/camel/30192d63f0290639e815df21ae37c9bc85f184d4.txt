@@ -1,3 +1,0 @@
-    
-    // header property containing the AS2 Interchange. 
-    String AS2_INTERCHANGE = PROPERTY_PREFIX  "interchange";

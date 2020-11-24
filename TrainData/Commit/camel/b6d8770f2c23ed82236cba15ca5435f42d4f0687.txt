@@ -1,2 +1,0 @@
-        DeleteGroupResult result = new DeleteGroupResult();
-        return result;

@@ -1,3 +1,0 @@
-import java.util.Random;
-
-        double rate = primeRate  (double) (historyLength / 12) / 10  (rand.nextDouble()  * 10) / 10;

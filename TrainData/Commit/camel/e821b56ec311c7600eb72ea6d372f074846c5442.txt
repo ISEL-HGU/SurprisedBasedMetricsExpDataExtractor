@@ -1,1 +1,0 @@
-            root.put("$schema", "http://json-schema.org/schema#");

@@ -1,1 +1,0 @@
- * Communicates with OData 2.0 services using Apache Olingo.

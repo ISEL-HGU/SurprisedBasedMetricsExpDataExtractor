@@ -1,7 +1,0 @@
-    private HeadersMapFactory headersMapFactory;
-        if (headersMapFactory == null) {
-            // use resolver to find the headers map factory to be used
-            headersMapFactory = new HeadersMapFactoryResolver().resolve(this);
-        }
-
-        log.debug("Using HeadersMapFactory: {}", headersMapFactory);

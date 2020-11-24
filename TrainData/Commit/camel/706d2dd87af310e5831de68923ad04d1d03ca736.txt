@@ -1,2 +1,0 @@
-        default:
-            throw new IllegalStateException("Unknown message kind: "  messageKind);

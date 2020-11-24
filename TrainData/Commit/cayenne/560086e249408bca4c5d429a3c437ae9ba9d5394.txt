@@ -1,8 +1,0 @@
-import com.jgoodies.forms.builder.DefaultFormBuilder;
-import com.jgoodies.forms.layout.FormLayout;
-        FormLayout layout = new FormLayout(
-                "fill:110", "");
-        DefaultFormBuilder builder = new DefaultFormBuilder(layout);
-        generateButton.setIcon(ModelerUtil.buildIcon("icon-gen_java.png"));
-        builder.append(generateButton);
-        toolBarPanel.add(builder.getPanel(), BorderLayout.EAST);

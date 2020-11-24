@@ -1,4 +1,0 @@
-            return value;
-        if (value.equals(Float.NaN) || value.equals(Double.NaN) ) {
-    protected static final class TypeMapping {
-                return this.fromType == that.fromType && this.toType == that.toType;

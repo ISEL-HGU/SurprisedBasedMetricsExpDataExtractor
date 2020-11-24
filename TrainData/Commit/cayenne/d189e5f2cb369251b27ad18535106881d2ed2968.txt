@@ -1,3 +1,0 @@
-import java.util.Base64;
-        return Base64.getDecoder().decode(value);
-        return Base64.getEncoder().encodeToString(bytes);

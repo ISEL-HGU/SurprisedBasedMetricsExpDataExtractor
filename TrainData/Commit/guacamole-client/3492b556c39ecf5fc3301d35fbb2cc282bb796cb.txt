@@ -1,5 +1,0 @@
-         * Create user groups.
-         */
-        CREATE_USER_GROUP,
-
-        /**

@@ -1,5 +1,0 @@
-			if (size <= 9) {
-				attr.setType(Types.INTEGER);
-			} else if(size <= 19) {
-				attr.setType(Types.BIGINT);
-			}

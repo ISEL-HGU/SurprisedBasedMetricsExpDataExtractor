@@ -1,2 +1,0 @@
-        // processor may be null if its anonymous inner class or as lambda
-        if (def != null) {

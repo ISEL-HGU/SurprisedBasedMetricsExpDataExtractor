@@ -1,2 +1,0 @@
-     * Converts the given {@link Reader} to a DOM document
-     * Converts the given {@link Reader} to a DOM document

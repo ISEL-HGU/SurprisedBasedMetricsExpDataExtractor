@@ -1,8 +1,0 @@
- b/components/camel-jbpm/src/main/java/org/apache/camel/component/jbpm/workitem/AbstractCamelCommand.java
- * and attachments.
-public abstract class AbstractCamelCommand implements Command,
-    private static final Logger logger = LoggerFactory.getLogger(AbstractCamelCommand.class);
-	public AbstractCamelCommand() {
-        
-		ProducerTemplate producerTemplate = getProducerTemplate(ctx);
-    protected abstract ProducerTemplate getProducerTemplate(CommandContext ctx);

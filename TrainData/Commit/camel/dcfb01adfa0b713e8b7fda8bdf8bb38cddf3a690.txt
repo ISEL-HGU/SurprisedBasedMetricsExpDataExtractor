@@ -1,5 +1,0 @@
-import org.springframework.context.annotation.Lazy;
-     * Create the bean lazy as it should only be created if its in-use.
-    @Lazy
-     * Create the bean lazy as it should only be created if its in-use.
-    @Lazy

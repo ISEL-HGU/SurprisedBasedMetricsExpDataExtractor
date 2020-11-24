@@ -1,6 +1,0 @@
-import java.net.URISyntaxException;
-
-        catch (URISyntaxException ue)
-        {
-            throw new IllegalStateException("Property file URL is malformed", ue);
-        }

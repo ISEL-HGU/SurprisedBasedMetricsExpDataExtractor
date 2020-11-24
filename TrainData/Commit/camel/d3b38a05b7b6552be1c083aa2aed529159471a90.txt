@@ -1,1 +1,0 @@
-     * brokers. This option is known as bootstrap.servers in the Kafka

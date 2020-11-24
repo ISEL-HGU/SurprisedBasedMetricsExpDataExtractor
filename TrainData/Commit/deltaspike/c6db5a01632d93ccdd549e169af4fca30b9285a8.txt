@@ -1,2 +1,0 @@
-                if (arg instanceof Serializable)
-                    arguments.add(arg == null ? null : arg.toString());

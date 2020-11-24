@@ -1,2 +1,0 @@
-        UserGroupModel existing = userGroupMapper.selectOne(model.getIdentifier());
-        if (existing != null)

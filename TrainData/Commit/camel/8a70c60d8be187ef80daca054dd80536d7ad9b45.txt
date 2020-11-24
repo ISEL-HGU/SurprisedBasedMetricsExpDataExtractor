@@ -1,1 +1,0 @@
-        if (ObjectHelper.isNotEmpty(password) && password.startsWith("sys:")) {

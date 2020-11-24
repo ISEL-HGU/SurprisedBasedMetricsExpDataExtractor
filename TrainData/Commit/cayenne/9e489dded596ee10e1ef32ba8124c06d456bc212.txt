@@ -1,2 +1,0 @@
-import org.apache.velocity.context.Context;
-    public void postInitContext(Context context) {

@@ -1,6 +1,0 @@
-
-				if (b.getExtendedType() != null) {
-					buffer.append(b.getExtendedType().toString(b.getValue()));
-				} else {
-					buffer.append(b.getValue());
-				}

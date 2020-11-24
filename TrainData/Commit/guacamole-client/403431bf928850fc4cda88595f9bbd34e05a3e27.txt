@@ -1,2 +1,0 @@
-     *     connection, or null if no sharing profile should be used (access to
-     *     the connection is unrestricted).

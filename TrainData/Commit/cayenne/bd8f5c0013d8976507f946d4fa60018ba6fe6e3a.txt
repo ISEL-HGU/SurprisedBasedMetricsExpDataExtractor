@@ -1,4 +1,0 @@
-		if(queryMetadata.getPrefetchTree() == null) {
-			return;
-		}
-

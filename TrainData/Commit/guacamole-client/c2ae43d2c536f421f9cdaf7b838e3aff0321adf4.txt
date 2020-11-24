@@ -1,4 +1,0 @@
-     * @param guacStatus
-            GuacamoleStatus guacStatus) {
-        closeConnection(outbound, guacStatus.getGuacamoleStatusCode(),
-                guacStatus.getWebSocketCode());

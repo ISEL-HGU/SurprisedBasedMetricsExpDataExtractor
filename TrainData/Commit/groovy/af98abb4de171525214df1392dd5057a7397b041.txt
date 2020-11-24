@@ -1,4 +1,0 @@
-public class PojoMetaMethodSite extends PlainObjectMetaMethodSite {
-            return doInvoke(receiver, args, reflect);
-            return doInvoke(receiver, args, reflect);
-            return doInvoke(receiver, args, reflect);

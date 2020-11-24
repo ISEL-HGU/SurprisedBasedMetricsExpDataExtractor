@@ -1,8 +1,0 @@
-        throw new UnsupportedOperationException("Connection properties were replaced with <dataSource> tag since 4.0.M5.\n" 
-                "\tFor additional information see http://cayenne.apache.org/docs/4.0/cayenne-guide/including-cayenne-in-project.html#maven-projects");
-        throw new UnsupportedOperationException("Connection properties were replaced with <dataSource> tag since 4.0.M5.\n" 
-                "\tFor additional information see http://cayenne.apache.org/docs/4.0/cayenne-guide/including-cayenne-in-project.html#maven-projects");
-        throw new UnsupportedOperationException("meaningfulPkTables property has been moved to <dbimport> tag since 4.0.M5.\n" 
-                "\tFor additional information see http://cayenne.apache.org/docs/4.0/cayenne-guide/including-cayenne-in-project.html#maven-projects");
-        throw new UnsupportedOperationException("defaultPackage property has been moved to <dbimport> tag since 4.0.M5.\n" 
-                "\tFor additional information see http://cayenne.apache.org/docs/4.0/cayenne-guide/including-cayenne-in-project.html#maven-projects");

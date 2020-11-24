@@ -1,6 +1,0 @@
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-    private final Logger logger = LoggerFactory.getLogger(NestedJtaTransactionPolicy.class.getCanonicalName());
-                logger.warn("Could not do rollback of outer transaction", e);
-                logger.warn("Could not resume outer transaction", e);

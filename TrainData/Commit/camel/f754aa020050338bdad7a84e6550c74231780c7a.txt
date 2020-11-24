@@ -1,2 +1,0 @@
-                this.endpoint.getMoveExistingFileStrategy().moveExistingFile(endpoint, this, targetName);
-    

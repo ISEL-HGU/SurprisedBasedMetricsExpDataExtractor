@@ -1,2 +1,0 @@
-import org.apache.camel.component.hazelcast.HazelcastOperation;
-                    exchange.getIn().setHeader(HazelcastConstants.OPERATION, HazelcastOperation.PUBLISH);

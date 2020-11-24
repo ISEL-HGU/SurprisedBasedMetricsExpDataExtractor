@@ -1,7 +1,0 @@
-            if (scope.getClassScope() != null && !isAnonymous(scope.getClassScope())) break;
-        if (isAnonymous(cn)) return null;
-                // GROOVY-5961
-                if (!isAnonymous(classScope))
-                    break;
-        currentScope.setClassScope(innerClass);
-        currentScope.setInStaticContext(false);

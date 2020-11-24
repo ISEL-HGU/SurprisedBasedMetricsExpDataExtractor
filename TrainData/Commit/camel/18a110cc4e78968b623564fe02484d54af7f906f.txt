@@ -1,4 +1,0 @@
-import org.apache.cxf.ext.logging.LoggingFeature;
-            LoggingFeature loggingFeature = new LoggingFeature();
-                loggingFeature.setLimit(getLoggingSizeLimit());
-            factory.getFeatures().add(loggingFeature);

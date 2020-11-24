@@ -1,7 +1,0 @@
-import org.apache.camel.MultipleConsumersSupport;
-public class EventAdminEndpoint extends DefaultEndpoint implements MultipleConsumersSupport {
-
-    @Override
-    public boolean isMultipleConsumersSupported() {
-        return true;
-    }

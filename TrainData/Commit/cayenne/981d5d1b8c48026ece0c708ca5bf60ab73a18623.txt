@@ -1,8 +1,0 @@
-    protected boolean isShownChangeDialog;
-    protected boolean isShownRemoveDialog;
-                isShownChangeDialog = true;
-                isShownChangeDialog = false;
-                    isShownRemoveDialog = true;
-                    isShownRemoveDialog = false;
-        if (hasDeletions && !isShownRemoveDialog) {
-        } else if (hasChanges && !isShownChangeDialog) {

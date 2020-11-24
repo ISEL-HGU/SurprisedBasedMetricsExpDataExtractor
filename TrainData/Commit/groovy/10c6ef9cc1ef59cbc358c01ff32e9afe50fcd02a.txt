@@ -1,2 +1,0 @@
-import org.codehaus.groovy.runtime.memoize.StampedCommonCache;
-    private static final EvictableCache<ClassLoader, Map<String, List<MethodNode>>> CACHE = new StampedCommonCache<ClassLoader, Map<String, List<MethodNode>>>(new WeakHashMap<ClassLoader, Map<String, List<MethodNode>>>());

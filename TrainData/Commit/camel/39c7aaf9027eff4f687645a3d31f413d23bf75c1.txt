@@ -1,4 +1,0 @@
-        if (answer == null) {
-            throw new IllegalArgumentException("Cannot convert type: "  value.getClass().getName()  " to boolean");
-        }
-        return answer;

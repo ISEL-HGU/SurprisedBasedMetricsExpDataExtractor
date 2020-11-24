@@ -1,1 +1,0 @@
-     * The pulsar auto configuration. The option is a

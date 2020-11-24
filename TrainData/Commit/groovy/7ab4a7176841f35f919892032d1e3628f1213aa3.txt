@@ -1,1 +1,0 @@
-    private static final Map<Character, Character> STANDARD_ESCAPES = Maps.of(

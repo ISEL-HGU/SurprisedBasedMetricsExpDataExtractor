@@ -1,6 +1,0 @@
-        testExpression("substring(paintingArray.paintingTitle, 1, 1)", String.class);
-        testExpression("trim(paintingArray.paintingTitle)", String.class);
-        testExpression("upper(paintingArray.paintingTitle)", String.class);
-        testExpression("lower(paintingArray.paintingTitle)", String.class);
-        testExpression("length(paintingArray.paintingTitle)", Integer.class);
-        testExpression("concat(paintingArray.paintingTitle, ' ', 'xyz')", String.class);

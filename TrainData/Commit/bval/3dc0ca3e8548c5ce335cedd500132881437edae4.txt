@@ -1,6 +1,0 @@
-        final String fqn = toQualifiedClassName(className, defaultPackage);
-        try {
-            return Reflection.toClass(fqn, Reflection.loaderFromThreadOrClass(ValidationMappingParser.class));
-        } catch (ClassNotFoundException ex) {
-            throw Exceptions.create(ValidationException::new, ex, "Unable to load class: %s", fqn);
-        }

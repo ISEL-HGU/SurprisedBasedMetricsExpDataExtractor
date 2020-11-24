@@ -1,2 +1,0 @@
-    public static <T extends AnnotatedNode> T markAsGenerated(ClassNode containingClass, T nodeToMark) {
-        return nodeToMark;

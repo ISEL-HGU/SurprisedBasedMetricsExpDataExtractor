@@ -1,1 +1,0 @@
- * Use splitted kubernetes components instead of this composite component.

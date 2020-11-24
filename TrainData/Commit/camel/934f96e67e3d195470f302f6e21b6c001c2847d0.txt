@@ -1,2 +1,0 @@
-import org.apache.camel.model.ProcessorDefinitionHelper;
-import org.apache.camel.model.StepDefinition;

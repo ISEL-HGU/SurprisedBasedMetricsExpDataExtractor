@@ -1,2 +1,0 @@
-        checkBeanType(bean, JAXRSClientFactoryBean.class);
-        return (JAXRSClientFactoryBean)bean;

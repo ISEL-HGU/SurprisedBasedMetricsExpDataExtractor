@@ -1,2 +1,0 @@
-        authProvider = ProviderFactory.newInstance("authentication provider",
-            authProviderClass);

@@ -1,2 +1,0 @@
-            // include body if PUT, POST or PATCH
-            if (request.getMethod().equals(Method.PUT) || request.getMethod().equals(Method.POST) || request.getMethod().equals(Method.PATCH)) {

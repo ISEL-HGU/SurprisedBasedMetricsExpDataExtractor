@@ -1,2 +1,0 @@
-import org.apache.guacamole.rest.event.ListenerService;
-        bind(ListenerService.class);

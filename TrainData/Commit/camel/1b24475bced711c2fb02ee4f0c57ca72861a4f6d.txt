@@ -1,7 +1,0 @@
-import org.apache.cxf.binding.soap.SoapMessage;
-import org.apache.cxf.binding.soap.SoapVersion;
-        if (cxfExchange.getInMessage() instanceof SoapMessage) { 
-            SoapVersion soapVersion = ((SoapMessage)cxfExchange.getInMessage()).getVersion();
-            ((SoapMessage)outMessage).setVersion(soapVersion);
-        }
-        

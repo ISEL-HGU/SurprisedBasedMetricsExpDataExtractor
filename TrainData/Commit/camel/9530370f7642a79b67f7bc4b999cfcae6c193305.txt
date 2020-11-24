@@ -1,2 +1,0 @@
-        public Query build(QueryFactory queryFactory) {
-        public Query build(QueryFactory queryFactory) {

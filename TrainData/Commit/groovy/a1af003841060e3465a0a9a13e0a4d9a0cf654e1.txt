@@ -1,3 +1,0 @@
-    protected final EvictableCache<String, Class> sourceCache = new StampedCommonCache<String, Class>();
-    // use 1000000 as offset to avoid conflicts with names from the GroovyShell
-        return ((StampedCommonCache<String, Class>) sourceCache).getAndPut(

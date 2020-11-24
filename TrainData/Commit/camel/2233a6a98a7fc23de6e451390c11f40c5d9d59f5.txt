@@ -1,3 +1,0 @@
-import org.apache.http.HttpException;
-    public MultipartSignedEntity(MimeEntity data, AS2SignedDataGenerator signer, String signatureCharSet, String signatureTransferEncoding, boolean isMainBody, String boundary) throws HttpException {
-        setContentType(signer.createMultipartSignedContentType(this.boundary));

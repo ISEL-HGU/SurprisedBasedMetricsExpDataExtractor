@@ -1,7 +1,0 @@
-import org.apache.camel.util.ObjectHelper;
-            boolean any = consumers.stream().anyMatch(c -> matchEndpointPath(p.getEndpointUri(), c.getEndpointUri()));
-            boolean none = consumers.stream().noneMatch(c -> matchEndpointPath(detail.getEndpointUri(), c.getEndpointUri()));
-            if (none) {
-        return path  "\t"  "Sending to non existing "  detail.getEndpointComponentName()  " queue name";
-        p = p.trim();
-        p2 = p2.trim();

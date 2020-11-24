@@ -1,3 +1,0 @@
- * @deprecated use {@link groovy.test.transform.NotYetImplemented}
-@Deprecated
-@GroovyASTTransformationClass("org.apache.groovy.test.transform.NotYetImplementedASTTransformation")

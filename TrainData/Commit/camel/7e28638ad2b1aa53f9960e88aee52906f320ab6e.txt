@@ -1,8 +1,0 @@
-import java.util.HashMap;
-import java.util.Map;
-
-                if (ObjectHelper.isNotEmpty(configuration.getKmsMasterKeyId())) {
-                    Map<String, String> attributes = new HashMap<>();
-                    attributes.put("KmsMasterKeyId", configuration.getKmsMasterKeyId());
-                    request.setAttributes(attributes);
-                }

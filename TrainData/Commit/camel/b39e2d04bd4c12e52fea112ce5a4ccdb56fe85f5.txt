@@ -1,8 +1,0 @@
-    
-    @Override
-    public void doStop() throws Exception {
-        if (s3Client != null) {
-            s3Client.shutdown();
-        }
-        super.doStop();
-    }

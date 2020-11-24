@@ -1,3 +1,0 @@
-import org.eclipse.californium.scandium.dtls.CertificateType;
-                && (getTruststore() == null && publicKey == null)) {
-                builder.setTrustCertificateTypes(CertificateType.RAW_PUBLIC_KEY);

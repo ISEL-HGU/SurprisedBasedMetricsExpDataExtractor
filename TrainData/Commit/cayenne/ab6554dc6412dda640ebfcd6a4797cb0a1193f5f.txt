@@ -1,1 +1,0 @@
-				CommitLogModule.extend().commitLogAnnotationEntitiesOnly().addListener(listener).module());

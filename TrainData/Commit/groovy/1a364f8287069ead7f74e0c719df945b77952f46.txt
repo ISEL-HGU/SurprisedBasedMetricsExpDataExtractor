@@ -1,5 +1,0 @@
-/**
- * Indicates the visibility of a node.
- *
- * @since 2.5.0
- */

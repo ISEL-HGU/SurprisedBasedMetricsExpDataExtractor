@@ -1,2 +1,0 @@
-        TagResourceResult res = new TagResourceResult();
-        return res;

@@ -1,1 +1,0 @@
-     *     The TokenFilter to add attribute tokens to.

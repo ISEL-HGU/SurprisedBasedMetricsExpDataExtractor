@@ -1,8 +1,0 @@
-            } else {
-                checkAndAddCannotCallPrivateMethodError(target, receiver, classNode, declaringClass);
-        checkAndAddCannotCallPrivateMethodError(target, receiver, classNode, declaringClass);
-        return false;
-    }
-
-    private void checkAndAddCannotCallPrivateMethodError(MethodNode target, Expression receiver, ClassNode classNode, ClassNode declaringClass) {
-                    declaringClass.toString(false)  "#"  target.getName()  " from class "  classNode.toString(false), receiver.getLineNumber(), receiver.getColumnNumber(), receiver.getLastLineNumber(), receiver.getLastColumnNumber()));

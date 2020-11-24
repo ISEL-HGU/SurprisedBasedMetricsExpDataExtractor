@@ -1,5 +1,0 @@
-            case list:
-            case create:
-            case get:
-            case delete:
-            case update:

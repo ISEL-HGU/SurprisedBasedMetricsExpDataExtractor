@@ -1,5 +1,0 @@
-                            if (null != typeCheckingContext.getEnclosingReturnStatement() && !inNestedMethodCall()) {
-    private boolean inNestedMethodCall() {
-        return typeCheckingContext.getEnclosingMethodCalls().size() > 1;
-    }
-

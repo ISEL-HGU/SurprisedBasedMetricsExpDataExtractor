@@ -1,3 +1,0 @@
-        EnumSet<MethodType> filter = EnumSet.of(methodType, methodTypes);
-        return methods.get().values().stream().filter(m -> filter.contains(m.getMethodType()))
-                      .collect(ToUnmodifiable.set());

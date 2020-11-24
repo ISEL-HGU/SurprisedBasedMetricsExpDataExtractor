@@ -1,3 +1,0 @@
- *
- * @deprecated use org.apache.camel.support.JSonSchemaHelper
-@Deprecated

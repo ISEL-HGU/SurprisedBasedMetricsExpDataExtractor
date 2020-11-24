@@ -1,3 +1,0 @@
-                logger.error("User group missing identifier: {}",
-                        e.getMessage());
-                logger.debug("LDAP exception while getting group identifier.", e);

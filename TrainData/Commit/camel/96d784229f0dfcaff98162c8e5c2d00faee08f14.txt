@@ -1,6 +1,0 @@
-                String[] values = metadata.getValues(metaname);
-                if (values.length == 1) {
-                    exchange.getIn().setHeader(metaname, values[0]);
-                } else {
-                    exchange.getIn().setHeader(metaname, values);
-                }

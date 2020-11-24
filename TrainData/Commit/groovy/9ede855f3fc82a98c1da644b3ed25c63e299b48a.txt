@@ -1,5 +1,0 @@
-
-        if (modifierManager.contains(VAR)) {
-            throw createParsingFailedException("var cannot be used for method declarations", ctx);
-        }
-

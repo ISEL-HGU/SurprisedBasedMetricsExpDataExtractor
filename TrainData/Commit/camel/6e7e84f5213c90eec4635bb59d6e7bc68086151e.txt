@@ -1,1 +1,0 @@
-                .log("${body} from ${camelContext.name}");

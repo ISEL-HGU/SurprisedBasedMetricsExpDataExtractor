@@ -1,7 +1,0 @@
-        if (exception != null) {
-            return exception.getClass().getCanonicalName();
-        } else if (ref != null) {
-            return "ref:"  ref;
-        } else {
-            return "";
-        }

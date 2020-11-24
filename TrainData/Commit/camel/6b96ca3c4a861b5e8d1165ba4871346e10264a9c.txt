@@ -1,1 +1,0 @@
-        /* others (not managed) -> */ "camel-core-xml", "camel-groovy-dsl", "camel-scala"};

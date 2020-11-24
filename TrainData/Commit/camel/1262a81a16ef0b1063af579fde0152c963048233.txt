@@ -1,2 +1,0 @@
-    @Metadata(label = "security", defaultValue = "false")
-    private boolean useGlobalSslContextParameters;

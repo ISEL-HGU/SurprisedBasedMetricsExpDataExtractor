@@ -1,3 +1,0 @@
-                    exchange.getOut().setBody("The request body is missing.");
-                exchange.getOut().setBody("Some of the required query parameters are missing.");
-                exchange.getOut().setBody("Some of the required HTTP headers are missing.");

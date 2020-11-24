@@ -1,6 +1,0 @@
-     * Gets the type of the header record.
-     * @return The type of the header record if any, otherwise
-     *         <code>void.class</code>.
-     * Gets the type of the footer record.
-     * @return The type of the footer record if any, otherwise
-     *         <code>void.class</code>.

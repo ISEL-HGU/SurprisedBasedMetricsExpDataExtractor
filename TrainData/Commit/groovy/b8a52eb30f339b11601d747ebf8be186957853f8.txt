@@ -1,1 +1,0 @@
-        return Collections.singletonList(makeDynamic(call, inferredReturnType));

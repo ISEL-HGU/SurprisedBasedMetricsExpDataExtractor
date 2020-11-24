@@ -1,7 +1,0 @@
-				return createScalarRowReader(descriptor, queryMetadata, (ScalarResultSegment) segment);
-					reader.addRowReader(i, createScalarRowReader(descriptor, queryMetadata, (ScalarResultSegment) segment));
-	protected RowReader<?> createScalarRowReader(RowDescriptor descriptor, QueryMetadata queryMetadata, ScalarResultSegment segment) {
-		return new ScalarRowReader<Object>(descriptor, segment);
-	}
-
-	protected RowReader<?> createEntityRowReader(RowDescriptor descriptor, QueryMetadata queryMetadata,

@@ -1,1 +1,0 @@
- * DereferenceAliases enum. Anything else results in a parse error.

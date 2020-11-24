@@ -1,9 +1,0 @@
-    private String verifiers;
-    public String getVerifiers() {
-        return verifiers;
-    }
-
-    public void setVerifiers(String verifiers) {
-        this.verifiers = verifiers;
-    }
-

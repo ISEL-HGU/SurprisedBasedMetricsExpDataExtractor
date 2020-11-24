@@ -1,5 +1,0 @@
-import java.util.Set;
-import org.apache.camel.NamedNode;
-                routeContext.addErrorHandlerFactoryReference(other, answer);
-            for (NamedNode exception : routeContext.getErrorHandlers(definition)) {
-                ErrorHandlerBuilderSupport.addExceptionPolicy(handlerSupport, routeContext, (OnExceptionDefinition) exception);

@@ -1,1 +1,0 @@
-                        if (contentTypeString.indexOf("charset") > 0 || contentTypeString.indexOf(";") > 0) {

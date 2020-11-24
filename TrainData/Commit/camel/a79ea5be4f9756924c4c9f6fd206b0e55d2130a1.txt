@@ -1,7 +1,0 @@
- serviceCall("myService") -> http://hostname:port
- serviceCall("myService/foo") -> http://hostname:port/foo
- serviceCall("http:myService/foo") -> http:hostname:port/foo
- serviceCall("myService", "http:myService.host:myService.port/foo") -> http:hostname:port/foo
-                scheme = "http";
-                scheme = "https";
-                scheme = "http";

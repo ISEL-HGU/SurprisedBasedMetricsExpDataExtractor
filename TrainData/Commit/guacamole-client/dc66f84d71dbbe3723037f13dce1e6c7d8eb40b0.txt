@@ -1,6 +1,0 @@
-     * Returns whether this GuacamoleProtocolVersion is at least as recent as
-     * (greater than or equal to) the given version.
-     *
-     *     The version to which this GuacamoleProtocolVersion should be compared.
-     *     true if this object is at least as recent as the given version,
-     *     false if the given version is newer.

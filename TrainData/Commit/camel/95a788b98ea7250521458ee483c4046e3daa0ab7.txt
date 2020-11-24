@@ -1,5 +1,0 @@
-/**
- * The crypto cms component is used for encrypting data in CMS Enveloped Data
- * format, decrypting CMS Enveloped Data, signing data in CMS Signed Data
- * format, and verifying CMS Signed Data.
- */

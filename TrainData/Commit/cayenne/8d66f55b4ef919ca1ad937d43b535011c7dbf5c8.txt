@@ -1,3 +1,0 @@
-            catalog.clearExcludeRelationships();
-                schema.clearExcludeRelationships();
-        engineering.clearExcludeRelationships();

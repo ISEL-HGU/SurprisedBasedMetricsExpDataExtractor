@@ -1,3 +1,0 @@
-import org.apache.camel.ha.CamelClusterService;
-    Object getManagedObjectForClusterService(CamelContext context, CamelClusterService service);
-

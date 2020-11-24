@@ -1,3 +1,0 @@
-
-        if (port > 0)
-            qcConfig.setParameter("port", Integer.toString(port));

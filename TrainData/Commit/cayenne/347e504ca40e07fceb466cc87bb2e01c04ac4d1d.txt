@@ -1,5 +1,0 @@
-import java.time.LocalDate;
-    public static final Property<LocalDate> DATE_OF_BIRTH = Property.create("dateOfBirth", LocalDate.class);
-    public void setDateOfBirth(LocalDate dateOfBirth) {
-    public LocalDate getDateOfBirth() {
-        return (LocalDate)readProperty("dateOfBirth");

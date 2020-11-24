@@ -1,2 +1,0 @@
-        ConnectorConsumerProcessor delegate = new ConnectorConsumerProcessor(processor, getComponent().getBeforeConsumer(), getComponent().getAfterConsumer());
-        return endpoint.createConsumer(delegate);

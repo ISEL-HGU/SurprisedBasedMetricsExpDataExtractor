@@ -1,1 +1,0 @@
-            return Double.isNaN(num);

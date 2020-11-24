@@ -1,8 +1,0 @@
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-    private static final Logger LOG = LoggerFactory.getLogger(PahoProducer.class);
-
-
-        String topic = exchange.getIn().getHeader(PahoConstants.CAMEL_PAHO_OVERRIDE_TOPIC, getEndpoint().getTopic(), String.class);
-
-        LOG.debug("Publishing to topic: {}, qos: {}, retrained: {}", topic, qos, retained);

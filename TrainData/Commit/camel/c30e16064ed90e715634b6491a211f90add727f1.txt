@@ -1,1 +1,0 @@
-    private Boolean circuitBreakerForceClosed = false;

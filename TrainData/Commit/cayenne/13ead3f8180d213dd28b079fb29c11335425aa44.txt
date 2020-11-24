@@ -1,2 +1,0 @@
-
-            loaderContext.dataChannelLoaded(descriptor);

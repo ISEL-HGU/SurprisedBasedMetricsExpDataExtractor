@@ -1,5 +1,0 @@
-                    @Override
-                    public void remove() {
-                        iterator.remove();
-                    }
-

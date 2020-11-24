@@ -1,3 +1,0 @@
-        controller.getCompileStack().init(node.getVariableScope(), parameters);
-        controller.getCallSiteWriter().makeSiteEntry();
-

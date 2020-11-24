@@ -1,8 +1,0 @@
-        QueryCache queryCache = getLocalQueryCache();
-    
-    /**
-     * @since 4.2
-     */
-    protected QueryCache getLocalQueryCache() {
-        return ((BaseContext) actingContext).getLocalQueryCache();
-    }

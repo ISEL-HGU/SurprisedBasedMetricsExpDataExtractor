@@ -1,7 +1,0 @@
-    @Path("/mavenCacheDirectory/{name}")
-    @ApiOperation(value = "Configures the Maven cache directory to use when downloading artifacts")
-    public void mavenCacheDirectory(@ApiParam("The name of the cache directory") @PathParam("name") String name) {
-        maven.setCacheDirectory(name);
-    }
-
-    @POST

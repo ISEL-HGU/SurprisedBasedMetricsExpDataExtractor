@@ -1,1 +1,0 @@
-     * Whether the unmarshalling should produce maps (HashMap)for the lines

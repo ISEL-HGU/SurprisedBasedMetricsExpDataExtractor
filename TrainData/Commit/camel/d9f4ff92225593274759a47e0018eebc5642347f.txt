@@ -1,2 +1,0 @@
-import javax.annotation.Generated;
-@Generated("org.apache.camel.maven.CamelSalesforceMojo")

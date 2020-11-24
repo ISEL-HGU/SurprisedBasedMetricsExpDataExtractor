@@ -1,3 +1,0 @@
-                return !(toCheckIllegalAccess && isExportedForIllegalAccess(declaringModule, pn));
-                return !(toCheckIllegalAccess && isExportedForIllegalAccess(declaringModule, pn));
-            return !(toCheckIllegalAccess && isOpenedForIllegalAccess(declaringModule, pn));

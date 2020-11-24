@@ -1,1 +1,0 @@
-    @Bean(name = {"http4-component", "https4-component"})

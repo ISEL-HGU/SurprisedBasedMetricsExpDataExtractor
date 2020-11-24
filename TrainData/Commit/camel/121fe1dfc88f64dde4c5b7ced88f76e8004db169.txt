@@ -1,2 +1,0 @@
-        return ModelHelper.dumpModelAsXml(context, route);
-        return ModelHelper.dumpModelAsXml(context, def);

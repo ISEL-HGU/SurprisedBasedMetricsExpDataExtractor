@@ -1,7 +1,0 @@
-        String detectedVersion = findCamelVersion(project);
-        if (detectedVersion != null) {
-            getLog().info("Detected Camel version used in project: "  detectedVersion);
-        }
-
-            getLog().info("Validating using downloaded Camel version: "  catalog.getLoadedVersion());
-            getLog().info("Validating using Camel version: "  catalog.getCatalogVersion());

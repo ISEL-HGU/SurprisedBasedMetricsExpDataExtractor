@@ -1,1 +1,0 @@
-    @UriParam(description = "A String to identify the kind of client")

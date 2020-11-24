@@ -1,8 +1,0 @@
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-    private static final Logger LOG = LoggerFactory.getLogger(CoAPComponent.class);
-        if (config.isEnableCORS()) {
-            LOG.info("CORS configuration will be ignored as CORS is not supported by the CoAP component");
-        }
-
-        url = basePath  uriTemplate  "?coapMethod="  verb.toUpperCase(Locale.US);

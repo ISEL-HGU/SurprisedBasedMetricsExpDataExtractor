@@ -1,3 +1,0 @@
-import org.apache.camel.runtimecatalog.DefaultRuntimeCamelCatalog;
-import org.apache.camel.runtimecatalog.RuntimeCamelCatalog;
-     * @deprecated use {@link org.apache.camel.runtimecatalog.RuntimeCamelCatalog#endpointProperties(String)}

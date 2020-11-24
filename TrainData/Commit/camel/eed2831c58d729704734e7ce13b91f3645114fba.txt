@@ -1,1 +1,0 @@
-     * Syntax: <code>microprofile-metrics:metricType:metricName</code>

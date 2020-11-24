@@ -1,4 +1,0 @@
-    @Parameter
-        // check missing data source parameters
-        dataSource.validate();
-

@@ -1,7 +1,0 @@
-     * - detects CAPTCHA test
-        Elements captchaDivs = page.select("div[class*=g-recaptcha]");
-        if (!captchaDivs.isEmpty()) {
-            throw new IllegalArgumentException(
-                    "Authentication requires CAPTCHA test. First you need to authenticate the account manually via web to unlock CAPTCHA.");
-        }
-

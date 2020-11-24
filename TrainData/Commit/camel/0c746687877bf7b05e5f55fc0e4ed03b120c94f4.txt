@@ -1,4 +1,0 @@
-            this.valueExtractor = (exchange, container) -> {
-                Expression exp = exchange.getContext().resolveLanguage("simple").createExpression(valueSrcToken.toString());
-                return exp.evaluate(exchange, Object.class);
-            };

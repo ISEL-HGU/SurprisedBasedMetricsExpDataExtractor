@@ -1,2 +1,0 @@
-import org.apache.camel.component.file.remote.strategy.SftpProcessStrategyFactory;
-@FileProcessStrategy(SftpProcessStrategyFactory.class)

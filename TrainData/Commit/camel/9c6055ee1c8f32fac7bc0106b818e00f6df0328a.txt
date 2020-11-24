@@ -1,7 +1,0 @@
-        Boolean publiclyAccessible;
-        if (ObjectHelper.isNotEmpty(exchange.getIn().getHeader(MQConstants.BROKER_PUBLICLY_ACCESSIBLE))) {
-            publiclyAccessible = exchange.getIn().getHeader(MQConstants.BROKER_PUBLICLY_ACCESSIBLE, Boolean.class);
-            request.withPubliclyAccessible(publiclyAccessible);
-        } else {
-            request.withPubliclyAccessible(false);
-        }

@@ -1,4 +1,0 @@
-import com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow;
-        private AmazonSimpleWorkflow amazonSWClient;
-        public AmazonSimpleWorkflow getAmazonSWClient() {
-        public void setAmazonSWClient(AmazonSimpleWorkflow amazonSWClient) {

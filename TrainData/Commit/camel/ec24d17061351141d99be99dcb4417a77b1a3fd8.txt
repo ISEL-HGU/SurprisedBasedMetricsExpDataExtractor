@@ -1,2 +1,0 @@
-    protected void processModelClass(final ProcessingEnvironment processingEnv, final RoundEnvironment roundEnv,
-                                     final TypeElement classElement, final boolean last) {

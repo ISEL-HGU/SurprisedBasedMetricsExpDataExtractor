@@ -1,4 +1,0 @@
-        /**
-         * Operation to use.
-         */
-        private String operation = "transaction";

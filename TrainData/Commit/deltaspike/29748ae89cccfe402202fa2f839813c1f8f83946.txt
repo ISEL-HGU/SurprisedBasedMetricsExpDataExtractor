@@ -1,3 +1,0 @@
-
-    @MessageTemplate("Counter: %04d")
-    String counter(Integer value);

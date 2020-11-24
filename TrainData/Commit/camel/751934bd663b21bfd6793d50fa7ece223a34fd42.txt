@@ -1,2 +1,0 @@
-@UriEndpoint(scheme = "json-validator", firstVersion = "2.20.0", title = "JSON Schema Validator", syntax = "json-validator:resourceUri",
-    producerOnly = true, label = "validation")

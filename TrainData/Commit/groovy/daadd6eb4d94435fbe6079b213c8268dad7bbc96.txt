@@ -1,1 +1,0 @@
-                            mv.visitMethodInsn(INVOKESTATIC, classInternalName, "$get$$class$"  classInternalName.replaceAll("/", "\\$"), "()Ljava/lang/Class;", false);

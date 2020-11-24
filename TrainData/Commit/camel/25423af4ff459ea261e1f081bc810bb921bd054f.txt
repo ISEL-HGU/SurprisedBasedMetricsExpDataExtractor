@@ -1,5 +1,0 @@
-    private volatile Connection connection;
-                    // its success so prepare for exit
-                    connection = localConnection;
-
-                        jmsConsumerExecutors.submit(loop);

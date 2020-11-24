@@ -1,2 +1,0 @@
-        if (path.indexOf('\\') != -1) {
-            throw new DropboxException(path  " must not contain Windows path separator, use UNIX path separator!");

@@ -1,1 +1,0 @@
-            throw new IllegalArgumentException("Return type should be a CompletableStage, Future or void");

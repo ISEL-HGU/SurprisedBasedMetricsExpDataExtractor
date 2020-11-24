@@ -1,5 +1,0 @@
-import org.apache.camel.CamelExchangeException;
-                exchange.setException(new CamelExchangeException("Cannot bind to xml as message body is not xml compatible", exchange));
-                exchange.setException(new CamelExchangeException("Cannot bind to json as message body is not json compatible", exchange));
-                        exchange.setException(new CamelExchangeException("Cannot bind to xml as message body is not xml compatible", exchange));
-                        exchange.setException(new CamelExchangeException("Cannot bind to json as message body is not json compatible", exchange));

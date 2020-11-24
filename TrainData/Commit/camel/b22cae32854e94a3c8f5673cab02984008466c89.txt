@@ -1,2 +1,0 @@
-    @UriParam(label = "advanced")
-     *  This parameter is intended to be used, to connect to a mock implementation of SQS, for testing purposes.

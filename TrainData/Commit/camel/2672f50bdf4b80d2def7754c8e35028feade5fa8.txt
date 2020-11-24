@@ -1,4 +1,0 @@
-            exchange.setException(e);
-        }
-        if (exchange.getException() != null) {
-            getExceptionHandler().handleException(exchange.getException());

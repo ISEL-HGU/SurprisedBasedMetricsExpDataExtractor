@@ -1,3 +1,0 @@
-        while (it.hasNext()) {
-                throw new IllegalArgumentException("Cannot configure option ["  name  "] with value ["  stringValue  "] as the bean class [" 
-                 ObjectHelper.classCanonicalName(target)  "] has no suitable setter method, or not possible to lookup a bean with the id ["  stringValue  "] in Camel registry");

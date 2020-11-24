@@ -1,5 +1,0 @@
-                        if (log.isDebugEnabled()) {
-                            log.debug("Received {} byte message {}", hl7MessageBytes.length, Hl7Util.convertToPrintFriendlyString(hl7MessageBytes));
-                        }
-                            // TODO:  Move the conversion utilities to the MllpSocketBuffer to avoid a byte[] copy
-                        log.debug("Ignoring exception encountered checking for data", mllpSocketEx);

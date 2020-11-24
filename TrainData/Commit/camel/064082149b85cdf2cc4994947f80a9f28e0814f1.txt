@@ -1,6 +1,0 @@
-     * @param headers the in headers
-    public Object handleOrder(@Headers Map<String, Object> headers, @Body String payload)
-            headers.put("orderid", "123");
-     * @param headers the in headers
-    public Object orderFailed(@Headers Map<String, Object> headers, @Body String payload) {
-        headers.put("orderid", "failed");

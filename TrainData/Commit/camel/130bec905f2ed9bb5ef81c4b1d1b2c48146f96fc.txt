@@ -1,7 +1,0 @@
-        String scheme = (String) dto.get("scheme");
-        if (scheme == null || scheme.isEmpty()) {
-            scheme = StringHelper.camelCaseToDash(title);
-        }
-            // ensure description is sanitized
-            String text = JSonSchemaHelper.sanitizeDescription(description, false);
-            sb.append("    \"description\": \""  text  "\",\n");

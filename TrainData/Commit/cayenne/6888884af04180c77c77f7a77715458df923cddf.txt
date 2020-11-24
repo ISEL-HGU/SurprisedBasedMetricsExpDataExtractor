@@ -1,3 +1,0 @@
- b/eventbridges/cayenne-xmpp/src/main/java/org/apache/cayenne/event/XMPPServerModuleProvider.java
-import org.apache.cayenne.configuration.server.CayenneServerModuleProvider;
-public class XMPPServerModuleProvider implements CayenneServerModuleProvider {

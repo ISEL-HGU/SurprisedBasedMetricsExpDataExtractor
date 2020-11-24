@@ -1,1 +1,0 @@
-    private static final Logger LOG = Logger.getLogger(ConfigurationExtension.class.getName());

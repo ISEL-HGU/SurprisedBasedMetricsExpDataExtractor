@@ -1,1 +1,0 @@
-        this._isAutoD = (_D <= 0L);

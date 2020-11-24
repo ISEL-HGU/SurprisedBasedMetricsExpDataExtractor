@@ -1,1 +1,0 @@
-     * is enabled. If its disabled an <tt>IllegalStateException</tt> is thrown.

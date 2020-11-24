@@ -1,2 +1,0 @@
-                    mav.withStringValue(((Boolean)value) ? "1" : "0");
-                    if (value instanceof Integer) {

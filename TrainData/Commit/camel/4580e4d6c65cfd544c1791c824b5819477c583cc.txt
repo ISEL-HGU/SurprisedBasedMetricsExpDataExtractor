@@ -1,7 +1,0 @@
-import org.apache.camel.util.FileUtil;
-                String fileName = FileUtil.stripPath(part.getFileName());
-                        final DataHandler dataHandler = part.getDataHandler();
-                        final DataSource dataSource = dataHandler.getDataSource();
-
-                        final DataHandler replacement = new DataHandler(new DelegatingDataSource(fileName, dataSource));
-                        DefaultAttachment camelAttachment = new DefaultAttachment(replacement);

@@ -1,7 +1,0 @@
-    /**
-     * Whether to allow downloading Camel catalog version from the internet. This is needed if the project
-     * uses a different Camel version than this plugin is using by default.
-     */
-    @Parameter(property = "camel.downloadVersion", defaultValue = "true")
-    private boolean downloadVersion;
-

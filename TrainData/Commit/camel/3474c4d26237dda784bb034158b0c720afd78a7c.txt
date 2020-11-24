@@ -1,1 +1,0 @@
-    private static final Pattern SECRETS = Pattern.compile("([?&][^=]*(?:passphrase|password|secretKey|accessToken|clientSecret)[^=]*)=(RAW[({].*[)}]|[^&]*)", Pattern.CASE_INSENSITIVE);

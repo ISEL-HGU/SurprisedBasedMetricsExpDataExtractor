@@ -1,9 +1,0 @@
-    public boolean isDeadLetterUseOriginalBody() {
-        if (!isSupportRedelivery()) {
-            return false;
-        }
-
-        RedeliveryErrorHandler redelivery = (RedeliveryErrorHandler) errorHandler;
-        return redelivery.isUseOriginalBodyPolicy();
-    }
-

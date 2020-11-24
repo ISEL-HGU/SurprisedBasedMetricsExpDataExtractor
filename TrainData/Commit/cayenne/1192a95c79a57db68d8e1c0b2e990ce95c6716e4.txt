@@ -1,3 +1,0 @@
-import org.apache.cayenne.dba.mariadb.MariaDBSniffer;
-                .add(MySQLSniffer.class)
-                .add(MariaDBSniffer.class);

@@ -1,2 +1,0 @@
-import javax.xml.bind.annotation.XmlType;
-        Stream.of(XmlRootElement.class, XmlEnum.class, XmlType.class)

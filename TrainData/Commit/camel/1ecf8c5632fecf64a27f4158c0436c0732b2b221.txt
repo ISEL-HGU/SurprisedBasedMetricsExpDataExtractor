@@ -1,1 +1,0 @@
-        setRegistry(OsgiCamelContextHelper.wrapRegistry(this, registry, bundleContext));

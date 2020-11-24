@@ -1,3 +1,0 @@
-            return this.translateExpressionList(ctx.expressionList());
-        return this.translateExpressionList(ctx.expressionList());
-    private Expression translateExpressionList(ExpressionListContext ctx) {

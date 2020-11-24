@@ -1,1 +1,0 @@
-            byte[] bodyBytes = Base64.decodeBase64(parts.get(0).getBody().getData().trim().toString()); 

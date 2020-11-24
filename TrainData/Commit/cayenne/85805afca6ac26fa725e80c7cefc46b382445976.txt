@@ -1,6 +1,0 @@
-                    relationship.getJoins().removeIf(join -> join.getSource() == attr || join.getTarget() == attr);
-        Collection<ObjEntity> objEntities = new HashSet<>();
-            return new PathComponentIterator(DbEntity.this, path, new HashMap<>());
-                LinkedList<String> finalPath = new LinkedList<>();
-                LinkedList<String> finalPath = new LinkedList<>();
-            LinkedList<String> finalPath = new LinkedList<>();

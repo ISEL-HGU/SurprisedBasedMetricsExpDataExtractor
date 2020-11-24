@@ -1,4 +1,0 @@
-    public RadiusPacket authenticate(String username, String secret, byte[] state)
-            if (state != null && state.length > 0)
-    public RadiusPacket sendChallengeResponse(String username, String response, byte[] state)
-        if (state == null || state.length < 1) {

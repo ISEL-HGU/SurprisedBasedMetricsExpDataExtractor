@@ -1,2 +1,0 @@
-            boolean isNestedProperty = isNestedProperty(nestedTypes, javaClassSource)
-                    || "org.apache.camel.converter.jaxp.XmlConverter".equals(type);

@@ -1,4 +1,0 @@
-            if (!qcUri.isAbsolute())
-                throw new GuacamoleClientException("URI must be absolute.");
-            throw new GuacamoleClientException("No protocol specified.");
-            throw new GuacamoleClientException("No host specified.");

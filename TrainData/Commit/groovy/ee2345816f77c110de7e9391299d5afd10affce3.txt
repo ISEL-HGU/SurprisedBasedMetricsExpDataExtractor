@@ -1,6 +1,0 @@
-import org.codehaus.groovy.ast.stmt.ExpressionStatement;
-        // GROOVY-8868 don't want an empty body to cause the constructor to be deleted later
-        if (body.isEmpty()) {
-            body.addStatement(new ExpressionStatement(ConstantExpression.EMPTY_EXPRESSION));
-        }
-

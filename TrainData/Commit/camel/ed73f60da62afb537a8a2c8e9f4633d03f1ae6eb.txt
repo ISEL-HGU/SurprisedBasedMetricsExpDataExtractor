@@ -1,6 +1,0 @@
-import com.github.dockerjava.api.command.PruneCmd.Exec;
-
-	@Override
-	public Exec pruneCmdExec() {
-		return null;
-	}

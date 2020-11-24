@@ -1,1 +1,0 @@
-	public void logQuery(String sql, ParameterBinding[] bindings) {

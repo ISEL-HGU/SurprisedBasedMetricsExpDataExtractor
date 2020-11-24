@@ -1,7 +1,0 @@
- * query into a {@link Map} of Guacamole objects.
-     * Converts a given list of LDAP entries to a {@link Map} of Guacamole
-     * objects stored by their identifiers.
-     *     The type of object to store within the {@link Map}.
-     *     A new {@link Map} containing Guacamole object versions of each of
-     *     the given LDAP entries, where each object is stored within the
-     *     {@link Map} under its corresponding identifier.

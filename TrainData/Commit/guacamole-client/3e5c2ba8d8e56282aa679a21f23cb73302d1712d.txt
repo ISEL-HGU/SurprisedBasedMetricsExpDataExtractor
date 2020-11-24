@@ -1,9 +1,0 @@
-                // Always prefer non-failover connections to those which are
-                // failover-only
-                if (a.isFailoverOnly()) {
-                    if (!b.isFailoverOnly())
-                        return 1;
-                }
-                else if (b.isFailoverOnly())
-                    return -1;
-

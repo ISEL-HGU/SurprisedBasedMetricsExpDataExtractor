@@ -1,9 +1,0 @@
-                DefaultCamelContext context = (DefaultCamelContext)buildDeploymentContext(id, classloader);
-                
-    protected CamelContext buildDeploymentContext(String identifier, ClassLoader classloader) {
-       
-        
-        CamelContext camelContext = new CamelContextBuilder() { 
-        }.buildCamelContext();       
-        camelContext.setApplicationContextClassLoader(classloader);
-        return camelContext;

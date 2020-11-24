@@ -1,5 +1,0 @@
-import org.apache.directory.api.ldap.model.name.Rdn;
-                
-            return new Dn(new Rdn(usernameAttributes.get(0), username),
-                confService.getUserBaseDN());
-        catch (LdapInvalidAttributeValueException | LdapInvalidDnException e) {

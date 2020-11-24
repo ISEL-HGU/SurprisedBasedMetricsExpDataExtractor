@@ -1,2 +1,0 @@
-                .having("name").like("%abc%").build();
-                .having("name").like("%A").build();

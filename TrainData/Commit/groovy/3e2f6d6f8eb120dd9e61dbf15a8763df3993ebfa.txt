@@ -1,5 +1,0 @@
-    private static final Class[] EMPTY_CLASS_ARRAY = new Class[0];
-    private static final Class[] EMPTY_INTERFACE_ARRAY = EMPTY_CLASS_ARRAY;
-        // According to https://shipilev.net/blog/2016/arrays-wisdom-ancients/#_conclusion
-        // toArray(new T[0]) seems faster, safer, and contractually cleaner, and therefore should be the default choice now.
-        Class[] intfs = interfaces != null ? interfaces.toArray(EMPTY_CLASS_ARRAY) : EMPTY_INTERFACE_ARRAY;

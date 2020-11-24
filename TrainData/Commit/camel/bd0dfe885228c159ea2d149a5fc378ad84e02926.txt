@@ -1,9 +1,0 @@
-        private Integer fetchMaxBytes;
-        public Integer getFetchMaxBytes() {
-            return fetchMaxBytes;
-        }
-
-        public void setFetchMaxBytes(Integer fetchMaxBytes) {
-            this.fetchMaxBytes = fetchMaxBytes;
-        }
-

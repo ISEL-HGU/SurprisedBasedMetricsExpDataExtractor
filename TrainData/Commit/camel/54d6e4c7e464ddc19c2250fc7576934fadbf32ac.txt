@@ -1,1 +1,0 @@
-                    consumer.subscribe(Arrays.asList(topicName.split(",")), this);

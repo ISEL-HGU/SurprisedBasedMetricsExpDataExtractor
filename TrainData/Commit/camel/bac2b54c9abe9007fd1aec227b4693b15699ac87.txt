@@ -1,7 +1,0 @@
-    @UriParam(label = "consumer", enums = "all_docs,main_only", defaultValue = DEFAULT_STYLE)
-    @UriParam(label = "security", secret = true)
-    @UriParam(label = "security", secret = true)
-    @UriParam(label = "consumer", defaultValue = ""  DEFAULT_HEARTBEAT)
-    @UriParam(label = "consumer", defaultValue = "true")
-    @UriParam(label = "consumer", defaultValue = "true")
-    @UriParam(label = "consumer")

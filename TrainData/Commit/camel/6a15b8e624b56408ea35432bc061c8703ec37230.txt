@@ -1,8 +1,0 @@
-    private String onExceptionOccurredRef;
-        setOnExceptionOccurredRef(ref);
-    public String getOnExceptionOccurredRef() {
-        return onExceptionOccurredRef;
-    public void setOnExceptionOccurredRef(String onExceptionOccurredRef) {
-        this.onExceptionOccurredRef = onExceptionOccurredRef;
-        if (ObjectHelper.isNotEmpty(onExceptionOccurredRef)) {
-            Processor onExceptionOccurred = CamelContextHelper.mandatoryLookup(routeContext.getCamelContext(), onExceptionOccurredRef, Processor.class);

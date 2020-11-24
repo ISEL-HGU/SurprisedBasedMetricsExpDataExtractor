@@ -1,6 +1,0 @@
-import org.apache.cayenne.di.AdhocObjectFactory;
-import org.apache.cayenne.di.ClassLoaderManager;
-import org.apache.cayenne.di.spi.DefaultAdhocObjectFactory;
-import org.apache.cayenne.di.spi.DefaultClassLoaderManager;
-            binder.bind(AdhocObjectFactory.class).to(DefaultAdhocObjectFactory.class);
-            binder.bind(ClassLoaderManager.class).to(DefaultClassLoaderManager.class);

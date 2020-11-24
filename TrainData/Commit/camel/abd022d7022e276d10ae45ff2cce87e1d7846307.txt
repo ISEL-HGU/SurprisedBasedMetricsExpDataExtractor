@@ -1,1 +1,0 @@
-         * The AWS-Lambda client to use.

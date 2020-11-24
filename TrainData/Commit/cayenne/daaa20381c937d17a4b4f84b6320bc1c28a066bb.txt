@@ -1,1 +1,0 @@
-    public static final String CUSTOM_NAME_PROJECT = "custom-name-file.xml";

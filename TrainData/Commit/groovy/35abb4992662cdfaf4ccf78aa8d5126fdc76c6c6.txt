@@ -1,2 +1,0 @@
-        this.classLoader = AccessController.doPrivileged(new PrivilegedAction<GroovyClassLoader>() {
-            public GroovyClassLoader run() {

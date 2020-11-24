@@ -1,1 +1,0 @@
-                    if (LOG_ENABLED) LOG.info("indy math successful");

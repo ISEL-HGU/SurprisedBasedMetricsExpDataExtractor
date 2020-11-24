@@ -1,3 +1,0 @@
-        if (IGNORE_TEST_MODULES && (project.getArtifactId().startsWith("camel-test")
-            || project.getArtifactId().startsWith("camel-testng")
-            || project.getArtifactId().startsWith("camel-testcontainers"))) {

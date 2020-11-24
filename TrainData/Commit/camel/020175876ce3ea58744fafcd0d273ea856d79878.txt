@@ -1,3 +1,0 @@
-            if (restContextPath != null) {
-                extra = "<restConfiguration component=\""  restComponent  "\" contextPath=\""  restContextPath  "\"/>";
-            }

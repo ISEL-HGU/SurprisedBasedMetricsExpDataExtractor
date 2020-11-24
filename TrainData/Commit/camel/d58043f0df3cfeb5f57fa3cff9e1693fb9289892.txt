@@ -1,2 +1,0 @@
-    @UriParam(label = "producer", enums = "createAndRunInstances, startInstances, stopInstances, terminateInstances, describeInstances, "
-         "describeInstancesStatus, rebootInstances, monitorInstances, unmonitorInstances, createTags, deleteTags")

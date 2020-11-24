@@ -1,1 +1,0 @@
-            w.write("    public static String lookup(String key) {\n");

@@ -1,1 +1,0 @@
-    private Integer environmentVariableMode = 2;

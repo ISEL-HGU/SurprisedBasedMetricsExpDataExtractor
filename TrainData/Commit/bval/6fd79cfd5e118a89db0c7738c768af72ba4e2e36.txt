@@ -1,1 +1,0 @@
-    private static final String META_INF_SERVICES = "META-INF/services/";

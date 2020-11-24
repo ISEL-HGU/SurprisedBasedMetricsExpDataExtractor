@@ -1,3 +1,0 @@
-
-		logger.logQuery(sql, bindings, System.currentTimeMillis() - t1);
-

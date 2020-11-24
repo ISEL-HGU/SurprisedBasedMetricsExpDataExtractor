@@ -1,3 +1,0 @@
-                writer.append(
-                              "    private void addTypeConverter(TypeConverterRegistry registry, Class<?> toType, Class<?> fromType, boolean allowNull, SimpleTypeConverter.ConversionMethod method)"
-                               " { \n");

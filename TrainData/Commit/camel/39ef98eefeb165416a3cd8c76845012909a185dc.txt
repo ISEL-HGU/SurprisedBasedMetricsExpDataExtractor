@@ -1,6 +1,0 @@
-        // optimise to use object array for states
-        final Object[] states = new Object[advices.size()];
-                states[i] = state;
-        private final Object[] states;
-        private InternalCallback(Object[] states, Exchange exchange, AsyncCallback callback, Processor resultProcessor) {
-                    Object state = states[i];

@@ -1,3 +1,0 @@
-        // input
-        docComment = findJavaDoc(elementUtils, null, "input", null, classElement, true);
-        ep = new EipOption("input", "Input", "element", "org.apache.camel.model.FromDefinition", true, "", docComment, false, null, false, null, true, oneOfTypes,

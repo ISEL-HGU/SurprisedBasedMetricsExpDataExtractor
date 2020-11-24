@@ -1,1 +1,0 @@
-    public static <T, U extends AutoCloseable> T withCloseable(U self, @ClosureParams(value=FirstParam.class) Closure<T> action) throws Exception {

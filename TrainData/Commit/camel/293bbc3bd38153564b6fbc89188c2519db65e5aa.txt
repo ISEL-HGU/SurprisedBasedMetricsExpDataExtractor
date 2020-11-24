@@ -1,5 +1,0 @@
-import org.apache.camel.CamelContext;
-    public HBaseComponent(CamelContext context) {
-        super(context, HBaseEndpoint.class);
-    }
-

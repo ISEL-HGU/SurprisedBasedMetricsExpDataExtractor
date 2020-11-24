@@ -1,1 +1,0 @@
- * such as servlet/jetty/netty-http to offer Swagger API listings with minimal effort.

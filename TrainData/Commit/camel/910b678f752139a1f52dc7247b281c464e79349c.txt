@@ -1,1 +1,0 @@
-    @DataField(pos = 3, defaultValue = "North Pole")

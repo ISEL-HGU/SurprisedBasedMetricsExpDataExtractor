@@ -1,1 +1,0 @@
-            .append(dm.getCreatedAt()).append(" (").append(dm.getSenderId()).append(") ")

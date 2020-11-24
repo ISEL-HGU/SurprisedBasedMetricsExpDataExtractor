@@ -1,7 +1,0 @@
-/**
- * The invisible field that stores the state of the RADIUS
- * connection.  The state is simply a placeholder that helps
- * the client and server pick back up the conversation
- * at the correct spot during challenge/response.
- */
-    

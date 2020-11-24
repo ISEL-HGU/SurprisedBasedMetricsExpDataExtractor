@@ -1,8 +1,0 @@
-import java.util.LinkedHashSet;
-            // look for first entry that is the type
-            for (Object value : map.values()) {
-                if (type.isInstance(value)) {
-                    answer = value;
-        Set<T> result = new LinkedHashSet<>();
-    public void bind(String id, Class type, Object bean) {
-        computeIfAbsent(id, k -> new LinkedHashMap<>()).put(type, wrap(bean));

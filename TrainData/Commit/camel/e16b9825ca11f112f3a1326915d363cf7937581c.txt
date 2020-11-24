@@ -1,3 +1,0 @@
-import java.io.InputStream;
-        InputStream is = ResourceHelper.resolveMandatoryResourceAsInputStream(getCamelContext(), resourceUri);
-        this.xquery = XQueryBuilder.xquery(is);

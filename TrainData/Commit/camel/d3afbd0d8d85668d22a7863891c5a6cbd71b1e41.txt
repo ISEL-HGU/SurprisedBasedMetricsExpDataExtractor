@@ -1,3 +1,0 @@
-        Map<String, List<CoverageData>> answer = new LinkedHashMap<>();
-            int count = 0;
-                count = Integer.parseInt(total.getNodeValue());

@@ -1,3 +1,0 @@
-                if (getLog().isDebugEnabled()){
-                    getLog().debug("strange; "  activeCount  " thread(s) still active in the group "
-                }

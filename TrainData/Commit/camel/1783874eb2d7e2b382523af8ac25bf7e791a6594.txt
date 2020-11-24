@@ -1,1 +1,0 @@
-        for (Iterator<?> dependencies = project.getDependencies().iterator(); dependencies.hasNext();) {

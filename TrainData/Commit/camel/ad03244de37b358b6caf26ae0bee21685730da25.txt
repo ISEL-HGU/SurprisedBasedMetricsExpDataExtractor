@@ -1,1 +1,0 @@
-        super(String.format("Status (%d)", code));

@@ -1,6 +1,0 @@
-import java.nio.channels.ReadableByteChannel;
-import org.xnio.channels.BlockingReadableByteChannel;
-        ReadableByteChannel blockingSource = new BlockingReadableByteChannel(source);
-
-            int res = blockingSource.read(buffer);
-                LOG.error("Channel did not block");

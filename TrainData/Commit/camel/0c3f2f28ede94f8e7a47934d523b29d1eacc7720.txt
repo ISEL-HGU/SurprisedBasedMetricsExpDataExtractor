@@ -1,5 +1,0 @@
-    public Processor getDetour() {
-        return detour;
-    }
-
-        return new InterceptSendToEndpointProcessor(this, delegate, skip);

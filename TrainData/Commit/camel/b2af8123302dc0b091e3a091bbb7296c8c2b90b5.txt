@@ -1,5 +1,0 @@
-import org.apache.camel.util.URISupport;
-
-        // ensure to sanitize uri's in the route so we do not show sensitive information such as passwords
-        route = URISupport.sanitizeUri(route);
-

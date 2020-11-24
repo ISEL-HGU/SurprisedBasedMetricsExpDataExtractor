@@ -1,4 +1,0 @@
-
-        // need to prepare this before we load spring application context
-        CamelAnnotationsHandler.handleExcludeRoutesForSpringBoot(testClass);
-

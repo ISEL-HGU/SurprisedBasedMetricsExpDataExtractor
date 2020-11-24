@@ -1,6 +1,0 @@
-        CronTrigger existingTrigger = null;
-            existingTrigger = (CronTrigger)quartzScheduler.getTrigger(triggerKey);
-            
-            // Ensure the cron schedule is updated
-            CronTrigger newTrigger = existingTrigger.getTriggerBuilder().withSchedule(CronScheduleBuilder.cronSchedule(getCron()).inTimeZone(getTimeZone())).build();
-            quartzScheduler.rescheduleJob(triggerKey, newTrigger);

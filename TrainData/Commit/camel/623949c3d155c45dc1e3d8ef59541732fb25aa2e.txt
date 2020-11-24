@@ -1,2 +1,0 @@
-import org.apache.camel.model.dataformat.Any23DataFormat;
-        map.put(Any23DataFormat.class,Any23DataFormatReifier::new);

@@ -1,3 +1,0 @@
-            return CompletableFuture.supplyAsync(() -> {
-                throw ex;
-            });

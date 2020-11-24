@@ -1,5 +1,0 @@
-import org.apache.camel.Route;
-        Route route = exchange.getContext().getRoute(exchange.getFromRouteId());
-        if (route != null) {
-            return route.getRouteContext().isStreamCaching();
-            return exchange.getContext().getStreamCachingStrategy().isEnabled();

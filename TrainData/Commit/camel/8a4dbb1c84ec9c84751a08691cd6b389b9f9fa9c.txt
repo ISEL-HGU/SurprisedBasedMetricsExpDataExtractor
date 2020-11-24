@@ -1,4 +1,0 @@
-    public JndiRegistry(boolean standalone) {
-        super(standalone);
-    }
-

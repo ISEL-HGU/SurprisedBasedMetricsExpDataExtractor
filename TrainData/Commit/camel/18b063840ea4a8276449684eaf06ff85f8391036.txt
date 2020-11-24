@@ -1,7 +1,0 @@
-import static org.apache.camel.component.xchange.XChangeConfiguration.HEADER_CURRENCY;
-import static org.apache.camel.component.xchange.XChangeConfiguration.HEADER_CURRENCY_PAIR;
-
-        } else if (XChangeMethod.currencyPairs == method) {
-        } else if (XChangeMethod.currencyMetaData == method) {
-        } else if (XChangeMethod.currencyPairMetaData == method) {
-}

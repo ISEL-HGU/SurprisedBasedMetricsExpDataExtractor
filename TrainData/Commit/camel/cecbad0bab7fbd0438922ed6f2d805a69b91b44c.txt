@@ -1,6 +1,0 @@
-/**
- * {@link org.apache.camel.Processor} used to interceptor and detour the routing
- * when using the {@link InterceptSendToEndpoint} functionality.
- */
-    public InterceptSendToEndpointProcessor(InterceptSendToEndpoint endpoint, Endpoint delegate, Producer producer, boolean skip) throws Exception {
-        this.producer = producer;

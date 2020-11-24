@@ -1,1 +1,0 @@
-        credentials.setSession(request.getSession(false));

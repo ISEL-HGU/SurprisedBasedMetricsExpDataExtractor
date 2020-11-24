@@ -1,1 +1,0 @@
-                throw new GenericFileOperationFailedException("Cannot move existing file from: "  name  " to: "  to  " as there already exists a file: "  to);

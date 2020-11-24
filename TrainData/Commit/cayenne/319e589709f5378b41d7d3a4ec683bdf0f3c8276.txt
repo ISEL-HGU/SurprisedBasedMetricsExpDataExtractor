@@ -1,5 +1,0 @@
-    public CayennePostProcessor() {
-    public CayennePostProcessor(Map<String, Object> config) {
-        super(config);
-    }
-

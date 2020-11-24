@@ -1,2 +1,0 @@
-    public static final GenericsType[] EMPTY_GENERICS_ARRAY = GenericsType.EMPTY_ARRAY;
-        GenericsType[] gtypes = GenericsType.EMPTY_ARRAY;

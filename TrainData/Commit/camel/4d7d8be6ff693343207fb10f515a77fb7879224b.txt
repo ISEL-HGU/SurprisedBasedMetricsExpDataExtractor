@@ -1,3 +1,0 @@
-        if (expectedCount == -1) {
-            expectedMessageCount(1);
-        }

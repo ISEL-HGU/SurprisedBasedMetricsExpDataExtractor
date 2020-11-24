@@ -1,2 +1,0 @@
-    public void startConsumer(Consumer consumer) throws Exception {
-    public void stopConsumer(Consumer consumer) throws Exception {

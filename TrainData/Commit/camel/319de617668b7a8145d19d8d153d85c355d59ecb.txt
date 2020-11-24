@@ -1,2 +1,0 @@
-            .error(ResultErrorHelper.requiresOption("hostAddresses", parameters));
-            ElasticsearchConfiguration configuration = setProperties(new ElasticsearchConfiguration(), parameters);

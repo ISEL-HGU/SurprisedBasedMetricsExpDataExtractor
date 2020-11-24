@@ -1,1 +1,0 @@
-     * https://api.example.com:8080). Can be overridden in endpoint

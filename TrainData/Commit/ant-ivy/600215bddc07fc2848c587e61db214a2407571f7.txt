@@ -1,9 +1,0 @@
-        IvyListener[] listeners = this.listeners.getListeners(IvyListener.class);
-        for (IvyListener listen : listeners) {
-            if (listen instanceof FilteredIvyListener) {
-                if (listener.equals(((FilteredIvyListener) listen).getIvyListener())) {
-                    return true;
-                }
-            }
-        }
-        return false;

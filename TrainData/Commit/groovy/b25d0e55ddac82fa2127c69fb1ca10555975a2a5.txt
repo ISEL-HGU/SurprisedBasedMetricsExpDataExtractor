@@ -1,1 +1,0 @@
-            shell.run(new File("src/main/groovy/org/codehaus/groovy/tools/DocGenerator.groovy"), args);

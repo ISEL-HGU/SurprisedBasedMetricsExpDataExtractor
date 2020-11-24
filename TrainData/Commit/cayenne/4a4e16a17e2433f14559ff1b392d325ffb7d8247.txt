@@ -1,1 +1,0 @@
- * Maven mojo to drop and/or generate tables in a database on Cayenne DataMap.

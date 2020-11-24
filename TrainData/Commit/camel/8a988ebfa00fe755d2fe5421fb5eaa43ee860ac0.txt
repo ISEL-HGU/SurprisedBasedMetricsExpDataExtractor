@@ -1,1 +1,0 @@
-        getContext().getPropertiesComponent().setLocation("classpath:application.properties");

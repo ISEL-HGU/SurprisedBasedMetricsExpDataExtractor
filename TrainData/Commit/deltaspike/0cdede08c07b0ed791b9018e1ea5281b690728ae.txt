@@ -1,2 +1,0 @@
-            throw new IllegalStateException("MasterKey for hash "  saltKey 
-        return saltKey;

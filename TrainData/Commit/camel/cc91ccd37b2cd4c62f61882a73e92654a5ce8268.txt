@@ -1,3 +1,0 @@
-         * appending to existing files. To specify new-line (slash-n or slash-r)
-         * or tab (slash-t) characters then escape with an extra slash, eg
-         * slash-slash-n.

@@ -1,2 +1,0 @@
-        consumer.setSplitResult(configuration.isSplitResult());
-            // Avoid swallowing consumer scheduler properties, which get processed in configureProperties()

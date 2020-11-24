@@ -1,1 +1,0 @@
-     * The AWS ECS default configuration

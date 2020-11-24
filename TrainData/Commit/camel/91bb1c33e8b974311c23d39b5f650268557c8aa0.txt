@@ -1,2 +1,0 @@
-                    // TODO: include more subscriber information, either as a nested table or flattern
-

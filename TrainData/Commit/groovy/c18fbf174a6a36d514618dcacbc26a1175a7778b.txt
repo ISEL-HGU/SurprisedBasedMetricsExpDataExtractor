@@ -1,4 +1,0 @@
-            ClassNode parameterType = parameter.getType();
-            ClassNode type = convertParameterType(parameterType, inferredType);
-            parameter.setType(type);
-            parameter.setOriginType(type);

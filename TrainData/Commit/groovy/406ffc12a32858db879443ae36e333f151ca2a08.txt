@@ -1,2 +1,0 @@
-import groovy.transform.Generated;
-                    if (!reflectionMethod.isSynthetic() && reflectionMethod.getAnnotation(Generated.class) == null) {

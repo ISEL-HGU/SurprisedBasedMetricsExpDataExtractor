@@ -1,3 +1,0 @@
-        goMessageHistoryOutput = goMessageHistoryOutput == null ? MESSAGE_HISTORY_OUTPUT : goMessageHistoryOutput;
-        sb.append(String.format(goMessageHistoryOutput, routeId, id, label, elapsed));
-            sb.append(String.format(goMessageHistoryOutput, routeId, id, label, elapsed));

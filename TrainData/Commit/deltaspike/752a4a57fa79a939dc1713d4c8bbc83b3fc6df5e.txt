@@ -1,1 +1,0 @@
-    private static volatile Boolean releaseInstanceMethodFound;

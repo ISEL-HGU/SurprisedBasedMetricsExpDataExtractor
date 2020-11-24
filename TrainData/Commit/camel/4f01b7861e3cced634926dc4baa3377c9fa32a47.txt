@@ -1,5 +1,0 @@
-import java.util.Map;
-
-        
-        final Map<String, Object> headers = exchange.getIn().getHeaders();
-            SshResult result = SshHelper.sendExecCommand(headers, command, endpoint, client);

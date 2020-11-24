@@ -1,2 +1,0 @@
-import java.util.HashMap;
-        Map<String, Object> listContext = new HashMap<String, Object>(){{put(ITEM_VAR, null);}};

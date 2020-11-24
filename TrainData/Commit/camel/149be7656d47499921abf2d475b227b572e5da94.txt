@@ -1,9 +1,0 @@
-        String method = CoAPHelper.getDefaultMethod(exchange, client);
-        case CoAPConstants.METHOD_GET:
-        case CoAPConstants.METHOD_DELETE:
-        case CoAPConstants.METHOD_POST:
-        case CoAPConstants.METHOD_PUT:
-        case CoAPConstants.METHOD_PING:
-
-        if (method.equalsIgnoreCase(CoAPConstants.METHOD_PING)) {
-            URI uri = exchange.getIn().getHeader(CoAPConstants.COAP_URI, URI.class);

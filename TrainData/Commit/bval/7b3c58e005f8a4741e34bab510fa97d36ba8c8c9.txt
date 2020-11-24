@@ -1,4 +1,0 @@
-            if (array[i] == null) {
-                Exceptions.raise(IllegalArgumentException::new, message,
-                    ObjectUtils.arrayAdd(values, Integer.valueOf(i)));
-            }

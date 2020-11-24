@@ -1,3 +1,0 @@
-                .having("name").like("CQ%").build();
-                .having("name").like("%TEST%").build();
-                .having("name").like("%Q0%").build();

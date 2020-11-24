@@ -1,1 +1,0 @@
-                    Field field = type.redirect().getTypeClass().getField(pe.getPropertyAsString());

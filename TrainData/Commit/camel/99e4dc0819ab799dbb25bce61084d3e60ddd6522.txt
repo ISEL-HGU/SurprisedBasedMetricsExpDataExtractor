@@ -1,4 +1,0 @@
-    public WebhookConfiguration getConfiguration() {
-        return configuration;
-    }
-

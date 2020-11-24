@@ -1,3 +1,0 @@
- b/platforms/spring-boot/components-starter/camel-http-starter/src/main/java/org/apache/camel/component/http/springboot/HttpComponentConfiguration.java
-package org.apache.camel.component.http.springboot;
-     * org.apache.camel.component.http.HttpClientConfigurer type.

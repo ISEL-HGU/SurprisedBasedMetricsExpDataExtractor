@@ -1,2 +1,0 @@
-import org.apache.camel.model.TimeUnitAdapter;
-import org.apache.camel.util.concurrent.ThreadPoolRejectedPolicy;

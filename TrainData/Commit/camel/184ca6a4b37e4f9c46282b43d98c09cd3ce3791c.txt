@@ -1,3 +1,0 @@
-     * Otherwise a {@link org.apache.camel.support.processor.validation.PredicateValidationException} is thrown.
-     * Otherwise a {@link org.apache.camel.support.processor.validation.PredicateValidationException} is thrown.
-     * Otherwise a {@link org.apache.camel.support.processor.validation.PredicateValidationException} is thrown.

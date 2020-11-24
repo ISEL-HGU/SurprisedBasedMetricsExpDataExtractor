@@ -1,4 +1,0 @@
-import java.util.List;
-
-import org.apache.cayenne.unit.di.server.ServerCaseContextsSync;
-public class SelectActionIT extends ServerCaseContextsSync {

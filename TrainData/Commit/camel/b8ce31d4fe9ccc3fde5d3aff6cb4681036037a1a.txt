@@ -1,4 +1,0 @@
-import com.amazonaws.services.identitymanagement.AmazonIdentityManagement;
-        private AmazonIdentityManagement iamClient;
-        public AmazonIdentityManagement getIamClient() {
-        public void setIamClient(AmazonIdentityManagement iamClient) {

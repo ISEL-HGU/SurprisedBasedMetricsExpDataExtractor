@@ -1,3 +1,0 @@
-import static java.util.Comparator.comparing;
-
-    private final List<Listener<K, V>> listeners = new ArrayList<>(2);

@@ -1,3 +1,0 @@
-    protected JLabel defaultClientSuperclassLabel;
-        defaultClientSuperclassLabel = builder.append(
-        defaultClientSuperclassLabel.setEnabled(enabled);

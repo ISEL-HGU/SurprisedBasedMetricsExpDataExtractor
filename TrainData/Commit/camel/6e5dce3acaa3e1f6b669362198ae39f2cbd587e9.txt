@@ -1,6 +1,0 @@
-import org.apache.camel.component.nagios.NagiosEncryptionMethod;
-        private NagiosEncryptionMethod encryptionMethod;
-        public NagiosEncryptionMethod getEncryptionMethod() {
-            return encryptionMethod;
-        public void setEncryptionMethod(NagiosEncryptionMethod encryptionMethod) {
-            this.encryptionMethod = encryptionMethod;

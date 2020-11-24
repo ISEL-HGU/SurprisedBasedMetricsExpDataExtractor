@@ -1,1 +1,0 @@
-@Generated(value = "org.apache.camel.maven.packaging.SpringBootAutoConfigurationMojo", date = "2017-04-19T08:40:54.520Z")

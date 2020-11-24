@@ -1,2 +1,0 @@
-        state.setConsumer(endpoint.getConsumerEndpoint().getEndpointUri());
-                    thisNodeState.setStarted(true);

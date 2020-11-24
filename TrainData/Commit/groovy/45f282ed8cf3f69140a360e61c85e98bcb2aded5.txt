@@ -1,2 +1,0 @@
-    */
-        try (ServerSocket serverSocket = new ServerSocket(url.getPort())) {

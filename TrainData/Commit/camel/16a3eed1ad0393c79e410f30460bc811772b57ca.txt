@@ -1,5 +1,0 @@
-import java.io.IOException;
-import org.apache.camel.generator.swagger.SpringBootProjectSourceCodeGenerator;
-                comp = "servlet";
-
-                generator.withRestComponent(comp);

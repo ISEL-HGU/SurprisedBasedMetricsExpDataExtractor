@@ -1,8 +1,0 @@
-            autoConfiguredProperties.forEach((k, v) -> {
-                boolean sensitive = k.toLowerCase(Locale.US).contains("password") || k.contains("secret") || k.contains("passphrase") || k.contains("token");
-                if (sensitive) {
-                    LOG.info("\t{}=xxxxxx", k);
-                } else {
-                    LOG.info("\t{}={}", k, v);
-                }
-            });

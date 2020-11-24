@@ -1,2 +1,0 @@
-        return specificAvroReader;
-        this.specificAvroReader = specificAvroReader;

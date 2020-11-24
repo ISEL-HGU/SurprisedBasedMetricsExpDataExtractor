@@ -1,1 +1,0 @@
-                    CamelClusterEventListener listener = listeners.get(i);

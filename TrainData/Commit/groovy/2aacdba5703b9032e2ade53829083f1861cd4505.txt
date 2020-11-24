@@ -1,6 +1,0 @@
-    private static final Map<ClassNode, String> TYPE_TO_DESCRIPTION_MAP = Maps.of(
-    private static final Map<String, ClassNode> NAME_TO_TYPE_MAP = Maps.of(
-        return NAME_TO_TYPE_MAP.containsKey(name);
-        return TYPE_TO_DESCRIPTION_MAP.containsKey(type);
-        String desc = TYPE_TO_DESCRIPTION_MAP.get(type);
-        ClassNode type = NAME_TO_TYPE_MAP.get(name);

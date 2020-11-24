@@ -1,2 +1,0 @@
-    private final Lock mutex = new ReentrantLock(true);
-    private final LinkedList<Exchange> buffer = new LinkedList<>();

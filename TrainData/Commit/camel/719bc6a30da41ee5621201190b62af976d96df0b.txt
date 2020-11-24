@@ -1,3 +1,0 @@
-import java.net.URISyntaxException;
-            public void configure() throws URISyntaxException {
-                URI keyStoreUrl = CometdProducerConsumerInteractiveMain.class.getResource("/jsse/localhost.p12").toURI();

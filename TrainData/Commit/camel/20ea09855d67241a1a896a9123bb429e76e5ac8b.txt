@@ -1,1 +1,0 @@
-        JettyHttpConsumer answer = new JettyHttpConsumer(this, processor);

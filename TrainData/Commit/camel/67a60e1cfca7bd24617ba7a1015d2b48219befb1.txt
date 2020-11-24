@@ -1,1 +1,0 @@
-        if (group != null && !"0".equals(group)) {

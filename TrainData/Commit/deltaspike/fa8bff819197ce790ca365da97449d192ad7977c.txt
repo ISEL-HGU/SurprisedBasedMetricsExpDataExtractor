@@ -1,5 +1,0 @@
-            if (method.getDeclaringClass() == Object.class)
-            {
-                continue;
-            }
-

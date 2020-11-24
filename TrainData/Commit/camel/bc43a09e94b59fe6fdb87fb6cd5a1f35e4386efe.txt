@@ -1,2 +1,0 @@
-                if (ObjectHelper.isEmpty(username) && ObjectHelper.isEmpty(password)) {
-                }

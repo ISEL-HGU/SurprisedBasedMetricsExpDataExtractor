@@ -1,1 +1,0 @@
-    Optional<Simple> findOptionalBy(Long id);

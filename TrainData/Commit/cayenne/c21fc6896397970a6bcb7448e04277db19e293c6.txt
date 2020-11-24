@@ -1,4 +1,0 @@
-        syncObjEntity();
-    protected void syncObjEntity() {
-            merger.setNameGenerator(new DbEntitySyncAction.PreserveRelationshipNameGenerator());
-

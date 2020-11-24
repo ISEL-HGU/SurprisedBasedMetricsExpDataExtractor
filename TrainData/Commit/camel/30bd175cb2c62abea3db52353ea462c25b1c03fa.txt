@@ -1,8 +1,0 @@
-import com.amazonaws.auth.AWSCredentialsProvider;
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
-import com.amazonaws.services.sns.AmazonSNSClientBuilder;
-            AWSCredentialsProvider credentialsProvider = new AWSStaticCredentialsProvider(credentials);
-                client = AmazonSNSClientBuilder.standard().withClientConfiguration(clientConfiguration).withCredentials(credentialsProvider).build();
-                client = AmazonSNSClientBuilder.standard().withCredentials(credentialsProvider).build();
-                client = AmazonSNSClientBuilder.standard().build();
-                client = AmazonSNSClientBuilder.standard().withClientConfiguration(clientConfiguration).build();

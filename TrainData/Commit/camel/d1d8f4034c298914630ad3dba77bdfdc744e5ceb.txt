@@ -1,7 +1,0 @@
-import static org.apache.camel.tools.apt.AnnotationProcessorHelper.implementsInterface;
-    // find all classes - and not in particular if they support outputs or not)
-                                                                 "org.apache.camel.model.OutputDefinition", "org.apache.camel.model.OutputExpressionNode",
-        if ("outputs".equals(fieldName) && supportOutputs(processingEnv, roundEnv, originalClassType)) {
-        if ("verbs".equals(fieldName) && supportOutputs(processingEnv, roundEnv, originalClassType)) {
-    private boolean supportOutputs(ProcessingEnvironment processingEnv, RoundEnvironment roundEnv, TypeElement classElement) {
-        return implementsInterface(processingEnv, roundEnv, classElement, "org.apache.camel.model.OutputNode");

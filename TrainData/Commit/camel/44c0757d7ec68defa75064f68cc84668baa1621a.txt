@@ -1,2 +1,0 @@
-    private String proto = "_tcp";
-    private String domain;

@@ -1,2 +1,0 @@
-    // preempt resolve as info is partially available here (aliases and star imports won't match here)
-                if (!aliases.containsValue(name) && name.endsWith(slashName)) {

@@ -1,1 +1,0 @@
-        return new RestRegistryFactoryResolver().resolve(this).createRegistry();

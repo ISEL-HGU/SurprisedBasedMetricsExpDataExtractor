@@ -1,2 +1,0 @@
-    protected void registerExtension(ComponentExtension extension) {
-    protected void registerExtension(Supplier<ComponentExtension> supplier) {

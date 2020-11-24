@@ -1,3 +1,0 @@
-    public WineComponent() {
-        super("wine", "org.foo.connector.WineComponent");
-    }

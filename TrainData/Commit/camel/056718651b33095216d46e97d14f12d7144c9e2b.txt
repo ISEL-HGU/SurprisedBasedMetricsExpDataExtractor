@@ -1,1 +1,0 @@
-    private final Set<Route> suspendedRoutes = new CopyOnWriteArraySet<>();

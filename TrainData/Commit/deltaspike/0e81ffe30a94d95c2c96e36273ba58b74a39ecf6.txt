@@ -1,3 +1,0 @@
-            Method originalMethod = ClassUtils.extractMethod(EntityRepositoryHandler.class,
-                    repositoryMethodMetadata.getMethod());
-            if (originalMethod.isAnnotationPresent(RequiresTransaction.class))

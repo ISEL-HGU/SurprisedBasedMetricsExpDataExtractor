@@ -1,2 +1,0 @@
-import org.apache.cayenne.modeler.Application;
-        super(Application.getFrame());

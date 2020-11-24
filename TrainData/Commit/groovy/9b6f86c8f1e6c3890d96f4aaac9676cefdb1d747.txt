@@ -1,2 +1,0 @@
-import java.util.Collections;
-    private List<GroovydocTag> tagList = Collections.emptyList();

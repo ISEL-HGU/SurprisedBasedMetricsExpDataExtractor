@@ -1,6 +1,0 @@
-import java.util.Collections;
-import java.util.stream.Collectors;
-        
-        if (getEndpoint().isPreSort()) {
-            Collections.sort(files, (a, b) -> a.getFilename().compareTo(b.getFilename()));
-        }

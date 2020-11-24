@@ -1,4 +1,0 @@
-        if (exchangeSupplier.isPresent()) {
-            throw new IllegalArgumentException("withExchange not supported on FluentProducerTemplate.request method. Use send method instead.");
-        }
-

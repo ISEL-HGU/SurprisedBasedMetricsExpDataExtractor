@@ -1,4 +1,0 @@
-    public Object invoke(final Object proxy, Method method, Object[] args) throws Throwable {
-            final VMPlugin plugin = VMPluginFactory.getPlugin();
-            Object handle = handleCache.computeIfAbsent(method, m -> plugin.getInvokeSpecialHandle(m, proxy));
-

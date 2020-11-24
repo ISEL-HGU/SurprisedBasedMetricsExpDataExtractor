@@ -1,2 +1,0 @@
-    private final GroupsComputer groupsComputer = new GroupsComputer();
-        return groupsComputer;

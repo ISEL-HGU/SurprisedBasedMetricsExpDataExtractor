@@ -1,1 +1,0 @@
-    private Web3j buildService(String clientAddress, Web3jConfiguration configuration) {

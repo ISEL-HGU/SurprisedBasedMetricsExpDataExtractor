@@ -1,2 +1,0 @@
-    public CamelSagaStep(Optional<Endpoint> compensation, Optional<Endpoint> completion,
-                         Map<String, Expression> options, Optional<Long> timeoutInMilliseconds) {

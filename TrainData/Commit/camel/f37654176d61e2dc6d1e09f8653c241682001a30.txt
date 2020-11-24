@@ -1,4 +1,0 @@
-        label = "common,security", required = "true")
-        label = "common,security")
-        label = "common,security", enums = "USERNAME_PASSWORD,REFRESH_TOKEN,JWT")
-        label = "common,proxy,security")

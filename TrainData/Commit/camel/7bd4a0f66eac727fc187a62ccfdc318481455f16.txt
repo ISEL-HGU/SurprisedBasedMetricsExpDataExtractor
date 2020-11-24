@@ -1,1 +1,0 @@
-            if (request.getMethod().equals(Method.PUT) || request.getMethod().equals(Method.POST)) {

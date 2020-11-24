@@ -1,4 +1,0 @@
-        ServerModule.contributeDomainFilters(binder);
-        ServerModule.contributeDomainSyncFilters(binder);
-        ServerModule.contributeDomainQueryFilters(binder);
-

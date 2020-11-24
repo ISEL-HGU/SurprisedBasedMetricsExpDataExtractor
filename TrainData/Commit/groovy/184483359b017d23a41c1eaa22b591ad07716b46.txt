@@ -1,1 +1,0 @@
-        if (shouldAnnotate && !hasAnnotation(nodeToMark, GENERATED_TYPE)) {

@@ -1,3 +1,0 @@
-import org.apache.camel.maven.packaging.StringHelper;
-
-        String text = StringHelper.getClassShortName(javaType);

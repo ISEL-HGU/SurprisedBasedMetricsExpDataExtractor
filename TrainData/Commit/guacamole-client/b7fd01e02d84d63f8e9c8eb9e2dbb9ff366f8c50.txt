@@ -1,1 +1,0 @@
-     * The behavior of alias dereferencing for the LDAP connections.

@@ -1,2 +1,0 @@
-            String result = factory.unbind(getCamelContext(), row);
-                    factory.bind(getCamelContext(), result, model, count, lists);

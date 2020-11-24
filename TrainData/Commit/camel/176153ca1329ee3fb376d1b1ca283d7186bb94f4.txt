@@ -1,1 +1,0 @@
-        DefaultConfigurationConfigurer.afterPropertiesSet(camelContext, camelContext.getRegistry());

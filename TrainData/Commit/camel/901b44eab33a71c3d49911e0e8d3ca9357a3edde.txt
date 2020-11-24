@@ -1,5 +1,0 @@
-    public boolean isVerifySupported() {
-        return component instanceof VerifiableComponent;
-    }
-
-    @Override

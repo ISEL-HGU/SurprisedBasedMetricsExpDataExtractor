@@ -1,2 +1,0 @@
-import org.slf4j.LoggerFactory;
-                        new LoggingDbLoaderDelegate(LoggerFactory.getLogger(DbLoader.class)),

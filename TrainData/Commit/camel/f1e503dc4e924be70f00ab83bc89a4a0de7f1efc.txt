@@ -1,8 +1,0 @@
- * Uses a local cache of previously seen Message IDs. Mutations that come in via the ({@link #add(String)}), or
- * {@link #remove(String)} method will update the local cache and broadcasting the change in state on a Kafka topic.
- *
- * The topic used must be unique per repository instance. This class makes no
- * latest state. The cache will not be considered to be warmed up until one poll of {@link #pollDurationMs} in length
- * returns 0 records. Startup will not be completed until either the cache has warmed up, or 30 seconds go by; if the
- * latter happens the idempotent repository may be in an inconsistent state until its consumer catches up to the end
- * of the topic.

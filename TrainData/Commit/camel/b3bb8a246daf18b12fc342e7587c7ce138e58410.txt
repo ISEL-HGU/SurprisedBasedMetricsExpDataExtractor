@@ -1,1 +1,0 @@
-        InputStream fileIn = PubsubUtil.class.getClassLoader().getResourceAsStream("example.properties");

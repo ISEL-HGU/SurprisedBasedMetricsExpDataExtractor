@@ -1,4 +1,0 @@
-        if (ObjectHelper.isEmpty(configuration.getAmazonKinesisClient())) {
-            if (kinesisClient != null) {
-                kinesisClient.shutdown();
-            }

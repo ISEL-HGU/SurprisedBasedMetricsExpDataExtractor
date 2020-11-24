@@ -1,5 +1,0 @@
- b/camel-support/src/main/java/org/apache/camel/support/JSonSchemaHelper.java
-package org.apache.camel.support;
-/**
- * Used for parsing Camel components json meta-data descriptors.
- */

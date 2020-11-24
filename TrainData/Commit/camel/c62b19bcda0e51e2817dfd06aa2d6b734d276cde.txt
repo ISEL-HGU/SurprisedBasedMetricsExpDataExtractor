@@ -1,3 +1,0 @@
-        }
-        if (configuration.getSubscriptionName() != null) {
-            listenerContainer.setSubscriptionName(configuration.getSubscriptionName());

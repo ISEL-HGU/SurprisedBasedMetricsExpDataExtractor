@@ -1,9 +1,0 @@
-import org.codehaus.groovy.runtime.memoize.EvictableCache;
-import org.codehaus.groovy.runtime.memoize.SimpleCache;
-    private static final SimpleCache<ClassLoader, Map<String, List<MethodNode>>> CACHE = new SimpleCache<>(new WeakHashMap<>());
-    public static Map<String, List<MethodNode>> get(final ClassLoader classLoader) {
-        return CACHE.getAndPut(classLoader, new EvictableCache.ValueProvider<ClassLoader, Map<String, List<MethodNode>>>() {
-            @Override
-            public Map<String, List<MethodNode>> provide(ClassLoader key) {
-                return getMacroMethodsFromClassLoader(key);
-        });

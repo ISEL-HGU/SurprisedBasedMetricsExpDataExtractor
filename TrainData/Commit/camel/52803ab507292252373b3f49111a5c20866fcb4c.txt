@@ -1,1 +1,0 @@
-    byte[] readFromChannel(StreamSourceChannel source) throws IOException {

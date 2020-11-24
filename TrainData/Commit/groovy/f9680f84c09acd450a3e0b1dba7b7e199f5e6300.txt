@@ -1,2 +1,0 @@
-    private static final int DEFAULT_DFA_CACHE_THRESHOLD = 64;
-    private static final int MIN_DFA_CACHE_THRESHOLD = 32;

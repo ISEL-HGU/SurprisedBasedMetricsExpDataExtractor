@@ -1,1 +1,0 @@
-                writeClosure.call(source, value);

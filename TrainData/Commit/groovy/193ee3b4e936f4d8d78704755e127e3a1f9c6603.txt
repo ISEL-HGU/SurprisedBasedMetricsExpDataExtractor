@@ -1,1 +1,0 @@
-            VariableScopeVisitor visitor = new VariableScopeVisitor(source, ownerClassNode instanceof InnerClassNode);

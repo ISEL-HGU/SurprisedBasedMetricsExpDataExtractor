@@ -1,5 +1,0 @@
-import org.apache.camel.impl.ScheduledPollEndpoint;
-public class CassandraEndpoint extends ScheduledPollEndpoint {
-        CassandraConsumer consumer = new CassandraConsumer(this, processor);
-        configureConsumer(consumer);
-        return consumer;

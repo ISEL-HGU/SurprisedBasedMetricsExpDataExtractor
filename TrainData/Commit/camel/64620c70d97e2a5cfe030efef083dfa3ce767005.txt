@@ -1,4 +1,0 @@
-        boolean containsKey = cache.containsKey(key);
-        if (containsKey) {
-            duplicateCount.incrementAndGet();
-        return containsKey;

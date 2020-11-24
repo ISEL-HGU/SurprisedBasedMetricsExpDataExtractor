@@ -1,2 +1,0 @@
-        } catch (MissingMethodExceptionNoStack | InvokerInvocationException e) {
-            if (arguments.length <= 0 || !(arguments[0].getClass().equals(ownerClass))) {

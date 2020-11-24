@@ -1,6 +1,0 @@
-
-
-        DeleteClusterResult res = new DeleteClusterResult();
-        res.setClusterArn(request.getClusterArn());
-        res.setState(ClusterState.DELETING.name());
-        return res;

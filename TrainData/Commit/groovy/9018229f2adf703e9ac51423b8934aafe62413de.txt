@@ -1,4 +1,0 @@
-    String CALLEE_DEPTH = "calleeDepth";
-
-    int DEFAULT_CALLEE_DEPTH = 3 ;
-

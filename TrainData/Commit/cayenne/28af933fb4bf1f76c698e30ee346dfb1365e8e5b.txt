@@ -1,7 +1,0 @@
-            queryQualifier = (queryQualifier != null)
-                    ? queryQualifier.andExp(entityQualifier)
-                    : entityQualifier;
-        PrefetchSelectQuery<?> prefetchQuery = new PrefetchSelectQuery<>(prefetchPath, relationship);
-        prefetchQuery.setQualifier(classDescriptor.getEntity()
-                .translateToRelatedEntity(queryQualifier, prefetchPath));
-            prefetchQuery.addResultPath("db:"  relationship.getReverseDbRelationshipPath());

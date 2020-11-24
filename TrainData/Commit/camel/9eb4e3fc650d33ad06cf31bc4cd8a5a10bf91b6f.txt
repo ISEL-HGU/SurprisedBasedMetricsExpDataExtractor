@@ -1,1 +1,0 @@
-                messageConstructor = exceptionClass.getConstructor(String.class);

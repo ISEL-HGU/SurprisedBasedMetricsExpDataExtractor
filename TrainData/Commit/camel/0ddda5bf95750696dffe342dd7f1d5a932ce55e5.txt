@@ -1,2 +1,0 @@
- b/platforms/spring-boot/components-starter/camel-jetty-starter/src/main/java/org/apache/camel/component/jetty9/springboot/JettyHttpComponentConfiguration9.java
-package org.apache.camel.component.jetty9.springboot;

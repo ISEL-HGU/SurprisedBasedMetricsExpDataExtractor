@@ -1,4 +1,0 @@
-    public Map<ContainerElementKey, ValueExtractor<?>> getLocalValueExtractors() {
-        return valueExtractors.optional().map(Collections::unmodifiableMap).orElseGet(Collections::emptyMap);
-    }
-

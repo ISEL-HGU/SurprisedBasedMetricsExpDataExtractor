@@ -1,9 +1,0 @@
-             "(?<genericTypeParameterUpperBound>\\S)>\\s(?<returnType>\\S))?\\s(\\S)\\s*\\(\\s*(?<signature>[\\S\\s,]*)\\)\\s*;?\\s*");
-            String returnType = null;
-                returnType = methodMatcher.group("returnType");
-                if (returnType != null && returnType.equals(genericTypeParameterName)) {
-                    returnType = genericTypeParameterUpperBound;
-                }
-            final Class<?> resultType = returnType != null ? forName(returnType) : forName(methodMatcher.group(1));
-            final String name = methodMatcher.group(7);
-            final String argSignature = methodMatcher.group(8);

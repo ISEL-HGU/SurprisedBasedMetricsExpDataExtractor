@@ -1,6 +1,0 @@
-
-        RestConfiguration config = getCamelContext().getRestConfiguration(getComponentName(), false);
-            config = getCamelContext().getRestConfiguration();
-        }
-        if (config == null) {
-            config = getCamelContext().getRestConfiguration(getComponentName(), true);

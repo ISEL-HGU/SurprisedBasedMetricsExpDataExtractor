@@ -1,3 +1,0 @@
-     * Turn on exponential back off
-     * Instead of using the current in-progress {@link org.apache.camel.Exchange} IN body we use the original IN body instead. This allows
-     * you to store the original input in the dead letter queue instead of the in-progress snapshot of the IN body.

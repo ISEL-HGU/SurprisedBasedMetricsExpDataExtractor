@@ -1,3 +1,0 @@
-    // TODO: add support for connect / scanning dirs / complete events
-    // TODO: add API to operations to include more details than just the name, eg RemoteFile so we can get its size / timestamp etc
-

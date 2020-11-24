@@ -1,4 +1,0 @@
-            if (ObjectHelper.isEmpty(accountSid)) {
-                accountSid = username;
-            }
-        return accountSid;

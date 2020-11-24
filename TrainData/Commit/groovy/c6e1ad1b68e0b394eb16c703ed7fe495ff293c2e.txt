@@ -1,4 +1,0 @@
-    private int bytecodeVersion = Opcodes.V1_8;
-            if (CompilerConfiguration.JDK7.equals(targetBytecode)) {
-                return Opcodes.V1_7;
-            return Opcodes.V1_8;

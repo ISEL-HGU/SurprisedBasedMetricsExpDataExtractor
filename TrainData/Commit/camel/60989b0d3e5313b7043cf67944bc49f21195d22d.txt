@@ -1,6 +1,0 @@
-                                    if (desc == null) {
-                                        if (desc.endsWith(".")) {
-                                            desc = " ";
-                                        } else {
-                                            desc = ". ";
-                                        }

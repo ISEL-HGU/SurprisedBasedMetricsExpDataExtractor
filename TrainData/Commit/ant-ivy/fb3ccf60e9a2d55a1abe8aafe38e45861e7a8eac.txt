@@ -1,2 +1,0 @@
-        versions = new HashMap<>();
-    private static Map<String, String> versions;

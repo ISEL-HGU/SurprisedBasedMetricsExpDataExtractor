@@ -1,6 +1,0 @@
-
-        return source.toMillis();
-    public static Duration toDuration(String source) {
-        return Duration.parse(source);
-    public static String toString(Duration source) {
-        return source.toString();

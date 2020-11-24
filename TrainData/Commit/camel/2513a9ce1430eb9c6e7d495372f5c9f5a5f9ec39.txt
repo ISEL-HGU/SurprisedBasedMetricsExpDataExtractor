@@ -1,5 +1,0 @@
-            if (connectorRole.equals(settings.getString(sessionIdItr.next(),
-			        SessionFactory.SETTING_CONNECTION_TYPE))) {
-			    hasRole = true;
-			    break;
-			}

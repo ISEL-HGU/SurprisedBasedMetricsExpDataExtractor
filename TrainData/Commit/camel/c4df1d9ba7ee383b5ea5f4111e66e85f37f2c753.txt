@@ -1,6 +1,0 @@
-import javax.enterprise.inject.spi.AnnotatedType;
-    Set<SyntheticBean<?>> beansFrom(String path, AnnotatedType<?> annotatedType) throws JAXBException, IOException {
-        URL url = getResource(path, annotatedType.getJavaClass().getClassLoader());
-        return beansFrom(url, annotatedType);
-    Set<SyntheticBean<?>> beansFrom(URL url, AnnotatedType<?> annotatedType) throws JAXBException, IOException {
-                    beans.addAll(beansFrom(base  "/"  definition.getResource(), annotatedType));

@@ -1,3 +1,0 @@
-    private final Integer exitValue;
-    public SshResult(String command, Integer exitValue, InputStream out, InputStream err) {
-    public Integer getExitValue() {

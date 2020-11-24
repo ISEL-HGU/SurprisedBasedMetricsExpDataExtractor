@@ -1,1 +1,0 @@
-        Class<?> clazz = session.getConfiguration().getTypeAliasRegistry().resolveAlias(endpoint.getBeanName());

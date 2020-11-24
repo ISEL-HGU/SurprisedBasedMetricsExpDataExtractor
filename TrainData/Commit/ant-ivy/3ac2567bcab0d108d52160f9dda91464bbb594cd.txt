@@ -1,1 +1,0 @@
-    private StringBuilder buffer = new StringBuilder();

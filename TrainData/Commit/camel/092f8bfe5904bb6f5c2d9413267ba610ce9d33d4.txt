@@ -1,5 +1,0 @@
-    @Parameter(property = "camelSalesforce.outputDirectory", defaultValue = "${project.build.directory}/generated-sources/camel-salesforce")
-        final ObjectDescriptions descriptions = new ObjectDescriptions(client, getResponseTimeout(), includes, includePattern, excludes, excludePattern, getLog());
-                throw new MojoExecutionException("Unable to generate JSON Schema types for: "  description.getName(), e);
-            Files.write(schemaFilePath, JsonUtils.getJsonSchemaString(schemaObjectMapper, allSchemas, jsonSchemaId).getBytes("UTF-8"));
-        getLog().info(String.format("Successfully generated %s JSON Types in file %s", descriptions.count() * 2, schemaFilePath));

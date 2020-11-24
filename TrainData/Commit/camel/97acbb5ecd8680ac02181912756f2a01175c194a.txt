@@ -1,5 +1,0 @@
-        if (ObjectHelper.isEmpty(configuration.getAmazonSWClient())) {
-            if (amazonSWClient != null) {
-                amazonSWClient.shutdown();
-                amazonSWClient = null;
-            }

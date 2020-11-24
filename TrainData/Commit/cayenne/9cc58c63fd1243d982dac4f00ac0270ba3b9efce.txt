@@ -1,2 +1,0 @@
-					ServerModule.contributeDomainFilters(binder).addAfter(PostCommitFilter.class, TransactionFilter.class);
-					ServerModule.contributeDomainFilters(binder).insertBefore(PostCommitFilter.class, TransactionFilter.class);

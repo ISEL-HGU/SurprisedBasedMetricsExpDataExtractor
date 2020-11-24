@@ -1,4 +1,0 @@
-import java.util.LinkedHashMap;
-        packageDocs = new LinkedHashMap<String, GroovyPackageDoc>();
-        classDocs = new LinkedHashMap<String, GroovyClassDoc>();
-        Map<String, GroovyClassDoc> visibleClasses = new LinkedHashMap<String, GroovyClassDoc>();

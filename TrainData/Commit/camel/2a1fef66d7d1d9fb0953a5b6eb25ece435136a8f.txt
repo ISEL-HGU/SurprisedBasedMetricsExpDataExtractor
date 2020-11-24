@@ -1,3 +1,0 @@
-import org.elasticsearch.common.Strings;
-            updateRequest.doc(XContentFactory.xContent((String) document),(String) document);
-                queryText = Strings.toString(contentBuilder.map(mapQuery));

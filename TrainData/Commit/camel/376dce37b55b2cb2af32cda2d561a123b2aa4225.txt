@@ -1,1 +1,0 @@
-            service = services.isEmpty() ? null : services.size() > 1 ? serviceChooser.choose(services) : services.get(0);

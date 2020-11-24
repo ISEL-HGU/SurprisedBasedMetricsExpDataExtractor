@@ -1,2 +1,0 @@
-
-    CMISSessionFacade create(CMISEndpoint endpoint) throws Exception;

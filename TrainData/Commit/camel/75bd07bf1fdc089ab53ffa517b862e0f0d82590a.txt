@@ -1,1 +1,0 @@
-            other.append("* Miscellaneous Components\n");

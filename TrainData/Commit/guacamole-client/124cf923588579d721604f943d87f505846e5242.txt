@@ -1,3 +1,0 @@
-                        logger.warn("Given a referral, but referrals are disabled. Error was: {}", e.getMessage());
-                        logger.error("Error trying to follow a referral: {}", e.getFailedReferral());
-                        logger.warn("Given a referral, not following it. Error was: {}", e.getMessage());

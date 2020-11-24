@@ -1,6 +1,0 @@
-    private String scopes = CalendarScopes.CALENDAR;
-    public String getScopes() {
-     * Specifies the level of permissions you want a calendar application to have to a user account.
-     * You can separate multiple scopes by comma.
-     * See https://developers.google.com/google-apps/calendar/auth for more info.
-    public void setScopes(String scopes) {

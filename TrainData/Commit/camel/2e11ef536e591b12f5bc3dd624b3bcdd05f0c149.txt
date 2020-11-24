@@ -1,2 +1,0 @@
- * The ldif component allows you to do updates on an LDAP server from a LDIF
- * body content.

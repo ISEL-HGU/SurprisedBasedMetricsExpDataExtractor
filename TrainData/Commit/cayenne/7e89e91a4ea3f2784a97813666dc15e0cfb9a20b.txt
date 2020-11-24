@@ -1,1 +1,0 @@
-        return dataMapPreference == null || dataMapPreference.get(URL_PROPERTY, null) == null;

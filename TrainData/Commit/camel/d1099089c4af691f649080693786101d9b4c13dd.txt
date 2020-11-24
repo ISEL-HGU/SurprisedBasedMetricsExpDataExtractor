@@ -1,2 +1,0 @@
-    private final AbstractCamelContext camelContext;
-    public RouteService(AbstractCamelContext camelContext, RouteDefinition routeDefinition, List<RouteContext> routeContexts, List<Route> routes) {

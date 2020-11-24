@@ -1,2 +1,0 @@
-                MDResolvedResource r = rmdparser.parse(rres.getResource(), rres.getRevision());
-                ModuleDescriptor md = r.getResolvedModuleRevision().getDescriptor();

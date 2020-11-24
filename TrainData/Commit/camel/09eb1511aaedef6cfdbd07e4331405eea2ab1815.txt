@@ -1,9 +1,0 @@
-    @SuppressWarnings("unchecked")
-            MethodInfo chosen = chooseMethodWithCustomAnnotations(possibles);
-    private MethodInfo chooseMethodWithCustomAnnotations(Collection<MethodInfo> possibles) {
-                Collections.addAll(answer, interfaceClazz.getDeclaredMethods());
-        // method does not match so remove it
-        methods.removeIf(info -> !matchMethod(info.getMethod(), name));
-            name = StringHelper.before(name, "(");
-        String types = StringHelper.between(methodName, "(", ")");
-     * Gets the list of methods sorted by A..Z method name.

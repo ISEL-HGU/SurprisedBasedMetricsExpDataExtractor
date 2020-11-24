@@ -1,9 +1,0 @@
- b/components/camel-consul/src/test/java/org/apache/camel/component/consul/ha/ConsulClusteredRoutePolicyIT.java
-import com.orbitz.consul.Consul;
-public class ConsulClusteredRoutePolicyIT {
-    private static final Logger LOGGER = LoggerFactory.getLogger(ConsulClusteredRoutePolicyIT.class);
-    private static final String CONSUL_HOST = System.getProperty("camel.consul.host", Consul.DEFAULT_HTTP_HOST);
-    private static final int CONSUL_PORT = Integer.getInteger("camel.consul.port", Consul.DEFAULT_HTTP_PORT);
-            service.setUrl(String.format("http://%s:%d", CONSUL_HOST, CONSUL_PORT));
-
-            LOGGER.info("Consul URL {}", service.getUrl());

@@ -1,1 +1,0 @@
-            final KeySortablePair<Float, Integer>[] sorted = new KeySortablePair[topicDistr.length];

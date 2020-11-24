@@ -1,2 +1,0 @@
-        log.trace("doPoll.getUserTimeline(user={}, sinceId={})", user, getLastIdPaging().getSinceId());
-        log.trace("doDirect.getUserTimeline(user={})", user);

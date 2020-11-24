@@ -1,5 +1,0 @@
-            new DefaultServiceHealth(
-                    serviceHealthList.stream()
-                            .filter(h -> ObjectHelper.equal(h.getService().getId(), service.getServiceId()))
-                            .allMatch(this::isHealthy)
-            )

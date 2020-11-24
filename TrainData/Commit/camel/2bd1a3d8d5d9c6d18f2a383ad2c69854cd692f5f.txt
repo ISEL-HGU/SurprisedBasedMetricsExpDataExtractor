@@ -1,1 +1,0 @@
-    private LoggingLevel readLockLoggingLevel = LoggingLevel.DEBUG;

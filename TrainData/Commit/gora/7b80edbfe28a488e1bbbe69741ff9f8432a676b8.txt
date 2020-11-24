@@ -1,4 +1,0 @@
-
-import org.apache.hadoop.hbase.client.TableDescriptor;
-
-            TableDescriptor tableDescriptor = hbaseAdmin.getDescriptor(hbaseTableName);

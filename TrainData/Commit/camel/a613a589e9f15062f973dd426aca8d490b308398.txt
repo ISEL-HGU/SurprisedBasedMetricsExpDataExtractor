@@ -1,8 +1,0 @@
-        final Task task = new Task(backOff, function);
-        long delay = task.getContext().next();
-        Task(BackOff backOff, ThrowingFunction<BackOffContext, Boolean, Exception> function) {
-            this.context = new BackOffContext(backOff);
-
-        BackOffContext getContext() {
-            return context;
-        }

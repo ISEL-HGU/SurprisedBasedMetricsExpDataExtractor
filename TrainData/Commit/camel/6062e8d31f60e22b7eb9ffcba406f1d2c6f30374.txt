@@ -1,1 +1,0 @@
-            if (context != null && context.getRuntimeEndpointRegistry() != null) {

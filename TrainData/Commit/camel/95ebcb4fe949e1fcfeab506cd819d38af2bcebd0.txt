@@ -1,1 +1,0 @@
- * The atomix-value component is used to access Atomix's distributed value.

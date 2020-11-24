@@ -1,1 +1,0 @@
- * @deprecated use {@link org.apache.camel.main.Main org.apache.camel.main.Main} instead

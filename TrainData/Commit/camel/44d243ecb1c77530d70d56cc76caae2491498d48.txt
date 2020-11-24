@@ -1,2 +1,0 @@
-        String exchangeName = (String) exchange.getIn().getHeader(RabbitMQConstants.EXCHANGE_OVERRIDE_NAME);
-        String exchangeName = (String) exchange.getIn().getHeader(RabbitMQConstants.EXCHANGE_OVERRIDE_NAME);

@@ -1,4 +1,0 @@
-        if (!fn.isPrivate()) {
-                                    if (outer!=classNode.getOuterClass() && outerClassField.isPrivate()) {
-            throw new RuntimeParserException("Cannot modify final field["  fieldName  "] of "  classNode.getName()  "'s super class", expression);
-            throw new RuntimeParserException("Cannot access private field["  fieldName  "] of "  classNode.getName()  "'s super class", expression);

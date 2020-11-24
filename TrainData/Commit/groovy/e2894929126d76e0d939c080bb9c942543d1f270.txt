@@ -1,4 +1,0 @@
-     * The attribute values of annotations must be primitive, String or Enum constants.
-                FieldNode field = ClassNodeUtils.getField(type, pe.getPropertyAsString());
-                if (type.isEnum() && field != null && field.isEnum()) return exp;
-                Expression constant = findConstant(field);

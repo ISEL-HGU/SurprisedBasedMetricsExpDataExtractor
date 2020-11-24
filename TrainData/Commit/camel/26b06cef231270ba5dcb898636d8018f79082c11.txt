@@ -1,1 +1,0 @@
- * Apache ActiveMQ. This component extends the Camel JMS component.

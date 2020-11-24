@@ -1,6 +1,0 @@
-import picocli.CommandLine;
-            FileSystemCompiler.CompilationOptions options = new FileSystemCompiler.CompilationOptions();
-            CommandLine parser = FileSystemCompiler.configureParser(options);
-            parser.parseArgs(commandLine);
-            configuration = options.toCompilerConfiguration();
-            String[] filenames = options.generateFileNames();

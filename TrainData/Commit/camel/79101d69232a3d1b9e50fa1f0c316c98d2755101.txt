@@ -1,3 +1,0 @@
-        // remove double whitespaces, and trim
-        // unescape http links
-        s = s.replaceAll("\\\\(http:|https:)", "$1");

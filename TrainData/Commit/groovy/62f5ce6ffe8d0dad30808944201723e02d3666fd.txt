@@ -1,9 +1,0 @@
-import java.util.LinkedHashMap;
-        ClassNode parameterizedType = GenericsUtils.findParameterizedType(declaringClass, actualReceiver);
-
-        if (null == parameterizedType) {
-            return Collections.emptyMap();
-        }
-
-        GenericsType[] actualGenericsTypes = parameterizedType.getGenericsTypes();
-        Map<GenericsType, GenericsType> result = new LinkedHashMap<>();

@@ -1,8 +1,0 @@
-        // for expressions we want to know if it must be used as predicate or not
-        boolean predicate = "expression".equals(kind) || asPredicate;
-        if (predicate) {
-            if (asPredicate) {
-                sb.append(Strings.doubleQuote("true"));
-            } else {
-                sb.append(Strings.doubleQuote("false"));
-            }

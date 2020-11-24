@@ -1,4 +1,0 @@
-import static org.codehaus.groovy.ast.tools.GeneralUtils.args;
-                            FieldNode fieldNode = cNode.addField(fieldName, fieldMods, returnType, null);
-                            if (fieldNode.isFinal()) {
-                                Expression mce = callX(helperClassNode, baseName  fieldNode.getName(), args(varX("this")));

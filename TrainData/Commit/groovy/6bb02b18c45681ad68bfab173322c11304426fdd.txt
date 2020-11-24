@@ -1,5 +1,0 @@
-import static groovy.lang.Tuple.tuple;
-            return tuple(token.getLine(), token.getCharPositionInLine()  1  token.getText().length());
-            return tuple(token.getLine()  newLineCnt, stopTextLength - stopText.lastIndexOf('\n'));
-        astNode.setLastLineNumber(endPosition.getV1());
-        astNode.setLastColumnNumber(endPosition.getV2());

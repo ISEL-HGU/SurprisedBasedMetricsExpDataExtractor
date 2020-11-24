@@ -1,1 +1,0 @@
-                    Parameter newParam = new Parameter(fixedType, parameter.getName());

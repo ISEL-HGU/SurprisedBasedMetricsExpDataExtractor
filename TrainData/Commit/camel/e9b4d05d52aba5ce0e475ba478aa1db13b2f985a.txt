@@ -1,5 +1,0 @@
-            if (context.getStatus().equals(ServiceStatus.Suspended)) {
-                context.resume();
-            } else {
-                context.start();
-            }

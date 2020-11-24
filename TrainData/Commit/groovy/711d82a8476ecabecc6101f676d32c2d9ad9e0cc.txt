@@ -1,1 +1,0 @@
-        if (isCallOnClosure(expr) && staticCompilationTransformer.getClassNode() != null) {

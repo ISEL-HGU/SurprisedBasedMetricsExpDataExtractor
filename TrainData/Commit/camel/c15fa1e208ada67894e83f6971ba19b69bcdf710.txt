@@ -1,2 +1,0 @@
-public class CamelContextSuspendingEvent extends AbstractContextEvent {
-        return "Suspending CamelContext: "  getContext().getName();

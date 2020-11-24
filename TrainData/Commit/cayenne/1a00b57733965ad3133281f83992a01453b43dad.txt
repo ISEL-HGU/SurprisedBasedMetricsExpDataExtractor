@@ -1,6 +1,0 @@
-
-import org.apache.cayenne.modeler.util.CayenneAction;
-public class FileMenuItem extends CayenneAction.CayenneMenuItem {
-        super(fileName);
-        setEnabled(a == null || a.isEnabled());
-        updateActiveIcon();

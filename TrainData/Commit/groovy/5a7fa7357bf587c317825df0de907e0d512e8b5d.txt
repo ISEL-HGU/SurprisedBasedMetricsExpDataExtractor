@@ -1,3 +1,0 @@
-    @FunctionalInterface
-    public interface ClassgenCallback {
-        void call(ClassVisitor writer, ClassNode node) throws CompilationFailedException;

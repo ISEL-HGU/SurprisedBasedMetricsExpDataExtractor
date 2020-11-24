@@ -1,4 +1,0 @@
-            ProcessorDefinition<?> me = (ProcessorDefinition<?>) output;
-        ProcessorDefinition<?> me = (ProcessorDefinition<?>) this;
-        ExpressionClause<ProcessorDefinition<Type>> clause = new ExpressionClause<>(this);
-        ExpressionClause<ProcessorDefinition<Type>> clause = new ExpressionClause<>(this);

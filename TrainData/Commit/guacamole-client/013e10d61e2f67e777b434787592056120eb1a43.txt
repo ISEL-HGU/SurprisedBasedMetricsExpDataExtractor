@@ -1,4 +1,0 @@
-     * The hostname of the client that initiated the request.
-     * The ip address of the client that initiated the request.
-        // Grab the remote host info
-        // Grab the remote ip info

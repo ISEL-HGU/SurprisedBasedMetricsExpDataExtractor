@@ -1,8 +1,0 @@
-import java.net.MalformedURLException;
-        URL url = null;
-        try {
-            url = new URL("http://aws.amazonas.s3/file.zip");
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        return url;

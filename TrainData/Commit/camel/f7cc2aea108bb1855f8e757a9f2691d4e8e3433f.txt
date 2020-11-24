@@ -1,2 +1,0 @@
- * Producer endpoint that creates an issue. The endpoint requires the "GitHubIssueTitle" header,
- * which sets the GitHub issue title. The issue body content is set from the exchange message body.

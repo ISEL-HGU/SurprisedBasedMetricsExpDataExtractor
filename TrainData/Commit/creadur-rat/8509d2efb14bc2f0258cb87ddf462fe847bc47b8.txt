@@ -1,7 +1,0 @@
-import java.io.FileOutputStream;
-                              new LogOutputStream(this, Project.MSG_INFO)
-                          ));
-                out = new PrintWriter(new OutputStreamWriter(
-                        new FileOutputStream(reportFile),
-                        Charset.forName("UTF-8")
-                ));

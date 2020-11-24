@@ -1,3 +1,0 @@
-    @UriParam(defaultValue = "TLSv1.2", label = "security")
-    // TODO : switch to TLSv1.3 when we fully upgrade to JDK11
-    private String securityProtocol = "TLSv1.2";

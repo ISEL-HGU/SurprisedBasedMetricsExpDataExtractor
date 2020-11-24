@@ -1,2 +1,0 @@
-    Class pre() default Undefined.CLASS.class;
-    Class post() default Undefined.CLASS.class;

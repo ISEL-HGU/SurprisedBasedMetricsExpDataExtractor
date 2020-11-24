@@ -1,2 +1,0 @@
-        // must add before start so it will have CamelContext injected first
-        ServiceHelper.startServices(processor, idempotentRepository);

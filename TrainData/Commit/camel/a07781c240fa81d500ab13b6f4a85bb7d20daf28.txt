@@ -1,6 +1,0 @@
-    private static final String XALAN_TRANSFORMER_FACTORY = "org.apache.xalan.processor.TransformerFactoryImpl";
-        if (this.transformerFactory.getClass().getName().equals(XALAN_TRANSFORMER_FACTORY) 
-        		&& (source instanceof StAXSource)) {
-            //external xalan can't handle StAXSource, so convert StAXSource to SAXSource.
-            source = new StAX2SAXSource(((StAXSource) source).getXMLStreamReader());
-        }

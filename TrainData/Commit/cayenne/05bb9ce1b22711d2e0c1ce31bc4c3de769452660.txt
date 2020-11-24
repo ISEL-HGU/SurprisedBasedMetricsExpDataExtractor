@@ -1,9 +1,0 @@
-import org.apache.cayenne.graph.ArcId;
-    @Override
-    public void arcCreated(Object nodeId, Object targetNodeId, ArcId arcId) {
-    @Override
-    public void arcDeleted(Object nodeId, Object targetNodeId, ArcId arcId) {
-    @Override
-    @Override
-    @Override
-    @Override

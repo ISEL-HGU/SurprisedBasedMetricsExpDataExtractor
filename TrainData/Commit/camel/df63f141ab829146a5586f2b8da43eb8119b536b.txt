@@ -1,2 +1,0 @@
-            if (entry != null && !DropboxUploadMode.force.equals(mode)) {
-            if (entry != null && !DropboxUploadMode.force.equals(mode)) {

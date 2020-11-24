@@ -1,9 +1,0 @@
-        if (mark == size) {
-        } else if (mark == size - 1) {
-            ClassNode last = stack.get(size - 1);
-            }
-        } else {
-                    "operand stack contains "  size 
-                            " elements, but we expected only "  mark
-            );
-        stack.set(mark, ClassHelper.boolean_TYPE);

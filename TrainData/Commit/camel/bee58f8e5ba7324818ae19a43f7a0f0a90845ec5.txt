@@ -1,4 +1,0 @@
-import java.math.BigInteger;
-        private BigInteger firstIndex;
-        public BigInteger getFirstIndex() {
-        public void setFirstIndex(BigInteger firstIndex) {

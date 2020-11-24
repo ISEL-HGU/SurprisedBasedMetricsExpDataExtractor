@@ -1,3 +1,0 @@
-import org.apache.camel.component.dropbox.util.DropboxConstants;
-        if (remotePath == null || !remotePath.startsWith(DropboxConstants.DROPBOX_FILE_SEPARATOR)) {
-        if (!remotePath.startsWith(DropboxConstants.DROPBOX_FILE_SEPARATOR)) {

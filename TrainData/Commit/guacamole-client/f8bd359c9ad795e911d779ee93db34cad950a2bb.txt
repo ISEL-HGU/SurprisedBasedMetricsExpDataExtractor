@@ -1,2 +1,0 @@
-            // Create isolated classloader for this extension
-            classLoader = ExtensionClassLoader.getInstance(file, parent);

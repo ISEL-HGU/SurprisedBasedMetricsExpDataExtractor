@@ -1,6 +1,0 @@
-import javax.lang.model.element.NestingKind;
-                // we only support top-level classes (not inner classes)
-                if (classElement.getNestingKind() == NestingKind.TOP_LEVEL) {
-                    final String javaTypeName = canonicalClassName(classElement.getQualifiedName().toString());
-                    converterClasses.put(javaTypeName, element);
-                }

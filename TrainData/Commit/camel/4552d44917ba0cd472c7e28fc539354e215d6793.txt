@@ -1,1 +1,0 @@
-    String HEADER_PUT_FILE_NAME = "CamelDropboxPutFileName";

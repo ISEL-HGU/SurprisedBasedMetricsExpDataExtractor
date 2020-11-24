@@ -1,2 +1,0 @@
-        String testName = (String) testMethodName.apply(this);
-        RouteCoverageDumper.dumpRouteCoverage(context, testClassName, testName);

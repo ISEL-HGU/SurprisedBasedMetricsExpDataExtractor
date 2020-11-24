@@ -1,1 +1,0 @@
-        List<DecoratedUserContext> userContexts = session.getUserContexts();

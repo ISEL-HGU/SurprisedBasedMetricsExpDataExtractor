@@ -1,6 +1,0 @@
-        if (getConfiguration().isHl7Headers() && exchange != null && exchange.getException() == null) {
-                log.warn("Population of message headers failed - unable to find the end of the MSH segment");
-            } else {
-        } else {
-            log.trace("HL7 Message headers disabled");
-

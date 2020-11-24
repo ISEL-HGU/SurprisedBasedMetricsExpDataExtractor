@@ -1,1 +1,0 @@
-                LOG.debug("Created NettyProducer shared singleton pool -> {}", pool);

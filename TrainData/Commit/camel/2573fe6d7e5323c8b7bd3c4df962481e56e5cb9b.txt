@@ -1,5 +1,0 @@
- b/camel-core/src/main/java/org/apache/camel/util/function/ThrowingRunnable.java
-package org.apache.camel.util.function;
-@FunctionalInterface
-public interface ThrowingRunnable<T extends Throwable> {
-    void run() throws T;

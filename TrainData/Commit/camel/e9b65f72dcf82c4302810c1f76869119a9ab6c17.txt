@@ -1,4 +1,0 @@
-    public boolean retrieveFile(String name, Exchange exchange, long isze) throws GenericFileOperationFailedException {
-    public void releaseRetrievedFileResources(Exchange exchange) throws GenericFileOperationFailedException {
-        // noop
-    public boolean storeFile(String name, Exchange exchange, long size) throws GenericFileOperationFailedException {

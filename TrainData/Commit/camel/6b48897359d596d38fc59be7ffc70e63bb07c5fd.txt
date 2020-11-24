@@ -1,2 +1,0 @@
-                dataTimeout = getCamelContext().getTypeConverter().convertTo(int.class, timeout);
-}

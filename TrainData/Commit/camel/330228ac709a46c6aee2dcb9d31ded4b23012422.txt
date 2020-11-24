@@ -1,2 +1,0 @@
-                    } else {
-                        return new ProducerRecord(msgTopic, value);

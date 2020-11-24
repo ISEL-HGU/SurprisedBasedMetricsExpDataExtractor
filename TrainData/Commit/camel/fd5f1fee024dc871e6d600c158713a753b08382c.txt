@@ -1,2 +1,0 @@
-import com.amazonaws.regions.Regions;
-            AmazonEC2 client = AmazonEC2ClientBuilder.standard().withCredentials(credentialsProvider).withRegion(Regions.valueOf(configuration.getRegion())).build();

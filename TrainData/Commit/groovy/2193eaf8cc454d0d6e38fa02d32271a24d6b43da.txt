@@ -1,4 +1,0 @@
-    public static ListExpression listX(List<Expression> args) {
-        return new ListExpression(args);
-    }
-

@@ -1,3 +1,0 @@
-import org.apache.camel.model.dataformat.JsonApiDataFormat;
- *
-        @XmlElement(required = false, name = "jsonApi", type = JsonApiDataFormat.class),

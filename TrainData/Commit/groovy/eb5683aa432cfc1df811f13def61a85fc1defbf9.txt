@@ -1,4 +1,0 @@
-import org.apache.groovy.swing.binding.AbstractFullBinding;
-import org.apache.groovy.swing.binding.PropertyBinding;
-import org.apache.groovy.swing.binding.SourceBinding;
-import org.apache.groovy.swing.binding.TargetBinding;

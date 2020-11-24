@@ -1,1 +1,0 @@
-    @EndpointInject(value = "mock:A.b")

@@ -1,7 +1,0 @@
-    // @UriParam(description = "The consul configuration")
-    // @Metadata
-    public ConsulEndpoint(String apiEndpoint, String uri, ConsulComponent component, ConsulConfiguration configuration, Optional<ConsulFactories.ProducerFactory> producerFactory,
-                          Optional<ConsulFactories.ConsumerFactory> consumerFactory) {
-        ConsulFactories.ProducerFactory factory = producerFactory.orElseThrow(() -> new IllegalArgumentException("No producer for "  apiEndpoint));
-        ConsulFactories.ConsumerFactory factory = consumerFactory.orElseThrow(() -> new IllegalArgumentException("No consumer for "  apiEndpoint));
-            consul = getConfiguration().getConsulClient();

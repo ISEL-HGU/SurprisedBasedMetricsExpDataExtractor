@@ -1,8 +1,0 @@
-            int totalBytesRead = 0;
-            for(int keyRead = keyInput.read(keyBytes, 0, keyBytes.length);
-                    keyRead >= 0;
-                    keyRead = keyInput.read(keyBytes, totalBytesRead, (keyBytes.length - totalBytesRead))) {
-                totalBytesRead = keyRead;
-            }
-            if (totalBytesRead == 0)
-            else if (totalBytesRead < keyLength)

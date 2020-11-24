@@ -1,1 +1,0 @@
- * To send or receive emails using imap/pop3 or smtp protocols.

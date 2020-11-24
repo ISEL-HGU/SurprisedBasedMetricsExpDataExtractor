@@ -1,1 +1,0 @@
-     * Returns whether the current user has permission to alter the status of

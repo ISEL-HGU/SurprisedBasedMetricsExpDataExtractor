@@ -1,1 +1,0 @@
-        if (camelContext != null && !Boolean.parseBoolean(camelContext.getGlobalOptions().get(ACCESS_EXTERNAL_DTD))) {

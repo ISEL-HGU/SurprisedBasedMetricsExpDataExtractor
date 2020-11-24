@@ -1,4 +1,0 @@
-import java.io.BufferedReader;
-            charStream = CharStreams.fromReader(
-                    new BufferedReader(sourceUnit.getSource().getReader()),
-                    sourceUnit.getName());

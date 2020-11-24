@@ -1,5 +1,0 @@
-    @UriParam(label = "common")
-    
-    private MongoDbTailTrackingConfig tailTrackingConfig;
-     * Convert the output of the producer to the selected type : DocumentList Document or MongoIterable. 
-     * DocumentList or MongoIterable applies to findAll and aggregate. Document applies to all other operations.

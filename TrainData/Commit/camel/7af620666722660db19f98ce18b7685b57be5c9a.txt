@@ -1,6 +1,0 @@
-        Map<String, MethodInfo> getters = new HashMap<>(methods.length);
-        Map<String, MethodInfo> setters = new HashMap<>(methods.length);
-                getters.put(cache.getterOrSetterShorthandName, cache);
-                setters.put(cache.getterOrSetterShorthandName, cache);
-                info.hasGetterAndSetter = setters.containsKey(info.getterOrSetterShorthandName);
-                info.hasGetterAndSetter = getters.containsKey(info.getterOrSetterShorthandName);

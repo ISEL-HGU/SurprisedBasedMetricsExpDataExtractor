@@ -1,4 +1,0 @@
-
-    public long getBufferSize() {
-        return buffer.size();
-    }

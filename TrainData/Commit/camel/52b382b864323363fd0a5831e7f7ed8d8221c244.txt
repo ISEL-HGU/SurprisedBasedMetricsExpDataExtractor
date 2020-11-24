@@ -1,5 +1,0 @@
-import net.sf.saxon.value.BooleanValue;
-import net.sf.saxon.value.DoubleValue;
-import net.sf.saxon.value.FloatValue;
-import net.sf.saxon.value.Int64Value;
-import net.sf.saxon.value.StringValue;

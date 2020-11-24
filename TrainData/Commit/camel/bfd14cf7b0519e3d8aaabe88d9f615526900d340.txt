@@ -1,4 +1,0 @@
-    @Override
-    public void waitObject(Object obj, Supplier<Boolean> condition, long timeoutMs) throws InterruptedException {
-        // NOOP
-    }

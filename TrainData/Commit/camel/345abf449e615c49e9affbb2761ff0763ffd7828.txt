@@ -1,7 +1,0 @@
-import static org.apache.camel.cdi.CdiSpiHelper.createCamelContextWithTCCL;
-                    SyntheticBean<?> bean = camelContextBean(factory, url, annotatedType);
-                SyntheticBean<?> bean = camelContextBean(factory, url, annotatedType);
-    private SyntheticBean<?> camelContextBean(CamelContextFactoryBean factory, URL url, AnnotatedType annotatedType) {
-            annotatedType.getJavaClass(),
-
-                    DefaultCamelContext context = createCamelContextWithTCCL(DefaultCamelContext::new, annotated);

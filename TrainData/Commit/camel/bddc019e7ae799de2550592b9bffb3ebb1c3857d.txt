@@ -1,3 +1,0 @@
-    private ZkUtils zkUtils;
-        zkUtils = ZkUtils.apply(
-                zkConnection,

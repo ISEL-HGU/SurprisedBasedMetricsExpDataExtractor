@@ -1,1 +1,0 @@
-    @EndpointInject("ref:data")

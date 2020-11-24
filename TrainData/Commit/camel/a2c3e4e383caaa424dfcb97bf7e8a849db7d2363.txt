@@ -1,6 +1,0 @@
-            Route.ID_PROPERTY,
-            Route.CUSTOM_ID_PROPERTY,
-            Route.PARENT_PROPERTY,
-            Route.DESCRIPTION_PROPERTY,
-            Route.GROUP_PROPERTY,
-            Route.REST_PROPERTY

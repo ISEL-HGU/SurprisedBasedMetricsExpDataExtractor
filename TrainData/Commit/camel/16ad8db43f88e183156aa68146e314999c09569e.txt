@@ -1,3 +1,0 @@
-        // use Restlet utils for standard headers
-        HeaderUtils.copyResponseTransportHeaders(standardHeaders, response);
-        HeaderUtils.extractEntityHeaders(standardHeaders, response.getEntity());

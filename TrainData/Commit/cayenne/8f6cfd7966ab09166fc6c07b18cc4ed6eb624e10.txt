@@ -1,4 +1,0 @@
-            loaderContext.addDataMapListener(dataMap -> {
-                dataMap.setConfigurationSource(configurationResource);
-                maps[0] = dataMap;
-            });

@@ -1,1 +1,0 @@
-        ServiceHelper.startService(subscriptionHelper);

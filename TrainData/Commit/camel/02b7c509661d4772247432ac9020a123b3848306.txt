@@ -1,2 +1,0 @@
-        if (ObjectHelper.isNotEmpty(getEndpoint().getEvents())) {
-        }

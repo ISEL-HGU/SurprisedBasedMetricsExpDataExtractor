@@ -1,5 +1,0 @@
-		spf.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
-		spf.setFeature("http://xml.org/sax/features/external-general-entities", false);
-		spf.setFeature("http://xml.org/sax/features/external-parameter-entities", false);
-		spf.setFeature("http://xml.org/sax/features/namespaces", true);
-		return saxParser.getXMLReader();

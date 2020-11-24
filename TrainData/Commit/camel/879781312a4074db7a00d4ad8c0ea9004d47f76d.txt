@@ -1,4 +1,0 @@
-        if (ObjectHelper.isEmpty(endpoint.getInfluxDB())) {
-        if (ObjectHelper.isNotEmpty(retentionPolicy)) {
-        if (ObjectHelper.isNotEmpty(dbName)) {
-        if (ObjectHelper.isNotEmpty(query)) {

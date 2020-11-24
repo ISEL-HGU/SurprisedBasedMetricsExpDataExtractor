@@ -1,2 +1,0 @@
-import org.apache.camel.spring.boot.cloud.CamelCloudServiceDiscovery;
-import org.apache.camel.spring.boot.cloud.CamelCloudServiceFilter;

@@ -1,1 +1,0 @@
- * The cm-sms component allows to integrate with CM SMS Gateway.

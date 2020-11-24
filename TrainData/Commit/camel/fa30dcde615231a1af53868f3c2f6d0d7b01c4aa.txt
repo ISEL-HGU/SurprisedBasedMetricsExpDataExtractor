@@ -1,8 +1,0 @@
-import org.apache.camel.spi.BeanProxyFactory;
-    @SuppressWarnings("unchecked")
-                        // use proxy service
-                        BeanProxyFactory factory = camelContext.hasService(BeanProxyFactory.class);
-                        if (factory == null) {
-                            throw new IllegalArgumentException("Cannot find BeanProxyFactory service. Make sure camel-bean is on the classpath.");
-                        }
-                        return factory.createProxy(endpoint, binding, type);

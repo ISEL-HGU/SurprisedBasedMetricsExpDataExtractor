@@ -1,4 +1,0 @@
-            CMISSessionFacade sessionFacade = sessionFacadeFactory.create(getEndpoint());
-            // make sure to set sessionFacade to the field after successful initialisation
-            // so that it has a valid session
-            this.sessionFacade = sessionFacade;

@@ -1,8 +1,0 @@
-                if (component != null && ObjectHelper.isNotEmpty(value) && ObjectHelper.isNotEmpty(option)) {
-                if (dataformat != null && ObjectHelper.isNotEmpty(value) && ObjectHelper.isNotEmpty(option)) {
-                if (language != null && ObjectHelper.isNotEmpty(value) && ObjectHelper.isNotEmpty(option)) {
-        // TODO: filter out duplicte properties due to ignore-case
-
-
-        // TODO: Log if any options was not configured (and check if they are on classpath)
-

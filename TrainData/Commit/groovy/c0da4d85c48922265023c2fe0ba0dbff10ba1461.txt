@@ -1,2 +1,0 @@
-        ClassNode inferredType = target.getNodeMetaData(StaticTypesMarker.DECLARATION_INFERRED_TYPE);
-            inferredType = target.getNodeMetaData(StaticTypesMarker.INFERRED_TYPE);

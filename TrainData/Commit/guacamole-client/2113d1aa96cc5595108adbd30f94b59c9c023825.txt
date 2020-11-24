@@ -1,5 +1,0 @@
-     * @param connection
-    public String put(QuickConnection connection) throws GuacamoleException {
-        connection.setIdentifier(connectionId);
-        connection.setParentIdentifier(ROOT_IDENTIFIER);
-        putConnection(connection);

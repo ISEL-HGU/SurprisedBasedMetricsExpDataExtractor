@@ -1,4 +1,0 @@
-import org.apache.camel.meta.Experimental;
- * <p/>
- * NOTE: This is an experimental implementation (use with care)
-@Experimental

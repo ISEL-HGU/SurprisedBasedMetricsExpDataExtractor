@@ -1,1 +1,0 @@
-     * All attributes related to load balancing in a logical form.

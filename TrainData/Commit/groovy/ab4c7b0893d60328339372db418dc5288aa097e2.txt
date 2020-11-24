@@ -1,2 +1,0 @@
- * Represents a simple cache, which is thread safe and backed by a {@link java.util.Map} instance
-        this(new HashMap<K, V>());

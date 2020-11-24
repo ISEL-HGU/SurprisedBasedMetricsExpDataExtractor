@@ -1,3 +1,0 @@
-    private DestinationGenerator destinationGenerator = new DirectToOperationId();
-    public G withDestinationGenerator(final DestinationGenerator directRouteGenerator) {
-    DestinationGenerator destinationGenerator() {

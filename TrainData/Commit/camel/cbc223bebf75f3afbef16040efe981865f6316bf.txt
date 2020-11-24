@@ -1,3 +1,0 @@
-import org.apache.camel.spring.util.RegistryBeanResolver;
-        } else {
-            evaluationContext.setBeanResolver(new RegistryBeanResolver(exchange.getContext().getRegistry()));

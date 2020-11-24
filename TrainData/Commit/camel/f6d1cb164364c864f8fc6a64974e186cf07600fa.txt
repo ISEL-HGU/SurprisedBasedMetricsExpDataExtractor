@@ -1,2 +1,0 @@
-    @UriParam(label = "producer", description = "Message Routing Mode to use", defaultValue = "RoundRobinPartition")
-    @UriParam(label = "producer", description = "Custom Message Router to use")

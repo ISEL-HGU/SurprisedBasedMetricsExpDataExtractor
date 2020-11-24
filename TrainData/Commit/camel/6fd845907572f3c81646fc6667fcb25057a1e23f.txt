@@ -1,5 +1,0 @@
-                configure().setDuration(Integer.parseInt(parameter));
-                configure().setDurationMaxMessages(Integer.parseInt(parameter));
-                configure().setDurationMaxIdleSeconds(Integer.parseInt(parameter));
-                configure().setDurationHitExitCode(Integer.parseInt(parameter));
-                configure().setFileWatchDirectory(parameter);

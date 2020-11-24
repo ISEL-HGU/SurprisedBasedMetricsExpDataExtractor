@@ -1,1 +1,0 @@
-    public static final String ATTR_TOKEN_PREFIX = "GUAC_ATTR_";

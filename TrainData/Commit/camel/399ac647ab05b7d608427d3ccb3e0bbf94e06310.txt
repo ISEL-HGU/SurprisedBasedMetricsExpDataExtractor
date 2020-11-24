@@ -1,6 +1,0 @@
-     * {@link #contentEncoding contentEncoding} attribute.
-     * {@link #contentTransferEncoding contentTransferEncoding} attribute.
-    public void setContentTransferEncoding(final Header contentTransferEncoding) {
-     * {@link #setContentTransferEncoding(Header) setContentTransferEncoding(Header)}.
-     * @param contentTranserEncoding - the new Content-Transfer-Encoding header, or
-        setContentTransferEncoding(h);

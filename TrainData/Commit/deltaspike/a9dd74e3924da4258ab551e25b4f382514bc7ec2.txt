@@ -1,4 +1,0 @@
-                sb.append("\n\t")
-                    .append(entry.getKey())
-                    .append(" = ")
-                    .append(ConfigResolver.filterConfigValueForLog(entry.getKey(), entry.getValue()));

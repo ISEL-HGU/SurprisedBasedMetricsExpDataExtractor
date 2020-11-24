@@ -1,6 +1,0 @@
-import org.apache.deltaspike.core.util.ProxyUtils;
-import java.util.logging.Logger;
-    private static final Logger LOG = Logger.getLogger(AbstractJobAdapter.class.getName());
-
-            LOG.info("Execution of job "  jobClass  " has been vetoed by " 
-                    ProxyUtils.getUnproxiedClass(schedulerControl.getClass()));

@@ -1,4 +1,0 @@
-                        if (LOG.isTraceEnabled()) {
-                            LOG.trace("Configured property: {} on bean: {} with value: {}", new Object[]{name, target, ref});
-                        if (LOG.isTraceEnabled()) {
-                            LOG.trace("Configured property: {} on bean: {} with value: {}", new Object[]{name, target, ref});

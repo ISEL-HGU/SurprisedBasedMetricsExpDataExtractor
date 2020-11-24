@@ -1,2 +1,0 @@
-                LOG.debug("Found RestRegistryFactory: {} via: {}{}", type.getName(), factoryFinder.getResourcePath(), "rest-registry-factory");
-                LOG.info("Detected and using RestRegistryFactory: {}", answer);

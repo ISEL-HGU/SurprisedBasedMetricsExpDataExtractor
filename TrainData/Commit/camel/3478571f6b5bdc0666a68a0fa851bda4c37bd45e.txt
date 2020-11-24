@@ -1,7 +1,0 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
-        Deque<String> fatals = exchange.getProperty(Exchange.FATAL_FALLBACK_ERROR_HANDLER, null, Deque.class);
-            fatals = new ArrayDeque<>();
-        if (fatals.contains(id)) {
-                    Deque<String> fatals = exchange.getProperty(Exchange.FATAL_FALLBACK_ERROR_HANDLER, null, Deque.class);
-                        fatals.removeLastOccurrence(id);

@@ -1,1 +1,0 @@
-            assertEquals(ToManyList.class, children1.getClass());

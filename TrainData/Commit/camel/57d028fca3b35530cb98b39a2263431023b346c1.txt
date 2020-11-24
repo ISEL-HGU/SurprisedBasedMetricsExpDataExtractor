@@ -1,2 +1,0 @@
-     * Configures whether resume download is enabled. This must be supported by the FTP server (almost all FTP servers support it).
-     * which is required to support resuming of downloads.

@@ -1,3 +1,0 @@
-import static groovy.lang.groovydoc.Groovydoc.EMPTY_GROOVYDOC;
-
-                    ? EMPTY_GROOVYDOC

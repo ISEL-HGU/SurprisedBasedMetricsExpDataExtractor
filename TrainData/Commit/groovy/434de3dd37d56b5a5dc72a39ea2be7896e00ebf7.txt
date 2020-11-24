@@ -1,1 +1,0 @@
-    private static final Object constantMetaClassVersioningLock = new Object();

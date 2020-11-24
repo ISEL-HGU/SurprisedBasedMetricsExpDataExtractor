@@ -1,3 +1,0 @@
-                    // enrich with JMS headers also as otherwise they will get lost when use the transferExchange option.
-                    Map<String, Object> jmsHeaders = extractHeadersFromJms(message, exchange);
-                    exchange.getIn().getHeaders().putAll(jmsHeaders);

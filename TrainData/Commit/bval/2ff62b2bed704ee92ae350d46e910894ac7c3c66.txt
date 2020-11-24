@@ -1,2 +1,0 @@
-        return hasConstraints() || !properties.isEmpty();
-        return Optional.ofNullable(getProperty(propertyName)).filter(properties::contains).orElse(null);

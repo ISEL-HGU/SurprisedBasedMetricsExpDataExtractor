@@ -1,3 +1,0 @@
-            latch.countDown();
-            LOG.debug("Ending this polling consumer thread, there are still {} consumer threads left.", latch.getCount());
-        while (queue != null && isRunAllowed()) {

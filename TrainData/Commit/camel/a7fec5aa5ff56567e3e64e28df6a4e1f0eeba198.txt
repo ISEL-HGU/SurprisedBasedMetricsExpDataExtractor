@@ -1,3 +1,0 @@
-import org.apache.camel.util.StringHelper;
-                port = StringHelper.after(remaining, ":");
-                hosts = StringHelper.before(remaining, ":");

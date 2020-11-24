@@ -1,8 +1,0 @@
-
-            if (consumer == null) {
-                cexchange.respond(ResponseCode.METHOD_NOT_ALLOWED);
-                return;
-            }
-
-
-            consumer.getProcessor().process(camelExchange);

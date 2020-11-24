@@ -1,6 +1,0 @@
-            RadiusGuacamoleProperties.RADIUS_SHARED_SECRET
-            RadiusGuacamoleProperties.RADIUS_AUTH_PROTOCOL
-            RadiusGuacamoleProperties.RADIUS_CA_FILE
-            RadiusGuacamoleProperties.RADIUS_CA_PASSWORD
-            RadiusGuacamoleProperties.RADIUS_KEY_PASSWORD
-            RadiusGuacamoleProperties.RADIUS_EAP_TTLS_INNER_PROTOCOL

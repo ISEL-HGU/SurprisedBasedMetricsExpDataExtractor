@@ -1,1 +1,0 @@
-    Version LUCENE_VERSION = Version.LUCENE_7_2_1;

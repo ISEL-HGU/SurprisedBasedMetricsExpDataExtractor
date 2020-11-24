@@ -1,2 +1,0 @@
-        // Add custom attribute tokens
-        addAttributeTokens(filter, user.getAttributes());

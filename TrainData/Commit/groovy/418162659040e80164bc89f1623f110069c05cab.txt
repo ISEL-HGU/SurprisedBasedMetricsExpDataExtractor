@@ -1,3 +1,0 @@
-    public abstract class PublicContext {}
-    protected abstract class ProtectedContext {}
-    private abstract class PrivateContext {}

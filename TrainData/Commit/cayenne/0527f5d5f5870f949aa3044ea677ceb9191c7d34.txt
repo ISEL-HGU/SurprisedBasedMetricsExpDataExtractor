@@ -1,2 +1,0 @@
-    private DataMap sourceDataMap;
-    private DbImportConfiguration config;

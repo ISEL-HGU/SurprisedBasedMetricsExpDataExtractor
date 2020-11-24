@@ -1,3 +1,0 @@
-import java.util.function.Function;
-    final class DBPathConverter implements Function<Object, Object> {
-        public Object apply(Object input) {

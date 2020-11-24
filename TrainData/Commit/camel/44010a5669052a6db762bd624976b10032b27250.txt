@@ -1,1 +1,0 @@
-                if (config != null && config.getHttpClient() == null) {

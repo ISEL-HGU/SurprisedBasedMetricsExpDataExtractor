@@ -1,2 +1,0 @@
-            if (authenticators.length > 0 && authenticators[0] != null)
-            if (authenticators.length > 1 && authenticators[1] != null)

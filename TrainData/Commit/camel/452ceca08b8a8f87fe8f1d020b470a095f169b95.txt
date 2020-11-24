@@ -1,6 +1,0 @@
-            SimplePredicateParser parser = new SimplePredicateParser(expression, allowEscape, cacheExpression);
-            answer = parser.parsePredicate();
-
-            SimpleExpressionParser parser = new SimpleExpressionParser(expression, allowEscape, cacheExpression);
-            answer = parser.parseExpression();
-

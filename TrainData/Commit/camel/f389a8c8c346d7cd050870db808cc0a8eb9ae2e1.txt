@@ -1,6 +1,0 @@
-public class CamelMicroProfilePropertiesSource implements LoadablePropertiesSource {
-        return ConfigProvider.getConfig().getOptionalValue(name, String.class).orElse(null);
-        final Properties answer = new Properties();
-        final Config config = ConfigProvider.getConfig();
-        final Properties answer = new Properties();
-        final Config config = ConfigProvider.getConfig();

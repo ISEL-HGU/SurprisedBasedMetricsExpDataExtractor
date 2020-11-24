@@ -1,7 +1,0 @@
-
-            case LITERAL_EXPRESSION:
-
-            case CREATABLE_TYPE_NAME:
-            /* FALL THROUGH */
-
-            case SYNTH_VARIABLE_DECLARATION:

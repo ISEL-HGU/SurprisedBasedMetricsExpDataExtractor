@@ -1,8 +1,0 @@
-import org.apache.camel.main.Main;
-    // use Camel Main to setup and run Camel
-    private static Main main = new Main();
-
-        // add route
-        main.addRouteBuilder(new RouteBuilder() {
-        // start and run Camel (block)
-        main.run();

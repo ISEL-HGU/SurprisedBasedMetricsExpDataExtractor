@@ -1,3 +1,0 @@
-    static final int IDLE_TIMEOUT = 5000;
-    @Metadata(description = "Username used in OAuth flow to gain access to access token. It's easy to get started with"
-        httpClient.setIdleTimeout(IDLE_TIMEOUT);

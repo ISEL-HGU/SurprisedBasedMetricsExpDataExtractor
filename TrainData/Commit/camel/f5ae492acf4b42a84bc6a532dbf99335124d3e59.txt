@@ -1,1 +1,0 @@
-        LOG.info("Login at Salesforce loginUrl: {}", loginUrl);

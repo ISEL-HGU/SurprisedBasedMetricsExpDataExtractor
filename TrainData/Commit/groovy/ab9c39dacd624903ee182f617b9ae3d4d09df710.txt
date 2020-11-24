@@ -1,7 +1,0 @@
-     * Global AST transformations which should not be loaded even if they are
-     * defined in META-INF/services/org.codehaus.groovy.transform.ASTTransformation files.
-     * By default, none are disabled.
-     * Disables the specified global AST transformations. In order to avoid class loading side effects, it is not recommended
-     * META-INF/services/org.codehaus.groovy.transform.ASTTransformation file.
-     * If you explicitly add a global AST transformation
-     *

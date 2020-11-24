@@ -1,4 +1,0 @@
-    public MemJavaFileObject(ClassNode classNode, String src) {
-        return "MemJavaFileObject{" 
-                "className="  className 
-                '}';

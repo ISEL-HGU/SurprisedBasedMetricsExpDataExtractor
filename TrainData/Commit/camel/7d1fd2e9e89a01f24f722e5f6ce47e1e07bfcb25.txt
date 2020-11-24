@@ -1,3 +1,0 @@
-import java.util.Random;
-
-        Random rand = new Random();

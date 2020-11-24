@@ -1,5 +1,0 @@
-            scheduleCheckForPossibleLeadershipLoss();
-                    scheduleCheckForPossibleLeadershipLoss();
-    }
-    private void scheduleCheckForPossibleLeadershipLoss() {
-        // Adding check for the case of main thread busy on http calls

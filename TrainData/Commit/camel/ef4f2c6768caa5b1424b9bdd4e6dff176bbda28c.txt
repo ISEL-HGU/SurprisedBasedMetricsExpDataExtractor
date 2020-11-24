@@ -1,4 +1,0 @@
-     * Sets a condition when the provided matcher (such as mock endpoint) is satisfied based on {@link Exchange}
-     * Sets a condition when the provided matcher (such as mock endpoint) is satisfied based on {@link Exchange}
-     * Sets a condition when the provided matcher (such as mock endpoint) is <b>not</b> satisfied based on {@link Exchange}
-     * Sets a condition when the provided matcher (such as mock endpoint) is <b>not</b> satisfied based on {@link Exchange}

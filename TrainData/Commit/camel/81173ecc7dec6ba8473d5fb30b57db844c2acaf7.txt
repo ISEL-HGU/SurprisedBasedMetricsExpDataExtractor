@@ -1,9 +1,0 @@
-    
-    /**
-     * Build the from endpoint uri for the verb
-     */
-    public String buildFromUri(VerbDefinition verb) {
-        return "rest:"  verb.asVerb()  ":"  buildUri(verb);
-    }
-    @SuppressWarnings("rawtypes")
-            String from = buildFromUri(verb);

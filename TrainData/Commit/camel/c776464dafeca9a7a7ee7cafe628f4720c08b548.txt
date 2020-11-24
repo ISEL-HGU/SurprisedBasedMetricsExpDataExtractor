@@ -1,9 +1,0 @@
-    private final List<EndpointOptionModel> endpointPathOptions = new ArrayList<EndpointOptionModel>();
-    public List<EndpointOptionModel> getEndpointPathOptions() {
-        return endpointPathOptions;
-    }
-
-    public void addEndpointPathOption(EndpointOptionModel option) {
-        endpointPathOptions.add(option);
-    }
-

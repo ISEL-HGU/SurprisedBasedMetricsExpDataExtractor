@@ -1,3 +1,0 @@
- b/camel-support/src/main/java/org/apache/camel/support/processor/validation/helper/XMLConverterHelper.java
-package org.apache.camel.support.processor.validation.helper;
-import org.apache.camel.support.processor.validation.ValidatingProcessor;

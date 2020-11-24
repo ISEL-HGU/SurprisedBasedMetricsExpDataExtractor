@@ -1,1 +1,0 @@
-        if ("netty-http".equals(model.getScheme())) {

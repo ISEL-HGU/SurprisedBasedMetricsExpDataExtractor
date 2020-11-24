@@ -1,6 +1,0 @@
-import io.fabric8.kubernetes.client.Watch;
-import io.fabric8.kubernetes.client.Watcher;
-import io.fabric8.kubernetes.client.dsl.FilterWatchListMultiDeletable;
-        ServiceAccountList saList = getEndpoint().getKubernetesClient().serviceAccounts().inAnyNamespace()
-            FilterWatchListMultiDeletable<ServiceAccount, ServiceAccountList, Boolean, Watch, Watcher<ServiceAccount>> serviceAccounts; 
-            serviceAccounts = getEndpoint().getKubernetesClient().serviceAccounts().inAnyNamespace();

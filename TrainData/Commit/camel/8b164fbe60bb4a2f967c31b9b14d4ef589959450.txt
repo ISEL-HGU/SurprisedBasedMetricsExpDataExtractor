@@ -1,3 +1,0 @@
-    @UriParam(javaType = "java.lang.String") @Metadata(required = true)
-    @UriParam(javaType = "java.lang.String") @Metadata(required = true)
-    @UriParam(defaultValue = "8", javaType = "int")

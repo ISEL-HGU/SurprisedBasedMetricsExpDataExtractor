@@ -1,3 +1,0 @@
-import java.util.stream.Collectors;
-                newValue = list.stream().map(Object::toString)
-                        .collect(Collectors.joining(","));

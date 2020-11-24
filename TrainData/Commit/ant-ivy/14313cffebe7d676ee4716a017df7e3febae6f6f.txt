@@ -1,4 +1,0 @@
-import static java.util.jar.Pack200.newUnpacker;
-
-        newUnpacker().unpack(new UncloseInputStream(in), jar);
-     * {@link ZipInputStream} used with {@link Pack200.Unpacker#unpack(File, JarOutputStream)}

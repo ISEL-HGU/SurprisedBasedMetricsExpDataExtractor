@@ -1,5 +1,0 @@
-import org.apache.guacamole.net.auth.simple.SimpleConnection;
-public class QuickConnection extends SimpleConnection {
-        super(name, identifier, config);
-        super(object.getName(),object.getIdentifier(),object.getConfiguration());
-

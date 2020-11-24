@@ -1,2 +1,0 @@
-                if (!newThrottle.equals(throttleRate)) {
-                if (!newThrottle.equals(throttleRatesMap.get(key))) {

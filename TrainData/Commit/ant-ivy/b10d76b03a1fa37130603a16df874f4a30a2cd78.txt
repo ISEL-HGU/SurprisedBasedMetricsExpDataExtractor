@@ -1,2 +1,0 @@
-                buffer.append(line, 0, 72);
-                    buffer.append(line, n, end);

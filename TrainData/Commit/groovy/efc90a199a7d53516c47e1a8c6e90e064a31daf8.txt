@@ -1,3 +1,0 @@
-                            fieldNode.getOriginType().getUnresolvedName(),
-                            makeDeclaringAndActualGenericsTypeMap(fieldNode.getDeclaringClass(), typeCheckingContext.getEnclosingClassNode())
-            inferMethodReferenceType(call, receiver, argumentList);

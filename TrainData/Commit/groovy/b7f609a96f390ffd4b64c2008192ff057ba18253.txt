@@ -1,4 +1,0 @@
-import org.apache.groovy.util.SystemUtil;
-
-    public static final int DIVISION_EXTRA_PRECISION = SystemUtil.getIntegerSafe("groovy.division.extra.precision", 32);
-    public static final int DIVISION_MIN_SCALE = SystemUtil.getIntegerSafe("groovy.division.min.scale", 32);

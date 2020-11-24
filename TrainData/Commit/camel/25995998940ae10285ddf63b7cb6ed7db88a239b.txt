@@ -1,3 +1,0 @@
-    private String format = "json";
-    private boolean diagnostics = false;
-    private String callback = "";

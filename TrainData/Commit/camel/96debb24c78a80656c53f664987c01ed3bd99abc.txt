@@ -1,4 +1,0 @@
-import com.amazonaws.services.lambda.model.UntagResourceRequest;
-import com.amazonaws.services.lambda.model.UntagResourceResult;
-            if (ObjectHelper.isNotEmpty(exchange.getIn().getHeader(LambdaConstants.RESOURCE_TAGS))) {
-                Map<String, String> tags = exchange.getIn().getHeader(LambdaConstants.RESOURCE_TAGS, Map.class);

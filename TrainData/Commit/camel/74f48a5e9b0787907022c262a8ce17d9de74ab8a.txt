@@ -1,6 +1,0 @@
-    public Route addRoutes(ModelCamelContext camelContext) throws Exception {
-            return addRoutes(camelContext, definition.getInput());
-    protected Route addRoutes(CamelContext camelContext, FromDefinition fromType) throws Exception {
-        RouteContext routeContext = new DefaultRouteContext(camelContext, definition, fromType);
-                ProcessorReifier.reifier(output).addRoutes(routeContext);
-        return routeContext.commit();

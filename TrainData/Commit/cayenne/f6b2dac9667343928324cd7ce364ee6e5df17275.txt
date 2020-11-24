@@ -1,8 +1,0 @@
-/**
- * Ingress doesn't support sorting by an aggregate expression (ORDER BY COUNT(some_field))
- */
-
-    @Override
-    public boolean isLowerCaseNames() {
-        return true;
-    }

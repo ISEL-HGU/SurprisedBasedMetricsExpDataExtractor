@@ -1,2 +1,0 @@
-        if (this.transformerFactory.getClass().getName().equals(XALAN_TRANSFORMER_FACTORY)
-            && (source instanceof StAXSource)) {

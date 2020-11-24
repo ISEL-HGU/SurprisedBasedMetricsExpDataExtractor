@@ -1,7 +1,0 @@
-        try (Sql sql = newInstance(url)) {
-        try (Sql sql = newInstance(url, properties)) {
-        try (Sql sql = newInstance(url, properties, driverClassName)) {
-        try (Sql sql = newInstance(url, user, password)) {
-        try (Sql sql = newInstance(url, user, password, driverClassName)) {
-        try (Sql sql = newInstance(url, driverClassName)) {
-        try (Sql sql = newInstance(args)) {

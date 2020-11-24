@@ -1,1 +1,0 @@
-         * The Camel component to use for calling the service. The default is http component.

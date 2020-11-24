@@ -1,2 +1,0 @@
-import org.apache.camel.util.Scanner;
-            IOHelper.closeIterator(it);

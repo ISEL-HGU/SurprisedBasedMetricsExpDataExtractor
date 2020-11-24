@@ -1,3 +1,0 @@
-                    entityManager.close();
-                    entityManager.close();
-                    entityManager.close();

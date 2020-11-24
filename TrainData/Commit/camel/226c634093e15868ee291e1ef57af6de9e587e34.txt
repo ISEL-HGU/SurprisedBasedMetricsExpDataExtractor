@@ -1,2 +1,0 @@
-import org.apache.camel.impl.cloud.CombinedServiceDiscovery;
-        this.delegate = new CombinedServiceDiscovery(serviceDiscoveryList);

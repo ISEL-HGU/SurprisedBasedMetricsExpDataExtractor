@@ -1,2 +1,0 @@
-        
-        MessageHelper.copyHeaders(exchange.getIn(), exchange.getOut(), true);

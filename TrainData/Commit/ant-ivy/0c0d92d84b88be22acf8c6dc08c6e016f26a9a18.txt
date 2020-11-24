@@ -1,1 +1,0 @@
-            return parser.parseDescriptor(getSettings(), file.toURI().toURL(), res, isValidate());

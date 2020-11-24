@@ -1,5 +1,0 @@
-        objectList.sort(new RelationshipComparator());
-                break;
-        return (relationship != null) && relationship.getSourceEntity() != entity;
-                objectList.sort(new ObjRelationshipTableComparator(sortCol));
-            if (o1 == o2) {

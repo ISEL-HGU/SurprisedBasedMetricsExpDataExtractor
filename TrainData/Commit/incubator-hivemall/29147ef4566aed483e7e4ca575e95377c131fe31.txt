@@ -1,1 +1,0 @@
-        genericFuncsHeaders.put("# Vector/Matrix", Arrays.asList("hivemall.tools.matrix", "hivemall.tools.vector"));

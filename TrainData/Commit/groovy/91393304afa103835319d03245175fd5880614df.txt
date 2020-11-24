@@ -1,6 +1,0 @@
-        if (! (vexp.getAccessedVariable() instanceof DynamicVariable)) return;
-            Object key = extractTemporaryTypeInfoKey(objectExpression);
-                resultType = wrapTypeIfNecessary(getType(falseExpression));
-                resultType = wrapTypeIfNecessary(getType(trueExpression));
-            final ClassNode typeOfTrue = getType(trueExpression);
-            final ClassNode typeOfFalse = getType(falseExpression);

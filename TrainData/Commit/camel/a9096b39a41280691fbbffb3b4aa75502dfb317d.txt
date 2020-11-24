@@ -1,1 +1,0 @@
-        .setHeader("location", simple("${exchangeProperty.CamelFailureRouteId}"));

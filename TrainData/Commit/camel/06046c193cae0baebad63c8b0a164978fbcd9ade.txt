@@ -1,5 +1,0 @@
-                            LOG.debug("Creating Saxon XPathFactory using class: {})", clazz);
-                            LOG.info("Created Saxon XPathFactory: {}", xpathFactory);
-                         " failed. Will fallback and create XPathFactory using JDK API. This exception is ignored (stacktrace in DEBUG logging level).");
-                LOG.debug("Creating XPathFactory from objectModelUri: {}", objectModelUri);
-                LOG.info("Created XPathFactory: {} from objectModelUri: {}", xpathFactory, objectModelUri);

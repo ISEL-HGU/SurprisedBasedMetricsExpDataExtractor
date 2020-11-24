@@ -1,1 +1,0 @@
-@UriEndpoint(firstVersion = "2.14.0", scheme = "netty4-http,netty-http", extendsScheme = "netty", title = "Netty4 HTTP",

@@ -1,2 +1,0 @@
-import org.apache.camel.util.URISupport;
-            return getCamelContext().getExecutorServiceManager().newFixedThreadPool(this, URISupport.sanitizeUri(getEndpointUri()), getThreadPoolSize());

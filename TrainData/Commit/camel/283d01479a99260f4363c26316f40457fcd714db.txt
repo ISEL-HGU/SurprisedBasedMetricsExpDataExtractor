@@ -1,2 +1,0 @@
-            out.println(String.format(HEADER_FORMAT, "Id", "Count", "Last (ms)", "Delta (ms)", "Mean (ms)", "Min (ms)", "Max (ms)", "Total (ms)"));
-                        ss.getMeanProcessingTime(), ss.getMinProcessingTime(), ss.getMaxProcessingTime(), ss.getTotalProcessingTime()));

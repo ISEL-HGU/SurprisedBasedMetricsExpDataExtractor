@@ -1,8 +1,0 @@
-    public static InputStream genericFileToInputStream(GenericFile<?> file, Exchange exchange) throws IOException {
-                    exchange.setProperty(Exchange.CHARSET_NAME, charset);
-                return exchange.getContext().getTypeConverter().convertTo(InputStream.class, exchange, f);
-            return exchange.getContext().getTypeConverter().convertTo(String.class, exchange, reader);
-    public static Serializable genericFileToSerializable(GenericFile<?> file, Exchange exchange) throws IOException {
-    private static BufferedReader genericFileToReader(GenericFile<?> file, Exchange exchange) {
-                exchange.setProperty(Exchange.CHARSET_NAME, charset);
-            return exchange.getContext().getTypeConverter().convertTo(BufferedReader.class, exchange, f);

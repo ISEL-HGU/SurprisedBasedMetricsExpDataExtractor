@@ -1,1 +1,0 @@
-     * (for example Collection&lt;U&gt; and Collection&lt;E&gt; to get U=E)

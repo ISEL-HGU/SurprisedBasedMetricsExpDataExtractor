@@ -1,6 +1,0 @@
-import java.sql.DatabaseMetaData;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-            LOGGER.info("Skip relation: '"  key  "' because table '"  key.getPk().getTable()  "' is not found");
-            LOGGER.info("Skip relation: '"  key  "' because table '"  key.getFk().getTable()  "' is not found");

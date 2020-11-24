@@ -1,2 +1,0 @@
-            this.withGetConstraintTypes(ClassType::getConstraint)
-                .withGetIgnoreAnnotations(ClassType::getIgnoreAnnotations);

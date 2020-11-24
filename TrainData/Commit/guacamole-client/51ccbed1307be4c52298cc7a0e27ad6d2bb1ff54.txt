@@ -1,6 +1,0 @@
-import org.apache.guacamole.net.auth.credentials.CredentialsInfo;
-import org.apache.guacamole.net.auth.credentials.GuacamoleInvalidCredentialsException;
-        catch (Throwable t) {
-            logger.error("Error validating ticket with CAS server: {}", t.getMessage());
-            throw new GuacamoleInvalidCredentialsException("CAS login failed.", CredentialsInfo.USERNAME_PASSWORD);
-        }

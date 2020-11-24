@@ -1,2 +1,0 @@
-     * Create a temp dir under the maven target folder
-        TEMP_DIR = Paths.get("tmp");

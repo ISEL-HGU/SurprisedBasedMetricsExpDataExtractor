@@ -1,7 +1,0 @@
-            LOG.warn("Cannot retrieve the list of Camel contexts. This exception is ignored.", e);
-        camelContexts.sort(Comparator.comparing(CamelContext::getName));
-            ManagedCamelContext mcc = camelContext.getExtension(ManagedCamelContext.class);
-            if (mcc != null && mcc.getManagedCamelContext() != null) {
-                row.put("exchangesTotal", ""  mcc.getManagedCamelContext().getExchangesTotal());
-                row.put("exchangesInflight", ""  mcc.getManagedCamelContext().getExchangesInflight());
-                row.put("exchangesFailed", ""  mcc.getManagedCamelContext().getExchangesFailed());

@@ -1,3 +1,0 @@
-import org.apache.camel.util.StringHelper;
-                tOpts.setTransactionType(TransactionOptions.TransactionType.ONE_PHASE);
-        StringHelper.notEmpty(mapName, "repositoryName");

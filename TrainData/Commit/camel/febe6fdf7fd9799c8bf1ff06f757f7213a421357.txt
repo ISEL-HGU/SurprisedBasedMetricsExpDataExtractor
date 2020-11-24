@@ -1,8 +1,0 @@
-    
-    @Override
-    public void doStop() throws Exception {
-        if (snsClient != null) {
-            snsClient.shutdown();
-        }
-        super.doStop();
-    }

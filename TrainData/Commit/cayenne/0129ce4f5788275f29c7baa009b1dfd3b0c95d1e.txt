@@ -1,3 +1,0 @@
-import java.time.ZoneOffset;
-                ZoneOffset.ofHours(0));
-        return longConverter.toBytes(value.toInstant(ZoneOffset.ofHours(0)).toEpochMilli());

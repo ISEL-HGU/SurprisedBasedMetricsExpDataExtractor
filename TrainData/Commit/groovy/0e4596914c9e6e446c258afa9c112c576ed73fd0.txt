@@ -1,2 +1,0 @@
- b/subprojects/groovy-xml/src/test/groovy/groovy/xml/bugs/SeansBug.java
-package groovy.xml.bugs;

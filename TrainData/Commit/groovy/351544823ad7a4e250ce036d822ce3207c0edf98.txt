@@ -1,7 +1,0 @@
-        super(data.className, getFullModifiers(data), null, null, MixinNode.EMPTY_ARRAY);
-     * Handle the case of inner classes returning the correct modifiers from
-     * the INNERCLASS reference since the top-level modifiers for inner classes
-     * wont include static or private/protected.
-    private static int getFullModifiers(ClassStub data) {
-        return (data.innerClassModifiers == -1)
-                ? data.accessModifiers : data.innerClassModifiers;

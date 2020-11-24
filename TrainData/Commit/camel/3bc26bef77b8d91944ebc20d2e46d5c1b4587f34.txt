@@ -1,3 +1,0 @@
-        // As tryConvertTo is used to convert the body, we should do null check
-        // or the call bodyAsByte.remaining() may throw an NPE
-        if (body != null && bodyAsByte != null) {

@@ -1,4 +1,0 @@
- b/platforms/camel-catalog-maven/src/main/java/org/apache/camel/catalog/maven/TimeoutHttpClientHandler.java
- * A {@link HttpClientHandler} which uses HttpClient for downloading via http/https
- * and have support for connection timeouts which otherwise is not supported by default in Apache Ivy.
-public class TimeoutHttpClientHandler extends HttpClientHandler {

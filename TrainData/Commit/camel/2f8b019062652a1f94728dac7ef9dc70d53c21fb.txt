@@ -1,4 +1,0 @@
-    private String group;
-    public String getGroup() {
-     * You can use simple language as the group to support dynamic group sizes.
-    public void setGroup(String group) {

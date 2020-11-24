@@ -1,9 +1,0 @@
-import java.io.Reader;
-        ReaderSource readerSource = sourceUnit.getSource();
-
-        try (Reader sourceReader = null != readerSource ? readerSource.getReader() : null) {
-            if (null != readerSource && null != sourceReader) {
-        ReaderSource readerSource = sourceUnit.getSource();
-
-        try (Reader sourceReader = null != readerSource ? readerSource.getReader() : null) {
-            if (null == readerSource || null == sourceReader) {

@@ -1,4 +1,0 @@
-   * If there is any error, throws an IOException.
-   * 
-   * The check consist on checking the "key" field, and that all fields declared in the STORE command
-   * are present in the pig relation.

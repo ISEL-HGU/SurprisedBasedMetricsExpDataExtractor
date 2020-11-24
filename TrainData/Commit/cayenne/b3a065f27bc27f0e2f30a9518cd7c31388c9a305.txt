@@ -1,3 +1,0 @@
- b/cayenne-osgi/src/main/java/org/apache/cayenne/osgi/OsgiModuleBuilder.java
-
-package org.apache.cayenne.osgi;

@@ -1,2 +1,0 @@
-                final Groups groups = groupsComputer.computeGroups(
-                    ConstraintAnnotationAttributes.GROUPS.analyze(c.annotationType()).<Class<?>[]> read(c));

@@ -1,5 +1,0 @@
-    @ManagedAttribute(description = "The consumer endpoint to expose as a service", mask = true)
-    public String getDelegateEndpointUri() {
-        return this.delegateEndpoint.getEndpointUri();
-    }
-

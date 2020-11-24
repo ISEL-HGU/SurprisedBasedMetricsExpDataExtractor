@@ -1,3 +1,0 @@
-            final XMLStreamReader xmlReader;
-                xmlReader = typeConverter.convertTo(XMLStreamReader.class, exchange, createNonXmlFilterReader(exchange, stream));
-                xmlReader = typeConverter.convertTo(XMLStreamReader.class, exchange, stream);

@@ -1,2 +1,0 @@
-    public Map<String, String> getServiceProperties() {
-            ServiceDefinition.SERVICE_META_PORT, Integer.toString(httpURI.getPort()),

@@ -1,2 +1,0 @@
-        registerPropertiesForBeanTypesWithCondition(applicationContext, InterceptStrategy.class, containsInterceptStrategy.negate(), 
-            camelContext.adapt(ExtendedCamelContext.class)::addInterceptStrategy);

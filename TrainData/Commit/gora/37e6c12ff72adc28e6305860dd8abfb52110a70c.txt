@@ -1,9 +1,0 @@
-import java.util.Map;
-  public static boolean isFieldUpdatable(String field, Map<String, ByteIterator> values) {
-      LOG.info(e.getMessage(), e);
-      LOG.info(e.getMessage(), e);
-      LOG.info(e.getMessage(), e);
-      LOG.info(e.getMessage(), e);
-      LOG.info(e.getMessage(), e);
-      LOG.info(e.getMessage(), e);
-      LOG.info(e.getMessage(), e);

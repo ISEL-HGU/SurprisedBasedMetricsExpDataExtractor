@@ -1,3 +1,0 @@
-         * or 
-) or tab (	) characters then escape with an extra slash, eg \n.
-}

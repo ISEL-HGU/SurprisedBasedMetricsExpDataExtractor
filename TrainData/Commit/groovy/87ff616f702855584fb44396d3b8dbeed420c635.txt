@@ -1,2 +1,0 @@
-                method = javac.getMethod("compile", String[].class, PrintWriter.class);
-                method = javac.getMethod("compile", String[].class);

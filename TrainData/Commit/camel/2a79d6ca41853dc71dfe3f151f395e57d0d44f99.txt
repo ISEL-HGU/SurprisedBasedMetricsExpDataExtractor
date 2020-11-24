@@ -1,2 +1,0 @@
-import org.apache.camel.support.DefaultAsyncProducer;
-public class CxfRsProducer extends DefaultAsyncProducer {

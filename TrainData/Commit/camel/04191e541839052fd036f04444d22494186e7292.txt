@@ -1,3 +1,0 @@
- b/components/camel-grpc/src/main/java/org/apache/camel/component/grpc/client/GrpcSimpleExchangeForwarder.java
-class GrpcSimpleExchangeForwarder implements GrpcExchangeForwarder {
-    public GrpcSimpleExchangeForwarder(GrpcConfiguration configuration, Object grpcStub) {

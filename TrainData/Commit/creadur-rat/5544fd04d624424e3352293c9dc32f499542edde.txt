@@ -1,1 +1,0 @@
-    private final List<String> patterns = new ArrayList<String>();

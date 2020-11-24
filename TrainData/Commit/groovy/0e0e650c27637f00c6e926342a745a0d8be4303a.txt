@@ -1,8 +1,0 @@
-        if (isInsideParentheses(keyExpression)) {
-            return;
-        }
-
-        boolean isDuplicatedNamedParameter =
-                mapEntryExpressionList.stream()
-                        .anyMatch(m -> m.getKeyExpression().getText().equals(parameterName));
-

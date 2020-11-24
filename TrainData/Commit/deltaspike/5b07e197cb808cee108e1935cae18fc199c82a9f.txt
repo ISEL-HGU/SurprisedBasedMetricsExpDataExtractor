@@ -1,2 +1,0 @@
- b/deltaspike/core/impl/src/main/java/org/apache/deltaspike/core/impl/config/ConfigResolverContext.java
-package org.apache.deltaspike.core.impl.config;

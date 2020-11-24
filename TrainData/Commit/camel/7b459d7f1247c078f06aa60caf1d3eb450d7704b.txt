@@ -1,2 +1,0 @@
-            return CamelContextHelper.mandatoryLookupAndConvert(context, valueNoHash, type);
-            return CamelContextHelper.lookupAndConvert(context, valueNoHash, type);

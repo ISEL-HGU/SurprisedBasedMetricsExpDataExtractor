@@ -1,7 +1,0 @@
-    private final Comparator<ModuleRevisionId> comparator = new Comparator<ModuleRevisionId>() {
-        public int compare(ModuleRevisionId o1, ModuleRevisionId o2) {
-            ArtifactInfo art1 = new MRIDArtifactInfo(o1);
-            ArtifactInfo art2 = new MRIDArtifactInfo(o2);
-            ArtifactInfo art = getLatestStrategy().findLatest(new ArtifactInfo[] {art1, art2},
-                null);
-            Comparator<ModuleRevisionId> staticComparator) {

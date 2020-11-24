@@ -1,5 +1,0 @@
-
-import com.google.maps.model.GeocodingResult;
-
-            .get().description("Geocoder address lookup").outType(GeocodingResult[].class)
-                .toD("geocoder:address:${header.address})");

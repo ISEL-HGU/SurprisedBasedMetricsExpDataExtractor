@@ -1,5 +1,0 @@
-
-    public XMLSecurityDataFormat(String secureTag, boolean secureTagContents, String recipientKeyAlias,
-        String exchangeRecipientAlias = getRecipientKeyAlias();
-
-

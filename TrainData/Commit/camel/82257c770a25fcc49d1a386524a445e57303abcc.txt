@@ -1,1 +1,0 @@
-    final class ErrorHandlingClientCallback<T> implements ClientCallback<T> {

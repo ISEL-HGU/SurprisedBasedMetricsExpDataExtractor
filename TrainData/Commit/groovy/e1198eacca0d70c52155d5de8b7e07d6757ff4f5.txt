@@ -1,4 +1,0 @@
-    public static BooleanExpression isNullX(Expression expr) {
-        return new BooleanExpression(new BinaryExpression(expr, EQ, new ConstantExpression(null)));
-    }
-

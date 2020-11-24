@@ -1,3 +1,0 @@
-        String networkName = DockerHelper.getProperty(DockerConstants.DOCKER_NETWORK, configuration, message, String.class);
-        String networkId = DockerHelper.getProperty(DockerConstants.DOCKER_NETWORK, configuration, message, String.class);
-        String networkId = DockerHelper.getProperty(DockerConstants.DOCKER_NETWORK, configuration, message, String.class);

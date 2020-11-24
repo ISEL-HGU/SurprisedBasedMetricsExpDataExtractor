@@ -1,9 +1,0 @@
-import org.apache.guacamole.auth.jdbc.base.ModeledActivityRecordSet;
-import org.apache.guacamole.net.auth.AuthenticatedUser;
-public class ConnectionRecordSet extends ModeledActivityRecordSet<ConnectionRecord> {
-    protected Collection<ConnectionRecord> retrieveHistory(
-            AuthenticatedUser user, Set<ActivityRecordSearchTerm> requiredContents,
-            List<ActivityRecordSortPredicate> sortPredicates, int limit)
-
-        // Retrieve history from database
-                requiredContents, sortPredicates, limit);

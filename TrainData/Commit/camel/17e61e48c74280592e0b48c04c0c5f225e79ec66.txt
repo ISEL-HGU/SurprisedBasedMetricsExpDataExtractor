@@ -1,3 +1,0 @@
- * The YQL (Yahoo! Query Language) platform enables you to query filter and
- * combine data across the web.
-     * To use a custom configured HttpClientConnectionManager.

@@ -1,1 +1,0 @@
-                .min((t1, t2) -> Integer.compare(t2.getV2(), t1.getV2()))

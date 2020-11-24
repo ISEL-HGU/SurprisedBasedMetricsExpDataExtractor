@@ -1,3 +1,0 @@
-import org.antlr.v4.runtime.CharStreams;
-        CharStream charStream = CharStreams.fromString(this.readSourceCode(sourceUnit));
-            parser.getInputStream().seek(0);

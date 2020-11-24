@@ -1,4 +1,0 @@
-import java.util.concurrent.atomic.AtomicBoolean;
-
-    private static final AtomicBoolean NO_START = new AtomicBoolean();
-        NO_START.set(b);

@@ -1,1 +1,0 @@
-    private static final String DEFAULT_MEDIA_TYPE = MediaType.APPLICATION_OCTET_STREAM;

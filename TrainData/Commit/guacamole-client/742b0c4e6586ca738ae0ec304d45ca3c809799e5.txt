@@ -1,4 +1,0 @@
-            if (ldapConnection.isConnected() && ldapConnection.isAuthenticated())
-                return ldapConnection;
-        throw new GuacamoleInvalidCredentialsException("Authentication failed.",
-                CredentialsInfo.USERNAME_PASSWORD);

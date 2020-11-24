@@ -1,6 +1,0 @@
-                if (exchange.getFromEndpoint() != null) {
-                    return EndpointHelper.matchEndpoint(context, exchange.getFromEndpoint().getEndpointUri(), endpointUri);
-                } else {
-                    return false;
-                }
-                if (exchange.getFromEndpoint() != null && exchange.getFromEndpoint().getEndpointUri().startsWith("direct:")) {

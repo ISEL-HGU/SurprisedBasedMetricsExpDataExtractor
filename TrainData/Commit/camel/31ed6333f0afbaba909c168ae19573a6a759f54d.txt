@@ -1,2 +1,0 @@
-                                LOG.info("Auto configuring option: {} on component: {} as one instance of type: {} registered in the Camel Registry", k, name, type.getName());
-                return type != null && !type.isPrimitive() && !type.getName().startsWith("java");

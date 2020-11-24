@@ -1,2 +1,0 @@
-@UriEndpoint(firstVersion = "2.22.0", scheme = "web3j", title = "Web3j Ethereum Blockchain", syntax = "web3j:host:port",
-    consumerClass = Web3jConsumer.class, label = "bitcoin,blockchain")

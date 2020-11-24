@@ -1,3 +1,0 @@
-import org.apache.camel.util.ObjectHelper;
-    @UriParam(label = "advanced", description = "Currently XMPPTCPConnectionConfiguration is only supported (XMPP over TCP) but not BOSHConfiguration (XMPP over HTTP).")
-            return new XMPPTCPConnection(ObjectHelper.cast(XMPPTCPConnectionConfiguration.class, connectionConfig));

@@ -1,3 +1,0 @@
-             syntax = "azure-blob:containerAndQueueUri", 
-    @UriPath(description = "Container Queue compact Uri")
-    private String containerAndQueueUri; // to support component docs

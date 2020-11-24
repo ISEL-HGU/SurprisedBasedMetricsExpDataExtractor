@@ -1,3 +1,0 @@
-import static org.apache.groovy.parser.antlr4.GroovyLexer.BooleanLiteral;
-        // reserved keywords, null literals, boolean literals
-                THIS, THROW, THROWS, TRANSIENT, TRY, VOID, VOLATILE, WHILE, NullLiteral, BooleanLiteral)) {

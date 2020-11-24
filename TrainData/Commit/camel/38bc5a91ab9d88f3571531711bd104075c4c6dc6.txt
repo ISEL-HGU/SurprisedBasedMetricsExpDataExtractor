@@ -1,4 +1,0 @@
-                allowedMethods = getEndpoint().getHttpMethodRestrict();
-                if (!allowedMethods.contains("OPTIONS")) {
-                    allowedMethods = "OPTIONS,"  allowedMethods;
-                }

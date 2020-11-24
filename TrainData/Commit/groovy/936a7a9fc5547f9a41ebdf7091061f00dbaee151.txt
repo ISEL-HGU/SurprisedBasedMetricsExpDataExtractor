@@ -1,2 +1,0 @@
-            if (args.length == 0) {
-            Java2GroovyProcessor.processFiles(Arrays.asList(args));

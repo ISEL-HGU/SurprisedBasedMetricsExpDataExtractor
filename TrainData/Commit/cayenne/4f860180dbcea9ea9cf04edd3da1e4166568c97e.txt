@@ -1,4 +1,0 @@
-
-    public boolean supportsExpressionInHaving() {
-        return true;
-    }

@@ -1,1 +1,0 @@
-            LOG.warn("Circular error-handler detected - breaking out processing Exchange: {}", exchange);

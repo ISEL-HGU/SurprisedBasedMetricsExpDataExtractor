@@ -1,3 +1,0 @@
-import org.apache.camel.util.ObjectHelper;
-            DBFactory factory = getFactory();
-                Class<?> clz = ObjectHelper.loadClass(cn, getClass().getClassLoader());

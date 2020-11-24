@@ -1,7 +1,0 @@
-        PodList podList;
-        String namespaceName = exchange.getIn().getHeader(KubernetesConstants.KUBERNETES_NAMESPACE_NAME, String.class);
-        if (ObjectHelper.isNotEmpty(namespaceName)) {
-            podList = getEndpoint().getKubernetesClient().pods().inNamespace(namespaceName).list();
-        } else {
-        	podList = getEndpoint().getKubernetesClient().pods().inAnyNamespace().list();
-        }

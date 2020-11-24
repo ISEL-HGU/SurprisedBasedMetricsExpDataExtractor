@@ -1,3 +1,0 @@
-import org.apache.deltaspike.core.util.ProxyUtils;
-    protected List<Annotation> extractMetadata(InvocationContext invocationContext)
-                        ? ProxyUtils.getUnproxiedClass(invocationContext.getTarget().getClass())

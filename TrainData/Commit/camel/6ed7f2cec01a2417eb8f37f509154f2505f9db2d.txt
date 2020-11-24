@@ -1,4 +1,0 @@
-import org.jivesoftware.smack.tcp.XMPPTCPConnection;
-    private XMPPTCPConnection connection;
-                endpoint.getBinding().populateXmppStanza(pubsubpacket, exchange);
-                connection.sendStanza(pubsubpacket);

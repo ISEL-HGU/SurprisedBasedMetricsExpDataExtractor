@@ -1,1 +1,0 @@
-        if (!hasPassword && !hasRefreshToken && hasKeystore) {

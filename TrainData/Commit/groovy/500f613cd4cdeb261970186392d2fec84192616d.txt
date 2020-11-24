@@ -1,2 +1,0 @@
-        String t = text();
-        return null == t || 0 == t.length();

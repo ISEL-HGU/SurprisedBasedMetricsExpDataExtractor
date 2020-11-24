@@ -1,3 +1,0 @@
-        return methods.values().stream().filter(DescriptorManager::isConstrained)
-            .filter(m -> filter.contains(m.getMethodType())).collect(ToUnmodifiable.set());
-        return constructors.values().stream().filter(DescriptorManager::isConstrained).collect(ToUnmodifiable.set());

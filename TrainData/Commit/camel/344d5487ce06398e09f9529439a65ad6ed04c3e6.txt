@@ -1,3 +1,0 @@
-        // if camel-bean is on classpath then we can load its bean proxy factory
-        log.info("Using ReactiveExecutor: {}", getReactiveExecutor());
-

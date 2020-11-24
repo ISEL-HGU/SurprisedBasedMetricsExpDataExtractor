@@ -1,9 +1,0 @@
-        // Send client timezone, if available
-        String timezone = info.getTimezone();
-        if (timezone != null && !timezone.isEmpty()) {
-            writer.writeInstruction(
-                    new GuacamoleInstruction(
-                        "timezone",
-                        info.getTimezone()
-                    ));
-        }

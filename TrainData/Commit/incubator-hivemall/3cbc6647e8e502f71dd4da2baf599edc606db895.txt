@@ -1,1 +1,0 @@
-        CharArraySet results = new CharArraySet(Arrays.asList(array), true /* ignoreCase */);

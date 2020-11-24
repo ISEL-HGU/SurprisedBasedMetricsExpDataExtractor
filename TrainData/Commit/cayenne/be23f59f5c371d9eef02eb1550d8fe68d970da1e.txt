@@ -1,7 +1,0 @@
-		List<Object[]> result = SQLSelect.columnQuery("SELECT #result('ARTIST_ID' 'java.lang.Long'), #result('ARTIST_NAME' 'java.lang.String') FROM ARTIST_CT")
-		SQLSelect.columnQuery("SELECT #result('ARTIST_ID' 'java.lang.Long'), #result('ARTIST_NAME' 'java.lang.String') FROM ARTIST_CT",
-		List<Object[]> result = SQLSelect.columnQuery("SELECT #result('ARTIST_ID' 'java.lang.Long') FROM ARTIST_CT")
-		List<Object[]> result = SQLSelect.columnQuery("SELECT PAINTING_ID, PAINTING_TITLE, ESTIMATED_PRICE FROM PAINTING")
-		List<Object[]> result = SQLSelect.columnQuery("SELECT PAINTING_ID FROM PAINTING")
-		SQLSelect<Object[]> query = SQLSelect.columnQuery("SELECT PAINTING_ID, PAINTING_TITLE, ESTIMATED_PRICE FROM PAINTING", Integer.class, String.class);
-		List<Object[]> results = SQLSelect.columnQuery("SELECT * FROM ARTIST_CT",

@@ -1,1 +1,0 @@
-		addListener(LifecycleEvent.PRE_PERSIST, entityClass, listener, "prePersist");

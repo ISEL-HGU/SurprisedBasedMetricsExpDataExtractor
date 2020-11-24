@@ -1,8 +1,0 @@
-        new NumericField(MAX_CONNECTIONS_PER_USER_NAME)
-    ));
-
-    /**
-     * All attributes related to to load balancing in a logical form.
-     */
-    public static final Form LOAD_BALANCING = new Form("load-balancing", Arrays.<Field>asList(
-        LOAD_BALANCING,

@@ -1,3 +1,0 @@
-            else {
-                logger.error("Unexpected authentication failure talking to RADIUS server.");
-            }

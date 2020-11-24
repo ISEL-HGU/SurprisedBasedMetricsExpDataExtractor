@@ -1,4 +1,0 @@
-     * @throws ClassNotFoundException 
-    public Swagger read(List<RestDefinition> rests, String route, BeanConfig config, String camelContextId, ClassResolver classResolver) throws ClassNotFoundException {
-    private void parse(Swagger swagger, RestDefinition rest, String camelContextId, ClassResolver classResolver) throws ClassNotFoundException {
-            Class<?> clazz = classResolver.resolveMandatoryClass(type);

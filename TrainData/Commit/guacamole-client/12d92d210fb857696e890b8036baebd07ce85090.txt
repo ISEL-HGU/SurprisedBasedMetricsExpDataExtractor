@@ -1,7 +1,0 @@
-     * @param connection
-     *     The generic Connection to be copied.
-    public QuickConnection(Connection connection) {
-        super(connection.getName(),connection.getIdentifier(),
-                connection.getConfiguration());
-        setParentIdentifier(connection.getParentIdentifier());
-

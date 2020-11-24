@@ -1,4 +1,0 @@
-                return ((getActiveConnections(a).size()  1) * b.getConnectionWeight() -
-                        (getActiveConnections(b).size()  1) * a.getConnectionWeight());
-            if (connection.getConnectionWeight() < 1) {
-                logger.warn("Weight for {} is < 1, connection will be skipped.", connection.getName());

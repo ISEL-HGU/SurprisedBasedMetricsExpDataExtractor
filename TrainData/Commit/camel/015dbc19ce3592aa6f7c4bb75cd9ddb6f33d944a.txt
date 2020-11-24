@@ -1,7 +1,0 @@
- * A {@link CamelContext} creation and destruction tracker.
-    /**
-     * Opens the tracker to start tracking when new {@link CamelContext} is created or destroyed.
-     */
-    /**
-     * Closes the tracker so it not longer tracks.
-     */

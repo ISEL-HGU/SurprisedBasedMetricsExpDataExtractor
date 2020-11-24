@@ -1,2 +1,0 @@
-import org.apache.camel.Suspendable;
-public class TimerConsumer extends DefaultConsumer implements StartupListener, Suspendable {

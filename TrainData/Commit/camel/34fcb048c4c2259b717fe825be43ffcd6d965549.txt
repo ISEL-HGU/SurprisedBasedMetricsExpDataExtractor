@@ -1,4 +1,0 @@
-            Map<String, Object> requestHeaders = new HashMap<>();
-            for (Header header: request.getAllHeaders()) {
-            Map<String, Object> responseHeaders = new HashMap<>();
-            for (Header header: response.getAllHeaders()) {

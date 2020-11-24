@@ -1,3 +1,0 @@
-import org.apache.camel.component.etcd.EtcdConstants;
-                policy.setClientUris(EtcdConstants.ETCD_DEFAULT_URIS);
-                from("file:///tmp/camel?delete=true")

@@ -1,3 +1,0 @@
-import org.apache.camel.support.ServiceHelper;
-            boolean createSegment = entity == null || !Objects.equals(entity.getName(), routeId);
-}

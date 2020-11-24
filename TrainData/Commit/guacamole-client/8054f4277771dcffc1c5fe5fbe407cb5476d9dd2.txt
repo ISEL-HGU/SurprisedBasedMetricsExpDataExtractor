@@ -1,1 +1,0 @@
-     * The header used for HTTP authentication.

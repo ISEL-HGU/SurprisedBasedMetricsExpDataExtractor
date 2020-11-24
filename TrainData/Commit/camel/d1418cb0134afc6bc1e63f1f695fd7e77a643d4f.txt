@@ -1,3 +1,0 @@
- *
- * @deprecated do not use this servlet directly but use rest-dsl the regular way with rest-dsl configuration.
-@Deprecated

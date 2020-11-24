@@ -1,4 +1,0 @@
-                value = value.trim();
-                key = key.trim();
-                value = value.trim();
-                key = key.trim();

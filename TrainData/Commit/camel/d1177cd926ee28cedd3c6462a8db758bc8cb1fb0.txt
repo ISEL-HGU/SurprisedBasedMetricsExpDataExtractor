@@ -1,7 +1,0 @@
-            .errors(ResultErrorHelper.requiresAny(parameters,
-                OptionsGroup.withName(AuthenticationType.USERNAME_PASSWORD)
-                    .options("clientId", "clientSecret", "userName", "password", "!refreshToken", "!keystore"),
-                OptionsGroup.withName(AuthenticationType.REFRESH_TOKEN)
-                    .options("clientId", "clientSecret", "refreshToken", "!password", "!keystore"),
-                OptionsGroup.withName(AuthenticationType.JWT)
-                    .options("clientId", "userName", "keystore", "!password", "!refreshToken")));

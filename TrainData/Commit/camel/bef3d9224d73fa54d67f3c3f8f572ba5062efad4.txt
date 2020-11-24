@@ -1,3 +1,0 @@
-        Consumer consumer = endpoint.createConsumer(delegate);
-        configureConsumer(consumer);
-        return consumer;

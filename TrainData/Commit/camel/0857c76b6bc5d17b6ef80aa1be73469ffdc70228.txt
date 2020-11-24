@@ -1,3 +1,0 @@
-/**
- * Default {@link org.apache.camel.spi.ExecutorServiceManager}.
- */

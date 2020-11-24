@@ -26,7 +26,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 0,0.0,0.0,0,0," yuin405@gmail.com",7,2,2,17,Friday,7,1,38,141,0.0070921984,390,339.5,48,b60c0365007e9b80bd0fdf852ff0d52e04e6ee72-src-main-java-hivemall-tools-array-ArrayRemoveUDF.java
 16,0.051948052,0.051948052,4,0," yuin405@gmail.com",8,2,2,17,Thursday,8,2,47,189,0.01058201,649,425.6667,154,4f5f1237e6edc8eb81b25ec64904b6449c379fb1-mixserv-src-main-java-hivemall-mix-server-MixServerHandler.java
 4,0.048780486,0.048780486,0,1," yuin405@gmail.com",169,4,2,16,Thursday,159,1,5,19,0.42105263,780,345.25,41,b7d5f13430ec2b03c9156be4f80394cda597fb38-core-src-main-java-hivemall-tools-array-SortAndUniqArrayUDF.java
-28,0.01627907,0.01627907,0,2," yuin405@gmail.com",366,30,4,21,Friday,9,5,73,334,0.119760476,943,508.25,860,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+28,0.01627907,0.01627907,0,4," yuin405@gmail.com",366,30,4,21,Friday,9,5,73,334,0.119760476,943,508.25,860,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 2,0.008695652,0.008695652,0,1," yuin405@gmail.com",270,8,2,07,Wednesday,2,1,16,31,0.16129032,161,110.5,115,3cc375f3e6c391c80f789f5eef6ddd6f84784a52-src-main-hivemall-ftvec-hashing-Sha1UDF.java
 5,0.06122449,0.040816326,1,1," yuin405@gmail.com",223,4,2,21,Tuesday,214,4,56,169,0.15384616,914,479.25,49,29673be232933474288db125f93a5a609311842c-core-src-main-java-hivemall-tools-mapred-RowIdUDF.java
 243,0.0,0.34225354,0,0," yuin405@gmail.com",36,4,2,19,Thursday,27,1,1,1,1.0,682,458.6667,710,98d542cf6adb17b34661a03fac7ece16818994a3-core-src-main-java-hivemall-utils-collections-IntOpenHashMap.java
@@ -74,7 +74,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 111,0.51123595,0.11235955,5,0," yuin405@gmail.com",31,8,2,13,Monday,12,1,4,11,0.54545456,803,368.25,178,d68e857b5a2b6fc1ff9015bfef9915fef7abea37-core-src-main-java-hivemall-fm-FieldAwareFactorizationMachineUDTF.java
 58,0.17619048,0.1,5,0," yuin405@gmail.com",31,24,2,22,Sunday,0,1,3,4,0.75,867,432.25,210,22904c3261949929339659f6c526450ca27fd340-core-src-main-java-hivemall-fm-FFMPredictionModel.java
 7,0.008583691,0.0014306152,1,0," yuin405@gmail.com",201,20,3,05,Monday,2,1,3,12,0.6666667,823,388.25,699,0b3307a1637c3ced0094c0bb35503335299c7b2a-core-src-main-java-hivemall-fm-FactorizationMachineUDTF.java
-9,0.010765551,0.0,1,1," yuin405@gmail.com",334,27,3,21,Monday,19,1,3,4,1.0,940,505.25,836,ebdbb004b7e9fa1dadd6620a3483784d0b4edbcb-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+9,0.010765551,0.0,1,3," yuin405@gmail.com",334,27,3,21,Monday,19,1,3,4,1.0,940,505.25,836,ebdbb004b7e9fa1dadd6620a3483784d0b4edbcb-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 2,0.015037594,0.0,0,0," yuin405@gmail.com",41,3,1,04,Friday,31,1,18,38,0.15789473,446,222.66667,133,c35f82ca2eca6eec2ed680143a830d2c34fc6388-src-main-java-hivemall-evaluation-FMeasureUDAF.java
 22,0.39583334,0.0625,0,0," yuin405@gmail.com",0,1,1,19,Friday,0,1,1,2,0.5,17,17.0,48,5066ed04328be1f2bc929c947d71cd9d0157aae3-src-main-hivemall-ftvec-hashing-ArrayHashValuesUDF.java
 2,0.0076923077,0.0076923077,0,1," yuin405@gmail.com",220,9,3,23,Friday,9,1,4,12,0.8333333,890,455.25,130,077651440da4a6fd4f485236254256d274c9a716-core-src-main-java-hivemall-fm-FMArrayModel.java
@@ -199,7 +199,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 28,0.23333333,0.23333333,0,1," yuin405@gmail.com",381,7,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,60,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-tools-mapred-JobConfGetsUDF.java
 4,0.013513514,0.013513514,0,0," yuin405@gmail.com",3,3,1,23,Thursday,2,1,14,49,0.20408164,62,62.0,148,5b421f1bdebce7279985db5263baa95aae6fd54f-src-main-hivemall-utils-MathUtils.java
 4,0.013793103,0.013793103,1,0," yuin405@gmail.com",0,1,1,20,Wednesday,0,1,2,7,0.14285715,139,88.5,145,3233a24e12b495f47d8844312bab8d2ae93e3e97-src-main-hivemall-knn-lsh-bBitMinHashUDF.java
-49,0.11111111,0.07662835,10,0," yuin405@gmail.com",177,5,2,14,Friday,20,1,13,32,0.46875,793,358.25,261,351f49b04582a3be53c3d7a15ebb8b7cd1bd72e7-core-src-main-java-hivemall-mf-FactorizedModel.java
+49,0.11111111,0.07662835,10,1," yuin405@gmail.com",177,5,2,14,Friday,20,1,13,32,0.46875,793,358.25,261,351f49b04582a3be53c3d7a15ebb8b7cd1bd72e7-core-src-main-java-hivemall-mf-FactorizedModel.java
 27,0.033653848,0.03125,0,0," yuin405@gmail.com",316,10,1,15,Saturday,14,5,73,332,0.012048192,947,512.25,416,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-smile-tools-TreePredictUDF.java
 16,0.023364486,0.05140187,1,0," yuin405@gmail.com",300,16,1,16,Monday,32,1,3,11,0.36363637,242,191.5,214,b558d7231e577bbb6a3c144d40864100f9dd726a-src-main-hivemall-classifier-AROWClassifierUDTF.java
 7,0.029850746,0.07462686,1,0," yuin405@gmail.com",48,4,2,23,Thursday,0,1,4,12,0.16666667,395,344.5,67,5be6eaa768a19694634da75f74ea5c154626e8e8-src-main-java-hivemall-io-PredictionModel.java
@@ -307,7 +307,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 0,0.0,0.0,0,0," ozawa.tsuyoshi@gmail.com",0,1,1,02,Friday,0,1,38,141,0.0070921984,1,1.0,63,07bf17314099877301c6b63dfbac10ec035c6b44-src-main-java-hivemall-mix-store-PartialArgminKLD.java
 8,0.057692308,0.01923077,3,0," yuin405@gmail.com",185,7,2,01,Tuesday,0,1,6,21,0.0952381,478,254.66667,104,9dc19648146c11b90c0d82ec07f810b2a5ad6d97-src-main-java-hivemall-tools-array-ConcatArrayUDF.java
 4,0.018867925,0.018867925,1,0," yuin405@gmail.com",70,4,2,14,Wednesday,60,1,9,24,0.125,720,285.25,106,18b6bfd73da1f048efd2cd838907d863866e42fd-core-src-main-java-hivemall-knn-distance-MinkowskiDistanceUDF.java
-12,0.018072288,0.0,0,0," yuin405@gmail.com",161,12,2,16,Wednesday,0,1,2,2,1.0,762,327.25,664,b0968c2244cf9b65c43eab7fc9a57cdcb1ad7cd2-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+12,0.018072288,0.0,0,2," yuin405@gmail.com",161,12,2,16,Wednesday,0,1,2,2,1.0,762,327.25,664,b0968c2244cf9b65c43eab7fc9a57cdcb1ad7cd2-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 19,0.136,0.016,2,0," yuin405@gmail.com",0,3,1,22,Sunday,0,1,3,4,0.75,867,432.25,125,22904c3261949929339659f6c526450ca27fd340-core-src-main-java-hivemall-utils-io-CompressionStreamFactory.java
 33,0.23913044,0.11956522,1,0," yuin405@gmail.com",6,4,1,12,Friday,1,1,7,12,0.5833333,716,281.25,92,f5ae2505428ad192dc0b20130149c192abc5423f-core-src-main-java-hivemall-tools-compress-InflateUDF.java
 204,0.26182964,0.38170347,5,2," yuin405@gmail.com",22,3,2,18,Wednesday,11,1,2,4,0.25,942,507.25,317,f22de1bb6fe7bff193e253f6d47976d39b98ce22-core-src-main-java-hivemall-ftvec-binning-BuildBinsUDAF.java
@@ -615,7 +615,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 20,0.09150327,0.039215688,3,0," yuin405@gmail.com",10,6,1,17,Thursday,0,1,8,18,0.3888889,840,405.25,153,40e12f4f11ced732e72c987c934024c346e3d126-core-src-main-java-hivemall-utils-lang-ObjectUtils.java
 2,0.0121951215,0.0121951215,0,1," yuin405@gmail.com",55,6,1,07,Wednesday,0,1,16,29,0.03448276,163,112.5,82,9ccb84b7ad13526b7155c592a97e500c773ac73f-src-main-hivemall-knn-distance-PopcountUDF.java
 24,0.18333334,0.21666667,0,0," yuin405@gmail.com",136,3,2,18,Monday,129,1,40,168,0.08928572,459,235.66667,60,9854eba552eb00b443ac49c2c19e06092845c6b1-src-main-java-hivemall-utils-math-StatsUtils.java
-12,0.042402826,0.0,0,0," yuin405@gmail.com",221,12,2,05,Sunday,0,1,1,1,1.0,900,465.25,283,40a27c6a2d752b9ae0bf26bcd0b7483d36abfc19-core-src-main-java-hivemall-utils-math-MathUtils.java
+12,0.042402826,0.0,0,2," yuin405@gmail.com",221,12,2,05,Sunday,0,1,1,1,1.0,900,465.25,283,40a27c6a2d752b9ae0bf26bcd0b7483d36abfc19-core-src-main-java-hivemall-utils-math-MathUtils.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,80,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-utils-lang-Primitives.java
 4,0.023255814,0.023255814,0,0," yuin405@gmail.com",347,9,1,16,Wednesday,8,1,1,1,1.0,376,325.5,86,d345164013e6ae57b0cc123c4bd1d06e9ddb41d1-src-main-hivemall-common-EtaEstimator.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,114,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-ftvec-trans-QuantitativeFeaturesUDF.java
@@ -648,7 +648,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 37,0.113793105,0.013793103,6,0," yuin405@gmail.com",43,28,2,20,Friday,0,1,5,6,0.6666667,854,419.25,290,d637f41ded3e77b7377a8e9b8d439d52275167c3-core-src-main-java-hivemall-fm-FieldAwareFactorizationMachineUDTF.java
 8,0.009615385,0.009615385,3,0," yuin405@gmail.com",179,7,1,05,Tuesday,21,1,1,1,1.0,931,496.25,416,0d2f60b153653b90a130de56c66b623dba94a565-core-src-main-java-hivemall-smile-tools-TreePredictUDF.java
 24,0.07746479,0.09154929,0,0," yuin405@gmail.com",136,4,2,20,Monday,0,1,40,168,0.017857144,462,238.66667,142,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-utils-hashing-MurmurHash3.java
-28,0.047457628,0.047457628,0,0," yuin405@gmail.com",366,15,2,21,Friday,51,5,73,334,0.119760476,943,508.25,295,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-utils-math-MathUtils.java
+28,0.047457628,0.047457628,0,2," yuin405@gmail.com",366,15,2,21,Friday,51,5,73,334,0.119760476,943,508.25,295,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-utils-math-MathUtils.java
 0,0.0,0.0,0,0," yuin405@gmail.com",8,2,2,17,Thursday,8,2,47,189,0.01058201,649,425.6667,121,4f5f1237e6edc8eb81b25ec64904b6449c379fb1-core-src-main-java-hivemall-mix-MixMessageEncoder.java
 9,0.014354067,0.028708134,2,0," yuin405@gmail.com",223,7,2,21,Monday,0,1,4,4,0.25,907,472.25,209,57e4c0adbaa6e33dbde8508a9b177d9c4d26f570-core-src-main-java-hivemall-utils-hadoop-HadoopUtils.java
 24,0.033950616,0.040123455,0,0," yuin405@gmail.com",136,7,2,20,Monday,0,1,40,168,0.017857144,462,238.66667,324,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-LearnerBaseUDTF.java
@@ -682,7 +682,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 102,0.09572301,0.11201629,7,0," yuin405@gmail.com",72,14,2,20,Friday,0,1,3,6,0.33333334,727,292.25,491,97b2d4606003d7286d9ab6fa30529f826b55cb78-core-src-main-java-hivemall-smile-regression-RandomForestRegressionUDTF.java
 36,0.18378378,0.010810811,4,0," yuin405@gmail.com",0,4,1,13,Wednesday,0,1,1,1,1.0,165,114.5,185,58cfb1b4f6d1168c287790711d866a8a51660163-src-main-hivemall-tools-mapred-DistributedCacheLookupUDF.java
 28,0.040229887,0.040229887,1,0," yuin405@gmail.com",136,10,2,20,Monday,0,1,40,168,0.017857144,462,238.66667,348,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-utils-collections-OpenHashMap.java
-18,0.08108108,0.0,0,0," yuin405@gmail.com",205,8,2,20,Friday,0,1,5,6,0.6666667,854,419.25,222,d637f41ded3e77b7377a8e9b8d439d52275167c3-core-src-main-java-hivemall-utils-math-MathUtils.java
+18,0.08108108,0.0,0,2," yuin405@gmail.com",205,8,2,20,Friday,0,1,5,6,0.6666667,854,419.25,222,d637f41ded3e77b7377a8e9b8d439d52275167c3-core-src-main-java-hivemall-utils-math-MathUtils.java
 5,0.023809524,0.0,0,0," yuin405@gmail.com",0,1,1,17,Tuesday,0,1,1,1,1.0,597,373.6667,210,9adc458d21c5d268a6dbe26d4be12224bd80378f-src-main-java-hivemall-fm-Feature.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,85,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-ensemble-ArgminKLDistanceUDAF.java
 466,1.0,1.0,0,1," yuin405@gmail.com",223,5,2,21,Tuesday,19,4,56,169,0.15384616,914,479.25,233,29673be232933474288db125f93a5a609311842c-core-src-main-java-hivemall-utils-io-FastMultiByteArrayOutputStream.java
@@ -728,7 +728,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,47,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-utils-concurrent-ExecutorFactory.java
 27,0.09271523,0.08609272,0,1," yuin405@gmail.com",366,5,2,21,Friday,142,5,73,334,0.119760476,943,508.25,151,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-utils-collections-DoubleArrayList.java
 26,0.24489796,0.020408163,1,0," yuin405@gmail.com",210,6,2,23,Friday,10,1,4,6,0.5,490,266.6667,98,a7a456a29ec7c9eddf7cd07d08dd577c5f960273-src-main-java-hivemall-io-FeatureValue.java
-4,0.005524862,0.0,0,1," yuin405@gmail.com",204,17,2,17,Thursday,0,1,8,18,0.3888889,840,405.25,724,40e12f4f11ced732e72c987c934024c346e3d126-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+4,0.005524862,0.0,0,3," yuin405@gmail.com",204,17,2,17,Thursday,0,1,8,18,0.3888889,840,405.25,724,40e12f4f11ced732e72c987c934024c346e3d126-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 24,0.12903225,0.025806451,5,0," yuin405@gmail.com",98,5,2,04,Friday,21,1,18,38,0.15789473,446,222.66667,155,c35f82ca2eca6eec2ed680143a830d2c34fc6388-src-main-java-hivemall-mix-MixMessage.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,66,467595c1b03bf370cd1b9a072b1aa78b2576520d-mixserv-src-main-java-hivemall-mix-metrics-MixServerMetrics.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,27,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-mix-MixedModel.java
@@ -763,7 +763,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 28,0.28,0.28,0,1," yuin405@gmail.com",366,6,2,21,Friday,189,5,73,334,0.119760476,943,508.25,50,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-tools-array-ArrayRemoveUDF.java
 61,0.6025641,0.17948718,1,0," yuin405@gmail.com",195,10,3,16,Tuesday,0,1,13,28,0.39285713,813,378.25,78,c78863797d0b705cf36ccc00aa666f9166a878a3-core-src-main-java-hivemall-fm-StringFeature.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,36,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-tools-array-AllocFloatArrayUDF.java
-14,0.064935066,0.025974026,1,0," yuin405@gmail.com",202,11,2,19,Tuesday,4,1,6,16,0.5,830,395.25,154,ce5531bdf89fd52e7cb87f2540d015f497313bf7-core-src-main-java-hivemall-common-EtaEstimator.java
+14,0.064935066,0.025974026,1,1," yuin405@gmail.com",202,11,2,19,Tuesday,4,1,6,16,0.5,830,395.25,154,ce5531bdf89fd52e7cb87f2540d015f497313bf7-core-src-main-java-hivemall-common-EtaEstimator.java
 10,0.01607717,0.01607717,1,0," yuin405@gmail.com",142,13,1,17,Thursday,0,1,4,7,0.14285715,110,59.5,311,4cee0fc13f4767875486fe3b3bc15ff2affccd49-src-main-hivemall-classifier-multiclass-MulticlassSoftConfidenceWeightedUDTF.java
 10,0.028653296,0.0,1,0," yuin405@gmail.com",344,10,1,02,Tuesday,0,1,4,13,0.46153846,356,305.5,349,53aedf428ac745cc6e6ac1cb8494f02d7ae9276a-src-main-hivemall-common-LossFunctions.java
 0,0.0,0.0,0,0," yuin405@gmail.com",8,2,2,17,Thursday,8,2,47,189,0.01058201,649,425.6667,140,4f5f1237e6edc8eb81b25ec64904b6449c379fb1-core-src-main-java-hivemall-utils-hashing-MurmurHash3.java
@@ -816,7 +816,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 2,0.00862069,0.0,1,0," yuin405@gmail.com",40,12,2,15,Tuesday,1,1,1,2,1.0,828,393.25,232,8bedb6c6e83f51e51733fe3ff84a82c678970ebe-core-src-main-java-hivemall-fm-FieldAwareFactorizationMachineModel.java
 27,0.13084112,0.12149533,0,0," yuin405@gmail.com",14,2,1,15,Saturday,14,5,73,332,0.012048192,947,512.25,107,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-anomaly-ChangeFinder1D.java
 2,0.002915452,0.002915452,0,0," yuin405@gmail.com",277,31,1,07,Wednesday,0,1,16,31,0.16129032,161,110.5,343,3cc375f3e6c391c80f789f5eef6ddd6f84784a52-src-main-hivemall-regression-OnlineRegressionUDTF.java
-12,0.07575758,0.015151516,2,0," yuin405@gmail.com",168,5,2,18,Wednesday,11,1,2,2,1.0,772,337.25,132,c922eb5860a0d16d3ba3f8af6d14356ed6d64814-core-src-main-java-hivemall-common-EtaEstimator.java
+12,0.07575758,0.015151516,2,1," yuin405@gmail.com",168,5,2,18,Wednesday,11,1,2,2,1.0,772,337.25,132,c922eb5860a0d16d3ba3f8af6d14356ed6d64814-core-src-main-java-hivemall-common-EtaEstimator.java
 10,0.17073171,0.07317073,0,1," yuin405@gmail.com",274,6,1,00,Monday,17,1,11,29,0.10344828,155,104.5,41,2a85a77c9cc4c3f808499250c91a1548aa635343-src-main-hivemall-ftvec-scaling-RescaleFeatureValueUDF.java
 13,0.16,0.013333334,1,0," lewuathe@me.com",10,4,3,23,Friday,0,1,3,8,0.25,2,2.0,75,f5f6e7626dc09cb389f492ae0cd88fea4821b96b-core-src-main-java-hivemall-regression-LogressUDTF.java
 24,0.19642857,0.23214285,0,0," yuin405@gmail.com",136,3,2,18,Monday,129,1,40,168,0.08928572,459,235.66667,56,9854eba552eb00b443ac49c2c19e06092845c6b1-src-main-java-hivemall-ftvec-hashing-ArrayPrefixedHashValuesUDF.java
@@ -894,7 +894,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 24,0.03514377,0.041533545,0,0," yuin405@gmail.com",136,7,2,20,Monday,0,1,40,168,0.017857144,462,238.66667,313,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-regression-OnlineRegressionUDTF.java
 6,0.08571429,0.08571429,0,0," yuin405@gmail.com",0,2,1,07,Thursday,0,1,14,49,0.020408163,63,63.0,35,0fc31858c7a6640d71bcc25cdc0dad8ce5ad4159-src-main-hivemall-tools-macros-SigmodUDF.java
 6,0.0,0.009966778,1,0," yuin405@gmail.com",131,6,2,14,Monday,0,1,1,1,1.0,742,307.25,602,ccf4bc6d69e157f6288c8ef78833f9ee622cbb5a-core-src-main-java-hivemall-mf-OnlineMatrixFactorizationUDTF.java
-3,0.008196721,0.0040983604,0,0," yuin405@gmail.com",211,10,2,03,Thursday,0,1,3,5,0.8,881,446.25,244,5977595f3426d9e0f64c35a280fcbea8e04e5b7e-core-src-main-java-hivemall-utils-math-MathUtils.java
+3,0.008196721,0.0040983604,0,2," yuin405@gmail.com",211,10,2,03,Thursday,0,1,3,5,0.8,881,446.25,244,5977595f3426d9e0f64c35a280fcbea8e04e5b7e-core-src-main-java-hivemall-utils-math-MathUtils.java
 28,0.12280702,0.12280702,0,1," yuin405@gmail.com",381,7,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,114,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-mix-MixMessageDecoder.java
 6,0.01764706,0.01764706,1,0," yuin405@gmail.com",299,14,1,19,Sunday,2,1,5,7,0.5714286,233,182.5,170,aa32760b5008f694c694c147bc71568e843f7d42-src-main-hivemall-classifier-ConfidenceWeightedUDTF.java
 1,0.008333334,0.0,0,0," yuin405@gmail.com",5,5,1,14,Monday,0,1,1,3,0.33333334,283,232.5,120,646b7af85ec5e1b05f5cc3b4cb65edb0a4df0e5a-src-main-hivemall-io-SparseModel.java
@@ -965,7 +965,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 2,0.008695652,0.008695652,0,1," yuin405@gmail.com",270,9,2,07,Wednesday,0,1,16,29,0.03448276,163,112.5,115,9ccb84b7ad13526b7155c592a97e500c773ac73f-src-main-hivemall-ftvec-hashing-Sha1UDF.java
 28,0.11290322,0.11290322,0,1," yuin405@gmail.com",381,8,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,124,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-utils-lang-mutable-MutableDouble.java
 0,0.0,0.0,0,0," yuin405@gmail.com",7,2,2,17,Friday,7,1,38,141,0.0070921984,390,339.5,116,b60c0365007e9b80bd0fdf852ff0d52e04e6ee72-src-main-java-hivemall-classifier-PassiveAggressiveUDTF.java
-23,0.022485208,0.004733728,3,2," amaya382@users.noreply.github.com",345,28,4,20,Friday,10,1,2,4,0.5,1,1.0,845,2a7a1fc765e47784c78dbee26bfa3c16786c8d7a-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+23,0.022485208,0.004733728,3,4," amaya382@users.noreply.github.com",345,28,4,20,Friday,10,1,2,4,0.5,1,1.0,845,2a7a1fc765e47784c78dbee26bfa3c16786c8d7a-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,158,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-common-RandomizedAmplifier.java
 27,0.20895523,0.19402985,0,0," yuin405@gmail.com",14,2,1,15,Saturday,14,5,73,332,0.012048192,947,512.25,67,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-utils-collections-FixedIntArray.java
 2,0.003773585,0.003773585,0,0," yuin405@gmail.com",71,5,2,15,Thursday,1,1,10,27,0.14814815,724,289.25,265,aae9fa42daca955a8989a809a261c568712220b1-core-src-main-java-hivemall-classifier-SoftConfideceWeightedUDTF.java
@@ -998,7 +998,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 28,0.13461539,0.13461539,0,2," yuin405@gmail.com",381,8,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,104,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-evaluation-MeanAbsoluteErrorUDAF.java
 8,0.012048192,0.084337346,1,0," yuin405@gmail.com",297,9,1,12,Monday,90,1,2,4,0.75,237,186.5,83,41ea5844f58e5b37b8671af8b2d5ae5d321ad8eb-src-main-hivemall-common-FeatureValue.java
 3,0.0088495575,0.017699115,0,1," yuin405@gmail.com",78,5,1,22,Thursday,35,1,5,7,0.71428573,535,311.6667,113,894ef6defca77f6e843cb82c4a78088c5b4bd0a8-src-main-java-hivemall-knn-similarity-CosineSimilarityUDF.java
-28,0.05185185,0.05185185,0,0," yuin405@gmail.com",366,6,2,21,Friday,189,5,73,334,0.119760476,943,508.25,270,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-mf-FactorizedModel.java
+28,0.05185185,0.05185185,0,1," yuin405@gmail.com",366,6,2,21,Friday,189,5,73,334,0.119760476,943,508.25,270,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-mf-FactorizedModel.java
 28,0.22580644,0.22580644,0,1," yuin405@gmail.com",367,5,1,15,Saturday,14,5,73,332,0.012048192,947,512.25,62,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-utils-lock-TTASLock.java
 21,0.060747664,0.037383176,2,0," yuin405@gmail.com",34,8,2,15,Wednesday,2,1,2,6,0.5,815,380.25,214,04f5a7c80ba702e868e34f5ee7114d69b440a999-core-src-main-java-hivemall-fm-FieldAwareFactorizationMachineModel.java
 12,0.15254237,0.050847456,2,0," yuin405@gmail.com",0,1,1,05,Thursday,0,1,2,5,0.6,333,282.5,59,3993cea3c3edfe5016cee14714161ab390f5351a-src-main-hivemall-mix-store-PartialAverage.java
@@ -1017,7 +1017,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 20,0.24074075,0.12962963,0,0," yuin405@gmail.com",223,4,2,21,Monday,213,1,1,3,0.33333334,908,473.25,54,72e9442482aac690036f5a414c10bd1931d8c05f-core-src-main-java-hivemall-ftvec-hashing-ArrayPrefixedHashValuesUDF.java
 24,0.018739352,0.022146508,0,0," yuin405@gmail.com",136,3,2,18,Monday,129,1,40,168,0.08928572,459,235.66667,587,9854eba552eb00b443ac49c2c19e06092845c6b1-src-main-java-hivemall-classifier-multiclass-MulticlassOnlineClassifierUDTF.java
 0,0.0,0.0,0,0," yuin405@gmail.com",8,2,2,17,Thursday,8,2,47,189,0.01058201,649,425.6667,43,4f5f1237e6edc8eb81b25ec64904b6449c379fb1-core-src-main-java-hivemall-knn-distance-KLDivergenceUDF.java
-28,0.09589041,0.09589041,0,0," yuin405@gmail.com",366,10,2,21,Friday,144,5,73,334,0.119760476,943,508.25,146,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-common-ConversionState.java
+28,0.09589041,0.09589041,0,1," yuin405@gmail.com",366,10,2,21,Friday,144,5,73,334,0.119760476,943,508.25,146,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-common-ConversionState.java
 28,0.13461539,0.13461539,0,2," yuin405@gmail.com",366,7,2,21,Friday,31,5,73,334,0.119760476,943,508.25,104,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-evaluation-RootMeanSquaredErrorUDAF.java
 24,0.064327486,0.07602339,0,0," yuin405@gmail.com",136,6,2,18,Monday,38,1,40,168,0.08928572,459,235.66667,171,9854eba552eb00b443ac49c2c19e06092845c6b1-src-main-java-hivemall-mix-MixMessage.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,92,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-ensemble-MaxValueLabelUDAF.java
@@ -1031,7 +1031,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 4,0.017391304,0.017391304,0,0," linguin.m.s@gmail.com",187,4,2,11,Monday,177,1,12,45,0.08888889,7,4.0,115,35130276d331c83def71aaf4e7f4fecf333e7d0d-core-src-main-java-hivemall-classifier-PassiveAggressiveUDTF.java
 537,0.40745503,0.28277636,24,0," yuin405@gmail.com",65,5,2,12,Friday,6,1,7,12,0.5833333,716,281.25,778,f5ae2505428ad192dc0b20130149c192abc5423f-core-src-main-java-hivemall-smile-regression-RegressionTree.java
 8,0.02749141,0.0,0,0," yuin405@gmail.com",207,14,2,17,Sunday,1,1,2,3,1.0,866,431.25,291,1e109a7c8dc5e91278f863a0c406f64f5b2ff6d9-core-src-main-java-hivemall-utils-io-IOUtils.java
-4,0.03539823,0.0,0,0," yuin405@gmail.com",157,3,2,22,Friday,147,1,4,5,0.4,758,323.25,113,80ac90fb1211831446cc5a370c040c82145a3f61-core-src-main-java-hivemall-common-ConversionState.java
+4,0.03539823,0.0,0,1," yuin405@gmail.com",157,3,2,22,Friday,147,1,4,5,0.4,758,323.25,113,80ac90fb1211831446cc5a370c040c82145a3f61-core-src-main-java-hivemall-common-ConversionState.java
 49,0.056962024,0.098101266,2,0," yuin405@gmail.com",300,19,1,16,Monday,0,1,3,11,0.36363637,242,191.5,316,b558d7231e577bbb6a3c144d40864100f9dd726a-src-main-hivemall-classifier-multiclass-MulticlassSoftConfidenceWeightedUDTF.java
 11,0.04379562,0.03649635,1,0," yuin405@gmail.com",0,3,2,17,Thursday,0,1,1,9,0.44444445,795,360.25,137,3d051341ba5532d2da93bee4d0db7fdc5fed9686-core-src-main-java-hivemall-fm-FFMStringFeatureMapModel.java
 2,0.007575758,0.007575758,0,0," yuin405@gmail.com",62,3,1,07,Wednesday,60,1,16,31,0.16129032,161,110.5,132,3cc375f3e6c391c80f789f5eef6ddd6f84784a52-src-main-hivemall-common-RandomizedAmplifier.java
@@ -1138,7 +1138,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 0,0.0,0.0,0,0," yuin405@gmail.com",8,2,2,17,Thursday,8,2,47,189,0.01058201,649,425.6667,55,4f5f1237e6edc8eb81b25ec64904b6449c379fb1-core-src-main-java-hivemall-tools-array-SubarrayEndWithUDF.java
 8,0.01459854,0.01459854,1,0," yuin405@gmail.com",0,1,1,11,Tuesday,0,1,2,4,0.75,49,49.0,274,96ac2aba2ffdfb347926f7633eeefaa806d40b01-src-main-hivemall-classifier-SoftConfideceWeightedUDTF.java
 9,0.09210526,0.02631579,1,0," yuin405@gmail.com",264,3,1,01,Wednesday,264,1,3,3,0.6666667,159,108.5,76,b9c6631289cf788155a63100f44f217177601e57-src-main-hivemall-utils-HiveUtils.java
-19,0.1,0.035714287,4,0," yuin405@gmail.com",170,6,2,20,Friday,2,1,2,2,1.0,785,350.25,140,5edd7a31742d258c4365d32b2eb831efc6684789-core-src-main-java-hivemall-common-EtaEstimator.java
+19,0.1,0.035714287,4,1," yuin405@gmail.com",170,6,2,20,Friday,2,1,2,2,1.0,785,350.25,140,5edd7a31742d258c4365d32b2eb831efc6684789-core-src-main-java-hivemall-common-EtaEstimator.java
 20,0.47619048,0.0,0,0," yuin405@gmail.com",15,2,1,20,Friday,15,1,1,1,1.0,232,181.5,42,f1552d0d88444b859176c758677d9e4e382f9bfa-src-main-hivemall-utils-lang-NumberUtils.java
 24,0.065476194,0.077380955,0,0," yuin405@gmail.com",136,3,2,18,Monday,129,1,40,168,0.08928572,459,235.66667,168,9854eba552eb00b443ac49c2c19e06092845c6b1-src-main-java-hivemall-utils-lang-HalfFloat.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,103,467595c1b03bf370cd1b9a072b1aa78b2576520d-mixserv-src-main-java-hivemall-mix-store-SessionStore.java
@@ -1266,7 +1266,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 5,0.056603774,0.03773585,1,0," yuin405@gmail.com",10,2,1,23,Friday,10,1,4,6,0.5,490,266.6667,53,a7a456a29ec7c9eddf7cd07d08dd577c5f960273-src-main-java-hivemall-knn-similarity-JaccardIndexUDF.java
 30,0.058189657,0.0064655175,1,0," yuin405@gmail.com",0,2,1,23,Friday,0,1,4,12,0.8333333,890,455.25,464,077651440da4a6fd4f485236254256d274c9a716-core-src-main-java-hivemall-utils-collections-Int2LongOpenHashTable.java
 7,0.07692308,0.057692308,1,1," yuin405@gmail.com",163,3,1,14,Friday,7,1,13,32,0.46875,793,358.25,52,351f49b04582a3be53c3d7a15ebb8b7cd1bd72e7-core-src-main-java-hivemall-tools-text-TokenizeUDF.java
-23,0.022485208,0.004733728,3,2," yuin405@gmail.com",357,29,4,18,Wednesday,11,1,2,4,0.25,942,507.25,845,f22de1bb6fe7bff193e253f6d47976d39b98ce22-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+23,0.022485208,0.004733728,3,4," yuin405@gmail.com",357,29,4,18,Wednesday,11,1,2,4,0.25,942,507.25,845,f22de1bb6fe7bff193e253f6d47976d39b98ce22-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 15,0.08695652,0.04347826,0,0," yuin405@gmail.com",0,2,1,16,Monday,0,1,1,1,1.0,291,240.5,115,72ba94b65f22f91cda32291f706d706d931181ad-src-main-hivemall-mix-server-MixServer.java
 4,0.00625,0.00625,0,0," yuin405@gmail.com",0,1,1,19,Tuesday,0,1,1,1,1.0,676,452.6667,320,42310a4229f08ad6b3cc5fd53fd208e4f96ab983-core-src-main-java-hivemall-fm-FMPredictGenericUDAF.java
 27,0.17073171,0.15853658,0,0," yuin405@gmail.com",57,3,2,21,Friday,57,5,73,334,0.119760476,943,508.25,82,d806bf45b37bc9946a536c7d6ed38d34b208d45d-spark-spark-common-src-main-java-hivemall-ftvec-AddBiasUDFWrapper.java
@@ -1285,7 +1285,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 24,0.03514377,0.041533545,0,0," yuin405@gmail.com",136,6,2,18,Monday,38,1,40,168,0.08928572,459,235.66667,313,9854eba552eb00b443ac49c2c19e06092845c6b1-src-main-java-hivemall-regression-OnlineRegressionUDTF.java
 11,0.10344828,0.0862069,1,1," yuin405@gmail.com",224,5,2,22,Tuesday,0,4,56,169,0.01775148,917,482.25,58,cf21c89f504f1e25543cfbf55d4465ecedf25b70-core-src-main-java-hivemall-utils-math-StatsUtils.java
 15,0.15151516,0.0,1,0," yuin405@gmail.com",48,3,2,15,Thursday,40,1,2,8,0.125,393,342.5,99,e4a3581911314abe052b7cebbd2059fc8b94a459-src-main-java-hivemall-io-AbstractPredictionModel.java
-9,0.030508475,0.0,0,0," k.takuti@gmail.com",418,17,3,14,Monday,36,1,3,4,0.5,4,4.0,295,9c0aae3d4ef9b9c3fecac1f238f70624b493669c-core-src-main-java-hivemall-utils-math-MathUtils.java
+9,0.030508475,0.0,0,2," k.takuti@gmail.com",418,17,3,14,Monday,36,1,3,4,0.5,4,4.0,295,9c0aae3d4ef9b9c3fecac1f238f70624b493669c-core-src-main-java-hivemall-utils-math-MathUtils.java
 0,0.0,0.0,0,0," yuin405@gmail.com",7,2,2,17,Friday,7,1,38,141,0.0070921984,390,339.5,83,b60c0365007e9b80bd0fdf852ff0d52e04e6ee72-src-main-java-hivemall-ftvec-hashing-MurmurHash3UDF.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,77,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-mix-NodeInfo.java
 4,0.026666667,0.026666667,1,0," yuin405@gmail.com",0,1,1,20,Wednesday,0,1,2,7,0.14285715,139,88.5,75,3233a24e12b495f47d8844312bab8d2ae93e3e97-src-main-hivemall-knn-distance-HammingDistanceUDF.java
@@ -1440,7 +1440,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 5,0.0390625,0.0,0,0," yuin405@gmail.com",194,7,3,13,Monday,12,1,4,11,0.54545456,803,368.25,128,d68e857b5a2b6fc1ff9015bfef9915fef7abea37-core-src-main-java-hivemall-fm-StringFeature.java
 8,0.0625,0.0625,3,0," yuin405@gmail.com",338,5,1,02,Monday,332,1,1,1,1.0,344,293.5,64,0b33c76cf1f61f2a6aec22eb8ae08f6d7ca7309d-src-main-hivemall-common-EtaEstimator.java
 0,0.0,0.0,0,0," yuin405@gmail.com",7,2,2,17,Friday,7,1,38,141,0.0070921984,390,339.5,62,b60c0365007e9b80bd0fdf852ff0d52e04e6ee72-src-main-java-hivemall-utils-lang-NumberUtils.java
-104,0.19029851,0.0037313432,4,0," yuin405@gmail.com",157,10,2,22,Friday,91,1,4,5,0.4,758,323.25,536,80ac90fb1211831446cc5a370c040c82145a3f61-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+104,0.19029851,0.0037313432,4,1," yuin405@gmail.com",157,10,2,22,Friday,91,1,4,5,0.4,758,323.25,536,80ac90fb1211831446cc5a370c040c82145a3f61-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 19,0.025547445,0.009124087,5,0," yuin405@gmail.com",4,4,1,14,Thursday,0,1,2,3,1.0,592,368.6667,548,04a2d25c0871f7fa01a318cf5bc76afa26577afc-src-main-java-hivemall-fm-FactorizationMachineUDTF.java
 12,0.015831135,0.015831135,0,0," linguin.m.s@gmail.com",177,7,3,11,Monday,115,1,12,45,0.08888889,7,4.0,379,35130276d331c83def71aaf4e7f4fecf333e7d0d-core-src-main-java-hivemall-regression-RegressionBaseUDTF.java
 0,0.0,0.0,0,0," yuin405@gmail.com",7,2,2,17,Friday,7,1,38,141,0.0070921984,390,339.5,85,b60c0365007e9b80bd0fdf852ff0d52e04e6ee72-src-main-java-hivemall-ftvec-amplify-AmplifierUDTF.java
@@ -1674,7 +1674,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,95,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-utils-datetime-StopWatch.java
 10,0.17073171,0.07317073,0,1," yuin405@gmail.com",256,5,1,19,Thursday,245,1,11,29,0.1724138,151,100.5,41,fc98242656d53f064491885820462d266d3e9e0a-src-main-hivemall-ftvec-scaling-RescaleFeatureValueUDF.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,45,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-classifier-PerceptronUDTF.java
-50,0.42990655,0.037383176,3,0," yuin405@gmail.com",177,7,2,14,Friday,6,1,13,32,0.46875,793,358.25,107,351f49b04582a3be53c3d7a15ebb8b7cd1bd72e7-core-src-main-java-hivemall-common-EtaEstimator.java
+50,0.42990655,0.037383176,3,1," yuin405@gmail.com",177,7,2,14,Friday,6,1,13,32,0.46875,793,358.25,107,351f49b04582a3be53c3d7a15ebb8b7cd1bd72e7-core-src-main-java-hivemall-common-EtaEstimator.java
 24,0.10778443,0.035928145,3,0," yuin405@gmail.com",0,3,1,21,Friday,0,1,3,4,1.0,21,21.0,167,f6d5e60e9739ad30ddfe87e3cef56d4ff9884d82-src-main-hivemall-ftvec-hashing-MurmurHash3UDF.java
 8,0.014440433,0.014440433,1,0," yuin405@gmail.com",329,18,1,16,Tuesday,6,1,4,17,0.29411766,311,260.5,277,2d656b86757c1e20124102c609231350663c5e12-src-main-hivemall-classifier-SoftConfideceWeightedUDTF.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,40,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-tools-mapred-JobIdUDF.java
@@ -1693,7 +1693,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 6,0.09090909,0.0,1,0," yuin405@gmail.com",0,1,1,15,Thursday,0,1,1,1,1.0,488,264.6667,66,a309217e3e1eb4fb11f93d6568efbe198896a624-src-main-java-hivemall-knn-distance-EuclidDistanceUDF.java
 2,0.00862069,0.00862069,0,0," yuin405@gmail.com",325,12,2,14,Wednesday,17,1,7,28,0.25,274,223.5,116,1b226661a10a4f561b6fb3d492f8a92701fc5385-src-main-hivemall-classifier-PassiveAggressiveUDTF.java
 0,0.0,0.0,0,0," yuin405@gmail.com",7,2,2,17,Friday,7,1,38,141,0.0070921984,390,339.5,64,b60c0365007e9b80bd0fdf852ff0d52e04e6ee72-src-main-java-hivemall-ftvec-AddBiasUDF.java
-2,0.0033898305,0.0033898305,0,0," yuin405@gmail.com",315,14,2,22,Tuesday,92,1,2,3,1.0,936,501.25,295,a4729ea73f4ecdbcd618b8ba3cbc1a50c7949d11-core-src-main-java-hivemall-utils-math-MathUtils.java
+2,0.0033898305,0.0033898305,0,2," yuin405@gmail.com",315,14,2,22,Tuesday,92,1,2,3,1.0,936,501.25,295,a4729ea73f4ecdbcd618b8ba3cbc1a50c7949d11-core-src-main-java-hivemall-utils-math-MathUtils.java
 28,0.27450982,0.27450982,0,1," yuin405@gmail.com",381,9,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,51,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-classifier-PerceptronUDTF.java
 4,0.04,0.04,1,0," yuin405@gmail.com",15,2,1,23,Thursday,15,1,6,13,0.23076923,142,91.5,50,78715624e71e9fedf4cf4f68ce7d22d1b5b12a31-src-main-hivemall-knn-distance-JaccardIndexUDF.java
 27,0.3043478,0.2826087,0,0," yuin405@gmail.com",14,2,1,15,Saturday,14,5,73,332,0.012048192,947,512.25,46,289095482f5a932472f1e86f30f7658a12b50753-spark-spark-2.0-src-main-java-hivemall-xgboost-regression-XGBoostRegressionUDTFWrapper.java
@@ -1746,7 +1746,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 20,0.10377359,0.08490566,3,1," yuin405@gmail.com",224,9,2,22,Tuesday,0,4,56,169,0.01775148,917,482.25,106,cf21c89f504f1e25543cfbf55d4465ecedf25b70-core-src-main-java-hivemall-knn-distance-MinkowskiDistanceUDF.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,343,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-io-DenseModel.java
 0,0.0,0.0,0,0," yuin405@gmail.com",8,2,2,17,Thursday,8,2,47,189,0.01058201,649,425.6667,146,4f5f1237e6edc8eb81b25ec64904b6449c379fb1-core-src-main-java-hivemall-tools-array-ArrayAvgUDAF.java
-2,0.015625,0.0,0,0," yuin405@gmail.com",170,5,2,16,Friday,0,1,2,2,0.5,783,348.25,128,f5e5e0adaf5653cda302cd29d521ab1335a2cd48-core-src-main-java-hivemall-common-ConversionState.java
+2,0.015625,0.0,0,1," yuin405@gmail.com",170,5,2,16,Friday,0,1,2,2,0.5,783,348.25,128,f5e5e0adaf5653cda302cd29d521ab1335a2cd48-core-src-main-java-hivemall-common-ConversionState.java
 31,0.12222222,0.22222222,1,0," yuin405@gmail.com",250,12,2,20,Wednesday,0,1,1,3,1.0,149,98.5,90,3854598b89f947f1455d27a1d689608b6cef6059-src-main-hivemall-ftvec-hashing-MurmurHash3UDF.java
 24,0.20754717,0.24528302,0,0," yuin405@gmail.com",136,4,2,20,Monday,0,1,40,168,0.017857144,462,238.66667,53,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-tools-array-SubarrayEndWithUDF.java
 24,0.10185185,0.12037037,0,0," yuin405@gmail.com",136,3,2,18,Monday,129,1,40,168,0.08928572,459,235.66667,108,9854eba552eb00b443ac49c2c19e06092845c6b1-src-main-java-hivemall-mix-metrics-ThroughputCounter.java
@@ -1789,7 +1789,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 28,0.18421052,0.18421052,0,1," yuin405@gmail.com",366,5,2,21,Friday,142,5,73,334,0.119760476,943,508.25,76,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-tools-math-SigmoidGenericUDF.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,90,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-ftvec-FeatureUDF.java
 28,0.35897437,0.35897437,0,0," yuin405@gmail.com",381,5,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,39,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-tools-array-ToStringArrayUDF.java
-28,0.01627907,0.01627907,0,2," yuin405@gmail.com",381,31,4,15,Saturday,14,5,73,332,0.012048192,947,512.25,860,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+28,0.01627907,0.01627907,0,4," yuin405@gmail.com",381,31,4,15,Saturday,14,5,73,332,0.012048192,947,512.25,860,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 13,0.07027027,0.0,2,0," yuin405@gmail.com",29,7,2,00,Thursday,0,1,1,1,1.0,681,457.6667,185,a4731d2da9804887d68f1a94175b73c10164e0f3-mixserv-src-main-java-hivemall-mix-server-MixServer.java
 12,0.071428575,0.05102041,3,0," yuin405@gmail.com",0,1,1,15,Wednesday,0,1,3,3,0.6666667,531,307.6667,98,a0b9c21bc866109e1f3a20bfe60e65adb64a1929-src-main-java-hivemall-smile-SmileExtUtils.java
 0,0.0,0.0,0,0," yuin405@gmail.com",7,2,2,17,Friday,7,1,38,141,0.0070921984,390,339.5,84,b60c0365007e9b80bd0fdf852ff0d52e04e6ee72-src-main-java-hivemall-utils-math-Primes.java
@@ -1822,7 +1822,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 4,0.014084507,0.014084507,1,0," yuin405@gmail.com",2,2,1,16,Wednesday,2,1,1,1,1.0,549,325.6667,142,22b4dd1df79f19b7d5768f1a261c7e5b8fb896bf-src-main-java-hivemall-smile-tools-RandomForestEnsembleUDAF.java
 73,0.052571427,0.030857142,9,0," yuin405@gmail.com",72,7,2,20,Friday,0,1,3,6,0.33333334,727,292.25,875,97b2d4606003d7286d9ab6fa30529f826b55cb78-core-src-main-java-hivemall-smile-regression-RegressionTree.java
 18,0.05586592,0.044692736,4,1," yuin405@gmail.com",36,4,2,22,Tuesday,0,4,56,169,0.01775148,917,482.25,179,cf21c89f504f1e25543cfbf55d4465ecedf25b70-core-src-main-java-hivemall-model-SparseModel.java
-4,0.016666668,0.0,0,0," yuin405@gmail.com",211,9,2,22,Wednesday,5,1,2,7,0.5714286,877,442.25,240,6b86403538349ea02fa168f1c8c91b5367093dca-core-src-main-java-hivemall-utils-math-MathUtils.java
+4,0.016666668,0.0,0,2," yuin405@gmail.com",211,9,2,22,Wednesday,5,1,2,7,0.5714286,877,442.25,240,6b86403538349ea02fa168f1c8c91b5367093dca-core-src-main-java-hivemall-utils-math-MathUtils.java
 2,0.020833334,0.020833334,0,0," yuin405@gmail.com",249,12,2,15,Tuesday,0,1,2,3,0.6666667,511,287.6667,48,82626eb86e8f3a7e0e1cbf0d8f297e22f5382af3-src-main-java-hivemall-HivemallConstants.java
 10,0.016129032,0.016129032,0,0," yuin405@gmail.com",333,41,2,14,Wednesday,17,1,7,28,0.25,274,223.5,310,1b226661a10a4f561b6fb3d492f8a92701fc5385-src-main-hivemall-classifier-BinaryOnlineClassifierUDTF.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,90,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-smile-classification-ClassifierTrainer.java
@@ -1832,7 +1832,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 0,0.0,0.0,0,0," ozawa.tsuyoshi@gmail.com",0,1,1,02,Friday,0,1,38,141,0.0070921984,1,1.0,58,07bf17314099877301c6b63dfbac10ec035c6b44-src-main-java-hivemall-mix-store-SessionObject.java
 25,0.06989247,0.06451613,7,1," yuin405@gmail.com",223,6,2,21,Tuesday,28,4,56,169,0.15384616,914,479.25,186,29673be232933474288db125f93a5a609311842c-core-src-main-java-hivemall-mix-client-MixClient.java
 5,0.017006803,0.0,0,0," yuin405@gmail.com",5,6,1,14,Monday,0,1,2,5,0.6,288,237.5,294,aae970646414e601a5437986979e4c97c0d5ed7d-src-main-hivemall-io-SpaceEfficientDenseModel.java
-4,0.005524862,0.0,0,1," yuin405@gmail.com",204,16,2,15,Thursday,27,1,2,2,1.0,835,400.25,724,fa58a3e9c1a8f5d9dd827310cdc3a768df764ed0-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+4,0.005524862,0.0,0,3," yuin405@gmail.com",204,16,2,15,Thursday,27,1,2,2,1.0,835,400.25,724,fa58a3e9c1a8f5d9dd827310cdc3a768df764ed0-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 75,0.29439253,0.056074765,7,0," yuin405@gmail.com",8,14,1,17,Thursday,1,1,7,19,0.36842105,340,289.5,214,2c8dbc829cde0816b83c199daf25e096ddd48b7d-src-main-hivemall-io-DenseModel.java
 34,0.07116105,0.056179777,6,0," yuin405@gmail.com",0,2,1,22,Monday,0,1,1,2,1.0,767,332.25,267,c87acb36fe5bae379b2f09e83681b3351ddea6b9-core-src-main-java-hivemall-ftvec-ranking-BprSamplingUDTF.java
 26,0.21052632,0.01754386,2,0," yuin405@gmail.com",96,4,1,19,Thursday,76,1,3,3,1.0,264,213.5,114,45f8b7a45786c2638185a4baa4646f59e4968a56-src-main-hivemall-ftvec-amplify-RandomAmplifierUDTF.java
@@ -1928,7 +1928,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 6,0.07692308,0.07692308,0,0," yuin405@gmail.com",0,2,1,07,Thursday,0,1,14,49,0.020408163,63,63.0,39,0fc31858c7a6640d71bcc25cdc0dad8ce5ad4159-src-main-hivemall-tools-array-ArrayRemoveUDF.java
 14,0.06140351,0.06140351,3,0," yuin405@gmail.com",0,1,1,21,Friday,0,1,9,14,0.5714286,126,75.5,114,8a10dd512363187b6d0833f632fa09f9e2e18aea-src-main-hivemall-ftvec-amplify-RandomAmplifierUDTF.java
 3,0.025316456,0.012658228,0,1," yuin405@gmail.com",303,16,1,17,Monday,33,1,1,3,0.33333334,246,195.5,79,da764283b9ae38d9b4c515adba5eb682a17537b5-src-main-hivemall-ftvec-hashing-ArrayHashValuesUDF.java
-40,0.123809524,0.06666667,8,0," yuin405@gmail.com",177,6,2,14,Friday,16,1,13,32,0.46875,793,358.25,210,351f49b04582a3be53c3d7a15ebb8b7cd1bd72e7-core-src-main-java-hivemall-utils-math-MathUtils.java
+40,0.123809524,0.06666667,8,2," yuin405@gmail.com",177,6,2,14,Friday,16,1,13,32,0.46875,793,358.25,210,351f49b04582a3be53c3d7a15ebb8b7cd1bd72e7-core-src-main-java-hivemall-utils-math-MathUtils.java
 2,0.020833334,0.020833334,0,0," yuin405@gmail.com",72,8,2,20,Friday,51,1,1,1,1.0,728,293.25,48,9aa20e9ed6f262818e687141648ca425b64bd23f-core-src-main-java-hivemall-HivemallConstants.java
 13,0.097222224,0.083333336,0,1," yuin405@gmail.com",224,4,2,22,Tuesday,0,4,56,169,0.01775148,917,482.25,72,cf21c89f504f1e25543cfbf55d4465ecedf25b70-core-src-main-java-hivemall-ftvec-conv-ToSparseFeaturesUDF.java
 5,0.09090909,0.060606062,0,1," yuin405@gmail.com",262,4,1,00,Monday,17,1,11,29,0.10344828,155,104.5,33,2a85a77c9cc4c3f808499250c91a1548aa635343-src-main-hivemall-tools-array-AllocFloatArrayUDF.java
@@ -2514,14 +2514,14 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 13,0.11111111,0.06944445,0,0," yuin405@gmail.com",1,2,1,18,Friday,1,1,1,1,1.0,489,265.6667,72,ae0149b0dfa1bc340d4594ddd0073eb448fd7b92-src-main-java-hivemall-knn-distance-EuclidDistanceUDF.java
 30,0.09659091,0.07386363,2,0," yuin405@gmail.com",28,10,2,17,Thursday,0,1,8,18,0.3888889,840,405.25,176,40e12f4f11ced732e72c987c934024c346e3d126-core-src-main-java-hivemall-fm-FFMPredictUDF.java
 3,0.008333334,0.016666668,0,0," yuin405@gmail.com",272,7,1,19,Wednesday,204,1,1,5,0.6,588,364.6667,120,b5a1017cf183ea1e660ce5a36a4f57ec36fdfa5e-src-main-java-hivemall-mf-MatrixFactorizationAdaGradUDTF.java
-6,0.008241759,0.0,0,1," yuin405@gmail.com",223,18,2,22,Monday,18,1,1,1,1.0,909,474.25,728,d7d38361530ef628683cc113c13590baa453de40-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+6,0.008241759,0.0,0,3," yuin405@gmail.com",223,18,2,22,Monday,18,1,1,1,1.0,909,474.25,728,d7d38361530ef628683cc113c13590baa453de40-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,80,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-utils-lang-Primitives.java
 13,0.044692736,0.02793296,1,0," yuin405@gmail.com",43,15,2,23,Friday,11,1,4,12,0.8333333,890,455.25,179,077651440da4a6fd4f485236254256d274c9a716-core-src-main-java-hivemall-fm-FFMPredictUDF.java
 28,0.10294118,0.10294118,0,1," yuin405@gmail.com",381,6,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,136,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-ftvec-trans-QuantifiedFeaturesUDTF.java
 6,0.05882353,0.05882353,0,0," yuin405@gmail.com",0,1,1,23,Thursday,0,1,14,49,0.20408164,62,62.0,51,5b421f1bdebce7279985db5263baa95aae6fd54f-src-main-hivemall-tools-array-SubarrayEndWithUDF.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,151,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-utils-collections-DoubleArrayList.java
 4,0.0125,0.0125,0,0," yuin405@gmail.com",77,6,2,02,Friday,0,1,7,17,0.23529412,441,217.66667,160,6d8c98e05b314cd521958c78020da426af666889-src-main-java-hivemall-io-SynchronizedModelWrapper.java
-192,0.3544776,0.0037313432,8,1," yuin405@gmail.com",177,15,2,14,Friday,2,1,13,32,0.46875,793,358.25,536,351f49b04582a3be53c3d7a15ebb8b7cd1bd72e7-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+192,0.3544776,0.0037313432,8,3," yuin405@gmail.com",177,15,2,14,Friday,2,1,13,32,0.46875,793,358.25,536,351f49b04582a3be53c3d7a15ebb8b7cd1bd72e7-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 24,0.17741935,0.20967741,0,0," yuin405@gmail.com",136,4,2,20,Monday,0,1,40,168,0.017857144,462,238.66667,62,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-io-Margin.java
 2,0.008064516,0.008064516,0,0," yuin405@gmail.com",14,4,2,18,Wednesday,5,1,1,1,1.0,666,442.6667,124,7343d56411a8c90c7a6ae2d4cb1aa416753bd9c0-core-src-main-java-hivemall-utils-lang-mutable-MutableDouble.java
 27,0.032258064,0.029953917,0,0," yuin405@gmail.com",151,4,1,21,Friday,149,5,73,334,0.119760476,943,508.25,434,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-utils-buffer-DynamicByteArray.java
@@ -2765,7 +2765,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 22,0.17910448,0.14925373,2,1," yuin405@gmail.com",223,4,2,21,Tuesday,214,4,56,169,0.15384616,914,479.25,67,29673be232933474288db125f93a5a609311842c-core-src-main-java-hivemall-tools-ConvertLabelUDF.java
 8,0.036697246,0.036697246,2,0," yuin405@gmail.com",0,2,1,05,Tuesday,0,1,5,10,1.0,61,61.0,109,30af2c1a56bf1c2b7cc7dbb11883269dd4b4051a-src-main-hivemall-regression-LogressUDTF.java
 4,0.003215434,0.003215434,1,1," yuin405@gmail.com",274,24,1,14,Wednesday,0,1,2,4,0.5,583,359.6667,622,aff4b19bf98b11cfd628e6989e3c742b4501dc6a-src-main-java-hivemall-mf-OnlineMatrixFactorizationUDTF.java
-48,0.045637585,0.018791946,6,1," yuin405@gmail.com",235,23,2,02,Sunday,0,1,2,2,1.0,924,489.25,745,99c99cc51ba71731e070ec17fec44cdf34a149d7-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+48,0.045637585,0.018791946,6,3," yuin405@gmail.com",235,23,2,02,Sunday,0,1,2,2,1.0,924,489.25,745,99c99cc51ba71731e070ec17fec44cdf34a149d7-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 0,0.0,0.0,0,0," yuin405@gmail.com",7,2,2,17,Friday,7,1,38,141,0.0070921984,390,339.5,160,b60c0365007e9b80bd0fdf852ff0d52e04e6ee72-src-main-java-hivemall-mix-client-MixClient.java
 4,0.0058651026,0.0058651026,1,0," yuin405@gmail.com",48,4,2,23,Thursday,0,1,4,12,0.16666667,395,344.5,341,5be6eaa768a19694634da75f74ea5c154626e8e8-src-main-java-hivemall-io-DenseModel.java
 2,0.004132231,0.004132231,0,0," yuin405@gmail.com",5,11,1,03,Tuesday,3,1,2,5,0.4,192,141.5,242,27106148343e5fb39231fbb95795cadf83592f44-src-main-hivemall-tools-mapred-DistributedCacheLookupUDF.java
@@ -2822,7 +2822,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 3,0.04,0.02,1,0," yuin405@gmail.com",13,3,1,20,Tuesday,13,1,2,3,0.6666667,195,144.5,50,5f2a23dd417da5b927faaf95dbea8eac27ef8d84-src-main-hivemall-tools-mapred-RowIdUDF.java
 24,0.09016393,0.10655738,0,0," yuin405@gmail.com",67,6,1,20,Monday,0,1,40,168,0.017857144,462,238.66667,122,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-mf-MatrixFactorizationAdaGradUDTF.java
 28,0.023608768,0.023608768,0,1," yuin405@gmail.com",381,15,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,593,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-mf-OnlineMatrixFactorizationUDTF.java
-21,0.029871978,0.0,0,1," yuin405@gmail.com",174,14,2,18,Tuesday,11,1,2,2,1.0,788,353.25,703,cf26ca10d5ae6de1b3fdeca8ac145bc557665128-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+21,0.029871978,0.0,0,3," yuin405@gmail.com",174,14,2,18,Tuesday,11,1,2,2,1.0,788,353.25,703,cf26ca10d5ae6de1b3fdeca8ac145bc557665128-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 17,0.10843374,0.09638554,3,1," yuin405@gmail.com",224,5,2,22,Tuesday,0,4,56,169,0.01775148,917,482.25,83,cf21c89f504f1e25543cfbf55d4465ecedf25b70-core-src-main-java-hivemall-ftvec-scaling-RescaleUDF.java
 8,0.0051493305,0.0030895984,2,0," yuin405@gmail.com",132,16,2,19,Tuesday,4,1,3,3,0.33333334,747,312.25,971,be099451552ab5771700829774dd05a3bdaa1e53-core-src-main-java-hivemall-smile-classification-DecisionTree.java
 24,0.11340206,0.13402061,0,0," yuin405@gmail.com",136,4,2,20,Monday,0,1,40,168,0.017857144,462,238.66667,97,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-utils-datetime-StopWatch.java
@@ -3090,9 +3090,9 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 25,0.12643678,0.16091955,3,1," yuin405@gmail.com",0,2,1,22,Tuesday,0,4,56,169,0.01775148,917,482.25,87,cf21c89f504f1e25543cfbf55d4465ecedf25b70-spark-src-main-java-hivemall-ftvec-AddFeatureIndexUDFWrapper.java
 0,0.0,0.0,0,0," yuin405@gmail.com",7,2,2,17,Friday,7,1,38,141,0.0070921984,390,339.5,146,b60c0365007e9b80bd0fdf852ff0d52e04e6ee72-src-main-java-hivemall-regression-AdaDeltaUDTF.java
 8,0.014440433,0.014440433,0,0," yuin405@gmail.com",323,17,1,16,Wednesday,0,1,8,30,0.06666667,277,226.5,277,0e689cf63d5c8fd08138c364dbaa1916651d2277-src-main-hivemall-classifier-SoftConfideceWeightedUDTF.java
-6,0.008241759,0.0,0,1," yuin405@gmail.com",223,20,2,01,Tuesday,0,1,1,1,1.0,911,476.25,728,21e9ab01ec8c425fbf5a4a72a1c5caaf891a5301-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+6,0.008241759,0.0,0,3," yuin405@gmail.com",223,20,2,01,Tuesday,0,1,1,1,1.0,911,476.25,728,21e9ab01ec8c425fbf5a4a72a1c5caaf891a5301-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 12,0.15789473,0.05263158,1,0," yuin405@gmail.com",0,1,1,05,Thursday,0,1,2,5,0.6,333,282.5,57,3993cea3c3edfe5016cee14714161ab390f5351a-src-main-hivemall-mix-store-PartialArgminKLD.java
-33,0.12751678,0.093959734,3,0," yuin405@gmail.com",163,8,2,20,Friday,13,1,2,5,0.6,797,362.25,149,999d9f86e6ef024c306235f022e1a3ca769695e3-core-src-main-java-hivemall-common-EtaEstimator.java
+33,0.12751678,0.093959734,3,1," yuin405@gmail.com",163,8,2,20,Friday,13,1,2,5,0.6,797,362.25,149,999d9f86e6ef024c306235f022e1a3ca769695e3-core-src-main-java-hivemall-common-EtaEstimator.java
 5,0.030303031,0.0,0,0," yuin405@gmail.com",267,11,1,20,Wednesday,125,1,4,12,0.41666666,168,117.5,165,810b8b878610e42418ac25606cf1c226717c7e60-src-main-hivemall-classifier-ConfidenceWeightedUDTF.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,40,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-smile-data-NominalAttribute2.java
 0,0.0,0.0,0,0," yuin405@gmail.com",8,2,2,17,Thursday,8,2,47,189,0.01058201,649,425.6667,95,4f5f1237e6edc8eb81b25ec64904b6449c379fb1-core-src-main-java-hivemall-mix-MixedWeight.java
@@ -3129,7 +3129,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 28,0.112,0.112,0,1," yuin405@gmail.com",366,13,3,21,Friday,121,5,73,334,0.119760476,943,508.25,125,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-fm-FMArrayModel.java
 8,0.09803922,0.05882353,0,1," yuin405@gmail.com",262,4,1,00,Monday,17,1,11,29,0.10344828,155,104.5,51,2a85a77c9cc4c3f808499250c91a1548aa635343-src-main-hivemall-tools-array-SubarrayEndWithUDF.java
 0,0.0,0.0,0,0," ozawa.tsuyoshi@gmail.com",0,1,1,02,Friday,0,1,38,141,0.0070921984,1,1.0,116,07bf17314099877301c6b63dfbac10ec035c6b44-src-main-java-hivemall-classifier-PassiveAggressiveUDTF.java
-57,0.23333333,0.004166667,3,0," yuin405@gmail.com",222,13,2,16,Monday,1,1,8,22,0.72727275,905,470.25,240,eb54f77e14573c55d99a60bc82b4c05248e5854b-core-src-main-java-hivemall-utils-math-MathUtils.java
+57,0.23333333,0.004166667,3,2," yuin405@gmail.com",222,13,2,16,Monday,1,1,8,22,0.72727275,905,470.25,240,eb54f77e14573c55d99a60bc82b4c05248e5854b-core-src-main-java-hivemall-utils-math-MathUtils.java
 28,0.01994302,0.01994302,0,0," yuin405@gmail.com",381,25,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,702,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-smile-classification-GradientTreeBoostingClassifierUDTF.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,57,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-utils-io-NioFixedSegment.java
 28,0.21875,0.21875,0,1," yuin405@gmail.com",366,6,2,21,Friday,142,5,73,334,0.119760476,943,508.25,64,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-mf-MatrixFactorizationSGDUDTF.java
@@ -3158,7 +3158,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 0,0.0,0.0,0,0," yuin405@gmail.com",8,2,2,17,Thursday,8,2,47,189,0.01058201,649,425.6667,76,4f5f1237e6edc8eb81b25ec64904b6449c379fb1-core-src-main-java-hivemall-knn-distance-AngularDistanceUDF.java
 2,0.012048192,0.012048192,0,1," yuin405@gmail.com",270,16,2,07,Wednesday,0,1,16,29,0.03448276,163,112.5,83,9ccb84b7ad13526b7155c592a97e500c773ac73f-src-main-hivemall-ftvec-hashing-MurmurHash3UDF.java
 5,0.028169014,0.04225352,1,0," yuin405@gmail.com",0,2,1,23,Monday,0,1,3,6,0.8333333,302,251.5,71,9f6ea59403c81b744e17f34650578fd2fdb85ae6-src-main-hivemall-mix-server-PartialResult.java
-48,0.045637585,0.018791946,6,1," yuin405@gmail.com",235,22,2,02,Sunday,5,1,1,1,1.0,922,487.25,745,30a3bab805426628eaff025b89c6952ff80a4449-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+48,0.045637585,0.018791946,6,3," yuin405@gmail.com",235,22,2,02,Sunday,5,1,1,1,1.0,922,487.25,745,30a3bab805426628eaff025b89c6952ff80a4449-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 49,0.12135922,0.116504855,9,0," yuin405@gmail.com",0,1,1,18,Wednesday,0,1,1,1,1.0,196,145.5,206,817080efd853025aedc8ab3212fa7c4be99f9bb2-src-main-hivemall-dataset-RegressionDataGeneratorUDTF.java
 12,0.05185185,0.037037037,3,0," daijy@hortonworks.com",116,6,3,10,Tuesday,18,1,4,5,0.6,1,1.0,135,431f7dddb4637e9165e677410bc642785b8817cc-src-main-java-hivemall-ftvec-amplify-RandomAmplifierUDTF.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,186,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-utils-hadoop-HadoopUtils.java
@@ -3220,11 +3220,11 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 7,0.057692308,0.07692308,1,0," yuin405@gmail.com",140,5,2,16,Friday,3,1,3,18,0.11111111,470,246.66667,52,eea8364d575ea191934ca3386d78dc14e9744566-src-main-java-hivemall-classifier-multiclass-MulticlassPerceptronUDTF.java
 2,0.0033003301,0.0033003301,0,0," yuin405@gmail.com",361,12,2,18,Tuesday,176,1,3,8,0.375,633,409.6667,303,d5a4b66576e474d2aa749066780232fc8445440e-src-main-java-hivemall-regression-OnlineRegressionUDTF.java
 28,0.021671826,0.021671826,0,0," yuin405@gmail.com",212,7,1,15,Saturday,14,5,73,332,0.012048192,947,512.25,646,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-mf-BPRMatrixFactorizationUDTF.java
-35,0.1,0.06666667,7,0," yuin405@gmail.com",157,4,2,22,Friday,147,1,4,5,0.4,758,323.25,210,80ac90fb1211831446cc5a370c040c82145a3f61-core-src-main-java-hivemall-utils-math-MathUtils.java
+35,0.1,0.06666667,7,1," yuin405@gmail.com",157,4,2,22,Friday,147,1,4,5,0.4,758,323.25,210,80ac90fb1211831446cc5a370c040c82145a3f61-core-src-main-java-hivemall-utils-math-MathUtils.java
 4,0.03960396,0.0,0,1," yuin405@gmail.com",223,6,2,21,Tuesday,28,4,56,169,0.15384616,914,479.25,101,29673be232933474288db125f93a5a609311842c-core-src-main-java-hivemall-ensemble-bagging-WeightVotedAvgUDAF.java
 24,0.018272426,0.021594685,0,0," yuin405@gmail.com",70,16,1,20,Monday,0,1,40,168,0.017857144,462,238.66667,602,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-mf-OnlineMatrixFactorizationUDTF.java
 18,0.18,0.0,0,0," yuin405@gmail.com",0,2,1,20,Monday,0,1,40,168,0.017857144,462,238.66667,100,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-utils-lang-mutable-MutableLong.java
-38,0.15510204,0.0,0,0," yuin405@gmail.com",220,11,2,11,Saturday,9,1,2,4,0.75,895,460.25,245,f3ec17f0a2688ef8bbf641d4044d0b18b6dfe782-core-src-main-java-hivemall-utils-math-MathUtils.java
+38,0.15510204,0.0,0,2," yuin405@gmail.com",220,11,2,11,Saturday,9,1,2,4,0.75,895,460.25,245,f3ec17f0a2688ef8bbf641d4044d0b18b6dfe782-core-src-main-java-hivemall-utils-math-MathUtils.java
 24,0.05851064,0.069148935,0,0," yuin405@gmail.com",136,4,2,20,Monday,0,1,40,168,0.017857144,462,238.66667,188,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-utils-hadoop-HadoopUtils.java
 20,0.05050505,0.016835017,2,1," yuin405@gmail.com",48,35,2,03,Thursday,0,1,3,5,0.8,881,446.25,297,5977595f3426d9e0f64c35a280fcbea8e04e5b7e-core-src-main-java-hivemall-fm-FieldAwareFactorizationMachineUDTF.java
 50,0.08256881,0.3761468,2,0," yuin405@gmail.com",336,8,1,22,Monday,0,1,1,1,1.0,348,297.5,109,d9a9d46e0f940ea834fde792df507bcd48208db3-src-main-hivemall-regression-LogressUDTF.java
@@ -3403,7 +3403,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 20,0.10714286,0.035714287,4,0," yuin405@gmail.com",49,6,2,00,Saturday,0,1,3,5,0.6,399,348.5,140,af7ff80aa7360159c9f5dbc0c3de95dffbd7f887-src-main-java-hivemall-mix-server-MixServerHandler.java
 28,0.12727273,0.12727273,0,0," yuin405@gmail.com",366,7,2,21,Friday,164,5,73,334,0.119760476,943,508.25,110,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-utils-lang-NumberUtils.java
 0,0.0,0.0,0,0," yuin405@gmail.com",7,2,2,17,Friday,7,1,38,141,0.0070921984,390,339.5,109,b60c0365007e9b80bd0fdf852ff0d52e04e6ee72-src-main-java-hivemall-utils-hadoop-WritableUtils.java
-13,0.048275862,0.04137931,2,0," yuin405@gmail.com",222,9,2,16,Monday,1,1,8,22,0.72727275,905,470.25,145,eb54f77e14573c55d99a60bc82b4c05248e5854b-core-src-main-java-hivemall-common-ConversionState.java
+13,0.048275862,0.04137931,2,1," yuin405@gmail.com",222,9,2,16,Monday,1,1,8,22,0.72727275,905,470.25,145,eb54f77e14573c55d99a60bc82b4c05248e5854b-core-src-main-java-hivemall-common-ConversionState.java
 0,0.0,0.0,0,0," yuin405@gmail.com",8,2,2,17,Thursday,8,2,47,189,0.01058201,649,425.6667,77,4f5f1237e6edc8eb81b25ec64904b6449c379fb1-core-src-main-java-hivemall-mix-NodeInfo.java
 28,0.09929078,0.09929078,0,0," yuin405@gmail.com",381,8,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,141,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-utils-hashing-MurmurHash3.java
 0,0.0,0.0,0,0," ozawa.tsuyoshi@gmail.com",0,1,1,02,Friday,0,1,38,141,0.0070921984,1,1.0,46,07bf17314099877301c6b63dfbac10ec035c6b44-src-main-java-hivemall-tools-map-MapGetSumUDF.java
@@ -3642,7 +3642,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 11,0.0952381,0.07936508,0,0," yuin405@gmail.com",165,5,2,14,Tuesday,28,1,1,1,1.0,471,247.66667,63,597a8a197f309c1bab99d3312e6ae658357ee689-src-main-java-hivemall-ftvec-ExtractWeightUDF.java
 27,0.09929078,0.09219858,0,0," yuin405@gmail.com",161,5,1,21,Friday,158,5,73,334,0.119760476,943,508.25,141,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-utils-codec-ZigZagLEB128Codec.java
 0,0.0,0.0,0,0," yuin405@gmail.com",8,2,2,17,Thursday,8,2,47,189,0.01058201,649,425.6667,193,4f5f1237e6edc8eb81b25ec64904b6449c379fb1-core-src-main-java-hivemall-knn-lsh-MinHashUDTF.java
-28,0.05185185,0.05185185,0,0," yuin405@gmail.com",381,7,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,270,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-mf-FactorizedModel.java
+28,0.05185185,0.05185185,0,1," yuin405@gmail.com",381,7,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,270,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-mf-FactorizedModel.java
 13,0.05691057,0.048780486,3,1," yuin405@gmail.com",224,7,2,22,Tuesday,0,4,56,169,0.01775148,917,482.25,123,cf21c89f504f1e25543cfbf55d4465ecedf25b70-core-src-main-java-hivemall-tools-array-CollectAllUDAF.java
 18,0.1491228,0.00877193,2,1," yuin405@gmail.com",16,3,1,20,Friday,7,1,4,5,0.6,541,317.6667,114,0e18fafcc30a337fa17df401b7edc3fd0ab4f0ec-src-main-java-hivemall-smile-utils-SmileExtUtils.java
 0,0.0,0.0,0,0," ozawa.tsuyoshi@gmail.com",0,1,1,02,Friday,0,1,38,141,0.0070921984,1,1.0,83,07bf17314099877301c6b63dfbac10ec035c6b44-src-main-java-hivemall-ftvec-hashing-MurmurHash3UDF.java
@@ -3667,7 +3667,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 4,0.07692308,0.025641026,0,0," yuin405@gmail.com",76,6,1,12,Tuesday,0,1,4,12,0.41666666,365,314.5,39,7190cd20647690aae9a02af1ce29d0fb22fb35d5-src-main-hivemall-tools-math-SigmodUDF.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,72,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-ftvec-conv-ToSparseFeaturesUDF.java
 72,0.73626375,0.054945055,3,0," yuin405@gmail.com",0,1,1,13,Monday,0,1,4,11,0.54545456,803,368.25,91,d68e857b5a2b6fc1ff9015bfef9915fef7abea37-core-src-main-java-hivemall-utils-lang-ObjectUtils.java
-25,0.15384616,0.05982906,4,0," yuin405@gmail.com",169,4,2,18,Thursday,12,1,2,2,1.0,781,346.25,117,69cf9ad3f86d1f1e53e35cfe415f3aa7244c5a01-core-src-main-java-hivemall-common-ConversionState.java
+25,0.15384616,0.05982906,4,1," yuin405@gmail.com",169,4,2,18,Thursday,12,1,2,2,1.0,781,346.25,117,69cf9ad3f86d1f1e53e35cfe415f3aa7244c5a01-core-src-main-java-hivemall-common-ConversionState.java
 0,0.0,0.0,0,0," yuin405@gmail.com",8,2,2,17,Thursday,8,2,47,189,0.01058201,649,425.6667,30,4f5f1237e6edc8eb81b25ec64904b6449c379fb1-core-src-main-java-hivemall-utils-hashing-HashFunction.java
 3,0.015075377,0.0,0,0," yuin405@gmail.com",14,12,1,16,Tuesday,13,1,3,10,0.8,85,85.0,199,78c1a9653783efcda7e3ffecef132af67b14520c-src-main-hivemall-classifier-multiclass-MulticlassConfidenceWeightedUDTF.java
 6,0.05263158,0.02631579,0,1," yuin405@gmail.com",224,8,2,22,Tuesday,0,4,56,169,0.01775148,917,482.25,76,cf21c89f504f1e25543cfbf55d4465ecedf25b70-mixserv-src-main-java-hivemall-mix-store-PartialResult.java
@@ -3711,7 +3711,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 4,0.013986014,0.013986014,1,0," yuin405@gmail.com",185,6,2,01,Tuesday,0,1,6,21,0.0952381,478,254.66667,143,9dc19648146c11b90c0d82ec07f810b2a5ad6d97-src-main-java-hivemall-tools-map-UDAFToMap.java
 4,0.025316456,0.025316456,1,0," yuin405@gmail.com",61,3,1,11,Monday,0,1,10,15,0.06666667,630,406.6667,79,0e3be4aa182d07b2104c79572be1d1c950252b72-src-main-java-hivemall-ftvec-conv-ConvertToDenseModelUDAF.java
 24,0.11340206,0.13402061,0,0," yuin405@gmail.com",0,1,1,18,Monday,0,1,40,168,0.08928572,459,235.66667,97,9854eba552eb00b443ac49c2c19e06092845c6b1-src-main-java-hivemall-mix-MixedWeight.java
-8,0.009661836,0.0,1,1," yuin405@gmail.com",315,26,3,22,Tuesday,0,1,2,3,1.0,937,502.25,828,450ef8deda9a8343f13c4e71d5edd82da96b10a9-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+8,0.009661836,0.0,1,3," yuin405@gmail.com",315,26,3,22,Tuesday,0,1,2,3,1.0,937,502.25,828,450ef8deda9a8343f13c4e71d5edd82da96b10a9-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 10,0.01607717,0.01607717,1,0," yuin405@gmail.com",142,14,1,17,Thursday,0,1,4,7,0.14285715,111,60.5,311,9d1a14ab8585b846c9bfaef623c48dab721d822f-src-main-hivemall-classifier-multiclass-MulticlassSoftConfidenceWeightedUDTF.java
 30,0.34375,0.125,1,0," yuin405@gmail.com",222,5,2,16,Monday,1,1,8,22,0.72727275,905,470.25,64,eb54f77e14573c55d99a60bc82b4c05248e5854b-core-src-main-java-hivemall-ftvec-ExtractWeightUDF.java
 10,0.1754386,0.0,1,0," yuin405@gmail.com",265,5,1,12,Thursday,125,1,1,1,1.0,173,122.5,57,f7e6f52f0108297bd4baffe65506556e381b0c7a-src-main-hivemall-common-WeightValue.java
@@ -3760,7 +3760,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 12,0.09259259,0.018518519,2,0," yuin405@gmail.com",0,5,2,15,Saturday,0,1,2,3,0.6666667,29,29.0,108,a0975bc13d20ae7c03180c5f32a182ddc2b27283-src-main-hivemall-classifier-PassiveAggressiveUDTF.java
 8,0.08510638,0.0,0,0," yuin405@gmail.com",222,11,2,16,Monday,2,1,8,22,0.72727275,905,470.25,94,eb54f77e14573c55d99a60bc82b4c05248e5854b-core-src-main-java-hivemall-utils-lang-Primitives.java
 28,0.2,0.2,0,1," yuin405@gmail.com",372,6,1,15,Saturday,14,5,73,332,0.012048192,947,512.25,70,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-smile-tools-GuessAttributesUDF.java
-32,0.047169812,0.003144654,3,0," yuin405@gmail.com",160,11,2,19,Tuesday,3,1,2,2,0.5,759,324.25,636,039e9c000d8e29764d53029205794cecce815d83-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+32,0.047169812,0.003144654,3,2," yuin405@gmail.com",160,11,2,19,Tuesday,3,1,2,2,0.5,759,324.25,636,039e9c000d8e29764d53029205794cecce815d83-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 2,0.018518519,0.018518519,0,0," yuin405@gmail.com",320,4,1,16,Wednesday,0,1,8,30,0.06666667,277,226.5,54,0e689cf63d5c8fd08138c364dbaa1916651d2277-src-main-hivemall-classifier-multiclass-MulticlassPerceptronUDTF.java
 14,0.07692308,0.00591716,4,0," yuin405@gmail.com",59,13,1,21,Thursday,41,1,1,1,1.0,385,334.5,169,0454e33949395734c28230f834bba7926154bf19-src-main-hivemall-mix-server-MixServer.java
 4,0.016949153,0.016949153,1,0," yuin405@gmail.com",0,1,1,14,Monday,0,1,1,1,1.0,285,234.5,118,3b1420435194e8314afb9d67efce31a8dc43b9a2-src-main-hivemall-mix-server-MixServerHandler.java
@@ -3830,7 +3830,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 2,0.025316456,0.0,0,1," yuin405@gmail.com",69,8,1,18,Wednesday,8,1,4,9,0.33333334,200,149.5,79,0556e39213ae87647176b6890ee65111d910da3c-src-main-hivemall-knn-distance-HammingDistanceUDF.java
 24,0.21568628,0.25490198,0,0," yuin405@gmail.com",136,3,2,18,Monday,129,1,40,168,0.08928572,459,235.66667,51,9854eba552eb00b443ac49c2c19e06092845c6b1-src-main-java-hivemall-tools-mapred-RowIdUDF.java
 2,0.014925373,0.014925373,0,0," yuin405@gmail.com",56,3,2,21,Friday,49,1,2,5,0.2,405,354.5,67,9b26f9a3a61b6ac761788ac0609f310dd77444c9-src-main-java-hivemall-ensemble-ArgminKLDistanceUDAF.java
-33,0.27102804,0.037383176,2,0," yuin405@gmail.com",157,4,2,22,Friday,147,1,4,5,0.4,758,323.25,107,80ac90fb1211831446cc5a370c040c82145a3f61-core-src-main-java-hivemall-common-EtaEstimator.java
+33,0.27102804,0.037383176,2,1," yuin405@gmail.com",157,4,2,22,Friday,147,1,4,5,0.4,758,323.25,107,80ac90fb1211831446cc5a370c040c82145a3f61-core-src-main-java-hivemall-common-EtaEstimator.java
 24,0.03548387,0.041935485,0,0," yuin405@gmail.com",136,11,3,20,Monday,0,1,40,168,0.017857144,462,238.66667,310,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 28,0.072916664,0.072916664,0,1," yuin405@gmail.com",366,7,2,21,Friday,51,5,73,334,0.119760476,943,508.25,192,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-utils-math-StatsUtils.java
 0,0.0,0.0,0,0," ozawa.tsuyoshi@gmail.com",0,1,1,02,Friday,0,1,38,141,0.0070921984,1,1.0,42,07bf17314099877301c6b63dfbac10ec035c6b44-src-main-java-hivemall-utils-lang-CommandLineUtils.java
@@ -3866,7 +3866,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 10,0.01607717,0.01607717,0,0," yuin405@gmail.com",333,45,1,14,Wednesday,17,1,7,28,0.25,274,223.5,311,1b226661a10a4f561b6fb3d492f8a92701fc5385-src-main-hivemall-regression-OnlineRegressionUDTF.java
 57,0.16197184,0.23943663,3,1," yuin405@gmail.com",261,7,3,19,Friday,1,1,2,2,0.5,933,498.25,142,ef627d2cae536a0076ab8a66ed9857f327d320bd-core-src-main-java-hivemall-ftvec-amplify-RandomAmplifierUDTF.java
 28,0.11965812,0.11965812,0,0," yuin405@gmail.com",381,7,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,117,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-utils-io-NIOUtils.java
-22,0.023255814,0.0023255814,3,2," amaya382@users.noreply.github.com",412,32,4,16,Tuesday,31,1,3,4,0.25,2,2.0,860,fad2941fdb0309dd6fbf22f2f936cbf0003b1c4a-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+22,0.023255814,0.0023255814,3,4," amaya382@users.noreply.github.com",412,32,4,16,Tuesday,31,1,3,4,0.25,2,2.0,860,fad2941fdb0309dd6fbf22f2f936cbf0003b1c4a-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 6,0.02586207,0.02586207,1,0," yuin405@gmail.com",2,8,2,05,Tuesday,0,1,5,10,1.0,61,61.0,116,30af2c1a56bf1c2b7cc7dbb11883269dd4b4051a-src-main-hivemall-classifier-PassiveAggressiveUDTF.java
 25,0.03524229,0.07488987,4,0," yuin405@gmail.com",140,5,2,16,Friday,3,1,3,18,0.11111111,470,246.66667,227,eea8364d575ea191934ca3386d78dc14e9744566-src-main-java-hivemall-classifier-multiclass-MulticlassAROWClassifierUDTF.java
 22,0.110091746,0.09174312,3,1," yuin405@gmail.com",35,3,1,19,Thursday,20,1,11,29,0.1724138,151,100.5,109,fc98242656d53f064491885820462d266d3e9e0a-src-main-hivemall-knn-distance-CosineSimilarityUDF.java
@@ -3917,7 +3917,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 32,0.11678832,0.11678832,4,0," yuin405@gmail.com",0,2,1,03,Saturday,0,1,3,3,1.0,858,423.25,137,d72708d84326d297b94ac748730a213484dd22a8-core-src-main-java-hivemall-utils-codec-ZigZagLEB128Codec.java
 24,0.041666668,0.049242426,0,0," yuin405@gmail.com",70,9,1,18,Monday,67,1,40,168,0.08928572,459,235.66667,264,9854eba552eb00b443ac49c2c19e06092845c6b1-src-main-java-hivemall-io-FactorizedModel.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,26,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-mf-RatingInitilizer.java
-29,0.041420117,0.00147929,3,0," yuin405@gmail.com",163,13,2,15,Friday,1,1,1,1,1.0,764,329.25,676,c19cc10e222d45d7367d4298a19272160eaf3654-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+29,0.041420117,0.00147929,3,2," yuin405@gmail.com",163,13,2,15,Friday,1,1,1,1,1.0,764,329.25,676,c19cc10e222d45d7367d4298a19272160eaf3654-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 16,0.05732484,0.044585988,4,1," yuin405@gmail.com",35,3,1,19,Thursday,20,1,11,29,0.1724138,151,100.5,157,fc98242656d53f064491885820462d266d3e9e0a-src-main-hivemall-knn-lsh-MinHashesUDF.java
 0,0.0,0.0,0,0," yuin405@gmail.com",7,2,2,17,Friday,7,1,38,141,0.0070921984,390,339.5,159,b60c0365007e9b80bd0fdf852ff0d52e04e6ee72-src-main-java-hivemall-knn-lsh-MinHashesUDF.java
 0,0.0,0.0,0,0," ozawa.tsuyoshi@gmail.com",0,1,1,02,Friday,0,1,38,141,0.0070921984,1,1.0,77,07bf17314099877301c6b63dfbac10ec035c6b44-src-main-java-hivemall-ftvec-scaling-L2NormalizationUDF.java
@@ -4018,7 +4018,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,100,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-tools-map-MapTailNUDF.java
 28,0.053846154,0.053846154,0,1," yuin405@gmail.com",366,6,2,21,Friday,142,5,73,334,0.119760476,943,508.25,260,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-dataset-LogisticRegressionDataGeneratorUDTF.java
 24,0.067073174,0.07926829,0,0," yuin405@gmail.com",136,4,2,20,Monday,0,1,40,168,0.017857144,462,238.66667,164,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-classifier-ConfidenceWeightedUDTF.java
-49,0.11111111,0.07662835,10,0," yuin405@gmail.com",157,4,2,22,Friday,147,1,4,5,0.4,758,323.25,261,80ac90fb1211831446cc5a370c040c82145a3f61-core-src-main-java-hivemall-mf-FactorizedModel.java
+49,0.11111111,0.07662835,10,1," yuin405@gmail.com",157,4,2,22,Friday,147,1,4,5,0.4,758,323.25,261,80ac90fb1211831446cc5a370c040c82145a3f61-core-src-main-java-hivemall-mf-FactorizedModel.java
 28,0.020802377,0.020802377,0,1," yuin405@gmail.com",366,39,3,21,Friday,121,5,73,334,0.119760476,943,508.25,673,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-fm-FactorizationMachineUDTF.java
 28,0.26415095,0.26415095,0,1," yuin405@gmail.com",367,5,1,15,Saturday,14,5,73,332,0.012048192,947,512.25,53,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-tools-text-TokenizeUDF.java
 3,0.016666668,0.0,0,0," yuin405@gmail.com",14,3,1,16,Tuesday,13,1,3,10,0.8,85,85.0,180,78c1a9653783efcda7e3ffecef132af67b14520c-src-main-hivemall-classifier-multiclass-MulticlassAROWClassifierUDTF.java
@@ -4076,7 +4076,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 93,0.01369863,0.6232877,0,0," yuin405@gmail.com",204,3,1,01,Wednesday,204,1,2,3,0.6666667,581,357.6667,146,64fa1a2cbe7c1897e5c15a2edee50e8b217b538e-src-main-java-hivemall-utils-io-NioFixedSegment.java
 24,0.15714286,0.18571429,0,0," yuin405@gmail.com",136,8,2,18,Monday,38,1,40,168,0.08928572,459,235.66667,70,9854eba552eb00b443ac49c2c19e06092845c6b1-src-main-java-hivemall-mix-store-PartialAverage.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,113,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-common-ConversionState.java
-18,0.08108108,0.0,0,0," yuin405@gmail.com",205,7,2,17,Friday,28,1,2,2,1.0,850,415.25,222,fe79c5d4063f17877db35ef85ffd38e290d0e734-core-src-main-java-hivemall-utils-math-MathUtils.java
+18,0.08108108,0.0,0,2," yuin405@gmail.com",205,7,2,17,Friday,28,1,2,2,1.0,850,415.25,222,fe79c5d4063f17877db35ef85ffd38e290d0e734-core-src-main-java-hivemall-utils-math-MathUtils.java
 9,0.0053380784,0.010676157,2,0," yuin405@gmail.com",9,9,1,03,Wednesday,0,1,1,2,1.0,601,377.6667,562,43940485f55abc072d628dc577844b64f69707f3-src-main-java-hivemall-fm-FactorizationMachineUDTF.java
 2,0.0043668123,0.0043668123,0,0," yuin405@gmail.com",303,14,1,05,Thursday,2,1,4,11,0.27272728,262,211.5,229,bddd15f248459dc03efd959357fa3b9ea3f47e77-src-main-hivemall-classifier-multiclass-MulticlassAROWClassifierUDTF.java
 73,0.110787176,0.10204082,12,1," yuin405@gmail.com",36,3,2,21,Tuesday,28,4,56,169,0.15384616,914,479.25,343,29673be232933474288db125f93a5a609311842c-core-src-main-java-hivemall-model-DenseModel.java
@@ -4098,7 +4098,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 4,0.025974026,0.025974026,0,1," yuin405@gmail.com",223,4,2,21,Tuesday,214,4,56,169,0.15384616,914,479.25,77,29673be232933474288db125f93a5a609311842c-core-src-main-java-hivemall-common-OnlineVariance.java
 202,0.6652174,0.21304348,7,0," yuin405@gmail.com",201,11,3,05,Monday,5,1,3,12,0.6666667,823,388.25,230,0b3307a1637c3ced0094c0bb35503335299c7b2a-core-src-main-java-hivemall-fm-Feature.java
 0,0.0,0.0,0,0," yuin405@gmail.com",8,2,2,17,Thursday,8,2,47,189,0.01058201,649,425.6667,106,4f5f1237e6edc8eb81b25ec64904b6449c379fb1-core-src-main-java-hivemall-knn-distance-MinkowskiDistanceUDF.java
-6,0.008241759,0.0,0,1," yuin405@gmail.com",223,19,2,23,Monday,0,1,2,4,0.5,910,475.25,728,45afa8a438398748abc4bacc6435eb61c0690c94-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+6,0.008241759,0.0,0,3," yuin405@gmail.com",223,19,2,23,Monday,0,1,2,4,0.5,910,475.25,728,45afa8a438398748abc4bacc6435eb61c0690c94-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 28,0.13084112,0.13084112,0,1," yuin405@gmail.com",366,6,2,21,Friday,142,5,73,334,0.119760476,943,508.25,107,d806bf45b37bc9946a536c7d6ed38d34b208d45d-mixserv-src-main-java-hivemall-mix-metrics-ThroughputCounter.java
 28,0.07486631,0.07486631,0,1," yuin405@gmail.com",366,8,2,21,Friday,142,5,73,334,0.119760476,943,508.25,187,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-mix-client-MixClient.java
 4,0.016666668,0.016666668,1,0," yuin405@gmail.com",0,3,1,18,Monday,0,1,1,1,1.0,294,243.5,120,4fb7dcfd9a43a82c516cadacd34394451d5741be-src-main-hivemall-mix-server-MixServer.java
@@ -4206,13 +4206,13 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 28,0.07035176,0.07035176,0,1," yuin405@gmail.com",381,11,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,199,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-knn-lsh-MinHashUDTF.java
 4,0.06382979,0.021276595,1,0," yuin405@gmail.com",196,3,1,21,Friday,2,1,9,14,0.5714286,126,75.5,47,8a10dd512363187b6d0833f632fa09f9e2e18aea-src-main-hivemall-ftvec-hashing-ArrayPrefixedHashValuesUDF.java
 2,0.00952381,0.00952381,0,0," yuin405@gmail.com",56,4,2,23,Friday,0,1,9,15,0.6,412,361.5,105,ed8a10626e9243c4ca316a23437e78acda44e2ef-src-main-java-hivemall-ensemble-bagging-VotedAvgUDAF.java
-28,0.09589041,0.09589041,0,0," yuin405@gmail.com",381,11,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,146,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-common-ConversionState.java
+28,0.09589041,0.09589041,0,1," yuin405@gmail.com",381,11,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,146,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-common-ConversionState.java
 215,0.5042493,0.10481586,10,0," yuin405@gmail.com",10,9,1,22,Monday,1,1,2,2,1.0,34,34.0,353,c4b50255c40ad9ec15950f43e7962ea4b307b118-src-main-hivemall-classifier-multiclass-MulticlassOnlineClassifierUDTF.java
 20,0.097087376,0.097087376,0,1," yuin405@gmail.com",223,4,2,21,Tuesday,214,4,56,169,0.15384616,914,479.25,103,29673be232933474288db125f93a5a609311842c-core-src-main-java-hivemall-utils-datetime-DateTimeFormatter.java
 28,0.18421052,0.18421052,0,1," yuin405@gmail.com",381,6,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,76,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-tools-math-SigmoidGenericUDF.java
 232,0.15181518,0.6138614,3,0," yuin405@gmail.com",43,31,2,23,Friday,9,1,4,12,0.8333333,890,455.25,303,077651440da4a6fd4f485236254256d274c9a716-core-src-main-java-hivemall-fm-FFMPredictionModel.java
 24,0.031700287,0.037463978,0,0," yuin405@gmail.com",0,1,1,18,Monday,0,1,40,168,0.08928572,459,235.66667,347,9854eba552eb00b443ac49c2c19e06092845c6b1-src-main-java-hivemall-utils-collections-OpenHashTable.java
-14,0.064935066,0.025974026,1,0," yuin405@gmail.com",198,10,2,13,Friday,2,1,2,2,0.5,819,384.25,154,799272ee89109a875351775b37742ee48faddaca-core-src-main-java-hivemall-common-EtaEstimator.java
+14,0.064935066,0.025974026,1,1," yuin405@gmail.com",198,10,2,13,Friday,2,1,2,2,0.5,819,384.25,154,799272ee89109a875351775b37742ee48faddaca-core-src-main-java-hivemall-common-EtaEstimator.java
 28,0.0562249,0.0562249,0,0," yuin405@gmail.com",366,7,2,21,Friday,189,5,73,334,0.119760476,943,508.25,249,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-tools-EachTopKUDTF.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,2,2,16,Friday,9,2,53,233,0.021459227,653,429.6667,827,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-smile-classification-DecisionTree.java
 18,0.31578946,0.0,0,1," yuin405@gmail.com",381,7,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,57,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-knn-similarity-AngularSimilarityUDF.java
@@ -4287,7 +4287,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 2,0.014925373,0.014925373,0,0," yuin405@gmail.com",56,4,2,23,Friday,0,1,9,15,0.6,412,361.5,67,ed8a10626e9243c4ca316a23437e78acda44e2ef-src-main-java-hivemall-ensemble-ArgminKLDistanceUDAF.java
 0,0.0,0.0,0,0," ozawa.tsuyoshi@gmail.com",0,1,1,02,Friday,0,1,38,141,0.0070921984,1,1.0,68,07bf17314099877301c6b63dfbac10ec035c6b44-src-main-java-hivemall-mix-server-MixServerInitializer.java
 13,0.013333334,0.16,0,0," yuin405@gmail.com",13,6,1,16,Friday,0,1,1,1,1.0,70,70.0,75,b82012e4802d548cfe0a6ef5feab22153fb3c8e5-src-main-hivemall-ftvec-hashing-ArrayHashValuesUDF.java
-8,0.010457517,0.0,1,1," k.takuti@gmail.com",300,24,3,15,Tuesday,65,1,2,2,1.0,2,2.0,765,c265f08b8edce6e7aec463296f0680ea6ac90e43-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+8,0.010457517,0.0,1,3," k.takuti@gmail.com",300,24,3,15,Tuesday,65,1,2,2,1.0,2,2.0,765,c265f08b8edce6e7aec463296f0680ea6ac90e43-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 0,0.0,0.0,0,0," yuin405@gmail.com",9,3,2,16,Friday,0,2,53,233,0.021459227,653,429.6667,69,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-knn-similarity-EuclidSimilarity.java
 147,0.31014493,0.11594203,16,0," yuin405@gmail.com",195,6,2,16,Tuesday,0,1,13,28,0.39285713,813,378.25,345,c78863797d0b705cf36ccc00aa666f9166a878a3-core-src-main-java-hivemall-utils-collections-OpenHashTable.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,299,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-smile-vm-StackMachine.java
@@ -4328,7 +4328,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 24,0.2,0.23636363,0,0," yuin405@gmail.com",136,6,2,18,Monday,38,1,40,168,0.08928572,459,235.66667,55,9854eba552eb00b443ac49c2c19e06092845c6b1-src-main-java-hivemall-mix-client-MixClientInitializer.java
 14,0.08108108,0.10810811,2,1," yuin405@gmail.com",0,1,1,21,Tuesday,0,4,56,169,0.15384616,914,479.25,74,29673be232933474288db125f93a5a609311842c-spark-src-main-java-hivemall-ftvec-ExtractFeatureUDFWrapper.java
 2,0.0,0.0057971017,1,0," yuin405@gmail.com",361,10,2,18,Tuesday,224,1,3,8,0.375,633,409.6667,345,d5a4b66576e474d2aa749066780232fc8445440e-src-main-java-hivemall-io-DenseModel.java
-15,0.115384616,0.0,2,0," yuin405@gmail.com",170,6,2,17,Friday,0,1,1,1,1.0,784,349.25,130,eccfb7f7802d2e83b48ffee4c25380b4dd2fd4a8-core-src-main-java-hivemall-common-ConversionState.java
+15,0.115384616,0.0,2,1," yuin405@gmail.com",170,6,2,17,Friday,0,1,1,1,1.0,784,349.25,130,eccfb7f7802d2e83b48ffee4c25380b4dd2fd4a8-core-src-main-java-hivemall-common-ConversionState.java
 9,0.072463766,0.057971016,0,1," yuin405@gmail.com",215,4,1,22,Tuesday,0,4,56,169,0.01775148,917,482.25,69,cf21c89f504f1e25543cfbf55d4465ecedf25b70-core-src-main-java-hivemall-smile-tools-GuessAttributesUDF.java
 24,0.26190478,0.30952382,0,0," yuin405@gmail.com",136,4,2,20,Monday,0,1,40,168,0.017857144,462,238.66667,42,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-utils-lang-CommandLineUtils.java
 87,0.16770187,0.10248447,13,0," yuin405@gmail.com",71,9,3,15,Thursday,0,1,10,27,0.14814815,724,289.25,322,aae9fa42daca955a8989a809a261c568712220b1-core-src-main-java-hivemall-LearnerBaseUDTF.java
@@ -4523,7 +4523,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 6,0.04761905,0.00952381,0,0," yuin405@gmail.com",70,4,1,16,Wednesday,9,1,1,4,0.5,646,422.6667,105,a259accadcf53b8e163c12eeb272c994ed3b612d-src-main-java-hivemall-ftvec-trans-CategoricalFeaturesUDF.java
 4,0.023255814,0.023255814,1,0," yuin405@gmail.com",201,5,1,19,Wednesday,6,1,1,1,1.0,124,73.5,86,fe5a267cc2c8c471d62302c9eb10827371a3df0c-src-main-hivemall-common-FeatureValue.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,108,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-knn-similarity-CosineSimilarityUDF.java
-28,0.0875,0.0875,0,0," yuin405@gmail.com",366,12,2,21,Friday,164,5,73,334,0.119760476,943,508.25,160,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-common-EtaEstimator.java
+28,0.0875,0.0875,0,1," yuin405@gmail.com",366,12,2,21,Friday,164,5,73,334,0.119760476,943,508.25,160,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-common-EtaEstimator.java
 2,0.0091743115,0.0091743115,0,0," yuin405@gmail.com",142,6,1,15,Thursday,0,1,6,15,0.33333334,109,58.5,109,ceedf63404843f348630cfae4cbb0d7ba7afd42c-src-main-hivemall-regression-LogressUDTF.java
 117,0.31932774,0.008403362,12,0," yuin405@gmail.com",342,5,2,14,Thursday,205,1,2,3,1.0,592,368.6667,357,04a2d25c0871f7fa01a318cf5bc76afa26577afc-src-main-java-hivemall-common-LossFunctions.java
 28,0.04,0.04,0,1," yuin405@gmail.com",381,7,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,350,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-utils-collections-OpenHashMap.java
@@ -4554,7 +4554,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 4,0.10810811,0.0,0,0," yuin405@gmail.com",0,2,1,00,Sunday,0,1,1,3,0.33333334,12,12.0,37,74b537374d5f16a4e4a44d4bab4e29433ae7b50c-src-main-hivemall-ftvec-scaling-RescaleFeatureValueUDF.java
 47,0.082125604,0.14492753,1,0," yuin405@gmail.com",300,23,1,16,Monday,0,1,3,11,0.36363637,242,191.5,207,b558d7231e577bbb6a3c144d40864100f9dd726a-src-main-hivemall-classifier-multiclass-MulticlassConfidenceWeightedUDTF.java
 24,0.16190477,0.06666667,3,0," yuin405@gmail.com",23,3,1,09,Thursday,5,1,2,3,0.6666667,710,486.6667,105,9f1f357303342292f73fac7e90f61e8b3776215b-core-src-main-java-hivemall-tools-compress-DeflateUDF.java
-13,0.048275862,0.04137931,2,0," yuin405@gmail.com",221,8,2,03,Sunday,43,1,1,1,1.0,898,463.25,145,705ba83f8df00a67d3c2094ea108b89fb440e534-core-src-main-java-hivemall-common-ConversionState.java
+13,0.048275862,0.04137931,2,1," yuin405@gmail.com",221,8,2,03,Sunday,43,1,1,1,1.0,898,463.25,145,705ba83f8df00a67d3c2094ea108b89fb440e534-core-src-main-java-hivemall-common-ConversionState.java
 2,0.00877193,0.00877193,0,0," yuin405@gmail.com",195,7,2,16,Tuesday,8,1,12,45,0.022222223,814,379.25,114,58dba0c7330b537b52286333a65e3ee859ce1b0f-core-src-main-java-hivemall-ftvec-pairing-PolynomialFeaturesUDF.java
 10,0.0952381,0.023809524,0,0," yuin405@gmail.com",0,1,1,20,Wednesday,0,1,2,2,1.0,501,277.6667,84,9d0d2ff90ddc646f9755fcb57fd59c6027b16388-src-main-java-hivemall-knn-distance-JaccardDistanceUDF.java
 42,0.48101267,0.050632913,2,0," yuin405@gmail.com",42,4,1,18,Thursday,0,1,3,7,0.2857143,514,290.6667,79,d10d56832689c047134f110b2c281959569ebedc-src-main-java-hivemall-knn-similarity-CosineSimilarityUDF.java
@@ -4690,7 +4690,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 4,0.007380074,0.007380074,0,0," yuin405@gmail.com",33,29,2,10,Wednesday,1,1,2,2,0.5,875,440.25,271,cae7b4a0457b00ed411e15b55877d64fdcae0b1c-core-src-main-java-hivemall-fm-FFMPredictionModel.java
 4,0.004854369,0.004854369,0,0," yuin405@gmail.com",177,8,3,15,Friday,15,1,1,6,0.6666667,798,363.25,412,b692793a492b48c75691048af57d0f11e57a97b3-core-src-main-java-hivemall-fm-FactorizationMachineModel.java
 24,0.094827585,0.112068966,0,0," yuin405@gmail.com",136,4,2,20,Monday,0,1,40,168,0.017857144,462,238.66667,116,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-classifier-PassiveAggressiveUDTF.java
-33,0.12751678,0.093959734,3,0," yuin405@gmail.com",195,9,2,16,Tuesday,31,1,13,28,0.39285713,813,378.25,149,c78863797d0b705cf36ccc00aa666f9166a878a3-core-src-main-java-hivemall-common-EtaEstimator.java
+33,0.12751678,0.093959734,3,1," yuin405@gmail.com",195,9,2,16,Tuesday,31,1,13,28,0.39285713,813,378.25,149,c78863797d0b705cf36ccc00aa666f9166a878a3-core-src-main-java-hivemall-common-EtaEstimator.java
 2,0.012048192,0.012048192,0,1," yuin405@gmail.com",303,18,2,17,Monday,0,1,1,2,0.5,247,196.5,83,093702510225dc8b038cc26bec5809b0142bc803-src-main-hivemall-ftvec-hashing-MurmurHash3UDF.java
 25,0.010570824,0.042283297,4,0," yuin405@gmail.com",208,20,1,00,Thursday,55,1,3,4,0.75,116,65.5,473,31a901ce1f13587d38c1511e244783fc63307bb9-src-main-hivemall-classifier-multiclass-MulticlassOnlineClassifierUDTF.java
 4,0.02631579,0.02631579,0,0," yuin405@gmail.com",0,1,1,20,Tuesday,0,1,2,5,0.8,789,354.25,76,576ef9165dbe907411a1df4adf5dda364cd2772d-core-src-main-java-hivemall-ftvec-ranking-PerEventPositiveOnlyFeedback.java
@@ -4860,7 +4860,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 17,0.03215434,0.022508038,5,0," yuin405@gmail.com",342,50,1,17,Thursday,2,1,7,19,0.36842105,340,289.5,311,2c8dbc829cde0816b83c199daf25e096ddd48b7d-src-main-hivemall-regression-OnlineRegressionUDTF.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,23,Wednesday,0,1,5,9,0.11111111,9,6.0,72,ad14ef982824f9ff589dda5d032e506463b44bb9-spark-spark-common-src-main-java-hivemall-ftvec-ExtractWeightUDFWrapper.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,27,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-utils-lang-Copyable.java
-44,0.33628318,0.053097345,6,0," yuin405@gmail.com",177,7,2,14,Friday,6,1,13,32,0.46875,793,358.25,113,351f49b04582a3be53c3d7a15ebb8b7cd1bd72e7-core-src-main-java-hivemall-common-ConversionState.java
+44,0.33628318,0.053097345,6,1," yuin405@gmail.com",177,7,2,14,Friday,6,1,13,32,0.46875,793,358.25,113,351f49b04582a3be53c3d7a15ebb8b7cd1bd72e7-core-src-main-java-hivemall-common-ConversionState.java
 24,0.18644068,0.22033899,0,0," yuin405@gmail.com",0,2,1,20,Monday,0,1,40,168,0.017857144,462,238.66667,59,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-ftvec-AddFeatureIndexUDF.java
 0,0.0,0.0,0,0," yuin405@gmail.com",7,2,2,17,Friday,7,1,38,141,0.0070921984,390,339.5,53,b60c0365007e9b80bd0fdf852ff0d52e04e6ee72-src-main-java-hivemall-tools-array-SubarrayEndWithUDF.java
 28,0.5185185,0.5185185,0,0," yuin405@gmail.com",366,4,2,21,Friday,357,5,73,334,0.119760476,943,508.25,27,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-mix-MixedModel.java
@@ -5011,7 +5011,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 2,0.03773585,0.0,0,1," yuin405@gmail.com",61,7,1,03,Tuesday,5,1,2,5,0.4,192,141.5,53,27106148343e5fb39231fbb95795cadf83592f44-src-main-hivemall-knn-distance-JaccardIndexUDF.java
 24,0.069970846,0.0,1,0," yuin405@gmail.com",12,19,1,07,Tuesday,0,1,1,4,0.25,359,308.5,343,1c876b4e26f9ee8f36ae9167be74ac6bf6cb6ca2-src-main-hivemall-io-SpaceEfficientDenseModel.java
 19,0.035643563,0.001980198,5,0," yuin405@gmail.com",131,21,2,21,Monday,0,1,2,2,1.0,746,311.25,505,37fed6b5f41190a5d2be60ee728d4d16dd6b3647-core-src-main-java-hivemall-smile-regression-RandomForestRegressionUDTF.java
-5,0.023041476,0.0,0,0," yuin405@gmail.com",160,5,2,19,Tuesday,3,1,2,2,0.5,759,324.25,217,039e9c000d8e29764d53029205794cecce815d83-core-src-main-java-hivemall-utils-math-MathUtils.java
+5,0.023041476,0.0,0,2," yuin405@gmail.com",160,5,2,19,Tuesday,3,1,2,2,0.5,759,324.25,217,039e9c000d8e29764d53029205794cecce815d83-core-src-main-java-hivemall-utils-math-MathUtils.java
 17,0.12857144,0.114285715,1,1," yuin405@gmail.com",224,8,2,22,Tuesday,0,4,56,169,0.01775148,917,482.25,70,cf21c89f504f1e25543cfbf55d4465ecedf25b70-core-src-main-java-hivemall-ftvec-conv-ToDenseFeaturesUDF.java
 15,0.0227704,0.0056926,3,0," yuin405@gmail.com",65,9,2,12,Friday,1,1,7,12,0.5833333,716,281.25,527,f5ae2505428ad192dc0b20130149c192abc5423f-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 134,0.104273506,0.124786325,9,0," yuin405@gmail.com",140,5,2,16,Friday,3,1,3,18,0.11111111,470,246.66667,585,eea8364d575ea191934ca3386d78dc14e9744566-src-main-java-hivemall-classifier-multiclass-MulticlassOnlineClassifierUDTF.java
@@ -5144,7 +5144,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 24,0.2682927,0.31707317,0,0," yuin405@gmail.com",136,4,2,20,Monday,0,1,40,168,0.017857144,462,238.66667,41,a6c7f98bf72e7a6a34b3814af6935531e647c663-src-main-java-hivemall-utils-hashing-HashFunctionFactory.java
 2,0.006756757,0.006756757,0,0," yuin405@gmail.com",0,3,1,04,Tuesday,0,1,1,2,1.0,45,45.0,148,b455b79df1af9f7d0e647a5d24bd6b8ae9f29c87-src-main-hivemall-classifier-AROWClassifierUDTF.java
 20,0.10714286,0.035714287,4,0," yuin405@gmail.com",49,5,2,20,Friday,0,1,2,3,0.6666667,398,347.5,140,f7de8f44d7d086d970e48677851da627f5625062-src-main-java-hivemall-mix-server-MixServerHandler.java
-11,0.014986376,0.0,0,1," yuin405@gmail.com",229,21,2,18,Monday,6,1,4,4,0.75,918,483.25,734,563e491fd21fe9f693dc74d8aaadab77cd0d75fc-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+11,0.014986376,0.0,0,3," yuin405@gmail.com",229,21,2,18,Monday,6,1,4,4,0.75,918,483.25,734,563e491fd21fe9f693dc74d8aaadab77cd0d75fc-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 2,0.022222223,0.022222223,0,0," yuin405@gmail.com",195,5,2,16,Tuesday,8,1,12,45,0.022222223,814,379.25,45,58dba0c7330b537b52286333a65e3ee859ce1b0f-core-src-main-java-hivemall-classifier-PerceptronUDTF.java
 2,0.009009009,0.009009009,0,0," yuin405@gmail.com",196,11,3,15,Wednesday,0,1,2,6,0.5,815,380.25,111,04f5a7c80ba702e868e34f5ee7114d69b440a999-core-src-main-java-hivemall-fm-StringFeature.java
 4,0.016528925,0.016528925,1,0," yuin405@gmail.com",0,1,1,19,Tuesday,0,1,2,4,0.5,539,315.6667,121,0862fbd6bcb6e139921a97a9ded507f287d0458d-src-main-java-hivemall-ftvec-trans-CategoricalFeaturesUDF.java
@@ -5162,7 +5162,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 31,0.17213115,0.08196721,3,0," yuin405@gmail.com",0,1,1,22,Saturday,0,1,1,1,1.0,95,95.0,122,209d79c052e7b6922d9b51a46d9f156b3ce0d776-src-main-hivemall-ftvec-RandAmplifierUDTF.java
 136,0.13636364,0.25,11,0," yuin405@gmail.com",310,39,1,16,Monday,30,1,3,11,0.36363637,242,191.5,352,b558d7231e577bbb6a3c144d40864100f9dd726a-src-main-hivemall-regression-OnlineRegressionUDTF.java
 2,0.012987013,0.012987013,0,0," linguin.m.s@gmail.com",14,4,2,21,Tuesday,0,1,1,1,1.0,3,3.0,77,a3e2d5051ac9db1056eef5f1dcc9ea64a7e5404c-mixserv-src-main-java-hivemall-mix-store-PartialResult.java
-69,0.08627451,0.003921569,2,1," yuin405@gmail.com",315,25,3,22,Tuesday,14,1,2,3,1.0,936,501.25,765,a4729ea73f4ecdbcd618b8ba3cbc1a50c7949d11-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
+69,0.08627451,0.003921569,2,3," yuin405@gmail.com",315,25,3,22,Tuesday,14,1,2,3,1.0,936,501.25,765,a4729ea73f4ecdbcd618b8ba3cbc1a50c7949d11-core-src-main-java-hivemall-utils-hadoop-HiveUtils.java
 28,0.125,0.125,0,1," yuin405@gmail.com",205,5,1,21,Friday,189,5,73,334,0.119760476,943,508.25,112,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-tools-array-ArrayConcatUDF.java
 27,0.042424243,0.03939394,0,2," yuin405@gmail.com",31,4,2,21,Friday,9,5,73,334,0.119760476,943,508.25,330,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-ftvec-binning-NumericHistogram.java
 5,0.024752475,0.0,0,0," yuin405@gmail.com",267,19,1,20,Wednesday,125,1,4,12,0.41666666,168,117.5,202,810b8b878610e42418ac25606cf1c226717c7e60-src-main-hivemall-classifier-multiclass-MulticlassConfidenceWeightedUDTF.java
@@ -5259,7 +5259,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 0,0.0,0.0,0,0," yuin405@gmail.com",9,2,2,16,Friday,9,2,53,233,0.021459227,653,429.6667,80,467595c1b03bf370cd1b9a072b1aa78b2576520d-core-src-main-java-hivemall-ftvec-FeatureIndexUDF.java
 63,0.080617495,0.027444255,8,0," yuin405@gmail.com",279,29,1,18,Thursday,0,1,3,3,0.6666667,180,129.5,583,f0289eb5456cce8d9ffd928509461c02dceafc9a-src-main-hivemall-classifier-multiclass-MulticlassOnlineClassifierUDTF.java
 28,0.0952381,0.0952381,0,0," yuin405@gmail.com",0,1,1,21,Friday,0,5,73,334,0.119760476,943,508.25,147,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-hivemall-utils-collections-DoubleArray3D.java
-28,0.0875,0.0875,0,0," yuin405@gmail.com",381,13,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,160,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-common-EtaEstimator.java
+28,0.0875,0.0875,0,1," yuin405@gmail.com",381,13,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,160,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-common-EtaEstimator.java
 39,0.11340206,0.087628864,5,1," yuin405@gmail.com",223,4,2,21,Tuesday,214,4,56,169,0.15384616,914,479.25,194,29673be232933474288db125f93a5a609311842c-core-src-main-java-hivemall-ensemble-MaxRowUDAF.java
 0,0.0,0.0,0,0," ozawa.tsuyoshi@gmail.com",0,1,1,02,Friday,0,1,38,141,0.0070921984,1,1.0,90,07bf17314099877301c6b63dfbac10ec035c6b44-src-main-java-hivemall-utils-lang-mutable-MutableFloat.java
 4,0.03960396,0.0,0,1," yuin405@gmail.com",224,7,2,22,Tuesday,0,4,56,169,0.01775148,917,482.25,101,cf21c89f504f1e25543cfbf55d4465ecedf25b70-core-src-main-java-hivemall-ensemble-bagging-WeightVotedAvgUDAF.java
@@ -5281,7 +5281,7 @@ Modify Lines,Add Lines,Delete Lines,Distribution modified Lines,numOfBIC,AuthorI
 149,0.28870293,0.33472803,4,0," yuin405@gmail.com",0,2,1,01,Friday,0,1,1,2,0.5,846,411.25,239,742734e29f3b6ace69238f73289a9d6c84fab486-core-src-main-java-hivemall-utils-codec-ASCII85InputStream.java
 28,0.3043478,0.3043478,0,0," yuin405@gmail.com",366,5,2,21,Friday,31,5,73,334,0.119760476,943,508.25,46,d806bf45b37bc9946a536c7d6ed38d34b208d45d-core-src-main-java-org-apache-hadoop-hive-ql-exec-MapredContextAccessor.java
 4,0.016666668,0.016666668,1,0," yuin405@gmail.com",0,2,1,07,Wednesday,0,1,16,29,0.03448276,163,112.5,120,9ccb84b7ad13526b7155c592a97e500c773ac73f-src-main-hivemall-utils-lang-ArrayUtils.java
-28,0.047457628,0.047457628,0,0," yuin405@gmail.com",381,16,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,295,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-utils-math-MathUtils.java
+28,0.047457628,0.047457628,0,2," yuin405@gmail.com",381,16,2,15,Saturday,14,5,73,332,0.012048192,947,512.25,295,289095482f5a932472f1e86f30f7658a12b50753-core-src-main-java-hivemall-utils-math-MathUtils.java
 2,0.020833334,0.020833334,0,0," yuin405@gmail.com",12,5,2,18,Monday,3,1,1,1,1.0,655,431.6667,48,720887e1c4ec0d2a950cc4aaec516239b2e8b8e1-core-src-main-java-hivemall-HivemallConstants.java
 5,0.006042296,0.009063444,0,2," amaya382@users.noreply.github.com",10,2,2,20,Friday,10,1,2,4,0.5,1,1.0,331,2a7a1fc765e47784c78dbee26bfa3c16786c8d7a-core-src-main-java-hivemall-ftvec-binning-NumericHistogram.java
 0,0.0,0.0,0,0," linguin.m.s@gmail.com",0,1,1,21,Tuesday,0,2,53,232,0.004310345,1,1.0,82,290a2f1e01f036d4becb0906844da83b5c623756-core-src-main-java-hivemall-utils-math-Primes.java

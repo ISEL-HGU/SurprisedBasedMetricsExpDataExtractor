@@ -1,2 +1,0 @@
-import org.apache.camel.reifier.dataformat.DataFormatReifier;
-        DataFormat dataFormat = DataFormatReifier.getDataFormat(routeContext.getCamelContext(), definition.getDataFormatType(), null);

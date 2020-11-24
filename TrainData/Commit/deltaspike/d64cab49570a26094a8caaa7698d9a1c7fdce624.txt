@@ -1,4 +1,0 @@
- b/deltaspike/core/impl/src/main/java/org/apache/deltaspike/core/impl/config/DeltaSpikeConfigInfo.java
-public class DeltaSpikeConfigInfo implements DeltaSpikeConfigInfoMBean
-    public DeltaSpikeConfigInfo(ClassLoader appConfigClassLoader)
-    @Override

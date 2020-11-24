@@ -1,5 +1,0 @@
-        // start scheduler first
-
-        super.doStart();
-
-        super.doShutdown();

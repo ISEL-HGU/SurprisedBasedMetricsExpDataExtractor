@@ -1,1 +1,0 @@
-                Message.info("\tpublish committed: moved "  transactionTempDir  " \n\t\tto "

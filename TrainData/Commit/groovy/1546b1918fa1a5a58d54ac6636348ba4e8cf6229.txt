@@ -1,7 +1,0 @@
-                            if (null != typeCheckingContext.getEnclosingReturnStatement() && !isNestedOrSandwichedMethodCall()) {
-    /**
-     * e.g. a(b()),         b() is nested method call
-     *      a().b().c(),    a() and b() are sandwiched method call
-     *
-     */
-    private boolean isNestedOrSandwichedMethodCall() {

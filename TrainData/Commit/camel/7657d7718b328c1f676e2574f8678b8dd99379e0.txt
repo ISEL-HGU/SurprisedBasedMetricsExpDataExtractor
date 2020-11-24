@@ -1,5 +1,0 @@
-        // special for HTTP DELETE if the message body should be included
-        if (getEndpoint().isDeleteWithBody() && "DELETE".equals(method.getMethod())) {
-            method = new HttpDeleteWithBodyMethod(url, requestEntity);
-        }
-

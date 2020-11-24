@@ -1,9 +1,0 @@
-        updateClassTemplatesSelection();
-            boolean selected = pairs.isSelected();
-            updateClassTemplatesSelection();
-            overwrite.setEnabled(!selected);
-
-    private void updateClassTemplatesSelection() {
-        superclassTemplate.setEnabled(pairs.isSelected());
-        subclassTemplate.setEnabled(pairs.isSelected());
-    }

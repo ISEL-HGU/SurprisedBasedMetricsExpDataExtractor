@@ -1,1 +1,0 @@
-                    if (parameters.length==0 && getTemporaryTypesForExpression(vexp)==null && closureParamTypes.length!=0) {

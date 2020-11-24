@@ -1,1 +1,0 @@
-@UriEndpoint(firstVersion = "2.23.0", scheme = "corda", title = "corda", syntax = "corda:configuration", label = "corda,blockchain")

@@ -1,2 +1,0 @@
-		case EMBEDDABLE_SINGLE_CLASS:
-			return embeddableTemplate;

@@ -1,2 +1,0 @@
-            final Exchange exchange = consumer.getEndpoint().createExchange(ExchangePattern.InOut);
-            exchange.setIn(new HttpMessage(exchange, consumer.getEndpoint(), request, response));

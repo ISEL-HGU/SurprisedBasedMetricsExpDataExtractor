@@ -1,9 +1,0 @@
-    public static final EmptyStatement INSTANCE = new ImmutableStatement();
-    
-    public void visit(GroovyCodeVisitor visitor) {
-    }
-    public boolean isEmpty() {
-        return true;
-    }
-
-    public static class ImmutableStatement extends EmptyStatement {

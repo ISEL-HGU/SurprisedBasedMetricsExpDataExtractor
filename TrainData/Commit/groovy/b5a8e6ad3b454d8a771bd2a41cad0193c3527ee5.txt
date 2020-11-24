@@ -1,5 +1,0 @@
- b/subprojects/groovy-ant/src/test/groovy/groovy/ant/SpoofTaskContainer.java
-package groovy.ant;
-    private List<Task> tasks = new ArrayList<Task>();
-        for (Object task1 : tasks) {
-            Task task = (Task) task1;

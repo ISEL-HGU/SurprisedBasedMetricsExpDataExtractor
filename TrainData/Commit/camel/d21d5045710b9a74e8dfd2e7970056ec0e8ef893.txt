@@ -1,5 +1,0 @@
-        // special for these components
-        if ("camel-fhir".equals(artifactId)) {
-            return "camel-fhir/camel-fhir-component/src/main/docs";
-        }
-

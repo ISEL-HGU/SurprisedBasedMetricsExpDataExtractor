@@ -1,1 +1,0 @@
-        } else if (target.getDeclaringClass().isAssignableFrom(source.getDeclaringClass())) {

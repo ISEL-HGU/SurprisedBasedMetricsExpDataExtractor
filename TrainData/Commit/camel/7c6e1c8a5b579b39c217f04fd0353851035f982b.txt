@@ -1,2 +1,0 @@
- b/core/camel-support/src/main/java/org/apache/camel/support/builder/TokenXMLExpressionIterator.java
-package org.apache.camel.support.builder;

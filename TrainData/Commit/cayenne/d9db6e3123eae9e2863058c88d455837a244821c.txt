@@ -1,7 +1,0 @@
-import javax.swing.JComboBox;
-public abstract class ComboBoxAdapter<T> {
-    private JComboBox<T> comboBox;
-    protected ComboBoxAdapter(JComboBox<T> comboBox) {
-    public JComboBox<T> getComboBox() {
-    protected abstract void updateModel(T item) throws ValidationException;
-        updateModel((T)comboBox.getSelectedItem());

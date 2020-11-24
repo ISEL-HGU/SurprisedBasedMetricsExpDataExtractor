@@ -1,3 +1,0 @@
-import org.codehaus.groovy.ast.expr.TupleExpression;
-        if (origCallArgs instanceof TupleExpression) {
-            List<Expression> expressions = ((TupleExpression) origCallArgs).getExpressions();

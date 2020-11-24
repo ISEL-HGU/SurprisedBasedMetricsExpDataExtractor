@@ -1,3 +1,0 @@
- b/tooling/maven/camel-main-parser/src/test/java/org/apache/camel/main/parser/MyConfiguration.java
-     * The matching is using exact match, by wildcard and regular expression as documented by PatternHelper#matchPattern(String, String).
-     * The matching is using exact match, by wildcard and regular expression as documented by PatternHelper#matchPattern(String, String).

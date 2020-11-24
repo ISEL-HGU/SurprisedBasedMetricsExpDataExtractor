@@ -1,7 +1,0 @@
- b/examples/camel-example-spring-boot-geocoder/src/main/java/org/apache/camel/example/springboot/geocoder/CamelGeocoderRoute.java
-public class CamelGeocoderRoute extends RouteBuilder {
-        // rest-dsl is also configured in the application.properties file
-            .consumes("application/json")
-            .produces("application/json")
-            .get().description("Geocoder address lookup").outType(GeocodeResponse.class)
-                // call the geocoder to lookup details from the provided address

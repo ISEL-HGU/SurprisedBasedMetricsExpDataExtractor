@@ -1,2 +1,0 @@
- b/guacamole-ext/src/main/java/org/apache/guacamole/properties/URIGuacamoleProperty.java
-public abstract class URIGuacamoleProperty implements GuacamoleProperty<URI> {

@@ -1,8 +1,0 @@
-import org.apache.camel.Producer;
-import org.apache.camel.WaitForTaskToComplete;
-import org.apache.camel.component.seda.SedaProducer;
- * For example to run a route without needing to actually connect to a specific SMTP or HTTP endpoint.
-    @Override
-    public Producer createProducer() throws Exception {
-        return new StubProducer(this, getWaitForTaskToComplete(), getTimeout(), isBlockWhenFull(), getOfferTimeout());
-    }

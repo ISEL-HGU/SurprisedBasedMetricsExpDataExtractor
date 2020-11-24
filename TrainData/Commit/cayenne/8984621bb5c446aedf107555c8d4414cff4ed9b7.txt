@@ -1,4 +1,0 @@
-import org.apache.cayenne.exp.ExpressionException;
-
-        } else if (object instanceof CharSequence) {
-        if (object instanceof CharSequence) {

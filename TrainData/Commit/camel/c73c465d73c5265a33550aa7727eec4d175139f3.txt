@@ -1,6 +1,0 @@
-import org.apache.camel.RuntimeCamelException;
-    @Override
-    public void bind(String id, Object bean) throws RuntimeCamelException {
-        put(id, bean);
-    }
-

@@ -1,2 +1,0 @@
- * A {@link RouteBuilder} which gives access to the endpoint DSL.
-     * @param rbc a lambda expression receiving the {@code RouteBuilder} to use for creating routes

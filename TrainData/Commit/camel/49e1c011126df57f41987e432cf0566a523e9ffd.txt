@@ -1,5 +1,0 @@
-import static org.apache.camel.commands.internal.MatchUtil.matchWildcard;
-import static org.apache.camel.commands.internal.RegexUtil.wildcardAsRegex;
-
-            filter = wildcardAsRegex(filter);
-            if (name.equalsIgnoreCase(filter) || matchWildcard(name, filter) || name.matches(filter)) {

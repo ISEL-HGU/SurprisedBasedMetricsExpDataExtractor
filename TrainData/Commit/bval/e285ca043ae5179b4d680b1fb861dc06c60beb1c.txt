@@ -1,3 +1,0 @@
-import java.util.Objects;
-        this.loaders = Arrays.asList(loaders).stream().filter(Objects::nonNull).collect(ToUnmodifiable.list());
-        Validate.validState(!this.loaders.isEmpty(), "no classloaders available");

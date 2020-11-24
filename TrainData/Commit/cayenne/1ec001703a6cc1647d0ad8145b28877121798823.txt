@@ -1,9 +1,0 @@
-        Application.getInstance().getActionManager()
-                .getAction(RemoveAttributeRelationshipAction.class)
-                .setCurrentSelectedPanel(parentPanel.getRelationshipPanel());
-        Application.getInstance().getActionManager()
-                .getAction(CutAttributeRelationshipAction.class)
-                .setCurrentSelectedPanel(parentPanel.getRelationshipPanel());
-        Application.getInstance().getActionManager()
-                .getAction(CopyAttributeRelationshipAction.class)
-                .setCurrentSelectedPanel(parentPanel.getRelationshipPanel());

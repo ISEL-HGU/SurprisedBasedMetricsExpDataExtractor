@@ -1,3 +1,0 @@
-                case "rest":
-                    s = "restEndpoint";
-                    break;

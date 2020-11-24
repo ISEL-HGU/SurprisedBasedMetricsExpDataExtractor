@@ -1,5 +1,0 @@
-		Painting p1 = context.newObject(Painting.class),
-				p2 = context.newObject(Painting.class),
-				p3 = context.newObject(Painting.class);
-		assertTrue(ExpressionFactory.noMatchExp("paintingArray", p1).match(artist)); // changed to align with SQL
-		assertTrue(ExpressionFactory.noMatchExp("paintingArray.paintingTitle", "p1").match(artist)); // changed to align with SQL

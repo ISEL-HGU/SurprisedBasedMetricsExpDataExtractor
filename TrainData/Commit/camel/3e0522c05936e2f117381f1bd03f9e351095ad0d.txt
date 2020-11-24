@@ -1,9 +1,0 @@
-import org.apache.camel.CamelContext;
-    public void setCamelContext(CamelContext camelContext) {
-        // noop
-    }
-
-    public CamelContext getCamelContext() {
-        return null;
-    }
-

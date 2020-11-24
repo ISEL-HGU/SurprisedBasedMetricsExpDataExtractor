@@ -1,6 +1,0 @@
-            attachTraitAnnotation(classNode);
-            attachTraitAnnotation(classNode);
-    private void attachTraitAnnotation(ClassNode classNode) {
-        classNode.addAnnotation(new AnnotationNode(ClassHelper.make(GROOVY_TRANSFORM_TRAIT)));
-    }
-

@@ -1,7 +1,0 @@
-    private final boolean unzipEmptyDirectorySupported;
-        this.unzipEmptyDirectorySupported = (boolean)inputMessage.getHeader("unzipEmptyDirectorySupported");
-            } else {
-                if (unzipEmptyDirectorySupported) {
-                    ZipEntry dirEntry = new ZipEntry(entry.getName()  ".");
-                    return dirEntry;
-                }

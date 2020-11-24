@@ -1,9 +1,0 @@
-import org.apache.camel.LoggingLevel;
-                LoggingLevel readLockLoggingLevel = (LoggingLevel) params.get("readLockLoggingLevel");
-                if (readLockLoggingLevel != null) {
-                    readLockStrategy.setReadLockLoggingLevel(readLockLoggingLevel);
-                }
-                LoggingLevel readLockLoggingLevel = (LoggingLevel) params.get("readLockLoggingLevel");
-                if (readLockLoggingLevel != null) {
-                    readLockStrategy.setReadLockLoggingLevel(readLockLoggingLevel);
-                }

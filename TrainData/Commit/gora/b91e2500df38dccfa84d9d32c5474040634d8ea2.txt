@@ -1,1 +1,0 @@
-  public static final String DEFAULT_KUDU_MASTERS = "localhost:7051";

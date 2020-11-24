@@ -1,2 +1,0 @@
-import org.apache.cayenne.BaseDataObject;
-public class ArtDataObject extends BaseDataObject {

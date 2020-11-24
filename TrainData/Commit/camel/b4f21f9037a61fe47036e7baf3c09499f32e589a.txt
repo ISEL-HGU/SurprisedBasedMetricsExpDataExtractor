@@ -1,1 +1,0 @@
-        if (value instanceof Number && (value.equals(Float.NaN) || value.equals(Double.NaN))) {

@@ -1,1 +1,0 @@
-            cache = new CommonCache<K, V>(CommonCache.DEFAULT_INITIAL_CAPACITY, limit, EvictableCache.EvictionStrategy.FIFO);

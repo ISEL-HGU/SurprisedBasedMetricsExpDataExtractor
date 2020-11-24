@@ -1,1 +1,0 @@
-            childUri = childUri  "?"  uri.substring(uri.indexOf('?')  1);

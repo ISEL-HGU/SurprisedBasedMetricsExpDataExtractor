@@ -1,5 +1,0 @@
-
-    @Override
-    public SparkComponent getComponent() {
-      return (SparkComponent) super.getComponent();
-    }

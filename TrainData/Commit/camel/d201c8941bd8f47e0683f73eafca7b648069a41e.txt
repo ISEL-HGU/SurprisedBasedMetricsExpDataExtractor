@@ -1,2 +1,0 @@
-            confBuilder.setHttpProxyUser(getHttpProxyUser());
-            confBuilder.setHttpProxyPassword(getHttpProxyPassword());

@@ -1,6 +1,0 @@
-import org.apache.gora.store.DataStoreFactory;
-    String mappingFile = DataStoreFactory.getMappingFile(properties, this,
-            MAPPING_FILE);
-    setDynamoDbMapping(readMapping(mappingFile));
-  private DynamoDBMapping readMapping(String filename) throws IOException {
-          .getResourceAsStream(filename));

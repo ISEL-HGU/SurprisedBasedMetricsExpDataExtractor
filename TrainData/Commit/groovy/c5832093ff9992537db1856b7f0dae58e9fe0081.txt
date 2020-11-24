@@ -1,5 +1,0 @@
-        GroovyClassDoc doc = classDocs.get(name);
-        if (doc != null) {
-            return doc;
-        }
-        return classDocs.get(name);

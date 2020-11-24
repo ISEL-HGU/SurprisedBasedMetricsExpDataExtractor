@@ -1,2 +1,0 @@
-@ConfigurationProperties(prefix = "camel.language.hl7terser")
-     * Whether to enable auto configuration of the hl7terser language. This is

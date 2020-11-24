@@ -1,6 +1,0 @@
-import org.codehaus.groovy.ast.InnerClassNode;
-            if (ownerClassNode instanceof InnerClassNode) {
-                visitor.visitClass(((InnerClassNode) ownerClassNode).getOuterMostClass());
-            } else {
-                visitor.visitClass(ownerClassNode);
-            }

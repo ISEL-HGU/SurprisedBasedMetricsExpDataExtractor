@@ -1,1 +1,0 @@
- * A simple Camel route that triggers from a file and posts to a FHIR server.

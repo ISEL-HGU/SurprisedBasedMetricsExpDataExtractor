@@ -1,2 +1,0 @@
-        // TODO: Use BindingPropertySupport instead of IntrospectionSupport
-

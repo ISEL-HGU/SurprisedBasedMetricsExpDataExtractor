@@ -1,9 +1,0 @@
-    private ParserVersion parserVersion = ParserVersion.V_2;
-            if ("true".equals(System.getProperty("groovy.antlr4"))) {
-                this.parserVersion = ParserVersion.V_4;
-            }
-            pluginFactory = ParserVersion.V_2 == parserVersion
-                                ? ParserPluginFactory.antlr2()
-                                : ParserPluginFactory.antlr4();
-        return this.parserVersion;
-        this.parserVersion = parserVersion;

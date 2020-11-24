@@ -1,3 +1,0 @@
- * @deprecated since 4.1 it is unused, as this factory is faulty assuming that
- *              we can freely interchange base class and it's subclasses.
- *

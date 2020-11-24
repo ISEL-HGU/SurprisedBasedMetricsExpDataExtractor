@@ -1,2 +1,0 @@
-import org.apache.camel.spi.DataFormat;
-import org.apache.camel.util.IOHelper;

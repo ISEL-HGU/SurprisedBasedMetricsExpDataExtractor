@@ -1,6 +1,0 @@
-            for (PropertiesSource source: getCamelContext().getRegistry().findByType(PropertiesSource.class)) {
-                addPropertiesSource(source);
-                LOG.info("PropertiesComponent added custom PropertiesSource (registry): {}", source);
-            }
-
-                    LOG.info("PropertiesComponent added custom PropertiesSource (factory): {}", ps);

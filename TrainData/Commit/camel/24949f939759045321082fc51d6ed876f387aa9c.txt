@@ -1,7 +1,0 @@
-        final GraphiteReporter reporter = GraphiteReporter.forRegistry(metricRegistry()).prefixedWith("camel-spring-boot").convertRatesTo(TimeUnit.SECONDS)
-    
-    @Bean
-    MetricRegistry metricRegistry() {
-    	return new MetricRegistry();
-    }
-                fac.setMetricsRegistry(metricRegistry());

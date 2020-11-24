@@ -1,4 +1,0 @@
-                    while (iterType.isDerivedFrom(ClassHelper.CLOSURE_TYPE)) {
-                        // GROOVY-8881: cater for closures within closures - getThisObject is already outer class of all closures
-                        iterType = iterType.getOuterClass();
-                    }

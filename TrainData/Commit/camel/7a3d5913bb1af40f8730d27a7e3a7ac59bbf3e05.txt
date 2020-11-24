@@ -1,3 +1,0 @@
-
-import com.ctc.wstx.sr.ValidatingStreamReader;
-                handler = this.contentHandlerClass.newInstance();

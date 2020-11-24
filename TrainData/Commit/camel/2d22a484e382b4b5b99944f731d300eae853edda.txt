@@ -1,2 +1,0 @@
-        default PulsarEndpointProducerBuilder topicUri(String topicUri) {
-            setProperty("topicUri", topicUri);

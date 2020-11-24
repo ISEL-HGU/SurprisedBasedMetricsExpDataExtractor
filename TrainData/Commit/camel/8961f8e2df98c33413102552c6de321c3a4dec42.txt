@@ -1,6 +1,0 @@
-
-import org.apache.camel.model.ModelCamelContext;
-import org.apache.camel.spi.PropertiesComponent;
-import org.apache.camel.support.jsse.KeyStoreParameters;
-import org.apache.camel.support.jsse.SSLContextParameters;
-import org.apache.camel.support.jsse.SecureRandomParameters;

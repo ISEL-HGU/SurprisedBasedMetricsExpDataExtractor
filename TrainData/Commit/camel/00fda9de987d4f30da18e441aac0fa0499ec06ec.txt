@@ -1,5 +1,0 @@
-import org.bson.Document;
-    @SuppressWarnings("unchecked")
-        } else if (type == Document.class) {
-            Map<String, Object> m = OBJECT_MAPPER.convertValue(value, Map.class);
-            return new Document(m);

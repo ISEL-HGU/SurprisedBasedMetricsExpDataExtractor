@@ -1,3 +1,0 @@
-    private final CamelClusterService clusterService;
-        this.clusterService = cluster;
-        return this.clusterService;

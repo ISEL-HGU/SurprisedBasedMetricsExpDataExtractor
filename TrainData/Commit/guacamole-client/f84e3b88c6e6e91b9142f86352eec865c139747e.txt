@@ -1,5 +1,0 @@
-    public void shutdown() {
-        // Do nothing
-    }
-
-    @Override

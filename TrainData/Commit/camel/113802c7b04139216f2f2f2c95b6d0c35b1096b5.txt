@@ -1,3 +1,0 @@
-    @Metadata(deprecationNote = "As of version 2.11, replaced by certResource.")
-     * @param knownHostsResource
-     * @param failOnUnknownHost

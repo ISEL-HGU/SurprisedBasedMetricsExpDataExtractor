@@ -1,1 +1,0 @@
-        CgenConfiguration cgenConfiguration = new CgenConfiguration(false);

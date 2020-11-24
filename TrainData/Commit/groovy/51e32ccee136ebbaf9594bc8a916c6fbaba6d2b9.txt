@@ -1,2 +1,0 @@
-    private boolean antlr2Parser = true; // TODO replace it with ParserVersion
-            antlr2Parser = !"true".equals(System.getProperty("groovy.antlr4"));

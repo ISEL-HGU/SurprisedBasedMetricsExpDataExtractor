@@ -1,2 +1,0 @@
-import org.apache.camel.component.salesforce.api.utils.XStreamUtils;
-                return XStreamUtils.createXStream();

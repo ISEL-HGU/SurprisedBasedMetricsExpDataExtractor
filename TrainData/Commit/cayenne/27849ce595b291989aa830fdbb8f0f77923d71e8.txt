@@ -1,3 +1,0 @@
-import org.apache.cayenne.access.types.ExtendedType;
-
-            return "NULL";

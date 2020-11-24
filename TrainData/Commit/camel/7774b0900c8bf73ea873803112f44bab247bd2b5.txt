@@ -1,7 +1,0 @@
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.xml.transform.Source;
-
-            report = schematronProcessor.validate((Source)payload);
-            report = schematronProcessor.validate((String)payload);

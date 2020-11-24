@@ -1,1 +1,0 @@
-     * Invoked each time a job is triggered, this controls whether the given job shall be started or not.

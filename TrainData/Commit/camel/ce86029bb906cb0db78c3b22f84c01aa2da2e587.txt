@@ -1,3 +1,0 @@
-import com.fasterxml.jackson.module.jsonSchema.JsonSchema;
-                final Set<JsonSchema> allSchemas = new HashSet<>();
-                        allSchemas.addAll(JsonUtils.getSObjectJsonSchema(schemaObjectMapper, description, jsonSchemaId, true));

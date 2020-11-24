@@ -1,4 +1,0 @@
-            if (endpoint.getConfiguration().getRawPayload()) {
-                // return sobject string as exchange body
-                in.setBody(sObjectString);
-            } else if (sObjectClass == null) {

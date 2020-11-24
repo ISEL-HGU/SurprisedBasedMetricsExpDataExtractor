@@ -1,5 +1,0 @@
-        
-        // Get the timezone value
-        String timezone = request.getTimezone();
-        if (timezone != null & !timezone.isEmpty())
-            info.setTimezone(timezone);

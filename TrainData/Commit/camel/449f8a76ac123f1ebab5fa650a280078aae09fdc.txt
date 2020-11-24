@@ -1,6 +1,0 @@
-    boolean isDefault;
-    public Method setDefault() {
-        isDefault = true;
-        return this;
-    }
-

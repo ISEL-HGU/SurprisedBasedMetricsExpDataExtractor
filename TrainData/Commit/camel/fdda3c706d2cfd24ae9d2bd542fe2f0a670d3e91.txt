@@ -1,2 +1,0 @@
-import com.amazonaws.regions.Regions;
-            AmazonCloudWatch client = AmazonCloudWatchClientBuilder.standard().withCredentials(credentialsProvider).withRegion(Regions.valueOf(configuration.getRegion())).build();

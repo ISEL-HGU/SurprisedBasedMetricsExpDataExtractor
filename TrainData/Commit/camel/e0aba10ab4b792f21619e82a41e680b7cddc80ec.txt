@@ -1,7 +1,0 @@
-import org.apache.camel.Exchange;
-        //remove Content-Encoding from request
-        if (request instanceof org.eclipse.jetty.server.Request) {
-            org.eclipse.jetty.server.Request jettyRequest = (org.eclipse.jetty.server.Request)request;
-            jettyRequest.getHttpFields().remove(Exchange.CONTENT_ENCODING);
-        }
-        

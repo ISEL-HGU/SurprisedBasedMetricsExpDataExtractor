@@ -1,3 +1,0 @@
-        // to a property expression, as ACG would lose the information in
-        // processClassVariable before it reaches any makeCall, that could handle it
-        receiver.setSourcePosition(expr);

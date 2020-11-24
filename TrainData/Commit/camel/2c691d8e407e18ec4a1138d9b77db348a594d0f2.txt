@@ -1,5 +1,0 @@
-        // and we should not be regarded as exhausted as we are in a onCompletion block
-        Object exhausted = exchange.removeProperty(Exchange.REDELIVERY_EXHAUSTED);
-            if (exhausted != null) {
-                exchange.setProperty(Exchange.REDELIVERY_EXHAUSTED, exhausted);
-            }

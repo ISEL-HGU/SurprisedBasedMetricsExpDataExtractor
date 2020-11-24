@@ -1,6 +1,0 @@
- b/core/src/main/java/hivemall/utils/stream/IntStream.java
-package hivemall.utils.stream;
-import javax.annotation.Nonnull;
-public interface IntStream {
-    @Nonnull
-    IntIterator iterator();

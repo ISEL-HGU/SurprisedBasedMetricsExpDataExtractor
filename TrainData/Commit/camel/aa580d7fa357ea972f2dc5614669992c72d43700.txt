@@ -1,6 +1,0 @@
-    private WatchService watcher;
-                watcher = path.getFileSystem().newWatchService();
-
-        if (watcher != null) {
-            IOHelper.close(watcher);
-        }

@@ -1,1 +1,0 @@
-@UriEndpoint(firstVersion = "2.18.0", scheme = "gridfs", title = "MongoDB GridFS", syntax = "gridfs:connectionBean", label = "database,nosql")

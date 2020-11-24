@@ -1,8 +1,0 @@
-        } else if (asBoolean(ctx.namedPropertyArgs())) { // this is a special way to signify a cast, e.g. Person[name: 'Daniel.Sun', location: 'Shanghai']
-            if (mapEntryExpressionList.size() == 0) {
-                // expecting list of MapEntryExpressions later so use SpreadMap to smuggle empty MapExpression to later stages
-                right = configureAST(
-                        new SpreadMapExpression(configureAST(new MapExpression(), ctx.namedPropertyArgs())),
-                        ctx.namedPropertyArgs());
-            } else if (mapEntryExpressionList.size() == 1 && mapEntryExpressionList.get(0).getKeyExpression() instanceof SpreadMapExpression) {
-                right = mapEntryExpressionList.get(0).getKeyExpression();

@@ -1,3 +1,0 @@
-                confService.getLDAPSearchConstraints()
-                false,
-                confService.getLDAPSearchConstraints()

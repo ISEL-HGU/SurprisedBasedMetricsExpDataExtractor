@@ -1,3 +1,0 @@
-        ClientRuntime runtime = ClientRuntime.builder()
-                                .properties(properties)
-                                .build();

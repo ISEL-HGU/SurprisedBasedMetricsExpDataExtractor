@@ -1,3 +1,0 @@
-import org.apache.camel.spi.ManagementObjectNameStrategy;
-import org.apache.camel.util.ObjectHelper;
-        registerPropertyForBeanType(applicationContext, ManagementObjectNameStrategy.class, managementStrategy::setManagementObjectNameStrategy);

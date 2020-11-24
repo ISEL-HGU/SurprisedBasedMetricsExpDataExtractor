@@ -1,3 +1,0 @@
-            // OGNL must start with a . ? or [
-            boolean ognlStart = remainder.startsWith(".") || remainder.startsWith("?") || remainder.startsWith("[");
-            boolean invalid = !ognlStart || OgnlHelper.isInvalidValidOgnlExpression(remainder);

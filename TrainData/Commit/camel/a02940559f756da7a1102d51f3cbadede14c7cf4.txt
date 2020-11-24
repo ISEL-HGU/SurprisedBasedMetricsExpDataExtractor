@@ -1,2 +1,0 @@
-        return -1;
-    public Resource addPath(String path) throws IOException {

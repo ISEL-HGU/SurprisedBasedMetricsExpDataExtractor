@@ -1,2 +1,0 @@
-import javax.tools.Diagnostic.Kind;
-            processingEnv.getMessager().printMessage(Kind.ERROR, "Unable to process elements annotated with @XmlRootElement: "  e.getMessage());

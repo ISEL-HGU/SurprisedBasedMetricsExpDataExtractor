@@ -1,1 +1,0 @@
-        syntax = "servlet:contextPath", excludeProperties = "httpUri", consumerOnly = true, label = "http")

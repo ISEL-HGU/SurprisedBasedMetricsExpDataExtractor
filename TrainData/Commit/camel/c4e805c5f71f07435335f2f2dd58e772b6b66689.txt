@@ -1,1 +1,0 @@
-     * Syntax: <code>aws-s3://bucketNameOrArn</code>

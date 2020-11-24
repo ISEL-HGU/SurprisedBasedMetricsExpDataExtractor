@@ -1,2 +1,0 @@
-    private static Charset utf8 = Charset.forName("UTF-8");
-    PeriodConverter() {}

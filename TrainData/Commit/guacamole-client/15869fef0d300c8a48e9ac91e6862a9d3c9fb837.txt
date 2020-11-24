@@ -1,7 +1,0 @@
-                logger.debug("Calculating weights for connections {} and {}.", a.getName(), b.getName());
-                logger.debug("Connection {} has computed weight of {}.", a.getName(), connsA * 10000 / weightA);
-                logger.debug("Connection {} has computed weight of {}.", b.getName(), connsB * 10000 / weightB);
-            // If connection weight is negative, this host is disabled and should not be used.
-            if (connection.getConnectionWeight() < 0)
-                continue;
-

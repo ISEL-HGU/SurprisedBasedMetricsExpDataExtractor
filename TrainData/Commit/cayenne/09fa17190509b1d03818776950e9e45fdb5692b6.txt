@@ -1,4 +1,0 @@
-            if(channel != null) {
-                channel.close();
-            }
-        } finally {

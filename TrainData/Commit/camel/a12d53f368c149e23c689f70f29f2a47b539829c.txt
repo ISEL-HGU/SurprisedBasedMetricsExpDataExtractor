@@ -1,4 +1,0 @@
-import org.apache.camel.processor.aggregate.GroupedBodyAggregationStrategy;
-     * Creates a {@link GroupedBodyAggregationStrategy} aggregation strategy.
-    public static AggregationStrategy groupedBody() {
-        return new GroupedBodyAggregationStrategy();

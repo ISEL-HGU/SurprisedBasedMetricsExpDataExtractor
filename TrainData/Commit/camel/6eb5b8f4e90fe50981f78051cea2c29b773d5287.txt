@@ -1,2 +1,0 @@
-    protected void onResponseComplete(Result result, byte[] content) {
-                    onResponseComplete(result, baos.toByteArray());

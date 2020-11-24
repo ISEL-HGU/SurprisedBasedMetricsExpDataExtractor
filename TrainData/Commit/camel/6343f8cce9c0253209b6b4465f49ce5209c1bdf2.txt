@@ -1,3 +1,0 @@
-            buffer.append("\n    \"verifiers\": \"").append(componentModel.getVerifiers()).append("\",");
-        buffer.append("\n    \"version\": \"").append(componentModel.getVersionId()).append("\"");
-

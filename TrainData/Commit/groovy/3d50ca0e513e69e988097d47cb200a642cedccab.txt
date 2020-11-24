@@ -1,2 +1,0 @@
-        if (asBoolean(ctx.block())) {
-            return configureAST(this.visitBlock(ctx.block()), ctx);

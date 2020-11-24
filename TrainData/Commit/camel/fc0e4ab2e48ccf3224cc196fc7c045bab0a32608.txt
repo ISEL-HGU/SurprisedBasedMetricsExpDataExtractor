@@ -1,2 +1,0 @@
- * Use {@link org.apache.camel.support.LRUCacheFactory} to create a new instance (do not use the constructor).
- * @see org.apache.camel.support.LRUCacheFactory

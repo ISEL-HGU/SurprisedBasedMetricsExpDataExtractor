@@ -1,3 +1,0 @@
-                    // subscription is terminated, ignore
-                    return;
-                terminated = true;

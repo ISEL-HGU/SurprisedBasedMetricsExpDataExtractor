@@ -1,8 +1,0 @@
-     * The project build directory
-     *
-     */
-    @Parameter(defaultValue="${project.build.directory}")
-    protected File buildDir;
-
-    /**
-        prepareComponent(getLog(), project, projectHelper, buildDir, componentOutDir, buildContext);

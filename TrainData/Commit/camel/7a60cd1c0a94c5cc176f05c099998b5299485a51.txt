@@ -1,4 +1,0 @@
-import org.apache.camel.util.ObjectHelper;
-        if (endpoint.getConfiguration().isFifoQueue() && ObjectHelper.isEmpty(getEndpoint().getConfiguration().getMessageGroupIdStrategy())) {
-            throw new IllegalArgumentException("messageGroupIdStrategy must be set for FIFO queues.");
-        }

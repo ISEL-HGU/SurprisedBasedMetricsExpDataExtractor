@@ -1,3 +1,0 @@
-            Flux.from(camel.from("file:input", InputStream.class))
-                    .flatMap(camel.to("direct:unmarshal", String.class))
-                    .flatMap(camel.to("direct:send", String.class))

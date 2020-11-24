@@ -1,6 +1,0 @@
-                  if ((0x7ff609c00000000L & l) != 0L)
-                  else if (curChar == 58)
-                     jjstateSet[jjnewStateCnt] = 11;
-                  if ((0x7ff609d00000000L & l) != 0L)
-                  if ((0x7ff609c00000000L & l) == 0L)
-                  if ((0x7ff609c00000000L & l) == 0L)

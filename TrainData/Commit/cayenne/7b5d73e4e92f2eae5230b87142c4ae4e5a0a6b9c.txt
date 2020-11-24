@@ -1,3 +1,0 @@
-     * @param pkAttribute - db attribute for PK
-    public boolean declaresDbAttribute(DbAttribute pkAttribute) {
-        return objEntity.getAttributeForDbAttribute(pkAttribute) != null;

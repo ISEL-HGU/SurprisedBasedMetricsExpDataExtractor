@@ -1,9 +1,0 @@
-                    String flow = rs.getFlow();
-                    if (flow == null) {
-                        if (rs.getAuthorizationUrl() != null && rs.getTokenUrl() != null) {
-                            flow = "accessCode";
-                        } else if (rs.getTokenUrl() == null && rs.getAuthorizationUrl() != null) {
-                            flow = "implicit";
-                        }
-                    }
-                    auth.setFlow(flow);

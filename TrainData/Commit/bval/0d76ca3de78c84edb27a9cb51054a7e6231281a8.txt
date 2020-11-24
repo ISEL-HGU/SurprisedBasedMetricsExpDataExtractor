@@ -1,4 +1,0 @@
-        final Stream<Class<?>> result = hierarchy.build().map(w::unwrapArrayComponentType);
-        if (validatedType.isInterface() || validatedType.isArray()) {
-            return Stream.concat(result, Stream.of(Object.class));
-        return result;

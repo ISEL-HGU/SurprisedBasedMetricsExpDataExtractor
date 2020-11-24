@@ -1,1 +1,0 @@
-        message.setHeader(KafkaConstants.TIMESTAMP, record.timestamp());

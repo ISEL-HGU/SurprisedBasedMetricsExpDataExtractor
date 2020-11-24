@@ -1,5 +1,0 @@
-
-    @Override
-    public boolean supportsExpressionInHaving() {
-        return false;
-    }

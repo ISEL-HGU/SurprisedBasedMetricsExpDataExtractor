@@ -1,2 +1,0 @@
-        final TypeSpec generatedRouteBuilder = TypeSpec.classBuilder(classNameToUse).superclass(RouteBuilder.class)
-        return JavaFile.builder(packageNameToUse, generatedRouteBuilder).indent(indent).build();

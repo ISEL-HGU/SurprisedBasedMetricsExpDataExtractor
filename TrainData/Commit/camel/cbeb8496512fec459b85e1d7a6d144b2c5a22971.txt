@@ -1,4 +1,0 @@
-import static org.apache.camel.component.olingo2.api.impl.Olingo4Helper.getContentTypeHeader;
-
-                            String type = result.containsHeader(HttpHeaders.CONTENT_TYPE) ? result.getFirstHeader(HttpHeaders.CONTENT_TYPE).getValue() : null;
-                                result.getEntity().getContent(), type);

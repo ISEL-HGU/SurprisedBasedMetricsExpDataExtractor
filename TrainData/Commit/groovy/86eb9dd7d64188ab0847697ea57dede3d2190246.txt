@@ -1,2 +1,0 @@
-import java.lang.reflect.AnnotatedElement;
-    public static String getGroovydoc(AnnotatedElement holder) {

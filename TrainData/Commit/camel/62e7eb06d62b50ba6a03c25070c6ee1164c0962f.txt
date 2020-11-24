@@ -1,2 +1,0 @@
-        return getOrCreateConnectionFactory();
-        return getOrCreateConnectionFactory();

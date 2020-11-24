@@ -1,5 +1,0 @@
-    private final boolean warnOnEarlyShutdown;
-    public SpringBootCamelContext(ApplicationContext applicationContext, boolean warnOnEarlyShutdown) {
-        this.warnOnEarlyShutdown = warnOnEarlyShutdown;
-        if (warnOnEarlyShutdown && taken < 1200) { // give it a bit of slack
-            boolean starterWeb = cp != null && cp.contains("spring-boot-starter-web");

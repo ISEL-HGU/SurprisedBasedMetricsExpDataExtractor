@@ -1,1 +1,0 @@
-public class SecuredBean1 extends SomeParentClass

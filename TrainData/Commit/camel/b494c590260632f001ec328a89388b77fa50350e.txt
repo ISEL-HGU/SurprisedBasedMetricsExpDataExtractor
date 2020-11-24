@@ -1,2 +1,0 @@
-import org.apache.camel.component.hdfs.HdfsComponent;
-        HdfsComponent.setKerberosConfigFile(kerberosConfigFileLocation);

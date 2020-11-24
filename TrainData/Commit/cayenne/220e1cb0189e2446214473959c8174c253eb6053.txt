@@ -1,6 +1,0 @@
-import org.apache.cayenne.event.NoopEventBridge;
-            EventBridge eventBridge = eventBridgeProvider.get();
-            if (eventBridge instanceof NoopEventBridge) {
-                return;
-            }
-            store.setEventBridge(eventBridge);

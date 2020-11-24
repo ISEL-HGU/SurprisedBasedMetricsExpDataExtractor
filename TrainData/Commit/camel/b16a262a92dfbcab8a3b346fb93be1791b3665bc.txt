@@ -1,4 +1,0 @@
-            Boolean redelivered = exchange.isExternalRedelivered();
-            if (redelivered != null) {
-                exchange.setProperty(Exchange.EXTERNAL_REDELIVERED, redelivered);
-            }

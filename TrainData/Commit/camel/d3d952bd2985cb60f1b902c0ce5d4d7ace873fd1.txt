@@ -1,2 +1,0 @@
-import java.nio.charset.StandardCharsets;
-            exchange.getIn().setHeader(RedisConstants.CHANNEL, new String(message, StandardCharsets.UTF_8));

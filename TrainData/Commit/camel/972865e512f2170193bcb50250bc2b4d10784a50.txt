@@ -1,3 +1,0 @@
-        System.setProperty("skipStartingCamelContext", "true");
-        System.clearProperty("skipStartingCamelContext");
-        SpringCamelContext.setNoStart(false);

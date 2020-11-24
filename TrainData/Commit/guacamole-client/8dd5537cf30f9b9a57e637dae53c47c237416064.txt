@@ -1,8 +1,0 @@
-import java.util.Map;
-     * The name of the user attribute which stores the TOTP key.
-     */
-    private static final String TOTP_KEY_ATTRIBUTE_NAME = "guac-totp-key";
-
-    /**
-        Map<String, String> attributes = context.self().getAttributes();
-        return attributes.get(TOTP_KEY_ATTRIBUTE_NAME);

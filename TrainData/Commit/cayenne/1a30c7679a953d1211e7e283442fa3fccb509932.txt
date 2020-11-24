@@ -1,3 +1,0 @@
-    private BytesConverter<Long> longConverter;
-    public UtilDateConverter(BytesConverter<Long> longConverter) {
-        return new Date(longConverter.fromBytes(bytes));

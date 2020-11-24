@@ -1,5 +1,0 @@
-     * Returns the most applicable HTTP status code that can be associated
-     * with this exception.
-     *     An integer representing the most applicable HTTP status code
-     *     associated with this exception.
-    public int getHttpStatusCode() {

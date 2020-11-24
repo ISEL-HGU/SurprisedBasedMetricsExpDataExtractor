@@ -1,1 +1,0 @@
-    public static String wrapWords(String line, String newLine, int watermark, boolean wrapLongWords) {

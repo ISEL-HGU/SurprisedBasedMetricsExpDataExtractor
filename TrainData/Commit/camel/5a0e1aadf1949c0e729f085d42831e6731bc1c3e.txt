@@ -1,1 +1,0 @@
-    private Map<Object, Injector> injectors = new ConcurrentHashMap<>();

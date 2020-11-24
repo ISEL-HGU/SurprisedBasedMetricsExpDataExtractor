@@ -1,5 +1,0 @@
-        setHeaderFilterStrategy(ep.getHeaderFilterStrategy());
-        setTransferException(ep.isTransferException());
-        setEagerCheckContentAvailable(ep.isEagerCheckContentAvailable());
-        setMapHttpMessageBody(ep.isMapHttpMessageBody());
-        setMapHttpMessageHeaders(ep.isMapHttpMessageHeaders());

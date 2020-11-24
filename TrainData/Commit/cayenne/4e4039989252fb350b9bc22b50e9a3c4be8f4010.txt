@@ -1,6 +1,0 @@
-import org.apache.cayenne.query.ObjectSelect;
-		Map<String, ObjectSelect<DataObject>> queriesByEntity = new HashMap<>();
-			ObjectSelect<DataObject> query;
-				query = ObjectSelect.query(DataObject.class, entityName);
-			query.or(idExp);
-		for (ObjectSelect<DataObject> query : queriesByEntity.values()) {

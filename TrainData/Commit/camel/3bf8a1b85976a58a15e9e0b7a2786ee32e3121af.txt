@@ -1,4 +1,0 @@
-                //Propagate the encoding of the exchange
-                if (charset != null) {
-                    exchange.setProperty(Exchange.CHARSET_NAME, charset);
-                }

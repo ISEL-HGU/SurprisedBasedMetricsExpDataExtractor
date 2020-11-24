@@ -1,3 +1,0 @@
-                    (int) (elapsed / stepSize));
-                    (float) elapsed / (float) duration);
-                    elapsed);

@@ -1,3 +1,0 @@
-        from("timer:foo?period=3s")
-            .transform(constant("Hello World"))
-            .to("jms:queue:cheese");

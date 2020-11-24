@@ -1,4 +1,0 @@
- * <p/>
- * The rest producer side is implemented in {@link org.apache.camel.component.rest.RestProducerBindingProcessor}
- *
- * @see CamelInternalProcessor

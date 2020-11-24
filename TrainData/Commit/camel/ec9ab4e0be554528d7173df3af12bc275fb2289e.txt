@@ -1,3 +1,0 @@
-import org.apache.camel.cdi.transaction.JtaTransactionErrorHandlerBuilder;
-
-            return JtaTransactionErrorHandlerBuilder.class;

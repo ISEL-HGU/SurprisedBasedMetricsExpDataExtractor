@@ -1,1 +1,0 @@
-        if (type.isAssignableFrom(Map.class) && isArrayOrCollection(value)) {

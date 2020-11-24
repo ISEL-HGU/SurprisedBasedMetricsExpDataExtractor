@@ -1,6 +1,0 @@
-        Property<String> nameSubstr = Artist.ARTIST_NAME.substring(1, 6);
-            q = ObjectSelect
-                    .columnQuery(Artist.class, Artist.ARTIST_NAME.substring(1, 6).alias("name_substr"), Property.COUNT)
-            q = ObjectSelect.columnQuery(Artist.class, Artist.ARTIST_NAME.substring(1, 6), Property.COUNT)
-            q = ObjectSelect.columnQuery(Artist.class, Artist.ARTIST_NAME.substring(1, 6).alias("name_substr"), Property.COUNT)
-                    .where(Artist.ARTIST_NAME.substring(1, 1).eq("a"))

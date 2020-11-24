@@ -1,7 +1,0 @@
-            List<ModeledConnection> connections, boolean includeFailoverOnly)
-            throws GuacamoleException {
-            // Skip connections which are failover-only if they are excluded
-            // from this connection attempt
-            if (!includeFailoverOnly && connection.isFailoverOnly())
-                continue;
-

@@ -1,5 +1,0 @@
-import org.apache.cayenne.query.SelectQuery;
-public class SelectQueryMainTab extends BaseQueryMainTab {
-        super(mediator);
-        initQueryRoot();
-    @Override

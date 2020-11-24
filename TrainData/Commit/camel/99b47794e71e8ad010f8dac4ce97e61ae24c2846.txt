@@ -1,4 +1,0 @@
-                return (T)annotation;
-    @Override
-    public <T extends Annotation> Set<T> getAnnotations(Class<T> annotationType) {
-    }

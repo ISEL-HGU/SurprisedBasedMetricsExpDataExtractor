@@ -1,7 +1,0 @@
-                    injectField(field, produce.uri(), produce.ref(), produce.property(), bean, beanName, produce.binding());
-        injectField(field, endpointUri, endpointRef, endpointProperty, bean, beanName, true);
-    }
-    
-    public void injectField(Field field, String endpointUri, String endpointRef, String endpointProperty,
-                               Object bean, String beanName, boolean binding) {
-                        field.getName(), bean, beanName, binding));

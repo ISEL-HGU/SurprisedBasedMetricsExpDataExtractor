@@ -1,6 +1,0 @@
-        StandardOpenOption[] options = {
-                StandardOpenOption.TRUNCATE_EXISTING,
-                StandardOpenOption.CREATE,
-                StandardOpenOption.WRITE
-        };
-        try(BufferedWriter br = Files.newBufferedWriter(path, options)) {

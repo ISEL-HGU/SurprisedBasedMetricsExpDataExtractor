@@ -1,9 +1,0 @@
-    RelationshipDisplayEventType(ProjectController controller) {
-    private Relationship[] getLastEntityRelationships(Entity entity) {
-        List<Relationship> relationshipList = new ArrayList<>();
-        String rels = (entity instanceof ObjEntity) ? preferences.getObjRels() : preferences.getDbRels();
-            Relationship rel = entity.getRelationship(objRelName);
-            if(rel != null) {
-                relationshipList.add(rel);
-            }
-        return relationshipList.toArray(new Relationship[0]);

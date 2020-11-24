@@ -1,4 +1,0 @@
-        // some arguments must be in numeric values so we need to fix this
-        Object queueLengthLimit = queueArgs.get(RabbitMQConstants.RABBITMQ_QUEUE_LENGTH_LIMIT_KEY);
-            queueArgs.put(RabbitMQConstants.RABBITMQ_QUEUE_LENGTH_LIMIT_KEY, Long.parseLong((String) queueLengthLimit));
-    private void populateQueueArgumentsFromDeadLetterExchange(final Map<String, Object> queueArgs) {

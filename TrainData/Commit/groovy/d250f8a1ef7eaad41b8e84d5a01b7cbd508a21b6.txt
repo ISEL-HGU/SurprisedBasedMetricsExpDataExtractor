@@ -1,3 +1,0 @@
- b/subprojects/groovy-xml/src/test/groovy/groovy/xml/bugs/MarkupInScriptBug.java
-package groovy.xml.bugs;
-        assertScriptFile("src/test/groovy/groovy/xml/script/AtomTestScript.groovy");

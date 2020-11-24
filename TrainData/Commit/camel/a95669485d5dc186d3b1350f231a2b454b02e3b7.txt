@@ -1,5 +1,0 @@
-    private static volatile LRUCacheFactory instance;
-        if (instance == null) {
-                if (instance == null) {
-                    instance = createLRUCacheFactory();
-        return instance;

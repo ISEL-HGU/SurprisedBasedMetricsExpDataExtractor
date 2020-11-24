@@ -1,3 +1,0 @@
-import org.apache.cayenne.di.Inject;
-
-        List<String> keys = new ArrayList<>(configuration.keySet());

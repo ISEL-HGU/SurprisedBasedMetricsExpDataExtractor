@@ -1,8 +1,0 @@
-import com.amazonaws.auth.AWSCredentialsProvider;
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
-import com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflow;
-import com.amazonaws.services.simpleworkflow.AmazonSimpleWorkflowClientBuilder;
-            amazonSWClient = (AmazonSimpleWorkflowClient) createSWClient();
-    private AmazonSimpleWorkflow createSWClient() throws Exception {
-        AWSCredentialsProvider credentialsProvider = new AWSStaticCredentialsProvider(credentials);
-        AmazonSimpleWorkflow client = AmazonSimpleWorkflowClientBuilder.standard().withClientConfiguration(clientConfiguration).withCredentials(credentialsProvider).build();

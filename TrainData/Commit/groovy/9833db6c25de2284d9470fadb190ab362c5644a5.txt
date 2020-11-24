@@ -1,3 +1,0 @@
-import java.util.Objects;
-
-        if (!Objects.equals(data, that.data)) return false;

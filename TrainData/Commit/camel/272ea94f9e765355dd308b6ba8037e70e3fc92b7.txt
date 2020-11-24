@@ -1,5 +1,0 @@
-    private boolean continueProcessing(Exchange exchange) {
-        boolean isRoutePolicyRunAllowed(RoutePolicy policy) {
-            if (context != null) {
-                return context.isStopping() || context.isStopped();
-            return new StopWatch();

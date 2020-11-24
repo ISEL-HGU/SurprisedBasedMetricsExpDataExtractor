@@ -1,6 +1,0 @@
-import org.codehaus.groovy.runtime.memoize.ConcurrentSoftCache;
-import java.lang.ref.SoftReference;
-        SoftReference<ClassNode> sr = PARAMETERIZED_TYPE_CACHE.getAndPut(new ParameterizedTypeCacheKey(genericsClass, actualType), key -> new SoftReference<>(findParameterizedType(key.getGenericsClass(), key.getActualType())));
-
-        return null == sr ? null : sr.get();
-    private static final EvictableCache<ParameterizedTypeCacheKey, SoftReference<ClassNode>> PARAMETERIZED_TYPE_CACHE = new ConcurrentSoftCache<>(64);

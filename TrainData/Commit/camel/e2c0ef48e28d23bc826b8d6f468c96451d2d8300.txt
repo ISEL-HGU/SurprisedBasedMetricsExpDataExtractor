@@ -1,2 +1,0 @@
-            log.debug("Initializing FastTypeConverterRegistry - requires converters to be annotated with @Converter(loader = true)");
-                    log.warn("Annotation scanning mode loaded {} type converters. Its recommended to migrate to @Converter(loader = true) for fast type converter mode.", additional);

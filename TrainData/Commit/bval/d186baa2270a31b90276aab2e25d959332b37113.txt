@@ -1,7 +1,0 @@
-        if (customBuilders.isEmpty()) {
-            return null;
-        }
-        if (customBuilders.size() == 1) {
-            return customBuilders.get(0);
-        }
-        return customBuilders.stream()

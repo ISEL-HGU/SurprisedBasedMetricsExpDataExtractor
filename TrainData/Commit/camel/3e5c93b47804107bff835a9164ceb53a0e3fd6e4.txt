@@ -1,7 +1,0 @@
-     * This option is applied only for readLock=changed. It allows you to configure a minimum file length.
-     * This option is applied only for readLock=changed.
-     * It allows to specify a minimum age the file must be before attempting to acquire the read lock.
-     * This option is applied only for readLock=idempotent.
-     * It allows to specify whether to remove the file name entry from the idempotent repository
-     * This option is applied only for readLock=idempotent.
-     * It allows to specify whether to remove the file name entry from the idempotent repository

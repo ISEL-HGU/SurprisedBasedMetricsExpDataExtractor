@@ -1,4 +1,0 @@
-import org.apache.camel.util.PropertiesHelper;
-        return PropertiesHelper.extractProperties(args, EXCHANGE_ARG_PREFIX);
-        return PropertiesHelper.extractProperties(args, QUEUE_ARG_PREFIX);
-        return PropertiesHelper.extractProperties(args, BINDING_ARG_PREFIX);

@@ -1,2 +1,0 @@
-        ClassLoader classLoader = getCamelContext().getApplicationContextClassLoader();
-        solverFactory = SolverFactory.createFromXmlResource(configuration.getConfigFile(), classLoader);

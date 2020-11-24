@@ -1,1 +1,0 @@
-            LOGGER.debug("Schedule health-checks to be executed every {} ({})", checkInterval, checkIntervalUnit.name());

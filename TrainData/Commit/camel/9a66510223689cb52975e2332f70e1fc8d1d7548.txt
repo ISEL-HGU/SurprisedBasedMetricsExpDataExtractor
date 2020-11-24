@@ -1,8 +1,0 @@
-                if (client.isConnected()) {
-                    log.trace("Disconnecting due to exception during connect");
-                    try {
-                        client.disconnect(); // ensures socket is closed
-                    } catch (IOException ignore) {
-                        log.trace("Ignore exception during disconnect: {}", ignore.getMessage());
-                    }
-                }

@@ -1,2 +1,0 @@
-                restClient.getGlobalObjects(Collections.emptyMap(), callback);
-                    restClient.getDescription(name, Collections.emptyMap(), callback);

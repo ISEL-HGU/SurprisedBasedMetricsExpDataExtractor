@@ -1,3 +1,0 @@
-    private final AtomixConfiguration<?> configuration;
-    AtomixClusterView(CamelClusterService cluster, String namespace, Atomix atomix, AtomixConfiguration<?> configuration) {
-        this.configuration = configuration;

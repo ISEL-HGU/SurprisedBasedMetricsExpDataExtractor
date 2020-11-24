@@ -1,6 +1,0 @@
-import java.util.function.Supplier;
-                Object value = qualifier.get(dbAttributes.get(i).getName());
-                if(value instanceof Supplier) {
-                    return ((Supplier) value).get();
-                }
-                return value;

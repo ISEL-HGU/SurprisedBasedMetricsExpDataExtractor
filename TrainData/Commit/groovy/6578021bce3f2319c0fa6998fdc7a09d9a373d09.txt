@@ -1,4 +1,0 @@
-        msg.append(superMethod.isPublic() ? "public" : (superMethod.isProtected() ? "protected" : "package-private"));
-            if ((mn.isPrivate() && !superMethod.isPrivate())
-                    || (mn.isProtected() && !superMethod.isProtected() && !superMethod.isPrivate())
-                    || (!mn.isPrivate() && !mn.isProtected() && !mn.isPublic() && (superMethod.isPublic() || superMethod.isProtected()))) {

@@ -1,5 +1,0 @@
-import org.apache.camel.util.StringHelper;
-
-            String hrefPath = StringHelper.after(href, scheme);
-                href = scheme  FileUtil.compactPath(hrefPath);
-                href = scheme  FileUtil.compactPath(hrefPath, '/');

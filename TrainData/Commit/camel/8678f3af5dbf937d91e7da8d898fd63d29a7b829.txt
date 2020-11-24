@@ -1,2 +1,0 @@
-import org.apache.camel.model.dataformat.CBORDataFormat;
-        map.put(CBORDataFormat.class, CBORDataFormatReifier::new);

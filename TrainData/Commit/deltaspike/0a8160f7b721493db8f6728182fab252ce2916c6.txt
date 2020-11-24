@@ -1,8 +1,0 @@
-                try
-                {
-                    javaArchive.addClass(className);
-                }
-                catch (Throwable t)
-                {
-                    LOG.info("Ignoring class "  className  " due to "  t.getMessage());
-                }

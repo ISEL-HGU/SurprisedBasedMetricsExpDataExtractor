@@ -1,1 +1,0 @@
-            .to("stream:out");

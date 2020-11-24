@@ -1,2 +1,0 @@
-        this.clientActivityListener = new DefaultFtpClientActivityListener(transferLogger, this.endpoint.isTransferLoggingVerbose(),
-            this.endpoint.getTransferLoggingIntervalSeconds(), this.endpoint.getConfiguration().remoteServerInformation());

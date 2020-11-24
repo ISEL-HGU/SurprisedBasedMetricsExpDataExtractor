@@ -1,2 +1,0 @@
-import org.apache.camel.util.IOHelper;
-            String template = IOHelper.toString(reader);

@@ -1,8 +1,0 @@
-        configureEndPosition(astNode, stop);
-            configureEndPosition(astNode, start);
-    private <T extends ASTNode> void configureEndPosition(T astNode, Token token) {
-        Pair<Integer, Integer> endPosition = endPosition(token);
-        astNode.setLastLineNumber(endPosition.getKey());
-        astNode.setLastColumnNumber(endPosition.getValue());
-    }
-

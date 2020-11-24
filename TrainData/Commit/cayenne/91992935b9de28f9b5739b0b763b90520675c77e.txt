@@ -1,1 +1,0 @@
-		Driver driver = (Driver)objectFactory.getJavaClass(descriptor.getJdbcDriver()).newInstance();

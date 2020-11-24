@@ -1,8 +1,0 @@
-     * @see EndpointValidatorDefinition, ProcessorValidator
-     * @see PredicateValidatorDefinition, ProcessorValidator
-     * @see PredicateValidatorDefinition, ProcessorValidator
-     * @see CustomValidatorDefinition
-     * @see CustomValidatorDefinition
-     * Configures a new Validator according to the configurations built on this builder
-     * and register it into the given {@code CamelContext}.
-     * @param camelContext the given CamelContext

@@ -1,6 +1,0 @@
-import javax.net.ssl.HostnameVerifier;
-     * To use a custom X509HostnameVerifier such as DefaultHostnameVerifier or
-     * org.apache.http.conn.ssl.NoopHostnameVerifier.
-    private HostnameVerifier x509HostnameVerifier;
-    public HostnameVerifier getX509HostnameVerifier() {
-    public void setX509HostnameVerifier(HostnameVerifier x509HostnameVerifier) {

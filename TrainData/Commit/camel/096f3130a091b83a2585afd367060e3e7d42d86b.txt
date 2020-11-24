@@ -1,6 +1,0 @@
-                // [CAMEL-13711] Files.createTempFile not equivalent to File.createTempFile
-                int dotIndex = fname.indexOf('.');
-                if (dotIndex > 0) {
-                    fname = fname.substring(0, dotIndex);
-                }
-

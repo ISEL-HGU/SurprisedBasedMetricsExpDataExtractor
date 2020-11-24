@@ -1,2 +1,0 @@
-    public static final Object[] EMPTY_OBJECT_ARRAY = new Object[0];
-        return plus(new GStringImpl(EMPTY_OBJECT_ARRAY, new String[] { that }));

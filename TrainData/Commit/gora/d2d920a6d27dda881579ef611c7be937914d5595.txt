@@ -1,9 +1,0 @@
-  /**
-   * Gets a list of masters
-   *
-   * @return comma-separated list of "host:port" pairs of the masters
-   */
-   * @param bossCount number of boss threads
-   * @param workerCount number of worker threads
-   * <a href="https://kudu.apache.org/apidocs/org/apache/kudu/client/SessionConfiguration.FlushMode.html">https://kudu.apache.org/apidocs/org/apache/kudu/client/SessionConfiguration.FlushMode.html</a>
-   *

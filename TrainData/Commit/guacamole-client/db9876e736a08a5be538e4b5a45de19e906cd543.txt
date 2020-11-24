@@ -1,2 +1,0 @@
-        connectionSearchFilter.append("(&(objectClass=guacConfigGroup)(|(member=");
-                "(&(!(objectClass=guacConfigGroup))(member="  escapingService.escapeLDAPSearchFilter(userDN)  "))",

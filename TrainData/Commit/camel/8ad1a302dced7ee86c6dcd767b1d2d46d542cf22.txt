@@ -1,6 +1,0 @@
-import org.apache.camel.util.MessageHelper;
-        MessageHelper.copyHeaders(exchange.getIn(), exchange.getOut(), true);
-        MessageHelper.copyHeaders(exchange.getIn(), exchange.getOut(), true);
-        MessageHelper.copyHeaders(exchange.getIn(), exchange.getOut(), true);
-        MessageHelper.copyHeaders(exchange.getIn(), exchange.getOut(), true);
-        MessageHelper.copyHeaders(exchange.getIn(), exchange.getOut(), true);

@@ -1,1 +1,0 @@
-        EndpointListCommand command = new EndpointListCommand(name, decode, verbose);

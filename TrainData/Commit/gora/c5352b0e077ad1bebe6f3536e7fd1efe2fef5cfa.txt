@@ -1,6 +1,0 @@
-  /**
-   * This method is used to update multiple objects in the table.
-   *
-   * @param query Query
-   * @return isQuery applied or not
-   */

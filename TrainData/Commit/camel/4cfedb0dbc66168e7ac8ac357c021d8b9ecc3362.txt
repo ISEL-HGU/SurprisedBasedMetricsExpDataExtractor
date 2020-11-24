@@ -1,6 +1,0 @@
-                // setup the WebSocketComponentServlet initial parameters
-
-
-
-            SslContextFactory sslContextFactory = new SslContextFactory.Server();
-    private static final class WebSocketComponentSslContextFactory extends SslContextFactory.Server {

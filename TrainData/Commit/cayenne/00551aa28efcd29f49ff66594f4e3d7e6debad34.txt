@@ -1,3 +1,0 @@
-        } else {
-            queryCache.put(metadata, factory.createObject());
-            public List createObject() {

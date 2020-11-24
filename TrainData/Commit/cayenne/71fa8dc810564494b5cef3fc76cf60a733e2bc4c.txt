@@ -1,2 +1,0 @@
-        Color darkGrey = new Color(203, 203, 203);
-        UIManager.put("Button.border", BorderFactory.createEmptyBorder());

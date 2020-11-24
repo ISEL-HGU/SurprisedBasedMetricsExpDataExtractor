@@ -1,3 +1,0 @@
-    public static String getParameterValue(HttpMessage message, String headerName, String parameterName) {
-        Args.notNull(parameterName, "parameterName");
-                if (nameValuePair.getName().equalsIgnoreCase(parameterName)) {

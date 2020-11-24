@@ -1,1 +1,0 @@
-//    FunctionalInterface_Type = ClassHelper.makeCached(FunctionalInterface.class),

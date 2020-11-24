@@ -1,8 +1,0 @@
-import org.apache.camel.CamelContext;
-import org.apache.camel.impl.DefaultComponent;
-public class SlackComponent extends DefaultComponent {
-        this(null);
-    }
-
-    public SlackComponent(CamelContext context) {
-        registerExtension(new SlackComponentVerifierExtension());

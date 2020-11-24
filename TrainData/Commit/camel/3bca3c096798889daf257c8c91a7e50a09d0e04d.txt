@@ -1,2 +1,0 @@
-    public void doInit() throws Exception {
-        super.doInit();

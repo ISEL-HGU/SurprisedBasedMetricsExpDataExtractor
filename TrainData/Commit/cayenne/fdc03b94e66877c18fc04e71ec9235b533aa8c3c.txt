@@ -1,7 +1,0 @@
-import javax.swing.*;
-
- *
-        Thread task = new Thread(this::internalExecute);
-                e -> showProgress());
-            this.dialog.getCancelButton().addActionListener(e -> setCanceled(true));
-            this.taskPollingTimer = new Timer(500, e -> updateProgress());

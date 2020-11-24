@@ -1,2 +1,0 @@
-        setTargetBytecode(getSystemPropertySafe("groovy.target.bytecode", getMinBytecodeVersion()));
-    private static String getMinBytecodeVersion() {

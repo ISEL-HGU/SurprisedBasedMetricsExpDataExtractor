@@ -1,9 +1,0 @@
-        // should be filtered out in getResultSet() method, but check full name here too..
-        if (procedure == null || !key.equals(procedure.getFullyQualifiedName())) {
-        if (columnName == null || columnName.isEmpty()) {
-        int direction = getDirection(type);
-        if(direction != -1) {
-            column.setDirection(direction);
-        }
-            case DatabaseMetaData.procedureColumnReturn:
-                return ProcedureParameter.OUT_PARAMETER;

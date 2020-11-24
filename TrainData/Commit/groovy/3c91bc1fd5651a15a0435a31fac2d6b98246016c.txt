@@ -1,2 +1,0 @@
-    public static boolean startsWithAny(String self, String... prefixes) {
-    public static boolean endsWithAny(String self, String... suffixes) {

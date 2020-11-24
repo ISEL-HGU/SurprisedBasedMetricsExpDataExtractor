@@ -1,1 +1,0 @@
-    public Function<Object, Publisher<Exchange>> requestURI(String uri) {

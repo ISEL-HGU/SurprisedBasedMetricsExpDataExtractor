@@ -1,1 +1,0 @@
-        assertEquals(oid, object.getObjectId());

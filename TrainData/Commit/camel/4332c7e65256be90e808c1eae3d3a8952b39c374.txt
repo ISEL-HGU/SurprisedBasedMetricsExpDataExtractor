@@ -1,3 +1,0 @@
-    private CacheConfiguration<?, ?> cacheConfiguration;
-    public CacheConfiguration<?, ?> getCacheConfiguration() {
-            CacheConfiguration<?, ?> cacheConfiguration) {

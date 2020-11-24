@@ -1,1 +1,0 @@
-public class SimpleCache<K, V> implements EvictableCache<K, V> {

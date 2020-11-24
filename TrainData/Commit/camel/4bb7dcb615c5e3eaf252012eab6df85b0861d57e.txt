@@ -1,8 +1,0 @@
-        String path;
-        if (u.getScheme() != null) {
-            // if there is a scheme then there is also a path
-            path = URISupport.extractRemainderPath(u, useRawUri());
-        } else {
-            // this uri has no context-path as the leading text is the component name (scheme)
-            path = null;
-        }

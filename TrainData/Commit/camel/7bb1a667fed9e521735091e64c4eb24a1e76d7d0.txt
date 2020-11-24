@@ -1,8 +1,0 @@
-        
-        Iterator<Map<String, Object>> modelsMap = models.iterator();
-        while (modelsMap.hasNext()) {
-            String result = factory.unbind(getCamelContext(), modelsMap.next());
-            if (factory.isEndWithLineBreak() || modelsMap.hasNext()) {
-                // Add a carriage return
-                outputStream.write(bytesCRLF);
-            }

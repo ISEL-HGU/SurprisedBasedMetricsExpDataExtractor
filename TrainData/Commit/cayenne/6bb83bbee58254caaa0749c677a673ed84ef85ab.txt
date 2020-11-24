@@ -1,6 +1,0 @@
-        assertEquals(5, a.size());
-        assertEquals(5, a.size());
-        assertEquals(21, a.size());
-        assertEquals(5, result.size());
-        assertEquals(5, result.size());
-        assertEquals(21, result.size());

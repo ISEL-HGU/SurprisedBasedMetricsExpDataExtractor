@@ -1,5 +1,0 @@
-    private void validateInputs() throws IllegalArgumentException {
-
-        if (datasource == null && user == null) {
-            throw new IllegalArgumentException("A required parameter was "
-                     "not set when creating this Endpoint (pgUser or pgDataSource)");

@@ -1,7 +1,0 @@
-
-        if (shutdownTimeoutCheckerExecutorService && timeoutCheckerExecutorService != null) {
-            camelContext.getExecutorServiceManager().shutdown(timeoutCheckerExecutorService);
-            timeoutCheckerExecutorService = null;
-            shutdownTimeoutCheckerExecutorService = false;
-        }
-

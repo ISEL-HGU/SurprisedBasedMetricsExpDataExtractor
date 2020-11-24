@@ -1,4 +1,0 @@
-        // Invalidate all user contextx
-        for (UserContext userContext : userContexts)
-            userContext.invalidate();
-

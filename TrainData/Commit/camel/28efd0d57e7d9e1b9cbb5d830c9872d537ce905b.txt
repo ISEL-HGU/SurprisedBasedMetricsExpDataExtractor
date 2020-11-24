@@ -1,6 +1,0 @@
-import org.apache.camel.spi.HeadersMapFactory;
-        HeadersMapFactory headersMapFactory = getBeanForType(HeadersMapFactory.class);
-        if (headersMapFactory != null) {
-            LOG.info("Using custom HeadersMapFactory: {}", headersMapFactory);
-            getContext().setHeadersMapFactory(headersMapFactory);
-        }

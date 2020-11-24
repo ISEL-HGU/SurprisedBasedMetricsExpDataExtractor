@@ -1,3 +1,0 @@
-            String sourceType = clazz.getQualifiedName();
-                model.setSourceType(sourceType);
-                model.setDefaultValue(defaultValue);

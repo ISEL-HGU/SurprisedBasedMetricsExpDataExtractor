@@ -1,2 +1,0 @@
-import org.apache.deltaspike.jpa.spi.entitymanager.QualifierBackedEntityManagerResolver;
-        return new QualifierBackedEntityManagerResolver(beanManager, emQualifier).resolveEntityManager();

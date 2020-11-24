@@ -1,2 +1,0 @@
-            throw new IllegalArgumentException("Bucket Name must be specified for getObject Operation");
-            throw new IllegalArgumentException("Source Key must be specified for getObject Operation");

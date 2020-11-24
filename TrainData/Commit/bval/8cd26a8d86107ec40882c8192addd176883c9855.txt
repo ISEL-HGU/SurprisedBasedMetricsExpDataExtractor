@@ -1,6 +1,0 @@
-import java.util.Locale;
-    public BValJndiFactory() {
-        // this is an ugly hack, but the TCK expects us to get english validation messages :(
-        Locale.setDefault(Locale.ENGLISH);
-    }
-

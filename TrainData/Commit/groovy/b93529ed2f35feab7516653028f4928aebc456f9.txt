@@ -1,1 +1,0 @@
-    private static final CommonCache<ClassLoader, Map<String, List<MethodNode>>> CACHE = new CommonCache<ClassLoader, Map<String, List<MethodNode>>>(new WeakHashMap<>());

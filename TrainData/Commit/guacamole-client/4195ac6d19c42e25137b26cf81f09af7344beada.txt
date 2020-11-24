@@ -1,2 +1,0 @@
-                logger.warn("Illegal hexadecimal value while parsing RADIUS state string: {}", e.getMessage());
-                logger.debug("Encountered exception while attempting to parse the hexidecimal state value.", e);

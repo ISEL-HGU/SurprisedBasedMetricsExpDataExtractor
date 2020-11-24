@@ -1,5 +1,0 @@
-// TODO: this is really a qualifier translator general test...
-// need to find an appropriate place in unit tests..
-        List<?> parents = SelectQuery.query(ReflexiveAndToOne.class, qualifier).select(context);
-        parents = SelectQuery.query(ReflexiveAndToOne.class, qualifier).select(context);
-        List<ReflexiveAndToOne> children = SelectQuery.query(ReflexiveAndToOne.class, qualifier).select(context);

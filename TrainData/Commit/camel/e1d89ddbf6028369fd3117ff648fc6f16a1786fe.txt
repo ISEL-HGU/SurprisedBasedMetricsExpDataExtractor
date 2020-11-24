@@ -1,8 +1,0 @@
-                // This exception is ignored
-                LOG.warn("OpenTracing: Failed to capture tracing data", t);
-                // This exception is ignored
-                LOG.warn("OpenTracing: Failed to capture tracing data", t);
-                // This exception is ignored
-                LOG.warn("OpenTracing: Failed to capture tracing data", t);
-                // This exception is ignored
-                LOG.warn("OpenTracing: Failed to capture tracing data", t);

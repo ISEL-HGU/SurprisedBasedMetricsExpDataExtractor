@@ -1,9 +1,0 @@
-    private boolean stopRoutesOnException;
-    public void setTtl(String ttl) throws Exception {
-    public void setStopRoutesOnException(String stopRoutesOnException) throws Exception {
-        this.stopRoutesOnException = Boolean.parseBoolean(stopRoutesOnException);
-    }
-
-                if (stopRoutesOnException) {
-                    stopRoutes();
-                }

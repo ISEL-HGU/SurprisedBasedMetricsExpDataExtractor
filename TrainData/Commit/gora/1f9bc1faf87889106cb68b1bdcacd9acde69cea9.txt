@@ -1,8 +1,0 @@
-        Schema schemaObj = obj.getSchema();
-        List<Schema.Field> fields = schemaObj.getFields();
-    for (String objField : fields) {
-      Schema.Field field = fieldMap.get(objField);
-      Column column = kuduMapping.getFields().get(objField);
-      Object obtainedValue = deserializeFieldValue(field, fieldSchema, fieldValue, persistent);
-      persistent.put(field.pos(), obtainedValue);
-      SpecificDatumReader localReader;

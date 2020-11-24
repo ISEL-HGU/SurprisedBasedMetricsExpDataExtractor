@@ -1,8 +1,0 @@
-         * Specifies whether Camel ignores the JMSReplyTo header in messages. If
-         * true, Camel does not send a reply back to the destination specified
-         * in the JMSReplyTo header. You can use this option if you want Camel
-         * to consume from a route and you do not want Camel to automatically
-         * send back a reply message because another component in your code
-         * handles the reply message. You can also use this option if you want
-         * to use Camel as a proxy between different message brokers and you
-         * want to route message from one system to another.

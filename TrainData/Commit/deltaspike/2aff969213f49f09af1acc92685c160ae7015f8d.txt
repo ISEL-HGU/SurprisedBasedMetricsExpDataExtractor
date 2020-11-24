@@ -1,2 +1,0 @@
-        private static final Comparator<? super MBeanFeatureInfo> INSTANCE
-            = new MBeanFeatureInfoSorter<MBeanFeatureInfo>();

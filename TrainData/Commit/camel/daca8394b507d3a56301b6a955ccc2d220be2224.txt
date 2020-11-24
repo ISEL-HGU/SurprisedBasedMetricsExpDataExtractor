@@ -1,8 +1,0 @@
-            .forEach(entry -> registerBean(factory, entry.getKey(), entry.getValue()));
-    private void registerBean(ConfigurableBeanFactory factory, String name, CamelCloudConfigurationProperties.ServiceFilterConfiguration configuration) {
-        factory.registerSingleton(
-            name,
-            createServiceFilter(configuration)
-        );
-    }
-

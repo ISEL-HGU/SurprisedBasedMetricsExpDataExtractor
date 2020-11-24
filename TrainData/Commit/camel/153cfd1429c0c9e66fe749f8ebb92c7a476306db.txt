@@ -1,2 +1,0 @@
-import io.opentracing.contrib.tracerresolver.TracerResolver;
-            tracer = TracerResolver.resolveTracer();

@@ -1,6 +1,0 @@
-
-            } else if ("Access-Control-Max-Age".equalsIgnoreCase(key)) {
-            	Integer accessControlMaxAge = exchange.getContext().getTypeConverter().tryConvertTo(Integer.class, exchange, value);
-                if (accessControlMaxAge != null) {
-                    response.setAccessControlMaxAge(accessControlMaxAge);
-                }

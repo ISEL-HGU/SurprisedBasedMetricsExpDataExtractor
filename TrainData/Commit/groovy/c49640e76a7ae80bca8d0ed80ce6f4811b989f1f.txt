@@ -1,7 +1,0 @@
-                            FieldNode veFieldNode = owner.getField(vexp.getName());
-                            if (veFieldNode != null) {
-                                fieldNode = veFieldNode;
-                                boolean lhsOfEnclosingAssignment = isLHSOfEnclosingAssignment(vexp);
-                                vexp.setAccessedVariable(fieldNode);
-                                checkOrMarkPrivateAccess(vexp, fieldNode, lhsOfEnclosingAssignment);
-                            }

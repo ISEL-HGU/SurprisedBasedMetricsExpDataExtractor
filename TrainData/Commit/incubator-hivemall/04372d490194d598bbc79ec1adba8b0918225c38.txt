@@ -1,4 +1,0 @@
-    public static LabeledPoint parseFeatures(double target, String[] features) {
-        final int size = features.length;
-            if (features[i] == null) {
-            final String str = features[i];

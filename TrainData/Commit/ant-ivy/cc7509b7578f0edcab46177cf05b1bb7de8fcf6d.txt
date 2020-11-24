@@ -1,2 +1,0 @@
-        URLInfo urlInfo = urlHandler.getURLInfo(url, null);
-        InputStream contentStream = urlHandler.openStream(url, null);

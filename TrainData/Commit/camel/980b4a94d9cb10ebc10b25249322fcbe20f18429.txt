@@ -1,3 +1,0 @@
-    private Map<String, Message> messages = new LinkedHashMap<>();
-            Messages messageList = new Messages(new ArrayList<>(messages.values()));
-            List<Message> list = new ArrayList<>();

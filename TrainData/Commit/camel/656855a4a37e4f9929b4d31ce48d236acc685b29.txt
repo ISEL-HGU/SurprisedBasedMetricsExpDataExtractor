@@ -1,2 +1,0 @@
-    String JDK_SERVICE = "#jdk#";
-

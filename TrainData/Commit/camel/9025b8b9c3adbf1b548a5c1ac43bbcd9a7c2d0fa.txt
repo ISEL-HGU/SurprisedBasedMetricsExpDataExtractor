@@ -1,2 +1,0 @@
-            if (ObjectHelper.isNotEmpty(strategy.getSpoolCipher())) {
-                        ciphers = new CipherPair(strategy.getSpoolCipher());

@@ -1,8 +1,0 @@
-        connectionSearchFilter.append("(&(objectClass=guacConfigGroup)");
-        connectionSearchFilter.append("(|(");
-        connectionSearchFilter.append(confService.getMemberAttribute());
-        connectionSearchFilter.append("=");
-                "(&(!(objectClass=guacConfigGroup))(" 
-                         confService.getMemberAttribute() 
-                         "="  escapingService.escapeLDAPSearchFilter(userDN) 
-                         "))",

@@ -1,6 +1,0 @@
-        CreateAccessKeyResult res = new CreateAccessKeyResult();
-        AccessKey key = new AccessKey();
-        key.setAccessKeyId("test");
-        key.setSecretAccessKey("testSecret");
-        res.setAccessKey(key);
-        return res;

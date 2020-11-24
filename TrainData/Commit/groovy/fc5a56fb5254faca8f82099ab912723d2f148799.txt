@@ -1,1 +1,0 @@
-        Object value = closure.call(object1, object2);

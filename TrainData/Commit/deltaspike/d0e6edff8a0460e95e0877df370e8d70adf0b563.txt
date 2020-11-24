@@ -1,7 +1,0 @@
-    private volatile DeltaSpikeProxyInvocationHandler deltaSpikeProxyInvocationHandler;
-    private volatile InjectionTarget<T> injectionTarget;
-    private volatile Bean<H> handlerBean;
-    private volatile CreationalContext<?> creationalContextOfDependentHandler;
-
-            this.deltaSpikeProxyInvocationHandler = BeanProvider.getContextualReference(
-                    beanManager, DeltaSpikeProxyInvocationHandler.class, false);

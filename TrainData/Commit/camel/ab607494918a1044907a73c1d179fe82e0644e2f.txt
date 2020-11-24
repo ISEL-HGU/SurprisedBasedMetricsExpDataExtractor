@@ -1,9 +1,0 @@
-
-        // endpoint take precedence over header configuration
-        final Integer partitionKey = endpoint.getConfiguration().getPartitionKey() != null
-            ? endpoint.getConfiguration().getPartitionKey() : exchange.getIn().getHeader(KafkaConstants.PARTITION_KEY, Integer.class);
-        // endpoint take precedence over header configuration
-        final Object messageKey = endpoint.getConfiguration().getKey() != null
-            ? endpoint.getConfiguration().getKey() : exchange.getIn().getHeader(KafkaConstants.KEY);
-                        return new ProducerRecord(msgTopic, partitionKey, messageKey, msgList.next());
-            record = new ProducerRecord(topic, partitionKey, messageKey, msg);

@@ -1,8 +1,0 @@
-    public GroovyParserRuleContext buildCST() throws CompilationFailedException {
-        if (null != this.cst) {
-            return this.cst;
-        }
-
-        this.cst = result;
-
-    private GroovyParserRuleContext cst;

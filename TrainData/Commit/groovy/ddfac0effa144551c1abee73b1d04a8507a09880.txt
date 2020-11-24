@@ -1,1 +1,0 @@
-            if (closureParams == null) return; // no-arg closure

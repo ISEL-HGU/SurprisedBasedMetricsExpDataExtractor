@@ -1,2 +1,0 @@
-            LOG.debug("Cannot delete file: "  name, e);
-            LOG.debug("Cannot rename file from: "  from  " to: "  to, e);

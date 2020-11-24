@@ -1,2 +1,0 @@
-            LOG.debug("Communicating new leader: {}"  newLeader);
-            LOG.debug("Communicating new cluster members: {}"  newMembers);

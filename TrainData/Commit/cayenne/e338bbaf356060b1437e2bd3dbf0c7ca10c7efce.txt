@@ -1,6 +1,0 @@
-import static org.junit.Assert.assertNotSame;
-        EventBridge bridge = injector.getInstance(EventBridge.class);
-
-        EventBridge bridge2 = injector.getInstance(EventBridge.class);
-        assertThat(bridge2, instanceOf(XMPPBridge.class));
-        assertNotSame(bridge, bridge2);

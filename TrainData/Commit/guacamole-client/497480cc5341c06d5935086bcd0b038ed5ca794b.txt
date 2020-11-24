@@ -1,2 +1,0 @@
-     * greater than zero, users will be prohibited from reusing those passwords.
-     *

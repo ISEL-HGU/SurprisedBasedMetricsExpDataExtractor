@@ -1,5 +1,0 @@
-import java.nio.file.Files;
-import java.nio.file.Path;
-        Path p = dir.toPath().resolve("core/camel-core");
-        if (Files.isDirectory(p)) {
-            return p.resolve("target").resolve("camel-core-"  version  ".jar").toFile();

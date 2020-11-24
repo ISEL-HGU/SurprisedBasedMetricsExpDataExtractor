@@ -1,4 +1,0 @@
-import static java.util.Optional.ofNullable;
-
-                ofNullable(sce.getServletContext().getAttribute(ServerContainer.class.getName())).map(ServerContainer.class::cast)
-                    .ifPresent(container -> JSR356WebSocketComponent.registerServer(contextPath, container));

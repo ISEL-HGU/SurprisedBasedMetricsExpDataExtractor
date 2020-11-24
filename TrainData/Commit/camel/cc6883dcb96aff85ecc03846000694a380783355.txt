@@ -1,5 +1,0 @@
-                    IntrospectionSupport.setProperties(camelContext,
-                            camelContext.getTypeConverter(), nestedProperty,
-                            nestedParameters);
-        IntrospectionSupport.setProperties(camelContext,
-                camelContext.getTypeConverter(), component, parameters);

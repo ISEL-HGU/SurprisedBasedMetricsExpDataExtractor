@@ -1,9 +1,0 @@
-import org.apache.camel.StreamCache;
-
-            Object value = exchange.hasOut() ? exchange.getOut().getBody() : exchange.getIn().getBody();
-            // if the value is StreamCache then ensure its readable before evaluating any predicates
-            // by resetting it (this is also what StreamCachingAdvice does)
-            if (value instanceof StreamCache) {
-                ((StreamCache) value).reset();
-            }
-

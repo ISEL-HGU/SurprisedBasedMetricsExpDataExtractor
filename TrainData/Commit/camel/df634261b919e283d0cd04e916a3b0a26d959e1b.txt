@@ -1,2 +1,0 @@
-        /* MicroProfile -> */ "camel-microprofile-config",
-        /* MicroProfile -> */ "camel-microprofile-metrics",

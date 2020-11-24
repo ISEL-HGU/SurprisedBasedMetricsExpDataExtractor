@@ -1,4 +1,0 @@
-        // skip when/otherwise (as we do this in Java DSL)
-        boolean isWhenOrOtherwise = "when".equals(name) || "otherwise".equals(name);
-            // skip route as we just keep from (and also skip when/otherwise)
-            if (!"route".equals(name) && !isWhenOrOtherwise) {

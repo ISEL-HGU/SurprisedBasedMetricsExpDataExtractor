@@ -1,4 +1,0 @@
-import org.apache.camel.component.consul.ConsulConstants;
-                policy.setConsulUrl(ConsulConstants.CONSUL_DEFAULT_URL);
-                from("file:///tmp/camel?delete=true")
-                    .to("log:org.apache.camel.component.consul?level=INFO&showAll=true");

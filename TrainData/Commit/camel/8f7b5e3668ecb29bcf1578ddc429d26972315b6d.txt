@@ -1,4 +1,0 @@
-            final Charset charset = contentType.getCharset();
-            if (null != charset) {
-                httpUriRequest.addHeader(HttpHeaders.ACCEPT_CHARSET, charset.name().toLowerCase());
-            }

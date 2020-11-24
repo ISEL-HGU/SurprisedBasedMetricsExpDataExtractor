@@ -1,2 +1,0 @@
-import com.amazonaws.regions.Regions;
-            clientBuilder = clientBuilder.withRegion(Regions.valueOf(configuration.getRegion()));

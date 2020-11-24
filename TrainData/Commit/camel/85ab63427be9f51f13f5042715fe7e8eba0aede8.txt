@@ -1,2 +1,0 @@
-                                LOG.trace("Parameter #{} evaluated as: {} type: {}", index, answer, org.apache.camel.util.ObjectHelper.type(answer));
-                        LOG.trace("Parameter #{} evaluated as: {} type: {}", index, answer, org.apache.camel.util.ObjectHelper.type(answer));

@@ -1,3 +1,0 @@
-            } else if (left instanceof GString && right instanceof Character) {
-                return ((GString) left).compareTo(right);
-        return (value instanceof String || value instanceof GString) && value.toString().length() == 1;

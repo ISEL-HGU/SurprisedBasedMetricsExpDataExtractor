@@ -1,8 +1,0 @@
-      Configuration hadoopConf;
-      if ((dataStore instanceof Configurable)
-              && ((Configurable) dataStore).getConf() != null) {
-        hadoopConf = ((Configurable) dataStore).getConf();
-      } else {
-        hadoopConf = new Configuration();
-      }
-

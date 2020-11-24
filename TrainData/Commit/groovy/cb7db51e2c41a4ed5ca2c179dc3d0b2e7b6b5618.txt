@@ -1,2 +1,0 @@
-        boolean isAnon = node instanceof InnerClassNode && ((InnerClassNode) node).isAnonymous();
-        boolean isAnon = type instanceof InnerClassNode && ((InnerClassNode) type).isAnonymous();

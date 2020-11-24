@@ -1,2 +1,0 @@
-			"array-type.map.xml", "cay-2032.map.xml", "weighted-sort.map.xml", "hybrid-data-object.map.xml",
-			"java8.map.xml", "inheritance-with-enum.map.xml" };

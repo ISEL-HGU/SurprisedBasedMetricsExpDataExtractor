@@ -1,3 +1,0 @@
-            // Configure TLS
-            if (CoAPEndpoint.enableTLS((uri))) {
-                DTLSConnector connector = endpoint.createDTLSConnector(null, true);

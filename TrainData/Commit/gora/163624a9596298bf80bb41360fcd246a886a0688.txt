@@ -1,1 +1,0 @@
-  private static final Logger LOG = LoggerFactory.getLogger(CassandraStore.class);

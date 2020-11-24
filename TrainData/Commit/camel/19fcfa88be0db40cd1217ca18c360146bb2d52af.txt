@@ -1,3 +1,0 @@
-        if (responseStream == null) {           
-            return Optional.empty();
-        } 

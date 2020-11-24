@@ -1,1 +1,0 @@
-        String encoding = safeGetSystemProperty("file.encoding", DEFAULT_SOURCE_ENCODING);

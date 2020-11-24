@@ -1,1 +1,0 @@
-                stubbed.setDeclaringClass(method.getDeclaringClass());

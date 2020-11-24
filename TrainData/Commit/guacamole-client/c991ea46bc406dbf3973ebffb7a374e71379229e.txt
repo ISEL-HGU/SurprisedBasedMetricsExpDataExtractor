@@ -1,4 +1,0 @@
-import org.apache.guacamole.auth.jdbc.base.ModeledActivityRecord;
-public class ModeledConnectionRecord extends ModeledActivityRecord
-        implements ConnectionRecord {
-        super(model);

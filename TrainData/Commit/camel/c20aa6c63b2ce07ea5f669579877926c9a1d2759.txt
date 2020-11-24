@@ -1,5 +1,0 @@
-        if (this.type == SnmpActionType.TRAP) {
-            return new SnmpTrapProducer(this);
-        } else {
-            return new SnmpProducer(this);
-        }
